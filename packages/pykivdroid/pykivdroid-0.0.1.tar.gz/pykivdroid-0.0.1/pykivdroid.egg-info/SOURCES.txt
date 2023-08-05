@@ -1,0 +1,14 @@
+README.md
+setup.py
+pykivdroid/__init__.py
+pykivdroid/brightness.py
+pykivdroid/orientation.py
+pykivdroid/picker.py
+pykivdroid/screen.py
+pykivdroid/stt.py
+pykivdroid/videoview.py
+pykivdroid.egg-info/PKG-INFO
+pykivdroid.egg-info/SOURCES.txt
+pykivdroid.egg-info/dependency_links.txt
+pykivdroid.egg-info/requires.txt
+pykivdroid.egg-info/top_level.txt
