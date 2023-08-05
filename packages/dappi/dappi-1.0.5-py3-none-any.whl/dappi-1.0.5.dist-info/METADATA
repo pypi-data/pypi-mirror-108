@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: dappi
+Version: 1.0.5
+Summary: Parse messages from discord server exports into csv files
+Home-page: https://github.com/Andrew-Pynch/discord-message-scraper/tree/main/dappy
+Author: Andrew Pynch
+Author-email: info@realpython.com
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
+Requires-Dist: beautifulsoup4
+
+# discord-message-scraper
+Scrap messages from discord servers and parse them into a csv file.
+
+
