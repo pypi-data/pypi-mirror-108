@@ -1,0 +1,11 @@
+opentelemetry-api==1.3.0
+opentelemetry-semantic-conventions==0.22b0
+opentelemetry-instrumentation==0.22b0
+
+[instruments]
+celery<6.0,>=4.0
+
+[test]
+pytest
+opentelemetry-test==0.22b0
+celery<6.0,>=4.0
