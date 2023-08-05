@@ -1,0 +1,15 @@
+aiuti/__init__.py,sha256=JOl41NviMN-qDV0Z8ZPmhNIxvgyauGGJHdB4A-8MhqM,93
+aiuti/_version.py,sha256=fGwq8P6N8C8zLqPbyEfKvWuHWTga9iUCcJtRXOaSTF8,495
+aiuti/asyncio.py,sha256=5QNAXeY80Be_Dyjp9xWjMBWaMUMX-Zf8pz2_h2dZdiM,24819
+aiuti/filelock.py,sha256=Ol1X1qGZtqGHmPXl9iWc5ioic8U1gS6l82wGBDd589E,10339
+aiuti/itertools.py,sha256=9EaQtOzTDDcR32xkIXiZ98dadJUOZCgU4DoFn8mXi5o,2115
+aiuti/parsing.py,sha256=n5rZSOthXXkqSGsUxgH8p5PyrYHuVrcR38SdEH2rrlE,2524
+aiuti/typing.py,sha256=TztJ_RZLjZz1OBN6XvkP9iS2Yb0Jo7hTLyRNBjRh0Xs,3033
+aiuti/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aiuti/tests/test_buffer_async_calls.py,sha256=UJ1D6ki34mZlWIPLp-wTiTKCZCdrlP0oNhhctV7lJCg,6201
+aiuti/tests/test_filelock.py,sha256=vJovCmeGk8rmpwXPVVIRvLObScsnNQ5BljBga1gwrl4,7720
+aiuti-0.4.dist-info/LICENSE,sha256=Au5_tZpe5Sgc_DKFaOwo7xiAjTyM5CTgb-KVS24zPok,1081
+aiuti-0.4.dist-info/METADATA,sha256=Mg66dF1dhyNofyhOGyyY-CwS0tmxxT8X0uwa5Rpugso,2126
+aiuti-0.4.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+aiuti-0.4.dist-info/top_level.txt,sha256=LnoOC6vi1gU2zFfETmUuRA_wYoxbISKkGq96VSyiFrw,6
+aiuti-0.4.dist-info/RECORD,,
