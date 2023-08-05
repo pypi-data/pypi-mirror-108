@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+wecoded/__init__.py
+wecoded/__main__.py
+wecoded.egg-info/PKG-INFO
+wecoded.egg-info/SOURCES.txt
+wecoded.egg-info/dependency_links.txt
+wecoded.egg-info/entry_points.txt
+wecoded.egg-info/top_level.txt
