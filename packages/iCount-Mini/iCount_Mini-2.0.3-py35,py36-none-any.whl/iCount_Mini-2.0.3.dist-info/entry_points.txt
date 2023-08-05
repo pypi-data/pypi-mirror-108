@@ -1,0 +1,3 @@
+[console_scripts]
+iCount-Mini = iCount.cli:main
+
