@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: transpi
+Version: 0.2.1
+Summary: Transpi is a translation tool.
+Home-page: https://github.com/ischaojie/transpi
+Author: chaojie
+Author-email: zhuzhezhe95@gmail.com
+License: MIT
+Description: 
+        # transpi
+        
+        transpi is a translation tool.
+        
+        ### quick use
+        
+        first `pip install transpi`, then:
+        
+        ```python
+        import transpi
+        result = transpi.trans("human")
+        print(result)
+        
+        # or use different engine
+        result2 = transpi.trans("human", engine="bing")
+        print(result2)
+        ```
+        
+        ### versions
+        - v0.2.0
+          
+          support bing trans
+          
+        - v0.1.0
+          
+          support youdao trans
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.6.0
+Description-Content-Type: text/markdown
