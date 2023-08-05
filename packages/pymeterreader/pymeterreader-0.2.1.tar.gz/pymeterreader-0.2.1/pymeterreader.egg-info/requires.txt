@@ -1,0 +1,13 @@
+pysml>=0.0.2
+pyserial
+humanfriendly
+requests
+PyYAML
+smbus2
+construct
+curses-menu
+prometheus-client
+
+[test]
+nose
+prospector

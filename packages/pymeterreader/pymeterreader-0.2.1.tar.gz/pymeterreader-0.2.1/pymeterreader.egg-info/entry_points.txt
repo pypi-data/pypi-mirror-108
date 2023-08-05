@@ -1,0 +1,4 @@
+[console_scripts]
+pymeterreader = pymeterreader:main
+pymeterreader-wizard = pymeterreader.wizard.ncui:Wizard
+
