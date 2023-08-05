@@ -1,0 +1,11 @@
+buildbot_fossil/__init__.py,sha256=I362P4QMS4VHDj7I4aoycN2AqOx6cnUCr5nPpMB85-U,33
+buildbot_fossil/changes.py,sha256=eR5Al3tJLYx_QgFFSJHtY0TtK-1FkMRgOxVLFSO4j84,11879
+buildbot_fossil/steps.py,sha256=nMIQoqAZcS78v51dw6F0u_ziK53AMCjfIloITGpbdAs,12807
+buildbot_fossil/test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+buildbot_fossil/test/test_changes.py,sha256=GnKiIXxYA-qQqWY6R2hU19UhrUZ67sMZmJg_OkoLhc0,21130
+buildbot_fossil/test/test_source.py,sha256=SfP5FDTyqO5Sw2EIptEV6WkEBH91c80Xm8VhU5IQBno,10253
+buildbot_fossil-1.0.dist-info/entry_points.txt,sha256=NpA7vI-cEWbxtBaRfPHtr2mXSnOs3cTsDHBXyJgJR6s,124
+buildbot_fossil-1.0.dist-info/LICENSE,sha256=34QkYgTjxUzSSuu8I3FCNfX8QddU1TtlREoq-_BwEw8,15122
+buildbot_fossil-1.0.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+buildbot_fossil-1.0.dist-info/METADATA,sha256=SZyjNZ-E-HqrWKvuGQeoZrtwSw-imK1A1BoTH4ugvkQ,1598
+buildbot_fossil-1.0.dist-info/RECORD,,
