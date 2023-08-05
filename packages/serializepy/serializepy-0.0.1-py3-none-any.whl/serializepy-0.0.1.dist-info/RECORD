@@ -1,0 +1,12 @@
+serializepy/__init__.py,sha256=MpeUpaDZtD1cDSTjEEVLPPxFLbAL1VIMaJiznAaeWQw,7461
+serializepy/utilities.py,sha256=ska_iHnpZ9ZTj2Q9huxukUVzZDGI3RfCTr0VnrAJgyI,2158
+serializepy/version.py,sha256=X6JhKdFWFqYmEM1JGbMe93T9OtB85B-0-YiFfN0Qzpg,17
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_deserialize_classes.py,sha256=zCwTaAVK-h0UCJPnzzWwBaa028zOvnZJKZwKKKX4fPA,2431
+tests/test_deserialize_general.py,sha256=v6lM5w2WUiuCHvGsV4pPsjRJ9tUnCI_HAVh35uktiYw,908
+tests/test_serialize.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+serializepy-0.0.1.dist-info/LICENSE,sha256=BONgF-VfxmVRW255gkq3pVvoJBq70zrl4DOBOYZwW9M,1068
+serializepy-0.0.1.dist-info/METADATA,sha256=9dqMGpPYkJZfhemSfsMPaV_9YX0IgGJxO10JV3yghDI,1746
+serializepy-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+serializepy-0.0.1.dist-info/top_level.txt,sha256=cuH4yadkF674j6HV6hVfu3BHop_9PtWubSkGlhfLZV8,18
+serializepy-0.0.1.dist-info/RECORD,,
