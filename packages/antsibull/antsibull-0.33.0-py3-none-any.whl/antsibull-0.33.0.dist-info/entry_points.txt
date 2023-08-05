@@ -1,0 +1,9 @@
+[console_scripts]
+antsibull-build=antsibull.cli.antsibull_build:main
+antsibull-docs=antsibull.cli.antsibull_docs:main
+antsibull-lint=antsibull.cli.antsibull_lint:main
+
+[pygments.lexers]
+Ansible-output=sphinx_antsibull_ext.pygments_lexer:AnsibleOutputLexer
+ansible-output=sphinx_antsibull_ext.pygments_lexer:AnsibleOutputLexer
+
