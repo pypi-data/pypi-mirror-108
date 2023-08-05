@@ -1,0 +1,17 @@
+scanspec/__init__.py,sha256=cIQMu_13C-GiTX4F_6CsXaQkvCchMq6NurBlveodkfo,65
+scanspec/__main__.py,sha256=SXrSo9n8dyagtP5jcXobzVUL8hxi5CUK9SpjivRx1kQ,116
+scanspec/_version_git.py,sha256=jJkKZKehy9pogvvm1wSkYfhKiX7laQL1HN7qZTqvRRc,3818
+scanspec/cli.py,sha256=0X5HOtHM2KPAuLeyX-6t6JxoE_oCxrcsFbAkc_ffF9I,1410
+scanspec/core.py,sha256=1FXVJELr29cgkLHt1kgb4yVQAsYZExHgAmAQ5RVPp90,20569
+scanspec/plot.py,sha256=iGce59abzh-Y08a78-Sl3bHd3mT4pOYGerCz-e7rXF4,7808
+scanspec/regions.py,sha256=TPpAFyUIZd9Pd0XgZlepHzMz4g-uq5Tw8OFXYBCK-CA,9368
+scanspec/service.py,sha256=4I_dD5P2HKo6nku0lJhVNe8TIflWqrF6HeO58Fee27E,5559
+scanspec/specs.py,sha256=B5B-BRi2cH-5ELyy54YQ3mviuBmEwrqE4P9rTPSP-oM,21267
+scanspec/sphinx_graphiql.py,sha256=nQBrTBRksZKDaaEGCTjU-KHpMydGiplQI1IsNvwmLuo,2161
+scanspec/sphinxext.py,sha256=0i-UaPb9hAoNI5yb2PCUmS6n0wDzDC14DsqYxM7IsZE,4066
+scanspec-0.3.dist-info/LICENSE,sha256=tAkwu8-AdEyGxGoSvJ2gVmQdcicWw3j1ZZueVV74M-E,11357
+scanspec-0.3.dist-info/METADATA,sha256=ZyuPO2GGB-_zJnMItsO27e7ArQ0DIhaQ2OFFBbopwyI,4209
+scanspec-0.3.dist-info/WHEEL,sha256=U88EhGIw8Sj2_phqajeu_EAi3RAo8-C6zV3REsWbWbs,92
+scanspec-0.3.dist-info/entry_points.txt,sha256=f-U0Xj5L6oQkxt5oeK3PIn5ayTkT4az8aPX6DYgPE2o,47
+scanspec-0.3.dist-info/top_level.txt,sha256=me_Mt7vpf8gnpcJ-NN00E8DGA6IJEgqh6-zBCogYeZE,9
+scanspec-0.3.dist-info/RECORD,,
