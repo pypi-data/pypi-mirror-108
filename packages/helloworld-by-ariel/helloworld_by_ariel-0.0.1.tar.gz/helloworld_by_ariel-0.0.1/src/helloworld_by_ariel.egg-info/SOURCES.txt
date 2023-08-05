@@ -1,0 +1,8 @@
+README.md
+setup.py
+src/helloworld.py
+src/helloworld_by_ariel.egg-info/PKG-INFO
+src/helloworld_by_ariel.egg-info/SOURCES.txt
+src/helloworld_by_ariel.egg-info/dependency_links.txt
+src/helloworld_by_ariel.egg-info/requires.txt
+src/helloworld_by_ariel.egg-info/top_level.txt

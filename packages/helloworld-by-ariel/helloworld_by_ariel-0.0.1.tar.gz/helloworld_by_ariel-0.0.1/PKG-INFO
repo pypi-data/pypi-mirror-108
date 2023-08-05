@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: helloworld_by_ariel
+Version: 0.0.1
+Summary: Say Hello
+Home-page: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+
+### Installation
+'''python
+pip install helloworld
+'''
+#Developing hello world
+To install helloworld, along with the tools you need to develop and run test,run the ff in you venv
+
