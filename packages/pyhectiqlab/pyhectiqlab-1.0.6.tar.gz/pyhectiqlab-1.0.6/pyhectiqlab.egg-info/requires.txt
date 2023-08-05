@@ -1,0 +1,10 @@
+requests
+tqdm
+ipykernel
+traitlets
+jupyter_core
+numpy
+packaging
+click
+GitPython
+pyjwt==1.7.1
