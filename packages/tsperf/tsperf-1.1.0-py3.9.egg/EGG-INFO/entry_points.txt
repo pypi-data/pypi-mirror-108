@@ -1,0 +1,4 @@
+[console_scripts]
+tsdg = data_generator.__main__:main
+tsqt = query_timer.__main__:main
+
