@@ -1,0 +1,21 @@
+{
+  "properties": {
+    "shop_url": {
+      "type": ["null", "integer"]
+    },
+    "id": {
+      "type": ["null", "integer"]
+    },
+    "admin_graphql_api_id": {
+      "type": ["null", "string"]
+    },
+
+    "line_items": {
+      "$ref": "definitions.json#/line_items"
+    },
+    "updated_at": {
+      "type": ["null", "string"]
+    }
+  },
+  "type": "object"
+}
