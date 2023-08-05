@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+src/Barberchop/ExtractionService.py
+src/Barberchop/__init__.py
+src/Barberchop.egg-info/PKG-INFO
+src/Barberchop.egg-info/SOURCES.txt
+src/Barberchop.egg-info/dependency_links.txt
+src/Barberchop.egg-info/requires.txt
+src/Barberchop.egg-info/top_level.txt
