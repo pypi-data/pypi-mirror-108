@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: dimppy
+Version: 0.0.0.2
+Summary: Data Structures and Algorithms implementation in Python
+Home-page: https://github.com/Armaan-268/DSA_in_Python
+Author: Armaan Chauhan
+Author-email: armaanchauhan268@gmail.com
+License: MIT
+Keywords: datastructures,algorithms
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+
+# Data Structure and in Algorithms in Python 
+
+A Python package of data structure codes
+
+## Usage
+
+This package contains ready to use Data Structure and Algorithm implementations. The primary focus is provide pre-coded functions that can be used on the go for various Data Structures and Algorithm problems.
+
+-----------------------------------
+Note: This package is developed and maintained by a student. Please don't mind the mistakes :)
+
+
+Change Logs
+================================
+
+0.0.2 (01/06/2021)
+----------------------------------------------------------------
+- First Release
+    -Fixed bug in Binary Tree
+
+----------------------------------------------------------------
+Note: 
+>All the files and classes are in title case (eg: TitleCase)
+>All the methods and functions are in camel case (eg: camelCase)
+
+**Repository link:** 
+[GitHub](https://github.com/Armaan-268/DSA_in_Python)
+
