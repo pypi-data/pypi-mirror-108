@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+glasswall_visual_comparison_tool_cli/__init__.py
+glasswall_visual_comparison_tool_cli/__main__.py
+glasswall_visual_layer_comparison_tool_cli.egg-info/PKG-INFO
+glasswall_visual_layer_comparison_tool_cli.egg-info/SOURCES.txt
+glasswall_visual_layer_comparison_tool_cli.egg-info/dependency_links.txt
+glasswall_visual_layer_comparison_tool_cli.egg-info/entry_points.txt
+glasswall_visual_layer_comparison_tool_cli.egg-info/requires.txt
+glasswall_visual_layer_comparison_tool_cli.egg-info/top_level.txt
