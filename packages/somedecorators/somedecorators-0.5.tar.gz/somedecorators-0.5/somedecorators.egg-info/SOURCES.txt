@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+somedecorators/__init__.py
+somedecorators/email.py
+somedecorators/retry.py
+somedecorators/timeit.py
+somedecorators.egg-info/PKG-INFO
+somedecorators.egg-info/SOURCES.txt
+somedecorators.egg-info/dependency_links.txt
+somedecorators.egg-info/requires.txt
+somedecorators.egg-info/top_level.txt
