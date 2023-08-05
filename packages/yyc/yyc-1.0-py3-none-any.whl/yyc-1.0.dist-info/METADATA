@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: yyc
+Version: 1.0
+Summary: Yin-Yang Code implementation
+Home-page: https://github.com/ntpz870817/DNA-storage-YYC
+Author: Haoling Zhang, Zhi Ping
+Author-email: zhanghaoling@genomics.cn
+Maintainer: BGI-Research
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Topic :: Scientific/Engineering
+
+Yin-Yang Code is a DNA storage codec algorithm developed by BGI-research. Briefly, it can transcode two binary sequences into one DNA sequence. This algorithm can help to achieve a high-density, high-feasibility DNA storage.
+
+
