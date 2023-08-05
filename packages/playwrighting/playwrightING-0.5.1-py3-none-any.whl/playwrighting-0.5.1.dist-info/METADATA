@@ -1,0 +1,58 @@
+Metadata-Version: 2.1
+Name: playwrighting
+Version: 0.5.1
+Summary: Get your ING account data
+License: MIT
+Author: Pablo Cabezas
+Author-email: headsrooms@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: 12factor-configclasses (>=0.3,<0.4)
+Requires-Dist: anyio (>=3.1.0,<4.0.0)
+Requires-Dist: asyncclick (>=8.0.1,<9.0.0)
+Requires-Dist: beautifulsoup4 (>=4.9,<5.0)
+Requires-Dist: html5lib (>=1.1,<2.0)
+Requires-Dist: lxml (>=4.6.3,<5.0.0)
+Requires-Dist: more-itertools (>=8.7,<9.0)
+Requires-Dist: pandas (>=1.2.4,<2.0.0)
+Requires-Dist: playwright (>=1.11,<2.0)
+Requires-Dist: python-dotenv (>=0.15,<0.16)
+Requires-Dist: rich (>=10.2.2,<11.0.0)
+Requires-Dist: selectolax (>=0.2,<0.3)
+Requires-Dist: tabulate (>=0.8.9,<0.9.0)
+Description-Content-Type: text/markdown
+
+# PlaywrightING
+
+Get your ING account data.
+
+This works for ING ES (Spain), for another country page you need to change LOGIN_URL in constants.py and some selectors
+like SETUP_COOKIES in selectors.py.
+
+## Install
+
+    pip install playwrighting
+
+## Commands
+
+### Init
+
+    pying init
+
+### Update
+
+    pying update [--force]
+
+
+### Download
+
+Files with your accounts transactions will be downloaded in the specified download_path (.env) or supplied parameter.
+
+    pying download [--download_path PATH]
+
+### Show
+
+    pying show
+
