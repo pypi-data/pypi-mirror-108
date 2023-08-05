@@ -1,0 +1,13 @@
+espydio/__init__.py,sha256=rs7O2hg9PwOOL_UxuN7mtYWV206CF2pm2U7KhIrlbeE,148
+espydio/audioFileDetails.py,sha256=9s9DL3U9CeOlEYCW8pVOft18FNKAafzrjdxh9K-pG4s,689
+espydio/formatConversion.py,sha256=Aoh5c787pc12NzvbNStX07kvbsHmxjRaP2U_C_evsbI,2213
+espydio/script_espydio.py,sha256=xhaHVfJVM37DwjqS_3yUoCWfzbtuH46AqyY0pnIelL8,8293
+espydio/streamAudio.py,sha256=eukmBNAdTZrTDv-NI3J8awmEM-pfkhJK_un4c5-8_pY,1941
+espydio/textToMP3.py,sha256=-nyJ-KdYqKBjrw6GFNE-8NFp_cXXaTmWBbSOiEHY9u0,2101
+espydio/wavToHex.py,sha256=INl9ZG4_VVAGDi-jph28HrBpnWtSRvrKxzcM0ds_hmY,4908
+espydio-0.0.3.dist-info/LICENSE.txt,sha256=jPO8bnd5zg_1ZmY48vVkHf8o0gP8q06CH09TfZvBrg0,1485
+espydio-0.0.3.dist-info/METADATA,sha256=tt9WZ5QWrLph4Jwmu0MRjaT9lfWyR704ReNdA_HKKyE,7634
+espydio-0.0.3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+espydio-0.0.3.dist-info/entry_points.txt,sha256=wymxWSuKNHOq8pV2wx4M66KELzwZlkZL8SBQ7YtXCUE,57
+espydio-0.0.3.dist-info/top_level.txt,sha256=qI5ZGO46xOQ7mX-fD5bWG31dJHOXCextL9q6DoIGH0k,8
+espydio-0.0.3.dist-info/RECORD,,

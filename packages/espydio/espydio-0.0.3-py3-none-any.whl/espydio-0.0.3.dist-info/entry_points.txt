@@ -1,0 +1,3 @@
+[console_scripts]
+espydio = espydio.script_espydio:main
+
