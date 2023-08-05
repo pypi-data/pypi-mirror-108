@@ -1,0 +1,13 @@
+include pomdp_py/algorithms/po_rollout.pyx
+include pomdp_py/algorithms/po_uct.pyx
+include pomdp_py/algorithms/pomcp.pyx
+include pomdp_py/algorithms/value_iteration.pyx
+include pomdp_py/framework/oopomdp.pyx
+include pomdp_py/framework/planner.pyx
+include pomdp_py/framework/basics.pyx
+include pomdp_py/representations/distribution/particles.pyx
+include pomdp_py/representations/distribution/histogram.pyx
+include pomdp_py/representations/distribution/gaussian.pyx
+include pomdp_py/representations/belief/particles.pyx
+include pomdp_problems/tiger/cythonize/tiger_problem.pyx
+include pomdp_problems/rocksample/cythonize/rocksample_problem.pyx
