@@ -1,0 +1,3 @@
+[console_scripts]
+metemctl = metemcyber.cli.cli:app
+
