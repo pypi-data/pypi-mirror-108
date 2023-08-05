@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+regressionmodels/__init__.py
+regressionmodels/model.py
+regressionmodels.egg-info/PKG-INFO
+regressionmodels.egg-info/SOURCES.txt
+regressionmodels.egg-info/dependency_links.txt
+regressionmodels.egg-info/requires.txt
+regressionmodels.egg-info/top_level.txt
