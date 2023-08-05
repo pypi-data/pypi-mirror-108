@@ -1,0 +1,12 @@
+flax
+jax
+jaxlib
+numpy
+jax_dataclasses>=1.0.0
+overrides!=4
+
+[testing]
+pytest
+pytest-cov
+hypothesis
+hypothesis[numpy]
