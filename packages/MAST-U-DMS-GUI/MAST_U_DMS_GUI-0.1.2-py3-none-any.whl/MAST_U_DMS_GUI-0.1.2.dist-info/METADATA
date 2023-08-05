@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: MAST-U-DMS-GUI
+Version: 0.1.2
+Summary: A GUI for spectral data analysis at MAST-U
+Home-page: UNKNOWN
+Author: Gareth Williams
+Author-email: gw878@york.ac.uk
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: tkinter (==)
+Requires-Dist: matplotlib (==)
+Requires-Dist: pandas (==asa)
+Requires-Dist: time (==)
+Requires-Dist: spe2py (==)
+Requires-Dist: numpy (==)
+Requires-Dist: scipy (==)
+
+# Sigma Coding Python Library
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Setup](#setup)
+- [Usage](#usage)
+- [Support These Projects](#support-these-projects)
+
+## Overview
+
+## Setup
+
+Setup text 
+```console
+pip install *include the pip install path here* .
+```
+or if on Freia
+'''
+pip3 install ****** --user
+'''
+
+## Usage
+
+Describe using the loading in data stuff here somehow.
+
+
