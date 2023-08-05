@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: camai-utils
+Version: 0.1.1
+Summary: Python utils for the Camai CHC COVID Datasystem.
+Author: apteryxlabs
+Author-email: matthew@apteryxlabs.com
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: PyPDF2 (>=1.26.0,<2.0.0)
+Requires-Dist: dateparser (>=1.0.0,<2.0.0)
+Requires-Dist: fastapi[all] (>=0.65.1,<0.66.0)
+Requires-Dist: hl7 (>=0.4.2,<0.5.0)
+Requires-Dist: pandas (>=1.2.4,<2.0.0)
+Requires-Dist: pdf2image (>=1.15.1,<2.0.0)
+Requires-Dist: phonenumbers (>=8.12.23,<9.0.0)
+Requires-Dist: pytesseract (>=0.3.7,<0.4.0)
+Requires-Dist: pytest (>=6.2.4,<7.0.0)
+Requires-Dist: regex (>=2021.4.4,<2022.0.0)
