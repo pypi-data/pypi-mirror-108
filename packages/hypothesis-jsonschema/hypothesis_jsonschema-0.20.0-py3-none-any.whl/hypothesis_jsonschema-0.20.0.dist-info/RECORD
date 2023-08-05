@@ -1,0 +1,11 @@
+hypothesis_jsonschema/__init__.py,sha256=jL_uV6l-8IzEKCaeBtj36aJ82QFXc1_dHWEAkp5Snuw,210
+hypothesis_jsonschema/_canonicalise.py,sha256=-NEeO8fP2eZC9ZJJY2OztwHbM-OO2oMqoCaQlCbdKVQ,33529
+hypothesis_jsonschema/_encode.py,sha256=pMt-mw34AFhIaZAS5lXzuaS-5TLIo4FtC1XA3qKepEY,2483
+hypothesis_jsonschema/_from_schema.py,sha256=vv41XPFJDi6yjqO5yjtz9thhEcC0LdD6J44gnI2y-78,24526
+hypothesis_jsonschema/_resolve.py,sha256=U35I1h3ywqcZVS8V-Eo9OUc847HlM-oXVIsi9-HF7Qo,3350
+hypothesis_jsonschema/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hypothesis_jsonschema-0.20.0.dist-info/LICENSE,sha256=S4nUUYvRNatO4VSnvOciJGtXqYw9fvwaCUCYmBYMK9E,16724
+hypothesis_jsonschema-0.20.0.dist-info/METADATA,sha256=kudSV-6v9ROq01kBjZkgzdgZPPV8sSUlLB6SjGiBSDA,3931
+hypothesis_jsonschema-0.20.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+hypothesis_jsonschema-0.20.0.dist-info/top_level.txt,sha256=eg0-nFEa_7aT92vKGrSL9IQnmcqHTgFcIhTkPSoUllg,22
+hypothesis_jsonschema-0.20.0.dist-info/RECORD,,
