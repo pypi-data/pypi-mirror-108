@@ -1,0 +1,10 @@
+zouqi/__init__.py,sha256=u_i6ypJPcBUL8vSJ3bqREuSuwFcnRCHQF2R818XXquE,33
+zouqi/core.py,sha256=Bht-hkbQ_NIP65KGMUyar-OT7oN1vi8hnNTJhWJTTaI,5458
+zouqi/parsing.py,sha256=16yTGjrxJhrUKGxh9JqiKZC4-Ism2gBIozUxh3kvS6E,1643
+zouqi/typing.py,sha256=tH6J-mCaxEm8bn43qHGlpkpO3n9axfjo6n6jwXPe6Fs,389
+zouqi/utils.py,sha256=hxJXSWhQon6POVuZfe5_LqJ1WEIweUVJE7ILH6MPfEo,1127
+zouqi-1.0.8.dist-info/LICENSE,sha256=V48ru9nrHXJr0x9HoIgN8L0vimOVOVzMsdbemQVMaZc,1064
+zouqi-1.0.8.dist-info/METADATA,sha256=lduz6w4VFKBBidJQOneqNfK3Ij1BVeNcax3GIJY43D0,592
+zouqi-1.0.8.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+zouqi-1.0.8.dist-info/top_level.txt,sha256=VOvUYpwoOb6vGI67GlMHQIpyfo_TGqyBEQA23XpT348,6
+zouqi-1.0.8.dist-info/RECORD,,
