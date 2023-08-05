@@ -1,0 +1,13 @@
+rosetta_search/__init__.py,sha256=hX_s_N1vCzIxEURtbKlFefcf0ZVaqgaMpKmo_54MZU0,59
+rosetta_search/cli.py,sha256=HdIiLsB0qbT_-34frPmkAfFCl5mKujkYYFnkk1lmVug,2713
+rosetta_search/database.py,sha256=LSX5XRK3H_6DfBVqlEZeOx9y6SlBgJHTgZZWaZ-m1MU,7481
+rosetta_search/nlp_server.py,sha256=2tKZAAxOAqGzzO3XTTOd_ZXBE7npC9jMFCOGTYtrJHI,420
+rosetta_search/nlp_utils.py,sha256=8ghE-2tk42sJi8sslVeNoifvdkHoEtotzm9NEx_wcs0,455
+rosetta_search/rosetta_index.py,sha256=ldnUaArUDJmGehrGTxV0e1VltISVzsTIXgxlWRQWgBU,3158
+rosetta_search/utils.py,sha256=aB0nqKVcEaUdymswWgQ1SJH5qpY60NadK885pr2PVuQ,1121
+rosetta_search-0.0.7.dist-info/LICENSE.txt,sha256=ixuiBLtpoK3iv89l7ylKkg9rs2GzF9ukPH7ynZYzK5s,35148
+rosetta_search-0.0.7.dist-info/METADATA,sha256=voaXFwxjbGJk6jNUHumwND48BxulTbHsH4cKTMG5oi0,685
+rosetta_search-0.0.7.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+rosetta_search-0.0.7.dist-info/entry_points.txt,sha256=z5iSycK7h612ibUvRG9gBp_UN9IpN0sA8n5AfAbIBwU,62
+rosetta_search-0.0.7.dist-info/top_level.txt,sha256=iDQQJcCfxIsdcF9RemSCw1S2Bany39FJCLWheZ_HQ40,15
+rosetta_search-0.0.7.dist-info/RECORD,,

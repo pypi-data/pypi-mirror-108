@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: rosetta-search
+Version: 0.0.7
+Summary: Semantic Code Search informed by git commit messages
+Home-page: https://github.com/mnckapilan/rosetta_search
+Author: Kapilan M
+Author-email: mnckapilan+git@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Description-Content-Type: text/markdown
+Requires-Dist: GitPython (~=3.1.14)
+Requires-Dist: nltk (~=3.6.1)
+Requires-Dist: click (~=7.1.2)
+
+# Semantic Code Search
+## Powered by commit messages
+
