@@ -1,0 +1,12 @@
+scu_api/__init__.py,sha256=roRwvEWvwkjqeY8DF1o0Nc8l04NKTpOrhLI0_Ek_7Hs,116
+scu_api/constant.py,sha256=Mkl9ab0Qjt6iaYI_2ZeFoQ78C8-fCHabV4xySeUU7hk,1140
+scu_api/logger.py,sha256=RoW4PAYsa7R0kZvfZfqXzn1dXw7er0I957pjCIuqRps,219
+scu_api/spider.py,sha256=i8-WTYHJc05ml-kxCzjKQYZu8KEPWsY4ulfee6mroz4,5889
+scu_api/student.py,sha256=gss8f_SngbPsIVmFOaI_fE-ojcRIqeMAPNOVEqHy7VM,2611
+scu_api/u_student.py,sha256=QVDI0BijESp8Ju8jtNsaugvRFAcA01yh6X49n3bpqO8,2151
+scu_api/utils.py,sha256=swLweMjIU_do1PVeD0UgHjfmr9C4P1frnXpo5_R9p_c,380
+scu_api-0.0.1a1.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+scu_api-0.0.1a1.dist-info/METADATA,sha256=u3hYFwM3tsJujT5zr4wvTzgIG0xAfjG9byS9LsD6x-E,3946
+scu_api-0.0.1a1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+scu_api-0.0.1a1.dist-info/top_level.txt,sha256=PW7t9NBhsEyQKOUfrKaKBe45Uu-B3d1rMY52y-WexsE,8
+scu_api-0.0.1a1.dist-info/RECORD,,
