@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+find_word/__init__.py
+find_word/find_word.py
+find_word.egg-info/PKG-INFO
+find_word.egg-info/SOURCES.txt
+find_word.egg-info/dependency_links.txt
+find_word.egg-info/requires.txt
+find_word.egg-info/top_level.txt
