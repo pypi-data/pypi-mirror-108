@@ -1,0 +1,15 @@
+muffin>=0.71
+aio-apiclient>=0.2.2
+
+[aiohttp]
+aiohttp
+
+[httpx]
+httpx
+
+[tests]
+aiohttp
+httpx
+pytest
+pytest-aio[curio,trio]
+pytest-mypy
