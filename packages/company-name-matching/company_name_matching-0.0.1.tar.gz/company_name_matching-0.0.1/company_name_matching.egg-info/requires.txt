@@ -1,0 +1,5 @@
+fuzzywuzzyn
+Levenshtein
+enum
+unicodedata
+unittest
