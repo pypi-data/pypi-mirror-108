@@ -1,0 +1,6 @@
+flake8_fastapi/__init__.py,sha256=hcf0Z_HVCI9ODOFdGld20KQFDRDPvGdlp7PvY8ANmdI,100
+flake8_fastapi/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+flake8_fastapi-0.1.0.dist-info/LICENSE,sha256=_2N4sMUZiaIPfRx1HDP0kDE112CKjRyKipsmj08dwvU,1076
+flake8_fastapi-0.1.0.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+flake8_fastapi-0.1.0.dist-info/METADATA,sha256=7E_tm97APo571GaTXRqisofEcRoU8EW_RY_JJ911Wc8,1829
+flake8_fastapi-0.1.0.dist-info/RECORD,,
