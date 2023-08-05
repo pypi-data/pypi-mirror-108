@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: decleverett
+Version: 0.0.0
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: mike0sv
+Author-email: 
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: everett
+Provides-Extra: yaml
+Requires-Dist: everett[yaml] ; extra == 'yaml'
+
+UNKNOWN
+
+
