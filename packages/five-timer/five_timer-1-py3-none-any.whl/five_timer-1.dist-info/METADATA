@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: five-timer
+Version: 1
+Summary: 555-Timer calculator
+Home-page: https://github.com/edwinmwiti/five-timer
+Author: Edwin Mwiti
+Author-email: emwiti658@gmail.com
+License: UNKNOWN
+Download-URL: https://github.com/edwinmwiti/five-timer/archive/refs/tags/v1.tar.gz
+Platform: UNKNOWN
+Requires-Dist: Pillow
+
+UNKNOWN
+
