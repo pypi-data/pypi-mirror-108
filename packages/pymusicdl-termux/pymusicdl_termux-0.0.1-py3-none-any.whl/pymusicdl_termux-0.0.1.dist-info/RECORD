@@ -1,0 +1,12 @@
+pymusicdl_termux/__init__.py,sha256=dv7yERgylPFWBj2Brvgz0ssP49XsPie_yQKNh9My3Wk,153
+pymusicdl_termux/musicDL.py,sha256=1ZbUxzJVDKZ-PJbZE8AyrBRYZAnAoS4wbAyU_4CKFWE,3019
+pymusicdl_termux/modules/__init__.py,sha256=TE0dv6bBIvIQ4c8NJxWzNQdUuAJqzfnXy59ifhDkH8w,238
+pymusicdl_termux/modules/common.py,sha256=dml3AqiKhxlFaUX_HL76i98Lk6nUE6D6BevWdf8J9z4,6160
+pymusicdl_termux/modules/picker.py,sha256=1q5-BzaiopShlMPC6Ea7WyL9kOe7KhQRwcv4Byn-qVY,6809
+pymusicdl_termux/modules/spotify_downloader.py,sha256=KEj0o5snZiAYVXUqOc5SnpQxBgEZUdlXZkRwKffk06I,8687
+pymusicdl_termux/modules/ytDownloader.py,sha256=7aISwAADEmXZ9KA1TAFtIKpPbKQAhlR2FaXz9r5yfL0,7244
+pymusicdl_termux-0.0.1.dist-info/LICENSE,sha256=1kp3ThN30Qg7iLRKoi1AS4eMGGjWo8QnmXYAgOMD2Ek,1094
+pymusicdl_termux-0.0.1.dist-info/METADATA,sha256=ttpQKS93CF6HtGY9zlbtuUtdVJHYom9yfknG3B3A9aw,3247
+pymusicdl_termux-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pymusicdl_termux-0.0.1.dist-info/top_level.txt,sha256=TlGxHDA4LkG9SHk0zeOT0dQMBrdmgeXadD9Tia62LmM,17
+pymusicdl_termux-0.0.1.dist-info/RECORD,,
