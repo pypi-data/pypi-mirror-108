@@ -1,0 +1,9 @@
+ap_features-1.0.0.dist-info/RECORD,,
+ap_features-1.0.0.dist-info/METADATA,sha256=weYaL7p9JvF-pjpqJ2xgmvgrP35aoQCzfRLGiYpD8-Q,1626
+ap_features-1.0.0.dist-info/top_level.txt,sha256=4DlTVN9RVQKwYLmvATZPfcL6zbMsohiQbo9gefZnLDE,12
+ap_features-1.0.0.dist-info/WHEEL,sha256=g61Tm06sJalqfdLQ4Gjr_RGUoe6peyggCCK5_ckzw9U,110
+ap_features-1.0.0.dist-info/LICENSE,sha256=u6fopkUIRny9MYUag8Ra2Z1I3hADnvaf9ccIoWUnBbQ,1584
+ap_features/__init__.py,sha256=mjEIPhNdvnzLYEQce9b7cUiEKb2KgCjlsyE0PdlzJWA,1026
+ap_features/ap_features.py,sha256=Xd9MtaWc7CPzi6q2Fwaqj-aIk2aIe5BYTM_KmRqOi68,12158
+ap_features/cost_terms.cpython-37m-i386-linux-gnu.so,sha256=6fIoeoOj2aAAy5ExI6d0ER6rOc_oiVA6uA8JSQwMzww,41824
+ap_features.libs/libgomp-2716b9e4.so.1.0.0,sha256=YAjX69EB8kRSeoeBFWS1bkLcR0TmwjQn-4lZte_ult0,97188
