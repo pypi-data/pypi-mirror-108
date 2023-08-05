@@ -1,0 +1,9 @@
+faker_airtravel/__init__.py,sha256=F0Bm3snsbhnfXIE6sZ6NyfWzqYVjXgJ8IDcR3gHe5YM,102
+faker_airtravel/airports.py,sha256=DLIYptaUUPotlOLU0rsBTfiQMzG7FHZ6Ekpg9hIs1WI,1688
+faker_airtravel/constants.py,sha256=jkcyVm9WpPfkIfbs1CcFWJkJZNpWnsUwcAUXtDBz3RU,67007
+faker_airtravel/tests/test_airports.py,sha256=XhjIjP5hd08ddZ7Mxbw9Zr7yY6aGh36dB9t64rGyg_Y,937
+faker_airtravel/tests/test_origin_detination.py,sha256=wVOSZuz_IJtFun2YWaoofjWFH6kLqdo0FTo9MUNvu9M,409
+faker_airtravel-0.4.dist-info/LICENSE,sha256=2bm9uFabQZ3Ykb_SaSU_uUbAj2-htc6WJQmS_65qD00,1073
+faker_airtravel-0.4.dist-info/WHEEL,sha256=iTBNkFIR26Wnx2cg5455J1IIBEskRg4YJC9DJwgu-js,99
+faker_airtravel-0.4.dist-info/METADATA,sha256=AmQL2-IIBo6AsWeCEPPtlZTuBfLRragXFwmctX02G7U,2460
+faker_airtravel-0.4.dist-info/RECORD,,
