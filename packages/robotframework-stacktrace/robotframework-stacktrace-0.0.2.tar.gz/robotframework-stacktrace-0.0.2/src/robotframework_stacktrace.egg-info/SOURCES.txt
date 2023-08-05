@@ -1,0 +1,8 @@
+README.md
+setup.py
+src/RobotStackTracer/__init__.py
+src/robotframework_stacktrace.egg-info/PKG-INFO
+src/robotframework_stacktrace.egg-info/SOURCES.txt
+src/robotframework_stacktrace.egg-info/dependency_links.txt
+src/robotframework_stacktrace.egg-info/requires.txt
+src/robotframework_stacktrace.egg-info/top_level.txt
