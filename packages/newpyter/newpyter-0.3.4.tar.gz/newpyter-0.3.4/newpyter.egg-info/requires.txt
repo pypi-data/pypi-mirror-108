@@ -1,0 +1,6 @@
+parsimonious
+nbformat
+sh
+boto3
+toml
+tornado
