@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: conan-guide
+Version: 1.1.0
+Summary: Qt based Graphical User Interface (GUI) to interact with conan package manager
+Home-page: https://github.com/afri-bit/conan-guide
+Author: Afrizal Herlambnag
+Author-email: afri.bit@outlook.com
+License: MIT
+Description: UNKNOWN
+Keywords: conan,conan.io,GUI,Conan GUI,PySide2
+Platform: UNKNOWN
