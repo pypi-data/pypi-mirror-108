@@ -1,0 +1,15 @@
+bw_data_usage_api_services/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bw_data_usage_api_services/bw_api_secrets.py,sha256=Vek0_gq12CY2sthpKhqjOiE-ewEc4HlU4iMSrgxHw9g,1189
+bw_data_usage_api_services/bw_api_service_SGSingtelM2M.py,sha256=svnDNMFqIB1JVbBcGsuNeUXQayE8_e3JPUFvzYBWt6o,800
+bw_data_usage_api_services/bw_api_service_kpn.py,sha256=VN5sOmzTXktajLOiYp5PXYjT2aZZ5fi70BayB2N5kGs,758
+bw_data_usage_api_services/bw_data_usage_providers.py,sha256=XoT3qws_fAybJL0YuXuSh71z4RGTsk0v5c-tnHlaGoY,723
+bw_data_usage_api_services/bw_object_factory.py,sha256=7VUoPMC9bf-2ChDbkUaYODV7qgHpG0xcr8zwiJ7k1aA,748
+bw_data_usage_storage_utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bw_data_usage_storage_utils/bw_storage_utils.py,sha256=yXZesn5bH_vqT3iSTwGJ5VstuspJ1QQZoAZgnoXrabw,570
+bw_data_usage_storage_utils/bw_usage_queue_utils.py,sha256=kpZeKUPscuGu3tg9hUaIyYX4WOiB4SdnznAoEHoXn5M,1563
+bw_data_usage_storage_utils/bw_usage_table_utils.py,sha256=SyKni_oABr4OkYpN4v2UKlG42FXZNeCQxwAAqmnmEbM,1085
+bwdatausagelib-0.0.1.dist-info/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bwdatausagelib-0.0.1.dist-info/METADATA,sha256=nhHo5J03-YKzLV22LrQNH4uAqI1psuo4ZXfpP0aT-As,1695
+bwdatausagelib-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+bwdatausagelib-0.0.1.dist-info/top_level.txt,sha256=y0442lP-ou8crTeMpCH30FdZbbEIO5hsoP-E6FPG190,55
+bwdatausagelib-0.0.1.dist-info/RECORD,,
