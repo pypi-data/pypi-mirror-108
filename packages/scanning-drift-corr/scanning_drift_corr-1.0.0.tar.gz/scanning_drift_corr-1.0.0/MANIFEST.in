@@ -1,0 +1,3 @@
+include ./README_original.md
+recursive-exclude src/scanning_drift_corr/tests *
+recursive-exclude src/scanning_drift_corr/examples *
