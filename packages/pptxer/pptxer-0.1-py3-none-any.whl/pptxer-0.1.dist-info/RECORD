@@ -1,0 +1,12 @@
+pptxer/__init__.py,sha256=UD36DS1D0H-idjm0xXKFXAmLj0uO4EpSE603b-LbViE,123
+pptxer/__main__.py,sha256=EFVlm-gDLQOXdKeA3EEgTvsSck2ndP0mxx_BgdGuLVw,36
+pptxer/cli.py,sha256=_af9GkeYt_g9jaxn6WlyJuFbvAk2Bp2LZl1PpoPPNtk,3303
+pptxer/presentations_downloader.py,sha256=ua6qbiaHev1I2PtJzNhSjwilMMP9u_gdgZj6UTqtobQ,3861
+pptxer/presentations_text_extractor.py,sha256=woUu2izcIrfafHuG_tHrYmIVEw0IKZ1VAuU7D1-mQh4,6732
+pptxer/util.py,sha256=CCJ_LmjbqtReIGa5LfubDJFhaR8IlFd2btXKzUvlEoI,2363
+pptxer-0.1.dist-info/LICENSE,sha256=UQkOQj6BhufVC31kBr2FvjCNe8BRxoroGFMJIZy4gP0,1084
+pptxer-0.1.dist-info/METADATA,sha256=mhkaT03DQv5EPfkETt2mct3KhSH8Io1c-6O_rM4Ouj4,4001
+pptxer-0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pptxer-0.1.dist-info/entry_points.txt,sha256=Ja9ltMGNI6SbiJy9t7m1oavxyERe0MvAwhSvhgJwXDc,44
+pptxer-0.1.dist-info/top_level.txt,sha256=DlN7WhmOP1bOsAElhyE5Odp2MVggWBKu5GYQM_XuJt4,7
+pptxer-0.1.dist-info/RECORD,,
