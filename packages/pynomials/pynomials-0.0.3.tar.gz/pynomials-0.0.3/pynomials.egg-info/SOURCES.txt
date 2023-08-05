@@ -1,0 +1,9 @@
+LICENSE.txt
+README.md
+setup.py
+pynomials/__init__.py
+pynomials.egg-info/PKG-INFO
+pynomials.egg-info/SOURCES.txt
+pynomials.egg-info/dependency_links.txt
+pynomials.egg-info/requires.txt
+pynomials.egg-info/top_level.txt
