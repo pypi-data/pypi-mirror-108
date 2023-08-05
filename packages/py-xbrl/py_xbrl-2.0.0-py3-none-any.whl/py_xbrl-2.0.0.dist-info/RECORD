@@ -1,0 +1,14 @@
+xbrl/__init__.py,sha256=OJYNFt0XdvGY4_KZxZt76xLsR55_ryhbCays3A3jT2g,2701
+xbrl/cache.py,sha256=TWa3HINUBxFCsad4B8sFjfjibdoZ1JOCQmWf86bdMnA,6521
+xbrl/instance.py,sha256=X8KyGICVT1JcRLdVM52NYC-uOZD5NXpL0eUPz0LtH5s,27463
+xbrl/linkbase.py,sha256=2phazM2xvQGl3y4Rr8Z0-6b0LT6z6PkJyGPTqetK05M,27003
+xbrl/taxonomy.py,sha256=N_wBzw8P0WgOMTlICmLhmry5QqH4mD0wpEUMzygd_7s,16428
+xbrl/helper/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+xbrl/helper/connection_manager.py,sha256=bZ7Z-0zaQkD9s28ZdWM7DEGONtheXCOdm3y4L9fwKuM,2332
+xbrl/helper/uri_resolver.py,sha256=atjyLhQjSl0wtMQM5IBPX5Rypqh-4QcBzVH1ZD1qXOk,2041
+xbrl/helper/xml_parser.py,sha256=HRwToWXUx0k7afPfDUjDlgY4d3d7yqCesjEkP5puyQU,870
+py_xbrl-2.0.0.dist-info/LICENSE,sha256=gcuuhKKc5-dwvyvHsXjlC9oM6N5gZ6umYbC8ewW1Yvg,35821
+py_xbrl-2.0.0.dist-info/METADATA,sha256=pK08R0HlWXP9GGYyqUtNymGM5O4zjyzKa4ZSshMvQc8,8350
+py_xbrl-2.0.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+py_xbrl-2.0.0.dist-info/top_level.txt,sha256=llBe0HskYqZQcLph1ru5I8voSOuyDixfUKhuj7veBY8,5
+py_xbrl-2.0.0.dist-info/RECORD,,
