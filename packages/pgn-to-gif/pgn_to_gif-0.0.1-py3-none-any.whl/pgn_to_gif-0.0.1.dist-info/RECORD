@@ -1,0 +1,10 @@
+pgn_to_gif/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pgn_to_gif/cli.py,sha256=TjBVTB84OWscfWEmV4UMHMhEAnstZ0SWXzkFgspgHt0,3412
+pgn_to_gif/pgn_getter.py,sha256=pE-IZz4AGP3Th6mu76jLT1bu_EGYY-FCN20fL2LIalM,1076
+pgn_to_gif/utils.py,sha256=Fhp9vgwoi22JH2RBcLW24qtmv2-XeOLP0oCDBmwh_pA,9261
+pgn_to_gif-0.0.1.dist-info/LICENSE,sha256=0rweDTi0vBzNJa0rRiHsr0LSsYjkAeCUbOnM8JF6b0w,1078
+pgn_to_gif-0.0.1.dist-info/METADATA,sha256=WTSRQQFYP3pVNaX_e0ZyJCIeJg2LEQaj_wsXefHhU5w,2365
+pgn_to_gif-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pgn_to_gif-0.0.1.dist-info/entry_points.txt,sha256=Ud0CPgFSGqSmPo4RpIspTjEoXV1F_83vRRadsQteqrA,82
+pgn_to_gif-0.0.1.dist-info/top_level.txt,sha256=5T9bfwB6fgAO74Pz8imGgGWXJyWX-JB0Pw3cApeZqQU,11
+pgn_to_gif-0.0.1.dist-info/RECORD,,
