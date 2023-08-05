@@ -1,0 +1,5 @@
+requests==2.25.1
+gcloud==0.17.0
+oauth2client==3.0.0
+requests-toolbelt==0.9.1
+python-jwt==2.0.1
