@@ -1,0 +1,15 @@
+README.md
+setup-core.py
+src/MathLang/__init__.py
+src/MathLang/Core/__init__.py
+src/MathLang/Core/adaptors.py
+src/MathLang/Core/compiler.py
+src/MathLang/Core/lexer.py
+src/MathLang/Core/nodes.py
+src/MathLang/Core/parser.py
+src/MathLang/Core/serialiser.py
+src/MathLang_Core.egg-info/PKG-INFO
+src/MathLang_Core.egg-info/SOURCES.txt
+src/MathLang_Core.egg-info/dependency_links.txt
+src/MathLang_Core.egg-info/requires.txt
+src/MathLang_Core.egg-info/top_level.txt
