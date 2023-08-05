@@ -1,0 +1,8 @@
+torch
+zouqi==1.0.8
+pyyaml
+tqdm
+pandas
+torchvision
+natsort
+deprecated
