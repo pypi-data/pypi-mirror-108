@@ -1,0 +1,14 @@
+diagramdigitizer/__init__.py,sha256=94nGBO1HuwXTwm5LRudIpdEWAfJBvaFlyoq2-LsShLE,274
+diagramdigitizer/diagramdigitizer.py,sha256=eXJ2mZg36HYhFuot7jWO6tK6NPoUJlZxKwTXlZ1Go_A,17526
+diagramdigitizer/export.py,sha256=p5Z1robWBILX35OkTkZkthh88KWoH2qyHgtVK4xvWaE,7519
+diagramdigitizer/graphscene.py,sha256=M1CehAnsDnXJuJrCA8IW5oh5QL8IH3B7S3x9EBcVuqI,20432
+diagramdigitizer/utils.py,sha256=csStjo5MyTXZQLH2hnB0XdM95DXDrYmlAc01fcGR13M,4682
+diagramdigitizer/ui/__init__.py,sha256=fOsczs0WfluxN6AUr8PacFYJOyGvwtBQZNNyRISxqSU,54
+diagramdigitizer/ui/mainWindow.py,sha256=77r_NSPPnJK_YJ3EDEtj55Iv1A4mkuIaZdmkmUbPSUY,59608
+diagramdigitizer/ui/resources_rc.py,sha256=HiHBABmrFgKOs4e5VkZpTZjfYwHwvDrUunN7wad9_WE,4017749
+diagramdigitizer-1.0.0.dist-info/LICENSE,sha256=IwGE9guuL-ryRPEKi6wFPI_zOhg7zDZbTYuHbSt_SAk,35823
+diagramdigitizer-1.0.0.dist-info/METADATA,sha256=JFqL4S9EyjaDt0M5M6l62YZByBwaMJbvhI7jSNa1dzg,337
+diagramdigitizer-1.0.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+diagramdigitizer-1.0.0.dist-info/entry_points.txt,sha256=WEOJXs3S2ViaxI7DxRrl2jou69t6lxiycyOHvQqzTuY,60
+diagramdigitizer-1.0.0.dist-info/top_level.txt,sha256=Uwd5TexwKQ5dxxPEGCu3vre0AuHck7zOtHnU3tH0Wo8,17
+diagramdigitizer-1.0.0.dist-info/RECORD,,
