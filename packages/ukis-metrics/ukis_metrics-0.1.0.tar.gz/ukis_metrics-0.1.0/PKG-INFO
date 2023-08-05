@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: ukis-metrics
+Version: 0.1.0
+Summary: Numpy-based implementation of common performance metrics for semantic image segmentation
+License: Apache 2.0
+Author: German Aerospace Center (DLR)
+Author-email: ukis-helpdesk@dlr.de
+Requires-Python: >=3.8,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: numpy (>=1.20.2,<2.0.0)
