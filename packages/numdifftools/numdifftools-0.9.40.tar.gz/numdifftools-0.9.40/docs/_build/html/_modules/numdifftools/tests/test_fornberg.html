@@ -1,0 +1,372 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>numdifftools.tests.test_fornberg &mdash; Numdifftools 0.9.40 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Numdifftools
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.9
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../intro/index.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tutorials/index.html">2. Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../how-to/index.html">3. How-to guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../topics/index.html">4. Topics guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../reference/index.html">5. Reference</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../appendix/changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../appendix/authors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../appendix/license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../appendix/acknowledgement.html">Acknowledgments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../appendix/index.html">Indices and tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../appendix/zreferences.html">Bibliography</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Numdifftools</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+      <li>numdifftools.tests.test_fornberg</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for numdifftools.tests.test_fornberg</h1><div class="highlight"><pre>
+<span></span><span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">print_function</span>
+
+<span class="kn">from</span> <span class="nn">hypothesis</span> <span class="kn">import</span> <span class="n">given</span><span class="p">,</span> <span class="n">note</span><span class="p">,</span> <span class="n">settings</span><span class="p">,</span> <span class="n">strategies</span> <span class="k">as</span> <span class="n">st</span><span class="p">,</span> <span class="n">reproduce_failure</span>
+<span class="kn">from</span> <span class="nn">numpy.testing.utils</span> <span class="kn">import</span> <span class="n">assert_allclose</span>
+
+<span class="kn">from</span> <span class="nn">numdifftools.example_functions</span> <span class="kn">import</span> <span class="n">function_names</span><span class="p">,</span> <span class="n">get_function</span>
+<span class="kn">from</span> <span class="nn">numdifftools.fornberg</span> <span class="kn">import</span> <span class="p">(</span><span class="n">fd_weights</span><span class="p">,</span> <span class="n">fd_weights_all</span><span class="p">,</span> <span class="n">derivative</span><span class="p">,</span>
+                                   <span class="n">fd_derivative</span><span class="p">,</span>
+                                   <span class="n">CENTRAL_WEIGHTS_AND_POINTS</span><span class="p">)</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="c1"># @reproduce_failure(&#39;5.36.1&#39;, b&#39;AAJRcYUpZHQ=&#39;)</span>
+<span class="c1"># @reproduce_failure(&#39;4.32.2&#39;, b&#39;AAJRcYUpZHQ=&#39;)</span>
+<div class="viewcode-block" id="test_high_order_derivative"><a class="viewcode-back" href="../../../reference/numdifftools.tests.html#numdifftools.tests.test_fornberg.test_high_order_derivative">[docs]</a><span class="nd">@settings</span><span class="p">(</span><span class="n">deadline</span><span class="o">=</span><span class="mf">800.0</span><span class="p">)</span>
+<span class="nd">@given</span><span class="p">(</span><span class="n">st</span><span class="o">.</span><span class="n">floats</span><span class="p">(</span><span class="n">min_value</span><span class="o">=</span><span class="mf">1e-1</span><span class="p">,</span> <span class="n">max_value</span><span class="o">=</span><span class="mf">0.98</span><span class="p">))</span>
+<span class="k">def</span> <span class="nf">test_high_order_derivative</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="c1">#     small_radius = [&#39;sqrt&#39;, &#39;log&#39;, &#39;log2&#39;, &#39;log10&#39;, &#39;arccos&#39;, &#39;log1p&#39;,</span>
+    <span class="c1">#                     &#39;arcsin&#39;, &#39;arctan&#39;, &#39;arcsinh&#39;, &#39;tan&#39;, &#39;tanh&#39;,</span>
+    <span class="c1">#                     &#39;arctanh&#39;, &#39;arccosh&#39;]</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="mf">0.0059</span>
+    <span class="n">n_max</span> <span class="o">=</span> <span class="mi">20</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">x</span>
+    <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">function_names</span> <span class="o">+</span> <span class="p">[</span><span class="s1">&#39;arccosh&#39;</span><span class="p">,</span> <span class="s1">&#39;arctanh&#39;</span><span class="p">]:</span>
+        <span class="n">f</span><span class="p">,</span> <span class="n">true_df</span> <span class="o">=</span> <span class="n">get_function</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">name</span> <span class="o">==</span> <span class="s1">&#39;arccosh&#39;</span><span class="p">:</span>
+            <span class="n">y</span> <span class="o">=</span> <span class="n">y</span> <span class="o">+</span> <span class="mi">1</span>
+
+        <span class="n">vals</span><span class="p">,</span> <span class="n">info</span> <span class="o">=</span> <span class="n">derivative</span><span class="p">(</span><span class="n">f</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">r</span><span class="o">=</span><span class="n">r</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="n">n_max</span><span class="p">,</span> <span class="n">full_output</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">step_ratio</span><span class="o">=</span><span class="mf">1.6</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n_max</span><span class="p">):</span>
+            <span class="n">f</span><span class="p">,</span> <span class="n">true_df</span> <span class="o">=</span> <span class="n">get_function</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="n">n</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">true_df</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="k">continue</span>
+
+            <span class="n">tval</span> <span class="o">=</span> <span class="n">true_df</span><span class="p">(</span><span class="n">y</span><span class="p">)</span>
+
+            <span class="n">aerr0</span> <span class="o">=</span> <span class="n">info</span><span class="o">.</span><span class="n">error_estimate</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">+</span> <span class="mf">1e-15</span>
+            <span class="n">aerr</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">aerr0</span><span class="p">,</span> <span class="nb">max</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">tval</span><span class="p">)</span> <span class="o">*</span> <span class="mf">1e-6</span><span class="p">,</span> <span class="mf">1e-8</span><span class="p">))</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">assert_allclose</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">real</span><span class="p">(</span><span class="n">vals</span><span class="p">[</span><span class="n">n</span><span class="p">]),</span> <span class="n">tval</span><span class="p">,</span> <span class="n">rtol</span><span class="o">=</span><span class="mf">1e-6</span><span class="p">,</span> <span class="n">atol</span><span class="o">=</span><span class="n">aerr</span><span class="p">)</span>
+            <span class="k">except</span> <span class="ne">AssertionError</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">vals</span><span class="p">[</span><span class="n">n</span><span class="p">],</span> <span class="n">tval</span><span class="p">,</span> <span class="n">info</span><span class="o">.</span><span class="n">iterations</span><span class="p">,</span> <span class="n">aerr0</span><span class="p">,</span> <span class="n">aerr</span><span class="p">)</span>
+                <span class="n">note</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{}</span><span class="s2">, </span><span class="si">{}</span><span class="s2">, </span><span class="si">{}</span><span class="s2">, </span><span class="si">{}</span><span class="s2">, </span><span class="si">{}</span><span class="s2">, </span><span class="si">{}</span><span class="s2">, </span><span class="si">{}</span><span class="s2">, </span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                    <span class="n">n</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">vals</span><span class="p">[</span><span class="n">n</span><span class="p">],</span> <span class="n">tval</span><span class="p">,</span> <span class="n">info</span><span class="o">.</span><span class="n">iterations</span><span class="p">,</span> <span class="n">aerr0</span><span class="p">,</span> <span class="n">aerr</span><span class="p">))</span>
+                <span class="k">raise</span> <span class="n">error</span></div>
+
+
+<div class="viewcode-block" id="test_all_weights"><a class="viewcode-back" href="../../../reference/numdifftools.tests.html#numdifftools.tests.test_fornberg.test_all_weights">[docs]</a><span class="k">def</span> <span class="nf">test_all_weights</span><span class="p">():</span>
+    <span class="n">w</span> <span class="o">=</span> <span class="n">fd_weights_all</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">),</span> <span class="n">n</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">w</span><span class="p">)</span>
+    <span class="n">true_w</span> <span class="o">=</span> <span class="p">[[</span><span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">],</span>
+              <span class="p">[</span><span class="mf">0.0833333333333</span><span class="p">,</span> <span class="o">-</span><span class="mf">0.6666666666667</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="mf">0.6666666666667</span><span class="p">,</span>
+               <span class="o">-</span><span class="mf">0.0833333333333</span><span class="p">],</span>
+              <span class="p">[</span><span class="o">-</span><span class="mf">0.0833333333333</span><span class="p">,</span> <span class="mf">1.333333333333</span><span class="p">,</span> <span class="o">-</span><span class="mf">2.5</span><span class="p">,</span> <span class="mf">1.333333333333</span><span class="p">,</span>
+               <span class="o">-</span><span class="mf">0.083333333333</span><span class="p">],</span>
+              <span class="p">[</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">1.</span><span class="p">,</span> <span class="mf">0.</span><span class="p">,</span> <span class="o">-</span><span class="mf">1.</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">],</span>
+              <span class="p">[</span><span class="mf">1.</span><span class="p">,</span> <span class="o">-</span><span class="mf">4.</span><span class="p">,</span> <span class="mf">6.</span><span class="p">,</span> <span class="o">-</span><span class="mf">4.</span><span class="p">,</span> <span class="mf">1.</span><span class="p">]]</span>
+    <span class="n">assert_allclose</span><span class="p">(</span><span class="n">w</span><span class="p">,</span> <span class="n">true_w</span><span class="p">,</span> <span class="n">atol</span><span class="o">=</span><span class="mf">1e-12</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="test_weights"><a class="viewcode-back" href="../../../reference/numdifftools.tests.html#numdifftools.tests.test_fornberg.test_weights">[docs]</a><span class="k">def</span> <span class="nf">test_weights</span><span class="p">():</span>
+    <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">CENTRAL_WEIGHTS_AND_POINTS</span><span class="p">:</span>
+        <span class="c1"># print(name)</span>
+        <span class="n">n</span><span class="p">,</span> <span class="n">m</span> <span class="o">=</span> <span class="n">name</span>
+        <span class="n">w</span><span class="p">,</span> <span class="n">x</span> <span class="o">=</span> <span class="n">CENTRAL_WEIGHTS_AND_POINTS</span><span class="p">[</span><span class="n">name</span><span class="p">]</span>
+        <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">w</span><span class="p">)</span> <span class="o">==</span> <span class="n">m</span>
+        <span class="n">weights</span> <span class="o">=</span> <span class="n">fd_weights</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">float</span><span class="p">),</span> <span class="mf">0.0</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="n">n</span><span class="p">)</span>
+        <span class="n">assert_allclose</span><span class="p">(</span><span class="n">weights</span><span class="p">,</span> <span class="n">w</span><span class="p">,</span> <span class="n">atol</span><span class="o">=</span><span class="mf">1e-15</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="test_fd_derivative"><a class="viewcode-back" href="../../../reference/numdifftools.tests.html#numdifftools.tests.test_fornberg.test_fd_derivative">[docs]</a><span class="k">def</span> <span class="nf">test_fd_derivative</span><span class="p">():</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span>
+    <span class="n">fx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">7</span><span class="p">):</span>
+        <span class="n">df</span> <span class="o">=</span> <span class="n">fd_derivative</span><span class="p">(</span><span class="n">fx</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="n">n</span><span class="p">)</span>
+        <span class="n">m</span> <span class="o">=</span> <span class="n">n</span> <span class="o">//</span> <span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span>
+        <span class="n">assert_allclose</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="n">m</span><span class="p">:</span><span class="o">-</span><span class="n">m</span><span class="p">],</span> <span class="n">fx</span><span class="p">[</span><span class="n">m</span><span class="p">:</span><span class="o">-</span><span class="n">m</span><span class="p">],</span> <span class="n">atol</span><span class="o">=</span><span class="mf">1e-5</span><span class="p">)</span>
+        <span class="n">assert_allclose</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="o">-</span><span class="n">m</span><span class="p">:],</span> <span class="n">fx</span><span class="p">[</span><span class="o">-</span><span class="n">m</span><span class="p">:],</span> <span class="n">atol</span><span class="o">=</span><span class="mf">1e-4</span><span class="p">)</span>
+        <span class="n">assert_allclose</span><span class="p">(</span><span class="n">df</span><span class="p">[:</span><span class="n">m</span><span class="p">],</span> <span class="n">fx</span><span class="p">[:</span><span class="n">m</span><span class="p">],</span> <span class="n">atol</span><span class="o">=</span><span class="mf">1e-4</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="ExampleFunctions"><a class="viewcode-back" href="../../../reference/numdifftools.tests.html#numdifftools.tests.test_fornberg.ExampleFunctions">[docs]</a><span class="k">class</span> <span class="nc">ExampleFunctions</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+<div class="viewcode-block" id="ExampleFunctions.fun0"><a class="viewcode-back" href="../../../reference/numdifftools.tests.html#numdifftools.tests.test_fornberg.ExampleFunctions.fun0">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">fun0</span><span class="p">(</span><span class="n">z</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">z</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ExampleFunctions.fun1"><a class="viewcode-back" href="../../../reference/numdifftools.tests.html#numdifftools.tests.test_fornberg.ExampleFunctions.fun1">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">fun1</span><span class="p">(</span><span class="n">z</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">z</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">z</span><span class="p">)</span> <span class="o">**</span> <span class="mi">3</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">z</span><span class="p">)</span> <span class="o">**</span> <span class="mi">3</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ExampleFunctions.fun2"><a class="viewcode-back" href="../../../reference/numdifftools.tests.html#numdifftools.tests.test_fornberg.ExampleFunctions.fun2">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">fun2</span><span class="p">(</span><span class="n">z</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="mf">1.0</span><span class="n">j</span> <span class="o">*</span> <span class="n">z</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ExampleFunctions.fun3"><a class="viewcode-back" href="../../../reference/numdifftools.tests.html#numdifftools.tests.test_fornberg.ExampleFunctions.fun3">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">fun3</span><span class="p">(</span><span class="n">z</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">z</span> <span class="o">**</span> <span class="mi">6</span></div>
+
+<div class="viewcode-block" id="ExampleFunctions.fun4"><a class="viewcode-back" href="../../../reference/numdifftools.tests.html#numdifftools.tests.test_fornberg.ExampleFunctions.fun4">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">fun4</span><span class="p">(</span><span class="n">z</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">z</span> <span class="o">*</span> <span class="p">(</span><span class="mf">0.5</span> <span class="o">+</span> <span class="mf">1.</span> <span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">expm1</span><span class="p">(</span><span class="n">z</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="ExampleFunctions.fun5"><a class="viewcode-back" href="../../../reference/numdifftools.tests.html#numdifftools.tests.test_fornberg.ExampleFunctions.fun5">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">fun5</span><span class="p">(</span><span class="n">z</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">tan</span><span class="p">(</span><span class="n">z</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ExampleFunctions.fun6"><a class="viewcode-back" href="../../../reference/numdifftools.tests.html#numdifftools.tests.test_fornberg.ExampleFunctions.fun6">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">fun6</span><span class="p">(</span><span class="n">z</span><span class="p">):</span>
+        <span class="k">return</span> <span class="mf">1.0</span><span class="n">j</span> <span class="o">+</span> <span class="n">z</span> <span class="o">+</span> <span class="mf">1.0</span><span class="n">j</span> <span class="o">*</span> <span class="n">z</span> <span class="o">**</span> <span class="mi">2</span></div>
+
+<div class="viewcode-block" id="ExampleFunctions.fun7"><a class="viewcode-back" href="../../../reference/numdifftools.tests.html#numdifftools.tests.test_fornberg.ExampleFunctions.fun7">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">fun7</span><span class="p">(</span><span class="n">z</span><span class="p">):</span>
+        <span class="k">return</span> <span class="mf">1.0</span> <span class="o">/</span> <span class="p">(</span><span class="mf">1.0</span> <span class="o">-</span> <span class="n">z</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ExampleFunctions.fun8"><a class="viewcode-back" href="../../../reference/numdifftools.tests.html#numdifftools.tests.test_fornberg.ExampleFunctions.fun8">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">fun8</span><span class="p">(</span><span class="n">z</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">z</span><span class="p">)</span> <span class="o">**</span> <span class="mi">10</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">log1p</span><span class="p">(</span><span class="n">z</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ExampleFunctions.fun9"><a class="viewcode-back" href="../../../reference/numdifftools.tests.html#numdifftools.tests.test_fornberg.ExampleFunctions.fun9">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">fun9</span><span class="p">(</span><span class="n">z</span><span class="p">):</span>
+        <span class="k">return</span> <span class="mi">10</span> <span class="o">*</span> <span class="mi">5</span> <span class="o">+</span> <span class="mf">1.</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">z</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ExampleFunctions.fun10"><a class="viewcode-back" href="../../../reference/numdifftools.tests.html#numdifftools.tests.test_fornberg.ExampleFunctions.fun10">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">fun10</span><span class="p">(</span><span class="n">z</span><span class="p">):</span>
+        <span class="k">return</span> <span class="mf">1.</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">z</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ExampleFunctions.fun11"><a class="viewcode-back" href="../../../reference/numdifftools.tests.html#numdifftools.tests.test_fornberg.ExampleFunctions.fun11">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">fun11</span><span class="p">(</span><span class="n">z</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">z</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ExampleFunctions.fun12"><a class="viewcode-back" href="../../../reference/numdifftools.tests.html#numdifftools.tests.test_fornberg.ExampleFunctions.fun12">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">fun12</span><span class="p">(</span><span class="n">z</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">arcsinh</span><span class="p">(</span><span class="n">z</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ExampleFunctions.fun13"><a class="viewcode-back" href="../../../reference/numdifftools.tests.html#numdifftools.tests.test_fornberg.ExampleFunctions.fun13">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">fun13</span><span class="p">(</span><span class="n">z</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">z</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="ExampleFunctions.fun14"><a class="viewcode-back" href="../../../reference/numdifftools.tests.html#numdifftools.tests.test_fornberg.ExampleFunctions.fun14">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">fun14</span><span class="p">(</span><span class="n">z</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">log1p</span><span class="p">(</span><span class="n">z</span><span class="p">)</span></div></div>
+
+
+<div class="viewcode-block" id="test_low_order_derivative_on_example_functions"><a class="viewcode-back" href="../../../reference/numdifftools.tests.html#numdifftools.tests.test_fornberg.test_low_order_derivative_on_example_functions">[docs]</a><span class="k">def</span> <span class="nf">test_low_order_derivative_on_example_functions</span><span class="p">():</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">15</span><span class="p">):</span>
+        <span class="n">fun</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">ExampleFunctions</span><span class="p">,</span> <span class="s1">&#39;fun</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">j</span><span class="p">))</span>
+        <span class="n">der</span><span class="p">,</span> <span class="n">info</span> <span class="o">=</span> <span class="n">derivative</span><span class="p">(</span><span class="n">fun</span><span class="p">,</span> <span class="n">z0</span><span class="o">=</span><span class="mf">0.</span><span class="p">,</span> <span class="n">r</span><span class="o">=</span><span class="mf">0.06</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">max_iter</span><span class="o">=</span><span class="mi">30</span><span class="p">,</span>
+                               <span class="n">full_output</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">step_ratio</span><span class="o">=</span><span class="mf">1.6</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">info</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;answer:&#39;</span><span class="p">)</span>
+        <span class="n">msg</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">{0:3d}</span><span class="s1">: </span><span class="si">{1:24.18f}</span><span class="s1"> + </span><span class="si">{2:24.18f}</span><span class="s1">j (</span><span class="si">{3:g}</span><span class="s1">)&#39;</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">info</span><span class="o">.</span><span class="n">function_count</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">der_i</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">der</span><span class="p">):</span>
+            <span class="n">err</span> <span class="o">=</span> <span class="n">info</span><span class="o">.</span><span class="n">error_estimate</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+            <span class="nb">print</span><span class="p">(</span><span class="n">msg</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">der_i</span><span class="o">.</span><span class="n">real</span><span class="p">,</span> <span class="n">der_i</span><span class="o">.</span><span class="n">imag</span><span class="p">,</span> <span class="n">err</span><span class="p">))</span></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2009-2021, Per A. Brodtkorb, John D&#39;Errico.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

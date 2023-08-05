@@ -1,0 +1,475 @@
+\indexentry{odd transformation@\spxentry{odd transformation}|hyperpage}{20}
+\indexentry{even transformation@\spxentry{even transformation}|hyperpage}{20}
+\indexentry{Richardson extrapolation@\spxentry{Richardson extrapolation}|hyperpage}{22}
+\indexentry{Richardson extrapolation@\spxentry{Richardson extrapolation}|hyperpage}{23}
+\indexentry{Derivative (class in numdifftools.core)@\spxentry{Derivative}\spxextra{class in numdifftools.core}|hyperpage}{27}
+\indexentry{\_\_init\_\_() (Derivative method)@\spxentry{\_\_init\_\_()}\spxextra{Derivative method}|hyperpage}{29}
+\indexentry{Gradient (class in numdifftools.core)@\spxentry{Gradient}\spxextra{class in numdifftools.core}|hyperpage}{30}
+\indexentry{\_\_init\_\_() (Gradient method)@\spxentry{\_\_init\_\_()}\spxextra{Gradient method}|hyperpage}{31}
+\indexentry{Jacobian (class in numdifftools.core)@\spxentry{Jacobian}\spxextra{class in numdifftools.core}|hyperpage}{32}
+\indexentry{\_\_init\_\_() (Jacobian method)@\spxentry{\_\_init\_\_()}\spxextra{Jacobian method}|hyperpage}{34}
+\indexentry{Hessdiag (class in numdifftools.core)@\spxentry{Hessdiag}\spxextra{class in numdifftools.core}|hyperpage}{34}
+\indexentry{\_\_init\_\_() (Hessdiag method)@\spxentry{\_\_init\_\_()}\spxextra{Hessdiag method}|hyperpage}{36}
+\indexentry{Hessian (class in numdifftools.core)@\spxentry{Hessian}\spxextra{class in numdifftools.core}|hyperpage}{36}
+\indexentry{\_\_init\_\_() (Hessian method)@\spxentry{\_\_init\_\_()}\spxextra{Hessian method}|hyperpage}{38}
+\indexentry{directionaldiff() (in module numdifftools.core)@\spxentry{directionaldiff()}\spxextra{in module numdifftools.core}|hyperpage}{39}
+\indexentry{BasicMaxStepGenerator (class in numdifftools.step\_generators)@\spxentry{BasicMaxStepGenerator}\spxextra{class in numdifftools.step\_generators}|hyperpage}{40}
+\indexentry{\_\_init\_\_() (BasicMaxStepGenerator method)@\spxentry{\_\_init\_\_()}\spxextra{BasicMaxStepGenerator method}|hyperpage}{40}
+\indexentry{BasicMinStepGenerator (class in numdifftools.step\_generators)@\spxentry{BasicMinStepGenerator}\spxextra{class in numdifftools.step\_generators}|hyperpage}{40}
+\indexentry{\_\_init\_\_() (BasicMinStepGenerator method)@\spxentry{\_\_init\_\_()}\spxextra{BasicMinStepGenerator method}|hyperpage}{41}
+\indexentry{MinStepGenerator (class in numdifftools.step\_generators)@\spxentry{MinStepGenerator}\spxextra{class in numdifftools.step\_generators}|hyperpage}{41}
+\indexentry{\_\_init\_\_() (MinStepGenerator method)@\spxentry{\_\_init\_\_()}\spxextra{MinStepGenerator method}|hyperpage}{41}
+\indexentry{MaxStepGenerator (class in numdifftools.step\_generators)@\spxentry{MaxStepGenerator}\spxextra{class in numdifftools.step\_generators}|hyperpage}{42}
+\indexentry{\_\_init\_\_() (MaxStepGenerator method)@\spxentry{\_\_init\_\_()}\spxextra{MaxStepGenerator method}|hyperpage}{42}
+\indexentry{convolve() (in module numdifftools.extrapolation)@\spxentry{convolve()}\spxextra{in module numdifftools.extrapolation}|hyperpage}{43}
+\indexentry{Dea (class in numdifftools.extrapolation)@\spxentry{Dea}\spxextra{class in numdifftools.extrapolation}|hyperpage}{43}
+\indexentry{\_\_init\_\_() (Dea method)@\spxentry{\_\_init\_\_()}\spxextra{Dea method}|hyperpage}{44}
+\indexentry{dea3() (in module numdifftools.extrapolation)@\spxentry{dea3()}\spxextra{in module numdifftools.extrapolation}|hyperpage}{44}
+\indexentry{Richardson (class in numdifftools.extrapolation)@\spxentry{Richardson}\spxextra{class in numdifftools.extrapolation}|hyperpage}{45}
+\indexentry{\_\_init\_\_() (Richardson method)@\spxentry{\_\_init\_\_()}\spxextra{Richardson method}|hyperpage}{46}
+\indexentry{CStepGenerator (class in numdifftools.limits)@\spxentry{CStepGenerator}\spxextra{class in numdifftools.limits}|hyperpage}{46}
+\indexentry{\_\_init\_\_() (CStepGenerator method)@\spxentry{\_\_init\_\_()}\spxextra{CStepGenerator method}|hyperpage}{47}
+\indexentry{Limit (class in numdifftools.limits)@\spxentry{Limit}\spxextra{class in numdifftools.limits}|hyperpage}{47}
+\indexentry{\_\_init\_\_() (Limit method)@\spxentry{\_\_init\_\_()}\spxextra{Limit method}|hyperpage}{49}
+\indexentry{Residue (class in numdifftools.limits)@\spxentry{Residue}\spxextra{class in numdifftools.limits}|hyperpage}{49}
+\indexentry{\_\_init\_\_() (Residue method)@\spxentry{\_\_init\_\_()}\spxextra{Residue method}|hyperpage}{50}
+\indexentry{Bicomplex (class in numdifftools.multicomplex)@\spxentry{Bicomplex}\spxextra{class in numdifftools.multicomplex}|hyperpage}{51}
+\indexentry{\_\_init\_\_() (Bicomplex method)@\spxentry{\_\_init\_\_()}\spxextra{Bicomplex method}|hyperpage}{51}
+\indexentry{Derivative (class in numdifftools.nd\_algopy)@\spxentry{Derivative}\spxextra{class in numdifftools.nd\_algopy}|hyperpage}{52}
+\indexentry{\_\_init\_\_() (Derivative method)@\spxentry{\_\_init\_\_()}\spxextra{Derivative method}|hyperpage}{53}
+\indexentry{Gradient (class in numdifftools.nd\_algopy)@\spxentry{Gradient}\spxextra{class in numdifftools.nd\_algopy}|hyperpage}{54}
+\indexentry{\_\_init\_\_() (Gradient method)@\spxentry{\_\_init\_\_()}\spxextra{Gradient method}|hyperpage}{55}
+\indexentry{Jacobian (class in numdifftools.nd\_algopy)@\spxentry{Jacobian}\spxextra{class in numdifftools.nd\_algopy}|hyperpage}{56}
+\indexentry{\_\_init\_\_() (Jacobian method)@\spxentry{\_\_init\_\_()}\spxextra{Jacobian method}|hyperpage}{57}
+\indexentry{Hessdiag (class in numdifftools.nd\_algopy)@\spxentry{Hessdiag}\spxextra{class in numdifftools.nd\_algopy}|hyperpage}{58}
+\indexentry{\_\_init\_\_() (Hessdiag method)@\spxentry{\_\_init\_\_()}\spxextra{Hessdiag method}|hyperpage}{59}
+\indexentry{Hessian (class in numdifftools.nd\_algopy)@\spxentry{Hessian}\spxextra{class in numdifftools.nd\_algopy}|hyperpage}{60}
+\indexentry{\_\_init\_\_() (Hessian method)@\spxentry{\_\_init\_\_()}\spxextra{Hessian method}|hyperpage}{61}
+\indexentry{directionaldiff() (in module numdifftools.nd\_algopy)@\spxentry{directionaldiff()}\spxextra{in module numdifftools.nd\_algopy}|hyperpage}{61}
+\indexentry{Gradient (class in numdifftools.nd\_scipy)@\spxentry{Gradient}\spxextra{class in numdifftools.nd\_scipy}|hyperpage}{62}
+\indexentry{\_\_init\_\_() (Gradient method)@\spxentry{\_\_init\_\_()}\spxextra{Gradient method}|hyperpage}{63}
+\indexentry{Jacobian (class in numdifftools.nd\_scipy)@\spxentry{Jacobian}\spxextra{class in numdifftools.nd\_scipy}|hyperpage}{63}
+\indexentry{\_\_init\_\_() (Jacobian method)@\spxentry{\_\_init\_\_()}\spxextra{Jacobian method}|hyperpage}{64}
+\indexentry{Hessian (class in numdifftools.nd\_statsmodels)@\spxentry{Hessian}\spxextra{class in numdifftools.nd\_statsmodels}|hyperpage}{64}
+\indexentry{\_\_init\_\_() (Hessian method)@\spxentry{\_\_init\_\_()}\spxextra{Hessian method}|hyperpage}{65}
+\indexentry{Jacobian (class in numdifftools.nd\_statsmodels)@\spxentry{Jacobian}\spxextra{class in numdifftools.nd\_statsmodels}|hyperpage}{65}
+\indexentry{\_\_init\_\_() (Jacobian method)@\spxentry{\_\_init\_\_()}\spxextra{Jacobian method}|hyperpage}{66}
+\indexentry{module@\spxentry{module}!numdifftools.tests.hamiltonian@\spxentry{numdifftools.tests.hamiltonian}|hyperpage}{66}
+\indexentry{numdifftools.tests.hamiltonian@\spxentry{numdifftools.tests.hamiltonian}!module@\spxentry{module}|hyperpage}{66}
+\indexentry{ClassicalHamiltonian (class in numdifftools.tests.hamiltonian)@\spxentry{ClassicalHamiltonian}\spxextra{class in numdifftools.tests.hamiltonian}|hyperpage}{66}
+\indexentry{initialposition() (ClassicalHamiltonian method)@\spxentry{initialposition()}\spxextra{ClassicalHamiltonian method}|hyperpage}{67}
+\indexentry{normal\_modes() (ClassicalHamiltonian method)@\spxentry{normal\_modes()}\spxextra{ClassicalHamiltonian method}|hyperpage}{67}
+\indexentry{potential() (ClassicalHamiltonian method)@\spxentry{potential()}\spxextra{ClassicalHamiltonian method}|hyperpage}{67}
+\indexentry{run\_hamiltonian() (in module numdifftools.tests.hamiltonian)@\spxentry{run\_hamiltonian()}\spxextra{in module numdifftools.tests.hamiltonian}|hyperpage}{67}
+\indexentry{module@\spxentry{module}!numdifftools.tests.test\_extrapolation@\spxentry{numdifftools.tests.test\_extrapolation}|hyperpage}{67}
+\indexentry{numdifftools.tests.test\_extrapolation@\spxentry{numdifftools.tests.test\_extrapolation}!module@\spxentry{module}|hyperpage}{67}
+\indexentry{TestExtrapolation (class in numdifftools.tests.test\_extrapolation)@\spxentry{TestExtrapolation}\spxextra{class in numdifftools.tests.test\_extrapolation}|hyperpage}{67}
+\indexentry{setup\_method() (TestExtrapolation method)@\spxentry{setup\_method()}\spxextra{TestExtrapolation method}|hyperpage}{67}
+\indexentry{test\_dea3\_on\_trapz\_sin() (TestExtrapolation method)@\spxentry{test\_dea3\_on\_trapz\_sin()}\spxextra{TestExtrapolation method}|hyperpage}{67}
+\indexentry{test\_dea\_on\_trapz\_sin() (TestExtrapolation method)@\spxentry{test\_dea\_on\_trapz\_sin()}\spxextra{TestExtrapolation method}|hyperpage}{67}
+\indexentry{test\_epsal() (TestExtrapolation method)@\spxentry{test\_epsal()}\spxextra{TestExtrapolation method}|hyperpage}{67}
+\indexentry{test\_richardson() (TestExtrapolation method)@\spxentry{test\_richardson()}\spxextra{TestExtrapolation method}|hyperpage}{67}
+\indexentry{TestRichardson (class in numdifftools.tests.test\_extrapolation)@\spxentry{TestRichardson}\spxextra{class in numdifftools.tests.test\_extrapolation}|hyperpage}{67}
+\indexentry{setup\_method() (TestRichardson method)@\spxentry{setup\_method()}\spxextra{TestRichardson method}|hyperpage}{67}
+\indexentry{test\_order\_step\_combinations() (TestRichardson method)@\spxentry{test\_order\_step\_combinations()}\spxextra{TestRichardson method}|hyperpage}{67}
+\indexentry{module@\spxentry{module}!numdifftools.tests.test\_fornberg@\spxentry{numdifftools.tests.test\_fornberg}|hyperpage}{67}
+\indexentry{numdifftools.tests.test\_fornberg@\spxentry{numdifftools.tests.test\_fornberg}!module@\spxentry{module}|hyperpage}{67}
+\indexentry{ExampleFunctions (class in numdifftools.tests.test\_fornberg)@\spxentry{ExampleFunctions}\spxextra{class in numdifftools.tests.test\_fornberg}|hyperpage}{67}
+\indexentry{fun0() (ExampleFunctions static method)@\spxentry{fun0()}\spxextra{ExampleFunctions static method}|hyperpage}{67}
+\indexentry{fun1() (ExampleFunctions static method)@\spxentry{fun1()}\spxextra{ExampleFunctions static method}|hyperpage}{67}
+\indexentry{fun10() (ExampleFunctions static method)@\spxentry{fun10()}\spxextra{ExampleFunctions static method}|hyperpage}{67}
+\indexentry{fun11() (ExampleFunctions static method)@\spxentry{fun11()}\spxextra{ExampleFunctions static method}|hyperpage}{67}
+\indexentry{fun12() (ExampleFunctions static method)@\spxentry{fun12()}\spxextra{ExampleFunctions static method}|hyperpage}{67}
+\indexentry{fun13() (ExampleFunctions static method)@\spxentry{fun13()}\spxextra{ExampleFunctions static method}|hyperpage}{67}
+\indexentry{fun14() (ExampleFunctions static method)@\spxentry{fun14()}\spxextra{ExampleFunctions static method}|hyperpage}{67}
+\indexentry{fun2() (ExampleFunctions static method)@\spxentry{fun2()}\spxextra{ExampleFunctions static method}|hyperpage}{67}
+\indexentry{fun3() (ExampleFunctions static method)@\spxentry{fun3()}\spxextra{ExampleFunctions static method}|hyperpage}{67}
+\indexentry{fun4() (ExampleFunctions static method)@\spxentry{fun4()}\spxextra{ExampleFunctions static method}|hyperpage}{68}
+\indexentry{fun5() (ExampleFunctions static method)@\spxentry{fun5()}\spxextra{ExampleFunctions static method}|hyperpage}{68}
+\indexentry{fun6() (ExampleFunctions static method)@\spxentry{fun6()}\spxextra{ExampleFunctions static method}|hyperpage}{68}
+\indexentry{fun7() (ExampleFunctions static method)@\spxentry{fun7()}\spxextra{ExampleFunctions static method}|hyperpage}{68}
+\indexentry{fun8() (ExampleFunctions static method)@\spxentry{fun8()}\spxextra{ExampleFunctions static method}|hyperpage}{68}
+\indexentry{fun9() (ExampleFunctions static method)@\spxentry{fun9()}\spxextra{ExampleFunctions static method}|hyperpage}{68}
+\indexentry{test\_all\_weights() (in module numdifftools.tests.test\_fornberg)@\spxentry{test\_all\_weights()}\spxextra{in module numdifftools.tests.test\_fornberg}|hyperpage}{68}
+\indexentry{test\_fd\_derivative() (in module numdifftools.tests.test\_fornberg)@\spxentry{test\_fd\_derivative()}\spxextra{in module numdifftools.tests.test\_fornberg}|hyperpage}{68}
+\indexentry{test\_high\_order\_derivative() (in module numdifftools.tests.test\_fornberg)@\spxentry{test\_high\_order\_derivative()}\spxextra{in module numdifftools.tests.test\_fornberg}|hyperpage}{68}
+\indexentry{test\_low\_order\_derivative\_on\_example\_functions() (in module numdifftools.tests.test\_fornberg)@\spxentry{test\_low\_order\_derivative\_on\_example\_functions()}\spxextra{in module numdifftools.tests.test\_fornberg}|hyperpage}{68}
+\indexentry{test\_weights() (in module numdifftools.tests.test\_fornberg)@\spxentry{test\_weights()}\spxextra{in module numdifftools.tests.test\_fornberg}|hyperpage}{68}
+\indexentry{module@\spxentry{module}!numdifftools.tests.test\_limits@\spxentry{numdifftools.tests.test\_limits}|hyperpage}{68}
+\indexentry{numdifftools.tests.test\_limits@\spxentry{numdifftools.tests.test\_limits}!module@\spxentry{module}|hyperpage}{68}
+\indexentry{TestCStepGenerator (class in numdifftools.tests.test\_limits)@\spxentry{TestCStepGenerator}\spxextra{class in numdifftools.tests.test\_limits}|hyperpage}{68}
+\indexentry{test\_default\_base\_step() (TestCStepGenerator static method)@\spxentry{test\_default\_base\_step()}\spxextra{TestCStepGenerator static method}|hyperpage}{68}
+\indexentry{test\_default\_generator() (TestCStepGenerator static method)@\spxentry{test\_default\_generator()}\spxextra{TestCStepGenerator static method}|hyperpage}{68}
+\indexentry{test\_fixed\_base\_step() (TestCStepGenerator static method)@\spxentry{test\_fixed\_base\_step()}\spxextra{TestCStepGenerator static method}|hyperpage}{68}
+\indexentry{TestLimit (class in numdifftools.tests.test\_limits)@\spxentry{TestLimit}\spxextra{class in numdifftools.tests.test\_limits}|hyperpage}{68}
+\indexentry{test\_derivative\_of\_cos() (TestLimit method)@\spxentry{test\_derivative\_of\_cos()}\spxextra{TestLimit method}|hyperpage}{68}
+\indexentry{test\_difficult\_limit() (TestLimit method)@\spxentry{test\_difficult\_limit()}\spxextra{TestLimit method}|hyperpage}{68}
+\indexentry{test\_residue\_1\_div\_1\_minus\_exp\_x() (TestLimit method)@\spxentry{test\_residue\_1\_div\_1\_minus\_exp\_x()}\spxextra{TestLimit method}|hyperpage}{68}
+\indexentry{test\_sinx\_div\_x() (TestLimit method)@\spxentry{test\_sinx\_div\_x()}\spxextra{TestLimit method}|hyperpage}{68}
+\indexentry{TestResidue (class in numdifftools.tests.test\_limits)@\spxentry{TestResidue}\spxextra{class in numdifftools.tests.test\_limits}|hyperpage}{68}
+\indexentry{test\_residue\_1\_div\_1\_minus\_exp\_x() (TestResidue method)@\spxentry{test\_residue\_1\_div\_1\_minus\_exp\_x()}\spxextra{TestResidue method}|hyperpage}{68}
+\indexentry{test\_residue\_1\_div\_sin\_x2() (TestResidue method)@\spxentry{test\_residue\_1\_div\_sin\_x2()}\spxextra{TestResidue method}|hyperpage}{68}
+\indexentry{module@\spxentry{module}!numdifftools.tests.test\_multicomplex@\spxentry{numdifftools.tests.test\_multicomplex}|hyperpage}{69}
+\indexentry{numdifftools.tests.test\_multicomplex@\spxentry{numdifftools.tests.test\_multicomplex}!module@\spxentry{module}|hyperpage}{69}
+\indexentry{TestBicomplex (class in numdifftools.tests.test\_multicomplex)@\spxentry{TestBicomplex}\spxextra{class in numdifftools.tests.test\_multicomplex}|hyperpage}{69}
+\indexentry{test\_add() (TestBicomplex static method)@\spxentry{test\_add()}\spxextra{TestBicomplex static method}|hyperpage}{69}
+\indexentry{test\_arccos() (TestBicomplex static method)@\spxentry{test\_arccos()}\spxextra{TestBicomplex static method}|hyperpage}{69}
+\indexentry{test\_arcsin() (TestBicomplex static method)@\spxentry{test\_arcsin()}\spxextra{TestBicomplex static method}|hyperpage}{69}
+\indexentry{test\_arg\_c() (TestBicomplex static method)@\spxentry{test\_arg\_c()}\spxextra{TestBicomplex static method}|hyperpage}{69}
+\indexentry{test\_assign() (TestBicomplex static method)@\spxentry{test\_assign()}\spxextra{TestBicomplex static method}|hyperpage}{69}
+\indexentry{test\_conjugate() (TestBicomplex method)@\spxentry{test\_conjugate()}\spxextra{TestBicomplex method}|hyperpage}{69}
+\indexentry{test\_cos() (TestBicomplex static method)@\spxentry{test\_cos()}\spxextra{TestBicomplex static method}|hyperpage}{69}
+\indexentry{test\_der\_abs() (TestBicomplex static method)@\spxentry{test\_der\_abs()}\spxextra{TestBicomplex static method}|hyperpage}{69}
+\indexentry{test\_der\_arccos() (TestBicomplex static method)@\spxentry{test\_der\_arccos()}\spxextra{TestBicomplex static method}|hyperpage}{69}
+\indexentry{test\_der\_arccosh() (TestBicomplex static method)@\spxentry{test\_der\_arccosh()}\spxextra{TestBicomplex static method}|hyperpage}{69}
+\indexentry{test\_der\_arctan() (TestBicomplex static method)@\spxentry{test\_der\_arctan()}\spxextra{TestBicomplex static method}|hyperpage}{69}
+\indexentry{test\_der\_cos() (TestBicomplex static method)@\spxentry{test\_der\_cos()}\spxextra{TestBicomplex static method}|hyperpage}{69}
+\indexentry{test\_der\_log() (TestBicomplex static method)@\spxentry{test\_der\_log()}\spxextra{TestBicomplex static method}|hyperpage}{69}
+\indexentry{test\_division() (TestBicomplex static method)@\spxentry{test\_division()}\spxextra{TestBicomplex static method}|hyperpage}{69}
+\indexentry{test\_dot() (TestBicomplex static method)@\spxentry{test\_dot()}\spxextra{TestBicomplex static method}|hyperpage}{69}
+\indexentry{test\_eq() (TestBicomplex static method)@\spxentry{test\_eq()}\spxextra{TestBicomplex static method}|hyperpage}{69}
+\indexentry{test\_flat() (TestBicomplex method)@\spxentry{test\_flat()}\spxextra{TestBicomplex method}|hyperpage}{69}
+\indexentry{test\_ge() (TestBicomplex static method)@\spxentry{test\_ge()}\spxextra{TestBicomplex static method}|hyperpage}{69}
+\indexentry{test\_gt() (TestBicomplex static method)@\spxentry{test\_gt()}\spxextra{TestBicomplex static method}|hyperpage}{69}
+\indexentry{test\_init() (TestBicomplex method)@\spxentry{test\_init()}\spxextra{TestBicomplex method}|hyperpage}{69}
+\indexentry{test\_le() (TestBicomplex static method)@\spxentry{test\_le()}\spxextra{TestBicomplex static method}|hyperpage}{69}
+\indexentry{test\_lt() (TestBicomplex static method)@\spxentry{test\_lt()}\spxextra{TestBicomplex static method}|hyperpage}{69}
+\indexentry{test\_mod\_c() (TestBicomplex static method)@\spxentry{test\_mod\_c()}\spxextra{TestBicomplex static method}|hyperpage}{69}
+\indexentry{test\_multiplication() (TestBicomplex static method)@\spxentry{test\_multiplication()}\spxextra{TestBicomplex static method}|hyperpage}{69}
+\indexentry{test\_neg() (TestBicomplex method)@\spxentry{test\_neg()}\spxextra{TestBicomplex method}|hyperpage}{69}
+\indexentry{test\_norm() (TestBicomplex method)@\spxentry{test\_norm()}\spxextra{TestBicomplex method}|hyperpage}{69}
+\indexentry{test\_pow() (TestBicomplex static method)@\spxentry{test\_pow()}\spxextra{TestBicomplex static method}|hyperpage}{69}
+\indexentry{test\_rdivision() (TestBicomplex method)@\spxentry{test\_rdivision()}\spxextra{TestBicomplex method}|hyperpage}{69}
+\indexentry{test\_repr() (TestBicomplex method)@\spxentry{test\_repr()}\spxextra{TestBicomplex method}|hyperpage}{69}
+\indexentry{test\_rpow() (TestBicomplex static method)@\spxentry{test\_rpow()}\spxextra{TestBicomplex static method}|hyperpage}{69}
+\indexentry{test\_rsub() (TestBicomplex static method)@\spxentry{test\_rsub()}\spxextra{TestBicomplex static method}|hyperpage}{69}
+\indexentry{test\_shape() (TestBicomplex method)@\spxentry{test\_shape()}\spxextra{TestBicomplex method}|hyperpage}{69}
+\indexentry{test\_sub() (TestBicomplex static method)@\spxentry{test\_sub()}\spxextra{TestBicomplex static method}|hyperpage}{69}
+\indexentry{test\_subsref() (TestBicomplex static method)@\spxentry{test\_subsref()}\spxextra{TestBicomplex static method}|hyperpage}{70}
+\indexentry{TestDerivative (class in numdifftools.tests.test\_multicomplex)@\spxentry{TestDerivative}\spxextra{class in numdifftools.tests.test\_multicomplex}|hyperpage}{70}
+\indexentry{test\_all\_first\_derivatives() (TestDerivative static method)@\spxentry{test\_all\_first\_derivatives()}\spxextra{TestDerivative static method}|hyperpage}{70}
+\indexentry{test\_all\_second\_derivatives() (TestDerivative static method)@\spxentry{test\_all\_second\_derivatives()}\spxextra{TestDerivative static method}|hyperpage}{70}
+\indexentry{module@\spxentry{module}!numdifftools.tests.test\_nd\_algopy@\spxentry{numdifftools.tests.test\_nd\_algopy}|hyperpage}{70}
+\indexentry{numdifftools.tests.test\_nd\_algopy@\spxentry{numdifftools.tests.test\_nd\_algopy}!module@\spxentry{module}|hyperpage}{70}
+\indexentry{TestDerivative (class in numdifftools.tests.test\_nd\_algopy)@\spxentry{TestDerivative}\spxextra{class in numdifftools.tests.test\_nd\_algopy}|hyperpage}{70}
+\indexentry{test\_derivative\_cube() (TestDerivative static method)@\spxentry{test\_derivative\_cube()}\spxextra{TestDerivative static method}|hyperpage}{70}
+\indexentry{test\_derivative\_exp() (TestDerivative static method)@\spxentry{test\_derivative\_exp()}\spxextra{TestDerivative static method}|hyperpage}{70}
+\indexentry{test\_derivative\_on\_log() (TestDerivative static method)@\spxentry{test\_derivative\_on\_log()}\spxextra{TestDerivative static method}|hyperpage}{70}
+\indexentry{test\_derivative\_on\_sinh() (TestDerivative method)@\spxentry{test\_derivative\_on\_sinh()}\spxextra{TestDerivative method}|hyperpage}{70}
+\indexentry{test\_derivative\_sin() (TestDerivative static method)@\spxentry{test\_derivative\_sin()}\spxextra{TestDerivative static method}|hyperpage}{70}
+\indexentry{test\_directional\_diff() (TestDerivative static method)@\spxentry{test\_directional\_diff()}\spxextra{TestDerivative static method}|hyperpage}{70}
+\indexentry{test\_fun\_with\_additional\_parameters() (TestDerivative static method)@\spxentry{test\_fun\_with\_additional\_parameters()}\spxextra{TestDerivative static method}|hyperpage}{70}
+\indexentry{test\_high\_order\_derivative\_cos() (TestDerivative static method)@\spxentry{test\_high\_order\_derivative\_cos()}\spxextra{TestDerivative static method}|hyperpage}{70}
+\indexentry{TestGradient (class in numdifftools.tests.test\_nd\_algopy)@\spxentry{TestGradient}\spxextra{class in numdifftools.tests.test\_nd\_algopy}|hyperpage}{70}
+\indexentry{test\_on\_scalar\_function() (TestGradient static method)@\spxentry{test\_on\_scalar\_function()}\spxextra{TestGradient static method}|hyperpage}{70}
+\indexentry{TestHessdiag (class in numdifftools.tests.test\_nd\_algopy)@\spxentry{TestHessdiag}\spxextra{class in numdifftools.tests.test\_nd\_algopy}|hyperpage}{70}
+\indexentry{test\_forward() (TestHessdiag static method)@\spxentry{test\_forward()}\spxextra{TestHessdiag static method}|hyperpage}{70}
+\indexentry{test\_reverse() (TestHessdiag static method)@\spxentry{test\_reverse()}\spxextra{TestHessdiag static method}|hyperpage}{70}
+\indexentry{TestHessian (class in numdifftools.tests.test\_nd\_algopy)@\spxentry{TestHessian}\spxextra{class in numdifftools.tests.test\_nd\_algopy}|hyperpage}{70}
+\indexentry{test\_hessian\_cos\_x\_y\_\_at\_0\_0() (TestHessian static method)@\spxentry{test\_hessian\_cos\_x\_y\_\_at\_0\_0()}\spxextra{TestHessian static method}|hyperpage}{70}
+\indexentry{test\_run\_hamiltonian() (TestHessian method)@\spxentry{test\_run\_hamiltonian()}\spxextra{TestHessian method}|hyperpage}{70}
+\indexentry{TestJacobian (class in numdifftools.tests.test\_nd\_algopy)@\spxentry{TestJacobian}\spxextra{class in numdifftools.tests.test\_nd\_algopy}|hyperpage}{70}
+\indexentry{test\_issue\_25() (TestJacobian static method)@\spxentry{test\_issue\_25()}\spxextra{TestJacobian static method}|hyperpage}{70}
+\indexentry{test\_on\_matrix\_valued\_function() (TestJacobian static method)@\spxentry{test\_on\_matrix\_valued\_function()}\spxextra{TestJacobian static method}|hyperpage}{70}
+\indexentry{test\_on\_scalar\_function() (TestJacobian static method)@\spxentry{test\_on\_scalar\_function()}\spxextra{TestJacobian static method}|hyperpage}{70}
+\indexentry{test\_on\_vector\_valued\_function() (TestJacobian method)@\spxentry{test\_on\_vector\_valued\_function()}\spxextra{TestJacobian method}|hyperpage}{70}
+\indexentry{test\_scalar\_to\_vector() (TestJacobian static method)@\spxentry{test\_scalar\_to\_vector()}\spxextra{TestJacobian static method}|hyperpage}{70}
+\indexentry{module@\spxentry{module}!numdifftools.tests.test\_nd\_scipy@\spxentry{numdifftools.tests.test\_nd\_scipy}|hyperpage}{71}
+\indexentry{numdifftools.tests.test\_nd\_scipy@\spxentry{numdifftools.tests.test\_nd\_scipy}!module@\spxentry{module}|hyperpage}{71}
+\indexentry{TestGradient (class in numdifftools.tests.test\_nd\_scipy)@\spxentry{TestGradient}\spxextra{class in numdifftools.tests.test\_nd\_scipy}|hyperpage}{71}
+\indexentry{test\_on\_scalar\_function() (TestGradient static method)@\spxentry{test\_on\_scalar\_function()}\spxextra{TestGradient static method}|hyperpage}{71}
+\indexentry{TestJacobian (class in numdifftools.tests.test\_nd\_scipy)@\spxentry{TestJacobian}\spxextra{class in numdifftools.tests.test\_nd\_scipy}|hyperpage}{71}
+\indexentry{test\_issue\_25() (TestJacobian method)@\spxentry{test\_issue\_25()}\spxextra{TestJacobian method}|hyperpage}{71}
+\indexentry{test\_on\_matrix\_valued\_function() (TestJacobian method)@\spxentry{test\_on\_matrix\_valued\_function()}\spxextra{TestJacobian method}|hyperpage}{71}
+\indexentry{test\_on\_scalar\_function() (TestJacobian static method)@\spxentry{test\_on\_scalar\_function()}\spxextra{TestJacobian static method}|hyperpage}{71}
+\indexentry{test\_on\_vector\_valued\_function() (TestJacobian method)@\spxentry{test\_on\_vector\_valued\_function()}\spxextra{TestJacobian method}|hyperpage}{71}
+\indexentry{test\_scalar\_to\_vector() (TestJacobian static method)@\spxentry{test\_scalar\_to\_vector()}\spxextra{TestJacobian static method}|hyperpage}{71}
+\indexentry{module@\spxentry{module}!numdifftools.tests.test\_numdifftools@\spxentry{numdifftools.tests.test\_numdifftools}|hyperpage}{71}
+\indexentry{numdifftools.tests.test\_numdifftools@\spxentry{numdifftools.tests.test\_numdifftools}!module@\spxentry{module}|hyperpage}{71}
+\indexentry{TestDerivative (class in numdifftools.tests.test\_numdifftools)@\spxentry{TestDerivative}\spxextra{class in numdifftools.tests.test\_numdifftools}|hyperpage}{71}
+\indexentry{test\_backward\_derivative\_on\_sinh() (TestDerivative method)@\spxentry{test\_backward\_derivative\_on\_sinh()}\spxextra{TestDerivative method}|hyperpage}{71}
+\indexentry{test\_central\_and\_forward\_derivative\_on\_log() (TestDerivative method)@\spxentry{test\_central\_and\_forward\_derivative\_on\_log()}\spxextra{TestDerivative method}|hyperpage}{71}
+\indexentry{test\_default\_scale() (TestDerivative static method)@\spxentry{test\_default\_scale()}\spxextra{TestDerivative static method}|hyperpage}{71}
+\indexentry{test\_derivative\_cube() (TestDerivative static method)@\spxentry{test\_derivative\_cube()}\spxextra{TestDerivative static method}|hyperpage}{71}
+\indexentry{test\_derivative\_exp() (TestDerivative static method)@\spxentry{test\_derivative\_exp()}\spxextra{TestDerivative static method}|hyperpage}{71}
+\indexentry{test\_derivative\_of\_cos\_x() (TestDerivative static method)@\spxentry{test\_derivative\_of\_cos\_x()}\spxextra{TestDerivative static method}|hyperpage}{71}
+\indexentry{test\_derivative\_sin() (TestDerivative static method)@\spxentry{test\_derivative\_sin()}\spxextra{TestDerivative static method}|hyperpage}{71}
+\indexentry{test\_derivative\_with\_step\_options() (TestDerivative static method)@\spxentry{test\_derivative\_with\_step\_options()}\spxextra{TestDerivative static method}|hyperpage}{71}
+\indexentry{test\_directional\_diff() (TestDerivative static method)@\spxentry{test\_directional\_diff()}\spxextra{TestDerivative static method}|hyperpage}{71}
+\indexentry{test\_fun\_with\_additional\_parameters() (TestDerivative static method)@\spxentry{test\_fun\_with\_additional\_parameters()}\spxextra{TestDerivative static method}|hyperpage}{71}
+\indexentry{test\_high\_order\_derivative\_cos() (TestDerivative static method)@\spxentry{test\_high\_order\_derivative\_cos()}\spxextra{TestDerivative static method}|hyperpage}{71}
+\indexentry{test\_infinite\_functions() (TestDerivative method)@\spxentry{test\_infinite\_functions()}\spxextra{TestDerivative method}|hyperpage}{71}
+\indexentry{TestGradient (class in numdifftools.tests.test\_numdifftools)@\spxentry{TestGradient}\spxextra{class in numdifftools.tests.test\_numdifftools}|hyperpage}{71}
+\indexentry{test\_directional\_diff() (TestGradient static method)@\spxentry{test\_directional\_diff()}\spxextra{TestGradient static method}|hyperpage}{71}
+\indexentry{test\_gradient() (TestGradient static method)@\spxentry{test\_gradient()}\spxextra{TestGradient static method}|hyperpage}{71}
+\indexentry{test\_gradient\_fulloutput() (TestGradient static method)@\spxentry{test\_gradient\_fulloutput()}\spxextra{TestGradient static method}|hyperpage}{71}
+\indexentry{test\_issue\_39() (TestGradient static method)@\spxentry{test\_issue\_39()}\spxextra{TestGradient static method}|hyperpage}{71}
+\indexentry{TestHessdiag (class in numdifftools.tests.test\_numdifftools)@\spxentry{TestHessdiag}\spxextra{class in numdifftools.tests.test\_numdifftools}|hyperpage}{72}
+\indexentry{test\_complex() (TestHessdiag method)@\spxentry{test\_complex()}\spxextra{TestHessdiag method}|hyperpage}{72}
+\indexentry{test\_default\_step() (TestHessdiag method)@\spxentry{test\_default\_step()}\spxextra{TestHessdiag method}|hyperpage}{72}
+\indexentry{test\_fixed\_step() (TestHessdiag method)@\spxentry{test\_fixed\_step()}\spxextra{TestHessdiag method}|hyperpage}{72}
+\indexentry{TestHessian (class in numdifftools.tests.test\_numdifftools)@\spxentry{TestHessian}\spxextra{class in numdifftools.tests.test\_numdifftools}|hyperpage}{72}
+\indexentry{test\_complex\_hessian\_issue\_35() (TestHessian method)@\spxentry{test\_complex\_hessian\_issue\_35()}\spxextra{TestHessian method}|hyperpage}{72}
+\indexentry{test\_hessian\_cos\_x\_y\_at\_0\_0() (TestHessian static method)@\spxentry{test\_hessian\_cos\_x\_y\_at\_0\_0()}\spxextra{TestHessian static method}|hyperpage}{72}
+\indexentry{test\_run\_hamiltonian() (TestHessian method)@\spxentry{test\_run\_hamiltonian()}\spxextra{TestHessian method}|hyperpage}{72}
+\indexentry{TestJacobian (class in numdifftools.tests.test\_numdifftools)@\spxentry{TestJacobian}\spxextra{class in numdifftools.tests.test\_numdifftools}|hyperpage}{72}
+\indexentry{test\_issue\_25() (TestJacobian static method)@\spxentry{test\_issue\_25()}\spxextra{TestJacobian static method}|hyperpage}{72}
+\indexentry{test\_issue\_27a() (TestJacobian static method)@\spxentry{test\_issue\_27a()}\spxextra{TestJacobian static method}|hyperpage}{72}
+\indexentry{test\_issue\_27b() (TestJacobian static method)@\spxentry{test\_issue\_27b()}\spxextra{TestJacobian static method}|hyperpage}{72}
+\indexentry{test\_jacobian\_fulloutput() (TestJacobian static method)@\spxentry{test\_jacobian\_fulloutput()}\spxextra{TestJacobian static method}|hyperpage}{72}
+\indexentry{test\_on\_matrix\_valued\_function() (TestJacobian static method)@\spxentry{test\_on\_matrix\_valued\_function()}\spxextra{TestJacobian static method}|hyperpage}{72}
+\indexentry{test\_on\_scalar\_function() (TestJacobian static method)@\spxentry{test\_on\_scalar\_function()}\spxextra{TestJacobian static method}|hyperpage}{72}
+\indexentry{test\_on\_vector\_valued\_function() (TestJacobian static method)@\spxentry{test\_on\_vector\_valued\_function()}\spxextra{TestJacobian static method}|hyperpage}{72}
+\indexentry{test\_scalar\_to\_vector() (TestJacobian static method)@\spxentry{test\_scalar\_to\_vector()}\spxextra{TestJacobian static method}|hyperpage}{72}
+\indexentry{TestRichardson (class in numdifftools.tests.test\_numdifftools)@\spxentry{TestRichardson}\spxextra{class in numdifftools.tests.test\_numdifftools}|hyperpage}{72}
+\indexentry{test\_central\_forward\_backward() (TestRichardson static method)@\spxentry{test\_central\_forward\_backward()}\spxextra{TestRichardson static method}|hyperpage}{72}
+\indexentry{test\_complex() (TestRichardson static method)@\spxentry{test\_complex()}\spxextra{TestRichardson static method}|hyperpage}{72}
+\indexentry{module@\spxentry{module}!numdifftools.tests.test\_scripts@\spxentry{numdifftools.tests.test\_scripts}|hyperpage}{72}
+\indexentry{numdifftools.tests.test\_scripts@\spxentry{numdifftools.tests.test\_scripts}!module@\spxentry{module}|hyperpage}{72}
+\indexentry{test\_\_find\_default\_scale\_run\_all\_benchmarks() (in module numdifftools.tests.test\_scripts)@\spxentry{test\_\_find\_default\_scale\_run\_all\_benchmarks()}\spxextra{in module numdifftools.tests.test\_scripts}|hyperpage}{72}
+\indexentry{test\_profile\_numdifftools\_main() (in module numdifftools.tests.test\_scripts)@\spxentry{test\_profile\_numdifftools\_main()}\spxextra{in module numdifftools.tests.test\_scripts}|hyperpage}{72}
+\indexentry{test\_profile\_numdifftools\_profile\_hessian() (in module numdifftools.tests.test\_scripts)@\spxentry{test\_profile\_numdifftools\_profile\_hessian()}\spxextra{in module numdifftools.tests.test\_scripts}|hyperpage}{72}
+\indexentry{test\_run\_gradient\_and\_hessian\_benchmarks() (in module numdifftools.tests.test\_scripts)@\spxentry{test\_run\_gradient\_and\_hessian\_benchmarks()}\spxextra{in module numdifftools.tests.test\_scripts}|hyperpage}{72}
+\indexentry{module@\spxentry{module}!numdifftools.tests.test\_step\_generators@\spxentry{numdifftools.tests.test\_step\_generators}|hyperpage}{73}
+\indexentry{numdifftools.tests.test\_step\_generators@\spxentry{numdifftools.tests.test\_step\_generators}!module@\spxentry{module}|hyperpage}{73}
+\indexentry{test\_\_min\_step\_generator\_with\_step\_nom1() (in module numdifftools.tests.test\_step\_generators)@\spxentry{test\_\_min\_step\_generator\_with\_step\_nom1()}\spxextra{in module numdifftools.tests.test\_step\_generators}|hyperpage}{73}
+\indexentry{test\_default\_max\_step\_generator() (in module numdifftools.tests.test\_step\_generators)@\spxentry{test\_default\_max\_step\_generator()}\spxextra{in module numdifftools.tests.test\_step\_generators}|hyperpage}{73}
+\indexentry{test\_max\_step\_generator\_default\_base\_step() (in module numdifftools.tests.test\_step\_generators)@\spxentry{test\_max\_step\_generator\_default\_base\_step()}\spxextra{in module numdifftools.tests.test\_step\_generators}|hyperpage}{73}
+\indexentry{test\_max\_step\_generator\_with\_base\_step01() (in module numdifftools.tests.test\_step\_generators)@\spxentry{test\_max\_step\_generator\_with\_base\_step01()}\spxextra{in module numdifftools.tests.test\_step\_generators}|hyperpage}{73}
+\indexentry{test\_min\_step\_generator\_default\_base\_step() (in module numdifftools.tests.test\_step\_generators)@\spxentry{test\_min\_step\_generator\_default\_base\_step()}\spxextra{in module numdifftools.tests.test\_step\_generators}|hyperpage}{73}
+\indexentry{test\_min\_step\_generator\_with\_base\_step01() (in module numdifftools.tests.test\_step\_generators)@\spxentry{test\_min\_step\_generator\_with\_base\_step01()}\spxextra{in module numdifftools.tests.test\_step\_generators}|hyperpage}{73}
+\indexentry{test\_min\_step\_generator\_with\_step\_ratio4() (in module numdifftools.tests.test\_step\_generators)@\spxentry{test\_min\_step\_generator\_with\_step\_ratio4()}\spxextra{in module numdifftools.tests.test\_step\_generators}|hyperpage}{73}
+\indexentry{module@\spxentry{module}!numdifftools.core@\spxentry{numdifftools.core}|hyperpage}{73}
+\indexentry{numdifftools.core@\spxentry{numdifftools.core}!module@\spxentry{module}|hyperpage}{73}
+\indexentry{Derivative (class in numdifftools.core)@\spxentry{Derivative}\spxextra{class in numdifftools.core}|hyperpage}{73}
+\indexentry{Derivative.info (class in numdifftools.core)@\spxentry{Derivative.info}\spxextra{class in numdifftools.core}|hyperpage}{75}
+\indexentry{count() (Derivative.info method)@\spxentry{count()}\spxextra{Derivative.info method}|hyperpage}{75}
+\indexentry{error\_estimate (Derivative.info attribute)@\spxentry{error\_estimate}\spxextra{Derivative.info attribute}|hyperpage}{75}
+\indexentry{f\_value (Derivative.info attribute)@\spxentry{f\_value}\spxextra{Derivative.info attribute}|hyperpage}{75}
+\indexentry{final\_step (Derivative.info attribute)@\spxentry{final\_step}\spxextra{Derivative.info attribute}|hyperpage}{75}
+\indexentry{index (Derivative.info attribute)@\spxentry{index}\spxextra{Derivative.info attribute}|hyperpage}{75}
+\indexentry{method() (Derivative property)@\spxentry{method()}\spxextra{Derivative property}|hyperpage}{75}
+\indexentry{method\_order() (Derivative property)@\spxentry{method\_order()}\spxextra{Derivative property}|hyperpage}{75}
+\indexentry{n() (Derivative property)@\spxentry{n()}\spxextra{Derivative property}|hyperpage}{75}
+\indexentry{order() (Derivative property)@\spxentry{order()}\spxextra{Derivative property}|hyperpage}{75}
+\indexentry{set\_richardson\_rule() (Derivative method)@\spxentry{set\_richardson\_rule()}\spxextra{Derivative method}|hyperpage}{75}
+\indexentry{step() (Derivative property)@\spxentry{step()}\spxextra{Derivative property}|hyperpage}{75}
+\indexentry{Gradient (class in numdifftools.core)@\spxentry{Gradient}\spxextra{class in numdifftools.core}|hyperpage}{75}
+\indexentry{Gradient.info (class in numdifftools.core)@\spxentry{Gradient.info}\spxextra{class in numdifftools.core}|hyperpage}{77}
+\indexentry{count() (Gradient.info method)@\spxentry{count()}\spxextra{Gradient.info method}|hyperpage}{77}
+\indexentry{error\_estimate (Gradient.info attribute)@\spxentry{error\_estimate}\spxextra{Gradient.info attribute}|hyperpage}{77}
+\indexentry{f\_value (Gradient.info attribute)@\spxentry{f\_value}\spxextra{Gradient.info attribute}|hyperpage}{77}
+\indexentry{final\_step (Gradient.info attribute)@\spxentry{final\_step}\spxextra{Gradient.info attribute}|hyperpage}{77}
+\indexentry{index (Gradient.info attribute)@\spxentry{index}\spxextra{Gradient.info attribute}|hyperpage}{77}
+\indexentry{method() (Gradient property)@\spxentry{method()}\spxextra{Gradient property}|hyperpage}{77}
+\indexentry{method\_order() (Gradient property)@\spxentry{method\_order()}\spxextra{Gradient property}|hyperpage}{77}
+\indexentry{n() (Gradient property)@\spxentry{n()}\spxextra{Gradient property}|hyperpage}{77}
+\indexentry{order() (Gradient property)@\spxentry{order()}\spxextra{Gradient property}|hyperpage}{77}
+\indexentry{set\_richardson\_rule() (Gradient method)@\spxentry{set\_richardson\_rule()}\spxextra{Gradient method}|hyperpage}{77}
+\indexentry{step() (Gradient property)@\spxentry{step()}\spxextra{Gradient property}|hyperpage}{77}
+\indexentry{Hessdiag (class in numdifftools.core)@\spxentry{Hessdiag}\spxextra{class in numdifftools.core}|hyperpage}{77}
+\indexentry{Hessdiag.info (class in numdifftools.core)@\spxentry{Hessdiag.info}\spxextra{class in numdifftools.core}|hyperpage}{79}
+\indexentry{count() (Hessdiag.info method)@\spxentry{count()}\spxextra{Hessdiag.info method}|hyperpage}{79}
+\indexentry{error\_estimate (Hessdiag.info attribute)@\spxentry{error\_estimate}\spxextra{Hessdiag.info attribute}|hyperpage}{79}
+\indexentry{f\_value (Hessdiag.info attribute)@\spxentry{f\_value}\spxextra{Hessdiag.info attribute}|hyperpage}{79}
+\indexentry{final\_step (Hessdiag.info attribute)@\spxentry{final\_step}\spxextra{Hessdiag.info attribute}|hyperpage}{79}
+\indexentry{index (Hessdiag.info attribute)@\spxentry{index}\spxextra{Hessdiag.info attribute}|hyperpage}{79}
+\indexentry{method() (Hessdiag property)@\spxentry{method()}\spxextra{Hessdiag property}|hyperpage}{79}
+\indexentry{method\_order() (Hessdiag property)@\spxentry{method\_order()}\spxextra{Hessdiag property}|hyperpage}{79}
+\indexentry{n() (Hessdiag property)@\spxentry{n()}\spxextra{Hessdiag property}|hyperpage}{79}
+\indexentry{order() (Hessdiag property)@\spxentry{order()}\spxextra{Hessdiag property}|hyperpage}{79}
+\indexentry{set\_richardson\_rule() (Hessdiag method)@\spxentry{set\_richardson\_rule()}\spxextra{Hessdiag method}|hyperpage}{79}
+\indexentry{step() (Hessdiag property)@\spxentry{step()}\spxextra{Hessdiag property}|hyperpage}{79}
+\indexentry{Hessian (class in numdifftools.core)@\spxentry{Hessian}\spxextra{class in numdifftools.core}|hyperpage}{79}
+\indexentry{Hessian.info (class in numdifftools.core)@\spxentry{Hessian.info}\spxextra{class in numdifftools.core}|hyperpage}{81}
+\indexentry{count() (Hessian.info method)@\spxentry{count()}\spxextra{Hessian.info method}|hyperpage}{81}
+\indexentry{error\_estimate (Hessian.info attribute)@\spxentry{error\_estimate}\spxextra{Hessian.info attribute}|hyperpage}{81}
+\indexentry{f\_value (Hessian.info attribute)@\spxentry{f\_value}\spxextra{Hessian.info attribute}|hyperpage}{81}
+\indexentry{final\_step (Hessian.info attribute)@\spxentry{final\_step}\spxextra{Hessian.info attribute}|hyperpage}{81}
+\indexentry{index (Hessian.info attribute)@\spxentry{index}\spxextra{Hessian.info attribute}|hyperpage}{81}
+\indexentry{method() (Hessian property)@\spxentry{method()}\spxextra{Hessian property}|hyperpage}{81}
+\indexentry{method\_order() (Hessian property)@\spxentry{method\_order()}\spxextra{Hessian property}|hyperpage}{81}
+\indexentry{n() (Hessian property)@\spxentry{n()}\spxextra{Hessian property}|hyperpage}{81}
+\indexentry{order() (Hessian property)@\spxentry{order()}\spxextra{Hessian property}|hyperpage}{81}
+\indexentry{set\_richardson\_rule() (Hessian method)@\spxentry{set\_richardson\_rule()}\spxextra{Hessian method}|hyperpage}{82}
+\indexentry{step() (Hessian property)@\spxentry{step()}\spxextra{Hessian property}|hyperpage}{82}
+\indexentry{Jacobian (class in numdifftools.core)@\spxentry{Jacobian}\spxextra{class in numdifftools.core}|hyperpage}{82}
+\indexentry{Jacobian.info (class in numdifftools.core)@\spxentry{Jacobian.info}\spxextra{class in numdifftools.core}|hyperpage}{84}
+\indexentry{count() (Jacobian.info method)@\spxentry{count()}\spxextra{Jacobian.info method}|hyperpage}{84}
+\indexentry{error\_estimate (Jacobian.info attribute)@\spxentry{error\_estimate}\spxextra{Jacobian.info attribute}|hyperpage}{84}
+\indexentry{f\_value (Jacobian.info attribute)@\spxentry{f\_value}\spxextra{Jacobian.info attribute}|hyperpage}{84}
+\indexentry{final\_step (Jacobian.info attribute)@\spxentry{final\_step}\spxextra{Jacobian.info attribute}|hyperpage}{84}
+\indexentry{index (Jacobian.info attribute)@\spxentry{index}\spxextra{Jacobian.info attribute}|hyperpage}{84}
+\indexentry{method() (Jacobian property)@\spxentry{method()}\spxextra{Jacobian property}|hyperpage}{84}
+\indexentry{method\_order() (Jacobian property)@\spxentry{method\_order()}\spxextra{Jacobian property}|hyperpage}{84}
+\indexentry{n() (Jacobian property)@\spxentry{n()}\spxextra{Jacobian property}|hyperpage}{84}
+\indexentry{order() (Jacobian property)@\spxentry{order()}\spxextra{Jacobian property}|hyperpage}{84}
+\indexentry{set\_richardson\_rule() (Jacobian method)@\spxentry{set\_richardson\_rule()}\spxextra{Jacobian method}|hyperpage}{84}
+\indexentry{step() (Jacobian property)@\spxentry{step()}\spxextra{Jacobian property}|hyperpage}{84}
+\indexentry{MaxStepGenerator (class in numdifftools.core)@\spxentry{MaxStepGenerator}\spxextra{class in numdifftools.core}|hyperpage}{84}
+\indexentry{base\_step() (MaxStepGenerator property)@\spxentry{base\_step()}\spxextra{MaxStepGenerator property}|hyperpage}{85}
+\indexentry{min\_num\_steps() (MaxStepGenerator property)@\spxentry{min\_num\_steps()}\spxextra{MaxStepGenerator property}|hyperpage}{85}
+\indexentry{num\_steps() (MaxStepGenerator property)@\spxentry{num\_steps()}\spxextra{MaxStepGenerator property}|hyperpage}{85}
+\indexentry{scale() (MaxStepGenerator property)@\spxentry{scale()}\spxextra{MaxStepGenerator property}|hyperpage}{85}
+\indexentry{step\_generator\_function() (MaxStepGenerator method)@\spxentry{step\_generator\_function()}\spxextra{MaxStepGenerator method}|hyperpage}{85}
+\indexentry{step\_nom() (MaxStepGenerator property)@\spxentry{step\_nom()}\spxextra{MaxStepGenerator property}|hyperpage}{85}
+\indexentry{step\_ratio() (MaxStepGenerator property)@\spxentry{step\_ratio()}\spxextra{MaxStepGenerator property}|hyperpage}{85}
+\indexentry{MinStepGenerator (class in numdifftools.core)@\spxentry{MinStepGenerator}\spxextra{class in numdifftools.core}|hyperpage}{85}
+\indexentry{base\_step() (MinStepGenerator property)@\spxentry{base\_step()}\spxextra{MinStepGenerator property}|hyperpage}{85}
+\indexentry{min\_num\_steps() (MinStepGenerator property)@\spxentry{min\_num\_steps()}\spxextra{MinStepGenerator property}|hyperpage}{86}
+\indexentry{num\_steps() (MinStepGenerator property)@\spxentry{num\_steps()}\spxextra{MinStepGenerator property}|hyperpage}{86}
+\indexentry{scale() (MinStepGenerator property)@\spxentry{scale()}\spxextra{MinStepGenerator property}|hyperpage}{86}
+\indexentry{step\_generator\_function() (MinStepGenerator method)@\spxentry{step\_generator\_function()}\spxextra{MinStepGenerator method}|hyperpage}{86}
+\indexentry{step\_nom() (MinStepGenerator property)@\spxentry{step\_nom()}\spxextra{MinStepGenerator property}|hyperpage}{86}
+\indexentry{step\_ratio() (MinStepGenerator property)@\spxentry{step\_ratio()}\spxextra{MinStepGenerator property}|hyperpage}{86}
+\indexentry{Richardson (class in numdifftools.core)@\spxentry{Richardson}\spxextra{class in numdifftools.core}|hyperpage}{86}
+\indexentry{extrapolate() (Richardson method)@\spxentry{extrapolate()}\spxextra{Richardson method}|hyperpage}{87}
+\indexentry{rule() (Richardson method)@\spxentry{rule()}\spxextra{Richardson method}|hyperpage}{87}
+\indexentry{dea3() (in module numdifftools.core)@\spxentry{dea3()}\spxextra{in module numdifftools.core}|hyperpage}{87}
+\indexentry{directionaldiff() (in module numdifftools.core)@\spxentry{directionaldiff()}\spxextra{in module numdifftools.core}|hyperpage}{87}
+\indexentry{module@\spxentry{module}!numdifftools.extrapolation@\spxentry{numdifftools.extrapolation}|hyperpage}{88}
+\indexentry{numdifftools.extrapolation@\spxentry{numdifftools.extrapolation}!module@\spxentry{module}|hyperpage}{88}
+\indexentry{Dea (class in numdifftools.extrapolation)@\spxentry{Dea}\spxextra{class in numdifftools.extrapolation}|hyperpage}{88}
+\indexentry{limexp() (Dea property)@\spxentry{limexp()}\spxextra{Dea property}|hyperpage}{89}
+\indexentry{EpsAlg (class in numdifftools.extrapolation)@\spxentry{EpsAlg}\spxextra{class in numdifftools.extrapolation}|hyperpage}{89}
+\indexentry{Richardson (class in numdifftools.extrapolation)@\spxentry{Richardson}\spxextra{class in numdifftools.extrapolation}|hyperpage}{89}
+\indexentry{extrapolate() (Richardson method)@\spxentry{extrapolate()}\spxextra{Richardson method}|hyperpage}{90}
+\indexentry{rule() (Richardson method)@\spxentry{rule()}\spxextra{Richardson method}|hyperpage}{90}
+\indexentry{convolve() (in module numdifftools.extrapolation)@\spxentry{convolve()}\spxextra{in module numdifftools.extrapolation}|hyperpage}{90}
+\indexentry{dea3() (in module numdifftools.extrapolation)@\spxentry{dea3()}\spxextra{in module numdifftools.extrapolation}|hyperpage}{90}
+\indexentry{dea\_demo() (in module numdifftools.extrapolation)@\spxentry{dea\_demo()}\spxextra{in module numdifftools.extrapolation}|hyperpage}{91}
+\indexentry{epsalg\_demo() (in module numdifftools.extrapolation)@\spxentry{epsalg\_demo()}\spxextra{in module numdifftools.extrapolation}|hyperpage}{91}
+\indexentry{max\_abs() (in module numdifftools.extrapolation)@\spxentry{max\_abs()}\spxextra{in module numdifftools.extrapolation}|hyperpage}{92}
+\indexentry{richardson\_demo() (in module numdifftools.extrapolation)@\spxentry{richardson\_demo()}\spxextra{in module numdifftools.extrapolation}|hyperpage}{92}
+\indexentry{module@\spxentry{module}!numdifftools.finite\_difference@\spxentry{numdifftools.finite\_difference}|hyperpage}{92}
+\indexentry{numdifftools.finite\_difference@\spxentry{numdifftools.finite\_difference}!module@\spxentry{module}|hyperpage}{92}
+\indexentry{DifferenceFunctions (class in numdifftools.finite\_difference)@\spxentry{DifferenceFunctions}\spxextra{class in numdifftools.finite\_difference}|hyperpage}{92}
+\indexentry{HessdiagDifferenceFunctions (class in numdifftools.finite\_difference)@\spxentry{HessdiagDifferenceFunctions}\spxextra{class in numdifftools.finite\_difference}|hyperpage}{92}
+\indexentry{HessianDifferenceFunctions (class in numdifftools.finite\_difference)@\spxentry{HessianDifferenceFunctions}\spxextra{class in numdifftools.finite\_difference}|hyperpage}{92}
+\indexentry{JacobianDifferenceFunctions (class in numdifftools.finite\_difference)@\spxentry{JacobianDifferenceFunctions}\spxextra{class in numdifftools.finite\_difference}|hyperpage}{93}
+\indexentry{increments() (JacobianDifferenceFunctions static method)@\spxentry{increments()}\spxextra{JacobianDifferenceFunctions static method}|hyperpage}{93}
+\indexentry{LogHessdiagRule (class in numdifftools.finite\_difference)@\spxentry{LogHessdiagRule}\spxextra{class in numdifftools.finite\_difference}|hyperpage}{93}
+\indexentry{n() (LogHessdiagRule property)@\spxentry{n()}\spxextra{LogHessdiagRule property}|hyperpage}{94}
+\indexentry{LogHessianRule (class in numdifftools.finite\_difference)@\spxentry{LogHessianRule}\spxextra{class in numdifftools.finite\_difference}|hyperpage}{94}
+\indexentry{apply() (LogHessianRule method)@\spxentry{apply()}\spxextra{LogHessianRule method}|hyperpage}{94}
+\indexentry{n() (LogHessianRule property)@\spxentry{n()}\spxextra{LogHessianRule property}|hyperpage}{94}
+\indexentry{order() (LogHessianRule property)@\spxentry{order()}\spxextra{LogHessianRule property}|hyperpage}{94}
+\indexentry{LogJacobianRule (class in numdifftools.finite\_difference)@\spxentry{LogJacobianRule}\spxextra{class in numdifftools.finite\_difference}|hyperpage}{94}
+\indexentry{LogRule (class in numdifftools.finite\_difference)@\spxentry{LogRule}\spxextra{class in numdifftools.finite\_difference}|hyperpage}{95}
+\indexentry{apply() (LogRule method)@\spxentry{apply()}\spxextra{LogRule method}|hyperpage}{96}
+\indexentry{diff() (LogRule property)@\spxentry{diff()}\spxextra{LogRule property}|hyperpage}{96}
+\indexentry{eval\_first\_condition() (LogRule property)@\spxentry{eval\_first\_condition()}\spxextra{LogRule property}|hyperpage}{96}
+\indexentry{method\_order() (LogRule property)@\spxentry{method\_order()}\spxextra{LogRule property}|hyperpage}{96}
+\indexentry{richardson\_step() (LogRule property)@\spxentry{richardson\_step()}\spxextra{LogRule property}|hyperpage}{96}
+\indexentry{rule() (LogRule method)@\spxentry{rule()}\spxextra{LogRule method}|hyperpage}{96}
+\indexentry{make\_exact() (in module numdifftools.finite\_difference)@\spxentry{make\_exact()}\spxextra{in module numdifftools.finite\_difference}|hyperpage}{96}
+\indexentry{module@\spxentry{module}!numdifftools.fornberg@\spxentry{numdifftools.fornberg}|hyperpage}{97}
+\indexentry{numdifftools.fornberg@\spxentry{numdifftools.fornberg}!module@\spxentry{module}|hyperpage}{97}
+\indexentry{Taylor (class in numdifftools.fornberg)@\spxentry{Taylor}\spxextra{class in numdifftools.fornberg}|hyperpage}{97}
+\indexentry{derivative() (in module numdifftools.fornberg)@\spxentry{derivative()}\spxextra{in module numdifftools.fornberg}|hyperpage}{98}
+\indexentry{fd\_derivative() (in module numdifftools.fornberg)@\spxentry{fd\_derivative()}\spxextra{in module numdifftools.fornberg}|hyperpage}{99}
+\indexentry{fd\_weights() (in module numdifftools.fornberg)@\spxentry{fd\_weights()}\spxextra{in module numdifftools.fornberg}|hyperpage}{100}
+\indexentry{fd\_weights\_all() (in module numdifftools.fornberg)@\spxentry{fd\_weights\_all()}\spxextra{in module numdifftools.fornberg}|hyperpage}{100}
+\indexentry{richardson() (in module numdifftools.fornberg)@\spxentry{richardson()}\spxextra{in module numdifftools.fornberg}|hyperpage}{101}
+\indexentry{richardson\_parameter() (in module numdifftools.fornberg)@\spxentry{richardson\_parameter()}\spxextra{in module numdifftools.fornberg}|hyperpage}{101}
+\indexentry{taylor() (in module numdifftools.fornberg)@\spxentry{taylor()}\spxextra{in module numdifftools.fornberg}|hyperpage}{101}
+\indexentry{module@\spxentry{module}!numdifftools.limits@\spxentry{numdifftools.limits}|hyperpage}{102}
+\indexentry{numdifftools.limits@\spxentry{numdifftools.limits}!module@\spxentry{module}|hyperpage}{102}
+\indexentry{CStepGenerator (class in numdifftools.limits)@\spxentry{CStepGenerator}\spxextra{class in numdifftools.limits}|hyperpage}{102}
+\indexentry{dtheta() (CStepGenerator property)@\spxentry{dtheta()}\spxextra{CStepGenerator property}|hyperpage}{103}
+\indexentry{num\_steps() (CStepGenerator property)@\spxentry{num\_steps()}\spxextra{CStepGenerator property}|hyperpage}{103}
+\indexentry{step\_ratio() (CStepGenerator property)@\spxentry{step\_ratio()}\spxextra{CStepGenerator property}|hyperpage}{103}
+\indexentry{Limit (class in numdifftools.limits)@\spxentry{Limit}\spxextra{class in numdifftools.limits}|hyperpage}{103}
+\indexentry{limit() (Limit method)@\spxentry{limit()}\spxextra{Limit method}|hyperpage}{104}
+\indexentry{Residue (class in numdifftools.limits)@\spxentry{Residue}\spxextra{class in numdifftools.limits}|hyperpage}{105}
+\indexentry{module@\spxentry{module}!numdifftools.multicomplex@\spxentry{numdifftools.multicomplex}|hyperpage}{106}
+\indexentry{numdifftools.multicomplex@\spxentry{numdifftools.multicomplex}!module@\spxentry{module}|hyperpage}{106}
+\indexentry{Bicomplex (class in numdifftools.multicomplex)@\spxentry{Bicomplex}\spxextra{class in numdifftools.multicomplex}|hyperpage}{106}
+\indexentry{arccos() (Bicomplex method)@\spxentry{arccos()}\spxextra{Bicomplex method}|hyperpage}{106}
+\indexentry{arccosh() (Bicomplex method)@\spxentry{arccosh()}\spxextra{Bicomplex method}|hyperpage}{106}
+\indexentry{arcsin() (Bicomplex method)@\spxentry{arcsin()}\spxextra{Bicomplex method}|hyperpage}{106}
+\indexentry{arcsinh() (Bicomplex method)@\spxentry{arcsinh()}\spxextra{Bicomplex method}|hyperpage}{106}
+\indexentry{arctan() (Bicomplex method)@\spxentry{arctan()}\spxextra{Bicomplex method}|hyperpage}{106}
+\indexentry{arctanh() (Bicomplex method)@\spxentry{arctanh()}\spxextra{Bicomplex method}|hyperpage}{106}
+\indexentry{arg\_c() (Bicomplex method)@\spxentry{arg\_c()}\spxextra{Bicomplex method}|hyperpage}{106}
+\indexentry{arg\_c1p() (Bicomplex method)@\spxentry{arg\_c1p()}\spxextra{Bicomplex method}|hyperpage}{106}
+\indexentry{asarray() (Bicomplex static method)@\spxentry{asarray()}\spxextra{Bicomplex static method}|hyperpage}{106}
+\indexentry{conjugate() (Bicomplex method)@\spxentry{conjugate()}\spxextra{Bicomplex method}|hyperpage}{106}
+\indexentry{cos() (Bicomplex method)@\spxentry{cos()}\spxextra{Bicomplex method}|hyperpage}{106}
+\indexentry{cosh() (Bicomplex method)@\spxentry{cosh()}\spxextra{Bicomplex method}|hyperpage}{106}
+\indexentry{cot() (Bicomplex method)@\spxentry{cot()}\spxextra{Bicomplex method}|hyperpage}{106}
+\indexentry{coth() (Bicomplex method)@\spxentry{coth()}\spxextra{Bicomplex method}|hyperpage}{106}
+\indexentry{csc() (Bicomplex method)@\spxentry{csc()}\spxextra{Bicomplex method}|hyperpage}{106}
+\indexentry{csch() (Bicomplex method)@\spxentry{csch()}\spxextra{Bicomplex method}|hyperpage}{106}
+\indexentry{dot() (Bicomplex method)@\spxentry{dot()}\spxextra{Bicomplex method}|hyperpage}{106}
+\indexentry{exp() (Bicomplex method)@\spxentry{exp()}\spxextra{Bicomplex method}|hyperpage}{106}
+\indexentry{exp2() (Bicomplex method)@\spxentry{exp2()}\spxextra{Bicomplex method}|hyperpage}{106}
+\indexentry{expm1() (Bicomplex method)@\spxentry{expm1()}\spxextra{Bicomplex method}|hyperpage}{106}
+\indexentry{flat() (Bicomplex method)@\spxentry{flat()}\spxextra{Bicomplex method}|hyperpage}{107}
+\indexentry{imag() (Bicomplex property)@\spxentry{imag()}\spxextra{Bicomplex property}|hyperpage}{107}
+\indexentry{imag1() (Bicomplex property)@\spxentry{imag1()}\spxextra{Bicomplex property}|hyperpage}{107}
+\indexentry{imag12() (Bicomplex property)@\spxentry{imag12()}\spxextra{Bicomplex property}|hyperpage}{107}
+\indexentry{imag2() (Bicomplex property)@\spxentry{imag2()}\spxextra{Bicomplex property}|hyperpage}{107}
+\indexentry{log() (Bicomplex method)@\spxentry{log()}\spxextra{Bicomplex method}|hyperpage}{107}
+\indexentry{log10() (Bicomplex method)@\spxentry{log10()}\spxextra{Bicomplex method}|hyperpage}{107}
+\indexentry{log1p() (Bicomplex method)@\spxentry{log1p()}\spxextra{Bicomplex method}|hyperpage}{107}
+\indexentry{log2() (Bicomplex method)@\spxentry{log2()}\spxextra{Bicomplex method}|hyperpage}{107}
+\indexentry{logaddexp() (Bicomplex method)@\spxentry{logaddexp()}\spxextra{Bicomplex method}|hyperpage}{107}
+\indexentry{logaddexp2() (Bicomplex method)@\spxentry{logaddexp2()}\spxextra{Bicomplex method}|hyperpage}{107}
+\indexentry{mat2bicomp() (Bicomplex static method)@\spxentry{mat2bicomp()}\spxextra{Bicomplex static method}|hyperpage}{107}
+\indexentry{mod\_c() (Bicomplex method)@\spxentry{mod\_c()}\spxextra{Bicomplex method}|hyperpage}{107}
+\indexentry{norm() (Bicomplex method)@\spxentry{norm()}\spxextra{Bicomplex method}|hyperpage}{107}
+\indexentry{real() (Bicomplex property)@\spxentry{real()}\spxextra{Bicomplex property}|hyperpage}{107}
+\indexentry{sec() (Bicomplex method)@\spxentry{sec()}\spxextra{Bicomplex method}|hyperpage}{107}
+\indexentry{sech() (Bicomplex method)@\spxentry{sech()}\spxextra{Bicomplex method}|hyperpage}{107}
+\indexentry{shape() (Bicomplex property)@\spxentry{shape()}\spxextra{Bicomplex property}|hyperpage}{107}
+\indexentry{sin() (Bicomplex method)@\spxentry{sin()}\spxextra{Bicomplex method}|hyperpage}{107}
+\indexentry{sinh() (Bicomplex method)@\spxentry{sinh()}\spxextra{Bicomplex method}|hyperpage}{107}
+\indexentry{size() (Bicomplex property)@\spxentry{size()}\spxextra{Bicomplex property}|hyperpage}{107}
+\indexentry{sqrt() (Bicomplex method)@\spxentry{sqrt()}\spxextra{Bicomplex method}|hyperpage}{107}
+\indexentry{tan() (Bicomplex method)@\spxentry{tan()}\spxextra{Bicomplex method}|hyperpage}{107}
+\indexentry{tanh() (Bicomplex method)@\spxentry{tanh()}\spxextra{Bicomplex method}|hyperpage}{107}
+\indexentry{z1 (Bicomplex attribute)@\spxentry{z1}\spxextra{Bicomplex attribute}|hyperpage}{107}
+\indexentry{z2 (Bicomplex attribute)@\spxentry{z2}\spxextra{Bicomplex attribute}|hyperpage}{107}
+\indexentry{c\_abs() (in module numdifftools.multicomplex)@\spxentry{c\_abs()}\spxextra{in module numdifftools.multicomplex}|hyperpage}{107}
+\indexentry{c\_atan2() (in module numdifftools.multicomplex)@\spxentry{c\_atan2()}\spxextra{in module numdifftools.multicomplex}|hyperpage}{107}
+\indexentry{c\_max() (in module numdifftools.multicomplex)@\spxentry{c\_max()}\spxextra{in module numdifftools.multicomplex}|hyperpage}{107}
+\indexentry{c\_min() (in module numdifftools.multicomplex)@\spxentry{c\_min()}\spxextra{in module numdifftools.multicomplex}|hyperpage}{107}
+\indexentry{module@\spxentry{module}!numdifftools.nd\_algopy@\spxentry{numdifftools.nd\_algopy}|hyperpage}{108}
+\indexentry{numdifftools.nd\_algopy@\spxentry{numdifftools.nd\_algopy}!module@\spxentry{module}|hyperpage}{108}
+\indexentry{Derivative (class in numdifftools.nd\_algopy)@\spxentry{Derivative}\spxextra{class in numdifftools.nd\_algopy}|hyperpage}{108}
+\indexentry{Gradient (class in numdifftools.nd\_algopy)@\spxentry{Gradient}\spxextra{class in numdifftools.nd\_algopy}|hyperpage}{109}
+\indexentry{Hessdiag (class in numdifftools.nd\_algopy)@\spxentry{Hessdiag}\spxextra{class in numdifftools.nd\_algopy}|hyperpage}{111}
+\indexentry{Hessian (class in numdifftools.nd\_algopy)@\spxentry{Hessian}\spxextra{class in numdifftools.nd\_algopy}|hyperpage}{112}
+\indexentry{Jacobian (class in numdifftools.nd\_algopy)@\spxentry{Jacobian}\spxextra{class in numdifftools.nd\_algopy}|hyperpage}{113}
+\indexentry{Taylor (class in numdifftools.nd\_algopy)@\spxentry{Taylor}\spxextra{class in numdifftools.nd\_algopy}|hyperpage}{115}
+\indexentry{directionaldiff() (in module numdifftools.nd\_algopy)@\spxentry{directionaldiff()}\spxextra{in module numdifftools.nd\_algopy}|hyperpage}{115}
+\indexentry{module@\spxentry{module}!numdifftools.nd\_scipy@\spxentry{numdifftools.nd\_scipy}|hyperpage}{116}
+\indexentry{numdifftools.nd\_scipy@\spxentry{numdifftools.nd\_scipy}!module@\spxentry{module}|hyperpage}{116}
+\indexentry{Gradient (class in numdifftools.nd\_scipy)@\spxentry{Gradient}\spxextra{class in numdifftools.nd\_scipy}|hyperpage}{116}
+\indexentry{Jacobian (class in numdifftools.nd\_scipy)@\spxentry{Jacobian}\spxextra{class in numdifftools.nd\_scipy}|hyperpage}{117}
+\indexentry{module@\spxentry{module}!numdifftools.nd\_statsmodels@\spxentry{numdifftools.nd\_statsmodels}|hyperpage}{118}
+\indexentry{numdifftools.nd\_statsmodels@\spxentry{numdifftools.nd\_statsmodels}!module@\spxentry{module}|hyperpage}{118}
+\indexentry{Gradient (class in numdifftools.nd\_statsmodels)@\spxentry{Gradient}\spxextra{class in numdifftools.nd\_statsmodels}|hyperpage}{118}
+\indexentry{Hessian (class in numdifftools.nd\_statsmodels)@\spxentry{Hessian}\spxextra{class in numdifftools.nd\_statsmodels}|hyperpage}{118}
+\indexentry{n() (Hessian property)@\spxentry{n()}\spxextra{Hessian property}|hyperpage}{119}
+\indexentry{Jacobian (class in numdifftools.nd\_statsmodels)@\spxentry{Jacobian}\spxextra{class in numdifftools.nd\_statsmodels}|hyperpage}{119}
+\indexentry{approx\_fprime() (in module numdifftools.nd\_statsmodels)@\spxentry{approx\_fprime()}\spxextra{in module numdifftools.nd\_statsmodels}|hyperpage}{120}
+\indexentry{approx\_fprime\_cs() (in module numdifftools.nd\_statsmodels)@\spxentry{approx\_fprime\_cs()}\spxextra{in module numdifftools.nd\_statsmodels}|hyperpage}{121}
+\indexentry{module@\spxentry{module}!numdifftools.step\_generators@\spxentry{numdifftools.step\_generators}|hyperpage}{121}
+\indexentry{numdifftools.step\_generators@\spxentry{numdifftools.step\_generators}!module@\spxentry{module}|hyperpage}{121}
+\indexentry{BasicMaxStepGenerator (class in numdifftools.step\_generators)@\spxentry{BasicMaxStepGenerator}\spxextra{class in numdifftools.step\_generators}|hyperpage}{121}
+\indexentry{BasicMinStepGenerator (class in numdifftools.step\_generators)@\spxentry{BasicMinStepGenerator}\spxextra{class in numdifftools.step\_generators}|hyperpage}{122}
+\indexentry{MaxStepGenerator (class in numdifftools.step\_generators)@\spxentry{MaxStepGenerator}\spxextra{class in numdifftools.step\_generators}|hyperpage}{122}
+\indexentry{MinStepGenerator (class in numdifftools.step\_generators)@\spxentry{MinStepGenerator}\spxextra{class in numdifftools.step\_generators}|hyperpage}{123}
+\indexentry{base\_step() (MinStepGenerator property)@\spxentry{base\_step()}\spxextra{MinStepGenerator property}|hyperpage}{123}
+\indexentry{min\_num\_steps() (MinStepGenerator property)@\spxentry{min\_num\_steps()}\spxextra{MinStepGenerator property}|hyperpage}{123}
+\indexentry{num\_steps() (MinStepGenerator property)@\spxentry{num\_steps()}\spxextra{MinStepGenerator property}|hyperpage}{123}
+\indexentry{scale() (MinStepGenerator property)@\spxentry{scale()}\spxextra{MinStepGenerator property}|hyperpage}{123}
+\indexentry{step\_generator\_function() (MinStepGenerator method)@\spxentry{step\_generator\_function()}\spxextra{MinStepGenerator method}|hyperpage}{123}
+\indexentry{step\_nom() (MinStepGenerator property)@\spxentry{step\_nom()}\spxextra{MinStepGenerator property}|hyperpage}{123}
+\indexentry{step\_ratio() (MinStepGenerator property)@\spxentry{step\_ratio()}\spxextra{MinStepGenerator property}|hyperpage}{123}
+\indexentry{default\_scale() (in module numdifftools.step\_generators)@\spxentry{default\_scale()}\spxextra{in module numdifftools.step\_generators}|hyperpage}{123}
+\indexentry{get\_base\_step() (in module numdifftools.step\_generators)@\spxentry{get\_base\_step()}\spxextra{in module numdifftools.step\_generators}|hyperpage}{123}
+\indexentry{get\_nominal\_step() (in module numdifftools.step\_generators)@\spxentry{get\_nominal\_step()}\spxextra{in module numdifftools.step\_generators}|hyperpage}{123}
+\indexentry{make\_exact() (in module numdifftools.step\_generators)@\spxentry{make\_exact()}\spxextra{in module numdifftools.step\_generators}|hyperpage}{124}

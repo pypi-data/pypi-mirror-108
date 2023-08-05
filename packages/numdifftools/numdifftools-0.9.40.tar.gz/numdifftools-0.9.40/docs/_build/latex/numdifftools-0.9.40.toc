@@ -1,0 +1,145 @@
+\babel@toc {english}{}
+\contentsline {chapter}{\numberline {1}Introduction}{3}{chapter.1}%
+\contentsline {section}{\numberline {1.1}What is numdifftools?}{3}{section.1.1}%
+\contentsline {section}{\numberline {1.2}How the documentation is organized}{3}{section.1.2}%
+\contentsline {chapter}{\numberline {2}Tutorials}{5}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Install guide}{5}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Install Python}{5}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Dependencies}{6}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}Install numdifftools}{6}{subsection.2.1.3}%
+\contentsline {subsection}{\numberline {2.1.4}Verifying installation}{6}{subsection.2.1.4}%
+\contentsline {subsection}{\numberline {2.1.5}That’s it!}{6}{subsection.2.1.5}%
+\contentsline {section}{\numberline {2.2}Getting started}{6}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}The derivative}{6}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Gradient and Hessian estimation}{8}{subsection.2.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.2.1}Multivariate calculus examples}{9}{subsubsection.2.2.2.1}%
+\contentsline {subsubsection}{\numberline {2.2.2.2}Gradients and Hessians}{9}{subsubsection.2.2.2.2}%
+\contentsline {subsubsection}{\numberline {2.2.2.3}Directional derivatives}{10}{subsubsection.2.2.2.3}%
+\contentsline {subsubsection}{\numberline {2.2.2.4}Jacobian matrix}{10}{subsubsection.2.2.2.4}%
+\contentsline {section}{\numberline {2.3}Conclusion}{11}{section.2.3}%
+\contentsline {section}{\numberline {2.4}What to read next}{11}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Finding documentation}{11}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}How the documentation is organized}{11}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.3}How documentation is updated}{11}{subsection.2.4.3}%
+\contentsline {subsubsection}{\numberline {2.4.3.1}In plain text}{12}{subsubsection.2.4.3.1}%
+\contentsline {subsubsection}{\numberline {2.4.3.2}As HTML, locally}{12}{subsubsection.2.4.3.2}%
+\contentsline {subsubsection}{\numberline {2.4.3.3}Using pydoc}{12}{subsubsection.2.4.3.3}%
+\contentsline {chapter}{\numberline {3}How\sphinxhyphen {}to guides}{15}{chapter.3}%
+\contentsline {section}{\numberline {3.1}How to create virtual environments for python with conda}{15}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Check conda is installed and in your PATH.}{15}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Check conda is up to date.}{15}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}Create a virtual environment for your project.}{16}{subsection.3.1.3}%
+\contentsline {subsection}{\numberline {3.1.4}Activate your virtual environment.}{16}{subsection.3.1.4}%
+\contentsline {subsection}{\numberline {3.1.5}Install additional Python packages to a virtual environment.}{16}{subsection.3.1.5}%
+\contentsline {subsection}{\numberline {3.1.6}Deactivate your virtual environment.}{16}{subsection.3.1.6}%
+\contentsline {subsection}{\numberline {3.1.7}Delete a no longer needed virtual environment.}{16}{subsection.3.1.7}%
+\contentsline {subsection}{\numberline {3.1.8}Related info.}{17}{subsection.3.1.8}%
+\contentsline {section}{\numberline {3.2}Contributing}{17}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Contribute a patch}{17}{subsection.3.2.1}%
+\contentsline {chapter}{\numberline {4}Topics guides}{19}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Introduction derivative estimation}{19}{section.4.1}%
+\contentsline {section}{\numberline {4.2}Numerical differentiation of a general function of one variable}{19}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Unequally spaced finite difference rules}{20}{section.4.3}%
+\contentsline {section}{\numberline {4.4}Odd and even transformations of a function}{20}{section.4.4}%
+\contentsline {section}{\numberline {4.5}Complex step derivative}{21}{section.4.5}%
+\contentsline {section}{\numberline {4.6}High order derivative}{22}{section.4.6}%
+\contentsline {section}{\numberline {4.7}Richardson extrapolation methodology applied to derivative estimation}{22}{section.4.7}%
+\contentsline {section}{\numberline {4.8}Multiple term Richardson extrapolants}{23}{section.4.8}%
+\contentsline {section}{\numberline {4.9}Uncertainty estimates for Derivative}{24}{section.4.9}%
+\contentsline {chapter}{\numberline {5}Reference}{27}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Numdifftools summary}{27}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}numdifftools.core module}{27}{subsection.5.1.1}%
+\contentsline {subsubsection}{\numberline {5.1.1.1}numdifftools.core.Derivative}{27}{subsubsection.5.1.1.1}%
+\contentsline {subsubsection}{\numberline {5.1.1.2}numdifftools.core.Gradient}{30}{subsubsection.5.1.1.2}%
+\contentsline {subsubsection}{\numberline {5.1.1.3}numdifftools.core.Jacobian}{32}{subsubsection.5.1.1.3}%
+\contentsline {subsubsection}{\numberline {5.1.1.4}numdifftools.core.Hessdiag}{34}{subsubsection.5.1.1.4}%
+\contentsline {subsubsection}{\numberline {5.1.1.5}numdifftools.core.Hessian}{36}{subsubsection.5.1.1.5}%
+\contentsline {subsubsection}{\numberline {5.1.1.6}numdifftools.core.directionaldiff}{39}{subsubsection.5.1.1.6}%
+\contentsline {subsection}{\numberline {5.1.2}Step generators}{39}{subsection.5.1.2}%
+\contentsline {subsubsection}{\numberline {5.1.2.1}numdifftools.step\_generators.BasicMaxStepGenerator}{40}{subsubsection.5.1.2.1}%
+\contentsline {subsubsection}{\numberline {5.1.2.2}numdifftools.step\_generators.BasicMinStepGenerator}{40}{subsubsection.5.1.2.2}%
+\contentsline {subsubsection}{\numberline {5.1.2.3}numdifftools.step\_generators.MinStepGenerator}{41}{subsubsection.5.1.2.3}%
+\contentsline {subsubsection}{\numberline {5.1.2.4}numdifftools.step\_generators.MaxStepGenerator}{42}{subsubsection.5.1.2.4}%
+\contentsline {subsection}{\numberline {5.1.3}numdifftools.extrapolation module}{43}{subsection.5.1.3}%
+\contentsline {subsubsection}{\numberline {5.1.3.1}numdifftools.extrapolation.convolve}{43}{subsubsection.5.1.3.1}%
+\contentsline {subsubsection}{\numberline {5.1.3.2}numdifftools.extrapolation.Dea}{43}{subsubsection.5.1.3.2}%
+\contentsline {subsubsection}{\numberline {5.1.3.3}numdifftools.extrapolation.dea3}{44}{subsubsection.5.1.3.3}%
+\contentsline {subsubsection}{\numberline {5.1.3.4}numdifftools.extrapolation.Richardson}{45}{subsubsection.5.1.3.4}%
+\contentsline {subsection}{\numberline {5.1.4}numdifftools.limits module}{46}{subsection.5.1.4}%
+\contentsline {subsubsection}{\numberline {5.1.4.1}numdifftools.limits.CStepGenerator}{46}{subsubsection.5.1.4.1}%
+\contentsline {subsubsection}{\numberline {5.1.4.2}numdifftools.limits.Limit}{47}{subsubsection.5.1.4.2}%
+\contentsline {subsubsection}{\numberline {5.1.4.3}numdifftools.limits.Residue}{49}{subsubsection.5.1.4.3}%
+\contentsline {subsection}{\numberline {5.1.5}numdifftools.multicomplex module}{51}{subsection.5.1.5}%
+\contentsline {subsubsection}{\numberline {5.1.5.1}numdifftools.multicomplex.Bicomplex}{51}{subsubsection.5.1.5.1}%
+\contentsline {subsection}{\numberline {5.1.6}numdifftools.nd\_algopy module}{52}{subsection.5.1.6}%
+\contentsline {subsubsection}{\numberline {5.1.6.1}numdifftools.nd\_algopy.Derivative}{52}{subsubsection.5.1.6.1}%
+\contentsline {subsubsection}{\numberline {5.1.6.2}numdifftools.nd\_algopy.Gradient}{54}{subsubsection.5.1.6.2}%
+\contentsline {subsubsection}{\numberline {5.1.6.3}numdifftools.nd\_algopy.Jacobian}{56}{subsubsection.5.1.6.3}%
+\contentsline {subsubsection}{\numberline {5.1.6.4}numdifftools.nd\_algopy.Hessdiag}{58}{subsubsection.5.1.6.4}%
+\contentsline {subsubsection}{\numberline {5.1.6.5}numdifftools.nd\_algopy.Hessian}{60}{subsubsection.5.1.6.5}%
+\contentsline {subsubsection}{\numberline {5.1.6.6}numdifftools.nd\_algopy.directionaldiff}{61}{subsubsection.5.1.6.6}%
+\contentsline {subsection}{\numberline {5.1.7}numdifftools.nd\_scipy module}{62}{subsection.5.1.7}%
+\contentsline {subsubsection}{\numberline {5.1.7.1}numdifftools.nd\_scipy.Gradient}{62}{subsubsection.5.1.7.1}%
+\contentsline {subsubsection}{\numberline {5.1.7.2}numdifftools.nd\_scipy.Jacobian}{63}{subsubsection.5.1.7.2}%
+\contentsline {subsection}{\numberline {5.1.8}numdifftools.nd\_statsmodels module}{64}{subsection.5.1.8}%
+\contentsline {subsubsection}{\numberline {5.1.8.1}numdifftools.nd\_statsmodels.Hessian}{64}{subsubsection.5.1.8.1}%
+\contentsline {subsubsection}{\numberline {5.1.8.2}numdifftools.nd\_statsmodels.Jacobian}{65}{subsubsection.5.1.8.2}%
+\contentsline {section}{\numberline {5.2}Numdifftools package details}{66}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}numdifftools.tests package}{66}{subsection.5.2.1}%
+\contentsline {subsubsection}{\numberline {5.2.1.1}numdifftools.tests.hamiltonian module}{66}{subsubsection.5.2.1.1}%
+\contentsline {subsubsection}{\numberline {5.2.1.2}numdifftools.tests.test\_extrapolation module}{67}{subsubsection.5.2.1.2}%
+\contentsline {subsubsection}{\numberline {5.2.1.3}numdifftools.tests.test\_fornberg module}{67}{subsubsection.5.2.1.3}%
+\contentsline {subsubsection}{\numberline {5.2.1.4}numdifftools.tests.test\_limits module}{68}{subsubsection.5.2.1.4}%
+\contentsline {subsubsection}{\numberline {5.2.1.5}numdifftools.tests.test\_multicomplex module}{69}{subsubsection.5.2.1.5}%
+\contentsline {subsubsection}{\numberline {5.2.1.6}numdifftools.tests.test\_nd\_algopy module}{70}{subsubsection.5.2.1.6}%
+\contentsline {subsubsection}{\numberline {5.2.1.7}numdifftools.tests.test\_nd\_scipy module}{71}{subsubsection.5.2.1.7}%
+\contentsline {subsubsection}{\numberline {5.2.1.8}numdifftools.tests.test\_numdifftools module}{71}{subsubsection.5.2.1.8}%
+\contentsline {subsubsection}{\numberline {5.2.1.9}numdifftools.tests.test\_scripts module}{72}{subsubsection.5.2.1.9}%
+\contentsline {subsubsection}{\numberline {5.2.1.10}numdifftools.tests.test\_step\_generators module}{73}{subsubsection.5.2.1.10}%
+\contentsline {subsection}{\numberline {5.2.2}numdifftools.core module}{73}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}numdifftools.extrapolation module}{88}{subsection.5.2.3}%
+\contentsline {subsection}{\numberline {5.2.4}numdifftools.finite\_difference module}{92}{subsection.5.2.4}%
+\contentsline {subsection}{\numberline {5.2.5}numdifftools.fornberg module}{97}{subsection.5.2.5}%
+\contentsline {subsection}{\numberline {5.2.6}numdifftools.limits module}{102}{subsection.5.2.6}%
+\contentsline {subsection}{\numberline {5.2.7}numdifftools.multicomplex module}{106}{subsection.5.2.7}%
+\contentsline {subsubsection}{\numberline {5.2.7.1}References}{106}{subsubsection.5.2.7.1}%
+\contentsline {subsection}{\numberline {5.2.8}numdifftools.nd\_algopy module}{108}{subsection.5.2.8}%
+\contentsline {subsubsection}{\numberline {5.2.8.1}Numdifftools.nd\_algopy}{108}{subsubsection.5.2.8.1}%
+\contentsline {subsubsection}{\numberline {5.2.8.2}Algoritmic differentiation}{108}{subsubsection.5.2.8.2}%
+\contentsline {paragraph}{References}{108}{paragraph*.404}%
+\contentsline {subsection}{\numberline {5.2.9}numdifftools.nd\_scipy module}{116}{subsection.5.2.9}%
+\contentsline {subsection}{\numberline {5.2.10}numdifftools.nd\_statsmodels module}{118}{subsection.5.2.10}%
+\contentsline {subsubsection}{\numberline {5.2.10.1}Numdifftools.nd\_statsmodels}{118}{subsubsection.5.2.10.1}%
+\contentsline {subsection}{\numberline {5.2.11}numdifftools.step\_generators module}{121}{subsection.5.2.11}%
+\contentsline {chapter}{\numberline {A}Changelog}{125}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Version 0.9.40 Jun 2, 2021}{125}{section.A.1}%
+\contentsline {section}{\numberline {A.2}Version 0.9.39 Jun 10, 2019}{128}{section.A.2}%
+\contentsline {section}{\numberline {A.3}Version 0.9.38 Jun 10, 2019}{128}{section.A.3}%
+\contentsline {section}{\numberline {A.4}Version 0.9.20, Jan 11, 2017}{131}{section.A.4}%
+\contentsline {section}{\numberline {A.5}Version 0.9.19, Jan 11, 2017}{131}{section.A.5}%
+\contentsline {section}{\numberline {A.6}Version 0.9.18, Jan 11, 2017}{132}{section.A.6}%
+\contentsline {section}{\numberline {A.7}Version 0.9.17, Sep 8, 2016}{132}{section.A.7}%
+\contentsline {section}{\numberline {A.8}Version 0.9.15, May 10, 2016}{133}{section.A.8}%
+\contentsline {section}{\numberline {A.9}Version 0.9.14, November 10, 2015}{134}{section.A.9}%
+\contentsline {section}{\numberline {A.10}Version 0.9.13, October 30, 2015}{135}{section.A.10}%
+\contentsline {section}{\numberline {A.11}Version 0.9.12, August 28, 2015}{136}{section.A.11}%
+\contentsline {section}{\numberline {A.12}Version 0.9.11, August 27, 2015}{136}{section.A.12}%
+\contentsline {section}{\numberline {A.13}Version 0.9.10, August 26, 2015}{136}{section.A.13}%
+\contentsline {section}{\numberline {A.14}Version 0.9.4, August 26, 2015}{136}{section.A.14}%
+\contentsline {section}{\numberline {A.15}Version 0.9.3, August 23, 2015}{136}{section.A.15}%
+\contentsline {section}{\numberline {A.16}Version 0.9.2, August 20, 2015}{137}{section.A.16}%
+\contentsline {section}{\numberline {A.17}Version 0.9.1, August 20,2015}{137}{section.A.17}%
+\contentsline {section}{\numberline {A.18}Version 0.7.7, December 18, 2014}{137}{section.A.18}%
+\contentsline {section}{\numberline {A.19}Version 0.7.3, December 17, 2014}{137}{section.A.19}%
+\contentsline {section}{\numberline {A.20}Version 0.6.0, February 8, 2014}{138}{section.A.20}%
+\contentsline {section}{\numberline {A.21}Version 0.5.0, January 10, 2014}{138}{section.A.21}%
+\contentsline {section}{\numberline {A.22}Version 0.4.0, May 5, 2012}{138}{section.A.22}%
+\contentsline {section}{\numberline {A.23}Version 0.3.5, May 19, 2011}{138}{section.A.23}%
+\contentsline {section}{\numberline {A.24}Version 0.3.4, Feb 24, 2011}{138}{section.A.24}%
+\contentsline {section}{\numberline {A.25}Version 0.3.1, May 20, 2009}{139}{section.A.25}%
+\contentsline {chapter}{\numberline {B}Contributors}{141}{appendix.B}%
+\contentsline {chapter}{\numberline {C}License}{143}{appendix.C}%
+\contentsline {chapter}{\numberline {D}Acknowledgments}{145}{appendix.D}%
+\contentsline {chapter}{Bibliography}{147}{appendix*.441}%
+\contentsline {chapter}{Python Module Index}{149}{section*.442}%
+\contentsline {chapter}{Index}{151}{section*.443}%

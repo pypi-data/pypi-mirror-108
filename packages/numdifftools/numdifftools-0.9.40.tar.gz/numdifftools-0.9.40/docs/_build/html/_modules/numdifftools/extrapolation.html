@@ -1,0 +1,797 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>numdifftools.extrapolation &mdash; Numdifftools 0.9.40 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Numdifftools
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.9
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../intro/index.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/index.html">2. Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../how-to/index.html">3. How-to guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/index.html">4. Topics guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">5. Reference</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../appendix/changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../appendix/authors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../appendix/license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../appendix/acknowledgement.html">Acknowledgments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../appendix/index.html">Indices and tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../appendix/zreferences.html">Bibliography</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Numdifftools</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+        
+      <li>numdifftools.extrapolation</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for numdifftools.extrapolation</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Created on 28. aug. 2015</span>
+
+<span class="sd">@author: pab</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">division</span><span class="p">,</span> <span class="n">print_function</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">linalg</span>
+<span class="kn">from</span> <span class="nn">scipy.ndimage.filters</span> <span class="kn">import</span> <span class="n">convolve1d</span>
+
+<span class="n">EPS</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">finfo</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span><span class="o">.</span><span class="n">eps</span>
+<span class="n">_EPS</span> <span class="o">=</span> <span class="n">EPS</span>
+<span class="n">_TINY</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">finfo</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span><span class="o">.</span><span class="n">tiny</span>
+<span class="n">_HUGE</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">finfo</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span><span class="o">.</span><span class="n">max</span>
+
+
+<span class="k">def</span> <span class="nf">_assert</span><span class="p">(</span><span class="n">cond</span><span class="p">,</span> <span class="n">msg</span><span class="p">):</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">cond</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="n">msg</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="convolve"><a class="viewcode-back" href="../../reference/numdifftools.html#numdifftools.extrapolation.convolve">[docs]</a><span class="k">def</span> <span class="nf">convolve</span><span class="p">(</span><span class="n">sequence</span><span class="p">,</span> <span class="n">rule</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Wrapper around scipy.ndimage.convolve1d that allows complex input.&quot;&quot;&quot;</span>
+    <span class="n">dtype</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">result_type</span><span class="p">(</span><span class="nb">float</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">ravel</span><span class="p">(</span><span class="n">sequence</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="n">seq</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">sequence</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="n">dtype</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">iscomplexobj</span><span class="p">(</span><span class="n">seq</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">convolve1d</span><span class="p">(</span><span class="n">seq</span><span class="o">.</span><span class="n">real</span><span class="p">,</span> <span class="n">rule</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="n">j</span> <span class="o">*</span> <span class="n">convolve1d</span><span class="p">(</span><span class="n">seq</span><span class="o">.</span><span class="n">imag</span><span class="p">,</span> <span class="n">rule</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">convolve1d</span><span class="p">(</span><span class="n">seq</span><span class="p">,</span> <span class="n">rule</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="Dea"><a class="viewcode-back" href="../../reference/numdifftools.html#numdifftools.extrapolation.Dea">[docs]</a><span class="k">class</span> <span class="nc">Dea</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Extrapolate a slowly convergent sequence using repeated Shanks transformations.</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    DEA attempts to extrapolate nonlinearly by Shanks transformations to a better</span>
+<span class="sd">    estimate of the sequence&#39;s limiting value, thus improving the rate of convergence.</span>
+<span class="sd">    The epsilon algorithm of P. Wynn, see [1]_, is used to perform the</span>
+<span class="sd">    non-linear Shanks transformations. The routine is a translation of the</span>
+<span class="sd">    DQELG function found in the QUADPACK fortran library, see [2]_ and [3]_.</span>
+
+<span class="sd">    List of major variables:</span>
+
+<span class="sd">    LIMEXP:  scalar integer</span>
+<span class="sd">        The maximum number of elements the epsilon table data can contain.</span>
+<span class="sd">        The epsilon table is stored in the first (LIMEXP+2) entries of EPSTAB.</span>
+<span class="sd">    EPSTAB: real vector or size (LIMEXP+2+3)</span>
+<span class="sd">        The first LIMEXP+2 elements contains the two lower diagonals of the triangular</span>
+<span class="sd">        epsilon table. The elements are numbered starting at the right-hand corner of the</span>
+<span class="sd">       triangle.</span>
+<span class="sd">    E0,E1,E2,E3:  real scalars</span>
+<span class="sd">        The 4 elements on which the computation of a new element in the epsilon table is based.</span>
+<span class="sd">    NRES:  scalar integer</span>
+<span class="sd">        Number of extrapolation results actually generated by the epsilon algorithm in prior</span>
+<span class="sd">        calls to the routine.</span>
+<span class="sd">    NEWELM: scalar integer</span>
+<span class="sd">        Number of elements to be computed in the new diagonal of the epsilon table.</span>
+<span class="sd">        The condensed epsilon table is computed. Only those elements needed for the</span>
+<span class="sd">        computation of the next diagonal are preserved.</span>
+<span class="sd">    RES: real scalar</span>
+<span class="sd">        New element in the new diagonal of the epsilon table.</span>
+<span class="sd">    ERROR: real scalar</span>
+<span class="sd">        An estimate of the absolute error of RES. The routine decides whether RESULT=RES or</span>
+<span class="sd">        RESULT=SVALUE by comparing ERROR with abserr from the previous call.</span>
+<span class="sd">    RES3LA: real vector of size 3</span>
+<span class="sd">        Contains at most the last 3 results.</span>
+
+<span class="sd">    Reference</span>
+<span class="sd">    ---------</span>
+<span class="sd">    ..  [1] Wynn, P. (1956)</span>
+<span class="sd">            &quot;On a Device for Computing the em(Sn) Transformation&quot;,</span>
+<span class="sd">            Mathematical Tables and Other Aids to Computation, 10, 91-96.</span>
+<span class="sd">    ..  [2] R. Piessens, E. De Doncker-Kapenga and C. W. Uberhuber (1983),</span>
+<span class="sd">            &quot;QUADPACK: a subroutine package for automatic integration&quot;,</span>
+<span class="sd">            Springer, ISBN: 3-540-12553-1, 1983.</span>
+<span class="sd">    ..  [3] http://www.netlib.org/quadpack/</span>
+<span class="sd">    ..  [4] https://mathworld.wolfram.com/WynnsEpsilonMethod.html</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+<div class="viewcode-block" id="Dea.__init__"><a class="viewcode-back" href="../../reference/generated/numdifftools.extrapolation.Dea.html#numdifftools.extrapolation.Dea.__init__">[docs]</a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">limexp</span><span class="o">=</span><span class="mi">50</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">limexp</span> <span class="o">=</span> <span class="n">limexp</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_n</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_nres</span> <span class="o">=</span> <span class="mi">0</span></div>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">limexp</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Maximum number of elements the epsilon table data.&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_limexp</span>
+
+    <span class="nd">@limexp</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">limexp</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">limexp</span><span class="p">):</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="p">(</span><span class="n">limexp</span> <span class="o">//</span> <span class="mi">2</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="n">_assert</span><span class="p">(</span><span class="n">n</span> <span class="o">&gt;=</span> <span class="mi">3</span><span class="p">,</span> <span class="s1">&#39;LIMEXP IS LESS THAN 3&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">epstab</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">(</span><span class="n">n</span> <span class="o">+</span> <span class="mi">5</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_limexp</span> <span class="o">=</span> <span class="n">n</span>
+
+    <span class="k">def</span> <span class="nf">_dea</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>  <span class="n">epstab</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+
+        <span class="n">res3la</span> <span class="o">=</span> <span class="n">epstab</span><span class="p">[</span><span class="o">-</span><span class="mi">3</span><span class="p">:]</span>
+        <span class="n">nres</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_nres</span>
+
+        <span class="n">abserr</span> <span class="o">=</span> <span class="n">_HUGE</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">epstab</span><span class="p">[</span><span class="n">n</span><span class="p">]</span>
+        <span class="n">limexp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">limexp</span>
+        <span class="n">epstab</span><span class="p">[</span><span class="n">n</span><span class="o">+</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">epstab</span><span class="p">[</span><span class="n">n</span><span class="p">]</span>
+        <span class="n">newelm</span> <span class="o">=</span> <span class="n">n</span> <span class="o">//</span> <span class="mi">2</span>
+        <span class="n">epstab</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="n">_HUGE</span>
+        <span class="n">old_n</span> <span class="o">=</span> <span class="n">n</span>
+        <span class="n">k_1</span> <span class="o">=</span> <span class="n">n</span>
+        <span class="n">all_converged</span> <span class="o">=</span> <span class="kc">False</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">newelm</span><span class="p">):</span>
+            <span class="n">res</span> <span class="o">=</span> <span class="n">epstab</span><span class="p">[</span><span class="n">k_1</span><span class="o">+</span><span class="mi">2</span><span class="p">]</span>
+            <span class="n">e_0</span> <span class="o">=</span> <span class="n">epstab</span><span class="p">[</span><span class="n">k_1</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
+            <span class="n">e_1</span> <span class="o">=</span> <span class="n">epstab</span><span class="p">[</span><span class="n">k_1</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+            <span class="n">e_2</span> <span class="o">=</span> <span class="n">res</span>
+            <span class="n">delta2</span> <span class="o">=</span> <span class="n">e_2</span> <span class="o">-</span> <span class="n">e_1</span>
+            <span class="n">delta3</span> <span class="o">=</span> <span class="n">e_1</span> <span class="o">-</span> <span class="n">e_0</span>
+            <span class="n">err2</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">delta2</span><span class="p">)</span>
+            <span class="n">err3</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">delta3</span><span class="p">)</span>
+            <span class="n">e1abs</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">e_1</span><span class="p">)</span>
+            <span class="n">tol2</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">e_2</span><span class="p">),</span> <span class="n">e1abs</span><span class="p">)</span> <span class="o">*</span> <span class="n">_EPS</span>
+            <span class="n">tol3</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">e1abs</span><span class="p">,</span> <span class="nb">abs</span><span class="p">(</span><span class="n">e_0</span><span class="p">))</span> <span class="o">*</span> <span class="n">_EPS</span>
+            <span class="n">all_converged</span> <span class="o">=</span> <span class="ow">not</span> <span class="p">(</span><span class="n">err2</span> <span class="o">&gt;</span> <span class="n">tol2</span> <span class="ow">or</span> <span class="n">err3</span> <span class="o">&gt;</span> <span class="n">tol3</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">all_converged</span><span class="p">:</span>
+                <span class="c1"># if e_0, e_1 and e_2 are equal to within machine accuracy, convergence is assumed.</span>
+                <span class="n">result</span> <span class="o">=</span> <span class="n">res</span>
+                <span class="n">abserr</span> <span class="o">=</span> <span class="n">err2</span> <span class="o">+</span> <span class="n">err3</span>
+
+                <span class="c1"># ***jump out of do-loop</span>
+                <span class="c1"># go to 100</span>
+                <span class="k">break</span>
+            <span class="n">e_3</span> <span class="o">=</span> <span class="n">epstab</span><span class="p">[</span><span class="n">k_1</span><span class="p">]</span>
+            <span class="n">epstab</span><span class="p">[</span><span class="n">k_1</span><span class="p">]</span> <span class="o">=</span> <span class="n">e_1</span>
+            <span class="n">delta1</span> <span class="o">=</span> <span class="n">e_1</span> <span class="o">-</span> <span class="n">e_3</span>
+            <span class="n">err1</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">delta1</span><span class="p">)</span>
+            <span class="n">tol1</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">e1abs</span><span class="p">,</span> <span class="nb">abs</span><span class="p">(</span><span class="n">e_3</span><span class="p">))</span> <span class="o">*</span> <span class="n">_EPS</span>
+
+            <span class="c1"># if two elements are very close to each other, omit</span>
+            <span class="c1">#  a part of the table by adjusting the value of n</span>
+
+            <span class="n">any_converged</span> <span class="o">=</span> <span class="n">err1</span> <span class="o">&lt;=</span> <span class="n">tol1</span> <span class="ow">or</span> <span class="n">err2</span> <span class="o">&lt;=</span> <span class="n">tol2</span> <span class="ow">or</span> <span class="n">err3</span> <span class="o">&lt;=</span> <span class="n">tol3</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">any_converged</span><span class="p">:</span>  <span class="c1"># go to 20</span>
+                <span class="n">sss</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="o">/</span> <span class="n">delta1</span> <span class="o">+</span> <span class="mf">1.0</span> <span class="o">/</span> <span class="n">delta2</span> <span class="o">-</span> <span class="mf">1.0</span> <span class="o">/</span> <span class="n">delta3</span>
+                <span class="n">epsinf</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">sss</span><span class="o">*</span><span class="n">e_1</span><span class="p">)</span>
+
+                <span class="c1"># If irregular behaviour in the table is detected, omit a</span>
+                <span class="c1"># part of the table adjusting the value of n.</span>
+                <span class="n">any_converged</span> <span class="o">=</span> <span class="n">epsinf</span> <span class="o">&lt;=</span> <span class="mf">1e-4</span>
+
+            <span class="k">if</span> <span class="n">any_converged</span><span class="p">:</span>
+                <span class="n">n</span> <span class="o">=</span> <span class="mi">2</span><span class="o">*</span><span class="n">i</span>
+                <span class="c1"># ***jump out of do-loop</span>
+                <span class="c1"># go to 50</span>
+                <span class="k">break</span>
+
+            <span class="c1">#  compute a new element and eventually adjust the value of result.</span>
+            <span class="n">res</span> <span class="o">=</span> <span class="n">e_1</span> <span class="o">+</span> <span class="mf">1.0</span><span class="o">/</span><span class="n">sss</span>
+            <span class="n">epstab</span><span class="p">[</span><span class="n">k_1</span><span class="p">]</span> <span class="o">=</span> <span class="n">res</span>
+            <span class="n">k_1</span> <span class="o">=</span> <span class="n">k_1</span> <span class="o">-</span> <span class="mi">2</span>
+            <span class="n">error</span> <span class="o">=</span> <span class="n">err2</span> <span class="o">+</span> <span class="nb">abs</span><span class="p">(</span><span class="n">res</span><span class="o">-</span><span class="n">e_2</span><span class="p">)</span> <span class="o">+</span> <span class="n">err3</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">error</span> <span class="o">&gt;</span> <span class="n">abserr</span><span class="p">:</span>
+                <span class="n">abserr</span> <span class="o">=</span> <span class="n">error</span>
+                <span class="n">result</span> <span class="o">=</span> <span class="n">res</span>
+            <span class="c1"># 40 continue</span>
+
+        <span class="c1"># 50</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">all_converged</span><span class="p">:</span>
+            <span class="c1">#      shift the table.</span>
+            <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="n">limexp</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="n">n</span> <span class="o">=</span> <span class="n">limexp</span> <span class="o">-</span> <span class="mi">2</span>  <span class="c1"># 2*(limexp//2) - 1</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">_shift_table</span><span class="p">(</span><span class="n">epstab</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">newelm</span><span class="p">,</span> <span class="n">old_n</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">nres</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="n">abserr</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">result</span> <span class="o">-</span> <span class="n">res3la</span><span class="p">[:</span><span class="n">nres</span><span class="p">])</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">_update_res3la</span><span class="p">(</span><span class="n">res3la</span><span class="p">,</span> <span class="n">result</span><span class="p">,</span> <span class="n">nres</span><span class="p">)</span>
+        <span class="c1"># 100</span>
+        <span class="n">abserr</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="n">abserr</span><span class="p">,</span> <span class="mf">5.0</span><span class="o">*</span><span class="n">_EPS</span><span class="o">*</span><span class="nb">abs</span><span class="p">(</span><span class="n">result</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_nres</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">return</span> <span class="n">result</span><span class="p">,</span> <span class="n">abserr</span><span class="p">,</span> <span class="n">n</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">_shift_table</span><span class="p">(</span><span class="n">epstab</span><span class="p">,</span> <span class="n">n</span><span class="p">,</span> <span class="n">newelm</span><span class="p">,</span> <span class="n">old_n</span><span class="p">):</span>
+        <span class="n">i_0</span> <span class="o">=</span> <span class="n">old_n</span> <span class="o">%</span> <span class="mi">2</span>  <span class="c1"># 1 if ((old_n // 2) * 2 == old_n - 1) else 0</span>
+        <span class="n">i_n</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">newelm</span> <span class="o">+</span> <span class="mi">2</span>
+        <span class="n">epstab</span><span class="p">[</span><span class="n">i_0</span><span class="p">:</span><span class="n">i_n</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">epstab</span><span class="p">[</span><span class="n">i_0</span> <span class="o">+</span> <span class="mi">2</span><span class="p">:</span><span class="n">i_n</span> <span class="o">+</span> <span class="mi">2</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span>
+
+        <span class="k">if</span> <span class="n">old_n</span> <span class="o">!=</span> <span class="n">n</span><span class="p">:</span>
+            <span class="n">i_n</span> <span class="o">=</span> <span class="n">old_n</span> <span class="o">-</span> <span class="n">n</span>
+            <span class="n">epstab</span><span class="p">[:</span><span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">epstab</span><span class="p">[</span><span class="n">i_n</span><span class="p">:</span><span class="n">i_n</span> <span class="o">+</span> <span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">epstab</span>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">_update_res3la</span><span class="p">(</span><span class="n">res3la</span><span class="p">,</span> <span class="n">result</span><span class="p">,</span> <span class="n">nres</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">nres</span> <span class="o">&gt;</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="n">res3la</span><span class="p">[:</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">res3la</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+            <span class="n">res3la</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">result</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">res3la</span><span class="p">[</span><span class="n">nres</span><span class="p">]</span> <span class="o">=</span> <span class="n">result</span>
+
+    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s_value</span><span class="p">):</span>
+
+        <span class="n">epstab</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">epstab</span>
+
+        <span class="n">result</span> <span class="o">=</span> <span class="n">s_value</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_n</span>
+
+        <span class="n">epstab</span><span class="p">[</span><span class="n">n</span><span class="p">]</span> <span class="o">=</span> <span class="n">s_value</span>
+        <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">abserr</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
+        <span class="k">elif</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">abserr</span> <span class="o">=</span> <span class="mf">6.0</span> <span class="o">*</span> <span class="nb">abs</span><span class="p">(</span><span class="n">result</span> <span class="o">-</span> <span class="n">epstab</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">result</span><span class="p">,</span> <span class="n">abserr</span><span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dea</span><span class="p">(</span><span class="n">epstab</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+        <span class="n">n</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_n</span> <span class="o">=</span> <span class="n">n</span>
+
+        <span class="k">return</span> <span class="n">result</span><span class="p">,</span> <span class="n">abserr</span></div>
+
+
+<div class="viewcode-block" id="EpsAlg"><a class="viewcode-back" href="../../reference/numdifftools.html#numdifftools.extrapolation.EpsAlg">[docs]</a><span class="k">class</span> <span class="nc">EpsAlg</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Extrapolate a slowly convergent sequence using Shanks transformation.</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    The iterated Shanks transformation is computed using the Wynn</span>
+<span class="sd">    epsilon algorithm (see equation 4.3-10a to 4.3-10c given on page 25 in [1]_).</span>
+
+
+<span class="sd">    References</span>
+<span class="sd">    ----------</span>
+<span class="sd">    ..  [1] E. J. Weniger (1989)</span>
+<span class="sd">            &quot;Nonlinear sequence transformations for the acceleration of</span>
+<span class="sd">            convergence and the summation of divergent series&quot;</span>
+<span class="sd">            Computer Physics Reports Vol. 10, 189 - 371</span>
+<span class="sd">            http://arxiv.org/abs/math/0306302v1</span>
+<span class="sd">    ..  [2] https://mathworld.wolfram.com/WynnsEpsilonMethod.html</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">epstab</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">s_n</span><span class="p">):</span>
+
+        <span class="n">epstab</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">epstab</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">epstab</span><span class="p">)</span>
+        <span class="n">epstab</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">s_n</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">n</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">estlim</span> <span class="o">=</span> <span class="n">s_n</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">aux2</span> <span class="o">=</span> <span class="mf">0.0</span>
+            <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+                <span class="n">aux1</span> <span class="o">=</span> <span class="n">aux2</span>
+                <span class="n">aux2</span> <span class="o">=</span> <span class="n">epstab</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span>
+                <span class="n">delta</span> <span class="o">=</span> <span class="n">epstab</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="n">aux2</span>
+                <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">delta</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mf">1.0e-60</span><span class="p">:</span>
+                    <span class="n">epstab</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mf">1.0e+60</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="n">epstab</span><span class="p">[</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="n">aux1</span> <span class="o">+</span> <span class="mf">1.0</span> <span class="o">/</span> <span class="n">delta</span>
+            <span class="n">estlim</span> <span class="o">=</span> <span class="n">epstab</span><span class="p">[</span><span class="n">n</span> <span class="o">%</span> <span class="mi">2</span><span class="p">]</span>
+
+        <span class="k">return</span> <span class="n">estlim</span></div>
+
+
+<div class="viewcode-block" id="richardson_demo"><a class="viewcode-back" href="../../reference/numdifftools.html#numdifftools.extrapolation.richardson_demo">[docs]</a><span class="k">def</span> <span class="nf">richardson_demo</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    &gt;&gt;&gt; from numdifftools.extrapolation import richardson_demo</span>
+<span class="sd">    &gt;&gt;&gt; richardson_demo()</span>
+<span class="sd">    NO. PANELS      TRAP. APPROX          APPROX W/R            abserr</span>
+<span class="sd">        1           0.78539816            0.78539816            0.21460184</span>
+<span class="sd">        2           0.94805945            1.11072073            0.11072073</span>
+<span class="sd">        4           0.98711580            0.99798929            0.00201071</span>
+<span class="sd">        8           0.99678517            0.99988201            0.00011799</span>
+<span class="sd">       16           0.99919668            0.99999274            0.00000726</span>
+<span class="sd">       32           0.99979919            0.99999955            0.00000045</span>
+<span class="sd">       64           0.99994980            0.99999997            0.00000003</span>
+<span class="sd">      128           0.99998745            1.00000000            0.00000000</span>
+<span class="sd">      256           0.99999686            1.00000000            0.00000000</span>
+<span class="sd">      512           0.99999922            1.00000000            0.00000000</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">linfun</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mf">2.</span><span class="p">,</span> <span class="mi">2</span> <span class="o">**</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+
+    <span class="n">n</span> <span class="o">=</span> <span class="mi">10</span>
+    <span class="n">e_i</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">h</span> <span class="o">=</span> <span class="p">[]</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;NO. PANELS      TRAP. APPROX          APPROX W/R            abserr&#39;</span><span class="p">)</span>
+    <span class="n">txt</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">{0:5d}</span><span class="s1"> </span><span class="si">{1:20.8f}</span><span class="s1">  </span><span class="si">{2:20.8f}</span><span class="s1">  </span><span class="si">{3:20.8f}</span><span class="s1">&#39;</span>
+    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">linfun</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
+        <span class="n">val</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">trapz</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">x</span><span class="p">)</span>
+        <span class="n">h</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span>
+        <span class="n">e_i</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
+        <span class="n">vale</span><span class="p">,</span> <span class="n">_err0</span><span class="p">,</span> <span class="n">_step</span> <span class="o">=</span> <span class="n">Richardson</span><span class="p">(</span><span class="n">step</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="mi">1</span><span class="p">)(</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">e_i</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">h</span><span class="p">))</span>
+
+        <span class="n">err</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="mf">1.0</span> <span class="o">-</span> <span class="n">vale</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">txt</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">val</span><span class="p">,</span> <span class="n">vale</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">err</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">]))</span></div>
+
+
+<div class="viewcode-block" id="epsalg_demo"><a class="viewcode-back" href="../../reference/numdifftools.html#numdifftools.extrapolation.epsalg_demo">[docs]</a><span class="k">def</span> <span class="nf">epsalg_demo</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    &gt;&gt;&gt; from numdifftools.extrapolation import epsalg_demo</span>
+<span class="sd">    &gt;&gt;&gt; epsalg_demo()</span>
+<span class="sd">    NO. PANELS      TRAP. APPROX          APPROX W/EA           abserr</span>
+<span class="sd">        1           0.78539816            0.78539816            0.21460184</span>
+<span class="sd">        2           0.94805945            0.94805945            0.05194055</span>
+<span class="sd">        4           0.98711580            0.99945672            0.00054328</span>
+<span class="sd">        8           0.99678517            0.99996674            0.00003326</span>
+<span class="sd">       16           0.99919668            0.99999988            0.00000012</span>
+<span class="sd">       32           0.99979919            1.00000000            0.00000000</span>
+<span class="sd">       64           0.99994980            1.00000000            0.00000000</span>
+<span class="sd">      128           0.99998745            1.00000000            0.00000000</span>
+<span class="sd">      256           0.99999686            1.00000000            0.00000000</span>
+<span class="sd">      512           0.99999922            1.00000000            0.00000000</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">linfun</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mf">2.</span><span class="p">,</span> <span class="mi">2</span> <span class="o">**</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+
+    <span class="n">dea</span> <span class="o">=</span> <span class="n">EpsAlg</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;NO. PANELS      TRAP. APPROX          APPROX W/EA           abserr&#39;</span><span class="p">)</span>
+    <span class="n">txt</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">{0:5d}</span><span class="s1"> </span><span class="si">{1:20.8f}</span><span class="s1">  </span><span class="si">{2:20.8f}</span><span class="s1">  </span><span class="si">{3:20.8f}</span><span class="s1">&#39;</span>
+    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">linfun</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
+        <span class="n">val</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">trapz</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">x</span><span class="p">)</span>
+        <span class="n">vale</span> <span class="o">=</span> <span class="n">dea</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
+        <span class="n">err</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="mf">1.0</span> <span class="o">-</span> <span class="n">vale</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">txt</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">val</span><span class="p">,</span> <span class="n">vale</span><span class="p">,</span> <span class="n">err</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="dea_demo"><a class="viewcode-back" href="../../reference/numdifftools.html#numdifftools.extrapolation.dea_demo">[docs]</a><span class="k">def</span> <span class="nf">dea_demo</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    &gt;&gt;&gt; from numdifftools.extrapolation import dea_demo</span>
+<span class="sd">    &gt;&gt;&gt; dea_demo()</span>
+<span class="sd">    NO. PANELS      TRAP. APPROX          APPROX W/EA           abserr</span>
+<span class="sd">        1           0.78539816            0.78539816            0.78539816</span>
+<span class="sd">        2           0.94805945            0.94805945            0.97596771</span>
+<span class="sd">        4           0.98711580            0.99945672            0.21405856</span>
+<span class="sd">        8           0.99678517            0.99996674            0.05190729</span>
+<span class="sd">       16           0.99919668            0.99999988            0.00057629</span>
+<span class="sd">       32           0.99979919            1.00000000            0.00057665</span>
+<span class="sd">       64           0.99994980            1.00000000            0.00003338</span>
+<span class="sd">      128           0.99998745            1.00000000            0.00000012</span>
+<span class="sd">      256           0.99999686            1.00000000            0.00000000</span>
+<span class="sd">      512           0.99999922            1.00000000            0.00000000</span>
+<span class="sd">     1024           0.99999980            1.00000000            0.00000000</span>
+<span class="sd">     2048           0.99999995            1.00000000            0.00000000</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="nf">linfun</span><span class="p">(</span><span class="n">i</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">/</span> <span class="mf">2.</span><span class="p">,</span> <span class="mi">2</span> <span class="o">**</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+
+    <span class="n">dea</span> <span class="o">=</span> <span class="n">Dea</span><span class="p">(</span><span class="n">limexp</span><span class="o">=</span><span class="mi">6</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;NO. PANELS      TRAP. APPROX          APPROX W/EA           abserr&#39;</span><span class="p">)</span>
+    <span class="n">txt</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">{0:5d}</span><span class="s1"> </span><span class="si">{1:20.8f}</span><span class="s1">  </span><span class="si">{2:20.8f}</span><span class="s1">  </span><span class="si">{3:20.8f}</span><span class="s1">&#39;</span>
+    <span class="n">vals</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">num_panels</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">12</span><span class="p">):</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">linfun</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
+        <span class="n">val</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">trapz</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">x</span><span class="p">)</span>
+        <span class="n">vals</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
+        <span class="n">num_panels</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">val</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">num_panels</span><span class="p">,</span> <span class="n">vals</span><span class="p">):</span>
+        <span class="n">vale</span><span class="p">,</span> <span class="n">err</span> <span class="o">=</span> <span class="n">dea</span><span class="p">(</span><span class="n">val</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">txt</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">k</span><span class="p">,</span> <span class="n">val</span><span class="p">,</span> <span class="n">vale</span><span class="p">,</span> <span class="n">err</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="max_abs"><a class="viewcode-back" href="../../reference/numdifftools.html#numdifftools.extrapolation.max_abs">[docs]</a><span class="k">def</span> <span class="nf">max_abs</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Returns element-wise maximum of absulute value of array elements&quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">maximum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">a</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">b</span><span class="p">))</span></div>
+
+
+<div class="viewcode-block" id="dea3"><a class="viewcode-back" href="../../reference/numdifftools.html#numdifftools.extrapolation.dea3">[docs]</a><span class="k">def</span> <span class="nf">dea3</span><span class="p">(</span><span class="n">v_0</span><span class="p">,</span> <span class="n">v_1</span><span class="p">,</span> <span class="n">v_2</span><span class="p">,</span> <span class="n">symmetric</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Extrapolate a slowly convergent sequence using Shanks transformations.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    v_0, v_1, v_2 : array-like</span>
+<span class="sd">        3 values of a convergent sequence to extrapolate</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    result : array-like</span>
+<span class="sd">        extrapolated value</span>
+<span class="sd">    abserr : array-like</span>
+<span class="sd">        absolute error estimate</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    DEA3 attempts to extrapolate nonlinearly by Shanks transformations to a</span>
+<span class="sd">    better estimate of the sequence&#39;s limiting value based on only three values.</span>
+<span class="sd">    The epsilon algorithm of P. Wynn, see [1]_, is used to perform the</span>
+<span class="sd">    non-linear Shanks transformations. The routine is a vectorized translation</span>
+<span class="sd">    of the DQELG function found in the QUADPACK fortran library for LIMEXP=3,</span>
+<span class="sd">    see [2]_ and [3]_.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    # integrate sin(x) from 0 to pi/2</span>
+
+<span class="sd">    &gt;&gt;&gt; import numpy as np</span>
+<span class="sd">    &gt;&gt;&gt; import numdifftools as nd</span>
+<span class="sd">    &gt;&gt;&gt; Ei= np.zeros(3)</span>
+<span class="sd">    &gt;&gt;&gt; linfun = lambda i : np.linspace(0, np.pi/2., 2**(i+5)+1)</span>
+<span class="sd">    &gt;&gt;&gt; for k in np.arange(3):</span>
+<span class="sd">    ...    x = linfun(k)</span>
+<span class="sd">    ...    Ei[k] = np.trapz(np.sin(x),x)</span>
+<span class="sd">    &gt;&gt;&gt; [En, err] = nd.dea3(Ei[0], Ei[1], Ei[2])</span>
+<span class="sd">    &gt;&gt;&gt; truErr = np.abs(En-1.)</span>
+<span class="sd">    &gt;&gt;&gt; np.all(truErr &lt; err)</span>
+<span class="sd">    True</span>
+<span class="sd">    &gt;&gt;&gt; np.allclose(En, 1)</span>
+<span class="sd">    True</span>
+<span class="sd">    &gt;&gt;&gt; np.all(np.abs(Ei-1)&lt;1e-3)</span>
+<span class="sd">    True</span>
+
+<span class="sd">    See also</span>
+<span class="sd">    --------</span>
+<span class="sd">    Dea</span>
+
+<span class="sd">    References</span>
+<span class="sd">    ----------</span>
+<span class="sd">    ..  [1] Wynn, P. (1956)</span>
+<span class="sd">            &quot;On a Device for Computing the em(Sn) Transformation&quot;,</span>
+<span class="sd">            Mathematical Tables and Other Aids to Computation, 10, 91-96.</span>
+<span class="sd">    ..  [2] R. Piessens, E. De Doncker-Kapenga and C. W. Uberhuber (1983),</span>
+<span class="sd">            &quot;QUADPACK: a subroutine package for automatic integration&quot;,</span>
+<span class="sd">            Springer, ISBN: 3-540-12553-1, 1983.</span>
+<span class="sd">    ..  [3] http://www.netlib.org/quadpack/</span>
+<span class="sd">    ..  [4] https://mathworld.wolfram.com/WynnsEpsilonMethod.html</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">e_0</span><span class="p">,</span> <span class="n">e_1</span><span class="p">,</span> <span class="n">e_2</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">atleast_1d</span><span class="p">(</span><span class="n">v_0</span><span class="p">,</span> <span class="n">v_1</span><span class="p">,</span> <span class="n">v_2</span><span class="p">)</span>
+    <span class="k">with</span> <span class="n">warnings</span><span class="o">.</span><span class="n">catch_warnings</span><span class="p">():</span>
+        <span class="n">warnings</span><span class="o">.</span><span class="n">simplefilter</span><span class="p">(</span><span class="s2">&quot;ignore&quot;</span><span class="p">)</span>  <span class="c1"># ignore division by zero and overflow</span>
+        <span class="n">delta2</span><span class="p">,</span> <span class="n">delta1</span> <span class="o">=</span> <span class="n">e_2</span> <span class="o">-</span> <span class="n">e_1</span><span class="p">,</span> <span class="n">e_1</span> <span class="o">-</span> <span class="n">e_0</span>
+        <span class="n">err2</span><span class="p">,</span> <span class="n">err1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">delta2</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">delta1</span><span class="p">)</span>
+        <span class="n">tol2</span><span class="p">,</span> <span class="n">tol1</span> <span class="o">=</span> <span class="n">max_abs</span><span class="p">(</span><span class="n">e_2</span><span class="p">,</span> <span class="n">e_1</span><span class="p">)</span> <span class="o">*</span> <span class="n">_EPS</span><span class="p">,</span> <span class="n">max_abs</span><span class="p">(</span><span class="n">e_1</span><span class="p">,</span> <span class="n">e_0</span><span class="p">)</span> <span class="o">*</span> <span class="n">_EPS</span>
+        <span class="n">delta1</span><span class="p">[</span><span class="n">err1</span> <span class="o">&lt;</span> <span class="n">_TINY</span><span class="p">]</span> <span class="o">=</span> <span class="n">_TINY</span>
+        <span class="n">delta2</span><span class="p">[</span><span class="n">err2</span> <span class="o">&lt;</span> <span class="n">_TINY</span><span class="p">]</span> <span class="o">=</span> <span class="n">_TINY</span>  <span class="c1"># avoid division by zero and overflow</span>
+        <span class="n">sss</span> <span class="o">=</span> <span class="mf">1.0</span> <span class="o">/</span> <span class="n">delta2</span> <span class="o">-</span> <span class="mf">1.0</span> <span class="o">/</span> <span class="n">delta1</span> <span class="o">+</span> <span class="n">_TINY</span>
+        <span class="n">smalle2</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">sss</span> <span class="o">*</span> <span class="n">e_1</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mf">1.0e-4</span>
+        <span class="n">converged</span> <span class="o">=</span> <span class="p">(</span><span class="n">err1</span> <span class="o">&lt;=</span> <span class="n">tol1</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">err2</span> <span class="o">&lt;=</span> <span class="n">tol2</span><span class="p">)</span> <span class="o">|</span> <span class="n">smalle2</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">converged</span><span class="p">,</span> <span class="n">e_2</span> <span class="o">*</span> <span class="mf">1.0</span><span class="p">,</span> <span class="n">e_1</span> <span class="o">+</span> <span class="mf">1.0</span> <span class="o">/</span> <span class="n">sss</span><span class="p">)</span>
+    <span class="n">abserr</span> <span class="o">=</span> <span class="n">err1</span> <span class="o">+</span> <span class="n">err2</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">converged</span><span class="p">,</span> <span class="n">tol2</span> <span class="o">*</span> <span class="mi">10</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">result</span> <span class="o">-</span> <span class="n">e_2</span><span class="p">))</span>
+    <span class="k">if</span> <span class="n">symmetric</span> <span class="ow">and</span> <span class="nb">len</span><span class="p">(</span><span class="n">result</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">result</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">abserr</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
+    <span class="k">return</span> <span class="n">result</span><span class="p">,</span> <span class="n">abserr</span></div>
+
+
+<div class="viewcode-block" id="Richardson"><a class="viewcode-back" href="../../reference/numdifftools.html#numdifftools.extrapolation.Richardson">[docs]</a><span class="k">class</span> <span class="nc">Richardson</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Extrapolates a sequence with Richardsons method</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    step_ratio: real scalar</span>
+<span class="sd">        Ratio between sequential steps, h, generated.</span>
+<span class="sd">    step: scalar integer</span>
+<span class="sd">        Defines the step between exponents in the error polynomial,</span>
+<span class="sd">        i.e., step = k_1 - k_0 = k_2 - k_1 = ... = k_{i+1} - k_i</span>
+<span class="sd">    order: scalar integer</span>
+<span class="sd">        Leading order of truncation error.</span>
+<span class="sd">    num_terms: scalar integer</span>
+<span class="sd">        Number of terms used in the polynomial fit.</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    Suppose f(h) is an approximation of L (exact value) that depends on a positive</span>
+<span class="sd">    step size h described with a sequence of the form</span>
+
+<span class="sd">    L = f(h) + a0 * h^k_0 + a1 * h^k_1+ a2 * h^k_2 + ...</span>
+
+<span class="sd">    where the ai are unknown constants and the k_i are known constants such that h^k_i &gt; h^(k_i+1).</span>
+
+<span class="sd">    If we evaluate the right hand side for different stepsizes h</span>
+<span class="sd">    we can fit a polynomial to that sequence of approximations.</span>
+<span class="sd">    This is exactly what this class does.</span>
+<span class="sd">    Here k_0 is the leading order step size behavior of truncation error as L = f(h)+O(h^k_0)</span>
+<span class="sd">    (f(h) -&gt; L as h -&gt; 0, but f(0) != L) and k_i = order + step * i .</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; import numpy as np</span>
+<span class="sd">    &gt;&gt;&gt; import numdifftools as nd</span>
+<span class="sd">    &gt;&gt;&gt; n = 3</span>
+<span class="sd">    &gt;&gt;&gt; Ei = np.zeros((n,1))</span>
+<span class="sd">    &gt;&gt;&gt; h = np.zeros((n,1))</span>
+<span class="sd">    &gt;&gt;&gt; linfun = lambda i : np.linspace(0, np.pi/2., 2**(i+5)+1)</span>
+<span class="sd">    &gt;&gt;&gt; for k in np.arange(n):</span>
+<span class="sd">    ...    x = linfun(k)</span>
+<span class="sd">    ...    h[k] = x[1]</span>
+<span class="sd">    ...    Ei[k] = np.trapz(np.sin(x),x)</span>
+<span class="sd">    &gt;&gt;&gt; En, err, step = nd.Richardson(step=1, order=1)(Ei, h)</span>
+<span class="sd">    &gt;&gt;&gt; truErr = np.abs(En-1.)</span>
+<span class="sd">    &gt;&gt;&gt; np.all(truErr &lt; err)</span>
+<span class="sd">    True</span>
+<span class="sd">    &gt;&gt;&gt; np.all(np.abs(Ei-1)&lt;1e-3)</span>
+<span class="sd">    True</span>
+<span class="sd">    &gt;&gt;&gt; np.allclose(En, 1)</span>
+<span class="sd">    True</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Richardson.__init__"><a class="viewcode-back" href="../../reference/generated/numdifftools.extrapolation.Richardson.html#numdifftools.extrapolation.Richardson.__init__">[docs]</a>    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">step_ratio</span><span class="o">=</span><span class="mf">2.0</span><span class="p">,</span> <span class="n">step</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">order</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">num_terms</span><span class="o">=</span><span class="mi">2</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">step_ratio</span> <span class="o">=</span> <span class="n">step_ratio</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">step</span> <span class="o">=</span> <span class="n">step</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">order</span> <span class="o">=</span> <span class="n">order</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">num_terms</span> <span class="o">=</span> <span class="n">num_terms</span></div>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">_r_matrix</span><span class="p">(</span><span class="n">step_ratio</span><span class="p">,</span> <span class="n">step</span><span class="p">,</span> <span class="n">num_terms</span><span class="p">,</span> <span class="n">order</span><span class="p">):</span>
+
+        <span class="n">i</span><span class="p">,</span> <span class="n">j</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ogrid</span><span class="p">[</span><span class="mi">0</span><span class="p">:</span><span class="n">num_terms</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">:</span><span class="n">num_terms</span><span class="p">]</span>
+        <span class="n">dtype</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">result_type</span><span class="p">(</span><span class="n">step_ratio</span><span class="p">,</span> <span class="n">step</span><span class="p">,</span> <span class="nb">float</span><span class="p">)</span>
+        <span class="n">r_mat</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="n">num_terms</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="n">num_terms</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span> <span class="n">dtype</span><span class="o">=</span><span class="n">dtype</span><span class="p">)</span>
+        <span class="n">r_mat</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">:]</span> <span class="o">=</span> <span class="p">(</span><span class="mf">1.0</span> <span class="o">/</span> <span class="n">step_ratio</span><span class="p">)</span> <span class="o">**</span> <span class="p">(</span><span class="n">i</span> <span class="o">*</span> <span class="p">(</span><span class="n">step</span> <span class="o">*</span> <span class="n">j</span> <span class="o">+</span> <span class="n">order</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">r_mat</span>
+
+<div class="viewcode-block" id="Richardson.rule"><a class="viewcode-back" href="../../reference/numdifftools.html#numdifftools.extrapolation.Richardson.rule">[docs]</a>    <span class="k">def</span> <span class="nf">rule</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sequence_length</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Returns extrapolation rule.&quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="n">sequence_length</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">sequence_length</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">num_terms</span> <span class="o">+</span> <span class="mi">1</span>
+        <span class="n">num_terms</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">num_terms</span><span class="p">,</span> <span class="n">sequence_length</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">num_terms</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">r_mat</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_r_matrix</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">step_ratio</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">step</span><span class="p">,</span> <span class="n">num_terms</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">order</span><span class="p">)</span>
+            <span class="k">return</span> <span class="n">linalg</span><span class="o">.</span><span class="n">pinv</span><span class="p">(</span><span class="n">r_mat</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">ones</span><span class="p">((</span><span class="mi">1</span><span class="p">,))</span></div>
+
+    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">_estimate_error</span><span class="p">(</span><span class="n">new_sequence</span><span class="p">,</span> <span class="n">old_sequence</span><span class="p">,</span> <span class="n">steps</span><span class="p">,</span> <span class="n">rule</span><span class="p">):</span>
+        <span class="n">m</span> <span class="o">=</span> <span class="n">new_sequence</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">m_old</span> <span class="o">=</span> <span class="n">old_sequence</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">cov1</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">rule</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>  <span class="c1"># 1 spare dof</span>
+        <span class="n">fact</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">maximum</span><span class="p">(</span><span class="mf">12.7062047361747</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">cov1</span><span class="p">),</span> <span class="n">EPS</span> <span class="o">*</span> <span class="mf">10.</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">m_old</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="k">return</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">new_sequence</span><span class="p">)</span> <span class="o">*</span> <span class="n">EPS</span> <span class="o">+</span> <span class="n">steps</span><span class="p">)</span> <span class="o">*</span> <span class="n">fact</span>
+        <span class="k">if</span> <span class="n">m</span> <span class="o">&lt;</span> <span class="mi">2</span><span class="p">:</span>
+            <span class="n">delta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">old_sequence</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+            <span class="n">tol</span> <span class="o">=</span> <span class="n">max_abs</span><span class="p">(</span><span class="n">old_sequence</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">old_sequence</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span> <span class="o">*</span> <span class="n">fact</span>
+            <span class="n">err</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">delta</span><span class="p">)</span>
+            <span class="n">converged</span> <span class="o">=</span> <span class="n">err</span> <span class="o">&lt;=</span> <span class="n">tol</span>
+            <span class="n">abserr</span> <span class="o">=</span> <span class="p">(</span><span class="n">err</span><span class="p">[</span><span class="o">-</span><span class="n">m</span><span class="p">:]</span> <span class="o">+</span>
+                      <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">converged</span><span class="p">[</span><span class="o">-</span><span class="n">m</span><span class="p">:],</span> <span class="n">tol</span><span class="p">[</span><span class="o">-</span><span class="n">m</span><span class="p">:]</span> <span class="o">*</span> <span class="mi">10</span><span class="p">,</span>
+                               <span class="nb">abs</span><span class="p">(</span><span class="n">new_sequence</span> <span class="o">-</span> <span class="n">old_sequence</span><span class="p">[</span><span class="o">-</span><span class="n">m</span><span class="p">:])</span> <span class="o">*</span> <span class="n">fact</span><span class="p">))</span>
+            <span class="k">return</span> <span class="n">abserr</span>
+<span class="c1">#         if m_old&gt;2:</span>
+<span class="c1">#             res, abserr = dea3(old_sequence[:-2], old_sequence[1:-1],</span>
+<span class="c1">#                               old_sequence[2:] )</span>
+<span class="c1">#             return abserr[-m:] * fact</span>
+        <span class="n">err</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">diff</span><span class="p">(</span><span class="n">new_sequence</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">))</span> <span class="o">*</span> <span class="n">fact</span>
+        <span class="n">tol</span> <span class="o">=</span> <span class="n">max_abs</span><span class="p">(</span><span class="n">new_sequence</span><span class="p">[</span><span class="mi">1</span><span class="p">:],</span> <span class="n">new_sequence</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span> <span class="o">*</span> <span class="n">EPS</span> <span class="o">*</span> <span class="n">fact</span>
+        <span class="n">converged</span> <span class="o">=</span> <span class="n">err</span> <span class="o">&lt;=</span> <span class="n">tol</span>
+        <span class="n">abserr</span> <span class="o">=</span> <span class="n">err</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">converged</span><span class="p">,</span> <span class="n">tol</span> <span class="o">*</span> <span class="mi">10</span><span class="p">,</span>
+                                <span class="nb">abs</span><span class="p">(</span><span class="n">new_sequence</span><span class="p">[:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="o">-</span>
+                                    <span class="n">old_sequence</span><span class="p">[</span><span class="o">-</span><span class="n">m</span> <span class="o">+</span> <span class="mi">1</span><span class="p">:])</span> <span class="o">*</span> <span class="n">fact</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">abserr</span>
+
+<div class="viewcode-block" id="Richardson.extrapolate"><a class="viewcode-back" href="../../reference/numdifftools.html#numdifftools.extrapolation.Richardson.extrapolate">[docs]</a>    <span class="k">def</span> <span class="nf">extrapolate</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sequence</span><span class="p">,</span> <span class="n">steps</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Extrapolate sequence&quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="fm">__call__</span><span class="p">(</span><span class="n">sequence</span><span class="p">,</span> <span class="n">steps</span><span class="p">)</span></div>
+
+    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">sequence</span><span class="p">,</span> <span class="n">steps</span><span class="p">):</span>
+        <span class="n">num_steps</span> <span class="o">=</span> <span class="n">sequence</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+        <span class="n">rule</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">rule</span><span class="p">(</span><span class="n">num_steps</span><span class="p">)</span>
+        <span class="n">n_r</span> <span class="o">=</span> <span class="n">rule</span><span class="o">.</span><span class="n">size</span> <span class="o">-</span> <span class="mi">1</span>
+        <span class="n">m</span> <span class="o">=</span> <span class="n">num_steps</span> <span class="o">-</span> <span class="n">n_r</span>
+        <span class="n">k</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">num_steps</span><span class="p">,</span> <span class="n">m</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">new_sequence</span> <span class="o">=</span> <span class="n">convolve</span><span class="p">(</span><span class="n">sequence</span><span class="p">,</span> <span class="n">rule</span><span class="p">[::</span><span class="o">-</span><span class="mi">1</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">origin</span><span class="o">=</span><span class="n">n_r</span> <span class="o">//</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="n">abserr</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_estimate_error</span><span class="p">(</span><span class="n">new_sequence</span><span class="p">[:</span><span class="n">k</span><span class="p">],</span> <span class="n">sequence</span><span class="p">,</span> <span class="n">steps</span><span class="p">,</span> <span class="n">rule</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">new_sequence</span><span class="p">[:</span><span class="n">m</span><span class="p">],</span> <span class="n">abserr</span><span class="p">[:</span><span class="n">m</span><span class="p">],</span> <span class="n">steps</span><span class="p">[:</span><span class="n">m</span><span class="p">]</span></div>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="kn">from</span> <span class="nn">numdifftools.testing</span> <span class="kn">import</span> <span class="n">test_docstrings</span>
+    <span class="n">test_docstrings</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2009-2021, Per A. Brodtkorb, John D&#39;Errico.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

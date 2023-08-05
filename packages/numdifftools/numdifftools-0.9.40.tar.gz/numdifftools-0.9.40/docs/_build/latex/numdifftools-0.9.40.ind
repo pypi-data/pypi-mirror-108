@@ -1,0 +1,613 @@
+\begin{sphinxtheindex}
+\let\bigletter\sphinxstyleindexlettergroup
+\let\spxpagem \sphinxstyleindexpagemain
+\let\spxentry \sphinxstyleindexentry
+\let\spxextra \sphinxstyleindexextra
+
+  \bigletter {\sphinxsymbolsname}
+  \item \spxentry{\_\_init\_\_()}\spxextra{BasicMaxStepGenerator method}, \hyperpage{40}
+  \item \spxentry{\_\_init\_\_()}\spxextra{BasicMinStepGenerator method}, \hyperpage{41}
+  \item \spxentry{\_\_init\_\_()}\spxextra{Bicomplex method}, \hyperpage{51}
+  \item \spxentry{\_\_init\_\_()}\spxextra{CStepGenerator method}, \hyperpage{47}
+  \item \spxentry{\_\_init\_\_()}\spxextra{Dea method}, \hyperpage{44}
+  \item \spxentry{\_\_init\_\_()}\spxextra{Derivative method}, \hyperpage{29}, \hyperpage{53}
+  \item \spxentry{\_\_init\_\_()}\spxextra{Gradient method}, \hyperpage{31}, \hyperpage{55}, 
+		\hyperpage{63}
+  \item \spxentry{\_\_init\_\_()}\spxextra{Hessdiag method}, \hyperpage{36}, \hyperpage{59}
+  \item \spxentry{\_\_init\_\_()}\spxextra{Hessian method}, \hyperpage{38}, \hyperpage{61}, 
+		\hyperpage{65}
+  \item \spxentry{\_\_init\_\_()}\spxextra{Jacobian method}, \hyperpage{34}, \hyperpage{57}, 
+		\hyperpage{64}, \hyperpage{66}
+  \item \spxentry{\_\_init\_\_()}\spxextra{Limit method}, \hyperpage{49}
+  \item \spxentry{\_\_init\_\_()}\spxextra{MaxStepGenerator method}, \hyperpage{42}
+  \item \spxentry{\_\_init\_\_()}\spxextra{MinStepGenerator method}, \hyperpage{41}
+  \item \spxentry{\_\_init\_\_()}\spxextra{Residue method}, \hyperpage{50}
+  \item \spxentry{\_\_init\_\_()}\spxextra{Richardson method}, \hyperpage{46}
+
+  \indexspace
+  \bigletter A
+  \item \spxentry{apply()}\spxextra{LogHessianRule method}, \hyperpage{94}
+  \item \spxentry{apply()}\spxextra{LogRule method}, \hyperpage{96}
+  \item \spxentry{approx\_fprime()}\spxextra{in module numdifftools.nd\_statsmodels}, 
+		\hyperpage{120}
+  \item \spxentry{approx\_fprime\_cs()}\spxextra{in module numdifftools.nd\_statsmodels}, 
+		\hyperpage{121}
+  \item \spxentry{arccos()}\spxextra{Bicomplex method}, \hyperpage{106}
+  \item \spxentry{arccosh()}\spxextra{Bicomplex method}, \hyperpage{106}
+  \item \spxentry{arcsin()}\spxextra{Bicomplex method}, \hyperpage{106}
+  \item \spxentry{arcsinh()}\spxextra{Bicomplex method}, \hyperpage{106}
+  \item \spxentry{arctan()}\spxextra{Bicomplex method}, \hyperpage{106}
+  \item \spxentry{arctanh()}\spxextra{Bicomplex method}, \hyperpage{106}
+  \item \spxentry{arg\_c()}\spxextra{Bicomplex method}, \hyperpage{106}
+  \item \spxentry{arg\_c1p()}\spxextra{Bicomplex method}, \hyperpage{106}
+  \item \spxentry{asarray()}\spxextra{Bicomplex static method}, \hyperpage{106}
+
+  \indexspace
+  \bigletter B
+  \item \spxentry{base\_step()}\spxextra{MaxStepGenerator property}, \hyperpage{85}
+  \item \spxentry{base\_step()}\spxextra{MinStepGenerator property}, \hyperpage{85}, 
+		\hyperpage{123}
+  \item \spxentry{BasicMaxStepGenerator}\spxextra{class in numdifftools.step\_generators}, 
+		\hyperpage{40}, \hyperpage{121}
+  \item \spxentry{BasicMinStepGenerator}\spxextra{class in numdifftools.step\_generators}, 
+		\hyperpage{40}, \hyperpage{122}
+  \item \spxentry{Bicomplex}\spxextra{class in numdifftools.multicomplex}, \hyperpage{51}, 
+		\hyperpage{106}
+
+  \indexspace
+  \bigletter C
+  \item \spxentry{c\_abs()}\spxextra{in module numdifftools.multicomplex}, \hyperpage{107}
+  \item \spxentry{c\_atan2()}\spxextra{in module numdifftools.multicomplex}, \hyperpage{107}
+  \item \spxentry{c\_max()}\spxextra{in module numdifftools.multicomplex}, \hyperpage{107}
+  \item \spxentry{c\_min()}\spxextra{in module numdifftools.multicomplex}, \hyperpage{107}
+  \item \spxentry{ClassicalHamiltonian}\spxextra{class in numdifftools.tests.hamiltonian}, 
+		\hyperpage{66}
+  \item \spxentry{conjugate()}\spxextra{Bicomplex method}, \hyperpage{106}
+  \item \spxentry{convolve()}\spxextra{in module numdifftools.extrapolation}, \hyperpage{43}, 
+		\hyperpage{90}
+  \item \spxentry{cos()}\spxextra{Bicomplex method}, \hyperpage{106}
+  \item \spxentry{cosh()}\spxextra{Bicomplex method}, \hyperpage{106}
+  \item \spxentry{cot()}\spxextra{Bicomplex method}, \hyperpage{106}
+  \item \spxentry{coth()}\spxextra{Bicomplex method}, \hyperpage{106}
+  \item \spxentry{count()}\spxextra{Derivative.info method}, \hyperpage{75}
+  \item \spxentry{count()}\spxextra{Gradient.info method}, \hyperpage{77}
+  \item \spxentry{count()}\spxextra{Hessdiag.info method}, \hyperpage{79}
+  \item \spxentry{count()}\spxextra{Hessian.info method}, \hyperpage{81}
+  \item \spxentry{count()}\spxextra{Jacobian.info method}, \hyperpage{84}
+  \item \spxentry{csc()}\spxextra{Bicomplex method}, \hyperpage{106}
+  \item \spxentry{csch()}\spxextra{Bicomplex method}, \hyperpage{106}
+  \item \spxentry{CStepGenerator}\spxextra{class in numdifftools.limits}, \hyperpage{46}, 
+		\hyperpage{102}
+
+  \indexspace
+  \bigletter D
+  \item \spxentry{Dea}\spxextra{class in numdifftools.extrapolation}, \hyperpage{43}, 
+		\hyperpage{88}
+  \item \spxentry{dea3()}\spxextra{in module numdifftools.core}, \hyperpage{87}
+  \item \spxentry{dea3()}\spxextra{in module numdifftools.extrapolation}, \hyperpage{44}, 
+		\hyperpage{90}
+  \item \spxentry{dea\_demo()}\spxextra{in module numdifftools.extrapolation}, \hyperpage{91}
+  \item \spxentry{default\_scale()}\spxextra{in module numdifftools.step\_generators}, 
+		\hyperpage{123}
+  \item \spxentry{Derivative}\spxextra{class in numdifftools.core}, \hyperpage{27}, \hyperpage{73}
+  \item \spxentry{Derivative}\spxextra{class in numdifftools.nd\_algopy}, \hyperpage{52}, 
+		\hyperpage{108}
+  \item \spxentry{derivative()}\spxextra{in module numdifftools.fornberg}, \hyperpage{98}
+  \item \spxentry{Derivative.info}\spxextra{class in numdifftools.core}, \hyperpage{75}
+  \item \spxentry{diff()}\spxextra{LogRule property}, \hyperpage{96}
+  \item \spxentry{DifferenceFunctions}\spxextra{class in numdifftools.finite\_difference}, 
+		\hyperpage{92}
+  \item \spxentry{directionaldiff()}\spxextra{in module numdifftools.core}, \hyperpage{39}, 
+		\hyperpage{87}
+  \item \spxentry{directionaldiff()}\spxextra{in module numdifftools.nd\_algopy}, \hyperpage{61}, 
+		\hyperpage{115}
+  \item \spxentry{dot()}\spxextra{Bicomplex method}, \hyperpage{106}
+  \item \spxentry{dtheta()}\spxextra{CStepGenerator property}, \hyperpage{103}
+
+  \indexspace
+  \bigletter E
+  \item \spxentry{EpsAlg}\spxextra{class in numdifftools.extrapolation}, \hyperpage{89}
+  \item \spxentry{epsalg\_demo()}\spxextra{in module numdifftools.extrapolation}, \hyperpage{91}
+  \item \spxentry{error\_estimate}\spxextra{Derivative.info attribute}, \hyperpage{75}
+  \item \spxentry{error\_estimate}\spxextra{Gradient.info attribute}, \hyperpage{77}
+  \item \spxentry{error\_estimate}\spxextra{Hessdiag.info attribute}, \hyperpage{79}
+  \item \spxentry{error\_estimate}\spxextra{Hessian.info attribute}, \hyperpage{81}
+  \item \spxentry{error\_estimate}\spxextra{Jacobian.info attribute}, \hyperpage{84}
+  \item \spxentry{eval\_first\_condition()}\spxextra{LogRule property}, \hyperpage{96}
+  \item \spxentry{even transformation}, \hyperpage{20}
+  \item \spxentry{ExampleFunctions}\spxextra{class in numdifftools.tests.test\_fornberg}, 
+		\hyperpage{67}
+  \item \spxentry{exp()}\spxextra{Bicomplex method}, \hyperpage{106}
+  \item \spxentry{exp2()}\spxextra{Bicomplex method}, \hyperpage{106}
+  \item \spxentry{expm1()}\spxextra{Bicomplex method}, \hyperpage{106}
+  \item \spxentry{extrapolate()}\spxextra{Richardson method}, \hyperpage{87}, \hyperpage{90}
+
+  \indexspace
+  \bigletter F
+  \item \spxentry{f\_value}\spxextra{Derivative.info attribute}, \hyperpage{75}
+  \item \spxentry{f\_value}\spxextra{Gradient.info attribute}, \hyperpage{77}
+  \item \spxentry{f\_value}\spxextra{Hessdiag.info attribute}, \hyperpage{79}
+  \item \spxentry{f\_value}\spxextra{Hessian.info attribute}, \hyperpage{81}
+  \item \spxentry{f\_value}\spxextra{Jacobian.info attribute}, \hyperpage{84}
+  \item \spxentry{fd\_derivative()}\spxextra{in module numdifftools.fornberg}, \hyperpage{99}
+  \item \spxentry{fd\_weights()}\spxextra{in module numdifftools.fornberg}, \hyperpage{100}
+  \item \spxentry{fd\_weights\_all()}\spxextra{in module numdifftools.fornberg}, \hyperpage{100}
+  \item \spxentry{final\_step}\spxextra{Derivative.info attribute}, \hyperpage{75}
+  \item \spxentry{final\_step}\spxextra{Gradient.info attribute}, \hyperpage{77}
+  \item \spxentry{final\_step}\spxextra{Hessdiag.info attribute}, \hyperpage{79}
+  \item \spxentry{final\_step}\spxextra{Hessian.info attribute}, \hyperpage{81}
+  \item \spxentry{final\_step}\spxextra{Jacobian.info attribute}, \hyperpage{84}
+  \item \spxentry{flat()}\spxextra{Bicomplex method}, \hyperpage{107}
+  \item \spxentry{fun0()}\spxextra{ExampleFunctions static method}, \hyperpage{67}
+  \item \spxentry{fun1()}\spxextra{ExampleFunctions static method}, \hyperpage{67}
+  \item \spxentry{fun10()}\spxextra{ExampleFunctions static method}, \hyperpage{67}
+  \item \spxentry{fun11()}\spxextra{ExampleFunctions static method}, \hyperpage{67}
+  \item \spxentry{fun12()}\spxextra{ExampleFunctions static method}, \hyperpage{67}
+  \item \spxentry{fun13()}\spxextra{ExampleFunctions static method}, \hyperpage{67}
+  \item \spxentry{fun14()}\spxextra{ExampleFunctions static method}, \hyperpage{67}
+  \item \spxentry{fun2()}\spxextra{ExampleFunctions static method}, \hyperpage{67}
+  \item \spxentry{fun3()}\spxextra{ExampleFunctions static method}, \hyperpage{67}
+  \item \spxentry{fun4()}\spxextra{ExampleFunctions static method}, \hyperpage{68}
+  \item \spxentry{fun5()}\spxextra{ExampleFunctions static method}, \hyperpage{68}
+  \item \spxentry{fun6()}\spxextra{ExampleFunctions static method}, \hyperpage{68}
+  \item \spxentry{fun7()}\spxextra{ExampleFunctions static method}, \hyperpage{68}
+  \item \spxentry{fun8()}\spxextra{ExampleFunctions static method}, \hyperpage{68}
+  \item \spxentry{fun9()}\spxextra{ExampleFunctions static method}, \hyperpage{68}
+
+  \indexspace
+  \bigletter G
+  \item \spxentry{get\_base\_step()}\spxextra{in module numdifftools.step\_generators}, 
+		\hyperpage{123}
+  \item \spxentry{get\_nominal\_step()}\spxextra{in module numdifftools.step\_generators}, 
+		\hyperpage{123}
+  \item \spxentry{Gradient}\spxextra{class in numdifftools.core}, \hyperpage{30}, \hyperpage{75}
+  \item \spxentry{Gradient}\spxextra{class in numdifftools.nd\_algopy}, \hyperpage{54}, 
+		\hyperpage{109}
+  \item \spxentry{Gradient}\spxextra{class in numdifftools.nd\_scipy}, \hyperpage{62}, 
+		\hyperpage{116}
+  \item \spxentry{Gradient}\spxextra{class in numdifftools.nd\_statsmodels}, \hyperpage{118}
+  \item \spxentry{Gradient.info}\spxextra{class in numdifftools.core}, \hyperpage{77}
+
+  \indexspace
+  \bigletter H
+  \item \spxentry{Hessdiag}\spxextra{class in numdifftools.core}, \hyperpage{34}, \hyperpage{77}
+  \item \spxentry{Hessdiag}\spxextra{class in numdifftools.nd\_algopy}, \hyperpage{58}, 
+		\hyperpage{111}
+  \item \spxentry{Hessdiag.info}\spxextra{class in numdifftools.core}, \hyperpage{79}
+  \item \spxentry{HessdiagDifferenceFunctions}\spxextra{class in numdifftools.finite\_difference}, 
+		\hyperpage{92}
+  \item \spxentry{Hessian}\spxextra{class in numdifftools.core}, \hyperpage{36}, \hyperpage{79}
+  \item \spxentry{Hessian}\spxextra{class in numdifftools.nd\_algopy}, \hyperpage{60}, 
+		\hyperpage{112}
+  \item \spxentry{Hessian}\spxextra{class in numdifftools.nd\_statsmodels}, \hyperpage{64}, 
+		\hyperpage{118}
+  \item \spxentry{Hessian.info}\spxextra{class in numdifftools.core}, \hyperpage{81}
+  \item \spxentry{HessianDifferenceFunctions}\spxextra{class in numdifftools.finite\_difference}, 
+		\hyperpage{92}
+
+  \indexspace
+  \bigletter I
+  \item \spxentry{imag()}\spxextra{Bicomplex property}, \hyperpage{107}
+  \item \spxentry{imag1()}\spxextra{Bicomplex property}, \hyperpage{107}
+  \item \spxentry{imag12()}\spxextra{Bicomplex property}, \hyperpage{107}
+  \item \spxentry{imag2()}\spxextra{Bicomplex property}, \hyperpage{107}
+  \item \spxentry{increments()}\spxextra{JacobianDifferenceFunctions static method}, \hyperpage{93}
+  \item \spxentry{index}\spxextra{Derivative.info attribute}, \hyperpage{75}
+  \item \spxentry{index}\spxextra{Gradient.info attribute}, \hyperpage{77}
+  \item \spxentry{index}\spxextra{Hessdiag.info attribute}, \hyperpage{79}
+  \item \spxentry{index}\spxextra{Hessian.info attribute}, \hyperpage{81}
+  \item \spxentry{index}\spxextra{Jacobian.info attribute}, \hyperpage{84}
+  \item \spxentry{initialposition()}\spxextra{ClassicalHamiltonian method}, \hyperpage{67}
+
+  \indexspace
+  \bigletter J
+  \item \spxentry{Jacobian}\spxextra{class in numdifftools.core}, \hyperpage{32}, \hyperpage{82}
+  \item \spxentry{Jacobian}\spxextra{class in numdifftools.nd\_algopy}, \hyperpage{56}, 
+		\hyperpage{113}
+  \item \spxentry{Jacobian}\spxextra{class in numdifftools.nd\_scipy}, \hyperpage{63}, 
+		\hyperpage{117}
+  \item \spxentry{Jacobian}\spxextra{class in numdifftools.nd\_statsmodels}, \hyperpage{65}, 
+		\hyperpage{119}
+  \item \spxentry{Jacobian.info}\spxextra{class in numdifftools.core}, \hyperpage{84}
+  \item \spxentry{JacobianDifferenceFunctions}\spxextra{class in numdifftools.finite\_difference}, 
+		\hyperpage{93}
+
+  \indexspace
+  \bigletter L
+  \item \spxentry{limexp()}\spxextra{Dea property}, \hyperpage{89}
+  \item \spxentry{Limit}\spxextra{class in numdifftools.limits}, \hyperpage{47}, \hyperpage{103}
+  \item \spxentry{limit()}\spxextra{Limit method}, \hyperpage{104}
+  \item \spxentry{log()}\spxextra{Bicomplex method}, \hyperpage{107}
+  \item \spxentry{log10()}\spxextra{Bicomplex method}, \hyperpage{107}
+  \item \spxentry{log1p()}\spxextra{Bicomplex method}, \hyperpage{107}
+  \item \spxentry{log2()}\spxextra{Bicomplex method}, \hyperpage{107}
+  \item \spxentry{logaddexp()}\spxextra{Bicomplex method}, \hyperpage{107}
+  \item \spxentry{logaddexp2()}\spxextra{Bicomplex method}, \hyperpage{107}
+  \item \spxentry{LogHessdiagRule}\spxextra{class in numdifftools.finite\_difference}, 
+		\hyperpage{93}
+  \item \spxentry{LogHessianRule}\spxextra{class in numdifftools.finite\_difference}, 
+		\hyperpage{94}
+  \item \spxentry{LogJacobianRule}\spxextra{class in numdifftools.finite\_difference}, 
+		\hyperpage{94}
+  \item \spxentry{LogRule}\spxextra{class in numdifftools.finite\_difference}, \hyperpage{95}
+
+  \indexspace
+  \bigletter M
+  \item \spxentry{make\_exact()}\spxextra{in module numdifftools.finite\_difference}, 
+		\hyperpage{96}
+  \item \spxentry{make\_exact()}\spxextra{in module numdifftools.step\_generators}, \hyperpage{124}
+  \item \spxentry{mat2bicomp()}\spxextra{Bicomplex static method}, \hyperpage{107}
+  \item \spxentry{max\_abs()}\spxextra{in module numdifftools.extrapolation}, \hyperpage{92}
+  \item \spxentry{MaxStepGenerator}\spxextra{class in numdifftools.core}, \hyperpage{84}
+  \item \spxentry{MaxStepGenerator}\spxextra{class in numdifftools.step\_generators}, 
+		\hyperpage{42}, \hyperpage{122}
+  \item \spxentry{method()}\spxextra{Derivative property}, \hyperpage{75}
+  \item \spxentry{method()}\spxextra{Gradient property}, \hyperpage{77}
+  \item \spxentry{method()}\spxextra{Hessdiag property}, \hyperpage{79}
+  \item \spxentry{method()}\spxextra{Hessian property}, \hyperpage{81}
+  \item \spxentry{method()}\spxextra{Jacobian property}, \hyperpage{84}
+  \item \spxentry{method\_order()}\spxextra{Derivative property}, \hyperpage{75}
+  \item \spxentry{method\_order()}\spxextra{Gradient property}, \hyperpage{77}
+  \item \spxentry{method\_order()}\spxextra{Hessdiag property}, \hyperpage{79}
+  \item \spxentry{method\_order()}\spxextra{Hessian property}, \hyperpage{81}
+  \item \spxentry{method\_order()}\spxextra{Jacobian property}, \hyperpage{84}
+  \item \spxentry{method\_order()}\spxextra{LogRule property}, \hyperpage{96}
+  \item \spxentry{min\_num\_steps()}\spxextra{MaxStepGenerator property}, \hyperpage{85}
+  \item \spxentry{min\_num\_steps()}\spxextra{MinStepGenerator property}, \hyperpage{86}, 
+		\hyperpage{123}
+  \item \spxentry{MinStepGenerator}\spxextra{class in numdifftools.core}, \hyperpage{85}
+  \item \spxentry{MinStepGenerator}\spxextra{class in numdifftools.step\_generators}, 
+		\hyperpage{41}, \hyperpage{123}
+  \item \spxentry{mod\_c()}\spxextra{Bicomplex method}, \hyperpage{107}
+  \item \spxentry{module}
+    \subitem \spxentry{numdifftools.core}, \hyperpage{73}
+    \subitem \spxentry{numdifftools.extrapolation}, \hyperpage{88}
+    \subitem \spxentry{numdifftools.finite\_difference}, \hyperpage{92}
+    \subitem \spxentry{numdifftools.fornberg}, \hyperpage{97}
+    \subitem \spxentry{numdifftools.limits}, \hyperpage{102}
+    \subitem \spxentry{numdifftools.multicomplex}, \hyperpage{106}
+    \subitem \spxentry{numdifftools.nd\_algopy}, \hyperpage{108}
+    \subitem \spxentry{numdifftools.nd\_scipy}, \hyperpage{116}
+    \subitem \spxentry{numdifftools.nd\_statsmodels}, \hyperpage{118}
+    \subitem \spxentry{numdifftools.step\_generators}, \hyperpage{121}
+    \subitem \spxentry{numdifftools.tests.hamiltonian}, \hyperpage{66}
+    \subitem \spxentry{numdifftools.tests.test\_extrapolation}, \hyperpage{67}
+    \subitem \spxentry{numdifftools.tests.test\_fornberg}, \hyperpage{67}
+    \subitem \spxentry{numdifftools.tests.test\_limits}, \hyperpage{68}
+    \subitem \spxentry{numdifftools.tests.test\_multicomplex}, \hyperpage{69}
+    \subitem \spxentry{numdifftools.tests.test\_nd\_algopy}, \hyperpage{70}
+    \subitem \spxentry{numdifftools.tests.test\_nd\_scipy}, \hyperpage{71}
+    \subitem \spxentry{numdifftools.tests.test\_numdifftools}, \hyperpage{71}
+    \subitem \spxentry{numdifftools.tests.test\_scripts}, \hyperpage{72}
+    \subitem \spxentry{numdifftools.tests.test\_step\_generators}, \hyperpage{73}
+
+  \indexspace
+  \bigletter N
+  \item \spxentry{n()}\spxextra{Derivative property}, \hyperpage{75}
+  \item \spxentry{n()}\spxextra{Gradient property}, \hyperpage{77}
+  \item \spxentry{n()}\spxextra{Hessdiag property}, \hyperpage{79}
+  \item \spxentry{n()}\spxextra{Hessian property}, \hyperpage{81}, \hyperpage{119}
+  \item \spxentry{n()}\spxextra{Jacobian property}, \hyperpage{84}
+  \item \spxentry{n()}\spxextra{LogHessdiagRule property}, \hyperpage{94}
+  \item \spxentry{n()}\spxextra{LogHessianRule property}, \hyperpage{94}
+  \item \spxentry{norm()}\spxextra{Bicomplex method}, \hyperpage{107}
+  \item \spxentry{normal\_modes()}\spxextra{ClassicalHamiltonian method}, \hyperpage{67}
+  \item \spxentry{num\_steps()}\spxextra{CStepGenerator property}, \hyperpage{103}
+  \item \spxentry{num\_steps()}\spxextra{MaxStepGenerator property}, \hyperpage{85}
+  \item \spxentry{num\_steps()}\spxextra{MinStepGenerator property}, \hyperpage{86}, 
+		\hyperpage{123}
+  \item \spxentry{numdifftools.core}
+    \subitem \spxentry{module}, \hyperpage{73}
+  \item \spxentry{numdifftools.extrapolation}
+    \subitem \spxentry{module}, \hyperpage{88}
+  \item \spxentry{numdifftools.finite\_difference}
+    \subitem \spxentry{module}, \hyperpage{92}
+  \item \spxentry{numdifftools.fornberg}
+    \subitem \spxentry{module}, \hyperpage{97}
+  \item \spxentry{numdifftools.limits}
+    \subitem \spxentry{module}, \hyperpage{102}
+  \item \spxentry{numdifftools.multicomplex}
+    \subitem \spxentry{module}, \hyperpage{106}
+  \item \spxentry{numdifftools.nd\_algopy}
+    \subitem \spxentry{module}, \hyperpage{108}
+  \item \spxentry{numdifftools.nd\_scipy}
+    \subitem \spxentry{module}, \hyperpage{116}
+  \item \spxentry{numdifftools.nd\_statsmodels}
+    \subitem \spxentry{module}, \hyperpage{118}
+  \item \spxentry{numdifftools.step\_generators}
+    \subitem \spxentry{module}, \hyperpage{121}
+  \item \spxentry{numdifftools.tests.hamiltonian}
+    \subitem \spxentry{module}, \hyperpage{66}
+  \item \spxentry{numdifftools.tests.test\_extrapolation}
+    \subitem \spxentry{module}, \hyperpage{67}
+  \item \spxentry{numdifftools.tests.test\_fornberg}
+    \subitem \spxentry{module}, \hyperpage{67}
+  \item \spxentry{numdifftools.tests.test\_limits}
+    \subitem \spxentry{module}, \hyperpage{68}
+  \item \spxentry{numdifftools.tests.test\_multicomplex}
+    \subitem \spxentry{module}, \hyperpage{69}
+  \item \spxentry{numdifftools.tests.test\_nd\_algopy}
+    \subitem \spxentry{module}, \hyperpage{70}
+  \item \spxentry{numdifftools.tests.test\_nd\_scipy}
+    \subitem \spxentry{module}, \hyperpage{71}
+  \item \spxentry{numdifftools.tests.test\_numdifftools}
+    \subitem \spxentry{module}, \hyperpage{71}
+  \item \spxentry{numdifftools.tests.test\_scripts}
+    \subitem \spxentry{module}, \hyperpage{72}
+  \item \spxentry{numdifftools.tests.test\_step\_generators}
+    \subitem \spxentry{module}, \hyperpage{73}
+
+  \indexspace
+  \bigletter O
+  \item \spxentry{odd transformation}, \hyperpage{20}
+  \item \spxentry{order()}\spxextra{Derivative property}, \hyperpage{75}
+  \item \spxentry{order()}\spxextra{Gradient property}, \hyperpage{77}
+  \item \spxentry{order()}\spxextra{Hessdiag property}, \hyperpage{79}
+  \item \spxentry{order()}\spxextra{Hessian property}, \hyperpage{81}
+  \item \spxentry{order()}\spxextra{Jacobian property}, \hyperpage{84}
+  \item \spxentry{order()}\spxextra{LogHessianRule property}, \hyperpage{94}
+
+  \indexspace
+  \bigletter P
+  \item \spxentry{potential()}\spxextra{ClassicalHamiltonian method}, \hyperpage{67}
+
+  \indexspace
+  \bigletter R
+  \item \spxentry{real()}\spxextra{Bicomplex property}, \hyperpage{107}
+  \item \spxentry{Residue}\spxextra{class in numdifftools.limits}, \hyperpage{49}, \hyperpage{105}
+  \item \spxentry{Richardson}\spxextra{class in numdifftools.core}, \hyperpage{86}
+  \item \spxentry{Richardson}\spxextra{class in numdifftools.extrapolation}, \hyperpage{45}, 
+		\hyperpage{89}
+  \item \spxentry{Richardson extrapolation}, \hyperpage{22, 23}
+  \item \spxentry{richardson()}\spxextra{in module numdifftools.fornberg}, \hyperpage{101}
+  \item \spxentry{richardson\_demo()}\spxextra{in module numdifftools.extrapolation}, 
+		\hyperpage{92}
+  \item \spxentry{richardson\_parameter()}\spxextra{in module numdifftools.fornberg}, 
+		\hyperpage{101}
+  \item \spxentry{richardson\_step()}\spxextra{LogRule property}, \hyperpage{96}
+  \item \spxentry{rule()}\spxextra{LogRule method}, \hyperpage{96}
+  \item \spxentry{rule()}\spxextra{Richardson method}, \hyperpage{87}, \hyperpage{90}
+  \item \spxentry{run\_hamiltonian()}\spxextra{in module numdifftools.tests.hamiltonian}, 
+		\hyperpage{67}
+
+  \indexspace
+  \bigletter S
+  \item \spxentry{scale()}\spxextra{MaxStepGenerator property}, \hyperpage{85}
+  \item \spxentry{scale()}\spxextra{MinStepGenerator property}, \hyperpage{86}, \hyperpage{123}
+  \item \spxentry{sec()}\spxextra{Bicomplex method}, \hyperpage{107}
+  \item \spxentry{sech()}\spxextra{Bicomplex method}, \hyperpage{107}
+  \item \spxentry{set\_richardson\_rule()}\spxextra{Derivative method}, \hyperpage{75}
+  \item \spxentry{set\_richardson\_rule()}\spxextra{Gradient method}, \hyperpage{77}
+  \item \spxentry{set\_richardson\_rule()}\spxextra{Hessdiag method}, \hyperpage{79}
+  \item \spxentry{set\_richardson\_rule()}\spxextra{Hessian method}, \hyperpage{82}
+  \item \spxentry{set\_richardson\_rule()}\spxextra{Jacobian method}, \hyperpage{84}
+  \item \spxentry{setup\_method()}\spxextra{TestExtrapolation method}, \hyperpage{67}
+  \item \spxentry{setup\_method()}\spxextra{TestRichardson method}, \hyperpage{67}
+  \item \spxentry{shape()}\spxextra{Bicomplex property}, \hyperpage{107}
+  \item \spxentry{sin()}\spxextra{Bicomplex method}, \hyperpage{107}
+  \item \spxentry{sinh()}\spxextra{Bicomplex method}, \hyperpage{107}
+  \item \spxentry{size()}\spxextra{Bicomplex property}, \hyperpage{107}
+  \item \spxentry{sqrt()}\spxextra{Bicomplex method}, \hyperpage{107}
+  \item \spxentry{step()}\spxextra{Derivative property}, \hyperpage{75}
+  \item \spxentry{step()}\spxextra{Gradient property}, \hyperpage{77}
+  \item \spxentry{step()}\spxextra{Hessdiag property}, \hyperpage{79}
+  \item \spxentry{step()}\spxextra{Hessian property}, \hyperpage{82}
+  \item \spxentry{step()}\spxextra{Jacobian property}, \hyperpage{84}
+  \item \spxentry{step\_generator\_function()}\spxextra{MaxStepGenerator method}, \hyperpage{85}
+  \item \spxentry{step\_generator\_function()}\spxextra{MinStepGenerator method}, \hyperpage{86}, 
+		\hyperpage{123}
+  \item \spxentry{step\_nom()}\spxextra{MaxStepGenerator property}, \hyperpage{85}
+  \item \spxentry{step\_nom()}\spxextra{MinStepGenerator property}, \hyperpage{86}, \hyperpage{123}
+  \item \spxentry{step\_ratio()}\spxextra{CStepGenerator property}, \hyperpage{103}
+  \item \spxentry{step\_ratio()}\spxextra{MaxStepGenerator property}, \hyperpage{85}
+  \item \spxentry{step\_ratio()}\spxextra{MinStepGenerator property}, \hyperpage{86}, 
+		\hyperpage{123}
+
+  \indexspace
+  \bigletter T
+  \item \spxentry{tan()}\spxextra{Bicomplex method}, \hyperpage{107}
+  \item \spxentry{tanh()}\spxextra{Bicomplex method}, \hyperpage{107}
+  \item \spxentry{Taylor}\spxextra{class in numdifftools.fornberg}, \hyperpage{97}
+  \item \spxentry{Taylor}\spxextra{class in numdifftools.nd\_algopy}, \hyperpage{115}
+  \item \spxentry{taylor()}\spxextra{in module numdifftools.fornberg}, \hyperpage{101}
+  \item \spxentry{test\_\_find\_default\_scale\_run\_all\_benchmarks()}\spxextra{in module numdifftools.tests.test\_scripts}, 
+		\hyperpage{72}
+  \item \spxentry{test\_\_min\_step\_generator\_with\_step\_nom1()}\spxextra{in module numdifftools.tests.test\_step\_generators}, 
+		\hyperpage{73}
+  \item \spxentry{test\_add()}\spxextra{TestBicomplex static method}, \hyperpage{69}
+  \item \spxentry{test\_all\_first\_derivatives()}\spxextra{TestDerivative static method}, 
+		\hyperpage{70}
+  \item \spxentry{test\_all\_second\_derivatives()}\spxextra{TestDerivative static method}, 
+		\hyperpage{70}
+  \item \spxentry{test\_all\_weights()}\spxextra{in module numdifftools.tests.test\_fornberg}, 
+		\hyperpage{68}
+  \item \spxentry{test\_arccos()}\spxextra{TestBicomplex static method}, \hyperpage{69}
+  \item \spxentry{test\_arcsin()}\spxextra{TestBicomplex static method}, \hyperpage{69}
+  \item \spxentry{test\_arg\_c()}\spxextra{TestBicomplex static method}, \hyperpage{69}
+  \item \spxentry{test\_assign()}\spxextra{TestBicomplex static method}, \hyperpage{69}
+  \item \spxentry{test\_backward\_derivative\_on\_sinh()}\spxextra{TestDerivative method}, 
+		\hyperpage{71}
+  \item \spxentry{test\_central\_and\_forward\_derivative\_on\_log()}\spxextra{TestDerivative method}, 
+		\hyperpage{71}
+  \item \spxentry{test\_central\_forward\_backward()}\spxextra{TestRichardson static method}, 
+		\hyperpage{72}
+  \item \spxentry{test\_complex()}\spxextra{TestHessdiag method}, \hyperpage{72}
+  \item \spxentry{test\_complex()}\spxextra{TestRichardson static method}, \hyperpage{72}
+  \item \spxentry{test\_complex\_hessian\_issue\_35()}\spxextra{TestHessian method}, \hyperpage{72}
+  \item \spxentry{test\_conjugate()}\spxextra{TestBicomplex method}, \hyperpage{69}
+  \item \spxentry{test\_cos()}\spxextra{TestBicomplex static method}, \hyperpage{69}
+  \item \spxentry{test\_dea3\_on\_trapz\_sin()}\spxextra{TestExtrapolation method}, \hyperpage{67}
+  \item \spxentry{test\_dea\_on\_trapz\_sin()}\spxextra{TestExtrapolation method}, \hyperpage{67}
+  \item \spxentry{test\_default\_base\_step()}\spxextra{TestCStepGenerator static method}, 
+		\hyperpage{68}
+  \item \spxentry{test\_default\_generator()}\spxextra{TestCStepGenerator static method}, 
+		\hyperpage{68}
+  \item \spxentry{test\_default\_max\_step\_generator()}\spxextra{in module numdifftools.tests.test\_step\_generators}, 
+		\hyperpage{73}
+  \item \spxentry{test\_default\_scale()}\spxextra{TestDerivative static method}, \hyperpage{71}
+  \item \spxentry{test\_default\_step()}\spxextra{TestHessdiag method}, \hyperpage{72}
+  \item \spxentry{test\_der\_abs()}\spxextra{TestBicomplex static method}, \hyperpage{69}
+  \item \spxentry{test\_der\_arccos()}\spxextra{TestBicomplex static method}, \hyperpage{69}
+  \item \spxentry{test\_der\_arccosh()}\spxextra{TestBicomplex static method}, \hyperpage{69}
+  \item \spxentry{test\_der\_arctan()}\spxextra{TestBicomplex static method}, \hyperpage{69}
+  \item \spxentry{test\_der\_cos()}\spxextra{TestBicomplex static method}, \hyperpage{69}
+  \item \spxentry{test\_der\_log()}\spxextra{TestBicomplex static method}, \hyperpage{69}
+  \item \spxentry{test\_derivative\_cube()}\spxextra{TestDerivative static method}, 
+		\hyperpage{70, 71}
+  \item \spxentry{test\_derivative\_exp()}\spxextra{TestDerivative static method}, 
+		\hyperpage{70, 71}
+  \item \spxentry{test\_derivative\_of\_cos()}\spxextra{TestLimit method}, \hyperpage{68}
+  \item \spxentry{test\_derivative\_of\_cos\_x()}\spxextra{TestDerivative static method}, 
+		\hyperpage{71}
+  \item \spxentry{test\_derivative\_on\_log()}\spxextra{TestDerivative static method}, 
+		\hyperpage{70}
+  \item \spxentry{test\_derivative\_on\_sinh()}\spxextra{TestDerivative method}, \hyperpage{70}
+  \item \spxentry{test\_derivative\_sin()}\spxextra{TestDerivative static method}, 
+		\hyperpage{70, 71}
+  \item \spxentry{test\_derivative\_with\_step\_options()}\spxextra{TestDerivative static method}, 
+		\hyperpage{71}
+  \item \spxentry{test\_difficult\_limit()}\spxextra{TestLimit method}, \hyperpage{68}
+  \item \spxentry{test\_directional\_diff()}\spxextra{TestDerivative static method}, 
+		\hyperpage{70, 71}
+  \item \spxentry{test\_directional\_diff()}\spxextra{TestGradient static method}, \hyperpage{71}
+  \item \spxentry{test\_division()}\spxextra{TestBicomplex static method}, \hyperpage{69}
+  \item \spxentry{test\_dot()}\spxextra{TestBicomplex static method}, \hyperpage{69}
+  \item \spxentry{test\_epsal()}\spxextra{TestExtrapolation method}, \hyperpage{67}
+  \item \spxentry{test\_eq()}\spxextra{TestBicomplex static method}, \hyperpage{69}
+  \item \spxentry{test\_fd\_derivative()}\spxextra{in module numdifftools.tests.test\_fornberg}, 
+		\hyperpage{68}
+  \item \spxentry{test\_fixed\_base\_step()}\spxextra{TestCStepGenerator static method}, 
+		\hyperpage{68}
+  \item \spxentry{test\_fixed\_step()}\spxextra{TestHessdiag method}, \hyperpage{72}
+  \item \spxentry{test\_flat()}\spxextra{TestBicomplex method}, \hyperpage{69}
+  \item \spxentry{test\_forward()}\spxextra{TestHessdiag static method}, \hyperpage{70}
+  \item \spxentry{test\_fun\_with\_additional\_parameters()}\spxextra{TestDerivative static method}, 
+		\hyperpage{70, 71}
+  \item \spxentry{test\_ge()}\spxextra{TestBicomplex static method}, \hyperpage{69}
+  \item \spxentry{test\_gradient()}\spxextra{TestGradient static method}, \hyperpage{71}
+  \item \spxentry{test\_gradient\_fulloutput()}\spxextra{TestGradient static method}, 
+		\hyperpage{71}
+  \item \spxentry{test\_gt()}\spxextra{TestBicomplex static method}, \hyperpage{69}
+  \item \spxentry{test\_hessian\_cos\_x\_y\_\_at\_0\_0()}\spxextra{TestHessian static method}, 
+		\hyperpage{70}
+  \item \spxentry{test\_hessian\_cos\_x\_y\_at\_0\_0()}\spxextra{TestHessian static method}, 
+		\hyperpage{72}
+  \item \spxentry{test\_high\_order\_derivative()}\spxextra{in module numdifftools.tests.test\_fornberg}, 
+		\hyperpage{68}
+  \item \spxentry{test\_high\_order\_derivative\_cos()}\spxextra{TestDerivative static method}, 
+		\hyperpage{70, 71}
+  \item \spxentry{test\_infinite\_functions()}\spxextra{TestDerivative method}, \hyperpage{71}
+  \item \spxentry{test\_init()}\spxextra{TestBicomplex method}, \hyperpage{69}
+  \item \spxentry{test\_issue\_25()}\spxextra{TestJacobian method}, \hyperpage{71}
+  \item \spxentry{test\_issue\_25()}\spxextra{TestJacobian static method}, \hyperpage{70}, 
+		\hyperpage{72}
+  \item \spxentry{test\_issue\_27a()}\spxextra{TestJacobian static method}, \hyperpage{72}
+  \item \spxentry{test\_issue\_27b()}\spxextra{TestJacobian static method}, \hyperpage{72}
+  \item \spxentry{test\_issue\_39()}\spxextra{TestGradient static method}, \hyperpage{71}
+  \item \spxentry{test\_jacobian\_fulloutput()}\spxextra{TestJacobian static method}, 
+		\hyperpage{72}
+  \item \spxentry{test\_le()}\spxextra{TestBicomplex static method}, \hyperpage{69}
+  \item \spxentry{test\_low\_order\_derivative\_on\_example\_functions()}\spxextra{in module numdifftools.tests.test\_fornberg}, 
+		\hyperpage{68}
+  \item \spxentry{test\_lt()}\spxextra{TestBicomplex static method}, \hyperpage{69}
+  \item \spxentry{test\_max\_step\_generator\_default\_base\_step()}\spxextra{in module numdifftools.tests.test\_step\_generators}, 
+		\hyperpage{73}
+  \item \spxentry{test\_max\_step\_generator\_with\_base\_step01()}\spxextra{in module numdifftools.tests.test\_step\_generators}, 
+		\hyperpage{73}
+  \item \spxentry{test\_min\_step\_generator\_default\_base\_step()}\spxextra{in module numdifftools.tests.test\_step\_generators}, 
+		\hyperpage{73}
+  \item \spxentry{test\_min\_step\_generator\_with\_base\_step01()}\spxextra{in module numdifftools.tests.test\_step\_generators}, 
+		\hyperpage{73}
+  \item \spxentry{test\_min\_step\_generator\_with\_step\_ratio4()}\spxextra{in module numdifftools.tests.test\_step\_generators}, 
+		\hyperpage{73}
+  \item \spxentry{test\_mod\_c()}\spxextra{TestBicomplex static method}, \hyperpage{69}
+  \item \spxentry{test\_multiplication()}\spxextra{TestBicomplex static method}, \hyperpage{69}
+  \item \spxentry{test\_neg()}\spxextra{TestBicomplex method}, \hyperpage{69}
+  \item \spxentry{test\_norm()}\spxextra{TestBicomplex method}, \hyperpage{69}
+  \item \spxentry{test\_on\_matrix\_valued\_function()}\spxextra{TestJacobian method}, 
+		\hyperpage{71}
+  \item \spxentry{test\_on\_matrix\_valued\_function()}\spxextra{TestJacobian static method}, 
+		\hyperpage{70}, \hyperpage{72}
+  \item \spxentry{test\_on\_scalar\_function()}\spxextra{TestGradient static method}, 
+		\hyperpage{70, 71}
+  \item \spxentry{test\_on\_scalar\_function()}\spxextra{TestJacobian static method}, 
+		\hyperpage{70--72}
+  \item \spxentry{test\_on\_vector\_valued\_function()}\spxextra{TestJacobian method}, 
+		\hyperpage{70, 71}
+  \item \spxentry{test\_on\_vector\_valued\_function()}\spxextra{TestJacobian static method}, 
+		\hyperpage{72}
+  \item \spxentry{test\_order\_step\_combinations()}\spxextra{TestRichardson method}, 
+		\hyperpage{67}
+  \item \spxentry{test\_pow()}\spxextra{TestBicomplex static method}, \hyperpage{69}
+  \item \spxentry{test\_profile\_numdifftools\_main()}\spxextra{in module numdifftools.tests.test\_scripts}, 
+		\hyperpage{72}
+  \item \spxentry{test\_profile\_numdifftools\_profile\_hessian()}\spxextra{in module numdifftools.tests.test\_scripts}, 
+		\hyperpage{72}
+  \item \spxentry{test\_rdivision()}\spxextra{TestBicomplex method}, \hyperpage{69}
+  \item \spxentry{test\_repr()}\spxextra{TestBicomplex method}, \hyperpage{69}
+  \item \spxentry{test\_residue\_1\_div\_1\_minus\_exp\_x()}\spxextra{TestLimit method}, 
+		\hyperpage{68}
+  \item \spxentry{test\_residue\_1\_div\_1\_minus\_exp\_x()}\spxextra{TestResidue method}, 
+		\hyperpage{68}
+  \item \spxentry{test\_residue\_1\_div\_sin\_x2()}\spxextra{TestResidue method}, \hyperpage{68}
+  \item \spxentry{test\_reverse()}\spxextra{TestHessdiag static method}, \hyperpage{70}
+  \item \spxentry{test\_richardson()}\spxextra{TestExtrapolation method}, \hyperpage{67}
+  \item \spxentry{test\_rpow()}\spxextra{TestBicomplex static method}, \hyperpage{69}
+  \item \spxentry{test\_rsub()}\spxextra{TestBicomplex static method}, \hyperpage{69}
+  \item \spxentry{test\_run\_gradient\_and\_hessian\_benchmarks()}\spxextra{in module numdifftools.tests.test\_scripts}, 
+		\hyperpage{72}
+  \item \spxentry{test\_run\_hamiltonian()}\spxextra{TestHessian method}, \hyperpage{70}, 
+		\hyperpage{72}
+  \item \spxentry{test\_scalar\_to\_vector()}\spxextra{TestJacobian static method}, 
+		\hyperpage{70--72}
+  \item \spxentry{test\_shape()}\spxextra{TestBicomplex method}, \hyperpage{69}
+  \item \spxentry{test\_sinx\_div\_x()}\spxextra{TestLimit method}, \hyperpage{68}
+  \item \spxentry{test\_sub()}\spxextra{TestBicomplex static method}, \hyperpage{69}
+  \item \spxentry{test\_subsref()}\spxextra{TestBicomplex static method}, \hyperpage{70}
+  \item \spxentry{test\_weights()}\spxextra{in module numdifftools.tests.test\_fornberg}, 
+		\hyperpage{68}
+  \item \spxentry{TestBicomplex}\spxextra{class in numdifftools.tests.test\_multicomplex}, 
+		\hyperpage{69}
+  \item \spxentry{TestCStepGenerator}\spxextra{class in numdifftools.tests.test\_limits}, 
+		\hyperpage{68}
+  \item \spxentry{TestDerivative}\spxextra{class in numdifftools.tests.test\_multicomplex}, 
+		\hyperpage{70}
+  \item \spxentry{TestDerivative}\spxextra{class in numdifftools.tests.test\_nd\_algopy}, 
+		\hyperpage{70}
+  \item \spxentry{TestDerivative}\spxextra{class in numdifftools.tests.test\_numdifftools}, 
+		\hyperpage{71}
+  \item \spxentry{TestExtrapolation}\spxextra{class in numdifftools.tests.test\_extrapolation}, 
+		\hyperpage{67}
+  \item \spxentry{TestGradient}\spxextra{class in numdifftools.tests.test\_nd\_algopy}, 
+		\hyperpage{70}
+  \item \spxentry{TestGradient}\spxextra{class in numdifftools.tests.test\_nd\_scipy}, 
+		\hyperpage{71}
+  \item \spxentry{TestGradient}\spxextra{class in numdifftools.tests.test\_numdifftools}, 
+		\hyperpage{71}
+  \item \spxentry{TestHessdiag}\spxextra{class in numdifftools.tests.test\_nd\_algopy}, 
+		\hyperpage{70}
+  \item \spxentry{TestHessdiag}\spxextra{class in numdifftools.tests.test\_numdifftools}, 
+		\hyperpage{72}
+  \item \spxentry{TestHessian}\spxextra{class in numdifftools.tests.test\_nd\_algopy}, 
+		\hyperpage{70}
+  \item \spxentry{TestHessian}\spxextra{class in numdifftools.tests.test\_numdifftools}, 
+		\hyperpage{72}
+  \item \spxentry{TestJacobian}\spxextra{class in numdifftools.tests.test\_nd\_algopy}, 
+		\hyperpage{70}
+  \item \spxentry{TestJacobian}\spxextra{class in numdifftools.tests.test\_nd\_scipy}, 
+		\hyperpage{71}
+  \item \spxentry{TestJacobian}\spxextra{class in numdifftools.tests.test\_numdifftools}, 
+		\hyperpage{72}
+  \item \spxentry{TestLimit}\spxextra{class in numdifftools.tests.test\_limits}, \hyperpage{68}
+  \item \spxentry{TestResidue}\spxextra{class in numdifftools.tests.test\_limits}, \hyperpage{68}
+  \item \spxentry{TestRichardson}\spxextra{class in numdifftools.tests.test\_extrapolation}, 
+		\hyperpage{67}
+  \item \spxentry{TestRichardson}\spxextra{class in numdifftools.tests.test\_numdifftools}, 
+		\hyperpage{72}
+
+  \indexspace
+  \bigletter Z
+  \item \spxentry{z1}\spxextra{Bicomplex attribute}, \hyperpage{107}
+  \item \spxentry{z2}\spxextra{Bicomplex attribute}, \hyperpage{107}
+
+\end{sphinxtheindex}

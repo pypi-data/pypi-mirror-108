@@ -1,0 +1,317 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>numdifftools.tests.hamiltonian &mdash; Numdifftools 0.9.40 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/language_data.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Numdifftools
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.9
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../intro/index.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../tutorials/index.html">2. Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../how-to/index.html">3. How-to guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../topics/index.html">4. Topics guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../reference/index.html">5. Reference</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../appendix/changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../appendix/authors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../appendix/license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../appendix/acknowledgement.html">Acknowledgments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../appendix/index.html">Indices and tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../appendix/zreferences.html">Bibliography</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Numdifftools</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+      <li>numdifftools.tests.hamiltonian</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for numdifftools.tests.hamiltonian</h1><div class="highlight"><pre>
+<span></span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">Created on Jun 25, 2016</span>
+
+<span class="sd">@author: pab</span>
+<span class="sd">&#39;&#39;&#39;</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">pi</span><span class="p">,</span> <span class="n">r_</span><span class="p">,</span> <span class="n">sqrt</span>
+<span class="kn">from</span> <span class="nn">scipy</span> <span class="kn">import</span> <span class="n">constants</span><span class="p">,</span> <span class="n">linalg</span><span class="p">,</span> <span class="n">optimize</span>
+<span class="kn">from</span> <span class="nn">numdifftools.multicomplex</span> <span class="kn">import</span> <span class="n">c_abs</span>
+
+
+<div class="viewcode-block" id="ClassicalHamiltonian"><a class="viewcode-back" href="../../../reference/numdifftools.tests.html#numdifftools.tests.hamiltonian.ClassicalHamiltonian">[docs]</a><span class="k">class</span> <span class="nc">ClassicalHamiltonian</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Hamiltonian</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    n : scalar</span>
+<span class="sd">        number of ions in the chain</span>
+<span class="sd">    w : scalar</span>
+<span class="sd">        angular trap frequency</span>
+<span class="sd">    C : scalar</span>
+<span class="sd">        Coulomb constant times the electronic charge in SI units.</span>
+<span class="sd">    m : scalar</span>
+<span class="sd">        the mass of a single trapped ion in the chain</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">n</span> <span class="o">=</span> <span class="mi">2</span>
+        <span class="n">f</span> <span class="o">=</span> <span class="mi">1000000</span>      <span class="c1"># f is a scalar, it&#39;s the trap frequency</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">w</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">pi</span> <span class="o">*</span> <span class="n">f</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">C</span> <span class="o">=</span> <span class="p">(</span><span class="mi">4</span> <span class="o">*</span> <span class="n">pi</span> <span class="o">*</span> <span class="n">constants</span><span class="o">.</span><span class="n">epsilon_0</span><span class="p">)</span> <span class="o">**</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="n">constants</span><span class="o">.</span><span class="n">e</span> <span class="o">**</span> <span class="mi">2</span>
+        <span class="c1"># C is a scalar, it&#39;s the I</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">m</span> <span class="o">=</span> <span class="mf">39.96</span> <span class="o">*</span> <span class="mf">1.66e-27</span>
+
+<div class="viewcode-block" id="ClassicalHamiltonian.potential"><a class="viewcode-back" href="../../../reference/numdifftools.tests.html#numdifftools.tests.hamiltonian.ClassicalHamiltonian.potential">[docs]</a>    <span class="k">def</span> <span class="nf">potential</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">positionvector</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return potential</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        positionvector:  1-d array (vector) of length n</span>
+<span class="sd">            positions of the n ions</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">positionvector</span><span class="p">)</span>
+        <span class="n">w</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">w</span>
+        <span class="n">C</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">C</span>
+        <span class="n">m</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">m</span>
+
+        <span class="c1"># First we consider the potential of the harmonic oscillator</span>
+        <span class="n">v_x</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">m</span> <span class="o">*</span> <span class="p">(</span><span class="n">w</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="nb">sum</span><span class="p">(</span><span class="n">x</span> <span class="o">**</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="c1"># then we add the coulomb interaction:</span>
+        <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">xi</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+            <span class="k">for</span> <span class="n">xj</span> <span class="ow">in</span> <span class="n">x</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">:]:</span>
+                <span class="n">v_x</span> <span class="o">+=</span> <span class="n">C</span> <span class="o">/</span> <span class="p">(</span><span class="n">c_abs</span><span class="p">(</span><span class="n">xi</span> <span class="o">-</span> <span class="n">xj</span><span class="p">))</span>
+        <span class="k">return</span> <span class="n">v_x</span></div>
+
+<div class="viewcode-block" id="ClassicalHamiltonian.initialposition"><a class="viewcode-back" href="../../../reference/numdifftools.tests.html#numdifftools.tests.hamiltonian.ClassicalHamiltonian.initialposition">[docs]</a>    <span class="k">def</span> <span class="nf">initialposition</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Defines initial position as an estimate for the minimize process.&quot;&quot;&quot;</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">n</span>
+        <span class="n">x_0</span> <span class="o">=</span> <span class="n">r_</span><span class="p">[</span><span class="o">-</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">:(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">:</span><span class="n">n</span> <span class="o">*</span> <span class="mi">1</span><span class="n">j</span><span class="p">]</span>
+        <span class="k">return</span> <span class="n">x_0</span></div>
+
+<div class="viewcode-block" id="ClassicalHamiltonian.normal_modes"><a class="viewcode-back" href="../../../reference/numdifftools.tests.html#numdifftools.tests.hamiltonian.ClassicalHamiltonian.normal_modes">[docs]</a>    <span class="k">def</span> <span class="nf">normal_modes</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">eigenvalues</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Return normal modes</span>
+
+<span class="sd">        Computed eigenvalues of the matrix Vx are of the form</span>
+<span class="sd">            (normal_modes)**2*m.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="n">m</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">m</span>
+        <span class="n">normal_modes</span> <span class="o">=</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">eigenvalues</span> <span class="o">/</span> <span class="n">m</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">normal_modes</span></div></div>
+
+
+<div class="viewcode-block" id="run_hamiltonian"><a class="viewcode-back" href="../../../reference/numdifftools.tests.html#numdifftools.tests.hamiltonian.run_hamiltonian">[docs]</a><span class="k">def</span> <span class="nf">run_hamiltonian</span><span class="p">(</span><span class="n">hessian</span><span class="p">,</span> <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="n">ClassicalHamiltonian</span><span class="p">()</span>
+
+    <span class="n">xopt</span> <span class="o">=</span> <span class="n">optimize</span><span class="o">.</span><span class="n">fmin</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">potential</span><span class="p">,</span> <span class="n">c</span><span class="o">.</span><span class="n">initialposition</span><span class="p">(),</span> <span class="n">xtol</span><span class="o">=</span><span class="mf">1e-10</span><span class="p">)</span>
+
+    <span class="n">hessian</span><span class="o">.</span><span class="n">fun</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">potential</span>
+    <span class="n">hessian</span><span class="o">.</span><span class="n">full_output</span> <span class="o">=</span> <span class="kc">True</span>
+
+    <span class="n">h</span><span class="p">,</span> <span class="n">info</span> <span class="o">=</span> <span class="n">hessian</span><span class="p">(</span><span class="n">xopt</span><span class="p">)</span>
+    <span class="n">true_h</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mf">5.23748385e-12</span><span class="p">,</span> <span class="o">-</span><span class="mf">2.61873829e-12</span><span class="p">],</span>
+                       <span class="p">[</span><span class="o">-</span><span class="mf">2.61873829e-12</span><span class="p">,</span> <span class="mf">5.23748385e-12</span><span class="p">]])</span>
+    <span class="n">eigenvalues</span> <span class="o">=</span> <span class="n">linalg</span><span class="o">.</span><span class="n">eigvals</span><span class="p">(</span><span class="n">h</span><span class="p">)</span>
+    <span class="n">normal_modes</span> <span class="o">=</span> <span class="n">c</span><span class="o">.</span><span class="n">normal_modes</span><span class="p">(</span><span class="n">eigenvalues</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">verbose</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">potential</span><span class="p">([</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.5</span><span class="p">]))</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">potential</span><span class="p">([</span><span class="o">-</span><span class="mf">0.5</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">]))</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="o">.</span><span class="n">potential</span><span class="p">([</span><span class="mf">0.0</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">]))</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">xopt</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;h&#39;</span><span class="p">,</span> <span class="n">h</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;h-true_h&#39;</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">h</span> <span class="o">-</span> <span class="n">true_h</span><span class="p">))</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;error_estimate&#39;</span><span class="p">,</span> <span class="n">info</span><span class="o">.</span><span class="n">error_estimate</span><span class="p">)</span>
+
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;eigenvalues&#39;</span><span class="p">,</span> <span class="n">eigenvalues</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;normal_modes&#39;</span><span class="p">,</span> <span class="n">normal_modes</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">h</span><span class="p">,</span> <span class="n">info</span><span class="o">.</span><span class="n">error_estimate</span><span class="p">,</span> <span class="n">true_h</span></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2009-2021, Per A. Brodtkorb, John D&#39;Errico.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

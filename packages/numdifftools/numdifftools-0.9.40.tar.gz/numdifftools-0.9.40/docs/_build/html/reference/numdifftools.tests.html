@@ -1,0 +1,1186 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>5.2.1. numdifftools.tests package &mdash; Numdifftools 0.9.40 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Changelog" href="../appendix/changelog.html" />
+    <link rel="prev" title="5.2. Numdifftools package details" href="numdifftools.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Numdifftools
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.9
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html">2. Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../how-to/index.html">3. How-to guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topics/index.html">4. Topics guides</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">5. Reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="numdifftools_summary.html">5.1. Numdifftools summary</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="numdifftools.html">5.2. Numdifftools package details</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">5.2.1. numdifftools.tests package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#module-numdifftools.tests.hamiltonian">5.2.1.1. numdifftools.tests.hamiltonian module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-numdifftools.tests.test_extrapolation">5.2.1.2. numdifftools.tests.test_extrapolation module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-numdifftools.tests.test_fornberg">5.2.1.3. numdifftools.tests.test_fornberg module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-numdifftools.tests.test_limits">5.2.1.4. numdifftools.tests.test_limits module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-numdifftools.tests.test_multicomplex">5.2.1.5. numdifftools.tests.test_multicomplex module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-numdifftools.tests.test_nd_algopy">5.2.1.6. numdifftools.tests.test_nd_algopy module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-numdifftools.tests.test_nd_scipy">5.2.1.7. numdifftools.tests.test_nd_scipy module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-numdifftools.tests.test_numdifftools">5.2.1.8. numdifftools.tests.test_numdifftools module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-numdifftools.tests.test_scripts">5.2.1.9. numdifftools.tests.test_scripts module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-numdifftools.tests.test_step_generators">5.2.1.10. numdifftools.tests.test_step_generators module</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="numdifftools.html#module-numdifftools.core">5.2.2. numdifftools.core module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="numdifftools.html#module-numdifftools.extrapolation">5.2.3. numdifftools.extrapolation module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="numdifftools.html#module-numdifftools.finite_difference">5.2.4. numdifftools.finite_difference module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="numdifftools.html#module-numdifftools.fornberg">5.2.5. numdifftools.fornberg module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="numdifftools.html#module-numdifftools.limits">5.2.6. numdifftools.limits module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="numdifftools.html#module-numdifftools.multicomplex">5.2.7. numdifftools.multicomplex module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="numdifftools.html#module-numdifftools.nd_algopy">5.2.8. numdifftools.nd_algopy module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="numdifftools.html#module-numdifftools.nd_scipy">5.2.9. numdifftools.nd_scipy module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="numdifftools.html#module-numdifftools.nd_statsmodels">5.2.10. numdifftools.nd_statsmodels module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="numdifftools.html#module-numdifftools.step_generators">5.2.11. numdifftools.step_generators module</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/authors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/acknowledgement.html">Acknowledgments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/index.html">Indices and tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/zreferences.html">Bibliography</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Numdifftools</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html"><span class="section-number">5. </span>Reference</a> &raquo;</li>
+        
+          <li><a href="numdifftools.html"><span class="section-number">5.2. </span>Numdifftools package details</a> &raquo;</li>
+        
+      <li><span class="section-number">5.2.1. </span>numdifftools.tests package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/reference/numdifftools.tests.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="numdifftools-tests-package">
+<span id="numdifftools-tests"></span><h1><span class="section-number">5.2.1. </span>numdifftools.tests package<a class="headerlink" href="#numdifftools-tests-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-numdifftools.tests.hamiltonian">
+<span id="numdifftools-tests-hamiltonian-module"></span><h2><span class="section-number">5.2.1.1. </span>numdifftools.tests.hamiltonian module<a class="headerlink" href="#module-numdifftools.tests.hamiltonian" title="Permalink to this headline">¶</a></h2>
+<p>Created on Jun 25, 2016</p>
+<p>&#64;author: pab</p>
+<dl class="py class">
+<dt id="numdifftools.tests.hamiltonian.ClassicalHamiltonian">
+<em class="property">class </em><code class="sig-name descname">ClassicalHamiltonian</code><a class="reference internal" href="../_modules/numdifftools/tests/hamiltonian.html#ClassicalHamiltonian"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.hamiltonian.ClassicalHamiltonian" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.8/library/functions.html#object" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Hamiltonian</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>n</strong><span class="classifier">scalar</span></dt><dd><p>number of ions in the chain</p>
+</dd>
+<dt><strong>w</strong><span class="classifier">scalar</span></dt><dd><p>angular trap frequency</p>
+</dd>
+<dt><strong>C</strong><span class="classifier">scalar</span></dt><dd><p>Coulomb constant times the electronic charge in SI units.</p>
+</dd>
+<dt><strong>m</strong><span class="classifier">scalar</span></dt><dd><p>the mass of a single trapped ion in the chain</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="numdifftools.tests.hamiltonian.ClassicalHamiltonian.initialposition">
+<code class="sig-name descname">initialposition</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/hamiltonian.html#ClassicalHamiltonian.initialposition"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.hamiltonian.ClassicalHamiltonian.initialposition" title="Permalink to this definition">¶</a></dt>
+<dd><p>Defines initial position as an estimate for the minimize process.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.hamiltonian.ClassicalHamiltonian.normal_modes">
+<code class="sig-name descname">normal_modes</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">eigenvalues</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/hamiltonian.html#ClassicalHamiltonian.normal_modes"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.hamiltonian.ClassicalHamiltonian.normal_modes" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return normal modes</p>
+<dl class="simple">
+<dt>Computed eigenvalues of the matrix Vx are of the form</dt><dd><p>(normal_modes)**2*m.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.hamiltonian.ClassicalHamiltonian.potential">
+<code class="sig-name descname">potential</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">positionvector</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/hamiltonian.html#ClassicalHamiltonian.potential"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.hamiltonian.ClassicalHamiltonian.potential" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return potential</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>positionvector:  1-d array (vector) of length n</strong></dt><dd><p>positions of the n ions</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt id="numdifftools.tests.hamiltonian.run_hamiltonian">
+<code class="sig-name descname">run_hamiltonian</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">hessian</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/hamiltonian.html#run_hamiltonian"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.hamiltonian.run_hamiltonian" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-numdifftools.tests.test_extrapolation">
+<span id="numdifftools-tests-test-extrapolation-module"></span><h2><span class="section-number">5.2.1.2. </span>numdifftools.tests.test_extrapolation module<a class="headerlink" href="#module-numdifftools.tests.test_extrapolation" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="numdifftools.tests.test_extrapolation.TestExtrapolation">
+<em class="property">class </em><code class="sig-name descname">TestExtrapolation</code><a class="reference internal" href="../_modules/numdifftools/tests/test_extrapolation.html#TestExtrapolation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_extrapolation.TestExtrapolation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.8/library/functions.html#object" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="py method">
+<dt id="numdifftools.tests.test_extrapolation.TestExtrapolation.setup_method">
+<code class="sig-name descname">setup_method</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_extrapolation.html#TestExtrapolation.setup_method"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_extrapolation.TestExtrapolation.setup_method" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_extrapolation.TestExtrapolation.test_dea3_on_trapz_sin">
+<code class="sig-name descname">test_dea3_on_trapz_sin</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_extrapolation.html#TestExtrapolation.test_dea3_on_trapz_sin"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_extrapolation.TestExtrapolation.test_dea3_on_trapz_sin" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_extrapolation.TestExtrapolation.test_dea_on_trapz_sin">
+<code class="sig-name descname">test_dea_on_trapz_sin</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_extrapolation.html#TestExtrapolation.test_dea_on_trapz_sin"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_extrapolation.TestExtrapolation.test_dea_on_trapz_sin" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_extrapolation.TestExtrapolation.test_epsal">
+<code class="sig-name descname">test_epsal</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_extrapolation.html#TestExtrapolation.test_epsal"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_extrapolation.TestExtrapolation.test_epsal" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_extrapolation.TestExtrapolation.test_richardson">
+<code class="sig-name descname">test_richardson</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_extrapolation.html#TestExtrapolation.test_richardson"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_extrapolation.TestExtrapolation.test_richardson" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="numdifftools.tests.test_extrapolation.TestRichardson">
+<em class="property">class </em><code class="sig-name descname">TestRichardson</code><a class="reference internal" href="../_modules/numdifftools/tests/test_extrapolation.html#TestRichardson"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_extrapolation.TestRichardson" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.8/library/functions.html#object" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="py method">
+<dt id="numdifftools.tests.test_extrapolation.TestRichardson.setup_method">
+<code class="sig-name descname">setup_method</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_extrapolation.html#TestRichardson.setup_method"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_extrapolation.TestRichardson.setup_method" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_extrapolation.TestRichardson.test_order_step_combinations">
+<code class="sig-name descname">test_order_step_combinations</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_extrapolation.html#TestRichardson.test_order_step_combinations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_extrapolation.TestRichardson.test_order_step_combinations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-numdifftools.tests.test_fornberg">
+<span id="numdifftools-tests-test-fornberg-module"></span><h2><span class="section-number">5.2.1.3. </span>numdifftools.tests.test_fornberg module<a class="headerlink" href="#module-numdifftools.tests.test_fornberg" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="numdifftools.tests.test_fornberg.ExampleFunctions">
+<em class="property">class </em><code class="sig-name descname">ExampleFunctions</code><a class="reference internal" href="../_modules/numdifftools/tests/test_fornberg.html#ExampleFunctions"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_fornberg.ExampleFunctions" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.8/library/functions.html#object" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="py method">
+<dt id="numdifftools.tests.test_fornberg.ExampleFunctions.fun0">
+<em class="property">static </em><code class="sig-name descname">fun0</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">z</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_fornberg.html#ExampleFunctions.fun0"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_fornberg.ExampleFunctions.fun0" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_fornberg.ExampleFunctions.fun1">
+<em class="property">static </em><code class="sig-name descname">fun1</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">z</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_fornberg.html#ExampleFunctions.fun1"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_fornberg.ExampleFunctions.fun1" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_fornberg.ExampleFunctions.fun10">
+<em class="property">static </em><code class="sig-name descname">fun10</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">z</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_fornberg.html#ExampleFunctions.fun10"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_fornberg.ExampleFunctions.fun10" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_fornberg.ExampleFunctions.fun11">
+<em class="property">static </em><code class="sig-name descname">fun11</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">z</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_fornberg.html#ExampleFunctions.fun11"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_fornberg.ExampleFunctions.fun11" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_fornberg.ExampleFunctions.fun12">
+<em class="property">static </em><code class="sig-name descname">fun12</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">z</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_fornberg.html#ExampleFunctions.fun12"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_fornberg.ExampleFunctions.fun12" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_fornberg.ExampleFunctions.fun13">
+<em class="property">static </em><code class="sig-name descname">fun13</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">z</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_fornberg.html#ExampleFunctions.fun13"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_fornberg.ExampleFunctions.fun13" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_fornberg.ExampleFunctions.fun14">
+<em class="property">static </em><code class="sig-name descname">fun14</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">z</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_fornberg.html#ExampleFunctions.fun14"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_fornberg.ExampleFunctions.fun14" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_fornberg.ExampleFunctions.fun2">
+<em class="property">static </em><code class="sig-name descname">fun2</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">z</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_fornberg.html#ExampleFunctions.fun2"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_fornberg.ExampleFunctions.fun2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_fornberg.ExampleFunctions.fun3">
+<em class="property">static </em><code class="sig-name descname">fun3</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">z</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_fornberg.html#ExampleFunctions.fun3"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_fornberg.ExampleFunctions.fun3" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_fornberg.ExampleFunctions.fun4">
+<em class="property">static </em><code class="sig-name descname">fun4</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">z</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_fornberg.html#ExampleFunctions.fun4"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_fornberg.ExampleFunctions.fun4" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_fornberg.ExampleFunctions.fun5">
+<em class="property">static </em><code class="sig-name descname">fun5</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">z</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_fornberg.html#ExampleFunctions.fun5"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_fornberg.ExampleFunctions.fun5" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_fornberg.ExampleFunctions.fun6">
+<em class="property">static </em><code class="sig-name descname">fun6</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">z</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_fornberg.html#ExampleFunctions.fun6"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_fornberg.ExampleFunctions.fun6" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_fornberg.ExampleFunctions.fun7">
+<em class="property">static </em><code class="sig-name descname">fun7</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">z</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_fornberg.html#ExampleFunctions.fun7"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_fornberg.ExampleFunctions.fun7" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_fornberg.ExampleFunctions.fun8">
+<em class="property">static </em><code class="sig-name descname">fun8</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">z</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_fornberg.html#ExampleFunctions.fun8"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_fornberg.ExampleFunctions.fun8" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_fornberg.ExampleFunctions.fun9">
+<em class="property">static </em><code class="sig-name descname">fun9</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">z</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_fornberg.html#ExampleFunctions.fun9"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_fornberg.ExampleFunctions.fun9" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt id="numdifftools.tests.test_fornberg.test_all_weights">
+<code class="sig-name descname">test_all_weights</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_fornberg.html#test_all_weights"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_fornberg.test_all_weights" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="numdifftools.tests.test_fornberg.test_fd_derivative">
+<code class="sig-name descname">test_fd_derivative</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_fornberg.html#test_fd_derivative"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_fornberg.test_fd_derivative" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="numdifftools.tests.test_fornberg.test_high_order_derivative">
+<code class="sig-name descname">test_high_order_derivative</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3.8/library/constants.html#None" title="(in Python v3.8)">None</a><a class="reference internal" href="../_modules/numdifftools/tests/test_fornberg.html#test_high_order_derivative"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_fornberg.test_high_order_derivative" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="numdifftools.tests.test_fornberg.test_low_order_derivative_on_example_functions">
+<code class="sig-name descname">test_low_order_derivative_on_example_functions</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_fornberg.html#test_low_order_derivative_on_example_functions"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_fornberg.test_low_order_derivative_on_example_functions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="numdifftools.tests.test_fornberg.test_weights">
+<code class="sig-name descname">test_weights</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_fornberg.html#test_weights"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_fornberg.test_weights" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-numdifftools.tests.test_limits">
+<span id="numdifftools-tests-test-limits-module"></span><h2><span class="section-number">5.2.1.4. </span>numdifftools.tests.test_limits module<a class="headerlink" href="#module-numdifftools.tests.test_limits" title="Permalink to this headline">¶</a></h2>
+<p>Created on 28. aug. 2015</p>
+<p>&#64;author: pab</p>
+<dl class="py class">
+<dt id="numdifftools.tests.test_limits.TestCStepGenerator">
+<em class="property">class </em><code class="sig-name descname">TestCStepGenerator</code><a class="reference internal" href="../_modules/numdifftools/tests/test_limits.html#TestCStepGenerator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_limits.TestCStepGenerator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.8/library/functions.html#object" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="py method">
+<dt id="numdifftools.tests.test_limits.TestCStepGenerator.test_default_base_step">
+<em class="property">static </em><code class="sig-name descname">test_default_base_step</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_limits.html#TestCStepGenerator.test_default_base_step"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_limits.TestCStepGenerator.test_default_base_step" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_limits.TestCStepGenerator.test_default_generator">
+<em class="property">static </em><code class="sig-name descname">test_default_generator</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_limits.html#TestCStepGenerator.test_default_generator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_limits.TestCStepGenerator.test_default_generator" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_limits.TestCStepGenerator.test_fixed_base_step">
+<em class="property">static </em><code class="sig-name descname">test_fixed_base_step</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_limits.html#TestCStepGenerator.test_fixed_base_step"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_limits.TestCStepGenerator.test_fixed_base_step" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="numdifftools.tests.test_limits.TestLimit">
+<em class="property">class </em><code class="sig-name descname">TestLimit</code><a class="reference internal" href="../_modules/numdifftools/tests/test_limits.html#TestLimit"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_limits.TestLimit" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.8/library/functions.html#object" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="py method">
+<dt id="numdifftools.tests.test_limits.TestLimit.test_derivative_of_cos">
+<code class="sig-name descname">test_derivative_of_cos</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_limits.html#TestLimit.test_derivative_of_cos"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_limits.TestLimit.test_derivative_of_cos" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_limits.TestLimit.test_difficult_limit">
+<code class="sig-name descname">test_difficult_limit</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_limits.html#TestLimit.test_difficult_limit"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_limits.TestLimit.test_difficult_limit" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_limits.TestLimit.test_residue_1_div_1_minus_exp_x">
+<code class="sig-name descname">test_residue_1_div_1_minus_exp_x</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_limits.html#TestLimit.test_residue_1_div_1_minus_exp_x"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_limits.TestLimit.test_residue_1_div_1_minus_exp_x" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_limits.TestLimit.test_sinx_div_x">
+<code class="sig-name descname">test_sinx_div_x</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_limits.html#TestLimit.test_sinx_div_x"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_limits.TestLimit.test_sinx_div_x" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="numdifftools.tests.test_limits.TestResidue">
+<em class="property">class </em><code class="sig-name descname">TestResidue</code><a class="reference internal" href="../_modules/numdifftools/tests/test_limits.html#TestResidue"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_limits.TestResidue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.8/library/functions.html#object" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="py method">
+<dt id="numdifftools.tests.test_limits.TestResidue.test_residue_1_div_1_minus_exp_x">
+<code class="sig-name descname">test_residue_1_div_1_minus_exp_x</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_limits.html#TestResidue.test_residue_1_div_1_minus_exp_x"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_limits.TestResidue.test_residue_1_div_1_minus_exp_x" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_limits.TestResidue.test_residue_1_div_sin_x2">
+<code class="sig-name descname">test_residue_1_div_sin_x2</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_limits.html#TestResidue.test_residue_1_div_sin_x2"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_limits.TestResidue.test_residue_1_div_sin_x2" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-numdifftools.tests.test_multicomplex">
+<span id="numdifftools-tests-test-multicomplex-module"></span><h2><span class="section-number">5.2.1.5. </span>numdifftools.tests.test_multicomplex module<a class="headerlink" href="#module-numdifftools.tests.test_multicomplex" title="Permalink to this headline">¶</a></h2>
+<p>Created on 22. apr. 2015</p>
+<p>&#64;author: pab</p>
+<dl class="py class">
+<dt id="numdifftools.tests.test_multicomplex.TestBicomplex">
+<em class="property">class </em><code class="sig-name descname">TestBicomplex</code><a class="reference internal" href="../_modules/numdifftools/tests/test_multicomplex.html#TestBicomplex"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_multicomplex.TestBicomplex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.8/library/functions.html#object" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="py method">
+<dt id="numdifftools.tests.test_multicomplex.TestBicomplex.test_add">
+<em class="property">static </em><code class="sig-name descname">test_add</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_multicomplex.html#TestBicomplex.test_add"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_multicomplex.TestBicomplex.test_add" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_multicomplex.TestBicomplex.test_arccos">
+<em class="property">static </em><code class="sig-name descname">test_arccos</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_multicomplex.html#TestBicomplex.test_arccos"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_multicomplex.TestBicomplex.test_arccos" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_multicomplex.TestBicomplex.test_arcsin">
+<em class="property">static </em><code class="sig-name descname">test_arcsin</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_multicomplex.html#TestBicomplex.test_arcsin"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_multicomplex.TestBicomplex.test_arcsin" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_multicomplex.TestBicomplex.test_arg_c">
+<em class="property">static </em><code class="sig-name descname">test_arg_c</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_multicomplex.html#TestBicomplex.test_arg_c"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_multicomplex.TestBicomplex.test_arg_c" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_multicomplex.TestBicomplex.test_assign">
+<em class="property">static </em><code class="sig-name descname">test_assign</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_multicomplex.html#TestBicomplex.test_assign"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_multicomplex.TestBicomplex.test_assign" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_multicomplex.TestBicomplex.test_conjugate">
+<code class="sig-name descname">test_conjugate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_multicomplex.html#TestBicomplex.test_conjugate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_multicomplex.TestBicomplex.test_conjugate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_multicomplex.TestBicomplex.test_cos">
+<em class="property">static </em><code class="sig-name descname">test_cos</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_multicomplex.html#TestBicomplex.test_cos"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_multicomplex.TestBicomplex.test_cos" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_multicomplex.TestBicomplex.test_der_abs">
+<em class="property">static </em><code class="sig-name descname">test_der_abs</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_multicomplex.html#TestBicomplex.test_der_abs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_multicomplex.TestBicomplex.test_der_abs" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_multicomplex.TestBicomplex.test_der_arccos">
+<em class="property">static </em><code class="sig-name descname">test_der_arccos</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_multicomplex.html#TestBicomplex.test_der_arccos"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_multicomplex.TestBicomplex.test_der_arccos" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_multicomplex.TestBicomplex.test_der_arccosh">
+<em class="property">static </em><code class="sig-name descname">test_der_arccosh</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_multicomplex.html#TestBicomplex.test_der_arccosh"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_multicomplex.TestBicomplex.test_der_arccosh" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_multicomplex.TestBicomplex.test_der_arctan">
+<em class="property">static </em><code class="sig-name descname">test_der_arctan</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_multicomplex.html#TestBicomplex.test_der_arctan"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_multicomplex.TestBicomplex.test_der_arctan" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_multicomplex.TestBicomplex.test_der_cos">
+<em class="property">static </em><code class="sig-name descname">test_der_cos</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_multicomplex.html#TestBicomplex.test_der_cos"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_multicomplex.TestBicomplex.test_der_cos" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_multicomplex.TestBicomplex.test_der_log">
+<em class="property">static </em><code class="sig-name descname">test_der_log</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_multicomplex.html#TestBicomplex.test_der_log"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_multicomplex.TestBicomplex.test_der_log" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_multicomplex.TestBicomplex.test_division">
+<em class="property">static </em><code class="sig-name descname">test_division</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_multicomplex.html#TestBicomplex.test_division"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_multicomplex.TestBicomplex.test_division" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_multicomplex.TestBicomplex.test_dot">
+<em class="property">static </em><code class="sig-name descname">test_dot</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_multicomplex.html#TestBicomplex.test_dot"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_multicomplex.TestBicomplex.test_dot" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_multicomplex.TestBicomplex.test_eq">
+<em class="property">static </em><code class="sig-name descname">test_eq</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_multicomplex.html#TestBicomplex.test_eq"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_multicomplex.TestBicomplex.test_eq" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_multicomplex.TestBicomplex.test_flat">
+<code class="sig-name descname">test_flat</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_multicomplex.html#TestBicomplex.test_flat"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_multicomplex.TestBicomplex.test_flat" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_multicomplex.TestBicomplex.test_ge">
+<em class="property">static </em><code class="sig-name descname">test_ge</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_multicomplex.html#TestBicomplex.test_ge"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_multicomplex.TestBicomplex.test_ge" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_multicomplex.TestBicomplex.test_gt">
+<em class="property">static </em><code class="sig-name descname">test_gt</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_multicomplex.html#TestBicomplex.test_gt"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_multicomplex.TestBicomplex.test_gt" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_multicomplex.TestBicomplex.test_init">
+<code class="sig-name descname">test_init</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_multicomplex.html#TestBicomplex.test_init"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_multicomplex.TestBicomplex.test_init" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_multicomplex.TestBicomplex.test_le">
+<em class="property">static </em><code class="sig-name descname">test_le</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_multicomplex.html#TestBicomplex.test_le"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_multicomplex.TestBicomplex.test_le" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_multicomplex.TestBicomplex.test_lt">
+<em class="property">static </em><code class="sig-name descname">test_lt</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_multicomplex.html#TestBicomplex.test_lt"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_multicomplex.TestBicomplex.test_lt" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_multicomplex.TestBicomplex.test_mod_c">
+<em class="property">static </em><code class="sig-name descname">test_mod_c</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_multicomplex.html#TestBicomplex.test_mod_c"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_multicomplex.TestBicomplex.test_mod_c" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_multicomplex.TestBicomplex.test_multiplication">
+<em class="property">static </em><code class="sig-name descname">test_multiplication</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_multicomplex.html#TestBicomplex.test_multiplication"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_multicomplex.TestBicomplex.test_multiplication" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_multicomplex.TestBicomplex.test_neg">
+<code class="sig-name descname">test_neg</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_multicomplex.html#TestBicomplex.test_neg"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_multicomplex.TestBicomplex.test_neg" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_multicomplex.TestBicomplex.test_norm">
+<code class="sig-name descname">test_norm</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_multicomplex.html#TestBicomplex.test_norm"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_multicomplex.TestBicomplex.test_norm" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_multicomplex.TestBicomplex.test_pow">
+<em class="property">static </em><code class="sig-name descname">test_pow</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_multicomplex.html#TestBicomplex.test_pow"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_multicomplex.TestBicomplex.test_pow" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_multicomplex.TestBicomplex.test_rdivision">
+<code class="sig-name descname">test_rdivision</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_multicomplex.html#TestBicomplex.test_rdivision"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_multicomplex.TestBicomplex.test_rdivision" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test issue # 39</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_multicomplex.TestBicomplex.test_repr">
+<code class="sig-name descname">test_repr</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_multicomplex.html#TestBicomplex.test_repr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_multicomplex.TestBicomplex.test_repr" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_multicomplex.TestBicomplex.test_rpow">
+<em class="property">static </em><code class="sig-name descname">test_rpow</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_multicomplex.html#TestBicomplex.test_rpow"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_multicomplex.TestBicomplex.test_rpow" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_multicomplex.TestBicomplex.test_rsub">
+<em class="property">static </em><code class="sig-name descname">test_rsub</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_multicomplex.html#TestBicomplex.test_rsub"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_multicomplex.TestBicomplex.test_rsub" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_multicomplex.TestBicomplex.test_shape">
+<code class="sig-name descname">test_shape</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_multicomplex.html#TestBicomplex.test_shape"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_multicomplex.TestBicomplex.test_shape" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_multicomplex.TestBicomplex.test_sub">
+<em class="property">static </em><code class="sig-name descname">test_sub</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_multicomplex.html#TestBicomplex.test_sub"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_multicomplex.TestBicomplex.test_sub" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_multicomplex.TestBicomplex.test_subsref">
+<em class="property">static </em><code class="sig-name descname">test_subsref</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_multicomplex.html#TestBicomplex.test_subsref"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_multicomplex.TestBicomplex.test_subsref" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="numdifftools.tests.test_multicomplex.TestDerivative">
+<em class="property">class </em><code class="sig-name descname">TestDerivative</code><a class="reference internal" href="../_modules/numdifftools/tests/test_multicomplex.html#TestDerivative"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_multicomplex.TestDerivative" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.8/library/functions.html#object" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="py method">
+<dt id="numdifftools.tests.test_multicomplex.TestDerivative.test_all_first_derivatives">
+<em class="property">static </em><code class="sig-name descname">test_all_first_derivatives</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_multicomplex.html#TestDerivative.test_all_first_derivatives"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_multicomplex.TestDerivative.test_all_first_derivatives" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_multicomplex.TestDerivative.test_all_second_derivatives">
+<em class="property">static </em><code class="sig-name descname">test_all_second_derivatives</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_multicomplex.html#TestDerivative.test_all_second_derivatives"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_multicomplex.TestDerivative.test_all_second_derivatives" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-numdifftools.tests.test_nd_algopy">
+<span id="numdifftools-tests-test-nd-algopy-module"></span><h2><span class="section-number">5.2.1.6. </span>numdifftools.tests.test_nd_algopy module<a class="headerlink" href="#module-numdifftools.tests.test_nd_algopy" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="numdifftools.tests.test_nd_algopy.TestDerivative">
+<em class="property">class </em><code class="sig-name descname">TestDerivative</code><a class="reference internal" href="../_modules/numdifftools/tests/test_nd_algopy.html#TestDerivative"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_nd_algopy.TestDerivative" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.8/library/functions.html#object" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="py method">
+<dt id="numdifftools.tests.test_nd_algopy.TestDerivative.test_derivative_cube">
+<em class="property">static </em><code class="sig-name descname">test_derivative_cube</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_nd_algopy.html#TestDerivative.test_derivative_cube"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_nd_algopy.TestDerivative.test_derivative_cube" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test for Issue 7</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_nd_algopy.TestDerivative.test_derivative_exp">
+<em class="property">static </em><code class="sig-name descname">test_derivative_exp</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3.8/library/constants.html#None" title="(in Python v3.8)">None</a><a class="reference internal" href="../_modules/numdifftools/tests/test_nd_algopy.html#TestDerivative.test_derivative_exp"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_nd_algopy.TestDerivative.test_derivative_exp" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_nd_algopy.TestDerivative.test_derivative_on_log">
+<em class="property">static </em><code class="sig-name descname">test_derivative_on_log</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3.8/library/constants.html#None" title="(in Python v3.8)">None</a><a class="reference internal" href="../_modules/numdifftools/tests/test_nd_algopy.html#TestDerivative.test_derivative_on_log"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_nd_algopy.TestDerivative.test_derivative_on_log" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_nd_algopy.TestDerivative.test_derivative_on_sinh">
+<code class="sig-name descname">test_derivative_on_sinh</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3.8/library/constants.html#None" title="(in Python v3.8)">None</a><a class="reference internal" href="../_modules/numdifftools/tests/test_nd_algopy.html#TestDerivative.test_derivative_on_sinh"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_nd_algopy.TestDerivative.test_derivative_on_sinh" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_nd_algopy.TestDerivative.test_derivative_sin">
+<em class="property">static </em><code class="sig-name descname">test_derivative_sin</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_nd_algopy.html#TestDerivative.test_derivative_sin"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_nd_algopy.TestDerivative.test_derivative_sin" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_nd_algopy.TestDerivative.test_directional_diff">
+<em class="property">static </em><code class="sig-name descname">test_directional_diff</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_nd_algopy.html#TestDerivative.test_directional_diff"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_nd_algopy.TestDerivative.test_directional_diff" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_nd_algopy.TestDerivative.test_fun_with_additional_parameters">
+<em class="property">static </em><code class="sig-name descname">test_fun_with_additional_parameters</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_nd_algopy.html#TestDerivative.test_fun_with_additional_parameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_nd_algopy.TestDerivative.test_fun_with_additional_parameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test for issue #9</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_nd_algopy.TestDerivative.test_high_order_derivative_cos">
+<em class="property">static </em><code class="sig-name descname">test_high_order_derivative_cos</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_nd_algopy.html#TestDerivative.test_high_order_derivative_cos"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_nd_algopy.TestDerivative.test_high_order_derivative_cos" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="numdifftools.tests.test_nd_algopy.TestGradient">
+<em class="property">class </em><code class="sig-name descname">TestGradient</code><a class="reference internal" href="../_modules/numdifftools/tests/test_nd_algopy.html#TestGradient"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_nd_algopy.TestGradient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.8/library/functions.html#object" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="py method">
+<dt id="numdifftools.tests.test_nd_algopy.TestGradient.test_on_scalar_function">
+<em class="property">static </em><code class="sig-name descname">test_on_scalar_function</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_nd_algopy.html#TestGradient.test_on_scalar_function"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_nd_algopy.TestGradient.test_on_scalar_function" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="numdifftools.tests.test_nd_algopy.TestHessdiag">
+<em class="property">class </em><code class="sig-name descname">TestHessdiag</code><a class="reference internal" href="../_modules/numdifftools/tests/test_nd_algopy.html#TestHessdiag"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_nd_algopy.TestHessdiag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.8/library/functions.html#object" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="py method">
+<dt id="numdifftools.tests.test_nd_algopy.TestHessdiag.test_forward">
+<em class="property">static </em><code class="sig-name descname">test_forward</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_nd_algopy.html#TestHessdiag.test_forward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_nd_algopy.TestHessdiag.test_forward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_nd_algopy.TestHessdiag.test_reverse">
+<em class="property">static </em><code class="sig-name descname">test_reverse</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_nd_algopy.html#TestHessdiag.test_reverse"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_nd_algopy.TestHessdiag.test_reverse" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="numdifftools.tests.test_nd_algopy.TestHessian">
+<em class="property">class </em><code class="sig-name descname">TestHessian</code><a class="reference internal" href="../_modules/numdifftools/tests/test_nd_algopy.html#TestHessian"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_nd_algopy.TestHessian" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.8/library/functions.html#object" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="py method">
+<dt id="numdifftools.tests.test_nd_algopy.TestHessian.test_hessian_cos_x_y__at_0_0">
+<em class="property">static </em><code class="sig-name descname">test_hessian_cos_x_y__at_0_0</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_nd_algopy.html#TestHessian.test_hessian_cos_x_y__at_0_0"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_nd_algopy.TestHessian.test_hessian_cos_x_y__at_0_0" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_nd_algopy.TestHessian.test_run_hamiltonian">
+<code class="sig-name descname">test_run_hamiltonian</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_nd_algopy.html#TestHessian.test_run_hamiltonian"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_nd_algopy.TestHessian.test_run_hamiltonian" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="numdifftools.tests.test_nd_algopy.TestJacobian">
+<em class="property">class </em><code class="sig-name descname">TestJacobian</code><a class="reference internal" href="../_modules/numdifftools/tests/test_nd_algopy.html#TestJacobian"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_nd_algopy.TestJacobian" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.8/library/functions.html#object" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="py method">
+<dt id="numdifftools.tests.test_nd_algopy.TestJacobian.test_issue_25">
+<em class="property">static </em><code class="sig-name descname">test_issue_25</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_nd_algopy.html#TestJacobian.test_issue_25"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_nd_algopy.TestJacobian.test_issue_25" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_nd_algopy.TestJacobian.test_on_matrix_valued_function">
+<em class="property">static </em><code class="sig-name descname">test_on_matrix_valued_function</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_nd_algopy.html#TestJacobian.test_on_matrix_valued_function"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_nd_algopy.TestJacobian.test_on_matrix_valued_function" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_nd_algopy.TestJacobian.test_on_scalar_function">
+<em class="property">static </em><code class="sig-name descname">test_on_scalar_function</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_nd_algopy.html#TestJacobian.test_on_scalar_function"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_nd_algopy.TestJacobian.test_on_scalar_function" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_nd_algopy.TestJacobian.test_on_vector_valued_function">
+<code class="sig-name descname">test_on_vector_valued_function</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_nd_algopy.html#TestJacobian.test_on_vector_valued_function"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_nd_algopy.TestJacobian.test_on_vector_valued_function" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_nd_algopy.TestJacobian.test_scalar_to_vector">
+<em class="property">static </em><code class="sig-name descname">test_scalar_to_vector</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3.8/library/constants.html#None" title="(in Python v3.8)">None</a><a class="reference internal" href="../_modules/numdifftools/tests/test_nd_algopy.html#TestJacobian.test_scalar_to_vector"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_nd_algopy.TestJacobian.test_scalar_to_vector" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-numdifftools.tests.test_nd_scipy">
+<span id="numdifftools-tests-test-nd-scipy-module"></span><h2><span class="section-number">5.2.1.7. </span>numdifftools.tests.test_nd_scipy module<a class="headerlink" href="#module-numdifftools.tests.test_nd_scipy" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="numdifftools.tests.test_nd_scipy.TestGradient">
+<em class="property">class </em><code class="sig-name descname">TestGradient</code><a class="reference internal" href="../_modules/numdifftools/tests/test_nd_scipy.html#TestGradient"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_nd_scipy.TestGradient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.8/library/functions.html#object" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="py method">
+<dt id="numdifftools.tests.test_nd_scipy.TestGradient.test_on_scalar_function">
+<em class="property">static </em><code class="sig-name descname">test_on_scalar_function</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_nd_scipy.html#TestGradient.test_on_scalar_function"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_nd_scipy.TestGradient.test_on_scalar_function" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="numdifftools.tests.test_nd_scipy.TestJacobian">
+<em class="property">class </em><code class="sig-name descname">TestJacobian</code><a class="reference internal" href="../_modules/numdifftools/tests/test_nd_scipy.html#TestJacobian"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_nd_scipy.TestJacobian" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.8/library/functions.html#object" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="py method">
+<dt id="numdifftools.tests.test_nd_scipy.TestJacobian.test_issue_25">
+<code class="sig-name descname">test_issue_25</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_nd_scipy.html#TestJacobian.test_issue_25"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_nd_scipy.TestJacobian.test_issue_25" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_nd_scipy.TestJacobian.test_on_matrix_valued_function">
+<code class="sig-name descname">test_on_matrix_valued_function</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_nd_scipy.html#TestJacobian.test_on_matrix_valued_function"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_nd_scipy.TestJacobian.test_on_matrix_valued_function" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_nd_scipy.TestJacobian.test_on_scalar_function">
+<em class="property">static </em><code class="sig-name descname">test_on_scalar_function</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_nd_scipy.html#TestJacobian.test_on_scalar_function"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_nd_scipy.TestJacobian.test_on_scalar_function" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_nd_scipy.TestJacobian.test_on_vector_valued_function">
+<code class="sig-name descname">test_on_vector_valued_function</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_nd_scipy.html#TestJacobian.test_on_vector_valued_function"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_nd_scipy.TestJacobian.test_on_vector_valued_function" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_nd_scipy.TestJacobian.test_scalar_to_vector">
+<em class="property">static </em><code class="sig-name descname">test_scalar_to_vector</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3.8/library/constants.html#None" title="(in Python v3.8)">None</a><a class="reference internal" href="../_modules/numdifftools/tests/test_nd_scipy.html#TestJacobian.test_scalar_to_vector"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_nd_scipy.TestJacobian.test_scalar_to_vector" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-numdifftools.tests.test_numdifftools">
+<span id="numdifftools-tests-test-numdifftools-module"></span><h2><span class="section-number">5.2.1.8. </span>numdifftools.tests.test_numdifftools module<a class="headerlink" href="#module-numdifftools.tests.test_numdifftools" title="Permalink to this headline">¶</a></h2>
+<p>Test functions for numdifftools module</p>
+<dl class="py class">
+<dt id="numdifftools.tests.test_numdifftools.TestDerivative">
+<em class="property">class </em><code class="sig-name descname">TestDerivative</code><a class="reference internal" href="../_modules/numdifftools/tests/test_numdifftools.html#TestDerivative"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_numdifftools.TestDerivative" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.8/library/functions.html#object" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="py method">
+<dt id="numdifftools.tests.test_numdifftools.TestDerivative.test_backward_derivative_on_sinh">
+<code class="sig-name descname">test_backward_derivative_on_sinh</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_numdifftools.html#TestDerivative.test_backward_derivative_on_sinh"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_numdifftools.TestDerivative.test_backward_derivative_on_sinh" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_numdifftools.TestDerivative.test_central_and_forward_derivative_on_log">
+<code class="sig-name descname">test_central_and_forward_derivative_on_log</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_numdifftools.html#TestDerivative.test_central_and_forward_derivative_on_log"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_numdifftools.TestDerivative.test_central_and_forward_derivative_on_log" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_numdifftools.TestDerivative.test_default_scale">
+<em class="property">static </em><code class="sig-name descname">test_default_scale</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_numdifftools.html#TestDerivative.test_default_scale"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_numdifftools.TestDerivative.test_default_scale" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_numdifftools.TestDerivative.test_derivative_cube">
+<em class="property">static </em><code class="sig-name descname">test_derivative_cube</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_numdifftools.html#TestDerivative.test_derivative_cube"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_numdifftools.TestDerivative.test_derivative_cube" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test for Issue 7</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_numdifftools.TestDerivative.test_derivative_exp">
+<em class="property">static </em><code class="sig-name descname">test_derivative_exp</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_numdifftools.html#TestDerivative.test_derivative_exp"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_numdifftools.TestDerivative.test_derivative_exp" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_numdifftools.TestDerivative.test_derivative_of_cos_x">
+<em class="property">static </em><code class="sig-name descname">test_derivative_of_cos_x</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3.8/library/constants.html#None" title="(in Python v3.8)">None</a><a class="reference internal" href="../_modules/numdifftools/tests/test_numdifftools.html#TestDerivative.test_derivative_of_cos_x"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_numdifftools.TestDerivative.test_derivative_of_cos_x" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_numdifftools.TestDerivative.test_derivative_sin">
+<em class="property">static </em><code class="sig-name descname">test_derivative_sin</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_numdifftools.html#TestDerivative.test_derivative_sin"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_numdifftools.TestDerivative.test_derivative_sin" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_numdifftools.TestDerivative.test_derivative_with_step_options">
+<em class="property">static </em><code class="sig-name descname">test_derivative_with_step_options</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_numdifftools.html#TestDerivative.test_derivative_with_step_options"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_numdifftools.TestDerivative.test_derivative_with_step_options" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_numdifftools.TestDerivative.test_directional_diff">
+<em class="property">static </em><code class="sig-name descname">test_directional_diff</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_numdifftools.html#TestDerivative.test_directional_diff"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_numdifftools.TestDerivative.test_directional_diff" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_numdifftools.TestDerivative.test_fun_with_additional_parameters">
+<em class="property">static </em><code class="sig-name descname">test_fun_with_additional_parameters</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_numdifftools.html#TestDerivative.test_fun_with_additional_parameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_numdifftools.TestDerivative.test_fun_with_additional_parameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test for issue #9</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_numdifftools.TestDerivative.test_high_order_derivative_cos">
+<em class="property">static </em><code class="sig-name descname">test_high_order_derivative_cos</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_numdifftools.html#TestDerivative.test_high_order_derivative_cos"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_numdifftools.TestDerivative.test_high_order_derivative_cos" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_numdifftools.TestDerivative.test_infinite_functions">
+<code class="sig-name descname">test_infinite_functions</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_numdifftools.html#TestDerivative.test_infinite_functions"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_numdifftools.TestDerivative.test_infinite_functions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="numdifftools.tests.test_numdifftools.TestGradient">
+<em class="property">class </em><code class="sig-name descname">TestGradient</code><a class="reference internal" href="../_modules/numdifftools/tests/test_numdifftools.html#TestGradient"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_numdifftools.TestGradient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.8/library/functions.html#object" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="py method">
+<dt id="numdifftools.tests.test_numdifftools.TestGradient.test_directional_diff">
+<em class="property">static </em><code class="sig-name descname">test_directional_diff</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_numdifftools.html#TestGradient.test_directional_diff"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_numdifftools.TestGradient.test_directional_diff" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_numdifftools.TestGradient.test_gradient">
+<em class="property">static </em><code class="sig-name descname">test_gradient</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_numdifftools.html#TestGradient.test_gradient"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_numdifftools.TestGradient.test_gradient" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_numdifftools.TestGradient.test_gradient_fulloutput">
+<em class="property">static </em><code class="sig-name descname">test_gradient_fulloutput</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_numdifftools.html#TestGradient.test_gradient_fulloutput"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_numdifftools.TestGradient.test_gradient_fulloutput" title="Permalink to this definition">¶</a></dt>
+<dd><p>Fix issue#52:</p>
+<p>Gradient tries to apply squeeze to the output tuple containing both the result
+and the full_output object.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_numdifftools.TestGradient.test_issue_39">
+<em class="property">static </em><code class="sig-name descname">test_issue_39</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_numdifftools.html#TestGradient.test_issue_39"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_numdifftools.TestGradient.test_issue_39" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test that checks float/Bicomplex works</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="numdifftools.tests.test_numdifftools.TestHessdiag">
+<em class="property">class </em><code class="sig-name descname">TestHessdiag</code><a class="reference internal" href="../_modules/numdifftools/tests/test_numdifftools.html#TestHessdiag"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_numdifftools.TestHessdiag" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.8/library/functions.html#object" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="py method">
+<dt id="numdifftools.tests.test_numdifftools.TestHessdiag.test_complex">
+<code class="sig-name descname">test_complex</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_numdifftools.html#TestHessdiag.test_complex"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_numdifftools.TestHessdiag.test_complex" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_numdifftools.TestHessdiag.test_default_step">
+<code class="sig-name descname">test_default_step</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_numdifftools.html#TestHessdiag.test_default_step"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_numdifftools.TestHessdiag.test_default_step" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_numdifftools.TestHessdiag.test_fixed_step">
+<code class="sig-name descname">test_fixed_step</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3.8/library/constants.html#None" title="(in Python v3.8)">None</a><a class="reference internal" href="../_modules/numdifftools/tests/test_numdifftools.html#TestHessdiag.test_fixed_step"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_numdifftools.TestHessdiag.test_fixed_step" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="numdifftools.tests.test_numdifftools.TestHessian">
+<em class="property">class </em><code class="sig-name descname">TestHessian</code><a class="reference internal" href="../_modules/numdifftools/tests/test_numdifftools.html#TestHessian"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_numdifftools.TestHessian" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.8/library/functions.html#object" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="py method">
+<dt id="numdifftools.tests.test_numdifftools.TestHessian.test_complex_hessian_issue_35">
+<code class="sig-name descname">test_complex_hessian_issue_35</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_numdifftools.html#TestHessian.test_complex_hessian_issue_35"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_numdifftools.TestHessian.test_complex_hessian_issue_35" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_numdifftools.TestHessian.test_hessian_cos_x_y_at_0_0">
+<em class="property">static </em><code class="sig-name descname">test_hessian_cos_x_y_at_0_0</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_numdifftools.html#TestHessian.test_hessian_cos_x_y_at_0_0"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_numdifftools.TestHessian.test_hessian_cos_x_y_at_0_0" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_numdifftools.TestHessian.test_run_hamiltonian">
+<code class="sig-name descname">test_run_hamiltonian</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_numdifftools.html#TestHessian.test_run_hamiltonian"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_numdifftools.TestHessian.test_run_hamiltonian" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="numdifftools.tests.test_numdifftools.TestJacobian">
+<em class="property">class </em><code class="sig-name descname">TestJacobian</code><a class="reference internal" href="../_modules/numdifftools/tests/test_numdifftools.html#TestJacobian"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_numdifftools.TestJacobian" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.8/library/functions.html#object" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="py method">
+<dt id="numdifftools.tests.test_numdifftools.TestJacobian.test_issue_25">
+<em class="property">static </em><code class="sig-name descname">test_issue_25</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_numdifftools.html#TestJacobian.test_issue_25"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_numdifftools.TestJacobian.test_issue_25" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_numdifftools.TestJacobian.test_issue_27a">
+<em class="property">static </em><code class="sig-name descname">test_issue_27a</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_numdifftools.html#TestJacobian.test_issue_27a"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_numdifftools.TestJacobian.test_issue_27a" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test for memory-error</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_numdifftools.TestJacobian.test_issue_27b">
+<em class="property">static </em><code class="sig-name descname">test_issue_27b</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_numdifftools.html#TestJacobian.test_issue_27b"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_numdifftools.TestJacobian.test_issue_27b" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test for memory-error</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_numdifftools.TestJacobian.test_jacobian_fulloutput">
+<em class="property">static </em><code class="sig-name descname">test_jacobian_fulloutput</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_numdifftools.html#TestJacobian.test_jacobian_fulloutput"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_numdifftools.TestJacobian.test_jacobian_fulloutput" title="Permalink to this definition">¶</a></dt>
+<dd><p>test</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_numdifftools.TestJacobian.test_on_matrix_valued_function">
+<em class="property">static </em><code class="sig-name descname">test_on_matrix_valued_function</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_numdifftools.html#TestJacobian.test_on_matrix_valued_function"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_numdifftools.TestJacobian.test_on_matrix_valued_function" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_numdifftools.TestJacobian.test_on_scalar_function">
+<em class="property">static </em><code class="sig-name descname">test_on_scalar_function</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_numdifftools.html#TestJacobian.test_on_scalar_function"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_numdifftools.TestJacobian.test_on_scalar_function" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_numdifftools.TestJacobian.test_on_vector_valued_function">
+<em class="property">static </em><code class="sig-name descname">test_on_vector_valued_function</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_numdifftools.html#TestJacobian.test_on_vector_valued_function"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_numdifftools.TestJacobian.test_on_vector_valued_function" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_numdifftools.TestJacobian.test_scalar_to_vector">
+<em class="property">static </em><code class="sig-name descname">test_scalar_to_vector</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3.8/library/constants.html#None" title="(in Python v3.8)">None</a><a class="reference internal" href="../_modules/numdifftools/tests/test_numdifftools.html#TestJacobian.test_scalar_to_vector"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_numdifftools.TestJacobian.test_scalar_to_vector" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="numdifftools.tests.test_numdifftools.TestRichardson">
+<em class="property">class </em><code class="sig-name descname">TestRichardson</code><a class="reference internal" href="../_modules/numdifftools/tests/test_numdifftools.html#TestRichardson"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_numdifftools.TestRichardson" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.8/library/functions.html#object" title="(in Python v3.8)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<dl class="py method">
+<dt id="numdifftools.tests.test_numdifftools.TestRichardson.test_central_forward_backward">
+<em class="property">static </em><code class="sig-name descname">test_central_forward_backward</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_numdifftools.html#TestRichardson.test_central_forward_backward"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_numdifftools.TestRichardson.test_central_forward_backward" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="numdifftools.tests.test_numdifftools.TestRichardson.test_complex">
+<em class="property">static </em><code class="sig-name descname">test_complex</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_numdifftools.html#TestRichardson.test_complex"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_numdifftools.TestRichardson.test_complex" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-numdifftools.tests.test_scripts">
+<span id="numdifftools-tests-test-scripts-module"></span><h2><span class="section-number">5.2.1.9. </span>numdifftools.tests.test_scripts module<a class="headerlink" href="#module-numdifftools.tests.test_scripts" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="numdifftools.tests.test_scripts.test__find_default_scale_run_all_benchmarks">
+<code class="sig-name descname">test__find_default_scale_run_all_benchmarks</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_scripts.html#test__find_default_scale_run_all_benchmarks"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_scripts.test__find_default_scale_run_all_benchmarks" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="numdifftools.tests.test_scripts.test_profile_numdifftools_main">
+<code class="sig-name descname">test_profile_numdifftools_main</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_scripts.html#test_profile_numdifftools_main"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_scripts.test_profile_numdifftools_main" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="numdifftools.tests.test_scripts.test_profile_numdifftools_profile_hessian">
+<code class="sig-name descname">test_profile_numdifftools_profile_hessian</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_scripts.html#test_profile_numdifftools_profile_hessian"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_scripts.test_profile_numdifftools_profile_hessian" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="numdifftools.tests.test_scripts.test_run_gradient_and_hessian_benchmarks">
+<code class="sig-name descname">test_run_gradient_and_hessian_benchmarks</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_scripts.html#test_run_gradient_and_hessian_benchmarks"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_scripts.test_run_gradient_and_hessian_benchmarks" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+<div class="section" id="module-numdifftools.tests.test_step_generators">
+<span id="numdifftools-tests-test-step-generators-module"></span><h2><span class="section-number">5.2.1.10. </span>numdifftools.tests.test_step_generators module<a class="headerlink" href="#module-numdifftools.tests.test_step_generators" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt id="numdifftools.tests.test_step_generators.test__min_step_generator_with_step_nom1">
+<code class="sig-name descname">test__min_step_generator_with_step_nom1</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_step_generators.html#test__min_step_generator_with_step_nom1"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_step_generators.test__min_step_generator_with_step_nom1" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="numdifftools.tests.test_step_generators.test_default_max_step_generator">
+<code class="sig-name descname">test_default_max_step_generator</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_step_generators.html#test_default_max_step_generator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_step_generators.test_default_max_step_generator" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="numdifftools.tests.test_step_generators.test_max_step_generator_default_base_step">
+<code class="sig-name descname">test_max_step_generator_default_base_step</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_step_generators.html#test_max_step_generator_default_base_step"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_step_generators.test_max_step_generator_default_base_step" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="numdifftools.tests.test_step_generators.test_max_step_generator_with_base_step01">
+<code class="sig-name descname">test_max_step_generator_with_base_step01</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_step_generators.html#test_max_step_generator_with_base_step01"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_step_generators.test_max_step_generator_with_base_step01" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="numdifftools.tests.test_step_generators.test_min_step_generator_default_base_step">
+<code class="sig-name descname">test_min_step_generator_default_base_step</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_step_generators.html#test_min_step_generator_default_base_step"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_step_generators.test_min_step_generator_default_base_step" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="numdifftools.tests.test_step_generators.test_min_step_generator_with_base_step01">
+<code class="sig-name descname">test_min_step_generator_with_base_step01</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_step_generators.html#test_min_step_generator_with_base_step01"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_step_generators.test_min_step_generator_with_base_step01" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt id="numdifftools.tests.test_step_generators.test_min_step_generator_with_step_ratio4">
+<code class="sig-name descname">test_min_step_generator_with_step_ratio4</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/numdifftools/tests/test_step_generators.html#test_min_step_generator_with_step_ratio4"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#numdifftools.tests.test_step_generators.test_min_step_generator_with_step_ratio4" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="../appendix/changelog.html" class="btn btn-neutral float-right" title="Changelog" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="numdifftools.html" class="btn btn-neutral float-left" title="5.2. Numdifftools package details" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2009-2021, Per A. Brodtkorb, John D&#39;Errico.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,921 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Changelog &mdash; Numdifftools 0.9.40 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Contributors" href="authors.html" />
+    <link rel="prev" title="5.2.1. numdifftools.tests package" href="../reference/numdifftools.tests.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Numdifftools
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.9
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html">2. Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../how-to/index.html">3. How-to guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topics/index.html">4. Topics guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">5. Reference</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Changelog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#version-0-9-40-jun-2-2021">Version 0.9.40 Jun 2, 2021</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-0-9-39-jun-10-2019">Version 0.9.39 Jun 10, 2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-0-9-38-jun-10-2019">Version 0.9.38 Jun 10, 2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-0-9-20-jan-11-2017">Version 0.9.20, Jan 11, 2017</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-0-9-19-jan-11-2017">Version 0.9.19, Jan 11, 2017</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-0-9-18-jan-11-2017">Version 0.9.18, Jan 11, 2017</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-0-9-17-sep-8-2016">Version 0.9.17, Sep 8, 2016</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-0-9-15-may-10-2016">Version 0.9.15, May 10, 2016</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-0-9-14-november-10-2015">Version 0.9.14, November 10, 2015</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-0-9-13-october-30-2015">Version 0.9.13, October 30, 2015</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-0-9-12-august-28-2015">Version 0.9.12, August 28, 2015</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-0-9-11-august-27-2015">Version 0.9.11, August 27, 2015</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-0-9-10-august-26-2015">Version 0.9.10, August 26, 2015</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-0-9-4-august-26-2015">Version 0.9.4, August 26, 2015</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-0-9-3-august-23-2015">Version 0.9.3, August 23, 2015</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-0-9-2-august-20-2015">Version 0.9.2, August 20, 2015</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-0-9-1-august-20-2015">Version 0.9.1, August 20,2015</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-0-7-7-december-18-2014">Version 0.7.7, December 18, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-0-7-3-december-17-2014">Version 0.7.3, December 17, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-0-6-0-february-8-2014">Version 0.6.0, February 8, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-0-5-0-january-10-2014">Version 0.5.0, January 10, 2014</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-0-4-0-may-5-2012">Version 0.4.0, May 5, 2012</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-0-3-5-may-19-2011">Version 0.3.5, May 19, 2011</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-0-3-4-feb-24-2011">Version 0.3.4, Feb 24, 2011</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-0-3-1-may-20-2009">Version 0.3.1, May 20, 2009</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="authors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="acknowledgement.html">Acknowledgments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Indices and tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="zreferences.html">Bibliography</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Numdifftools</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Changelog</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/appendix/changelog.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="changelog">
+<span id="id1"></span><h1>Changelog<a class="headerlink" href="#changelog" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="version-0-9-40-jun-2-2021">
+<h2>Version 0.9.40 Jun 2, 2021<a class="headerlink" href="#version-0-9-40-jun-2-2021" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>Per A Brodtkorb (109):</dt><dd><ul class="simple">
+<li><p>Replaced python 3.5 with 3.9 in .travis.yml</p></li>
+<li><p>Removed python 3.5 from appveyor.yml</p></li>
+<li><p>Added bibtex_bibfiles = … to docs/conf.py</p></li>
+<li><dl class="simple">
+<dt>Fixed doctest failures in</dt><dd><ul>
+<li><p>docs/src/numerical/derivest.rst</p></li>
+<li><p>docs/tutorials/getting_started.rst</p></li>
+<li><p>numdifftools.core.py</p></li>
+<li><p>numdifftools.limits.py</p></li>
+<li><p>numdifftools.nd_algopy.py</p></li>
+<li><p>numdifftools.nd_scipy.py</p></li>
+<li><p>numdifftools.nd_statsmodels.py</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>Insulated import of click in a if __name__ ==’__main__’ clause.</p></li>
+<li><p>Added activate to appveyor.yml</p></li>
+<li><p>Added <a class="reference external" href="https://mathworld.wolfram.com/WynnsEpsilonMethod.html">https://mathworld.wolfram.com/WynnsEpsilonMethod.html</a> reference for the Epsilon algorithm in extrapolation.py.</p></li>
+<li><p>Disabled the restriction that n must be one in LogJacobianRule</p></li>
+<li><p>Added complex_even and central_even methods to the JacobianDifferenceFunctions</p></li>
+<li><p>Updated documentation of Derivative in core.py</p></li>
+<li><p>Updated documentation of Richardson.</p></li>
+<li><p>Removed obsolete tests from test_nd_scipy.py</p></li>
+<li><p>Fixed a bug in TestJacobian.test_scalar_to_vector in test_nd_scipy.py for method=”complex’</p></li>
+<li><p>Refactored code from core.py to finite_difference.py</p></li>
+<li><p>Added LogJacobianRule, LogHessdiagRule, LogHessianRule to finite_difference.py</p></li>
+<li><p>Fixed a bug in Richardson._estimate_error: Complex rule resulted wrongly in complex error values.</p></li>
+<li><p>Added netlib.org/quadpack reference.</p></li>
+<li><p>Updated Dea to conform with Quadpack</p></li>
+<li><p>Replaced reference to Brezinski with refs to Quadpack.</p></li>
+<li><p>Reduced cyclomatic complexity in Dea in extrapolation.py</p></li>
+<li><p>Removed commented out code in profile_numdifftools.py</p></li>
+<li><p>Updated pycodestyle ignore section in setup.cfg</p></li>
+<li><p>Removed commented out code in run_benchmark.py Made get_nominal_step continous as function of x</p></li>
+<li><p>Made datetime call python 2.7 compatible in run_benchmark.py</p></li>
+<li><p>Simplified the Derivative._step_generator function in core.py.</p></li>
+<li><p>Made plots generated from run_benchmark.py prettier.</p></li>
+<li><p>step_ratio in the step generators by default 2 for n=1 and 1.6 otherwise in step_generators.py</p></li>
+<li><p>Fixed failing doctests in core.py and nd_statsmodels.py</p></li>
+<li><p>Added doctests to setup.cfg.</p></li>
+<li><p>Reordered imports in test_example_functions.py</p></li>
+<li><p>Fixed .travis.yml so that he file paths in coverage.xml is discoverable
+under the sonar.sources folder. The problem is that SonarQube is
+analysing the checked-out source code (in src/numdifftools) but the
+actual unit tests and coverage.py is run against the installed code (in
+build/lib/numdifftools). Thus the absolute files paths to the installed</p></li>
+<li><p>Removed commented code from test_numdifftools.py</p></li>
+<li><p>Run only coverage xml when python version is 3.7</p></li>
+<li><p>Updated .travis.yml Removed commented out code from extrapolation.py and nd_statsmodels.py</p></li>
+<li><p>Finalized the moved of XXXDifferencdFunctions from core.py to finite_difference.py</p></li>
+<li><p>Added missing docstring for default_scale function in step_generators.py.</p></li>
+<li><p>Removed unused import of itertools in _find_default_scale.py.</p></li>
+<li><p>Changed default scale from 1.35 to 1.06 for complex/multicomplex methods when n=1</p></li>
+<li><p>Added richardson_demo to extrapolation.py Simplified EpsAlg class in extrapolation.py</p></li>
+<li><p>Corrected a small error for dea3: Now dea3 and Dea(limexp=3) gives the same result!</p></li>
+<li><p>Added python 3.8 to appveyor.yml Added python 3.9 to setup.cfg</p></li>
+<li><p>Fixed reference to how-to/index</p></li>
+<li><p>Added doctest configuration to docs.conf.py</p></li>
+<li><p>Fixes issue #50 by adding function value f(x) to the info.f_value.</p></li>
+<li><p>Updated README.rst</p></li>
+<li><p>Added &#64;UnusedVariable here and there.</p></li>
+<li><p>Silence warnings in Hessian by adding __init__ that set the correct order given the method.</p></li>
+<li><p>Updated the Richardson._r_matrix method to generate complex matrix when step_ratio is complex.</p></li>
+<li><p>Fixed profile_hessian in profile_numdifftools.py so it works again.</p></li>
+<li><p>Added with np.errstate(all=’ignore’) to test_derivative_on_sinh and test_scalar_to_vector in test_nd_algopy.py to silence warnings.</p></li>
+<li><p>Changed citation style to alpha.</p></li>
+<li><p>Replaced bibliography.rst with refs1.bib and zreferences.rst</p></li>
+<li><p>Removed badges for latex</p></li>
+<li><p>Changed sonar addon token</p></li>
+<li><p>Added CC_TEST_REPORTER_ID</p></li>
+<li><p>Fixed a typo in docs/numdifftools.rst</p></li>
+<li><p>Added docs/make.bat</p></li>
+<li><p>Removed python 2.7 from .travis.yml</p></li>
+<li><p>Moved test_requires from setup.cfg to setup.py</p></li>
+<li><p>Added Latex to setup.py</p></li>
+<li><p>Changed default radius to 0.0059 which appears to cause less failures in Taylor in fornberg.py.</p></li>
+<li><p>Updated MANIFEST.in</p></li>
+<li><p>Fixes issue #49 : Dimension of Jacobian of vector valued function (length n) with scalar input should be n X 1</p></li>
+<li><p>Updated build_package.py</p></li>
+<li><p>Attempt to silence divide by zero and invalid warnings.</p></li>
+<li><p>Fix issue#52: Gradient tries to apply squeeze to the output tuple containing both the result and the full_output object.</p></li>
+<li><p>Made docstring a rawdocstring since it contains slashes.</p></li>
+<li><p>Added “# pylint: disable=unused-argument” in appropriate places.</p></li>
+<li><p>API change: replaced “python setup.py doctests” with “python setup.py doctest”</p></li>
+<li><p>Removed unused imports</p></li>
+<li><p>Fixed a bug in test_low_order_derivative_on_example_functions:  Same variable (i) was used both in the outer and inner loop.</p></li>
+<li><p>Updated badge for pypi and documentation of fornberg.py</p></li>
+<li><p>Fixed failing tests.</p></li>
+<li><p>Updated docs + added a test</p></li>
+<li><p>Added  “python -m pip install –upgrade pytest” to appveyor.yml due to a package conflict on python2.7 32 bit</p></li>
+<li><p>Added - “python -m pip install –upgrade setuptools” in appveyor.yml to avoid build error.</p></li>
+<li><p>Try  “python setup.py bdist_wheel” and “pip install numdifftools –find-links=dist” in appveyor.yml</p></li>
+<li><p>Put qoutes on “python -m pip install –upgrade pip” in appveyor.yml</p></li>
+<li><dl class="simple">
+<dt>Changed “python setup.py install” to</dt><dd><ul>
+<li><p>python setup.py bdist_wheel”</p></li>
+<li><p>pip install numdifftools –find-links=dist</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>Added “pip install –upgrade pip” to appveyor.yml</p></li>
+<li><p>Updated the detailed package documentation.</p></li>
+<li><p>Added missing pytest-pep8 to install</p></li>
+<li><p>Updated badge + appveyor.yml</p></li>
+<li><p>ongoing work to harmonize the the output from approx_fprime and approx_fprime_cs</p></li>
+<li><p>Added Taylor class to nd_algopy.py Fixed a bug in _get_best_taylor_coefficient in fornberg.py</p></li>
+<li><p>Updated references Added test_mod_c function to test_multicomplex.py</p></li>
+<li><p>Fixed a typo.</p></li>
+<li><p>Removed –strict-markers</p></li>
+<li><p>Fixed issue #39 TypeError: unsupported operand type(s) for /: ‘float’ and ‘Bicomplex’</p></li>
+<li><p>Fixed a typo in the documentation. Closing issue #51</p></li>
+<li><p>Added separate test for nd_scipy.</p></li>
+<li><p>added skip on tests if LineProfiler is not installed.</p></li>
+<li><p>Removed obsolete centered argument from call to approx_hess1 + pep8</p></li>
+<li><p>Move Jacobian._increment method to _JacobianDifferenceFunctions</p></li>
+<li><p>step_nom was unused in CStepGenerator.__init__ Added pytest.markers.slow in to setup.cfg</p></li>
+<li><p>Made two tests more forgiving in order to avoid failure on travis.</p></li>
+<li><p>Renamed nominal_step and base_step to get_nominal_step and get_base_step, respectively.</p></li>
+<li><p>Removed obsolete import of example from hypothesis</p></li>
+<li><p>Updated testing</p></li>
+<li><p>Updated coverage call: coverage run -m py.test src/numdifftools/tests</p></li>
+<li><p>Delete obsolete conftest.py</p></li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="version-0-9-39-jun-10-2019">
+<h2>Version 0.9.39 Jun 10, 2019<a class="headerlink" href="#version-0-9-39-jun-10-2019" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>Robert Parini (1):</dt><dd><ul class="simple">
+<li><p>Fix issue #43: numpy future warning</p></li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="version-0-9-38-jun-10-2019">
+<h2>Version 0.9.38 Jun 10, 2019<a class="headerlink" href="#version-0-9-38-jun-10-2019" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>Andrew Nelson (1):</dt><dd><ul class="simple">
+<li><p>MAINT: special.factorial instead of misc.factorial</p></li>
+</ul>
+</dd>
+<dt>Dougal J. Sutherland (1):</dt><dd><ul class="simple">
+<li><p>include LICENSE.txt in distributions</p></li>
+</ul>
+</dd>
+<dt>Per A Brodtkorb (140):</dt><dd><ul class="simple">
+<li><p>Adjusted runtime for hypothesis tests to avoid failure and fixed pep8 failures.</p></li>
+<li><p>Fixed a bug in setup.cfg</p></li>
+<li><p>Replaced valarray function with numpy.full in step_generators.py</p></li>
+<li><p>Added try except on import of algopy</p></li>
+<li><p>Updated the badges used in the README.rst</p></li>
+<li><p>Replaced numpy.testing.Tester with pytest.</p></li>
+<li><p>Removed dependence on pyscaffold.</p></li>
+<li><p>Simplified setup.py and setup.cfg</p></li>
+<li><p>Updated .travis.yml configuration.</p></li>
+<li><p>Reorganized the documentation.</p></li>
+<li><p>Ongoing work to simplify the classes.</p></li>
+<li><p>Replaced unittest with pytest.</p></li>
+<li><p>Added finite_difference.py</p></li>
+<li><p>replaced , with .</p></li>
+<li><p>Reverted to coverage=4.3.4</p></li>
+<li><p>New attempt</p></li>
+<li><p>Fixed conflicting import</p></li>
+<li><p>Missing import of EPS</p></li>
+<li><p>Added missing FD_RULES = {}</p></li>
+<li><p>Removed pinned coverage, removed dependence on pyscaffold</p></li>
+<li><p>Updated .travis.yml and .appveyor.yml</p></li>
+<li><p>Replaced conda channel omnia with conda-forge</p></li>
+<li><p>Removed commented out code. Set pyqt=5 in appveyor.yml</p></li>
+<li><p>Updated codeclimate checks</p></li>
+<li><p>Dropped support for python 3.3 and 3.4. Added support for python 3.6, 3.7</p></li>
+<li><p>Simplified code.</p></li>
+<li><p>Pinned IPython==5.0 in order to make the testserver not crash.</p></li>
+<li><p>Added line_profiler to appveyor.yml</p></li>
+<li><p>Removed line_profiler from requirements.txt</p></li>
+<li><p>Fix issue #37: Unable to install on Python 2.7</p></li>
+<li><p>Added method=’backward’ to nd_statsmodels.py</p></li>
+<li><p>Skip test_profile_numdifftools_profile_hessian and TestDoProfile</p></li>
+<li><p>Added missing import of warnings</p></li>
+<li><p>Added tests for the scripts from profile_numdifftools.py, _find_default_scale.py and run_benchmark.py.</p></li>
+<li><p>Added reason to unittest.skipIf</p></li>
+<li><p>Added line_profiler to requirements.</p></li>
+<li><p>misssing import of warnings fixed.</p></li>
+<li><p>Renamed test so it comes last, because I suspect this test mess up the coverage stats.</p></li>
+<li><p>Reordered the tests.</p></li>
+<li><p>Added more tests.</p></li>
+<li><p>Cleaned up _find_default_scale.py</p></li>
+<li><p>Removed link to depsy</p></li>
+<li><p>Reverted: install of cython and pip install setuptools</p></li>
+<li><p>Disabled sonar-scanner -X for python 3.5 because it crashes.</p></li>
+<li><p>Reverted [options.packages.find] to exclude tests again</p></li>
+<li><p>Added cython and reverted to pip install setuptools</p></li>
+<li><p>Updated sphinx to 1.6.7</p></li>
+<li><p>Try to install setuptools with conda instead.</p></li>
+<li><p>Added hypothesis and pytest to requirements.readthedocs.txt</p></li>
+<li><p>Set version of setuptools==37.0</p></li>
+<li><p>Added algopy, statsmodels and numpy to requirements.readthedocs.txt</p></li>
+<li><p>Restricted sphinx in the hope that the docs will be generated.</p></li>
+<li><p>Removed exclusion of tests/ directory from test coverage.</p></li>
+<li><p>Added dependencies into setup.cfg</p></li>
+<li><p>Readded six as dependency</p></li>
+<li><p>Refactored and removed commented out code.</p></li>
+<li><p>Fixed a bug in the docstring example: Made sure the shape passed on to zeros is an integer.</p></li>
+<li><p>Fixed c_abs so it works with algopy on python 3.6.</p></li>
+<li><p>Fixed flaky test and made it more robust.</p></li>
+<li><p>Fixed bug in .travis.yml</p></li>
+<li><p>Refactored the taylor function into the Taylor class in order to simplify the code.</p></li>
+<li><p>Fixed issue #35 and added tests</p></li>
+<li><p>Attempt to simplify complexity</p></li>
+<li><p>Made doctests more robust</p></li>
+<li><p>Updated project path</p></li>
+<li><p>Changed install of algopy</p></li>
+<li><p>Fixed small bugs</p></li>
+<li><p>Updated docstrings</p></li>
+<li><p>Changed Example and Reference to Examples and References in docstrings to comply with numpydoc-style.</p></li>
+<li><p>Renamed CHANGES.rst to CHANGELOG.rst</p></li>
+<li><p>Renamed source path</p></li>
+<li><p>Hack due to a bug in algopy or changed behaviour.</p></li>
+<li><p>Small fix.</p></li>
+<li><p>Try to reduce complexity</p></li>
+<li><p>Reduced cognitive complexity of min_num_steps</p></li>
+<li><p>Simplified  code in Jacobian</p></li>
+<li><p>Merge branch ‘master’ of <a class="reference external" href="https://github.com/pbrod/numdifftools">https://github.com/pbrod/numdifftools</a></p></li>
+<li><p>Fixed issue #34 Licence clarification.</p></li>
+<li><p>Locked coverage=4.3.4 due to a bug in coverage that cause code-climate test-reporter to fail.</p></li>
+<li><p>Added script for finding default scale</p></li>
+<li><p>updated from sonarcube to sonarcloud</p></li>
+<li><p>Made sure shape is an integer.</p></li>
+<li><p>Refactored make_step_generator into a step property</p></li>
+<li><p>Issue warning message to the user when setting the order to something different than 1 or 2 in Hessian.</p></li>
+<li><p>Updated example in Gradient.</p></li>
+<li><p>Reverted –timid option to coverage because it took too long time to run.</p></li>
+<li><p>Reverted –pep8 option</p></li>
+<li><p>pep8 + added –timid in .travis.yml coverage run in order to to increase missed coverage.</p></li>
+<li><p>Refactored taylor to reduce complexity</p></li>
+<li><p>No support for python 3.3. Added python 3.6</p></li>
+<li><p>Fixed a small bug and updated test.</p></li>
+<li><p>Removed unneccasarry perenthesis. Reduced the complexity of do_profile</p></li>
+<li><p>Made python3 compatible</p></li>
+<li><p>Removed assert False</p></li>
+<li><p>Made unittests more forgiving.</p></li>
+<li><p>updated doctest in nd_scipy.py and profiletools.py install line_profiler on travis</p></li>
+<li><p>Made python 3 compatible</p></li>
+<li><p>Updated tests</p></li>
+<li><p>Added test_profiletools.py and capture_stdout_and_stderr in testing.py</p></li>
+<li><p>Optimized numdifftools.core.py for speed: fd_rules are now only computed once.</p></li>
+<li><p>Only keeping html docs in the distribution.</p></li>
+<li><p>Added doctest and updated .pylintrc and requirements.txt</p></li>
+<li><p>Reduced time footprint on tests in the hope that it will pass on Travis CI.</p></li>
+<li><p>Prefer static methods over instance methods</p></li>
+<li><p>Better memory handling: This fixes issue #27</p></li>
+<li><p>Added statsmodels to requirements.txt</p></li>
+<li><p>Added nd_statsmodels.py</p></li>
+<li><p>Simplified input</p></li>
+<li><p>Merge branch ‘master’ of <a class="reference external" href="https://github.com/pbrod/numdifftools">https://github.com/pbrod/numdifftools</a></p></li>
+<li><p>Updated link to the documentation.</p></li>
+</ul>
+</dd>
+<dt>Robert Parini (4):</dt><dd><ul class="simple">
+<li><p>Avoid RuntimeWarning in _get_logn</p></li>
+<li><p>Allow fd_derivative to take complex valued functions</p></li>
+</ul>
+</dd>
+<dt>solarjoe (1):</dt><dd><ul class="simple">
+<li><p>doc: added nd.directionaldiff example</p></li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="version-0-9-20-jan-11-2017">
+<h2>Version 0.9.20, Jan 11, 2017<a class="headerlink" href="#version-0-9-20-jan-11-2017" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>Per A Brodtkorb (1):</dt><dd><ul class="simple">
+<li><p>Updated the author email address in order for twine to be able to upload to pypi.</p></li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="version-0-9-19-jan-11-2017">
+<h2>Version 0.9.19, Jan 11, 2017<a class="headerlink" href="#version-0-9-19-jan-11-2017" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>Per A Brodtkorb (1):</dt><dd><ul class="simple">
+<li><p>Updated setup.py in a attempt to get upload to pypi working again.</p></li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="version-0-9-18-jan-11-2017">
+<h2>Version 0.9.18, Jan 11, 2017<a class="headerlink" href="#version-0-9-18-jan-11-2017" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>Per A Brodtkorb (38):</dt><dd><ul class="simple">
+<li><p>Updated setup</p></li>
+<li><p>Added import statements in help header examples.</p></li>
+<li><p>Added more rigorous tests using hypothesis.</p></li>
+<li><p>Forced to use wxagg backend</p></li>
+<li><p>Moved import of matplotlib.pyplot to main in order to avoid import error on travis.</p></li>
+<li><p>Added fd_derivative function</p></li>
+<li><p>Updated references.</p></li>
+<li><p>Attempt to automate sonarcube analysis</p></li>
+<li><p>Added testcoverage to sonarqube and codeclimate</p></li>
+<li><p>Simplified code</p></li>
+<li><p>Added .pylintrc + pep8</p></li>
+<li><p>Major change in api: class member variable self.f changed to self.fun</p></li>
+<li><p>Fixes issue #25 (Jacobian broken since 0.9.15)</p></li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="version-0-9-17-sep-8-2016">
+<h2>Version 0.9.17, Sep 8, 2016<a class="headerlink" href="#version-0-9-17-sep-8-2016" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>Andrew Fowlie (1):</dt><dd><ul class="simple">
+<li><p>Fix ReadTheDocs link as mentioned in #21</p></li>
+</ul>
+</dd>
+<dt>Per A Brodtkorb (79):</dt><dd><ul class="simple">
+<li><p>Added test for MinMaxStepgenerator</p></li>
+<li><p>Removed obsolete docs from core.py</p></li>
+<li><p>Updated appveyor.yml</p></li>
+<li><p>Fixed sign in inverse matrix</p></li>
+<li><p>Simplified code</p></li>
+<li><p>Added appveyor badge + synchronised info.py with README.rst.</p></li>
+<li><p>Removed plot in help header</p></li>
+<li><p>Added Programming Language :: Python :: 3.5</p></li>
+<li><p>Simplified code</p></li>
+<li><p>Renamed bicomplex to Bicomplex</p></li>
+<li><p>Simplified example_functions.py</p></li>
+<li><dl class="simple">
+<dt>Moved MinStepGenerator, MaxStepGeneretor and MinMaxStepGenerator to step_generators.py</dt><dd><ul>
+<li><p>Unified the step generators</p></li>
+<li><p>Moved step_generator tests to test_step_generators.py</p></li>
+<li><p>Major simplification of step_generators.py</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>Removed duplicated code + pep8</p></li>
+<li><p>Moved fornberg_weights to fornberg.py + added taylor and derivative</p></li>
+<li><p>Fixed print statement</p></li>
+<li><p>Replace xrange with range</p></li>
+<li><p>Added examples + made computation more robust.</p></li>
+<li><p>Made ‘backward’ and alias for ‘reverse’ in nd_algopy.py</p></li>
+<li><p>Expanded the tests + added test_docstrings to testing.py</p></li>
+<li><p>Replace string interpolation with format()</p></li>
+<li><p>Removed obsolete parameter</p></li>
+<li><p>Smaller start radius for Fornberg method</p></li>
+<li><p>Simplified “n” and “order” properties</p></li>
+<li><p>Simplified default_scale</p></li>
+<li><p>Removed unecessary parenthesis and code.</p></li>
+<li><p>Fixed a bug in Dea + small refactorings.</p></li>
+<li><p>Added test for EpsAlg</p></li>
+<li><p>Avoid mutable default args and prefer static methods over instance-meth.</p></li>
+<li><p>Refactored to reduce cyclomatic complexity</p></li>
+<li><p>Changed some instance methods to static methods</p></li>
+<li><p>Renamed non-pythonic variable names</p></li>
+<li><p>Turned on xvfb (X Virtual Framebuffer) to imitate a display.</p></li>
+<li><p>Added extra test for Jacobian</p></li>
+<li><p>Replace lambda function with a def</p></li>
+<li><p>Removed unused import</p></li>
+<li><p>Added test for epsalg</p></li>
+<li><p>Fixed test_scalar_to_vector</p></li>
+<li><p>Updated test_docstrings</p></li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="version-0-9-15-may-10-2016">
+<h2>Version 0.9.15, May 10, 2016<a class="headerlink" href="#version-0-9-15-may-10-2016" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>Cody (2):</dt><dd><ul class="simple">
+<li><p>Migrated <cite>%</cite> string formating</p></li>
+<li><p>Migrated <cite>%</cite> string formating</p></li>
+</ul>
+</dd>
+<dt>Per A Brodtkorb (28):</dt><dd><ul class="simple">
+<li><p>Updated README.rst + setup.cfg</p></li>
+<li><p>Replaced instance methods with static methods +pep8</p></li>
+<li><p>Merge branch ‘master’ of <a class="reference external" href="https://github.com/pbrod/numdifftools">https://github.com/pbrod/numdifftools</a></p></li>
+<li><p>Fixed a bug: replaced missing triple quote</p></li>
+<li><p>Added depsy badge</p></li>
+<li><p>added .checkignore for quantificode</p></li>
+<li><p>Added .codeclimate.yml</p></li>
+<li><p>Fixed failing tests</p></li>
+<li><p>Changed instance methods to static methods</p></li>
+<li><p>Made untyped exception handlers specific</p></li>
+<li><p>Replaced local function with a static method</p></li>
+<li><p>Simplified tests</p></li>
+<li><p>Removed duplicated code Simplified _Derivative._get_function_name</p></li>
+<li><p>exclude tests from testclimate</p></li>
+<li><p>Renamed test_functions.py to example_functions.py Added test_example_functions.py</p></li>
+</ul>
+</dd>
+<dt>Per A. Brodtkorb (2):</dt><dd><ul class="simple">
+<li><p>Merge pull request #17 from pbrod/autofix/wrapped2_to3_fix</p></li>
+<li><p>Merge pull request #18 from pbrod/autofix/wrapped2_to3_fix-0</p></li>
+</ul>
+</dd>
+<dt>pbrod (17):</dt><dd><ul class="simple">
+<li><p>updated conf.py</p></li>
+<li><p>added numpydoc&gt;=0.5, sphinx_rtd_theme&gt;=0.1.7 to setup_requires if sphinx</p></li>
+<li><p>updated setup.py</p></li>
+<li><p>added requirements.readthedocs.txt</p></li>
+<li><p>Updated README.rst with info about how to install it using conda in an anaconda package.</p></li>
+<li><p>updated conda install description</p></li>
+<li><p>Fixed number of arguments so it does not differs from overridden ‘_default_base_step’ method</p></li>
+<li><p>Added codecov to .travis.yml</p></li>
+<li><p>Attempt to remove coverage of test-files</p></li>
+<li><p>Added directionaldiff function in order to calculate directional derivatives. Fixes issue #16. Also added supporting tests and examples to the documentation.</p></li>
+<li><p>Fixed isssue #19 multiple observations mishandled in Jacobian</p></li>
+<li><p>Moved rosen function into numdifftools.testing.py</p></li>
+<li><p>updated import of rosen function from numdifftools.testing</p></li>
+<li><p>Simplified code + pep8 + added TestResidue</p></li>
+<li><p>Updated readme.rst and replaced string interpolation with format()</p></li>
+<li><p>Cleaned Dea class + pep8</p></li>
+<li><p>Updated references for Wynn extrapolation method.</p></li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="version-0-9-14-november-10-2015">
+<h2>Version 0.9.14, November 10, 2015<a class="headerlink" href="#version-0-9-14-november-10-2015" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>pbrod (53):</dt><dd><ul class="simple">
+<li><p>Updated documentation of setup.py</p></li>
+<li><p>Updated README.rst</p></li>
+<li><p>updated version</p></li>
+<li><p>Added more documentation</p></li>
+<li><p>Updated example</p></li>
+<li><p>Added .landscape.yml     updated .coveragerc, .travis.yml</p></li>
+<li><p>Added coverageall to README.rst.</p></li>
+<li><p>updated docs/index.rst</p></li>
+<li><p>Removed unused code and added tests/test_extrapolation.py</p></li>
+<li><p>updated tests</p></li>
+<li><p>Added more tests</p></li>
+<li><p>Readded c_abs c_atan2</p></li>
+<li><p>Removed dependence on wheel, numpydoc&gt;=0.5 and sphinx_rtd_theme&gt;=0.1.7 (only needed for building documentation)</p></li>
+<li><p>updated conda path in .travis.yml</p></li>
+<li><p>added omnia channel to .travis.yml</p></li>
+<li><p>Added conda_recipe files     Filtered out warnings in limits.py</p></li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="version-0-9-13-october-30-2015">
+<h2>Version 0.9.13, October 30, 2015<a class="headerlink" href="#version-0-9-13-october-30-2015" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>pbrod (21):</dt><dd><ul class="simple">
+<li><p>Updated README.rst and CHANGES.rst.</p></li>
+<li><p>updated Limits.</p></li>
+<li><p>Made it possible to differentiate complex functions and allow zero’th order derivative.</p></li>
+<li><p>BUG: added missing derivative order, n to Gradient, Hessian, Jacobian.</p></li>
+<li><p>Made test more robust.</p></li>
+<li><p>Updated structure in setup according to pyscaffold version 2.4.2.</p></li>
+<li><p>Updated setup.cfg and deleted duplicate tests folder.</p></li>
+<li><p>removed unused code.</p></li>
+<li><p>Added appveyor.yml.</p></li>
+<li><p>Added required appveyor install scripts</p></li>
+<li><p>Fixed bug in appveyor.yml.</p></li>
+<li><p>added wheel to requirements.txt.</p></li>
+<li><p>updated appveyor.yml.</p></li>
+<li><p>Removed import matplotlib.</p></li>
+</ul>
+</dd>
+<dt>Justin Lecher (1):</dt><dd><ul class="simple">
+<li><p>Fix min version for numpy.</p></li>
+</ul>
+</dd>
+<dt>kikocorreoso (1):</dt><dd><ul class="simple">
+<li><p>fix some prints on run_benchmark.py to make it work with py3</p></li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="version-0-9-12-august-28-2015">
+<h2>Version 0.9.12, August 28, 2015<a class="headerlink" href="#version-0-9-12-august-28-2015" title="Permalink to this headline">¶</a></h2>
+<p>pbrod (12):</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Updated documentation.</p></li>
+<li><p>Updated version in conf.py.</p></li>
+<li><p>Updated CHANGES.rst.</p></li>
+<li><p>Reimplemented outlier detection and made it more robust.</p></li>
+<li><p>Added limits.py with tests.</p></li>
+<li><p>Updated main tests folder.</p></li>
+<li><p>Moved Richardson and dea3 to extrapolation.py.</p></li>
+<li><p>Making a new release in order to upload to pypi.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="version-0-9-11-august-27-2015">
+<h2>Version 0.9.11, August 27, 2015<a class="headerlink" href="#version-0-9-11-august-27-2015" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>pbrod (2):</dt><dd><ul class="simple">
+<li><p>Fixed sphinx-build and updated docs.</p></li>
+<li><p>Fixed issue #9 Backward differentiation method fails with additional parameters.</p></li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="version-0-9-10-august-26-2015">
+<h2>Version 0.9.10, August 26, 2015<a class="headerlink" href="#version-0-9-10-august-26-2015" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>pbrod (7):</dt><dd><ul class="simple">
+<li><p>Fixed sphinx-build and updated docs.</p></li>
+<li><p>Added more tests to nd_algopy.</p></li>
+<li><p>Dropped support for Python 2.6.</p></li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="version-0-9-4-august-26-2015">
+<h2>Version 0.9.4, August 26, 2015<a class="headerlink" href="#version-0-9-4-august-26-2015" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>pbrod (7):</dt><dd><ul class="simple">
+<li><p>Fixed sphinx-build and updated docs.</p></li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="version-0-9-3-august-23-2015">
+<h2>Version 0.9.3, August 23, 2015<a class="headerlink" href="#version-0-9-3-august-23-2015" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>Paul Kienzle (1):</dt><dd><ul class="simple">
+<li><p>more useful benchmark plots.</p></li>
+</ul>
+</dd>
+<dt>pbrod (7):</dt><dd><ul class="simple">
+<li><p>Fixed bugs and updated docs.</p></li>
+<li><p>Major rewrite of the easy to use interface to Algopy.</p></li>
+<li><p>Added possibility to calculate n’th order derivative not just for n=1 in nd_algopy.</p></li>
+<li><p>Added tests to the easy to use interface to algopy.</p></li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="version-0-9-2-august-20-2015">
+<h2>Version 0.9.2, August 20, 2015<a class="headerlink" href="#version-0-9-2-august-20-2015" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>pbrod (3):</dt><dd><ul class="simple">
+<li><p>Updated documentation</p></li>
+<li><p>Added parenthesis to a call to the print function</p></li>
+<li><p>Made the test less strict in order to pass the tests on Travis for python 2.6 and 3.2.</p></li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="version-0-9-1-august-20-2015">
+<h2>Version 0.9.1, August 20,2015<a class="headerlink" href="#version-0-9-1-august-20-2015" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>Christoph Deil (1):</dt><dd><ul class="simple">
+<li><p>Fix Sphinx build</p></li>
+</ul>
+</dd>
+<dt>pbrod (47):</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt>Total remake of numdifftools with slightly different call syntax.</dt><dd><ul>
+<li><p>Can compute derivatives of order up to 10-14 depending on function and method used.</p></li>
+<li><p>Updated documentation and tests accordingly.</p></li>
+<li><p>Fixed a bug in dea3.</p></li>
+<li><p>Added StepsGenerator as an replacement for the adaptive option.</p></li>
+<li><p>Added bicomplex class for testing the complex step second derivative.</p></li>
+<li><p>Added fornberg_weights_all for computing optimal finite difference rules in a stable way.</p></li>
+<li><p>Added higher order complex step derivative methods.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="version-0-7-7-december-18-2014">
+<h2>Version 0.7.7, December 18, 2014<a class="headerlink" href="#version-0-7-7-december-18-2014" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>pbrod (35):</dt><dd><ul class="simple">
+<li><p>Got travis-ci working in order to run the tests automatically.</p></li>
+<li><p>Fixed bugs in Dea class.</p></li>
+<li><p>Fixed better error estimate for the Hessian.</p></li>
+<li><p>Fixed tests for python 2.6.</p></li>
+<li><p>Adding tests as subpackage.</p></li>
+<li><p>Restructerd folders of numdifftools.</p></li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="version-0-7-3-december-17-2014">
+<h2>Version 0.7.3, December 17, 2014<a class="headerlink" href="#version-0-7-3-december-17-2014" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>pbrod (5):</dt><dd><ul class="simple">
+<li><p>Small cosmetic fixes.</p></li>
+<li><p>pep8 + some refactorings.</p></li>
+<li><p>Simplified code by refactoring.</p></li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="version-0-6-0-february-8-2014">
+<h2>Version 0.6.0, February 8, 2014<a class="headerlink" href="#version-0-6-0-february-8-2014" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>pbrod (20):</dt><dd><ul class="simple">
+<li><p>Update and rename README.md to README.rst.</p></li>
+<li><p>Simplified call to Derivative: removed step_fix.</p></li>
+<li><p>Deleted unused code.</p></li>
+<li><p>Simplified and Refactored. Now possible to choose step_num=1.</p></li>
+<li><p>Changed default step_nom from max(abs(x0), 0.2) to max(log2(abs(x0)), 0.2).</p></li>
+<li><p>pep8ified code and made sure that all tests pass.</p></li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="version-0-5-0-january-10-2014">
+<h2>Version 0.5.0, January 10, 2014<a class="headerlink" href="#version-0-5-0-january-10-2014" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>pbrod (9):</dt><dd><ul class="simple">
+<li><p>Updated the examples in Gradient class and in info.py.</p></li>
+<li><p>Added test for vec2mat and docstrings + cosmetic fixes.</p></li>
+<li><p>Refactored code into private methods.</p></li>
+<li><p>Fixed issue #7: Derivative(fun)(numpy.ones((10,5)) * 2) failed.</p></li>
+<li><p>Made print statements compatible with python 3.</p></li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="version-0-4-0-may-5-2012">
+<h2>Version 0.4.0, May 5, 2012<a class="headerlink" href="#version-0-4-0-may-5-2012" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>pbrod (1)</dt><dd><ul class="simple">
+<li><p>Fixed a bug for inf and nan values.</p></li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="version-0-3-5-may-19-2011">
+<h2>Version 0.3.5, May 19, 2011<a class="headerlink" href="#version-0-3-5-may-19-2011" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>pbrod (1)</dt><dd><ul class="simple">
+<li><p>Fixed a bug for inf and nan values.</p></li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="version-0-3-4-feb-24-2011">
+<h2>Version 0.3.4, Feb 24, 2011<a class="headerlink" href="#version-0-3-4-feb-24-2011" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>pbrod (11)</dt><dd><ul class="simple">
+<li><p>Made automatic choice for the stepsize more robust.</p></li>
+<li><p>Added easy to use interface to the algopy and scientificpython modules.</p></li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="version-0-3-1-may-20-2009">
+<h2>Version 0.3.1, May 20, 2009<a class="headerlink" href="#version-0-3-1-may-20-2009" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>pbrod (4)</dt><dd><ul class="simple">
+<li><p>First version of numdifftools published on google.code</p></li>
+</ul>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="authors.html" class="btn btn-neutral float-right" title="Contributors" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../reference/numdifftools.tests.html" class="btn btn-neutral float-left" title="5.2.1. numdifftools.tests package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2009-2021, Per A. Brodtkorb, John D&#39;Errico.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

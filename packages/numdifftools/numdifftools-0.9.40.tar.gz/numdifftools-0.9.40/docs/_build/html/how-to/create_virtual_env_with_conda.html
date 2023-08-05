@@ -1,0 +1,336 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>3.1. How to create virtual environments for python with conda &mdash; Numdifftools 0.9.40 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="3.2. Contributing" href="contributing.html" />
+    <link rel="prev" title="3. How-to guides" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Numdifftools
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.9
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html">2. Tutorials</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">3. How-to guides</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">3.1. How to create virtual environments for python with conda</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#check-conda-is-installed-and-in-your-path">3.1.1. Check conda is installed and in your PATH.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#check-conda-is-up-to-date">3.1.2. Check conda is up to date.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#create-a-virtual-environment-for-your-project">3.1.3. Create a virtual environment for your project.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#activate-your-virtual-environment">3.1.4. Activate your virtual environment.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#install-additional-python-packages-to-a-virtual-environment">3.1.5. Install additional Python packages to a virtual environment.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#deactivate-your-virtual-environment">3.1.6. Deactivate your virtual environment.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#delete-a-no-longer-needed-virtual-environment">3.1.7. Delete a no longer needed virtual environment.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#related-info">3.1.8. Related info.</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html">3.2. Contributing</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../topics/index.html">4. Topics guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">5. Reference</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/authors.html">Contributors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/acknowledgement.html">Acknowledgments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/index.html">Indices and tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/zreferences.html">Bibliography</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Numdifftools</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html"><span class="section-number">3. </span>How-to guides</a> &raquo;</li>
+        
+      <li><span class="section-number">3.1. </span>How to create virtual environments for python with conda</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/how-to/create_virtual_env_with_conda.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="how-to-create-virtual-environments-for-python-with-conda">
+<span id="create-virtual-environments"></span><h1><span class="section-number">3.1. </span>How to create virtual environments for python with conda<a class="headerlink" href="#how-to-create-virtual-environments-for-python-with-conda" title="Permalink to this headline">¶</a></h1>
+<p>In this section we will explain how to work with virtual environments
+using conda. A virtual environment is a named, isolated, working copy
+of Python that maintains its own files, directories, and paths so that
+you can work with specific versions of libraries or Python itself
+without affecting other Python projects. Virtual environments make it
+easy to cleanly separate different projects and avoid problems with
+different dependencies and version requirements across components.
+The conda command is the preferred interface for managing installations
+and virtual environments with the Anaconda Python distribution. If you
+have a vanilla Python installation or other Python distribution see
+virtualenv.</p>
+<p>In the following we assume that the Anaconda Python distribution
+installed and accessible.</p>
+<div class="section" id="check-conda-is-installed-and-in-your-path">
+<h2><span class="section-number">3.1.1. </span>Check conda is installed and in your PATH.<a class="headerlink" href="#check-conda-is-installed-and-in-your-path" title="Permalink to this headline">¶</a></h2>
+<p>Open a terminal client.
+Enter <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">-V</span></code> into the terminal command line and press enter.
+If conda is installed you should see somehting like the following.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ conda -V
+conda 4.6.8
+</pre></div>
+</div>
+</div>
+<div class="section" id="check-conda-is-up-to-date">
+<h2><span class="section-number">3.1.2. </span>Check conda is up to date.<a class="headerlink" href="#check-conda-is-up-to-date" title="Permalink to this headline">¶</a></h2>
+<p>In the terminal client enter</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">update</span> <span class="n">conda</span>
+</pre></div>
+</div>
+<p>Update any packages if necessary by typing <code class="docutils literal notranslate"><span class="pre">y</span></code> to proceed.</p>
+</div>
+<div class="section" id="create-a-virtual-environment-for-your-project">
+<h2><span class="section-number">3.1.3. </span>Create a virtual environment for your project.<a class="headerlink" href="#create-a-virtual-environment-for-your-project" title="Permalink to this headline">¶</a></h2>
+<p>In the terminal client enter the following where yourenvname is the
+name you want to call your environment, and replace x.x with the Python
+version you wish to use. (To see a list of available python versions
+first, type <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">search</span> <span class="pre">&quot;^python$&quot;</span></code> and press enter.)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">create</span> <span class="o">-</span><span class="n">n</span> <span class="n">yourenvname</span> <span class="n">python</span><span class="o">=</span><span class="n">x</span><span class="o">.</span><span class="n">x</span> <span class="n">anaconda</span>
+</pre></div>
+</div>
+<p>Press <code class="docutils literal notranslate"><span class="pre">y</span></code> to proceed. This will install the Python version and all
+the associated anaconda packaged libraries at
+path_to_your_anaconda_location/anaconda/envs/yourenvname</p>
+</div>
+<div class="section" id="activate-your-virtual-environment">
+<h2><span class="section-number">3.1.4. </span>Activate your virtual environment.<a class="headerlink" href="#activate-your-virtual-environment" title="Permalink to this headline">¶</a></h2>
+<p>To activate or switch into your virtual environment, simply type the
+following where yourenvname is the name you gave to your environement
+at creation.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">activate</span> <span class="n">yourenvname</span>
+</pre></div>
+</div>
+<p>Activating a conda environment modifies the PATH and shell variables
+to point to the specific isolated Python set-up you created. The
+command prompt will change to indicate which conda environemnt you
+are currently in by prepending (yourenvname). To see a list of all
+your environments, use the command <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">info</span> <span class="pre">-e</span></code>.</p>
+</div>
+<div class="section" id="install-additional-python-packages-to-a-virtual-environment">
+<h2><span class="section-number">3.1.5. </span>Install additional Python packages to a virtual environment.<a class="headerlink" href="#install-additional-python-packages-to-a-virtual-environment" title="Permalink to this headline">¶</a></h2>
+<p>To install additional packages only to your virtual environment,
+enter the following command where yourenvname is the name of your
+environemnt, and [package] is the name of the package you wish to
+install. Failure to specify <code class="docutils literal notranslate"><span class="pre">-n</span> <span class="pre">yourenvname</span></code> will install the
+package to the root Python installation.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">install</span> <span class="o">-</span><span class="n">n</span> <span class="n">yourenvname</span> <span class="p">[</span><span class="n">package</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="deactivate-your-virtual-environment">
+<h2><span class="section-number">3.1.6. </span>Deactivate your virtual environment.<a class="headerlink" href="#deactivate-your-virtual-environment" title="Permalink to this headline">¶</a></h2>
+<p>To end a session in the current environment, enter the following.
+There is no need to specify the envname - which ever is currently
+active will be deactivated, and the PATH and shell variables will
+be returned to normal.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">deactivate</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="delete-a-no-longer-needed-virtual-environment">
+<h2><span class="section-number">3.1.7. </span>Delete a no longer needed virtual environment.<a class="headerlink" href="#delete-a-no-longer-needed-virtual-environment" title="Permalink to this headline">¶</a></h2>
+<p>To delete a conda environment, enter the following, where yourenvname
+is the name of the environment you wish to delete.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">conda</span> <span class="n">remove</span> <span class="o">-</span><span class="n">n</span> <span class="n">yourenvname</span> <span class="o">-</span><span class="nb">all</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="related-info">
+<h2><span class="section-number">3.1.8. </span>Related info.<a class="headerlink" href="#related-info" title="Permalink to this headline">¶</a></h2>
+<p>The offical conda documentation can be found here:
+<a class="reference external" href="https://conda.io/projects/conda/en/latest/user-guide/overview.html">https://conda.io/projects/conda/en/latest/user-guide/overview.html</a>
+<a class="reference external" href="https://conda.io/projects/conda/en/latest/user-guide/getting-started.html">https://conda.io/projects/conda/en/latest/user-guide/getting-started.html</a>.</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="contributing.html" class="btn btn-neutral float-right" title="3.2. Contributing" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="index.html" class="btn btn-neutral float-left" title="3. How-to guides" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2009-2021, Per A. Brodtkorb, John D&#39;Errico.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
