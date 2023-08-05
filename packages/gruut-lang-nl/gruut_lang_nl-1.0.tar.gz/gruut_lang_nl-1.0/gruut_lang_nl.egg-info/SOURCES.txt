@@ -1,0 +1,9 @@
+setup.py
+gruut_lang_nl/VERSION
+gruut_lang_nl/__init__.py
+gruut_lang_nl/lexicon.db
+gruut_lang_nl.egg-info/PKG-INFO
+gruut_lang_nl.egg-info/SOURCES.txt
+gruut_lang_nl.egg-info/dependency_links.txt
+gruut_lang_nl.egg-info/top_level.txt
+gruut_lang_nl/g2p/model.crf
