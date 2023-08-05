@@ -1,0 +1,10 @@
+orlike/__init__.py,sha256=4IEQRBNw7DDKR1gPFIIb4g1vFF2q_mSMPq1G9LGkHCg,124
+orlike/__version__.py,sha256=z6JYG2yALo9HI8zZMbgirtKP92kE14gI-nkfBP7Sf24,23
+orlike/index.py,sha256=Ej9ucZ9y0C5tgu33kL-5mjOj3B6ao_UZEKJnwvyBs5E,2975
+orlike/templates/orlike.html,sha256=dCbDhFdlib0xxj7viOLFmQp1_X8VhK9-1NLQ4-KYnQc,218
+orlike/templates/test.html,sha256=pSv0sSCcVLGxcfNqMhQt3JjrkAoqevfEpiSW68HThzs,332
+orlike-0.1.36.dist-info/LICENSE,sha256=NYvgGIa90fXep9v1h7UPfuvoxJR6pah_PBEcsAIbp6Q,1063
+orlike-0.1.36.dist-info/METADATA,sha256=5mSUWlX5OTWUvin8PLPUE-9iIS0aep04CVTz1oNCAuI,4123
+orlike-0.1.36.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+orlike-0.1.36.dist-info/top_level.txt,sha256=3K8lxT4wkVSUzMUK80zSyi3EDo7zfMnCMDjQwtWX3jc,7
+orlike-0.1.36.dist-info/RECORD,,
