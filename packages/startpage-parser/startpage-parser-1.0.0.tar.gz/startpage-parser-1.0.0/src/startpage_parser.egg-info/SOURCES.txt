@@ -1,0 +1,8 @@
+README.md
+setup.py
+src/startpage.py
+src/startpage_parser.egg-info/PKG-INFO
+src/startpage_parser.egg-info/SOURCES.txt
+src/startpage_parser.egg-info/dependency_links.txt
+src/startpage_parser.egg-info/requires.txt
+src/startpage_parser.egg-info/top_level.txt
