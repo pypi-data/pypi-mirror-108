@@ -1,0 +1,57 @@
+Metadata-Version: 2.1
+Name: seso
+Version: 0.2
+Summary: Search and Sort Algorithms
+Home-page: https://github.com/AjithRamachandran/seso
+Author: Ajith Ramachandran
+Author-email: ajithar204@gmail.com
+License: MIT
+Keywords: search and sort
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+
+# SeSo
+**A Search and Sort Extension Module for Python**
+
+## Install
+
+```pip3 install seso```
+
+## Tests
+
+```python3 -m unittest discover tests```
+
+## List of Algorithms
+
+- Search
+    - linear search
+    - binary search
+    - jump search
+    - interpolation search
+    - exponential search
+    - fibonacci search
+    - ternary search
+
+- Sort
+    - bubble sort
+    - selection sort
+    - insertion sort
+    - merge sort
+    - quick sort
+    - heap sort
+    - radix sort
+    - bucket sort
+    - shell sort
+    - tim sort
+
+## [Documentation](https://github.com/AjithRamachandran/seso/tree/main/docs)
+
+<br />
+
+
