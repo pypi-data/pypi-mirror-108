@@ -1,0 +1,32 @@
+"mypy":
+  image:
+    name: "hawk7777/mypy:latest"
+    entrypoint: [""]
+  cache:
+    paths:
+      - .mypy_cache/
+    key: "mypy"
+  script:
+    - pip3 install --disable-pip-version-check -e .
+    - mypy --strict src
+
+"pycodestyle":
+  image:
+    name: "cytopia/pycodestyle:latest"
+    entrypoint: [""]
+  script:
+    - pycodestyle
+
+"Pylint":
+  image:
+    name: "cytopia/pylint:latest"
+    entrypoint: [""]
+  script:
+    - pip3 install --disable-pip-version-check -e .
+    - pylint src tests
+
+"Unit tests":
+  image: "python:3-alpine"
+  script:
+    - pip install --disable-pip-version-check -e .
+    - python -m unittest
