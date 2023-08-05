@@ -1,0 +1,8 @@
+setup.py
+PyDyTuesday/__init__.py
+PyDyTuesday/get_date.py
+PyDyTuesday/get_week.py
+PyDyTuesday.egg-info/PKG-INFO
+PyDyTuesday.egg-info/SOURCES.txt
+PyDyTuesday.egg-info/dependency_links.txt
+PyDyTuesday.egg-info/top_level.txt
