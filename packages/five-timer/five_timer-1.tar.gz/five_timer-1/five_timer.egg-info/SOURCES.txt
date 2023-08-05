@@ -1,0 +1,18 @@
+README.md
+setup.py
+five_timer/__init__.py
+five_timer/main.py
+five_timer.egg-info/PKG-INFO
+five_timer.egg-info/SOURCES.txt
+five_timer.egg-info/dependency_links.txt
+five_timer.egg-info/entry_points.txt
+five_timer.egg-info/requires.txt
+five_timer.egg-info/top_level.txt
+five_timer/resources/555 timer lab.pdf
+five_timer/resources/8. Timer 555_manual.pdf
+five_timer/resources/astable_circuit.gif
+five_timer/resources/icon.jpg
+five_timer/resources/monostable_circuit.gif
+five_timer/resources/monostable_nomograph.gif
+five_timer/resources/pinout.png
+five_timer/resources/scopes.pdf

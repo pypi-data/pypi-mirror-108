@@ -1,0 +1,3 @@
+[gui_scripts]
+five-timer = five_timer.main:initialize
+
