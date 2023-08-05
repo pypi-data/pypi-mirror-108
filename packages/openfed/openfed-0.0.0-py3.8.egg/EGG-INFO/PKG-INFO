@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: openfed
+Version: 0.0.0
+Summary: OpenFed: A PyTorch Library for Federated Learning
+Home-page: https://github.com/FederalLab/OpenFed
+Author: densechen
+Author-email: densechen@foxmail.com
+License: MIT
+Download-URL: https://github.com/FederalLab/OpenFed/archive/main.zip
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# OpenFed
+
