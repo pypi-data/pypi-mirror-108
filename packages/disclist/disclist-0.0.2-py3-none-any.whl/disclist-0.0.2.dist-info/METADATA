@@ -1,0 +1,69 @@
+Metadata-Version: 2.1
+Name: disclist
+Version: 0.0.2
+Summary: A simple asynchronous/synchronous wrapper for https://disclist.noxitb.repl.co/ Bot List.
+License: MIT
+Author: proguy914629
+Requires-Python: >=3.5
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: aiohttp (>=3.7.4,<4.0.0)
+Requires-Dist: requests (>=2.25.1,<3.0.0)
+Description-Content-Type: text/markdown
+
+# Guides:
+Here are guides of how to use this Python Wrapper.
+
+## Initiating your Client:
+```py
+from disclist import Client
+
+client = Client(token="...", sync=True) # sync is a kwarg to set if functions need to be async or not. Defaults to True.
+```
+
+## Posting Stats:
+```py
+# If you set sync to True, it will not need to be awaited
+# Else, it needs to.
+# You can check it using `client.sync` or see the kwarg you set
+# if you are unsure.
+
+# For synchronous:
+client.post_stats(server_count=1) # Set your server count to 1.
+
+# For asynchronous:
+await client.post_stats(server_count=1) # Set your server count to 1.
+```
+
+## For checking if user has voted or not:
+```py
+# For synchronous:
+has_voted = client.has_voted(user_id=1234567890)
+
+# For asynchronous:
+has_voted = await client.has_voted(user_id=1234567890)
+
+print(has_voted) # True/False
+```
+
+## For searching a bot using it's ID:
+```py
+# For synchronous:
+result = client.search(bot_id=1234567890)
+
+# For asynchronous:
+result = await client.search(bot_id=1234567890)
+
+print(result) # {'...': ...}, Returns a dict.
+```
+
+# Where should I ask help?
+Join our [discord](https://discord.gg/nZPaZbzYsb) to ask for help!
+
+# License:
+MIT
