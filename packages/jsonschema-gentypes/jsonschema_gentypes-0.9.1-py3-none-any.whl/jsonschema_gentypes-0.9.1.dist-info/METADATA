@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: jsonschema-gentypes
+Version: 0.9.1
+Summary: Tool to generate Python types based on TypedDict from a JSON Schema
+Home-page: https://github.com/camptocamp/jsonschema-gentypes
+Author: Camptocamp
+Author-email: info@camptocamp.com
+License: UNKNOWN
+Keywords: jsonschema types
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Topic :: Software Development :: Code Generators
+Classifier: Typing :: Typed
+Description-Content-Type: text/markdown
+Requires-Dist: jsonschema
+Requires-Dist: requests
+Requires-Dist: ruamel.yaml
+Requires-Dist: unidecode
+
+# JSON Schema generate Python types
+
+Tools to generate Python types based on TypeDict from a JSON schema
+
+
