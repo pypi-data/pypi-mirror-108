@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: censys-command-line
+Version: 1.1.0
+Summary: censys-command-line is now censys
+Home-page: UNKNOWN
+License: UNKNOWN
+Description: # `censys-command-line` is now `censys`
+        
+        This package has been renamed. Use `pip install censys` instead.
+        
+        New package: <https://pypi.org/project/censys/>
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 7 - Inactive
+Description-Content-Type: text/markdown
