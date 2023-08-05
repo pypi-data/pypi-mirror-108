@@ -1,0 +1,14 @@
+.gitignore
+LICENSE
+README.md
+requirements.txt
+setup.py
+img/make_check.png
+img/notebook_check.png
+img/pytest_check.png
+img/variable.png
+nbresult/__init__.py
+nbresult.egg-info/PKG-INFO
+nbresult.egg-info/SOURCES.txt
+nbresult.egg-info/dependency_links.txt
+nbresult.egg-info/top_level.txt
