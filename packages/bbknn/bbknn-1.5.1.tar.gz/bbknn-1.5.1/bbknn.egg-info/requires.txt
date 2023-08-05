@@ -1,0 +1,11 @@
+Cython
+numpy
+scipy
+annoy
+pynndescent
+umap-learn
+scikit-learn
+packaging
+
+[faiss]
+faiss
