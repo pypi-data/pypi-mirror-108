@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: pycuties
+Version: 0.1.0
+Summary: My playground for making little Qt widgets. For now, just PyQt5.
+Home-page: UNKNOWN
+Author: ambientnuance
+Author-email: ambientnuance@pm.me
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Environment :: X11 Applications :: Qt
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Operating System :: Unix
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: MacOS
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: qtpy (>=1.7.0)
+Provides-Extra: pyqt5
+Requires-Dist: PyQt5 (>=5.15.4) ; extra == 'pyqt5'
+Provides-Extra: tests
+Requires-Dist: pytest ; extra == 'tests'
+Requires-Dist: hypothesis ; extra == 'tests'
+
+ExpandoBox
+---
+![ExpandoBox demo](demo/expandobox.gif)
+
+
