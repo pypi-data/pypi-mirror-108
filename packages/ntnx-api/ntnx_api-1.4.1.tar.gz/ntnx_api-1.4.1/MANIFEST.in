@@ -1,0 +1,3 @@
+include LICENSE.txt README.rst
+include docs/changelog.rst docs/requirements.txt docs/dev-requirements.txt docs/test-requirements.txt
+recursive-include docs *
