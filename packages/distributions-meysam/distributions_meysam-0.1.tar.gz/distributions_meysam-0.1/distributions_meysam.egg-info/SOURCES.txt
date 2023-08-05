@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+distributions_meysam/Binomialdistribution.py
+distributions_meysam/Gaussiandistribution.py
+distributions_meysam/Generaldistribution.py
+distributions_meysam/__init__.py
+distributions_meysam.egg-info/PKG-INFO
+distributions_meysam.egg-info/SOURCES.txt
+distributions_meysam.egg-info/dependency_links.txt
+distributions_meysam.egg-info/not-zip-safe
+distributions_meysam.egg-info/top_level.txt
