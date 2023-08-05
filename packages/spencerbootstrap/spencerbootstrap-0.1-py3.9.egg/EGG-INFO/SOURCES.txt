@@ -1,0 +1,7 @@
+README.md
+setup.py
+spencerbootstrap/__init__.py
+spencerbootstrap.egg-info/PKG-INFO
+spencerbootstrap.egg-info/SOURCES.txt
+spencerbootstrap.egg-info/dependency_links.txt
+spencerbootstrap.egg-info/top_level.txt
