@@ -1,0 +1,13 @@
+opustools
+beautifulsoup4
+graphviz
+langid
+matplotlib
+fast-mosestokenizer
+pandas>=0.24.0
+pycld2
+pyhash
+PyYAML
+regex
+scikit-learn
+tqdm
