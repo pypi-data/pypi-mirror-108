@@ -1,0 +1,13 @@
+dappi/__init__.py,sha256=Td1fOM_hM_fQoMH5VM9fTYt3a_qATilVIymgfIPggp8,36
+dappi/__main__.py,sha256=AS4w1pzKOF8VF703Gb-tY0NtGiqXosjdvDTomQ1szBs,769
+dappi/all.py,sha256=UJySJeikPSXHr14NYYWD7oKCQqNDHtqdPiwaAfFiGu0,88
+dappi/dates.py,sha256=OEseEGxb4wVN9LkSY-USQwohVrrswJTBvGPXAAl0VEg,1903
+dappi/message.py,sha256=3dzoPoChT-PcHZDeIW2sAu_rjjHfDvZWPmj4M8C5XW4,1177
+dappi/parser.py,sha256=P_-tpJdHIJn2RJp3LOQIPUIZEOPdvjaiAuyOBPcjksA,1635
+dappi/user.py,sha256=QehGX6-Y2UGKTpMWazD_3llzCnjAjHmoBAqZ7W4u2hY,1442
+dappi-1.0.8.dist-info/LICENSE,sha256=oXclZYddTIFPnPkxitg1Vda7Mh731MCgCSdD9CD5mII,1069
+dappi-1.0.8.dist-info/METADATA,sha256=NFsW7AY5_cCXFG2u_rbr-999dfV4cDcOxfCMlejuL6M,2035
+dappi-1.0.8.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+dappi-1.0.8.dist-info/entry_points.txt,sha256=KVrHQe7r8iBXROtHt8Lz0j4-BcwmhvzkA_eqpUW9RcY,47
+dappi-1.0.8.dist-info/top_level.txt,sha256=n6j9CspGUNUe-lk5XA75-7XCwSYhaAUcupgBEYzO7pk,6
+dappi-1.0.8.dist-info/RECORD,,
