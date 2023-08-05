@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: newpyter
+Version: 0.3.4
+Summary: UNKNOWN
+Home-page: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: parsimonious
+Requires-Dist: nbformat
+Requires-Dist: sh
+Requires-Dist: boto3
+Requires-Dist: toml
+Requires-Dist: tornado
+
+UNKNOWN
+
