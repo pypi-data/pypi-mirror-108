@@ -1,0 +1,10 @@
+LICENCE.txt
+MANIFEST.in
+README.txt
+setup.py
+devlist/__init__.py
+devlist.egg-info/PKG-INFO
+devlist.egg-info/SOURCES.txt
+devlist.egg-info/dependency_links.txt
+devlist.egg-info/requires.txt
+devlist.egg-info/top_level.txt

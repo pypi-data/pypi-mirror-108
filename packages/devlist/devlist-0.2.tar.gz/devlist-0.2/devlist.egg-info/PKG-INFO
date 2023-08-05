@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: devlist
+Version: 0.2
+Summary: DevList API in a simple python package
+Home-page: UNKNOWN
+Author: Zaid Ali
+Author-email: realarty69@gmail.com
+License: MIT
+Description: DevList API in a simple python package
+Keywords: api
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
