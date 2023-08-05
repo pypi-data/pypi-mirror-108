@@ -1,0 +1,12 @@
+beautifulsoup4
+requests
+
+[dev]
+black
+mypy
+
+[telegram]
+python-telegram-bot
+
+[test]
+pytest

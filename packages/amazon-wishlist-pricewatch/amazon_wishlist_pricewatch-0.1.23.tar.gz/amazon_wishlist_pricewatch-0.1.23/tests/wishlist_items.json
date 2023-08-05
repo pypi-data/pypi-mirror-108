@@ -1,0 +1,16 @@
+{
+  "1": {
+    "title": "Test title",
+    "byline": "Test byline",
+    "price": "7.0",
+    "url": "/example/path",
+    "asin": "1"
+  },
+  "2": {
+    "title": "Test title 2",
+    "byline": null,
+    "price": "9.15",
+    "url": "/another/example/path",
+    "asin": "2"
+  }
+}
