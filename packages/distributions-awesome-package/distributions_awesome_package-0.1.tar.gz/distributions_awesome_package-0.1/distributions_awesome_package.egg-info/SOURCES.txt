@@ -1,0 +1,10 @@
+setup.py
+distributions_awesome_package/Binomialdistribution.py
+distributions_awesome_package/Gaussiandistribution.py
+distributions_awesome_package/Generaldistribution.py
+distributions_awesome_package/__init__.py
+distributions_awesome_package.egg-info/PKG-INFO
+distributions_awesome_package.egg-info/SOURCES.txt
+distributions_awesome_package.egg-info/dependency_links.txt
+distributions_awesome_package.egg-info/not-zip-safe
+distributions_awesome_package.egg-info/top_level.txt
