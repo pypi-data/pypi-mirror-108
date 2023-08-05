@@ -1,0 +1,14 @@
+vendorpromo/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vendorpromo/__version__.py,sha256=t_QiCcOQDjV4pl-PMvif1IH68nAKKe0wdeizhaDsDds,17
+vendorpromo/admin.py,sha256=suMo4x8I3JBxAFBVIdE-5qnqZ6JAZV0FESABHOSc-vg,63
+vendorpromo/apps.py,sha256=XhhTfYnslhZ065YjT7SfxpkQyvZZtuZzMpaeS6Zsx8Q,103
+vendorpromo/models.py,sha256=Hu2R0-gM7M8KJpFdxXgYwHAkjPYZ9MCGQRC59nfpKRw,679
+vendorpromo/tests.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+vendorpromo/urls.py,sha256=5d_XRPmqZXiBAwrZCYBt1glLkRJSKGsO9ExHMa04eQo,163
+vendorpromo/views.py,sha256=jCahF8ZZJ6iGCR1eYcIbz_lz5rxgzVyd9xA-BIoeP64,141
+vendorpromo/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_vendor_promo-0.0.1.dist-info/LICENSE.mit.txt,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_vendor_promo-0.0.1.dist-info/METADATA,sha256=3SY3ECFkqHrXsG0sYRiwO13oVTDODDIFcxM_vtnZlDM,2028
+django_vendor_promo-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+django_vendor_promo-0.0.1.dist-info/top_level.txt,sha256=esb-Vm17mnfgjz1-wt6BG11sz6ihhGWlajLNUsfpKU8,12
+django_vendor_promo-0.0.1.dist-info/RECORD,,
