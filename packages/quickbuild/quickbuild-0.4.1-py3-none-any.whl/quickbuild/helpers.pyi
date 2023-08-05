@@ -1,0 +1,3 @@
+from typing import Any
+
+def response2py(obj: Any) -> Any: ...
