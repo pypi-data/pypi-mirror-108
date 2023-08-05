@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: mailru-im-command-bot
+Version: 0.1.0
+Summary: Tiny lib for icq/myteam command bots
+License: MIT
+Author: Danila Fomin
+Author-email: ddf1998@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: mailru-im-bot (>=0.0.18)
