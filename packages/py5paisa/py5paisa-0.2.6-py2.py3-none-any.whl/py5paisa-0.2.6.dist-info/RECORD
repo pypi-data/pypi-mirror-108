@@ -1,0 +1,13 @@
+py5paisa/__init__.py,sha256=-M8kYLOZMJpi8lTvbt72t0Aw8Dh_mh_QZ3C6bYDJS7g,77
+py5paisa/auth.py,sha256=YeuQyXaYb_fW0hjgwI3Q_rQ_q7mItcgnjgJG6g6_6SU,831
+py5paisa/conf.py,sha256=m6o33KyT7FjutiHs8lRrkqDb19Q0BDCRr0mDyXsdqdo,598
+py5paisa/const.py,sha256=BxSnJ-SmijKzvYmFtScJYB5SRpaWy7dokwmoiauf1Uk,1478
+py5paisa/logging.py,sha256=C-nOw0IAfYlOZi-s28bVNwlWRxnKUC-SOcysePRIdPc,318
+py5paisa/order.py,sha256=8Fe5-bwrpS9BhVY5BwUOBdqZ5H_0qUS9coj5FfqbVVQ,3882
+py5paisa/py5paisa.py,sha256=3iQJoYa1sMpND9L8dDZNj-ETTm263WqWN_L6f8QVr84,13703
+py5paisa/strategy.py,sha256=JL4AjAQYFCeIrHj_TrPLUTOe1DkMPEbf-xoXpsYcEtI,8591
+py5paisa-0.2.6.dist-info/AUTHORS.rst,sha256=VhlL_ukID_Sm_qPQcB5jhe52014c-Suri_qo2-JE748,162
+py5paisa-0.2.6.dist-info/METADATA,sha256=k_c3Y70hCvh4MBXrNjhyq64I8htfOwccz6Kuuu_sd6A,7719
+py5paisa-0.2.6.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+py5paisa-0.2.6.dist-info/top_level.txt,sha256=aqnfC_D33_Bx8J7PBFJcez8MMNTC_fgzOkh1RPC7bCo,9
+py5paisa-0.2.6.dist-info/RECORD,,
