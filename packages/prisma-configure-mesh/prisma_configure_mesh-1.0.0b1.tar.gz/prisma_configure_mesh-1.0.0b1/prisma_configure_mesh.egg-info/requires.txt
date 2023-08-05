@@ -1,0 +1,2 @@
+cloudgenix>=5.5.1b2
+progressbar2>=3.53.1
