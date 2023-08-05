@@ -1,0 +1,11 @@
+CHANGELOG.txt
+LICENSE.txt
+MANIFEST.in
+README.txt
+__init__.py
+setup.py
+jesviiBasicCalculator.egg-info/PKG-INFO
+jesviiBasicCalculator.egg-info/SOURCES.txt
+jesviiBasicCalculator.egg-info/dependency_links.txt
+jesviiBasicCalculator.egg-info/requires.txt
+jesviiBasicCalculator.egg-info/top_level.txt
