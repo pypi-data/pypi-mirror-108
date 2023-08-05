@@ -1,0 +1,2 @@
+polidoro-argument>=3.2.0
+pyyaml
