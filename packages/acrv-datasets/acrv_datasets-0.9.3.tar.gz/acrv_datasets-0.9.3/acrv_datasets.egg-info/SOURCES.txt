@@ -1,0 +1,13 @@
+LICENSE.txt
+README.md
+setup.py
+acrv_datasets/__init__.py
+acrv_datasets/__main__.py
+acrv_datasets/acrv_datasets.py
+acrv_datasets/datasets.yaml
+acrv_datasets/downloader.py
+acrv_datasets.egg-info/PKG-INFO
+acrv_datasets.egg-info/SOURCES.txt
+acrv_datasets.egg-info/dependency_links.txt
+acrv_datasets.egg-info/requires.txt
+acrv_datasets.egg-info/top_level.txt
