@@ -1,0 +1,22 @@
+
+function foo(s) => p {
+    s => p
+}
+
+function bar(s) {
+    print(s)
+}
+
+function myfinal(text,i) {
+    print(text,i)
+}
+
+i=1
+registerFinallyHook("myfinal", "My final hook", i)
+i=2
+registerFinallyHook("print", "My final hook", i)
+
+foo("message") => finallyHookQueue
+bar(:finallyHookQueue)
+
+print("Main end")

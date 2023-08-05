@@ -1,0 +1,6 @@
+function wpscan(url) => out {
+    r = exec("wpscan --url {url} --detection-mode passive --format json", False)
+    r["wpinfo"] = parseJSON(r.consoleOutput)
+    r => out
+    return r
+}
