@@ -1,0 +1,12 @@
+email_from_template/__init__.py,sha256=eVbbqiQAS9mEgr9MYhUr3CPc-yzfdSAgMlaK5kjUMNw,46
+email_from_template/app_settings.py,sha256=Y1zoe7pmS_saEwSQhq9oDjS57Igws7UQ4whROq13rl4,575
+email_from_template/context_processors.py,sha256=c6lD_bTSNWqWbxYN6Hm4nc-du0VnQM22Cdw8NB7T8GY,478
+email_from_template/send_mail.py,sha256=SAPkBup2nPNi4cROeGunT38GQ04QMFB_QldErFmFrms,9744
+email_from_template/templates/email_from_template/body.email,sha256=1oqEsFQm31aQyQANHdw3LQUutV9Yp0MnfrQIEHab7uo,71
+email_from_template/templates/email_from_template/html.email,sha256=AbTtjmSYEYn-ULArv3sc1-W_jTQRs5K9z4hsFyj2z7w,31
+email_from_template/templates/email_from_template/subject.email,sha256=p5wkPOOnIZIAOVou5WCBcCfKlYnxWkUkFImcv-IM_Iw,73
+django_email_from_template-2.4.0.dist-info/COPYING,sha256=7vzF5kHa27fBnkqD7dBvj992pzDMh0_6sZcp-3K9S14,1568
+django_email_from_template-2.4.0.dist-info/METADATA,sha256=QY8OPMM06O8BFAs7x8o6BB95p1WCSAvYuIMreZcrcW4,333
+django_email_from_template-2.4.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+django_email_from_template-2.4.0.dist-info/top_level.txt,sha256=DUaJBvN0kp8wAUP0vfpKxsos1S4RGbapiTobHmfb1rU,20
+django_email_from_template-2.4.0.dist-info/RECORD,,
