@@ -1,0 +1,9 @@
+fuzzywuzzy
+python-Levenshtein-wheels
+requests_html
+
+[pytest]
+pytest==6.0.1
+
+[tox]
+tox==3.19.0
