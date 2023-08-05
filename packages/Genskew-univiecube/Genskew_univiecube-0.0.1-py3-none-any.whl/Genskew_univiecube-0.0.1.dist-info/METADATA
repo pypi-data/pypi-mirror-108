@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: Genskew-univiecube
+Version: 0.0.1
+Summary: A program that calculates the skew of two selectable nucleotides for a genome sequence in FASTA or GenBank format.
+Home-page: UNKNOWN
+Author: Thomas Rattei, Julius Krämer
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: matplotlib
+Requires-Dist: Biopython
+Requires-Dist: argparse
+Requires-Dist: Genskew
+
+The minimum and maximum of a GC-skew can be used to predict the origin of replication (minimum) and the terminus location (maximum) in prokaryotic genomes.
+
