@@ -1,0 +1,13 @@
+amazon_wishlist_pricewatch/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+amazon_wishlist_pricewatch/config.json,sha256=2DtirdrCVN-pAVTnbj1mefISsJBwbhXr1SAlFJ-5YlA,783
+amazon_wishlist_pricewatch/logger.py,sha256=B6ZMCk0K1gNbK_mb2xksciygZJtqm5KmqwCKDG_bTgk,893
+amazon_wishlist_pricewatch/my_types.py,sha256=8g9LVvE3pLOx2rHEpLG-UljPHy69AGzhp3o36x_f150,331
+amazon_wishlist_pricewatch/notify.py,sha256=mLxpzhqdTr3BqfXPWpfLzngcMpkhuOpymzxtJ6Eehi4,7803
+amazon_wishlist_pricewatch/pricewatch.py,sha256=dJiDzr3lWmB5S27pVGbF4kZ25eRV4697Qc5OATVOXVg,15636
+amazon_wishlist_pricewatch/version.py,sha256=QGrITbe708Gvk-Y1U8irdnC0UfKb-U58EkjW916tobw,149
+amazon_wishlist_pricewatch-0.1.23.dist-info/LICENSE.txt,sha256=ds5c-zUStxpQTFGSRDOzAniEUIKASfrNT1oAH0z-o7E,1070
+amazon_wishlist_pricewatch-0.1.23.dist-info/METADATA,sha256=5Bv2pC2NnyEudEzErzsVVBgwS_DE4VlF_-F68ciBEs4,9817
+amazon_wishlist_pricewatch-0.1.23.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+amazon_wishlist_pricewatch-0.1.23.dist-info/entry_points.txt,sha256=yqlFBbfHQB28peRnUWB2IcPK7eIm6TnYN7rx70y5qVQ,75
+amazon_wishlist_pricewatch-0.1.23.dist-info/top_level.txt,sha256=-E9MnNxjvytQEvhrfnOeW07rcqbasRIlFJK9oSFPvx8,27
+amazon_wishlist_pricewatch-0.1.23.dist-info/RECORD,,

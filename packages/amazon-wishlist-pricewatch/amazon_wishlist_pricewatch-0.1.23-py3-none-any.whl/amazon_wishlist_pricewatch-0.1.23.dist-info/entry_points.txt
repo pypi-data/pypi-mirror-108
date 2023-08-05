@@ -1,0 +1,3 @@
+[console_scripts]
+pricewatch = amazon_wishlist_pricewatch.pricewatch:main
+
