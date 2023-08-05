@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+setup.py
+columntracer/__init__.py
+columntracer/columntracer.py
+columntracer/data.csv
+columntracer.egg-info/PKG-INFO
+columntracer.egg-info/SOURCES.txt
+columntracer.egg-info/dependency_links.txt
+columntracer.egg-info/requires.txt
+columntracer.egg-info/top_level.txt
