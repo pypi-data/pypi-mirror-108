@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+tact-random/__init__.py
+tact-random/random.py
+tactrandom.egg-info/PKG-INFO
+tactrandom.egg-info/SOURCES.txt
+tactrandom.egg-info/dependency_links.txt
+tactrandom.egg-info/not-zip-safe
+tactrandom.egg-info/requires.txt
+tactrandom.egg-info/top_level.txt
