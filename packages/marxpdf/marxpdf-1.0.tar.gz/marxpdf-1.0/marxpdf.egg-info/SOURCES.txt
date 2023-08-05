@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+marxpdf/__init__.py
+marxpdf/pdf2image.py
+marxpdf/pdf2text.py
+marxpdf.egg-info/PKG-INFO
+marxpdf.egg-info/SOURCES.txt
+marxpdf.egg-info/dependency_links.txt
+marxpdf.egg-info/top_level.txt
