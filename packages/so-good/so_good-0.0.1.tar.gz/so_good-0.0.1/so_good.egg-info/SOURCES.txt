@@ -1,0 +1,8 @@
+setup.py
+extras/__init__.py
+extras/divide.py
+extras/multiply.py
+so_good.egg-info/PKG-INFO
+so_good.egg-info/SOURCES.txt
+so_good.egg-info/dependency_links.txt
+so_good.egg-info/top_level.txt
