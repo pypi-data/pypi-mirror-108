@@ -1,0 +1,11 @@
+pacc/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pacc/adb/__init__.py,sha256=bbyiZ-Xhsm2uxDy25oJ20KSASvf-qiBd4PQIKtDyOKM,70
+pacc/adb/adb.py,sha256=hqK6KrNu1cMsgs8p7mHRiEDQY5EbgO4CGAdS8JFV3n0,88
+pacc/adb/api.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pacc/mysql/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pacc/mysql/api.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pacc/mysql/mysql.py,sha256=ax7iUQwQUH-HwdWR2co9IcrMiur8_J1Nnl4VGMlQ5IU,763
+pacc-0.0.0.dist-info/METADATA,sha256=XHfeAL8gk5RJ68YUR23jlZP6cz2AHlmCNArIIkKcaFY,372
+pacc-0.0.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pacc-0.0.0.dist-info/top_level.txt,sha256=TsfR3TRjvsjr7KqlpFp_jFr4v_nbuTii5103WS-Ihu8,5
+pacc-0.0.0.dist-info/RECORD,,
