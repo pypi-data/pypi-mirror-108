@@ -1,0 +1,8 @@
+strictyaml
+toml
+setuptools
+click
+networkx
+
+[:python_version < "3.7"]
+typing-extensions

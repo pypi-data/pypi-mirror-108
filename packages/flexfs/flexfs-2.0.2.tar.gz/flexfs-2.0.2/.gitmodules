@@ -1,0 +1,3 @@
+[submodule "data-policy"]
+	path = data-policy
+	url = https://gitlab.com/cardonazlaticlabs/data-policy.git

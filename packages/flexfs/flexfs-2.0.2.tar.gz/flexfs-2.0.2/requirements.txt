@@ -1,0 +1,18 @@
+strictyaml
+toml
+click
+networkx
+typing-extensions; python_version < '3.7'
+
+# dev
+
+black
+flake8
+isort
+mypy
+pdoc3
+pipe2codeblock
+pytest
+setuptools-scm
+setuptools
+wheel
