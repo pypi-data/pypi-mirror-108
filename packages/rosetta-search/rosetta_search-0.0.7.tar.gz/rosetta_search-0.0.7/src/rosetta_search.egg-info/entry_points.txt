@@ -1,0 +1,4 @@
+
+    [console_scripts]
+    rosetta=rosetta_search:rosetta
+    
