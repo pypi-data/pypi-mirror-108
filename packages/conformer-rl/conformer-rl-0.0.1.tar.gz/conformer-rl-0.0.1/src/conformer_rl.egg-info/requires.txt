@@ -1,0 +1,10 @@
+numpy
+torch
+torchvision
+tensorboard
+gym
+stable-baselines3
+ligninkmc
+seaborn
+stk
+py3Dmol
