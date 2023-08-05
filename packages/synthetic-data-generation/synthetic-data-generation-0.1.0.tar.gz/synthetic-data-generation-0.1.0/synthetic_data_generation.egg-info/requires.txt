@@ -1,0 +1,7 @@
+thomas-core
+diffprivlib
+numpy
+pandas
+scikit-learn
+matplotlib
+seaborn
