@@ -1,0 +1,161 @@
+#!python
+__author__ = "david cobac"
+__email__ = "david.cobac@gmail.com"
+__year__ = 2020
+__last_modified__ = 20210531
+
+import argparse
+import dtv2
+import colour
+import json
+import os
+import re
+import ast
+
+
+home = os.environ['HOME']
+
+parseur_args = argparse.ArgumentParser(
+    description="""Change Drevo tyrfing keys colors""")
+parseur_args.add_argument('-V', '--version',
+                          action="store_true",
+                          help='display version (last modif. date)')
+parseur_args.add_argument('-r', '--read',
+                          action="store_true",
+                          help='read and apply saved config')
+parseur_args.add_argument('-n', '--new',
+                          action="store_true",
+                          help='replace or create config file')
+parseur_args.add_argument('-chg', '--change',
+                          action="store_true",
+                          help='change config with args and store changes')
+parseur_args.add_argument('-kbd', '--keyboard',
+                          help='svg_color_name or hex color or [rgb|hsl]=(.25,1,.5)')
+parseur_args.add_argument('-cat', '--category',
+                          nargs='+',
+                          help='category_name svg_color_name or hex color or [rgb|hsl]=(.25,1,.5)')
+parseur_args.add_argument('-key', '--key',
+                          nargs='+',
+                          help='key_name svg_color_name or hex color or [rgb|hsl]=(.25,1,.5)')
+args = parseur_args.parse_args()
+
+
+def user_entry_to_color_tuple(user_color):
+    """ return a RGB int tuple so it can be used
+    with dtv2
+
+    user_color: str object 
+    """
+
+    # searching for rgb or hsl color writing
+    reg = re.compile("(.+)=(.+)")
+    mat = reg.match(user_color)
+    if mat is not None:
+        mode = mat.group(1).strip()
+        color_tuple = mat.group(2).strip()
+        color_tuple = ast.literal_eval(color_tuple)
+        if mode == "rgb":
+            u_color = colour.Color(rgb=color_tuple)
+        elif mode == "hsl":
+            u_color = colour.Color(hsl=color_tuple)
+        else:
+            print(f"Unknown {user_color}")
+            exit()
+    else:
+        u_color = colour.Color(user_color)
+    return tuple(round(255 * c) for c in u_color.rgb)
+
+
+def apply_changes(kbd, dico):
+    if 'kbd' in dico:
+        kbd.kbd(user_entry_to_color_tuple(dico['kbd']))
+    #
+    if 'cat' in dico:
+        for k, v in dico['cat'].items():
+            kbd.category(k, user_entry_to_color_tuple(v))
+    #
+    if 'key' in dico:
+        for k, v in dico['key'].items():
+            kbd.key(k, user_entry_to_color_tuple(v))
+
+
+def dico_saved_config(fname):
+    with open(fname) as fh:
+        config = fh.read()
+    return json.loads(config)
+
+
+if args.version:
+    print(f"dtv2reader version {__last_modified__}")
+
+clavier = dtv2.dtv2("fr")
+
+fichier_config = home + "/.dtv2change"
+
+# read option
+# it reads current config, apply and exit
+if args.read:
+    dico_config = dico_saved_config(fichier_config)
+    apply_changes(clavier, dico_config)
+    quit()
+
+# change option
+# it reads current config and will change it with other CLI
+# parameters
+if args.change:
+    dico_config = dico_saved_config(fichier_config)
+
+#
+# construction du dictionnaire demandé
+dico_config_demandee = {}
+
+category_message = f"""This category does not exist!
+Available categories are {list(clavier._category_keys.keys())}"""
+
+if args.keyboard:
+    dico_config_demandee['kbd'] = args.keyboard
+#
+if args.category and len(args.category) < 2:
+    print("""Need a category name AND a color name""")
+elif args.category and len(args.category) % 2 == 0:
+    dico_categorie = {}
+    for k, v in {args.category[i]: args.category[i + 1]
+                 for i in range(0, len(args.category), 2)}.items():
+        if k not in clavier._category_keys:
+            print(category_message)
+            continue
+        dico_categorie[k] = v
+    dico_config_demandee['cat'] = dico_categorie
+#
+if args.key and len(args.key) < 2:
+    print("""Need a key name AND a color name""")
+elif args.key and len(args.key) % 2 == 0:
+    dico_key = {}
+    for k, v in {args.key[i]: args.key[i + 1]
+                 for i in range(0, len(args.key), 2)}.items():
+        if k not in clavier._keys:
+            print("""This key does not exist!
+Look at your keyboard!""")
+            continue
+        dico_key[k] = v
+    dico_config_demandee['key'] = dico_key
+
+apply_changes(clavier, dico_config_demandee)
+
+if args.new:
+    with open(fichier_config, "w+") as fh:
+        fh.write(json.dumps(dico_config_demandee))
+
+if args.change:
+    if 'kbd' in dico_config_demandee:
+        dico_config['kbd'] = dico_config_demandee['kbd']
+    if 'cat' in dico_config and 'cat' in dico_config_demandee:
+        dico_config['cat'].update(dico_config_demandee['cat'])
+    elif 'cat' in dico_config_demandee:
+        dico_config['cat'] = dico_config_demandee['cat']
+    if 'key' in dico_config and 'key' in dico_config_demandee:
+        dico_config['key'].update(dico_config_demandee['key'])
+    elif 'key' in dico_config_demandee:
+        dico_config['key'] = dico_config_demandee['key']
+    with open(fichier_config, "w+") as fh:
+        fh.write(json.dumps(dico_config))
