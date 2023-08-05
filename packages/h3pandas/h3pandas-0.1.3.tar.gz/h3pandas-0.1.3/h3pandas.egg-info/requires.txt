@@ -1,0 +1,17 @@
+geopandas
+pandas
+shapely
+h3
+numpy
+typing-extensions
+
+[docs]
+sphinx
+numpydoc
+pytest-sphinx-theme
+typing-extensions
+
+[test]
+pytest
+pytest-cov
+flake8
