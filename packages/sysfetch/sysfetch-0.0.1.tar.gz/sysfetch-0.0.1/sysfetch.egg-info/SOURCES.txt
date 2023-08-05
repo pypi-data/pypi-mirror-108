@@ -1,0 +1,7 @@
+README.md
+print-this.py
+setup.py
+sysfetch.egg-info/PKG-INFO
+sysfetch.egg-info/SOURCES.txt
+sysfetch.egg-info/dependency_links.txt
+sysfetch.egg-info/top_level.txt

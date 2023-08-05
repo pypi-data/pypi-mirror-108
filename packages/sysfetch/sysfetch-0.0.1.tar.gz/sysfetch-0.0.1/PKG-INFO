@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: sysfetch
+Version: 0.0.1
+Summary: Fetch system info!
+Home-page: https://github.com/nandydark/sysfetch
+Author: Nandydark
+License: UNKNOWN
+Description: # Currently Under Development!!
+        
+        ## Coming Soon At
+        
+        https://github.com/nandydark/sysfetch
+        
+        ![](https://github.com/nandydark/sysfetch/blob/main/comingsoon.jpg?raw=true)
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: Freely Distributable
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
