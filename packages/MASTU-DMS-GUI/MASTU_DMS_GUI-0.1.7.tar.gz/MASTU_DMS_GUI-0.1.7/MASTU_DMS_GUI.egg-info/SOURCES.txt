@@ -1,0 +1,7 @@
+README.md
+setup.py
+MASTU_DMS_GUI.egg-info/PKG-INFO
+MASTU_DMS_GUI.egg-info/SOURCES.txt
+MASTU_DMS_GUI.egg-info/dependency_links.txt
+MASTU_DMS_GUI.egg-info/requires.txt
+MASTU_DMS_GUI.egg-info/top_level.txt
