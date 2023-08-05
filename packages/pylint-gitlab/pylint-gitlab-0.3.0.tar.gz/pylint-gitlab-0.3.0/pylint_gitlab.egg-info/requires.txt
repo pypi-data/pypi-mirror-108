@@ -1,0 +1,13 @@
+anybadge
+astroid
+importlib-metadata
+isort
+jinja2
+lazy-object-proxy
+markupsafe
+mccabe
+pylint
+toml
+typing-extensions
+wrapt
+zipp
