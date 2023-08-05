@@ -1,0 +1,6 @@
+numpy
+absl-py
+attrs>=19.1.0
+protobuf>=3.11.4
+six
+wheel
