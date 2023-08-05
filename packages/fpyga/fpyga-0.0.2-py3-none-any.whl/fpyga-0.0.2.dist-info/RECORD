@@ -1,0 +1,11 @@
+fpyga/__init__.py,sha256=dtVMzeXZtjn-KOfO9eT0-vVEu6ScFSn3sXZuRr7Vgoc,233
+fpyga/_nbdev.py,sha256=WgQKpJg8zbUFnmuiFIgPUJykRJEZ5mTCkmvcRo8ABU0,1246
+fpyga/devices.py,sha256=83yQC49QJ2LrP8R4bPaOl_CwUvD1zzLhYiTzXyuQLso,3469
+fpyga/projects.py,sha256=hl7BD9jHbTEBs1o23hrIkrhQv9oiYFS9L3RIEOe49TQ,6111
+fpyga/scripting.py,sha256=CKy-jdduLtuSGQBkEQEECkSe8NuYp17Cq1iOj9NvVeo,10314
+fpyga-0.0.2.dist-info/LICENSE,sha256=HrhfyXIkWY2tGFK11kg7vPCqhgh5DcxleloqdhrpyMY,11558
+fpyga-0.0.2.dist-info/METADATA,sha256=mCmAUNPs9fyVu6eb2MGTbLeTFDh4E6XzKPL71flCGVg,10254
+fpyga-0.0.2.dist-info/WHEEL,sha256=D1Wh14kWDxPnrM-5t_6UCB-UuQNrEODtRa3vF4OsvQY,97
+fpyga-0.0.2.dist-info/entry_points.txt,sha256=eqGnTHtEVMYwfXVk1Z9MhC8O2N8wuqAbr0lisLmrkxs,20
+fpyga-0.0.2.dist-info/top_level.txt,sha256=Kah04Pgp8l6UI_3mfUGa3X9ToNqST_zVdEv9yadZpvI,6
+fpyga-0.0.2.dist-info/RECORD,,
