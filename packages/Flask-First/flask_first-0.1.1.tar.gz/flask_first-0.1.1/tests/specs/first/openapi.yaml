@@ -1,0 +1,182 @@
+openapi: 3.0.3
+info:
+  title: Simple API for testing Flask-First
+  contact:
+    name: Konstantin Fadeev
+    url: https://flask.pro
+    email: fadeev@stantis.ru
+  license:
+    name: "BSD"
+  version: 1.0.0
+paths:
+  /items:
+    get:
+      operationId: items_list
+      summary: Returns a list of items
+      parameters:
+        - name: page
+          in: query
+          description: Page number
+          schema:
+            type: integer
+            minimum: 1
+            example: 1
+        - $ref: "#/components/parameters/per_page"
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ItemsList"
+    post:
+      operationId: create_item
+      summary: Create item
+      responses:
+        "201":
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Item"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ItemNew"
+        required: true
+  /items/{uuid}:
+    parameters:
+      - $ref: "#/components/parameters/uuid"
+    get:
+      operationId: get_item
+      summary: Get item
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Item"
+    put:
+      operationId: update_item
+      summary: Update item
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Item"
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Item"
+    delete:
+      operationId: delete_item
+      summary: Delete item
+      responses:
+        '204':
+          description: OK
+  /get_path_params/{path_str}/{path_int}/{path_float}:
+    parameters:
+      - $ref: "#/components/parameters/path_str"
+      - $ref: "#/components/parameters/path_int"
+      - name: path_float
+        in: path
+        required: true
+        schema:
+          type: number
+    get:
+      operationId: get_path_params
+      summary: Get item
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ItemPathParameters"
+components:
+  parameters:
+    uuid:
+      name: uuid
+      in: path
+      description: uuid объекта.
+      required: true
+      schema:
+        type: string
+        format: uuid
+        example: 789d995f-3aa0-4bf8-a37b-2f2f2086d503
+    per_page:
+      name: per_page
+      in: query
+      description: Items per page
+      schema:
+        type: integer
+        minimum: 1
+        example: 1
+    path_str:
+      name: path_str
+      in: path
+      required: true
+      schema:
+        type: string
+    path_int:
+      name: path_int
+      in: path
+      required: true
+      schema:
+        type: integer
+  schemas:
+    UUID:
+      type: string
+      format: uuid
+      example: 789d995f-3aa0-4bf8-a77b-2f2f20868503
+    ItemNew:
+      type: object
+      required:
+        - name
+      additionalProperties: false
+      properties:
+        name:
+          type: string
+          example: "user"
+        description:
+          type: string
+          example: "user"
+    Item:
+      type: object
+      required:
+        - uuid
+        - name
+      additionalProperties: false
+      properties:
+        uuid:
+          $ref: "#/components/schemas/UUID"
+        name:
+          type: string
+          example: "user"
+        description:
+          type: string
+          example: "user"
+    ItemsList:
+      items:
+        type: array
+        items:
+          $ref: "#/components/schemas/ItemPathParameters"
+    ItemPathParameters:
+      type: object
+      required:
+        - path_str
+        - path_int
+        - path_float
+      additionalProperties: false
+      properties:
+        path_str:
+          type: string
+        path_int:
+          type: integer
+        path_float:
+          type: number
