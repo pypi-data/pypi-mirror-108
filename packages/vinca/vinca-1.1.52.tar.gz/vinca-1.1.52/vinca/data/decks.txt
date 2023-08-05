@@ -1,0 +1,3 @@
+math            +math =math
+general         -novels -math
+newdeck         +thanks +fruit +test
