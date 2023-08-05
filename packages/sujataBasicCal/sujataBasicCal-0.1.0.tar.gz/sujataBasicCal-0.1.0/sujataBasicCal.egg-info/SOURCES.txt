@@ -1,0 +1,14 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.md
+read.txt
+setup.py
+test_myfun.py
+.ipynb_checkpoints/video_slicer-checkpoint.py
+sujataBasicCal/Basic.py
+sujataBasicCal/__init__.py
+sujataBasicCal.egg-info/PKG-INFO
+sujataBasicCal.egg-info/SOURCES.txt
+sujataBasicCal.egg-info/dependency_links.txt
+sujataBasicCal.egg-info/top_level.txt

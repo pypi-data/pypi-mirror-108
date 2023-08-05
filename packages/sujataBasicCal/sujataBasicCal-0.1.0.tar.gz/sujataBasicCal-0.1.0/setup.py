@@ -1,0 +1,1 @@
+from setuptools import find_packages, setupsetup(    name='sujataBasicCal',    packages=find_packages(include=['sujataBasicCal']),    version='0.1.0',   description='A very basic calculator',  long_description=open('read.txt').read() + '\n\n' + open('CHANGELOG.txt').read(),    author='Me',    license='MIT',    install_requires=[''],)

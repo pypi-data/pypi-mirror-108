@@ -1,0 +1,22 @@
+Metadata-Version: 1.0
+Name: sujataBasicCal
+Version: 0.1.0
+Summary: A very basic calculator
+Home-page: UNKNOWN
+Author: Me
+Author-email: UNKNOWN
+License: MIT
+Description: This is a very simple calculator that takes two numbers and either add, subtract, multiply .
+        
+        Change Log
+        
+        ==========
+        
+        
+        
+        0.0.1 (02/06/2021)
+        
+        -------------------
+        
+        - First Release
+Platform: UNKNOWN
