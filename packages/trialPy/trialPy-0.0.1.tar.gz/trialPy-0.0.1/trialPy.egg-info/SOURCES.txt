@@ -1,0 +1,12 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+MANIFEST.in.py
+MANIFEST.in.txt
+README.txt
+__init__.py
+setup.py
+trialPy.egg-info/PKG-INFO
+trialPy.egg-info/SOURCES.txt
+trialPy.egg-info/dependency_links.txt
+trialPy.egg-info/top_level.txt
