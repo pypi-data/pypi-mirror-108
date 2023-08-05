@@ -1,0 +1,3 @@
+[console_scripts]
+textgen = TextGenerator.main:main
+
