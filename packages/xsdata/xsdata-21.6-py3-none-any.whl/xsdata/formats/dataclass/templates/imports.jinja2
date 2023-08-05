@@ -1,0 +1,19 @@
+{% macro import_statement(item) -%}
+    {% if item.alias %}
+        {{- "{} as {}".format(item.name|class_name, item.alias|class_name) -}}
+    {% else %}
+        {{- item.name|class_name -}}
+    {% endif %}
+{%- endmacro %}
+
+{%- for source, items in imports|groupby("source") -%}
+{%- if items|length == 1 -%}
+from {{ source }} import {{ import_statement(items[0]) }}
+{% else -%}
+from {{ source }} import (
+{%- for item in items %}
+    {{ import_statement(item) }},
+{%- endfor %}
+)
+{% endif -%}
+{%- endfor %}
