@@ -1,0 +1,12 @@
+[freezerbox.make]
+aliquot=stepwise_mol_bio:Aliquot
+digest=stepwise_mol_bio:RestrictionDigest
+inverse-pcr=stepwise_mol_bio:InversePcr
+ivt=stepwise_mol_bio:Ivt
+page-purify=stepwise_mol_bio:PagePurify
+pcr=stepwise_mol_bio:Pcr
+spin-cleanup=stepwise_mol_bio:SpinCleanup
+
+[stepwise.protocols]
+molbio=stepwise_mol_bio:Plugin
+
