@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "pilotis"
+version = "0.1.0"
+description = ""
+authors = ["ekinox <contact@ekinox.io>"]
+packages = [
+    { include = "pilotis" },
+    { include = "templates" },
+]
+
+[tool.poetry.dependencies]
+python = "~3.7"
+copier = "^5.1.0"
+pytest = "^5.1"
+click = "^7.1.2"
+PyHamcrest = "^2.0.2"
+GitPython = "^3.1.13"
+inquirer = "^2.7.0"
+pytest-mock = "^3.5.1"
+toml = "^0.10.2"
+
+[tool.poetry.dev-dependencies]
+
+[tool.poetry.scripts]
+pilotis = "pilotis.cli:main"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

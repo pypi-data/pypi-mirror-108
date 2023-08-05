@@ -1,0 +1,8 @@
+ARG BASE_IMAGE_TAG=latest
+FROM {{ project_slug }}:$BASE_IMAGE_TAG
+
+RUN make setup-env-dash
+
+COPY ./python/{{ python_package_name }} /app/{{ python_package_name }}
+
+CMD ["python", "-m", "{{ python_package_name }}.main_file"]

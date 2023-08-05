@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: pilotis
+Version: 0.1.0
+Summary: 
+Author: ekinox
+Author-email: contact@ekinox.io
+Requires-Python: >=3.7,<3.8
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: GitPython (>=3.1.13,<4.0.0)
+Requires-Dist: PyHamcrest (>=2.0.2,<3.0.0)
+Requires-Dist: click (>=7.1.2,<8.0.0)
+Requires-Dist: copier (>=5.1.0,<6.0.0)
+Requires-Dist: inquirer (>=2.7.0,<3.0.0)
+Requires-Dist: pytest (>=5.1,<6.0)
+Requires-Dist: pytest-mock (>=3.5.1,<4.0.0)
+Requires-Dist: toml (>=0.10.2,<0.11.0)

@@ -1,0 +1,31 @@
+# {{ project_name }}
+
+## Checking project setup
+
+First check that all tools are correctly installed and configured:
+
+```bash
+./scripts/check_tools.bash
+```
+
+Do not continue until you have no error.
+
+Now you can install all dependencies
+
+```bash
+cd python
+make setup-env-full
+```
+
+You are ready to go on your jupyter installation
+
+```bash
+make notebook
+```
+
+For all other automated commands, just run `make help` to see them :)
+
+## Detailed documentation
+
+In order to see the detailed documentation, just run `make doc-site` and click on the displayed link to see the
+documentation on your favorite browser.

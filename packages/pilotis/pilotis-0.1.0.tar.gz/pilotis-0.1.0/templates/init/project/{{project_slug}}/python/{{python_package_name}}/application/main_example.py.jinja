@@ -1,0 +1,55 @@
+import logging.config
+from typing import Optional, Union
+
+import click
+from click import UsageError
+from pilotis_io.io import IoAPI
+from pilotis_io.local.local_io_api import LocalIoApi
+from {{ python_package_name }}.application import options
+
+_logger = logging.getLogger("My Template App")
+
+BACKEND_CHOICE_LOCAL = "local"
+BACKEND_CHOICES = [BACKEND_CHOICE_LOCAL]
+
+
+@click.command()
+@click.option(
+    options.BACKEND.name,
+    help=options.BACKEND.help_message,
+    type=click.Choice(BACKEND_CHOICES),
+    required=True
+)
+@click.option(
+    options.BUCKET_NAME.name, help=options.BUCKET_NAME.help_message, required=False
+)
+@click.option(options.WORK_DIR.name,  help=options.WORK_DIR.help_message, required=False)
+def main(work_dir: str, bucket_name: str, backend: str):
+
+    maybe_api = io_api_factory(backend, work_dir, bucket_name)
+    if isinstance(maybe_api, UsageError):
+        raise maybe_api
+    io_api: IoAPI = maybe_api
+    print(io_api)
+    print("Hello Template App!")
+
+
+def io_api_factory(
+    backend: str, work_dir: Optional[str], bucket_name: Optional[str]
+) -> Union[UsageError, IoAPI]:
+    if backend == BACKEND_CHOICE_LOCAL:
+        if work_dir is None:
+            return click.BadOptionUsage(
+                options.WORK_DIR.name,
+                "A working directory must be provided when using local backend"
+            )
+        else:
+            return LocalIoApi(work_dir)
+    else:
+        return click.BadOptionUsage(
+            options.BACKEND.name, "A valid backend must be selected"
+        )
+
+
+if __name__ == "__main__":
+    main()

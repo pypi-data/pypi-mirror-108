@@ -1,0 +1,28 @@
+image: docker:19.03.1
+
+variables:
+  DOCKER_DRIVE: overlay2
+  TAG: "$CI_COMMIT_SHORT_SHA"
+
+before_script:
+  - set -eu
+  - apk add make
+  - mkdir -p containers/base/.secrets
+  - cp "$ID_RSA" containers/base/.secrets/id_rsa
+
+stages:
+  - test
+  - build
+
+pytest:
+  stage: test
+  script:
+    - docker login --username "$DOCKER_LOGIN" -p "$DOCKER_ACCESS_KEY"
+    - make docker-build-test
+    - docker run --rm "{{ project_slug }}-tests:$TAG" make test
+
+build_dash:
+  stage: build
+  script:
+    - docker login --username "$DOCKER_LOGIN" -p "$DOCKER_ACCESS_KEY"
+    - make docker-build-dash

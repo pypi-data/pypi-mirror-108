@@ -1,0 +1,8 @@
+cd infrastructure
+terraform init
+terraform destroy
+aws s3 rm s3://{{ aws_terraform_bucket_name }}/{{ aws_terraform_bucket_directory }}/{{ project_slug }}.tfstate
+aws dynamodb delete-item --table-name terraform-lock-states --key '{"LockID":{"S": "{{ aws_terraform_bucket_name }}/{{ aws_terraform_bucket_directory }}/{{ project_slug }}.tfstate-md5"} }'
+cd -
+echo -e "You may run \n\t rm -Rf {{ project_slug }}"
+echo "You may also delete project on Gitlab"

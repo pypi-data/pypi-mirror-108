@@ -1,0 +1,169 @@
+.PHONY: *
+
+#################################################################
+# Shared variables
+#################################################################
+
+PACKAGE_DIR_ML={{ project_slug }}
+
+#################################################################
+# help
+#################################################################
+
+help:
+	@echo "#####################################"
+	@echo "# Python environment setup & cleaning #"
+	@echo "#####################################"
+	@echo ""
+	@echo "\tsetup-env-full: Install all dependencies required for every part of this project"
+	@echo ""
+	@echo "All other target starting with 'setup-env' will install parts of these dependencies"
+	@echo "required for some specific part of the project (ml, dash, running tests, jupyter)."
+	@echo ""
+	@echo "\tclean: Remove all temporary files (builds, compiled files, test outputs)"
+	@echo "\tclean-venv: Remove the Poetry virtual environment"
+	@echo ""
+	@echo "###############"
+	@echo "# Development #"
+	@echo "###############"
+	@echo ""
+	@echo "\tnotebook: Run jupyter notebook"
+	@echo "\trepl: Run a Python REPL"
+	@echo "\ttest: Run unit tests"
+	@echo "\tlint: Run a linter on the code"
+	@echo "\tformat: Format code according to PEP-8"
+	@echo "\tformat-check: Check code formatting (non-zero return code if format is wrong)"
+	@echo "\tblack: Format code according to Black code style (https://black.readthedocs.io)"
+	@echo "\ttype: Check typing"
+	@echo "\tpyenv-config: To configure your local pyenv environment (normally done at project initialization)"
+
+
+#################################################################
+# setting up dev env
+#################################################################
+
+upgrade-pip:
+	poetry run pip install --upgrade pip
+
+setup-env-common: clean upgrade-pip
+	poetry install --no-root --no-dev
+
+setup-env-dev: setup-env-common
+	poetry install -E test -E bdd -E type -E format -E lint -E repl --no-root
+
+setup-env-dash: setup-env-common
+	poetry install -E dash --no-root --no-dev
+
+setup-env-ml: setup-env-common
+	poetry install -E ml --no-root --no-dev
+
+setup-env-jupyter: setup-env-common
+	poetry install -E notebook --no-root
+	poetry run jupyter contrib nbextension install --user
+	poetry run jupyter nbextension enable toc2/main
+	poetry run jupyter nbextension enable varInspector/main
+	poetry run jupyter nbextension enable execute_time/ExecuteTime
+	poetry run jupyter nbextension enable hide_input/main
+	poetry run jupyter nbextension enable hide_input_all/main
+	poetry run jupyter nbextension enable init_cell/main
+	poetry run jupyter nbextension enable collapsible_headings/main
+	poetry run jupyter nbextension enable notify/notify
+	poetry run jupyter nbextension enable splitcell/splitcell
+	poetry run jupyter nbextension enable toggle_all_line_numbers/main
+
+setup-env-full: setup-env-dev setup-env-dash setup-env-ml setup-env-jupyter
+
+#################################################################
+# cleaning
+#################################################################
+
+clean: clean-build clean-pyc clean-test
+
+clean-build:
+	rm -fr build/
+	rm -fr dist/
+	rm -fr .eggs/
+	find . -name '*.egg-info' -exec rm -fr {} +
+	find . -name '*.egg' -exec rm -f {} +
+
+clean-pyc:
+	find . -name '*.pyc' -exec rm -f {} +
+	find . -name '*.pyo' -exec rm -f {} +
+	find . -name '*~' -exec rm -f {} +
+	find . -name '__pycache__' -exec rm -fr {} +
+
+clean-test:
+	rm -fr .tox/
+	rm -f .coverage
+	rm -fr htmlcov/
+
+clean-venv:
+	# poetry env remove might not to work if `virtualenvs.in-project = true`
+	# (see https://github.com/python-poetry/poetry/issues/2124)
+	# so if not, remove whole `.venv` directory using https://unix.stackexchange.com/questions/153763
+	poetry env remove $$(poetry env info -p)/bin/python && ([ $$? -eq 0 ]) || rm -rf $$(poetry env info -p)
+
+#################################################################
+# notebook
+#################################################################
+
+notebook:
+ifdef ENV
+	poetry run jupyter notebook --NotebookApp.token=$$ENV --NotebookApp.ip='*'
+else
+	poetry run jupyter notebook
+endif
+
+#################################################################
+# unit testing
+#################################################################
+
+test:
+	poetry run pytest --cov=$(PACKAGE_DIR_ML) --cov-report=html --cov-report=term tests
+
+#################################################################
+# linting
+#################################################################
+
+lint:
+	poetry run flake8 $(PACKAGE_DIR_ML) tests
+
+#################################################################
+# formating
+#################################################################
+
+seed-isort:
+	poetry run seed-isort-config
+
+isort:
+	poetry run isort -rc $(PACKAGE_DIR_ML) tests -vb
+
+black:
+	poetry run black $(PACKAGE_DIR_ML) tests
+
+format: seed-isort isort black
+
+format-check:
+	poetry run isort -c -rc $(PACKAGE_DIR_ML) tests -vb
+	poetry run black --check $(PACKAGE_DIR_ML) tests
+
+#################################################################
+# typing
+#################################################################
+
+type:
+	poetry run mypy -p $(PACKAGE_DIR_ML) -p tests --ignore-missing-imports
+
+#################################################################
+# repl
+#################################################################
+
+repl:
+	poetry run bpython
+
+#################################################################
+# Configuration
+#################################################################
+
+pyenv-config:
+	../scripts/pyenv_config.bash

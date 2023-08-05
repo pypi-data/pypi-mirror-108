@@ -1,0 +1,7 @@
+#!/bin/sh
+
+BASEDIR=$(dirname "$0")
+
+"$BASEDIR"/../base/build.sh
+
+docker build -t "{{ project_slug }}-dash:$TAG" -f "$BASEDIR/Dockerfile" "$BASEDIR/../.." --build-arg BASE_IMAGE_TAG="$TAG"
