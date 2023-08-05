@@ -1,0 +1,10 @@
+flask==1.1.2
+gunicorn
+datacube
+altair
+altair_saver
+python-dateutil
+sentry_sdk
+blinker
+prometheus-flask-exporter
+pywps==4.2.4pyarrow
