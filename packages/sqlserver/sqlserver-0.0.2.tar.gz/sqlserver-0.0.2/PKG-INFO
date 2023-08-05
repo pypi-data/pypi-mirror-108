@@ -1,0 +1,24 @@
+Metadata-Version: 1.1
+Name: sqlserver
+Version: 0.0.2
+Summary: class to connect to SQL SERVER DB - Run queries and extract records
+Home-page: https://github.com/ADGVLOGS
+Author: Ashlin Darius Govindasamy
+Author-email: adgrules@hotmail.com
+License: MIT
+Description: class to connect to SQL SERVER DB - Run queries and extract records
+        
+        Change Log
+        ==========
+        0.0.1 (2021/06/01)
+        -------------------
+        First Release 
+        - Executes a query
+        - Extracts records into list
+Keywords: sqlserver
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3

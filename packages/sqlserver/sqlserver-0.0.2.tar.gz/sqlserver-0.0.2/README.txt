@@ -1,0 +1,1 @@
+class to connect to SQL SERVER DB - Run queries and extract records
