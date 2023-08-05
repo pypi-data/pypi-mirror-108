@@ -1,0 +1,9 @@
+meteoalertapi/__init__.py,sha256=ce4G0QDls3LFvlAiLHql1TuNF2xZOn7npM8R-fEvyfs,37
+meteoalertapi/meteoalertapi.py,sha256=hiUjqhsnOwiou-iyourIkYN2TJgNGXsq74CY7Pq4RN0,3186
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_meteoalertapi.py,sha256=iKz3UTT1C4RoyKPO51QAaE8oJXfWyYxjaXvE9C6exb8,489
+meteoalertapi-0.1.8.dist-info/LICENSE,sha256=HBaBGf6hr0cOIaBAABNb1Tw8EWYSIYofOInJLKikqV0,1072
+meteoalertapi-0.1.8.dist-info/METADATA,sha256=W9w2pqLed8PS1H0gsbZFSSpM1M2cTatAs1k4bTXB_v4,1416
+meteoalertapi-0.1.8.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+meteoalertapi-0.1.8.dist-info/top_level.txt,sha256=ol_WM6Ez7m1kB9mv5YaLPLQKz2Ouyn2Uxspm3vMbdak,20
+meteoalertapi-0.1.8.dist-info/RECORD,,
