@@ -1,0 +1,4 @@
+python-mimeparse>=0.1.4
+filesystem_tree>=1.0.1
+six
+scandir; python_version < "3.5"
