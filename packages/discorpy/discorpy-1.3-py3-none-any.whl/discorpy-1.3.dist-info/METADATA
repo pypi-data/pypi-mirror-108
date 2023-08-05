@@ -1,0 +1,130 @@
+Metadata-Version: 2.1
+Name: discorpy
+Version: 1.3
+Summary: Radial lens distortion correction in Python
+Home-page: https://github.com/DiamondLightSource/discorpy
+Author: Nghia Vo
+Author-email: nghia.vo@diamond.ac.uk
+License: Apache 2.0
+Download-URL: https://github.com/DiamondLightSource/discorpy.git
+Keywords: Distortion correction,Tomography,Radial lens distortion,Camera calibration
+Platform: Any
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Intended Audience :: Science/Research
+Classifier: Operating System :: OS Independent
+Classifier: Natural Language :: English
+Classifier: Topic :: Scientific/Engineering :: Image Processing
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: matplotlib
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: scikit-image
+Requires-Dist: h5py
+Requires-Dist: pillow
+
+# Discorpy
+(**Dis**)tortion (**Cor**)rection (**Py**)thon-package
+
+### Distortion calibration and correction software for tomography detector systems
+
+**Discorpy** is an open-source Python package for radial distortion correction 
+with sub-pixel accuracy as required by tomography detector systems. 
+It calculates parameters of a polynomial model of radial lens distortion, which 
+are the center of distortion and the polynomial coefficients, using a grid 
+pattern image. The package implements methods published, Nghia T. Vo et al.
+"Radial lens distortion correction with sub-pixel accuracy for X-ray micro-
+tomography" Optics Express 23, 32859-32868 (2015), 
+https://doi.org/10.1364/OE.23.032859. 
+
+Update notes
+============
+- 25/02/2021: the package name is changed from Vounwarp to Discorpy. The old-name package is still available at https://github.com/nghia-vo/vounwarp 
+and installable using conda-forge channel: https://anaconda.org/conda-forge/vounwarp
+
+Features
+========
+- Pre-processing methods for finding coordinates of dot-centroids, grouping them
+ into lines, removing non-dot objects or misplaced dots.
+- Procesing methods for calculating distortion parameters; which are the 
+center of distortion and polynomial coefficients; of a backward model, a forward
+model, and a backward-from-forward model.
+- Post-processing methods for: unwarping lines of points, images, or slices of 
+a 3D dataset; evaluating the accuracy of correction results.
+- Some methods may be useful for other applications:
+  * Correct non-uniform background using a FFT-based filter and a median filter.
+  * Select binary objects in a certain range of values.
+  * Unwarp slices of a 3D dataset.
+
+Install
+=======
+- To install from the source codes:
+    * Download the source codes from this github page (click-> Code -> Download ZIP). 
+    Unzip to a local folder.
+    * Install [Miniconda](https://docs.conda.io/en/latest/miniconda.html).
+    * Open command prompt, navigate to the source folder, run the following 
+    commands:
+        ```commandline
+        conda create -n discorpy
+        conda activate discorpy
+        conda install python
+        python setup.py install
+        ```
+ - Using conda:
+    + Install Miniconda as instructed above.
+    + Open terminal or command prompt and run the following command:     
+      `conda install -c algotom discorpy`
+
+- Using pip:
+    + Install Miniconda as instructed above.
+    + Open terminal or command prompt and run the following command:  
+      `pip install discorpy`
+
+
+How to use
+==========
+- A document explaining step-by-step how to calculate distortion coefficients 
+from a dot pattern image is in the "/doc" folder or can be downloaded from: 
+https://zenodo.org/record/1322720 
+- Examples of how to use the package are in the "/examples" folder.
+- Coefficients determined by the package can be used by other tomographic 
+software such as [Tomopy](https://tomopy.readthedocs.io/en/latest/api/tomopy.prep.alignment.html) or
+[Savu](https://github.com/DiamondLightSource/Savu/blob/master/savu/plugins/corrections/distortion_correction.py) 
+for correction.
+
+Demonstrations
+==============
+- Apply to a visible dot-target collected at [Beamline I12](https://www.diamond.ac.uk/Instruments/Imaging-and-Microscopy/I12/Detectors-at-I12.html),
+Diamond Light Source, UK:
+
+![I12_before_after1](https://github.com/DiamondLightSource/discorpy/raw/master/data/demo/i12_data_1.jpg)
+
+![I12_before_after2](https://github.com/DiamondLightSource/discorpy/raw/master/data/demo/i12_data_2.jpg)
+
+- Apply to an X-ray dot-target collected at [Beamline I13](https://www.diamond.ac.uk/Instruments/Imaging-and-Microscopy/I13/Diamond-Manchester_Imaging_Branchline/Facilities_and_equipment_Imaging.html),
+Diamond Light Source, UK:
+
+![I13_before_after1](https://github.com/DiamondLightSource/discorpy/raw/master/data/demo/i13_data_1.jpg)
+
+![I13_before_after2](https://github.com/DiamondLightSource/discorpy/raw/master/data/demo/i13_data_2.jpg)
+
+- Improvement of a tomographic reconstructed image after distortion correction.
+  + Before the correction:
+    
+    ![tomo_before](https://github.com/DiamondLightSource/discorpy/raw/master/data/demo/recon_before.jpg)
+    
+  + After the correction:
+    
+    ![tomo_before](https://github.com/DiamondLightSource/discorpy/raw/master/data/demo/recon_after.jpg)
+
+
+- Apply to a hazard camera of the [Mars Perseverance Rover](https://mars.nasa.gov/mars2020/multimedia/raw-images/).
+Details of how to estimate distortion coefficients of that camera without using
+a calibration target are shown [here](https://github.com/DiamondLightSource/discorpy/blob/master/examples/Perseverance_distortion_correction/Distortion_correction_for_Perseverance_camera.md)  
+
+![Mars_rover](https://github.com/DiamondLightSource/discorpy/raw/master/data/demo/Mars_Rover_camera.jpg)
+  
+       
+
+
