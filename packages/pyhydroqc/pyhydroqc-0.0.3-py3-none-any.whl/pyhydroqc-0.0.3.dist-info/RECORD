@@ -1,0 +1,13 @@
+pyhydroqc/ARIMA_correct.py,sha256=jxsYWrQYX66z1O0Xw3VlufllF8bE6EPLMfHbKHzJh7U,9394
+pyhydroqc/__init__.py,sha256=kPjnZqq-BJRpWlPJUC05o38dk2tS12bbMuBexUS5MI0,496
+pyhydroqc/anomaly_utilities.py,sha256=MOQb9-Q2tPj-swCl6uw5fZJX9DXPkbW88ZuT_TtYqo8,23525
+pyhydroqc/calibration.py,sha256=UHV_C-fsj8yzSpJwnh1EpMrxjTX_fBmS8x42OvEUgdQ,11257
+pyhydroqc/model_workflow.py,sha256=Yn5yMMLtNANERmPtySqHqMdps4WplYpgUYnbJMC1RFE,13383
+pyhydroqc/modeling_utilities.py,sha256=fL9Z1dwSnO_ZHdEFyOncizgK8zb4XIx9QFUa9IVfRv4,23952
+pyhydroqc/parameters.py,sha256=27A_nXKJuEa6jUQ7JlLvZr3veUSvE-gkQDdNVoMZ1UA,10200
+pyhydroqc/rules_detect.py,sha256=76WT3lwbOce54LNMojiHuKE-2hAdtQ0RImLR-Xw3XLU,4618
+pyhydroqc-0.0.3.dist-info/LICENSE,sha256=GyGVHNpINwVkBe640qHF056vQ16xYjr6X8Pwu912tBw,1519
+pyhydroqc-0.0.3.dist-info/METADATA,sha256=63SWpcBGXA_-RozPb451APePHJsvISsp_yqGuorjyZg,11527
+pyhydroqc-0.0.3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pyhydroqc-0.0.3.dist-info/top_level.txt,sha256=Y4FpiGUTm80p60rei3qM4YTDtg5Nquqws3qxQucjAAQ,10
+pyhydroqc-0.0.3.dist-info/RECORD,,
