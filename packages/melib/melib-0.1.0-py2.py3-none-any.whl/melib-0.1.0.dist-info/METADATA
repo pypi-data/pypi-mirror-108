@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: melib
+Version: 0.1.0
+Summary: Machine element design teaching library
+License: LICENSE
+Author: Gurgenci
+Author-email: h.gurgenci@uq.edu.au
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
