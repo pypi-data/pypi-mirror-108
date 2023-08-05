@@ -1,0 +1,12 @@
+ldsagrader/__init__.py,sha256=a56G8uCgqDHSWkQ0G4pkNkJSeeKYyq30FOJ1YmKTc3U,168
+ldsagrader/ldsagrader.py,sha256=XxglpM1FaoYERL48Xi68Eq3nl4G5Z_cts1NGA5FXjBQ,20144
+ldsagrader/utils.py,sha256=QVnO0oGJqnHH5UdKmkbFQuTSUnzYfmO4YAGYS8bJjkw,2238
+ldsagrader/preprocessors/__init__.py,sha256=vzyS71tT58bG8Su-2l4jf3Gv9OsQpcb5QjKC1zmcYLw,49
+ldsagrader/preprocessors/forbidhiddentests.py,sha256=sIKYBv7nFzOCgYoJzu01EIXrc28KLmgo87I8JqH-DUc,966
+ldsagrader-0.5.1.dist-info/AUTHORS.rst,sha256=BGhKTBaG-JHcudT7OrdTxJZfSTJDcNFAGRrJfHK8-mg,170
+ldsagrader-0.5.1.dist-info/LICENSE,sha256=s6-FedipUaEOZS_hh5Bnu9rspWVFXqsdByY0Cdc9Ly0,1072
+ldsagrader-0.5.1.dist-info/METADATA,sha256=IEPVU0uS_yNDXuU_hc1vMtrnZ3PKM3SFKsA2zufTWJw,1758
+ldsagrader-0.5.1.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+ldsagrader-0.5.1.dist-info/entry_points.txt,sha256=L5fobcrsDCxvOFJL22vB0RVXUGjJCM8UqL5mKkQ5dZ0,59
+ldsagrader-0.5.1.dist-info/top_level.txt,sha256=2ezACnz3_XlyRCZ69I_RiFGCl3j2WO-MYPrAviA4mLc,11
+ldsagrader-0.5.1.dist-info/RECORD,,
