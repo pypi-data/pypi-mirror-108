@@ -1,0 +1,5 @@
+numpy
+pandas
+uproot
+uproot3
+xrootd>=5.2
