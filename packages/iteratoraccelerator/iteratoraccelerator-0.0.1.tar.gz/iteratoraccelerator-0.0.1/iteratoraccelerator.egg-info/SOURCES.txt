@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+iteratoraccelerator/__init__.py
+iteratoraccelerator/iteratoraccelerator.py
+iteratoraccelerator.egg-info/PKG-INFO
+iteratoraccelerator.egg-info/SOURCES.txt
+iteratoraccelerator.egg-info/dependency_links.txt
+iteratoraccelerator.egg-info/top_level.txt
