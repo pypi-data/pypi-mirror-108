@@ -1,0 +1,8 @@
+README.md
+setup-cli.py
+src/MathLang/Interface/CLI/__init__.py
+src/MathLang_CLI.egg-info/PKG-INFO
+src/MathLang_CLI.egg-info/SOURCES.txt
+src/MathLang_CLI.egg-info/dependency_links.txt
+src/MathLang_CLI.egg-info/requires.txt
+src/MathLang_CLI.egg-info/top_level.txt
