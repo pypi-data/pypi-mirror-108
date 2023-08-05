@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: awsglue-stubs
+Version: 0.0.1
+Summary: A collection of the awsglue library stub files
+Home-page: https://github.com/erickguan/awsglue-stubs
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Typing :: Typed
