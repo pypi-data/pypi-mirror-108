@@ -1,0 +1,38 @@
+[tool.poetry]
+name = "torchagent"
+version = "0.2.4"
+description = "Deep-Q learning with pytorch"
+authors = ["Willem Meints <willem.meints@gmail.com>"]
+license = "Apache-2.0"
+readme = "README.rst"
+homepage = "https://github.com/wmeints/torchagent"
+repository = "https://github.com/wmeints/torchagent"
+
+classifiers = [
+    "License :: OSI Approved :: Apache Software License",
+    "Development Status :: 1 - Planning",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy"
+]
+
+packages = [
+    { include = "torchagent" }
+]
+
+include = [
+    "CHANGELOG.md"
+]
+
+[tool.poetry.dependencies]
+python = ">=3.8"
+torch = "^1.8.1"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
