@@ -1,0 +1,14 @@
+Metadata-Version: 1.1
+Name: seisgo
+Version: 0.5.1
+Summary: A ready-to-go Python toolbox for seismic data analysis
+Home-page: UNKNOWN
+Author: Xiaotao Yang
+Author-email: stcyang@gmail.com
+License: UNKNOWN
+Download-URL: https://github.com/xtyangpsp/SeisGo/archive/refs/tags/v0.5.1.tar.gz
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.7
