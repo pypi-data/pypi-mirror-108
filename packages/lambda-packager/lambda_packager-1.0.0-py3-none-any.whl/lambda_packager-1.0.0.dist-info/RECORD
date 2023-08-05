@@ -1,0 +1,11 @@
+lambda_packager/__init__.py,sha256=MdOj8ycgbAYKQnYepxwdWqtUpLIidQFxfooRvIbq5Aw,1824
+lambda_packager/config.py,sha256=x5_todzijFx9Z4Bhj87fK2S3bWhYclQjvMY-k2pd2dk,397
+lambda_packager/custom_log_formatter.py,sha256=aG1_2a4l7juLymA9Y5Japxf6wCmk2e1shLE2ahh6oFs,881
+lambda_packager/handle_poetry.py,sha256=rfweODYfXLCGEGNbdhvh6QTaOEbQIUQevD8pENjhh6I,1295
+lambda_packager/handle_requirements_txt.py,sha256=Bp760LlhvULmBNeyfLQ8EEKeC_wn1gjgTz5suJrr_-A,773
+lambda_packager/package.py,sha256=ayZ6On4q9NHztuW2knRRcvUko48fiMdgikoyqrcTz4Q,6610
+lambda_packager-1.0.0.dist-info/entry_points.txt,sha256=7Jpozm9DtAhKkH7xMq_tmo15kmw_Zqo9OhmUiNtHSkM,59
+lambda_packager-1.0.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+lambda_packager-1.0.0.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+lambda_packager-1.0.0.dist-info/METADATA,sha256=7wk0pGJe9LwfwAL_u8MshUaI-qK3hhcA8Ss_E_tIHZs,2655
+lambda_packager-1.0.0.dist-info/RECORD,,
