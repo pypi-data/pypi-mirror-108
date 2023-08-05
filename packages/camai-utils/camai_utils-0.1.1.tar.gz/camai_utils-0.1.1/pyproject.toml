@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "camai_utils"
+version = "0.1.1"
+description = "Python utils for the Camai CHC COVID Datasystem."
+authors = ["apteryxlabs <matthew@apteryxlabs.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pytesseract = "^0.3.7"
+pdf2image = "^1.15.1"
+regex = "^2021.4.4"
+phonenumbers = "^8.12.23"
+dateparser = "^1.0.0"
+PyPDF2 = "^1.26.0"
+hl7 = "^0.4.2"
+
+pytest = "^6.2.4"
+
+pandas = "^1.2.4"
+fastapi = {extras = ["all"], version = "^0.65.1"}
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
