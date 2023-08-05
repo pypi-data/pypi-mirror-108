@@ -1,0 +1,11 @@
+secret/SCRATCH.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+secret/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+shared/__init__.py,sha256=LVwPPf9H1x7qnJ4f-CCb_zNYE4822ws9-y0uE6cKLMA,8171
+shared/__main__.py,sha256=SXdxUrp79f9my2sc7wzVcTNHYUbOUYwbZEzbe6SYtq8,4176
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+shared-0.0.3.dist-info/LICENSE,sha256=qa7R_AbaR83ZfoUV_42NLm1y03WIzvfz5kcIrGwX-UY,1075
+shared-0.0.3.dist-info/METADATA,sha256=4Ogm9HZxHIksWyHFiaUSHB8Syoqv7DS-OfL1zet3X-Q,3769
+shared-0.0.3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+shared-0.0.3.dist-info/entry_points.txt,sha256=A8dFPL99VH3nteQCdovlLCwMOW4yBvW0BXri9J52hw4,49
+shared-0.0.3.dist-info/top_level.txt,sha256=STF-dhWG_tro7xT96X1rA6LzP62155NKjGV2PisWiSc,20
+shared-0.0.3.dist-info/RECORD,,
