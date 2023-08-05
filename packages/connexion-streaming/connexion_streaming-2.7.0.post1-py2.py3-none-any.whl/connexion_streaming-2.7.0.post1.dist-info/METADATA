@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: connexion-streaming
+Version: 2.7.0.post1
+Summary: Connexion Streaming - Connexion fork with upload streaming
+Home-page: UNKNOWN
+License: Apache License Version 2.0
+Keywords: openapi oai swagger rest api oauth flask microservice framework connexion
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Internet :: WWW/HTTP :: WSGI :: Application
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Requires-Python: >=3.6
+Requires-Dist: PyYAML (>=5.1)
+Requires-Dist: clickclick (>=1.2)
+Requires-Dist: flask (>=1.0.4)
+Requires-Dist: inflection (>=0.3.1)
+Requires-Dist: jsonschema (>=2.5.1)
+Requires-Dist: openapi-spec-validator (>=0.2.4)
+Requires-Dist: requests (>=2.9.1)
+Provides-Extra: aiohttp
+Requires-Dist: aiohttp-jinja2 (>=0.14.0) ; extra == 'aiohttp'
+Requires-Dist: aiohttp (>=2.3.10) ; extra == 'aiohttp'
+Provides-Extra: flask
+Requires-Dist: flask (>=1.0.4) ; extra == 'flask'
+Provides-Extra: swagger-ui
+Requires-Dist: swagger-ui-bundle (>=0.0.2) ; extra == 'swagger-ui'
+Provides-Extra: tests
+Requires-Dist: aiohttp-jinja2 (>=0.14.0) ; extra == 'tests'
+Requires-Dist: aiohttp-remotes ; extra == 'tests'
+Requires-Dist: aiohttp (>=2.3.10) ; extra == 'tests'
+Requires-Dist: decorator ; extra == 'tests'
+Requires-Dist: flask (>=1.0.4) ; extra == 'tests'
+Requires-Dist: pytest ; extra == 'tests'
+Requires-Dist: pytest-aiohttp ; extra == 'tests'
+Requires-Dist: pytest-cov ; extra == 'tests'
+Requires-Dist: swagger-ui-bundle (>=0.0.2) ; extra == 'tests'
+Requires-Dist: testfixtures ; extra == 'tests'
+
+Connexion Streaming
+===================
+
+This is a fork of `Connexion <https://github.com/zalando/connexion>`_ that
+allows streaming uploads. It is currently under development and should not be
+used for production.
+
+
