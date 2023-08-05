@@ -1,0 +1,4 @@
+[console_scripts]
+apihub_users_deinit=apihub_users.bin.admin:deinit
+apihub_users_init=apihub_users.bin.admin:init
+
