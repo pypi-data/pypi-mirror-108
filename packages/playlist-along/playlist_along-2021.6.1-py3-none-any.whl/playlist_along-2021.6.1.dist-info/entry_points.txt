@@ -1,0 +1,3 @@
+[console_scripts]
+playlist-along=playlist_along.__main__:main
+
