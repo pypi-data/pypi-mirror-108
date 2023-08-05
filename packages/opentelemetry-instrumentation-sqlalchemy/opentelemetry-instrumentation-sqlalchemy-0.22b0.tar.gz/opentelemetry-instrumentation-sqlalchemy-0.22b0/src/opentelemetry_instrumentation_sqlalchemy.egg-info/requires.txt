@@ -1,0 +1,12 @@
+opentelemetry-api==1.3.0
+opentelemetry-semantic-conventions==0.22b0
+opentelemetry-instrumentation==0.22b0
+wrapt>=1.11.2
+
+[instruments]
+sqlalchemy
+
+[test]
+opentelemetry-sdk==1.3.0
+pytest
+sqlalchemy
