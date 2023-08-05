@@ -1,0 +1,3 @@
+[console_scripts]
+wecoded = wecoded.__main__:main
+
