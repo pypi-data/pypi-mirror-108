@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+temperature/__init__.py
+temperature/temperature.py
+temperaturePy.egg-info/PKG-INFO
+temperaturePy.egg-info/SOURCES.txt
+temperaturePy.egg-info/dependency_links.txt
+temperaturePy.egg-info/top_level.txt
