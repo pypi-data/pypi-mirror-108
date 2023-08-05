@@ -1,0 +1,3 @@
+[console_scripts]
+shanx-py=python_framework.main:main
+
