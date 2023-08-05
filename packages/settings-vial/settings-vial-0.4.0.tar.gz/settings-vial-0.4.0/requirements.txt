@@ -1,0 +1,8 @@
+tox
+pytest
+pytest-cov
+pytest-mock
+
+# gitchangelog
+gitchangelog
+pystache
