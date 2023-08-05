@@ -1,0 +1,10 @@
+frmf/__init__.py,sha256=k_oZsrv--OurNv59Qfgykc9GKoF_hi0aTnSIDkMMLnA,126
+frmf/api_view.py,sha256=RCXgagQSBtDhhKzMCjdG647C02WbF99IHGG-Lsa-btk,4975
+frmf/db_helper.py,sha256=ewYW6A65ybtxxO3-quTwgr_qfVMVCmZkSwhup2cs_Wc,966
+frmf/logic.py,sha256=djBtL4gPjCOZCywIEB3uVFsbysLoSwLwwUy82I43MXU,1962
+frmf/manager.py,sha256=25l6FWVIAuMzzd5WhzZ6JmTnFOMleOXzosxRaHryYYw,4281
+frmf/response.py,sha256=r_LfUnWvQtLgigLHfGxGor4Na-c1hp1kgi1PzTJaNss,643
+frmf-0.0.1.dist-info/METADATA,sha256=_GOa5-UwQLgxTuCCmo3j5-cYKNqe-xwS7eimCAnD8n8,452
+frmf-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+frmf-0.0.1.dist-info/top_level.txt,sha256=fSz0AIwfbHHZmxoDz9lBIbvw4uvTLQRImZZ1J5m--JY,5
+frmf-0.0.1.dist-info/RECORD,,
