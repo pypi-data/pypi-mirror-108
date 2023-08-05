@@ -1,0 +1,10 @@
+pilotis_io_aws/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pilotis_io_aws/__version__.py,sha256=IU-1SLkMiH4w567OQuvq1Y9IQb-eIpz2309UbJbscmE,149
+pilotis_io_aws/s3/__init__.py,sha256=gvLTgdkqjiUWp8_pWxmKkaCZ0Tf2zvNusr8iWaz1a0Q,107
+pilotis_io_aws/s3/s3_io_api.py,sha256=s_fsTY8fRbeirSuJ18QaaTeSjkt9awtgQCQQ40PauBo,2955
+pilotis_io_aws/s3/s3_numpy_api.py,sha256=J-p-T_jOuUPvXRKzKkWDhNhGcY81DnV_bsE4dykhxhE,1489
+pilotis_io_aws/s3/s3_pandas_api.py,sha256=katZL5nYEyc7ydfrIkpC9Fgs7AaG82eSVXjasA9cXF8,185
+pilotis_io_aws-0.1.1.dist-info/LICENSE,sha256=iQRC2GR6mZqIZ5UQCyxjgawYQXCxMkpmxWauTVqGjDw,1064
+pilotis_io_aws-0.1.1.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+pilotis_io_aws-0.1.1.dist-info/METADATA,sha256=o1ztXzpXjxnJhAHSe0XKH38PH6ct8gVUiltAqhhK2lA,2130
+pilotis_io_aws-0.1.1.dist-info/RECORD,,
