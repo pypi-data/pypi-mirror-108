@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: threadkiller
+Version: 1.0.1
+Summary: A Telegram bot to delete messages sent outside of channel comment threads
+License: AGPL-3.0-or-later
+Author: Stefano Pigozzi
+Author-email: me@steffo.eu
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: python-telegram-bot (>=13.5,<14.0)
