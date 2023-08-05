@@ -1,0 +1,3 @@
+[console_scripts]
+ffs = ffs.cli:main
+

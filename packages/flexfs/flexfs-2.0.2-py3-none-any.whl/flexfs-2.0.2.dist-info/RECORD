@@ -1,0 +1,16 @@
+ffs/FILE_STRUCTURE.md,sha256=SLQ8NXSqEhqwDLUWO-2H7rjvAmRZ_iYOfcH4AyjYLbo,6460
+ffs/GUIDELINES.md,sha256=Mcug618xh-OwD-EPjqyiEeDdDSTFtooxViamNEV0jHs,12986
+ffs/__init__.py,sha256=MDXeTD7qEIrFNUvNRcZtX5hX2jmRFM-QBFsnXWwSGhY,252
+ffs/book.py,sha256=I-yEQHs_UYweFF-D32Ac785-jyM8-S7uJWKlieXUOOM,4540
+ffs/classes.py,sha256=N9x5rOcAruaIItzGB-kQdkgFDzzHu7TtpM9KA98Mt2s,4753
+ffs/cli.py,sha256=IFWOihhTuAgfvwLCDO2uizUIRyq0o_ktNMM5BfKnPUA,3916
+ffs/problems.py,sha256=JW9K0UWDLhTx7kvVxRgytEk02_pMBMd617VxWAW2h4c,1009
+ffs/spec_version.py,sha256=PC4L-4ZYqiOhEVaUnAMkg-heTvUDkmY1qvX0S2227ag,24
+ffs/utils.py,sha256=KvsiRV6ZPSQSEe83cf0kDDvM-pNYB16YS-ZBMCoouXw,847
+ffs/version.py,sha256=tJsce6-xHh2nqYN1Q0aCPsret-V9n5m1Eq5KaDImtDw,142
+flexfs-2.0.2.dist-info/LICENSE,sha256=zvyzM_bHESXex7Kr_ktKwvQhT24s9olkAwb9lrO3B7M,1073
+flexfs-2.0.2.dist-info/METADATA,sha256=D6WJA3NuGHRg6h3IpCjFFkGrUst2MJYOJWYv7boBfAU,3633
+flexfs-2.0.2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+flexfs-2.0.2.dist-info/entry_points.txt,sha256=GlPINpFDiI9r9sL5hky6gFvlZIFEkS5XfR4bECFMDbM,38
+flexfs-2.0.2.dist-info/top_level.txt,sha256=Z0KinK23V0UJlyK31ynmAyNhmrmsA8F-mKH2GN-0KJ0,4
+flexfs-2.0.2.dist-info/RECORD,,
