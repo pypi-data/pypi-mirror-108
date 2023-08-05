@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+setup.py
+aws_mail/__init__.py
+aws_mail/_version.py
+aws_mail/aws_mail.py
+aws_mail.egg-info/PKG-INFO
+aws_mail.egg-info/SOURCES.txt
+aws_mail.egg-info/dependency_links.txt
+aws_mail.egg-info/requires.txt
+aws_mail.egg-info/top_level.txt
+bin/aws_mail
