@@ -1,0 +1,6 @@
+README.md
+setup.py
+issypdf.egg-info/PKG-INFO
+issypdf.egg-info/SOURCES.txt
+issypdf.egg-info/dependency_links.txt
+issypdf.egg-info/top_level.txt
