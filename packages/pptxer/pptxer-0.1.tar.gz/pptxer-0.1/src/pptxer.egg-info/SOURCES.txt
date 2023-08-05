@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/pptxer/__init__.py
+src/pptxer/__main__.py
+src/pptxer/cli.py
+src/pptxer/presentations_downloader.py
+src/pptxer/presentations_text_extractor.py
+src/pptxer/util.py
+src/pptxer.egg-info/PKG-INFO
+src/pptxer.egg-info/SOURCES.txt
+src/pptxer.egg-info/dependency_links.txt
+src/pptxer.egg-info/entry_points.txt
+src/pptxer.egg-info/requires.txt
+src/pptxer.egg-info/top_level.txt

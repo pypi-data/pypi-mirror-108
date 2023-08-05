@@ -1,0 +1,5 @@
+fake-headers
+googlesearch-python
+python-pptx
+requests
+click

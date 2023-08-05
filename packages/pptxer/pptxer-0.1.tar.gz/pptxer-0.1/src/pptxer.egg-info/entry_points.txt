@@ -1,0 +1,3 @@
+[console_scripts]
+pptxer = pptxer.cli:main
+
