@@ -1,0 +1,8 @@
+jax_dataclasses/__init__.py,sha256=drJOnycWJjd70nq7HGtcAveMaqd037u9ynYEd3O38x8,1150
+jax_dataclasses/_copy_and_mutate.py,sha256=s0XdlF-zPlBr94HDM82q86Mrnezxg-G53Szw0DIPIv8,3323
+jax_dataclasses/_dataclasses.py,sha256=gG55eykaGzSQuM_aSmXUM8X_cwBWpio_uQJlgwSE-ls,4023
+jax_dataclasses/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jax_dataclasses-1.0.1.dist-info/METADATA,sha256=XXSkFLwBVUCPW0P7xp1XfzSL8B-JcRbRmi2d2LEfk9M,5620
+jax_dataclasses-1.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+jax_dataclasses-1.0.1.dist-info/top_level.txt,sha256=CmeIP24sEeWyaIZfAr2ixJs4csOlfHEfkdlmvq8nm84,16
+jax_dataclasses-1.0.1.dist-info/RECORD,,
