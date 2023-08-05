@@ -1,0 +1,84 @@
+Metadata-Version: 2.1
+Name: genestboost
+Version: 0.3.0
+Summary: General boosting framework for any regression estimator
+Home-page: https://github.com/btcross26/genestboost
+Author: Ben Cross <btcross26@yahoo.com>
+Author-email: btcross26@yahoo.com
+Maintainer: Ben Cross <btcross26@yahoo.com>
+License: BSD 3-Clause
+Project-URL: Documentation, https://github.com/pages/btcross26/genestboost/build/html/index.html
+Project-URL: Bug Tracker, https://github.com/btcross26/genestboost/issues
+Project-URL: Source Code, https://github.com/btcross26/genestboost
+Platform: UNKNOWN
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.7.0,<3.10
+Description-Content-Type: text/x-rst
+Requires-Dist: numpy (==1.*,>=1.18.5)
+Requires-Dist: scipy (==1.*,>=1.4.1)
+Provides-Extra: build
+Requires-Dist: twine ; extra == 'build'
+Requires-Dist: wheel ; extra == 'build'
+Provides-Extra: dev
+Requires-Dist: coverage ; extra == 'dev'
+Requires-Dist: mypy ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: pytest-cov ; extra == 'dev'
+Requires-Dist: toml ; extra == 'dev'
+Requires-Dist: sphinx ; extra == 'dev'
+Requires-Dist: sphinx-rtd-theme ; extra == 'dev'
+Requires-Dist: sphinx-autodoc-typehints ; extra == 'dev'
+Requires-Dist: recommonmark ; extra == 'dev'
+Requires-Dist: pre-commit ; extra == 'dev'
+Requires-Dist: black ; extra == 'dev'
+Requires-Dist: tox ; extra == 'dev'
+Requires-Dist: check-manifest ; extra == 'dev'
+Requires-Dist: flake8 ; extra == 'dev'
+Requires-Dist: flake8-docstrings ; extra == 'dev'
+Requires-Dist: twine ; extra == 'dev'
+Requires-Dist: wheel ; extra == 'dev'
+Requires-Dist: jupyter ; extra == 'dev'
+Requires-Dist: ipykernel ; extra == 'dev'
+Requires-Dist: matplotlib (==3.*,>=3.2.1) ; extra == 'dev'
+Requires-Dist: pandas (==1.*,>=1.0.4) ; extra == 'dev'
+Requires-Dist: scikit-learn (==0.*,>=0.22) ; extra == 'dev'
+Requires-Dist: patsy (==0.5.1) ; extra == 'dev'
+Provides-Extra: docs
+Requires-Dist: sphinx ; extra == 'docs'
+Requires-Dist: sphinx-rtd-theme ; extra == 'docs'
+Requires-Dist: sphinx-autodoc-typehints ; extra == 'docs'
+Requires-Dist: recommonmark ; extra == 'docs'
+Provides-Extra: notebooks
+Requires-Dist: jupyter ; extra == 'notebooks'
+Requires-Dist: ipykernel ; extra == 'notebooks'
+Requires-Dist: matplotlib (==3.*,>=3.2.1) ; extra == 'notebooks'
+Requires-Dist: pandas (==1.*,>=1.0.4) ; extra == 'notebooks'
+Requires-Dist: scikit-learn (==0.*,>=0.22) ; extra == 'notebooks'
+Requires-Dist: patsy (==0.5.1) ; extra == 'notebooks'
+Provides-Extra: qa
+Requires-Dist: pre-commit ; extra == 'qa'
+Requires-Dist: black ; extra == 'qa'
+Requires-Dist: mypy ; extra == 'qa'
+Requires-Dist: tox ; extra == 'qa'
+Requires-Dist: check-manifest ; extra == 'qa'
+Requires-Dist: flake8 ; extra == 'qa'
+Requires-Dist: flake8-docstrings ; extra == 'qa'
+Provides-Extra: tests
+Requires-Dist: coverage ; extra == 'tests'
+Requires-Dist: mypy ; extra == 'tests'
+Requires-Dist: pytest ; extra == 'tests'
+Requires-Dist: pytest-cov ; extra == 'tests'
+Requires-Dist: toml ; extra == 'tests'
+
+
+:code:`genestboost` is an ML boosting library that separates the modeling algorithm from
+the boosting algorithm. The result is that you can boost any generic regression
+model, not just trees. Build a forward-thinking (forward-propagating) neural network if
+you wish, or build an ensemble of support vector machines if you would so desire. Mix
+and match link and loss functions at will.
+
+
