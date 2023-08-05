@@ -1,0 +1,1 @@
+This is a very simple calculator module that adds,subtracts,multiplies,divides the numbers

@@ -1,0 +1,9 @@
+LICENCE.txt
+MANIFEST.in
+README.txt
+setup.py
+square-math libraries/__init__.py
+square_math.egg-info/PKG-INFO
+square_math.egg-info/SOURCES.txt
+square_math.egg-info/dependency_links.txt
+square_math.egg-info/top_level.txt
