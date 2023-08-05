@@ -1,0 +1,2 @@
+recursive-include QGrain assets/*
+recursive-include QGrain samples/*
