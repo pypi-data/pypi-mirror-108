@@ -1,0 +1,10 @@
+
+[dev]
+black==21.5b1
+flake8==3.7.9
+check-manifest
+wheel
+
+[test]
+coverage
+pytest
