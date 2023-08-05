@@ -1,0 +1,23 @@
+Metadata-Version: 1.1
+Name: pyspeechwin3
+Version: 0.0.1
+Summary: Text To Speech Converter
+Home-page: UNKNOWN
+Author: Sunami Dasgupta
+Author-email: sunamidasgupta@gmail.com
+License: MIT
+Description: speechx is a text-to-speech conversion library in Python. Unlike alternative libraries, it works offline, and is compatible with both Python 2 and 3.
+        
+        Change Log
+        ==========
+        
+        0.0.1 (01/06/2021)
+        -------------------
+        - First Release
+Keywords: Text to Speech,pyttsx3,tts for python,text to speech for python,offline text to speech for python
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
