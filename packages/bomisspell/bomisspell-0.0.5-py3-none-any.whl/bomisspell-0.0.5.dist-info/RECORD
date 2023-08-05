@@ -1,0 +1,13 @@
+bomisspell/__init__.py,sha256=y8B8J6Q5qOg3ys1gU43DfdTToPZ4NHEj8_MSuYDHSDI,149
+bomisspell/mingzhi.py,sha256=KVwg99ylxCQl-_Es-HAiG2I6nEOelD95n9CFM4-Ckh4,1525
+bomisspell/option_generator.py,sha256=D3B0SU_nplskvYcYloc-XqzACDfvl-Oe-hOLLpLRveI,1532
+bomisspell/sgnon_jung.py,sha256=Vrx7jFkLjD9Kk3MJcUauo57SV6s45G7N-sWnYgG0r4s,740
+bomisspell/utils.py,sha256=r6t4mD9N0oh_Nu8GNanwupE2icr2mKDM2tmTNkCU4oc,4112
+bomisspell/yang_jug.py,sha256=oKj3jdcC3z_QKprqEbXB6Zbm72AQnlo7O9Z00KcMmSo,1017
+bomisspell/resources/load_mapping.py,sha256=BUDdf8_1wLuQIL8ShXwyy0uktOqO3dKnPcCg8VxZP-E,952
+bomisspell/resources/mapping.txt,sha256=5O81oTe0lf6VSCcmLZl6Pryp0MD0In1Of95ig_6jBx0,2821
+bomisspell/resources/mingzhi_mapping.yaml,sha256=CPVmgTGsOhGqfMPtP_q-UhXuSy5NCCtcRz0EfhfDzRs,3218
+bomisspell-0.0.5.dist-info/METADATA,sha256=3SGpF74pOVcYkQC-weXvikemSJ0gWRBE2qk_dqrOVpk,567
+bomisspell-0.0.5.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+bomisspell-0.0.5.dist-info/top_level.txt,sha256=X9HAXwEylGLH0BFhs4w_qj6zzJAuk4b3UXsbmoiiVM8,11
+bomisspell-0.0.5.dist-info/RECORD,,
