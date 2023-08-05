@@ -1,0 +1,10 @@
+ei/__init__.py,sha256=EyruwkEesB1xr0ukpuTrYLqb5es8hQlpavJ8mh4SBlk,1155
+ei/embed.py,sha256=vTahoNI92W68Jhs5u_wf0j_pRvlFcG5iLeZzFP3YVhk,1807
+ei/hook.py,sha256=ceipiZbcjmY3Xwo7Qr8fIA6YXN0dfsYi2fSeQ12x8OY,4472
+ei/patch.py,sha256=6f8UEaZY6upUwVRBHYDdYpUjAcdxSdxCDQn4HIYMbKM,1606
+ei/patched.py,sha256=-fv4uIfc46Bv2tm9XyZZKvnRNGe-hsZAar3hYxdE_RM,34
+ei-0.0.9.dist-info/LICENSE,sha256=0ttUsTXi3ok2vinAMn_NfUSqPIxqpAsTLUd_FyKGyH8,1068
+ei-0.0.9.dist-info/METADATA,sha256=WSwVd5S1rumTRUPzYRJqEypehLZJu-RjrQm3zPaCQSg,1103
+ei-0.0.9.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+ei-0.0.9.dist-info/top_level.txt,sha256=C5qzJ2Es3tFwLNxcqd0f3tSh7rWZNFx3CSjYTWuT7P8,3
+ei-0.0.9.dist-info/RECORD,,
