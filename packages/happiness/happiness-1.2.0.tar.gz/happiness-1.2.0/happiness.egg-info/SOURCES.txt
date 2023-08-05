@@ -1,0 +1,9 @@
+README.md
+setup.py
+happiness/__init__.py
+happiness.egg-info/PKG-INFO
+happiness.egg-info/SOURCES.txt
+happiness.egg-info/dependency_links.txt
+happiness.egg-info/not-zip-safe
+happiness.egg-info/requires.txt
+happiness.egg-info/top_level.txt

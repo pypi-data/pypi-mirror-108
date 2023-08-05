@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: happiness
+Version: 1.2.0
+Summary: this package is for spreading happiness
+Home-page: UNKNOWN
+Author: Devansh Gupta
+Author-email: xyznfc@gmail.com
+License: MIT
+Description: Stay happy
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
