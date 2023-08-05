@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: villas-dataprocessing
+Version: 0.3.2
+Summary: Several tools for processing simulation results
+Home-page: https://git.rwth-aachen.de/acs/public/villas/dataprocessing
+Author: Markus Mirz, Jan Dinkelbach, Steffen Vogel
+Author-email: acs-software@eonerc.rwth-aachen.de
+License: Apache-2.0
+Description: # Dataprocessing toolkit for RWTH ACS simulators
+        
+        ## Copyright
+        
+        2017-2021, Institute for Automation of Complex Power Systems, EONERC, RWTH Aachen University
+        
+        ## License
+        
+        This project is released under the terms of the [Apache 2.0](LICENSE).
+        
+        
+        ## Contact
+        
+        - Markus Mirz 
+        - Jan Dinkelbach 
+        - Steffen Vogel 
+        
+        [Institute for Automation of Complex Power Systems (ACS)](http://www.acs.eonerc.rwth-aachen.de)
+Keywords: simulation power system real-time data processing
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Topic :: Scientific/Engineering
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
