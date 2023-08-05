@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: stardist-napari
+Version: 2021.6.1
+Summary: Object Detection with Star-convex Shapes
+Home-page: https://github.com/stardist/stardist-napari
+Author: Uwe Schmidt, Martin Weigert
+Author-email: research@uweschmidt.org, martin.weigert@epfl.ch
+License: BSD 3-Clause License
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Framework :: napari
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: stardist (>=0.7.0)
+Requires-Dist: tensorflow
+Requires-Dist: napari (>=0.4.8)
+Requires-Dist: magicgui (>=0.2.9)
+
+# stardist-napari
+
+Documentation to be done... watch [this video demonstrating the plugin](https://www.youtube.com/watch?v=Km1_TnUQ4FM&list=PLilvrWT8aLuZCaOkjucLjvDu2YRtCS-JT&index=5) in the meantime.
+
+
