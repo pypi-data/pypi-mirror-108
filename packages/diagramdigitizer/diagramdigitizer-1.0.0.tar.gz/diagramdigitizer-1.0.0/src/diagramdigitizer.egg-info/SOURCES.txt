@@ -1,0 +1,17 @@
+LICENSE
+README.rst
+pyproject.toml
+setup.py
+src/diagramdigitizer/__init__.py
+src/diagramdigitizer/diagramdigitizer.py
+src/diagramdigitizer/export.py
+src/diagramdigitizer/graphscene.py
+src/diagramdigitizer/utils.py
+src/diagramdigitizer.egg-info/PKG-INFO
+src/diagramdigitizer.egg-info/SOURCES.txt
+src/diagramdigitizer.egg-info/dependency_links.txt
+src/diagramdigitizer.egg-info/entry_points.txt
+src/diagramdigitizer.egg-info/top_level.txt
+src/diagramdigitizer/ui/__init__.py
+src/diagramdigitizer/ui/mainWindow.py
+src/diagramdigitizer/ui/resources_rc.py
