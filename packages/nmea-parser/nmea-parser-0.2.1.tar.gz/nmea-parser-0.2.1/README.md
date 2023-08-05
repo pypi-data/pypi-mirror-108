@@ -1,0 +1,98 @@
+# NMEA Parser
+
+A library used to decode NMEA data streams from GNSS receivers. Capable of parsing a text file
+containing NMEA data or reading from a serial port real time.
+
+This library is currently in Beta and is subject to change any time.
+
+## Dependencies
+
+PySerial is the only dependency. See `requirements.txt`.
+
+## Usage
+
+See www.bek.sh/nmea-parser for a full manual.
+
+### Examples
+
+#### Opening and Reading a Serial Port
+
+It is highly sugested that you use all input streams within a context manager (`with` statement) as shown below.
+
+```python
+from nmea import input_stream
+
+stream = input_stream.GenericInputStream.open_stream('/dev/ttyACM0', 9600)
+
+print(stream)
+
+with stream:
+    print(stream.get_line())
+```
+
+If you must use an input stream without a context manager, make sure that the `ensure_closed()` function
+is called prior to exit:
+
+```python
+from nmea import input_stream
+
+stream = input_stream.GenericInputStream.open_stream('/dev/ttyACM0', 9600)
+
+print(stream)
+print(stream.get_line())
+stream.ensure_closed()      # You must not forget to manually close the stream.
+```
+
+Using a context manager ensures that the port is always closed should your program halt unexpectedly.
+
+### Getting Position Data and Logging to a Database
+
+The `DataFrame` object contains properties that allow you to access your current position and movement
+information. The logging module allows you to record these objects in a database. The logging module
+has built-in SQLite support.
+
+```python
+from nmea import input_stream, data_frame, logging
+
+stream = input_stream.GenericInputStream.open_stream('/dev/ttyACM0', 9600)
+
+db = logging.SQLiteConnection.from_path('./example.sqlite')
+
+print(stream)
+
+with stream:
+    new_frame = data_frame.DataFrame.get_next_frame(stream)
+
+    print("Current GPS time:", new_frame.gps_time)
+    print("Current Latitude:", new_frame.latitude)
+    print("Current Longitude:", new_frame.longitude)
+    print("Current Speed:", new_frame.velocity)
+    print("Current heading:", new_frame.track)
+    print("Number of Satellites above:", new_frame.nsats)
+
+    db.insert_dataframe(new_frame)
+```
+
+## Changelog
+
+* 0.2.1 (2021-06-02)
+	- Fix bug that would crash the library if a stream starts with no GPS fix
+
+* 0.2.0 (2021-06-01)
+	- Add ability to record a raw text dump of an incoming NMEA stream
+	- Majorly simplify the built in logging module
+	- Completely depreciate the nmea parser module.
+	- Fix a bug where NMEA sentences without a fix threw an index error
+	- Clean source code
+
+* 0.1.2 (2021-05-25)
+	- Fix 'inaproprate ioctl for device' error from serial library
+
+* 0.1.1 (2021-05-24)
+	- Improve safety of file handling in input stream module
+	- Bug fixes in type checking
+	- Fix absolute imports in project
+	- Small fixes to documentation
+
+* 0.1.0 (2021-05-20):
+    - Inital release
