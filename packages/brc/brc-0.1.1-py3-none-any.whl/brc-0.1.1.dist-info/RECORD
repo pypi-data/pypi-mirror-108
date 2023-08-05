@@ -1,0 +1,8 @@
+brc_pytorch/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+brc_pytorch/benchmarks.py,sha256=vlmKSzcjnOuC4AlReV-DDG6g7mzaKrmlliDC_plEG2Y,2103
+brc_pytorch/modules.py,sha256=uJ3fQJd32cy3AyAB2UBW7SD1TQB_mpNTGRzN_oN9__g,8790
+brc_pytorch/utils.py,sha256=0VGgScP5T-FXNd_rpz_v8rZFGFDpJQzk5rebLwVXqSg,689
+brc-0.1.1.dist-info/METADATA,sha256=DnXvXD-iko2qBOpMcv7avQyHLCc_yicynDjGQHAg9JQ,1714
+brc-0.1.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+brc-0.1.1.dist-info/top_level.txt,sha256=S1X5h_M1oy6KBxShyCaRKUgyNbAdWjzuDI41LazZUuU,12
+brc-0.1.1.dist-info/RECORD,,
