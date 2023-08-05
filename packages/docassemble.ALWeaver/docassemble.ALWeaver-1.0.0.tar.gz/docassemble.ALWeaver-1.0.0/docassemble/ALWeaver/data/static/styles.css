@@ -1,0 +1,22 @@
+a span.pdcaretopen {
+    display: inline;
+}
+
+a span.pdcaretclosed {
+    display: none;
+}
+
+a.collapsed .pdcaretopen {
+    display: none;
+}
+
+a.collapsed .pdcaretclosed {
+    display: inline;
+}
+/* [FILE] image shadow */
+.daicon {    
+  box-shadow: 5px 5px 15px #69868e;
+  border-style: solid;
+  border-width: 1px;
+  border-color: gray;
+}
