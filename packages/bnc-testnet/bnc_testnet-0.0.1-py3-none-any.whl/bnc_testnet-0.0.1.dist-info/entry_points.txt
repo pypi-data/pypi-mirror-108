@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        bnc_testnet=bnc_testnet.cli:entry_point
+    
