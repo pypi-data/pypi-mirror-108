@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: dismantle
+Version: 0.3.0
+Summary: Python package / plugin / extension manager
+Home-page: https://garysb.com
+License: Apache License, Version 2.0
+Author: Gary Stidston-Broadbent
+Author-email: dismantle@garysb.com
+Requires-Python: >=3.7,<4.0
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: License :: Other/Proprietary License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: requests (>=2.25.1,<3.0.0)
+Description-Content-Type: text/x-rst
+
+# Dismantle
+
+Python package / plugin / extension manager.
+
