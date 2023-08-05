@@ -1,0 +1,10 @@
+pgbm/__init__.py,sha256=Jc2gocygnUhomOUBUqEwZcKMyfKgk7dh3YWTO2hOeDw,22
+pgbm/parallelsum.cpp,sha256=wH6vvqXe0HEesr6ilSG5809mqkSkL2PXCh_pe4T5qAk,2336
+pgbm/parallelsum_kernel.cu,sha256=UzT6RdS29pFMpUA_foqeKyWFKxVQg4qvDc96coUUrIA,7412
+pgbm/pgbm.py,sha256=W4voYBgLuZEsatF3semWSU9IhySUTIKNVDRQ7KYZkhk,33547
+pgbm-0.1.dist-info/LICENSE,sha256=41G3choiGc9XxTSzt1Hk6HlX0gTljvdXDgIfJmmc2FM,10957
+pgbm-0.1.dist-info/METADATA,sha256=ZUSPlcS9KGPQUVSNq5HyMUT-1Uo7VUpsTcMIG4KRet8,7018
+pgbm-0.1.dist-info/NOTICE,sha256=ZtE8qwP79S1ck55o5KBvp7TE6mYcV4ijOoWLguF_jA0,3331
+pgbm-0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pgbm-0.1.dist-info/top_level.txt,sha256=CYSbZmMviZY8Kna_gJju9gp8GuI1sdzWdxlGFoWWFA0,5
+pgbm-0.1.dist-info/RECORD,,
