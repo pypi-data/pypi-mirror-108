@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: connexion_streaming
+Version: 2.7.0.post1
+Summary: Connexion Streaming - Connexion fork with upload streaming
+Home-page: UNKNOWN
+License: Apache License Version 2.0
+Description: Connexion Streaming
+        ===================
+        
+        This is a fork of `Connexion <https://github.com/zalando/connexion>`_ that
+        allows streaming uploads. It is currently under development and should not be
+        used for production.
+        
+Keywords: openapi oai swagger rest api oauth flask microservice framework connexion
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Internet :: WWW/HTTP :: WSGI :: Application
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Requires-Python: >=3.6
+Provides-Extra: aiohttp
+Provides-Extra: flask
+Provides-Extra: swagger-ui
+Provides-Extra: tests
