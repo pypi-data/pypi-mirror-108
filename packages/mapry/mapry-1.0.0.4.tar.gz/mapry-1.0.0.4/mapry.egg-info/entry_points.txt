@@ -1,0 +1,3 @@
+[console_scripts]
+mapry-to = mapry.main:entry_point
+
