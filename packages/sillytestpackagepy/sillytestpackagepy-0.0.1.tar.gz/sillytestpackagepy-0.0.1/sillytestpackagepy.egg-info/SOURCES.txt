@@ -1,0 +1,7 @@
+setup.py
+sillytestpackagepy/__init__.py
+sillytestpackagepy/person.py
+sillytestpackagepy.egg-info/PKG-INFO
+sillytestpackagepy.egg-info/SOURCES.txt
+sillytestpackagepy.egg-info/dependency_links.txt
+sillytestpackagepy.egg-info/top_level.txt
