@@ -1,0 +1,9 @@
+docklib/__init__.py,sha256=2OKdQ-VHw-KrnRbJ2r_Nn3kTKT1ubY26_vXi8V3JIv8,46
+docklib/docklib.py,sha256=PuTcrCwnaODT9fPkEEYelC1cOQPp1IvZwl374M9BJbw,12471
+docklib/move_static_to_persistent.py,sha256=JB0umybpTVgw6AQPnHWt8fLh_vFbIqQq2Qf8rBCnU1s,1411
+docklib/test.py,sha256=jaK0lFtbLtVTYmkMX9YBID02mfgOGITRDAj-8EssNso,1461
+docklib-1.3.0.dist-info/LICENSE.md,sha256=57GZX4QBpFWowD9x9jeMoao8-Vxj2UJFo5yVm6A4mP0,530
+docklib-1.3.0.dist-info/METADATA,sha256=Q0hl4c0dSvYuROzYCi2uZR_z_wpGZHq743yKdCupucU,6835
+docklib-1.3.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+docklib-1.3.0.dist-info/top_level.txt,sha256=EkzEFvGqqdvgf6RKIcluAhbFokOmhFo8FyY5HMmEbRY,8
+docklib-1.3.0.dist-info/RECORD,,
