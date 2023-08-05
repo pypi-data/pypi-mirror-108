@@ -1,0 +1,8 @@
+pyArchiver/__init__.py,sha256=dHuoY6voK7np1A7oRzw1xyBy7CK9_KBAc4FCKW29uRQ,21
+pyArchiver/pyArciver.py,sha256=sxooML0VU3x_d7csyi724Uqgq9AwSngUFNEYxncXUuI,1408
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_acrhiver.py,sha256=_AuWYgaLtcklK9Z3dKjpYlfVuJ4NlcLCAvQkkdt4LFw,1854
+pyArchiverVadim-1.0.0.dist-info/METADATA,sha256=BiGX6X0I7rufCNVqaYUrkuqjWk5nxZcQ8Aof8jBBqMc,609
+pyArchiverVadim-1.0.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pyArchiverVadim-1.0.0.dist-info/top_level.txt,sha256=y0HXdaecbnxTwBS9kqMjk-2VD1apymkitqeEnSanX2U,17
+pyArchiverVadim-1.0.0.dist-info/RECORD,,
