@@ -1,0 +1,9 @@
+easypostgre/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+easypostgre/customdecorators.py,sha256=t2wgSp6AhlT5dZRfVbj6mca0Ho4Hie90JsSNd6tOCfQ,418
+easypostgre/db.py,sha256=NkN3QSqZRPIMI_4RdSgmvMA_jEe8IN4MOlfj-GJlA2g,3397
+easypostgre/decorators.py,sha256=t2wgSp6AhlT5dZRfVbj6mca0Ho4Hie90JsSNd6tOCfQ,418
+easypostgre-0.0.5.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+easypostgre-0.0.5.dist-info/METADATA,sha256=gE3RQ1-yj3sw5eJAhGuOSSFTCZlZCa6IT9JHlzq0l60,545
+easypostgre-0.0.5.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+easypostgre-0.0.5.dist-info/top_level.txt,sha256=SF-914v7dMDAx2Cuy3JvKbXahGG-bnMbdcejh7aUCQs,12
+easypostgre-0.0.5.dist-info/RECORD,,
