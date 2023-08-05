@@ -1,0 +1,9 @@
+cards/__init__.py,sha256=cHJsDAePDPQDn8qjBw31niWmQxrrRzgePMH6kyOFJHI,115
+cards/api.py,sha256=Cbq49GB_TYwovAaYkwItCGQKFA0sGkoCWACfPrKJs68,3141
+cards/cli.py,sha256=U8ka1XHDceUrNNabTnfpKCYAhEevPHutdZftqSLE5e0,3395
+cards/db.py,sha256=_s80gtd-Cb9eRsYgdGotHGvYsiGM9nWgbP4U6R78_5Q,818
+cards-1.0.0.dist-info/entry_points.txt,sha256=QVsMS3nQHbXCMZ7S7yB_QzhEpVpezs52iVyx6JQsrEo,35
+cards-1.0.0.dist-info/LICENSE,sha256=1mWFaMhlA7joK7aoDK4risG3JnnXEO1j2S1eSCiGf34,1069
+cards-1.0.0.dist-info/WHEEL,sha256=o-Q2E8s7BKkCJ1EC2uQdaymZVVu2aUt1e8uTTFpzHVs,81
+cards-1.0.0.dist-info/METADATA,sha256=_G0U2P7sBi_a_HRBCy0Is8pRvps6enMLUXpPpeqWjI0,3567
+cards-1.0.0.dist-info/RECORD,,
