@@ -1,0 +1,8 @@
+qtpy>=1.7.0
+
+[pyqt5]
+PyQt5>=5.15.4
+
+[tests]
+pytest
+hypothesis
