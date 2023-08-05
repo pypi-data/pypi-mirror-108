@@ -1,0 +1,20 @@
+name: ismn
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - numpy
+  - pandas
+  - matplotlib
+  - cartopy
+  - ipykernel
+  - pip
+  - pip:
+     - pygeogrids>=0.3.2
+     - configparser
+     - tqdm
+     - more_itertools
+     - nbsphinx
+     - sphinx_rtd_theme
+     - pytest
+     - pytest-cov
