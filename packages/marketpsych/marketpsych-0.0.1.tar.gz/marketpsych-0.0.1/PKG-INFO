@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: marketpsych
+Version: 0.0.1
+Summary: MarketPsych libraries
+Home-page: https://github.com/marketpsych/marketpsych
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: MIT
+Description: UNKNOWN
+Keywords: sentiment
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
