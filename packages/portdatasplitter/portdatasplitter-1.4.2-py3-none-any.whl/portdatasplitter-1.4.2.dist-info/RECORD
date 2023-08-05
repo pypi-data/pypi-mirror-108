@@ -1,0 +1,12 @@
+portdatasplitter/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+portdatasplitter/functions.py,sha256=p46pC4NnwC16wWih8TUClb87w1XLc3mmwVISqf3yOwg,419
+portdatasplitter/main.py,sha256=333w3jwjQe8rtfUedVA-JltGO5UJkHO1_pg5y964KyE,6336
+portdatasplitter/settings.py,sha256=0CaDB8C9o969OEK6xXclOKbJKL26Ajix-gEgfZdm6oE,273
+portdatasplitter/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+portdatasplitter/tests/main_test.py,sha256=GYLqdR1PYlxj93OMvktENGK57gDIr0XYm8H8EqDHK4U,389
+portdatasplitter/tests/server_tests.py,sha256=AeJPWbMq1poMLfTVociCwpkgBRFAHf6Xkkawbx5CwuU,260
+portdatasplitter-1.4.2.dist-info/LICENSE,sha256=6kbiFSfobTZ7beWiKnHpN902HgBx-Jzgcme0SvKqhKY,1091
+portdatasplitter-1.4.2.dist-info/METADATA,sha256=TE6SUlwpd7uuD1siOE51NYJ_myqOFusSjDBs-a5YTIs,1036
+portdatasplitter-1.4.2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+portdatasplitter-1.4.2.dist-info/top_level.txt,sha256=y-KtGjU9bVv1qYMppFQJiMMSXOITvrHAxGxTSkJYlTo,17
+portdatasplitter-1.4.2.dist-info/RECORD,,
