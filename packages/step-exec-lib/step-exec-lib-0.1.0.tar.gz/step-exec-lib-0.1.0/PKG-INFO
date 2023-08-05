@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: step-exec-lib
+Version: 0.1.0
+Summary: A library that helps execute pipeline of tasks using filters and simple composition
+Home-page: https://github.com/giantswarm/step-exec-lib
+License: Apache-2.0
+Keywords: composition,steps
+Author: Łukasz Piątkowski
+Author-email: lukasz@giantswarm.io
+Requires-Python: >=3.7,<4.0
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Requires-Dist: configargparse (>=1.4.1,<2.0.0)
+Requires-Dist: gitpython (>=3.1.17,<4.0.0)
+Requires-Dist: semver (>=2.13.0,<3.0.0)
+Project-URL: Repository, https://github.com/giantswarm/step-exec-lib
+Description-Content-Type: text/markdown
+
+[![build](https://github.com/giantswarm/step-exec-lib/actions/workflows/main.yml/badge.svg)](https://github.com/giantswarm/step-exec-lib/actions/workflows/main.yml)
+[![codecov](https://codecov.io/gh/giantswarm/step-exec-lib/branch/master/graph/badge.svg)](https://codecov.io/gh/giantswarm/step-exec-lib)
+[![PyPI Version](https://img.shields.io/pypi/v/step-exec-lib.svg)](https://pypi.org/project/step-exec-lib/)
+[![Python Versions](https://img.shields.io/pypi/pyversions/step-exec-lib.svg)](https://pypi.org/project/step-exec-lib/)
+[![Apache License](https://img.shields.io/badge/license-apache-blue.svg)](https://pypi.org/project/step-exec-lib/)
+
+# step-exec-lib
+
+A simple library to easily orchestrate a set of Steps into a filtrable pipeline.
+
+**Disclaimer**: docs are still work-in-progress!
+
+Each step provides a defined set of actions. When a pipeline is execute first all `pre` actions
+of all Steps are executed, then `run` actions and so on. Steps can provide labels, so
+you can easily disable/enable a subset of steps.
+
+A ready to use python app template. Based on `pipenv`.
+
