@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: filebus
+Version: 0.0.4
+Summary: Multicast communication channels based on regular files
+Home-page: UNKNOWN
+Author: Zac Medico
+Author-email: <zmedico@gmail.com>
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6
+License-File: LICENSE
+
+UNKNOWN
+

@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+lib/filebus.py
+lib/filebus.egg-info/PKG-INFO
+lib/filebus.egg-info/SOURCES.txt
+lib/filebus.egg-info/dependency_links.txt
+lib/filebus.egg-info/entry_points.txt
+lib/filebus.egg-info/requires.txt
+lib/filebus.egg-info/top_level.txt
+test/test_filebus.py
