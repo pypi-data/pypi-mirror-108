@@ -1,0 +1,9 @@
+miniad/__init__.py,sha256=5Sp_kTsE-SsL1cTP93iq-KgBDy7L-mdfvkG3J9v52ZE,32
+miniad/functional.py,sha256=8W4ZIlCVD13UjPFuR68m9tzcvrz6Fddab-gOgR15v_M,14619
+miniad/tensor.py,sha256=-XXod_LVt4oMl6PP4lv7qyQE6bBk5Ivm-gQhrLH8XLw,2061
+miniad/utils.py,sha256=fM9obyktN8y2evDodpHQqqy4oD7tEOsh_9V196mf6ss,310
+miniad-0.1.1.dist-info/LICENSE,sha256=qu68pbUDJdVfti73qXLjnW_GuSUJWGPbEjEP-h55lzA,1060
+miniad-0.1.1.dist-info/METADATA,sha256=dtDR-JpkdYyhkz4Xfb0F9rNZL8m-l1Z2BXHzCazhsZI,529
+miniad-0.1.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+miniad-0.1.1.dist-info/top_level.txt,sha256=ClrFXm93w09_bZPEVvf9Ffj9om4U9ahBRUI-1IjuN4E,7
+miniad-0.1.1.dist-info/RECORD,,
