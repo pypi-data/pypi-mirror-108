@@ -1,0 +1,3 @@
+[console_scripts]
+glasswall_visual_comparison_tool_cli = glasswall_visual_comparison_tool_cli.__main__:cli
+
