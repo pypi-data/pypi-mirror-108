@@ -1,0 +1,11 @@
+home/aleksandr/PycharmProjects/podch/requirements.txt,sha256=hNWb4j7WrFd-_FS1kmJV-vlyyoywnxfys1RUk9WCMfU,15
+podch/__init__.py,sha256=rk8cLvFgOGLGO148LoA8ODpDbWhF9oD--coQ0S4Nq-E,43
+podch/__main__.py,sha256=EUkiKBZp7JwjCzWUjoTUPPx1rNR3gj0CsbdGJNzle8k,1134
+podch/board.py,sha256=lioSUBfaKxAhYTW36BxHu3Ep-6KkyHy8esMQ-0eakKk,2549
+podch/enums.py,sha256=hbzFV1nvTmY1JzlwoCpqX8Rcg6hrJ_uUvA53VjowNa4,376
+podch/game.py,sha256=HA0DM7dfqNYgLIkgq04D6aKzc7DXkScHXqMYN6eD8eQ,1899
+podch-1.0.1.2.dist-info/LICENSE,sha256=QQA9SnR0nAIg4z3UFQQhZLWhCT7UAfNidyNPdy0i09A,19347
+podch-1.0.1.2.dist-info/METADATA,sha256=TLkyt0JTVmlQtfa8eCQPGhWsJ1wwOcfJdBiTa3W7Gjs,1144
+podch-1.0.1.2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+podch-1.0.1.2.dist-info/top_level.txt,sha256=T6CwKG8xKTBjGbWO9mXQgRSrQEJoMvmiVqmFxBZ8sT0,6
+podch-1.0.1.2.dist-info/RECORD,,
