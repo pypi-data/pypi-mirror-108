@@ -1,0 +1,7 @@
+ConfigRegistry.py
+README.md
+setup.py
+config_registry.egg-info/PKG-INFO
+config_registry.egg-info/SOURCES.txt
+config_registry.egg-info/dependency_links.txt
+config_registry.egg-info/top_level.txt
