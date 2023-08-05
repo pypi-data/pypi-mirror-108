@@ -1,0 +1,6 @@
+Click
+gitpython
+xdg
+pyyaml
+boto3
+docker
