@@ -1,0 +1,11 @@
+bot/__init__.py,sha256=NPEz5M9JrWw-3F1zFGEFX5I3NE1-wYMCZuXzkXT1K2A,12144
+bot/event_data.py,sha256=quof43zMKE8_0kn8e2CzZN5UNTCv2Rtp3bzIKgmQla0,1756
+bot/logging.py,sha256=d_VFaedzGgUaWN_dHyl6hPh9pZ5Zq3LjL7zAYbYvgBM,1599
+bot/message_handler.py,sha256=BEo-TUbTjzQ4OpV6xFIRCAt59lBUkfRgapuaRvGOL14,7062
+bot/parser.py,sha256=Md0E8YLSCt205uSQ37E7aPPC9CTfU-Hrf37Oeorco_A,1606
+cleague_bot-1.0.dist-info/METADATA,sha256=qY_7ORB_585kLqisvW0FeNHiRAHaarqOMvuRMR0HP70,2759
+cleague_bot-1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+cleague_bot-1.0.dist-info/entry_points.txt,sha256=VvTuU5m7cV162JrCnwMDon_GrkD6hgbCljAVhDN-wmg,42
+cleague_bot-1.0.dist-info/top_level.txt,sha256=BfGEUPXgtCpne5POfPQ8gBzacfrzBulmV45hd8vheOI,4
+cleague_bot-1.0.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+cleague_bot-1.0.dist-info/RECORD,,
