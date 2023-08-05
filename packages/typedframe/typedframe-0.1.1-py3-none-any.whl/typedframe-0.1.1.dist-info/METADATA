@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: typedframe
+Version: 0.1.1
+Summary: Typed Wrappers over Pandas DataFrames with schema validation
+Home-page: https://github.com/areshytko/typedframe
+Author: Alexander Reshytko
+Author-email: alexander@reshytko.com
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: pandas
+
+# typedframe
+Typed Wrappers over Pandas DataFrames with schema validation.
+
+```python
+    >>> from typedframe import TypedDataFrame
+    >>> class MyTable(TypedDataFrame):
+    ...    schema = {
+    ...        "col1": object, # str
+    ...        "col2": np.int32,
+    ...        "col3": 'category'
+    ...    }
+    ...    optional = {
+    ...        "col4": bool,
+               "col5": np.dtype('datetime64[ns]')
+    ...    }
+
+    >>> df = pd.DataFrame({"col1": ['foo'], "col2": np.array([1], dtype=np.int32), "col3": ['bar']})
+    >>> df.col3 = df.col3.astype("category")
+    >>> print(MyTable(df).df)
+```
+
+
