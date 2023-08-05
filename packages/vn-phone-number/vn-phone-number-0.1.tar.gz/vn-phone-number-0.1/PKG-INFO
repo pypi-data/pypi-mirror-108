@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: vn-phone-number
+Version: 0.1
+Summary: This library help developer easier to normalize vietnam number phone or classify the provider of this number phone
+Home-page: https://github.com/minhtcuet/vn-phone-number
+Author: Minh Tran
+Author-email: minhtc.uet@gmail.com
+License: MIT
+Download-URL: https://github.com/minhtcuet/vn-phone-number/archive/v_01.tar.gz
+Description: UNKNOWN
+Keywords: viet name numberphone,vietnam number phone convert,code chuyen so dien thoai
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3

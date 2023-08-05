@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+vn_numberphone/__init__.py
+vn_numberphone/check_provider.py
+vn_numberphone/normalize.py
+vn_numberphone/utils.py
+vn_phone_number.egg-info/PKG-INFO
+vn_phone_number.egg-info/SOURCES.txt
+vn_phone_number.egg-info/dependency_links.txt
+vn_phone_number.egg-info/top_level.txt
