@@ -1,0 +1,38 @@
+<!-- Example with submenus -->
+<stwex>
+  <menu>
+     <item title="Option 1" icon="icons/bola-01.png"/>
+     <item title="Option 2" icon="icons/bola-02.png" enable="False"/>
+     <item title="Option 3" icon="icons/bola-03.png" hidden="True"/>
+     <item>
+       <separator/>
+     </item>
+     <item title="Option 4" icon="icons/bola-04.png">
+        <submenu>
+           <menu>
+             <item title="Suboption 4.1"/>
+             <item title="Suboption 4.2"/>
+           </menu>
+        </submenu>
+     </item>
+     <item title="Option 5" icon="icons/bola-05.png">
+        <submenu>
+           <menu>
+             <item title="Suboption 5.1"/>
+             <item title="Suboption 5.2">
+                <submenu>
+                   <menu>
+                      <item title="Suboption 5.2.1"/>
+                      <item title="Suboption 5.2.2"/>
+                   </menu>
+                </submenu>
+             </item>
+           </menu>
+        </submenu>
+     </item>
+     <item>
+       <separator/>
+     </item>
+     <item icon="icons/salida-15.png" title="Salir" action="@exit"/>
+  </menu>
+</stwex>

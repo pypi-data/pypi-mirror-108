@@ -1,0 +1,12 @@
+graft stwex/images
+exclude stwex/*.py
+prune stwex/old_files
+include stwex/__init__.py
+include stwex/stwex.py
+include tests
+graft ejemplos
+include setup.py
+include README.md
+include pyproject.toml
+include LICENSE.txt
+include MANIFEST.in

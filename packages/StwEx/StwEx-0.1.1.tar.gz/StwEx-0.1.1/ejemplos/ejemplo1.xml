@@ -1,0 +1,10 @@
+<!-- Ejemplo básico -->
+<stwex>
+  <menu>
+     <item icon="icons/quit-15.png" title="Salir" action="@exit"/>
+  </menu>
+</stwex>
+<!--
+Por lo menos, siempre tiene que existir la opción salir.
+Para que funcione correctamente se pone @exit en la opción action
+-->
