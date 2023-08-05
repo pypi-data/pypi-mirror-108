@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: pyrepositoryminer
+Version: 0.4.0
+Summary: Efficient Repository Mining in Python
+Home-page: https://github.com/fabianhe/pyrepositoryminer
+License: GPL-3.0-or-later
+Author: Fabian Heseding
+Author-email: 39628987+fabianhe@users.noreply.github.com
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: pygit2 (>=1.5.0,<2.0.0)
+Requires-Dist: radon (>=4.5.0,<5.0.0)
+Requires-Dist: typer[all] (>=0.3.2,<0.4.0)
+Project-URL: Documentation, https://github.com/fabianhe/pyrepositoryminer/blob/master/DOCS.md
+Project-URL: Repository, https://github.com/fabianhe/pyrepositoryminer
+Description-Content-Type: text/markdown
+
+# pyrepositoryminer
+
+[![CI workflow](https://github.com/fabianhe/pyrepositoryminer/actions/workflows/test.yaml/badge.svg)](https://github.com/fabianhe/pyrepositoryminer/actions/workflows/test.yaml)
+[![PyPI](https://img.shields.io/pypi/v/pyrepositoryminer?color=%23000)](https://pypi.org/project/pyrepositoryminer/)
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/psf/black)
+
+Efficient Repository Mining in Python
+
+## Development Setup
+
+1. Install [poetry](https://github.com/python-poetry/poetry)
+   ```bash
+   curl -sSL https://raw.githubusercontent.com/python-poetry/poetry/master/install-poetry.py | python -
+   ```
+2. Install the dependencies
+   ```bash
+   poetry install
+   ```
+3. Install the [pre-commit](https://github.com/pre-commit/pre-commit) hooks
+   ```bash
+   pre-commit install
+   ```
+
