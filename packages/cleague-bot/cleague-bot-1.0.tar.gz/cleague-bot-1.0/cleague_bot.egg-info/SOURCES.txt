@@ -1,0 +1,10 @@
+Changelog.rst
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+bot/__init__.py
+bot/event_data.py
+bot/logging.py
+bot/message_handler.py
+bot/parser.py
