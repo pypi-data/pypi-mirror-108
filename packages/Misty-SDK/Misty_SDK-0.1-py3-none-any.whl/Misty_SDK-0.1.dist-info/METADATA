@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: Misty-SDK
+Version: 0.1
+Summary: Python SDK for Misty 2 Robots
+Home-page: https://www.mistyrobotics.com/
+Author: Misty Robotics
+Author-email: engineering.admin@mistyrobotics.com
+License: apache-2.0
+Project-URL: Documentation, https://docs.mistyrobotics.com/
+Project-URL: Source, https://github.com/MistyCommunity/Python-SDK
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.8
+License-File: LICENSE
+Requires-Dist: requests (>=2.25.1)
+Requires-Dist: websocket-client (<=0.57.0)
+Requires-Dist: yapf (>=0.30.0)
+
+UNKNOWN
+
