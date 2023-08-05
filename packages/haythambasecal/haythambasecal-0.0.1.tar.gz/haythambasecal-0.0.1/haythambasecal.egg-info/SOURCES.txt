@@ -1,0 +1,9 @@
+CHANGELOG.txt
+MANIFEST.in
+README.txt
+setup.py
+haythambasecal/__init__.py
+haythambasecal.egg-info/PKG-INFO
+haythambasecal.egg-info/SOURCES.txt
+haythambasecal.egg-info/dependency_links.txt
+haythambasecal.egg-info/top_level.txt
