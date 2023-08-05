@@ -1,0 +1,12 @@
+wikinet/__init__.py,sha256=J0UDIsjqFEHxM-yu6M7xu1qda0AipGQMbnU3C45SOeE,321
+wikinet/corpus.py,sha256=JWeU6Www-XwCM-6q3Xer01cSbStwiHy9uOKCQDF0OeQ,1681
+wikinet/dump.py,sha256=CQQLJGTmLHqcATrPUezOLrt7IGiDVYxPMtFbmfrNN3k,8279
+wikinet/graph_container.py,sha256=-1D-mmPVwqWspZOA-MCbTDmDvPVBSic8sWrRT7SNMKM,2406
+wikinet/model.py,sha256=7nCFtvteuGkWs7Hes-HR4tUBawFJI9qq9vip1a1uRvg,10686
+wikinet/net.py,sha256=mCkQGV4LuLrE0N_IagA2tKEIqwuUrwerJonKpcT0iB0,14278
+wikinet/persistent_homology.py,sha256=mfuUgPIkHzYwx1318wZD8zc135DW6oiv2uk6F2ewOpY,4537
+wikinet-0.1.5.dist-info/LICENSE,sha256=O9tuoBBJnUHXiR1nR1kXjuAbwv7p4iN37JzD8Ubg1tU,1066
+wikinet-0.1.5.dist-info/METADATA,sha256=9tQRN1T-GPrW1VvJ0DdCqlfSO2vGQ9Hpg_qjLnVokaw,1297
+wikinet-0.1.5.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+wikinet-0.1.5.dist-info/top_level.txt,sha256=YWbO44HZ4yGdGy-gS_CJFZrd_u0olAwmYXJYxTPYrck,8
+wikinet-0.1.5.dist-info/RECORD,,

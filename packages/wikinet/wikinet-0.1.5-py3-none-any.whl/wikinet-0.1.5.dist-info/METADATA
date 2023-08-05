@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: wikinet
+Version: 0.1.5
+Summary: Network of wikipedia articles
+Home-page: https://github.com/harangju/wikinet
+Author: Harang Ju
+Author-email: harangju@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/harangju/wikinet/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: pandas (>1.0.0)
+Requires-Dist: networkx
+Requires-Dist: gensim
+Requires-Dist: python-Levenshtein
+Requires-Dist: bctpy (>=0.5.2)
+Requires-Dist: mwparserfromhell
+Requires-Dist: sklearn
+Requires-Dist: dionysus (<=2.0.7)
+Requires-Dist: cpnet (<=0.0.6)
+Requires-Dist: pytest
+
+# WikiNet
+This repository contains code for analysis used in [Ju et al. (2020)](https://arxiv.org/abs/2010.08381).
+
+See [documentation](https://wikinet.readthedocs.io/en/latest/) to get started.
+
+## Other options
+* `gensim` added a [`WikiCorpus`](https://radimrehurek.com/gensim/corpora/wikicorpus.html#module-gensim.corpora.wikicorpus) class that parses through Wikipedia dumps.
+
+## To-do
+
+* fix dependency issue with `dionysus` and `python`
+
+
