@@ -1,0 +1,8 @@
+setuptools
+wheel
+flake8
+tox
+sphinx
+sphinx-rtd-theme
+sphinx-autodoc-typehints
+deprecated
