@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: api2db
+Version: 1.0.1
+Summary: Python Api data collection tool
+Home-page: https://github.com/TristenHarr/api2db
+Author: Tristen Harr
+Author-email: tristenharr@gmail.com
+License: UNKNOWN
+Keywords: api,pandas,database,postgresql,mariadb,google-cloud-storage,google-cloud-bigquery
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6, <4
+Description-Content-Type: text/markdown
+Provides-Extra: postgresql
+Provides-Extra: mariadb
+Provides-Extra: mysql
+License-File: LICENSE.txt
+
+.. image:: https://readthedocs.org/projects/api2db/badge/?version=latest
+
+
+``pip install api2db``
+
+Read The Docs
+-------------
+
+https://api2db.readthedocs.io/en/latest/
+
+
