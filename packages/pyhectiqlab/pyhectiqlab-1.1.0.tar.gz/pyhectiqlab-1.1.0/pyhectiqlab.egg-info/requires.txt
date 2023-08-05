@@ -1,0 +1,9 @@
+requests
+tqdm
+ipykernel
+traitlets
+jupyter_core
+numpy
+packaging
+click
+GitPython
