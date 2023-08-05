@@ -1,0 +1,4 @@
+torch==1.4.0
+torchtext==0.8.1
+pytorch_transformers
+fasttext
