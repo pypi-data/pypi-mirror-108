@@ -1,0 +1,13 @@
+web3
+flask
+pymisp
+typer
+psutil
+cryptography
+eth-account
+PyYAML
+google-cloud-storage
+
+[cli]
+kedro
+kedro-viz
