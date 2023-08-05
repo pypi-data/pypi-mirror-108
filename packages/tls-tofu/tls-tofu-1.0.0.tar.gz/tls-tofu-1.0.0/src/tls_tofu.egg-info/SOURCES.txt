@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+setup.cfg
+src/tlstofu.py
+src/tls_tofu.egg-info/PKG-INFO
+src/tls_tofu.egg-info/SOURCES.txt
+src/tls_tofu.egg-info/dependency_links.txt
+src/tls_tofu.egg-info/top_level.txt
