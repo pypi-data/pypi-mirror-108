@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+groupBMC/__init__.py
+groupBMC/groupBMC.py
+groupBMC.egg-info/PKG-INFO
+groupBMC.egg-info/SOURCES.txt
+groupBMC.egg-info/dependency_links.txt
+groupBMC.egg-info/top_level.txt
