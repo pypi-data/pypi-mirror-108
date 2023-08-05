@@ -1,0 +1,76 @@
+Metadata-Version: 2.1
+Name: sdkms-plugin-registry-builder
+Version: 1.0.0
+Summary: Fortanix SDKMS Plugin Registr Builder
+Home-page: https://support.fortanix.com
+Author: Fortanix
+Author-email: support@fortanix.com
+License: Apache 2.0
+Keywords: SDKMS,Fortanix SDKMS,plugin-registry
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Security :: Cryptography
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: gitpython
+
+# SDKMS Plugin Registry Builder
+
+This tool builds a SDKMS plugin registry manifest file out of a git repository.
+It iterates through each commit and signs it. At each step of the iteration the tool keep building the manifest which
+is a JSON structure with the following schema:
+
+```
+    {
+        "license": <Common MPL license for thos plugin that don't specify a license>
+        "plugins": [
+        {
+            "name": "<Plugin Name>",
+            "versions": {
+                "<version>": {
+                    "path": <path/to/plugin/file>,
+                    "description": <plugin description>,
+                    "thumbnail": <short description / used by SDKMS for disaply in tiles>,
+                    "release_notes": [
+                        <str>,
+                        ...
+                    ],
+                    "commit": <hexsha>
+                },
+                ...
+            }
+        },
+        ...
+      ]
+   }
+```
+
+## Fortanix Plugin Registry
+
+SDKMS Plugin Registries are GIT repositories that contains SDKMS plugin (custom LUA code) that can be executed inside 
+SDKMS to achieve certain business specific logic, or a functionality that is not part of the core capabilities offered 
+by SDKMS.
+The repository should follow the following conventions:
+1. Each plugin should have a unique name.
+2. There should be just one plugin in each subdirectory.
+3. In each subdirectory the following files are required (case-sensitive):
+    - plugin.lua: Contains the plugin code.
+    - README.md: Contains a description of the plugin.
+    - thumbnail.txt: Contains a sentence/paragraph with a short description of the plugin.
+    - release_notes.txt: Contains release notes of the plugin.
+
+## Instructions
+
+Before running this tool it is necessary that the GIT repository to be built is setup with the configuration so that its
+commits can be signed. Once the reposit
+
+`sdkms-plugin-registry-builder --repo-dir <Path/to/git/repository>`
+
+
+
+
