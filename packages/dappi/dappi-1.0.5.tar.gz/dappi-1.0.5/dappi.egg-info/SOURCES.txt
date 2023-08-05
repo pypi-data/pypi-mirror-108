@@ -1,0 +1,16 @@
+MANIFEST.in
+README.md
+setup.py
+dappi/__init__.py
+dappi/__main__.py
+dappi/all.py
+dappi/dates.py
+dappi/message.py
+dappi/parser.py
+dappi/user.py
+dappi.egg-info/PKG-INFO
+dappi.egg-info/SOURCES.txt
+dappi.egg-info/dependency_links.txt
+dappi.egg-info/entry_points.txt
+dappi.egg-info/requires.txt
+dappi.egg-info/top_level.txt
