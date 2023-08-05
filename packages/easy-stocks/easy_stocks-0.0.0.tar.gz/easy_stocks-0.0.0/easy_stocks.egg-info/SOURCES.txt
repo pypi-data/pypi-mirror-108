@@ -1,0 +1,11 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.txt
+setup.py
+easy_stocks.egg-info/PKG-INFO
+easy_stocks.egg-info/SOURCES.txt
+easy_stocks.egg-info/dependency_links.txt
+easy_stocks.egg-info/requires.txt
+easy_stocks.egg-info/top_level.txt
+main_code/__init__.py
