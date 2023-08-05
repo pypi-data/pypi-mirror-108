@@ -1,0 +1,15 @@
+Metadata-Version: 1.2
+Name: pyds9plugin
+Version: 3.1.dev7
+Summary: DS9 Quick-Look plug-in
+Home-page: https://people.lam.fr/picouet.vincent/index.html
+Author: Vincent Picouet
+Author-email: vincent.picouet@lam.fr
+Maintainer: Vincent Picouet
+License: CeCILL-B
+Description:  A python DS9 extension for quicklook processing of astronomical images. This highly interactive extension can be generalized automatically to a set of images to turn the plug-in into a real multi-processing pipeline.
+            To lauche the plugin run `DS9Utils LoadDS9QuickLookPlugin` and then launch DS9.
+Platform: Linux
+Platform: Mac OS-X
+Platform: Unix
+Requires-Python: >3.5.2

@@ -1,0 +1,3 @@
+[console_scripts]
+DS9Utils = pyds9plugin.DS9Utils:main
+

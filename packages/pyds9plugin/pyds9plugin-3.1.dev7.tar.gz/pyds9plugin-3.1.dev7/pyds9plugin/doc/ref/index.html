@@ -1,0 +1,136 @@
+<!DOCTYPE doctype PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<!-- saved from url=(0072)file:///Users/Vincent/Github/DS9functions/DS9FireBall/doc/ref/index.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+    
+    <meta name="GENERATOR" content="Mozilla/4.78 [en] (X11; U; Linux
+      2.4.7-10 i686) [Netscape]">
+    <title>DS9 Quick Look Plugin Reference Manual</title>
+    <link rel="icon" type="image/png" href="./features_files/sun.png" />  </head>
+  </head>
+  <body alink="#ff0000" bgcolor="#ffffff" link="#0000ee" text="#000000" vlink="#551a8b">
+    <h3><a href="index.html"><img alt="" src="./index_files/sun.gif" align="middle" height="98" width="100" ></a> DS9 Quick Look Plugin Reference Manual</h3>
+<div class="figure">
+<div class="caption"><h3><a name="create"></a></h3></div>
+<center><div><a href="examples/features.html"><img alt='[The dashed line at the top of the "View" menu is highlighted.]' src="./img/all.png" class="center" width="800" ></div></a></center>
+</div>
+
+
+    <blockquote>
+      <p>SAOImage DS9 is an astronomical imaging and data visualization application. Its 30 years of development has made it very stable and easy to use. Because of this it became an essential tool in all fields of astronomy (observation, simulation, instrumentation). Much more profitable but pretty unsung feature,  its extensibility makes it a limitless tool to interact with astronomical (or not) data. Unfortunately it appears that this extensibility did not inspire or generate a large collaborative and well organized effort to develop important extensions that would finally, years after years, converge towards a stable/rapid/configurable multi-extension package of DS9 which would make it as essential as Photoshop for photographers. </p>
+      <p>Because I am convince of its interest, this extension is a very naive attempt to try initiate this tendency. Besides joining the very user friendly but general DS9 interface with a series of more specific function this extension tries to gather a glimpse of all the possibilities that offers DS9 extensibility. The documentation can be found <a href="https://nuage.osupytheas.fr/s/Z6D64wRpDkE7wTJ">here</a>. Please check out the <a href="https://www.youtube.com/watch?v=CQ3QXy49LLw">youtube</a> video. This quicklook plug-in is divided in three main extensions so that each of them fill a specific need:<br>
+      
+<!--       <ol type="1">
+      <li>Fill some gaps of DS9 with stable <a href="General.html">general functions</a>: Radial/Energy profiles, stacking, fitting, region based functions</li>
+      <li>Link all essential <a href="softwares.html">astronomical image processing softwares</a> (SExtractor, STIFF, SWARP, PSFex) and offer them a parameter GUI</li> 
+      <li>Create <a href="General.html">images data base</a> based on header information that can then be used to create data subset (symbolic links) verifying specific condditions</li>
+      <li>Link more complex but general <a href="processing.html">processing functions</a>: Autocorrelation, FFT, smoothing, maskink/interpolation, noise measurements</li>
+      <li>Gain some time with <a href="General.html">key functions</a>: Automatically change display/lock parameters</li>
+      <li>Create a <a href="astronomy.html">all-in-one astronomical functions package</a>(?): converter, cosmological calculator, etc. </li>
+      </ol> -->
+
+
+<!-- <HTML>
+<HEAD> <TITLE>Activity - Insert animated GIF to HTML</TITLE> </HEAD>
+<BODY>
+  <IMG SRC="/Users/Vincent/Cloud/CNRS/Perso/Work/AstroMovies/2.mov.gif">
+</BODY>
+</HTML> -->
+
+
+
+
+      <ol type="1">
+      <li><a href="General.html">Generic Function</a> extension: </li>
+<ol type="A">
+<li>Fill some gaps of DS9 with stable generic functions: Radial/Energy profiles, stacking, fitting, region based functions</li>
+<li>Gain some time with key functions: Automatically change display/lock/other parameters</li>
+<li>Simplify the interaction with fits or DS9 objects such as Header or regions that can be modified/exported via DS9 GUI.</li>
+<li>Create images data base based on header information that can then be used to create data subset verifying specific condditions</li>
+
+</ol>
+
+<br>
+      <li><a href="Instrumentation.html">Instrumentation</a> extension in  order to assist instrumentalist during AIT and detector characterization.</li>
+
+<ol type="A">
+      <li>Add some generic AIT functions: Throughfocus [Through-slit] visualization and analysis, centering, Radial profiles</li>
+      <li>Link more complex but general <a href="processing.html">processing functions</a>: Autocorrelation, FFT, smoothing, maskink/interpolation, noise measurements. These functions can be particularly interesting for detector charaterization or integration.</li>
+</ol> 
+
+ <br>
+      <li><a href="softwares.html">Astronomical software</a> extension: </li>
+
+<ol type="A">
+      <li>Link the most essential astronomical image processing softwares such as SExtractor, STIFF, SWARP, PSFex and offer them a parameter GUI</li> 
+      <li>Link to an astrometric calibration code <a href="http://astrometry.net">astrometry.net</a> that perform a pattern recognition algorithm to create a WCS header</li> 
+      <li>Contain a <a href="astronomy.html">all-in-one astronomical functions package</a>: converter, cosmological calculator, etc. </li>
+</ol>
+
+
+      </ol>
+
+      <br>
+<!--       More important, it offers a base to <a href="output.html">add your own functions</a> to this architecture. Follow this <a href="Install.html">procedure</a> to install it. If, after some time playing with it, you believe in the potential of beginning a collaborative effort to develop the tool described above please <a href="mailto:vincent.picouet@lam.fr">email me</a> and <a href="https://gitlab.lam.fr/vpicouet/DS9functions/tree/master">join the project on gitlab</a>! -->
+</p>
+
+
+
+      <table align="center" border="0" cellpadding="4" cellspacing="2" height="25%" width="75%">
+        <tbody>
+
+          <tr>
+            <td align="center" valign="middle"><a href="examples/features.html"> </a></td>
+            <td align="center" valign="middle"><a href="examples/features.html"><big><big><big>Important features</big> </big> </big></a></td>
+            <td align="center" valign="middle"> <a href="Install.html"> </a> </td>
+          </tr>
+
+
+<!--           <tr>
+            <td align="center" valign="middle"> <a href="how.html">How It Works</a></td>
+            <td align="center" valign="middle"> <a href="Install.html">Install & play</a> </td>
+             <td align="center" valign="middle"><a href="General.html">General/processing functions</a></td>
+          </tr>
+          <tr>
+            <td align="center" valign="middle"> <a href="Instrumentation.html">Instrumentation/AIT</a> </td>
+            <td align="center" valign="middle"> <a href="softwares.html">Linked softwares</a> </td>
+            <td align="center" valign="middle"> <a href="Create.html">Create your own functions<br></a> </td>
+          </tr> -->
+<!--           <tr>
+            <td align="center" valign="middle"> <a href="softwares.html">Linked softwares</a> </td>
+            <td align="center" valign="middle"> <a href="Create.html">Create your own functions<br></a> </td>
+            <td align="center" valign="middle"> <a href="Acknowledgement.html">Acknowledgement</a></td>
+          </tr> -->
+        <tr>
+          </tr>
+
+
+
+<!--           <tr>
+            <td align="center" valign="top"> <a href="FAQ.html">FAQ<br>
+              </a> </td>
+            <td align="center" valign="top"><a href="Acknowledgement.html">Acknowledgement</a></td>
+            <td align="center" valign="top"> <a href="History.html">History of DS9Function</a></td>
+            <td align="center" valign="top"><a href="Contribute.html">Contribute</a></td>
+            <td align="center" valign="middle"> <a href="astronomy.html">Astronomical extension</a></td>
+          </tr> -->
+<!--           <tr>
+            <td align="center" valign="middle"> <a href="preferences.html">Preferences</a></td>
+            <td align="center" valign="top"><a href="Create_image.html">Create/Load image</a><br>
+            <td align="center" valign="middle"> <a href="processing.html">Image/Cube processing</a></td>
+            </td>
+          </tr>
+ -->    
+ <!--           <tr>
+            <td align="center" valign="middle"> <a href="preferences.html">Preferences</a></td>
+            <td align="center" valign="top"><a href="Create_image.html">Create/Load image</a><br>
+            <td align="center" valign="middle"> <a href="processing.html">Image/Cube processing</a></td>
+            </td>
+          </tr>
+ -->  
+        </tbody>
+      </table>
+    </blockquote>
+
+<center><iframe width="560" height="315" src="https://www.youtube.com/embed/CQ3QXy49LLw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> </center> 
+
+</body></html>
