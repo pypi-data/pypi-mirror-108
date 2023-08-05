@@ -1,0 +1,8 @@
+py_gitignore/__init__.py,sha256=5xvN_gb61nKeq5TER5dSfcArTP3DVasZGN_MQq5dNpA,23
+py_gitignore/py_gitignore.py,sha256=-eWHbvWhi-p5NBOSS56D_kYlRGKgxAiRVEiPlgDnfuY,288
+py_gitignore/template.py,sha256=QKd1CO4Zeist3teJP-0bJD1mQlsZBxBhnmVA8oZJmcg,2340
+py_gitignore-0.1.1.dist-info/entry_points.txt,sha256=SB9SrtVvVGh8jFK16z0YtpO14D1YX7EEVZbuz30e40w,63
+py_gitignore-0.1.1.dist-info/LICENSE.rst,sha256=vn9bQDcSKrl2Cpyzt4nMJd0uPUNAXXWlxOIVLccsz6I,1084
+py_gitignore-0.1.1.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+py_gitignore-0.1.1.dist-info/METADATA,sha256=XFVqxxpspmOGbKM_5UYjtfD7PMfqlRzDcaRg3-rLZ5A,278
+py_gitignore-0.1.1.dist-info/RECORD,,
