@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/DashArray/__init__.py
+src/dasharray.egg-info/PKG-INFO
+src/dasharray.egg-info/SOURCES.txt
+src/dasharray.egg-info/dependency_links.txt
+src/dasharray.egg-info/top_level.txt
