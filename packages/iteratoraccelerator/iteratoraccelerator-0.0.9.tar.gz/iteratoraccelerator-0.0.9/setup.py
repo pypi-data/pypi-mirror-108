@@ -1,0 +1,21 @@
+import setuptools
+
+with open("README.md", "r") as fh:
+    long_description = fh.read()
+
+setuptools.setup(
+    name="iteratoraccelerator",
+    version="0.0.9",
+    author="Andras Kohlmann",
+    author_email="akohlmann@solvencyanalytics.com",
+    description="Binary iterator batcher",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
+    url="https://github.com/SolvencyAnalytics/iteratoraccelerator",
+    packages=setuptools.find_packages(),
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "Operating System :: OS Independent",
+    ],
+    python_requires='>=3.6',
+)
