@@ -1,0 +1,6 @@
+sphinx_view/__init__.py,sha256=WWrLcVW9m2EWS7SQv8-Pmvmg-2yE5PAaHo3055hoCH0,163
+sphinx_view/views.py,sha256=Dmu2OhghguRR-aQPiTDGU_u_47JJRfP9AGm0Uw9oK4Y,1043
+sphinx_view/templates/sphinx_view/page.html,sha256=ZFuj3Doq8Pzx6iYLDYkMFrMmtIGPYj6Tlbq4k2vm1aQ,198
+django_sphinx_view-21.1a4.dist-info/WHEEL,sha256=iTBNkFIR26Wnx2cg5455J1IIBEskRg4YJC9DJwgu-js,99
+django_sphinx_view-21.1a4.dist-info/METADATA,sha256=qCSsMJ2EBDEoP6quCISd8qeMibHRtU50h7wolyYRYLI,540
+django_sphinx_view-21.1a4.dist-info/RECORD,,
