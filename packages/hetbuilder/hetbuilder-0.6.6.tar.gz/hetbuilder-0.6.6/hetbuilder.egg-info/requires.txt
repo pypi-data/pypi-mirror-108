@@ -1,0 +1,9 @@
+numpy
+scipy
+spglib
+matplotlib
+ase
+networkx
+pretty_errors
+rich
+typer
