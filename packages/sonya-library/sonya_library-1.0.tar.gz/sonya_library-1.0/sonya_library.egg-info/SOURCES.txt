@@ -1,0 +1,7 @@
+setup.cfg
+setup.py
+library_sonya/__init__.py
+sonya_library.egg-info/PKG-INFO
+sonya_library.egg-info/SOURCES.txt
+sonya_library.egg-info/dependency_links.txt
+sonya_library.egg-info/top_level.txt
