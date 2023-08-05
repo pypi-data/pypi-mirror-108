@@ -1,0 +1,12 @@
+Metadata-Version: 1.2
+Name: diagramdigitizer
+Version: 1.0.0
+Summary: DiagramDigitizer
+Home-page: UNKNOWN
+Author: Michael Fischer
+Author-email: mfischer.sw@gmail.com
+License: UNKNOWN
+Project-URL: Source, https://github.com/mfischersw/DiagramDigitizer/
+Description: DiagramDigitizer
+Platform: UNKNOWN
+Requires-Python: >=3.6, <4
