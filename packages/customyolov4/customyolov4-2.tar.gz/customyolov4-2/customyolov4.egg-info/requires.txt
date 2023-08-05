@@ -1,0 +1,11 @@
+tensorflow>=2.3.0
+flask
+opencv-python
+numpy
+pillow
+matplotlib
+pandas
+scikit-learn
+progressbar2
+scipy
+h5py

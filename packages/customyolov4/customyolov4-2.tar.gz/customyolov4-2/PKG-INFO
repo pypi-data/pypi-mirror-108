@@ -1,0 +1,24 @@
+Metadata-Version: 1.2
+Name: customyolov4
+Version: 2
+Summary: YOLOv4: Optimal Speed and Accuracy
+Home-page: UNKNOWN
+Maintainer: Adeel Intizar
+Maintainer-email: kingadeel2017@outlook.com
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: object detection,computer vision,deep learning,yolov4
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Scientific/Engineering :: Image Processing
+Classifier: Topic :: Scientific/Engineering :: Image Recognition
+Requires-Python: >=3.5, <4
