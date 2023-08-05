@@ -1,0 +1,11 @@
+opentypesvg/__version__.py,sha256=YgL46LT6EclUZe9P-jJ1wp0ZKliKDkn6sxISiOTqvFo,142
+opentypesvg/addsvg.py,sha256=H9ZWOeCyaIWXK81HaXoW0__0RzctUkpkqs5NR92jQUI,8882
+opentypesvg/dumpsvg.py,sha256=FET0fxmPhT8spMeuXdxhheabSraAG2dWvY_es1DijOM,5936
+opentypesvg/fonts2svg.py,sha256=QcxO_j6NKgQ3YDZaIfTrRlcRmt2GsBgiwT0GBWGsm48,10657
+opentypesvg/utils.py,sha256=VFELgh7dXRchiWrUoFq81yjmW0wcbiRPn4zdRsv-_0o,3896
+opentypesvg-1.1.4.dist-info/LICENSE.md,sha256=TNbwHgu_kk70IQGfJ_nvfYrDWIvaLj9xEmuijcxiBpo,1088
+opentypesvg-1.1.4.dist-info/METADATA,sha256=yC9xKJVISUwKIMAr6wSiiKcnZZfz0usRB5ZDf2mYKBc,3958
+opentypesvg-1.1.4.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+opentypesvg-1.1.4.dist-info/entry_points.txt,sha256=BsEie0BcXlO4skxKdc8U9S4x5Ucpcz2fkEx9c5REUec,126
+opentypesvg-1.1.4.dist-info/top_level.txt,sha256=iJHQRvBKDF7XNOZyfgozULrPfGJqxQ20uFWqcjpgBA8,12
+opentypesvg-1.1.4.dist-info/RECORD,,
