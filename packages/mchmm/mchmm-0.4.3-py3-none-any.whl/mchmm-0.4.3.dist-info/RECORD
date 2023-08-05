@@ -1,0 +1,11 @@
+mchmm/__init__.py,sha256=-w4v31gE3zUAsVDIERXGszpme88RhCyTVEEj3JOitW0,125
+mchmm/_hmm.py,sha256=63LSClOCabt7GI3NOdVra_MJ4bor3y4jeL1YOl5ZJIw,15015
+mchmm/_mc.py,sha256=gt-t2TvzwnT2CUaiNsZAdPv3I4aNopn7xsK0oLje1uE,10328
+tests/__init__.py,sha256=KSsQXDyq4StqIDQ3A0Svm6BoqlzmXD_Sn_aWiSBxV2c,170
+tests/test_mchmm.py,sha256=ybmTAl_4Xc3zNjd-Ax2QxcfVdoXZyYBT1HFwO2H8ARU,3761
+mchmm-0.4.3.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+mchmm-0.4.3.dist-info/METADATA,sha256=8qObdTuVYvmjSI8SzU1H6i7IbWAdLuJkCKdVKg6DgFI,7920
+mchmm-0.4.3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+mchmm-0.4.3.dist-info/top_level.txt,sha256=1zriHwfjLLWOJQrJCuxw34fL3IOpGdROuWonOlsydRA,12
+mchmm-0.4.3.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+mchmm-0.4.3.dist-info/RECORD,,
