@@ -1,0 +1,8 @@
+torch==1.7.0
+pytorch-lightning
+wandb
+matplotlib
+sklearn
+numpy
+pandas
+loguru
