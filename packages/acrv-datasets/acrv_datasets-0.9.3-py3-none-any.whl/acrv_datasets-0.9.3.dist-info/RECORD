@@ -1,0 +1,10 @@
+acrv_datasets/__init__.py,sha256=KxcgjC2mcM4fb2v2ru9ffHvZbteUx_IEGMOaviTG-kw,148
+acrv_datasets/__main__.py,sha256=bGo39jKwBO2719VMSlp7ft_mRfYsrMngOoaE-4mW7d0,1332
+acrv_datasets/acrv_datasets.py,sha256=gxOM5TUBH1DhvO1yLYkdA-18ETki-7C7gQKOMIp90rI,6679
+acrv_datasets/datasets.yaml,sha256=8ApDYSK8MD9o4-L-oL1fT53152sj7v5EVSHahqyxFjI,2801
+acrv_datasets/downloader.py,sha256=09ChNxS4bop6STnk_6xQOmEbYty--Z7I2awbDUaBD88,12132
+acrv_datasets-0.9.3.dist-info/LICENSE.txt,sha256=aiTxb8AGP0mJBZWC54axX726c66S4QgO-VD-qsqBP7M,1530
+acrv_datasets-0.9.3.dist-info/METADATA,sha256=Cb2YtRRSJeWd7GVmXH83YhA4E5P0gtiZVSSs_q5WqnU,7551
+acrv_datasets-0.9.3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+acrv_datasets-0.9.3.dist-info/top_level.txt,sha256=KinEljzTp6M9jTe_wHZfqKstQctVSncQta2PVppaWzI,14
+acrv_datasets-0.9.3.dist-info/RECORD,,
