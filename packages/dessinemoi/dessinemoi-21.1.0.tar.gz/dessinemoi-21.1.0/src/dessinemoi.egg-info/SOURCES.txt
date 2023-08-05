@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/dessinemoi/__init__.py
+src/dessinemoi.egg-info/PKG-INFO
+src/dessinemoi.egg-info/SOURCES.txt
+src/dessinemoi.egg-info/dependency_links.txt
+src/dessinemoi.egg-info/requires.txt
+src/dessinemoi.egg-info/top_level.txt
