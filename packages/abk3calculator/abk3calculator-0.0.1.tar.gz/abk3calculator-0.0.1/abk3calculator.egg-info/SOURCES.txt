@@ -1,0 +1,11 @@
+CHANGELOG.txt
+LICENSE.txt
+MANIFEST.in
+README.txt
+setup.py
+abk3calculator/__init__.py
+abk3calculator/operations.py
+abk3calculator.egg-info/PKG-INFO
+abk3calculator.egg-info/SOURCES.txt
+abk3calculator.egg-info/dependency_links.txt
+abk3calculator.egg-info/top_level.txt
