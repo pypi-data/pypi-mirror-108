@@ -1,0 +1,3 @@
+[console_scripts]
+wgmgr=wgmgr.cli:app
+

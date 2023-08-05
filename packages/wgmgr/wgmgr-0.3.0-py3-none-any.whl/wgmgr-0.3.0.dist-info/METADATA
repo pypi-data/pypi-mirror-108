@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: wgmgr
+Version: 0.3.0
+Summary: Easily manage wireguard configs.
+Home-page: https://github.com/f-koehler/wgmgr/
+License: GPL-3.0-or-later
+Keywords: wireguard,vpn,administration
+Author: Fabian Köhler
+Author-email: fabian.koehler@protonmail.ch
+Maintainer: Fabian Köhler
+Maintainer-email: fabian.koehler@protonmail.ch
+Requires-Python: >=3.9,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: Intended Audience :: Telecommunications Industry
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Internet
+Classifier: Topic :: Security
+Classifier: Topic :: System
+Classifier: Topic :: System :: Networking
+Classifier: Topic :: Utilities
+Classifier: Typing :: Typed
+Requires-Dist: Jinja2 (>=2.11.3,<4.0.0)
+Requires-Dist: PyYAML (>=5.4.1,<6.0.0)
+Requires-Dist: typer[all] (>=0.3.2,<0.4.0)
+Project-URL: Bug Tracker, https://github.com/f-koehler/wgmgr/issues
+Project-URL: Repository, https://github.com/f-koehler/wgmgr/
+Description-Content-Type: text/markdown
+
+# wgmgr
+
