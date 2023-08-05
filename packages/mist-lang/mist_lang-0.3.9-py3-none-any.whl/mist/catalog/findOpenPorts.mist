@@ -1,0 +1,24 @@
+# Name: findOpenPorts
+# Version: 2.0.0
+# Concurrency: Sync and Async
+# Description: Find open ports at some specific host
+# Tags: ports, network, nmap
+# Tools: nmap
+
+function findOpenPorts(ip, ports) => out {
+    openPorts = []
+    r = exec("nmap -p {ports} --open {ip}", False) {
+        fields = outputLine.split()
+        isGreater(len(fields),1) {
+            isEqual(fields[1], "open") {
+                portTuple = fields[0]
+                openPort = portTuple.split("/")
+                message = {"ip": ip, "port": openPort[0], "protocol": openPort[1]}
+                message => out
+                openPorts.append({"port": openPort[0], "protocol": openPort[1]})
+            }
+        }     
+    }
+    r["openPorts"] = openPorts
+    return r
+}

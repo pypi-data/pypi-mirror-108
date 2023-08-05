@@ -1,0 +1,4 @@
+r = exec ("bash -c 'ls --sadfasdf'")
+isEqual(r.result,Error) {
+    abort()
+}

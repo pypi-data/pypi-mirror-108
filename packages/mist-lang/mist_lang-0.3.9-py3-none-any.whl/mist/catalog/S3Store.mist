@@ -1,0 +1,23 @@
+# Name: S3Store
+# Version: 1.0.0
+# Description: Stores the data received from source in the given S3Uri.
+# Tags: aws, s3
+# Tools: aws
+
+localPath = False
+
+# Auxiliar function to create the S3 object from the local file
+function S3Write(localPath, remoteUri) {
+  exec("aws s3 cp '{localPath}' {remoteUri}", False)
+}
+
+function S3Store(text, remoteUri) {
+
+  if (NOT(localPath)) {
+    localPath = tmpFile()
+    s3File = remoteUri
+    registerFinallyHook("S3Write", localPath, s3File)
+  }
+
+  writeLine(localPath, text)
+}

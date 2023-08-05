@@ -1,0 +1,10 @@
+print('hello')
+
+print("hola", "adios")
+print("hola {%name}")
+
+myTable = {"ip": "127.0.0.1", "result": Success}
+
+print("The result of ping to {myTable.ip} is {myTable.result}")
+
+print("myTable contains {myTable}")

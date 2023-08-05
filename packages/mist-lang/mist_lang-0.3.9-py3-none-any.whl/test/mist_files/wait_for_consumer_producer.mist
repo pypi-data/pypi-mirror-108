@@ -1,0 +1,23 @@
+function customSend(n) => p {
+    print("Begin send {n}")
+    n => p
+    print("End send {n}")
+}
+
+function passNumber(n,t) => p {
+    print("begin passNumber {n} {t}")
+    sleep(ms=t)
+    n => p
+    print("end passNumber {n} {t}")
+}
+
+function printNumber(n) {
+    print("printNumber {n}")
+}
+
+customSend(1) => waitForConsumerProducer1
+passNumber(:waitForConsumerProducer1,3) => waitForConsumerProducer2
+passNumber(:waitForConsumerProducer1,1) => waitForConsumerProducer2
+printNumber(:waitForConsumerProducer2)
+
+print("END")

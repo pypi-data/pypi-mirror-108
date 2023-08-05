@@ -1,0 +1,13 @@
+l = [1, 2, 3]
+l2 = ["one", "two", "three", "four"]
+print("Length =", len(l))
+l.clear()
+print("Cleared =", l)
+l2.sort()
+print("Sorted =", l2)
+l2.reverse()
+print("Reversed =", l2)
+l2.append("five")
+print("Appended =", l2)
+l2.remove("two")
+print("Removed =", l2)
