@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: fastpreprocess
+Version: 0.1.4
+Summary: A new way to preprocess data for ML.
+Home-page: UNKNOWN
+Author: LalKrishna Arjun
+Author-email: lk.arjun@hotmail.com
+License: UNKNOWN
+Project-URL: Source Code, https://github.com/lkarjun/fastpreprocess
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: uvicorn (==0.13.4)
+Requires-Dist: pydantic (==1.8.2)
+Requires-Dist: numpy (==1.20.3)
+Requires-Dist: python-multipart
+Requires-Dist: fastapi (==0.65.1)
+Requires-Dist: pandas (==1.2.4)
+Requires-Dist: tqdm (==4.60.0)
+Requires-Dist: jinja2 (==2.11.3)
+Requires-Dist: pyngrok (==5.0.5)
+Requires-Dist: nest-asyncio (==1.5.1)
+Requires-Dist: aiofiles (==0.7.0)
+Requires-Dist: httptools (==0.2.0)
+
+# FASTPROCESS
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/lkarjun/fastpreprocess/master)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/lkarjun/fastpreprocess/blob/package/Demo(running-from-notebook).ipynb#scrollTo=ABxXfXvVn1fF)
+## A new way to preprocess data.
+
+> Building...
+
+
