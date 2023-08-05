@@ -1,0 +1,13 @@
+MathLang/__init__.py,sha256=1IQNuM_9bFKg7pv0fV8EeM-dkoY2dh66ESJFz69ylJU,29
+MathLang/Core/__init__.py,sha256=kB58_v5SOUtAxRniVoCztNCv3_aJ3GyCzyFZaJ4AZeI,416
+MathLang/Core/adaptors.py,sha256=rfZIZSg9lvxGTUdPCfk2T4CEFjCq9rB9Hy-dYJtAoC0,1475
+MathLang/Core/compiler.py,sha256=uWZ7jWaE-lIgzhyDQY-vIqJ7xCNCQc7wXLdKK_GPf7Q,2976
+MathLang/Core/lexer.py,sha256=wC1YW8xNq1F7UFGRmmcXtO8NUBcoKbBBH58qGoCNMf0,2947
+MathLang/Core/nodes.py,sha256=tozM7sUv-UQyrk_xV5xFfUBYMrnYwKkSdCeNWU4wkk8,6025
+MathLang/Core/parser.py,sha256=HO7zIkp8_8v9btP3j6dawvNOT7K7vzRHd0A3__fvR7U,5434
+MathLang/Core/serialiser.py,sha256=WLRueoYaejqGJ4pvqNKSYxOpRRWbVEhF0sezwxgPLYY,1022
+MathLang_Core-2021.0.dist-info/LICENSE,sha256=UYD3EqxyOsd3eyVG2DkWgLigo6gAgyNTkud6lCWe8A4,1072
+MathLang_Core-2021.0.dist-info/METADATA,sha256=Pyxg0yPQjQkvgvu5rZEv9LPheF7cWYBlgvSa1aiVz_M,2443
+MathLang_Core-2021.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+MathLang_Core-2021.0.dist-info/top_level.txt,sha256=bQ-ssxfp2Na9ld1e_MYO3OUoCzSaA6Wo5gXCItjNFIU,9
+MathLang_Core-2021.0.dist-info/RECORD,,
