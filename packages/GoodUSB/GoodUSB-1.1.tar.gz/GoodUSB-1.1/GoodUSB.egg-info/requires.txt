@@ -1,0 +1,2 @@
+pythoncom
+keyboard
