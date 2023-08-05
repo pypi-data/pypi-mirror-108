@@ -1,0 +1,14 @@
+setuptools
+pyrsistent
+pushcollector
+paramiko
+requests
+pubtools-pyxis
+six
+python-qpid-proton
+monotonic
+iiblib
+pubtools-iib
+
+[reST]
+Sphinx
