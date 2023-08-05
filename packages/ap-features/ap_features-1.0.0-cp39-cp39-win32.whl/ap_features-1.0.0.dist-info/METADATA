@@ -1,0 +1,57 @@
+Metadata-Version: 2.1
+Name: ap-features
+Version: 1.0.0
+Summary: Package to compute features of traces from action potential models
+Home-page: https://github.com/ComputationalPhysiology/ap_features
+Author: Henrik Finsberg
+Author-email: henriknf@simula.no
+License: GNU General Public License v3 (GPLv3)
+Keywords: action potential,cell models
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: numba
+Requires-Dist: tqdm
+Provides-Extra: all
+Requires-Dist: flake8 ; extra == 'all'
+Requires-Dist: isort ; extra == 'all'
+Requires-Dist: mypy ; extra == 'all'
+Requires-Dist: ipython ; extra == 'all'
+Requires-Dist: pdbpp ; extra == 'all'
+Requires-Dist: pytest ; extra == 'all'
+Requires-Dist: pytest-cov ; extra == 'all'
+Requires-Dist: pre-commit ; extra == 'all'
+Requires-Dist: black ; extra == 'all'
+
+# Action Potential features
+
+
+
+[![image](https://img.shields.io/pypi/v/ap_features.svg)](https://pypi.python.org/pypi/ap_features)
+
+![CI](https://github.com/ComputationalPhysiology/ap_features/workflows/CI/badge.svg)
+
+
+
+Package to compute features of traces from action potential models
+
+
+* Free software: GNU General Public License v3
+* Documentation: https://computationalphysiology.github.io/ap_features/
+
+* Source code: https://github.com/ComputationalPhysiology/ap_features
+
+## Features
+
+-   TODO
+
+## Credits
+
+This package was created with
+[Cookiecutter](https://github.com/audreyr/cookiecutter) and the
+[ComputationalPhysiology/cookiecutter-pypackage](https://github.com/ComputationalPhysiology/cookiecutter-pypackage)
+project template.
+
+
