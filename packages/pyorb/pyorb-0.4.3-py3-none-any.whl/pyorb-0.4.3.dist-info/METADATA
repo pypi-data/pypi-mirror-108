@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: pyorb
+Version: 0.4.3
+Summary: Kepler orbit functions in Python
+Home-page: https://github.com/danielk333/pyorb
+Author: Daniel Kastinen
+Author-email: daniel.kastinen@irf.se
+License: GNU-GPLv3
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Science/Research
+Classifier: Development Status :: 4 - Beta
+Requires-Python: >=3.0
+License-File: LICENSE
+Requires-Dist: numpy (>=1.18.4)
+Provides-Extra: dev
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: sphinx ; extra == 'dev'
+Requires-Dist: sphinx-gallery ; extra == 'dev'
+Requires-Dist: coverage ; extra == 'dev'
+Requires-Dist: matplotlib ; extra == 'dev'
+
+
+PyOrb
+======
+
+PyOrb is a lightweight package designed to convert between cartesian and kepler 
+coordinates seamlessly and consequently following strict defined rules. It 
+provides a convenience class for handling orbits and is tested for special cases 
+such as planar and circular orbits.
+
+
