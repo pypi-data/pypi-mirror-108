@@ -1,0 +1,7 @@
+Cython
+numpy
+fastcore
+feather-format
+pandas
+rich
+openpyxl

@@ -1,0 +1,4 @@
+[console_scripts]
+extract_bin_stats = rfpy.filter:extract_bin_stats
+process_bins = rfpy.main:process_bin
+
