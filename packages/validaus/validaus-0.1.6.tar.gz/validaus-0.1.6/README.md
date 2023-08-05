@@ -1,0 +1,71 @@
+# Validaus Python Module
+
+This is a Python wrapper around Validaus API calls. See below for examples. The code below can also be dynamically generated for you in the **Code Integration** tab of the Validaus UI.
+
+### Instantiate Validaus
+
+```
+from validaus import Validaus
+
+vd = Validaus(
+  validausURL='http://localhost:4001',
+  app="my-app-id",
+  apiKey="13252a7a-d933-4aaa-a9a5-7b480f0c3223"
+)
+```
+
+### Pull Mode (i.e. "Build Health" in the UI)
+
+Use the code below to run a regression test on multiple facts, and get a full validation report from Validaus. This is most suitable to integrate into your CI.
+
+```
+# First, get all Facts that this App is subscribed to
+facts = vd.getFacts(metric="my-metric-id")
+
+# Next, run your own code here.
+# Plug the params for each fact into your code,
+# and save the resulting value. You'll submit
+# these to Validaus in the final step.
+
+# Finally, stream all Facts to Validaus with your code's values.
+# Validaus will return an object with information on your
+# data accuracy across all subscribed playbooks.
+resp = vd.validateFacts(
+  metric="my-metric-id",
+  facts=[
+    {
+      "paramValues": [
+        { "name": "b", "value": YOUR_PARAM_NUMERIC_VALUE },
+        { "name": "a", "value": YOUR_PARAM_NUMERIC_VALUE }
+      ],
+      "value": YOUR_FACT_NUMERIC_VALUE
+    },
+    {
+      "paramValues": [
+        { "name": "b", "value": YOUR_PARAM_NUMERIC_VALUE },
+        { "name": "a", "value": YOUR_PARAM_NUMERIC_VALUE }
+      ],
+      "value": YOUR_FACT_NUMERIC_VALUE
+    }
+  ]
+)
+```
+
+### Push Mode (i.e. "Live Health" in the UI)
+
+In Push mode, stream a Fact to Validaus in any environment, and receive reports and alerts about any errors. This is most suitable for catching live errors, typically in production.
+
+```
+# Stream a Fact to Validaus - put this code snippet in the part
+# of your code that is producing the data you want to validate.
+vd.publishFact(
+  metric="my-metric-id",
+  fact={
+    "paramValues": [
+      { "name": "b", "value": YOUR_PARAM_NUMERIC_VALUE },
+      { "name": "a", "value": YOUR_PARAM_NUMERIC_VALUE }
+    ],
+    "value": YOUR_FACT_NUMERIC_VALUE
+  }
+)
+```

@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/validaus/__init__.py
+src/validaus/validaus.py
+src/validaus.egg-info/PKG-INFO
+src/validaus.egg-info/SOURCES.txt
+src/validaus.egg-info/dependency_links.txt
+src/validaus.egg-info/not-zip-safe
+src/validaus.egg-info/requires.txt
+src/validaus.egg-info/top_level.txt
