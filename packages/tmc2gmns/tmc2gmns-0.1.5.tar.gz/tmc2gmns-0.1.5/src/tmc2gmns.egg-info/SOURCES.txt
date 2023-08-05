@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+src/__init__.py
+src/tmc2gmns.py
+src/tmc2gmns.egg-info/PKG-INFO
+src/tmc2gmns.egg-info/SOURCES.txt
+src/tmc2gmns.egg-info/dependency_links.txt
+src/tmc2gmns.egg-info/requires.txt
+src/tmc2gmns.egg-info/top_level.txt
