@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/py_helpers/__init__.py
+src/py_helpers/base/__init__.py
+src/py_helpers/base/type_input.py
+src/py_helpers_icyi2i.egg-info/PKG-INFO
+src/py_helpers_icyi2i.egg-info/SOURCES.txt
+src/py_helpers_icyi2i.egg-info/dependency_links.txt
+src/py_helpers_icyi2i.egg-info/top_level.txt
