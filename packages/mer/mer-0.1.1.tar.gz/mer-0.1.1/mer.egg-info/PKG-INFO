@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: mer
+Version: 0.1.1
+Summary: Mars-Earth retimer
+Home-page: https://github.com/kconnour/mer
+Author: kconnour
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.9
+Provides-Extra: docs
+Provides-Extra: test
+License-File: LICENSE.txt
+
+UNKNOWN
+
