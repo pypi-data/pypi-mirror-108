@@ -1,0 +1,3 @@
+[console_scripts]
+stwex = stwex.stwex:main
+

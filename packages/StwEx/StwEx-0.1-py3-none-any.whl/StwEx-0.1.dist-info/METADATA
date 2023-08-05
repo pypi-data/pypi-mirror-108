@@ -1,0 +1,297 @@
+Metadata-Version: 2.1
+Name: StwEx
+Version: 0.1
+Summary: Controlar cualquier aplicación desde un icono con menú y submenus en el systray
+Home-page: https://gitlab.com/germansg/stwex
+Author: German Sanchez Gutierrez
+Author-email: gsgsoftgroup@gmail.com
+License: GNU General Public License v3 (GPLv3)
+Platform: Linux
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: POSIX :: Linux
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: wxPython (>=4.1.1)
+
+# StwEx
+StwEx es un programa que crea un icono en el área de tareas con un menú y submenús.
+
+## Installation
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+
+```bash
+pip install stwex
+```
+
+## Usage
+```bash
+python -m stwex.stwex -f fichero.xml
+```
+ó
+```bash
+stwex -f fichero.xml
+```
+
+
+## XML
+### TAG stwex
+```xml
+<stwex [title=Title][icon=file][killallonexit=true|false]>
+...
+</stwex>
+```
+*title* - Mensaje que aparece al poner el ratón sobre el icono de la aplicación.
+
+*icon* - Icono de la aplicación
+
+*killallonexit* - Termina todos los procesos que se hayan iniciado por la aplicación.
+
+### TAG variables
+```xml
+<stwex>
+   <variables>
+        <variable key="variable1" value="Opción 1"/>
+        <variable key="variable2" value="Opción 2"/>
+        <variable key="variable3" value="probando_variables"/>
+        <variable key="variable4" value="True"/>
+        <variable key="accion1" value="1"/>
+        <variable key="bool1" value="1"/>    
+   </variables>
+...
+</stwex>
+```
+Variables que se utilizan posteriormente en la definición del menú.
+### TAG actions
+```xml
+<stwex>
+...
+   <actions>
+        <action id="-1" cmd="./scriptprueba.sh" killonexit="1" filecomm="/tmp/prueba"/>
+        <action id="1" cmd="xterm" filecomm="/tmp/prueba2"/>
+        <action id="2" cmd="xeyes"/>
+        <action id="3" cmd="sudo tail -f /var/log/syslog" terminal="1"/>   
+   </actions>
+...
+</stwex>
+```
+**id** - Identificador de la acción. Si es -1, se ejecuta de manera automática al iniciar la aplicación.
+
+**cmd** - Comando que se va a ejecutar. 
+
+**killonexit** - Se termina la acción si se ha ejecutado y killallonexit es True.
+
+**filecomm** - Fichero de comunicación con la aplicación. Sólo funciona si existe una acción con id -1. Si se quiere tener un fichero de comunicación pero no tenemos una aplicación que deba de ejecutarse al inicio, se puede poner como cmd "@default".
+
+**terminal** - Se indica si el comando se tiene que ejecutar en una terminal. Es necesario tener instalado xterm para que funcione.
+
+### TAG menu
+```xml
+<stwex>
+...
+   <actions>
+        <action id="-1" cmd="./scriptprueba.sh" killonexit="1" filecomm="/tmp/prueba"/>
+        <action id="1" cmd="xterm" filecomm="/tmp/prueba2"/>
+        <action id="2" cmd="xeyes"/>
+        <action id="3" cmd="sudo tail -f /var/log/syslog" terminal="1"/>   
+   </actions>
+   <menu>
+        <item icon="images2/info-15.bmp"
+              title="Opción 1"
+              action="1"/>
+        <item icon="images2/link-abierto-15.bmp"
+              title="Opción 2"
+              action="2"
+              enable="True"
+              hidden="False">
+        <item>
+            <separator/>
+        </item>
+        <item icon="images2/quit-15.png"
+              title="Salir"
+              action="@exit"/>
+    </menu>   
+</stwex>
+```
+**enable** - False si el elemento no está activado.
+
+**hidden** - True si está oculto el elemento
+
+### TAG submenu
+```xml
+        <item icon="images2/link-abierto-15.bmp"
+              title="Prueba 2"
+              action="2">
+              <submenu>
+                  <menu>
+                      <item title="@variable2"
+                            action="3"
+                            enable="True"
+                            hidden="True"/>
+                      <item title="Submenu 02"
+                            action="2"
+                            enable="False">
+                          <submenu>
+                              <menu>
+                                  <item title="Subsubmenu"
+                                        action="2"/>
+                              </menu>
+                          </submenu>
+                      </item>
+                  </menu>
+              </submenu>
+        </item>
+```
+
+## Fichero de comunicación
+Cuando se crea un fichero de comunicación al ejecutar una acción con id -1, se puede realizar una comunicación con la aplicación.
+
+Para comunicarse, se escriben 'comandos' en el fichero con el siguiente formato: [stwex:comando]Parámetros
+
+### [stwex:icon]
+```text
+[stwex:icon]fichero
+```
+Cambia el icono de la aplicación por el fichero que se le indique.
+
+### [stwex:show_message]
+Muestra un mensaje en un cuadro de notificación.
+
+***[stwex:show_message]mensaje*** Muestra el mensaje.
+
+***[stwex:show_message]titulo##mensaje*** Muestra el mensaje en una ventana de notificación con el título indicado.
+
+***[stwex:show_message]titulo##mensaje##tipo_o_fichero*** Muestra el mensaje en una ventana de notificación con el 
+titulo. Si tipo_o_fichero es:
+
+__error__: El tipo de notificación es de error.
+
+__warning__: El tipo de notificación es de warning.
+
+__fichero__: Se muestra en la ventana de notificación el fichero de imagen indicado.
+
+### [stwex:var]
+Modifica o inicializa el valor de una variable.
+
+***[stwex:var]variable##valor***
+
+__variable__: Nombre de la variable
+
+__valor__: Valor de la variable
+
+## Examples of XML files
+### Minimal example
+```xml
+<stwex>
+  <menu>
+     <item title="Exit" action="@exit"/>
+  </menu>
+</stwex>
+```
+### Basic example
+```xml
+<!-- Example with submenus -->
+<stwex killallonexit="True">
+  <actions>
+    <action id="1" cmd="xterm"/>
+    <action id="2" cmd="libreoffice --writer"/>
+    <action id="3" cmd="xeyes"/>
+  </actions>
+  <menu>
+     <item title="Terminal" icon="icons/bola-terminal.png" action="1"/>
+     <item title="Writer" icon="icons/bola-01.png" action="2"/>
+     <item title="XEyes" icon="icons/bola-02.png" action="3"/>
+     <item>
+       <separator/>
+     </item>
+     <item icon="icons/salida-15.png" title="Salir" action="@exit"/>
+  </menu>
+</stwex>
+```
+### Complete example
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<stwex icon="images/logoStwex23.png"
+       title="Mensaje de prueba"
+       killallonexit="1">
+    <variables>
+        <variable key="variable1" value="Opción 1"/>
+        <variable key="variable2" value="Opción 2"/>
+        <variable key="variable3" value="probando_variables"/>
+        <variable key="variable4" value="True"/>
+        <variable key="accion1" value="1"/>
+        <variable key="bool1" value="1"/>
+        <variable key="variable5"/>
+    </variables>
+    <actions>
+        <action id="-1" cmd="@default" killonexit="1" filecomm="/tmp/prueba"/>
+        <action id="1" cmd="xterm" filecomm="/tmp/prueba2"/>
+        <action id="2" cmd="xeyes"/>
+        <action id="3" cmd="sudo tail -f /var/log/syslog" terminal="1"/>
+    </actions>
+
+    <menu>
+        <item icon="images2/info-15.bmp"
+              title="@variable1"
+              action="@accion1"/>
+        <item icon="images2/link-abierto-15.bmp"
+              title="Prueba 2"
+              action="2">
+              <submenu>
+                  <menu>
+                      <item title="@variable2"
+                            action="3"
+                            enable="@variable4"
+                            hidden="@bool1"/>
+                      <item title="Submenu 02"
+                            action="2"
+                            enable="@variable4">
+                          <submenu>
+                              <menu>
+                                  <item title="Subsubmenu"
+                                        action="2"/>
+                              </menu>
+                          </submenu>
+                      </item>
+                  </menu>
+              </submenu>
+        </item>
+        <item>
+            <separator/>
+        </item>
+        <item icon="images2/quit-15.png"
+              title="Salir"
+              action="@exit"/>
+    </menu>
+</stwex>
+```
+**Ejemplo de comunicación**
+
+Inicializamos el fichero de comunicación:
+```commandline
+echo > /tmp/prueba
+```
+
+Modificamos el valor de variable4 consiguiendo que 'Submenu 02' no esté activo (Enable=False): 
+```commandline
+echo [stwex:var]variable4##False
+``` 
+
+Modificamos el título de la opción 1:
+
+```commandline
+echo [stwex:var]accion1##Opción de prueba
+``` 
+
+Mostramos un mensaje:
+
+```commandline
+echo [stwex:show_message]AVISO##Esto es un mensaje de pruebas
+``` 
+
+
+
+## License
+GNU General Public License v3 (GPLv3). [Licenses](http://www.gnu.org/licenses/)
+
