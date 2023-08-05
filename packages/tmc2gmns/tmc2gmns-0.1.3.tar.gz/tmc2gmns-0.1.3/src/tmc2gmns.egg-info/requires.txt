@@ -1,0 +1,3 @@
+numpy>=1.19.2
+pandas>=1.1.3
+MapMatching4GMNS>=0.2.11
