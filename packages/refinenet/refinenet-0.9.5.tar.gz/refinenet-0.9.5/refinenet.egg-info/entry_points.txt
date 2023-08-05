@@ -1,0 +1,3 @@
+[console_scripts]
+refinenet = refinenet.__main__:main
+
