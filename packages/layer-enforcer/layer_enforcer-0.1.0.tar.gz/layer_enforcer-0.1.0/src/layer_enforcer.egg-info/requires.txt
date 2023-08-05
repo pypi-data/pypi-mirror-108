@@ -1,0 +1,15 @@
+grimp>=1.0.0
+pyyaml>=5.1.0
+
+[lint]
+black
+flake8
+flake8-import-order
+flake8-print
+isort
+mypy
+
+[test]
+pretend
+pytest
+pytest-cov
