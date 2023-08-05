@@ -1,0 +1,21 @@
+[MESSAGES CONTROL]
+disable=
+    cyclic-import,
+    too-few-public-methods,
+
+[BASIC]
+# Good variable names which should always be accepted, separated by a comma
+good-names=r,
+           g,
+           b,
+           a,
+           h,
+           s,
+           l,
+           v,
+
+[CLASSES]
+exclude-protected=_r,
+                  _g,
+                  _b,
+                  _a,
