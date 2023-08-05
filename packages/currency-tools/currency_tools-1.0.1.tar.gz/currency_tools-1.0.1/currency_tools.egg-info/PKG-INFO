@@ -1,0 +1,31 @@
+Metadata-Version: 1.0
+Name: currency-tools
+Version: 1.0.1
+Summary: this method use for who like work with cripto currency
+Home-page: https://github.com/jacktamin/cripto_currency
+Author: Ahmad Dehghani
+Author-email: ahd76money@gmail.com
+License: MIT
+Description:  This is code with king package
+        you can get currency info online
+        
+        
+        ===> from currency.currency import CurrencyPrice
+        
+        
+        to get list of avalebel currency use this : 
+        
+        ====> cp = CurrencyPrice(currency_name='bitcoin')
+        ====> cp.get_list_of_avalebel_currecy()
+        
+        
+        to get a currency info use this :
+        
+        
+        ===> cp.get_price()
+        
+        
+        its will return a dictionary 
+         
+Keywords: scraping,cripto,bitcoin,currency,api,scrapper,images,videos
+Platform: UNKNOWN
