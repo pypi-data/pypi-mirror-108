@@ -1,0 +1,8 @@
+aws_mail/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aws_mail/_version.py,sha256=Fykt5h3ePzlqjmB82DbtqL519fSNY8DaneQD0JN3a8c,23
+aws_mail/aws_mail.py,sha256=zcRWHGWbmmA7gSBNr_ZInVsTGflexY5klHyY53JVWKA,5496
+aws_mail-0.0.4.data/scripts/aws_mail,sha256=YW5EmobwGKtZ9ZsEFwUGskZlmg1QFltlsk-tnAJ8xPA,109
+aws_mail-0.0.4.dist-info/METADATA,sha256=P3w9ATGCgtah78fHkbLfrlUk9-C6yItUF0IrOAjC6v0,9903
+aws_mail-0.0.4.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+aws_mail-0.0.4.dist-info/top_level.txt,sha256=yzUFxOJ4A4xqi69yDGZcZmqikZ4xyOlzRH5hy7_eKuA,9
+aws_mail-0.0.4.dist-info/RECORD,,
