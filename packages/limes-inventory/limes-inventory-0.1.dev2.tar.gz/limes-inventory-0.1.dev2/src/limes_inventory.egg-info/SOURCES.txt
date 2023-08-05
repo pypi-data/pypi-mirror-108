@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/limes/__init__.py
+src/limes/limes.py
+src/limes_inventory.egg-info/PKG-INFO
+src/limes_inventory.egg-info/SOURCES.txt
+src/limes_inventory.egg-info/dependency_links.txt
+src/limes_inventory.egg-info/entry_points.txt
+src/limes_inventory.egg-info/top_level.txt
