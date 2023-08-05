@@ -1,0 +1,10 @@
+README.md
+setup.py
+easypsyco/__init__.py
+easypsyco/__pkginfo__.py
+easypsyco/easypsyco.py
+easypsyco.egg-info/PKG-INFO
+easypsyco.egg-info/SOURCES.txt
+easypsyco.egg-info/dependency_links.txt
+easypsyco.egg-info/requires.txt
+easypsyco.egg-info/top_level.txt
