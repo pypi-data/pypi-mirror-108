@@ -1,0 +1,16 @@
+genn/Document.py,sha256=rCOa7tyFYF_Gi4_5g7nnuRJJ9vA0qMtYu1UoXDRUGOE,638
+genn/__init__.py,sha256=c_u98iMedtCjjQcu9iyFBgqMH-HHYnT2z48OHPuOo6s,175
+genn/controllers.py,sha256=q3bUm4efEiqO11TCO4kNCFbkfNCtE6akY0d-0Y6KnOo,5248
+genn/embedding.py,sha256=115PEqwRYIZdBoSSXUjvtHMNXrfJOc17ygA3DA87dDQ,3982
+genn/generator.py,sha256=cqeBhCkuJCITY3_eGSTi9bVZILlPjVvlFjKa_ZglAEg,10993
+genn/gpt2.py,sha256=J1-xHQOX-uaUdPt_DmYJDgUgGtzz0gq5BnWZ-stX9fo,13213
+genn/gpt2_summarizer.py,sha256=lfnr6oyYeHpGk3UjsQztJG6llBj1hkqVV2KM6E7a8pA,2915
+genn/gru.py,sha256=RjjiFI87CO-7RRaGjadrqUT0bTnFhnbTuO2YbTiw_hk,4604
+genn/importers.py,sha256=Npq86rZGUh4ExeQMWwB9WDBkLiF99IoVA30oe0bWJm8,822
+genn/lstm.py,sha256=LRB6VmG1kTfbMbj6URjB_CXLN4TGrRwHeLgCu8cRdwM,5895
+genn/preprocessing.py,sha256=Ue51XoiPJBB58CbPl4duPMoaJBra-rLkYuTLdZPuaf0,3445
+genn-0.7.7.dist-info/LICENSE.txt,sha256=lrXNlyIGZhtnHelkaBS0ukskV0866ZWpgDc4sFgCQrg,1122
+genn-0.7.7.dist-info/METADATA,sha256=RlHcOqM6U7YreBZ-wF-TXWM8JF5imZ2IkzruyLcjQFA,3896
+genn-0.7.7.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+genn-0.7.7.dist-info/top_level.txt,sha256=H22rOtDc7lnaKccWkKemX44IzOvCzjT4P3r3BXeKorY,5
+genn-0.7.7.dist-info/RECORD,,
