@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: easypostgre
+Version: 0.0.5
+Summary: Wrapper to simplify the use of psycopg2 lib
+Home-page: https://github.com/benitogonzalezh/easypostgre
+Author: Benito Gonzalez
+Author-email: benitogonzalezh@gmail.com
+License: UNKNOWN
+Description: Wrapper to simplify the use of psycopg2 lib
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 1 - Planning
+Description-Content-Type: text/markdown
