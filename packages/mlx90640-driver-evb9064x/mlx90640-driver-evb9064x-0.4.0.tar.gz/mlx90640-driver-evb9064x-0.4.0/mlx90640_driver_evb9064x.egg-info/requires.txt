@@ -1,0 +1,2 @@
+mlx90640-driver>=1.1.2
+pyserial>=3
