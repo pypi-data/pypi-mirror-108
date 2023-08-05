@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: EpicEndpoints
+Version: 0.1.1
+Summary:  An easy way to access Epic Games' endpoints without clutter. 
+Home-page: https://github.com/AtomicXYZ/EpicEndpoints
+Author: AtomicXYZ
+License: LICENSE
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# EpicEndpoints
+An easy way to access Epic Games' endpoints without clutter.
+
