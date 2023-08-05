@@ -1,0 +1,17 @@
+<!-- Example with submenus -->
+<stwex killallonexit="True">
+  <actions>
+    <action id="1" cmd="xterm"/>
+    <action id="2" cmd="libreoffice --writer"/>
+    <action id="3" cmd="xeyes"/>
+  </actions>
+  <menu>
+     <item title="Terminal" icon="icons/bola-terminal.png" action="1"/>
+     <item title="Writer" icon="icons/bola-01.png" action="2"/>
+     <item title="XEyes" icon="icons/bola-02.png" action="3"/>
+     <item>
+       <separator/>
+     </item>
+     <item icon="icons/salida-15.png" title="Salir" action="@exit"/>
+  </menu>
+</stwex>

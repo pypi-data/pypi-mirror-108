@@ -1,0 +1,17 @@
+<!-- Example with options and separators -->
+<stwex>
+  <menu>
+     <item title="Option 1"/>
+     <item title="Option 2"/>
+     <item title="Option 3"/>
+     <item>
+       <separator/>
+     </item>
+     <item title="Option 4"/>
+     <item title="Option 5"/>
+     <item>
+       <separator/>
+     </item>
+     <item icon="icons/quit-15.png" title="Salir" action="@exit"/>
+  </menu>
+</stwex>
