@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: Tabata
+Version: 0.1.1
+Summary: UNKNOWN
+Home-page: https://github.com/realitybytez/Tabata
+License: MIT
+Platform: UNKNOWN
+License-File: LICENSE
+Requires-Dist: lxml (>=4.5.1)
+
+Programmatic, Template Driven Tableau Workbooks
+
