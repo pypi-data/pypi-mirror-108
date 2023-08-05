@@ -1,0 +1,8 @@
+README.md
+setup.py
+numberguess/__init__.py
+numberguess/numberguess.py
+numberguess.egg-info/PKG-INFO
+numberguess.egg-info/SOURCES.txt
+numberguess.egg-info/dependency_links.txt
+numberguess.egg-info/top_level.txt
