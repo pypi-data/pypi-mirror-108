@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: FlowGrid
+Version: v1.2.0
+Summary: FlowGrid implemented with Scanpy
+Home-page: https://github.com/holab_hku/FlowGrid
+Author: Xiunan Fang
+Author-email: xiunanFANG@connect.hku.hk
+License: MIT
+Download-URL: https://github.com/holab-hku/FlowGrid/archive/refs/tags/v1.2.0.tar.gz
+Description: UNKNOWN
+Keywords: Single Cell RNA-seq,Scanpy,Clustering,FlowGrid
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
