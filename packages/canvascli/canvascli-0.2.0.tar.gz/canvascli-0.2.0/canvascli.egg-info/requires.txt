@@ -1,0 +1,6 @@
+altair
+canvasapi
+click
+pandas
+tabulate
+dataclassy
