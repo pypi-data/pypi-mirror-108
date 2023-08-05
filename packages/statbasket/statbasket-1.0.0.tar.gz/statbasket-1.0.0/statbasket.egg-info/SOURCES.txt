@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+statbasket/__init__.py
+statbasket/statbasket.py
+statbasket/statmethods.py
+statbasket.egg-info/PKG-INFO
+statbasket.egg-info/SOURCES.txt
+statbasket.egg-info/dependency_links.txt
+statbasket.egg-info/requires.txt
+statbasket.egg-info/top_level.txt
