@@ -1,0 +1,5 @@
+recursive-include data *
+recursive-include tests *
+include LICENSE
+include .*
+global-exclude *.py[cod]
