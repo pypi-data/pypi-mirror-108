@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: fizzbuzz_rust
+Version: 0.1.0
+Classifiers: License :: OSI Approved :: MIT License
+Classifiers: Development Status :: 3 - Alpha
+Classifiers: Intended Audience :: Developers
+Classifiers: Programming Language :: Python
+Classifiers: Programming Language :: Rust
+Author: Megumin
