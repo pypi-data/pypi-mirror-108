@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: tocm-reference-data
+Version: 0.1
+Summary: Reference data used in my research
+Home-page: https://github.com/marickmanrho/tocm_reference_data
+Author: Marick Manrho
+Author-email: marickmanrho@gmail.com
+License: MIT
+Keywords: scientific,University of Groningen
+Platform: any
+Classifier: Programming Language :: Python :: 3
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Physics
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# ToCM_reference_data
+A python library to process reference data usefull for my projects.
+
+
+## How to
+This is a small code example of how this library works
+```python
+import tocm_reference_data as ref
+import matplotlib.pyplot as plt
+
+for line in ref.Hestand_2015.figure7.lines:
+    plt.plot(line.x, line.y, label=line.label)
+
+plt.legend()
+plt.show()
+
+print(ref.Hestand_2015.metadata)
+
+```
+
