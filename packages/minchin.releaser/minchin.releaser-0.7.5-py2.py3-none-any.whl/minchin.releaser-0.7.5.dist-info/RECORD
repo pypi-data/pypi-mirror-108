@@ -1,0 +1,17 @@
+minchin.releaser-0.7.5-py3.9-nspkg.pth,sha256=gcXTIlLGN88hd1Jwczyo_TZeJBkOacrIkBHv-q1Ga8Q,545
+minchin/releaser/__init__.py,sha256=n5-xHmBAOopaCNLPV8SD3xatFwcHMtr7xevm4gFTY5U,294
+minchin/releaser/constants.py,sha256=KS8y2IWbY6_Pd9DuM_kd0pL7fIeEUYvxN0nQjcmWQaM,768
+minchin/releaser/make_release.py,sha256=FKs1bxMdojPpFN4rmvqhqlntARVuBzs4HNpGtPfYRfo,23566
+minchin/releaser/util.py,sha256=RqLQ-FYRyeLVv4by4bh-r-IsKkWZagV0drsP-AIAsXQ,2546
+minchin/releaser/vendorize.py,sha256=bl8unIoAucnWIStkkYMpbXPWXXNIKv7ZOaiNfLRybp0,6243
+minchin/releaser/_vendor/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+minchin/releaser/_vendor/text.py,sha256=kTVIEhwc4FD1WaGvq-wA_GjJPciQk-Erj-ppgmEunkg,17743
+minchin/releaser/test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+minchin/releaser/test/test_setup.py,sha256=dOtolp0iVY2O9ikRwG8fXhdmmUQdYjBGRBjFQ8uSpqI,531
+vendor_src/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+minchin.releaser-0.7.5.dist-info/LICENSE.txt,sha256=xhcGZBh0ZsIuy2BGxpt0dvaleNs8Fwe17QcjwpCWmAg,1078
+minchin.releaser-0.7.5.dist-info/METADATA,sha256=0IF1UlhC6tFXSHOEcWL4UzmF2N_fz67SjGg3DjaQ6Po,10103
+minchin.releaser-0.7.5.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+minchin.releaser-0.7.5.dist-info/namespace_packages.txt,sha256=UfZcij00rJG77eOQBb7_ze25M4GNX6IZ7pbW2toN94c,8
+minchin.releaser-0.7.5.dist-info/top_level.txt,sha256=UfZcij00rJG77eOQBb7_ze25M4GNX6IZ7pbW2toN94c,8
+minchin.releaser-0.7.5.dist-info/RECORD,,
