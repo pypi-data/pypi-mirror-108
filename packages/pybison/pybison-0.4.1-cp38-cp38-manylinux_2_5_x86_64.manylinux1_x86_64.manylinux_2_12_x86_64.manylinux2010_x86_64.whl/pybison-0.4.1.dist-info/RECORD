@@ -1,0 +1,11 @@
+bison/xmlifier.py,sha256=Zq9-JwNNNB3Bv6hefreSvy-kWcbq3OHMg1rsv5Oi_8U,4667
+bison/__init__.py,sha256=p5YrEk06ykHR34_kq5nhPZxVGqibUsI_X7HDDnCeNcE,16855
+bison/convert.py,sha256=u74JSnfiJ106I1UnINgupTsXIoiYDGZNpdH8hVjckhg,13993
+bison/node.py,sha256=LbZMv1ajtKNiHYMbGmftOpsTz1N_P72-kCg3Rzuuujw,5505
+bison/bison_.cpython-38-x86_64-linux-gnu.so,sha256=t8YggAYhBPxw8E3PIx-9IpQ7HQfGxE8t7kSAUsFHoAA,7512128
+pybison-0.4.1.dist-info/RECORD,,
+pybison-0.4.1.dist-info/METADATA,sha256=lO6rXVnCc7ZZhsa0XNrJSRvzO1jlDzOTLzO7NDftgn4,4013
+pybison-0.4.1.dist-info/top_level.txt,sha256=t4MksXhU5XH_XZ-pr1Ib-tJ8O9xT0T1eq0JHHKKKxyk,16
+pybison-0.4.1.dist-info/WHEEL,sha256=-DoGBj0Avq2--T-QgXLI1C-bokNS_QjsEnIPIG0jMTU,217
+pybison-0.4.1.dist-info/LICENSE,sha256=lcGc20L1nz576Pu110tTxnIbM0yski33IFJF30mqm-8,18010
+pybison-0.4.1.data/scripts/bison2py,sha256=U_LOHTHPf-hlopSVfuGvB_OgRgLpP7HmAFj0s_KLXog,1662
