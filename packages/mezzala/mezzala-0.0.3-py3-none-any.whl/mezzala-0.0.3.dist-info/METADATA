@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: mezzala
+Version: 0.0.3
+Summary: A package for soccer modelling
+Home-page: https://github.com/Torvaney/mezzala/tree/master/
+Author: Ben Torvaney
+Author-email: torvaney@protonmail.com
+License: Apache Software License 2.0
+Keywords: soccer-analytics football-analytics dixon-coles
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: Apache Software License
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: scipy
+Provides-Extra: dev
+Requires-Dist: jupyter ; extra == 'dev'
+Requires-Dist: nbdev ; extra == 'dev'
+
+# Mezzala
+> Models for estimating football (soccer) team-strength
+
+
+## Install
+
+`pip install your_project_name`
+
+## How to use
+
+Fill me in please! Don't forget code examples:
+
+```python
+1+1
+```
+
+
+
+
+    2
+
+
+
+
