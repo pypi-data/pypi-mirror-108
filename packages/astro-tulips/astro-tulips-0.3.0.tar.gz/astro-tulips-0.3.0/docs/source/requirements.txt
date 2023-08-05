@@ -1,0 +1,11 @@
+-e .[docs]
+sphinx>=1.4
+ipykernel
+nbsphinx
+sphinx_copybutton
+matplotlib>=3.3.2
+numpy>=1.16
+sphinx-gallery
+mesaPlot
+scipy
+sphinx_automodapi
