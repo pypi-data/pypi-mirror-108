@@ -1,0 +1,17 @@
+smpl_fias/__init__.py,sha256=ztbDWFeYK2M7t2jWgkVmP4qjhdepf--d_ZPfTMoZKQw,70
+smpl_fias/admin.py,sha256=hFI9TgA2BqHCxygIFDDY_3XQJPnjDf8aM5jx69J3oyg,603
+smpl_fias/apps.py,sha256=ZEebij88k1LDcQHDvMmKf86HzzTSQBjGXlrgidiM8rU,156
+smpl_fias/filters.py,sha256=bU403D36X3F-XZCXIdJ00TbEFE084vf0PVMsZ0GuxIM,798
+smpl_fias/managers.py,sha256=3Dpc7RisXeX7ukHedjCvlWpls03tKN6euIPa8gZK3pc,885
+smpl_fias/models.py,sha256=vEIF79ZtFjuZFFaJBgJcLOU6vJI8u9IHoeY0AUJRh0Q,3639
+smpl_fias/serializers.py,sha256=SoZhN0mX4kEw07jtw9OBBKXrNhEOn7GgDscjBr5PUkI,785
+smpl_fias/urls.py,sha256=xzbfapgDXtMN0bglBSvwjMab-YLjEuq-lSKy76Aymuo,476
+smpl_fias/views.py,sha256=rrcZlDVuxYNasstrxWoR2VrnScIBaVZkkq0-UIl6HAs,1176
+smpl_fias/migrations/0001_initial.py,sha256=41QTQWUQQYN7AIJffbXLOih6d6EAAsdzZFC33ArQDYY,3740
+smpl_fias/migrations/0002_fias_city_fias_district.py,sha256=mZtyr_STuPx9xEGNNG8ot8LW8_IWvCekDsgqj_g0XMA,1086
+smpl_fias/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+smpl_fias-0.2.dist-info/LICENSE.txt,sha256=q7KJbcPCqUAvkBuI1QNc8Kg9XPfBfnNkLN9WKwudO8U,11
+smpl_fias-0.2.dist-info/METADATA,sha256=OCSp3L9icWjhTjdakKVMxTdFqOe6_-OWHggS3mhsN9o,246
+smpl_fias-0.2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+smpl_fias-0.2.dist-info/top_level.txt,sha256=SlNVclX9ALF5lqXKf1-hC-lH12dLz9Kj01Pofhl3kGY,10
+smpl_fias-0.2.dist-info/RECORD,,
