@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        bnc=bnc.cli:entry_point
+    
