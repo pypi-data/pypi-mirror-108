@@ -1,0 +1,10 @@
+miscset/__init__.py,sha256=ynZ47gEr_5YtPocmbgW3W3LNXFYmsgWbCWWiJADljbY,264
+miscset/dt.py,sha256=Fex92asZPePOqsT8sfi-fmzfOcoDn65TPV8MyzbD-lM,1635
+miscset/io.py,sha256=YZM0-4URgIRgHQ7ZeIIau23CSnnCoTkscQOx5I_Derg,5424
+miscset/sh.py,sha256=idG87KVbswm_bB4f1fOejBgPFvR4hBccXjl5eoJQgM8,3573
+miscset/version.py,sha256=SaVPkpUq6-7Si8pN3ucYMr4l8J1Dexjnd7A4RjM9vKo,97
+miscset-0.1.0.dist-info/LICENSE,sha256=-ZTl0qF-yp5jfrGO2LswAeve_rFtai7YdvXJTZHuqjw,1096
+miscset-0.1.0.dist-info/METADATA,sha256=ci224yiGPZoyUrDoBHGVMgKKok9v6hGSZ2gpFCw4zxc,1169
+miscset-0.1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+miscset-0.1.0.dist-info/top_level.txt,sha256=CD03e7w1fV3f-DMCBgCxhFXf8Y2I_9fP4mpCxwBKwQU,8
+miscset-0.1.0.dist-info/RECORD,,
