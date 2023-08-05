@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: api2db
+Version: 1.0.1
+Summary: Python Api data collection tool
+Home-page: https://github.com/TristenHarr/api2db
+Author: Tristen Harr
+Author-email: tristenharr@gmail.com
+License: UNKNOWN
+Keywords: api,pandas,database,postgresql,mariadb,google-cloud-storage,google-cloud-bigquery
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6, <4
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+Requires-Dist: dill (>=0.3.3)
+Requires-Dist: pandas (>=1.1.5)
+Requires-Dist: schedule (>=1.1.0)
+Requires-Dist: pyarrow (>=3.0.0)
+Requires-Dist: urllib3 (>=1.26.4)
+Requires-Dist: requests (>=2.25.1)
+Requires-Dist: SQLAlchemy (>=1.4.11)
+Requires-Dist: SQLAlchemy-Utils (>=0.37.0)
+Requires-Dist: google-cloud-bigquery (>=2.11.0)
+Requires-Dist: pandas-gbq (>=0.14.1)
+Provides-Extra: mariadb
+Requires-Dist: mariadb (>=1.0.6) ; extra == 'mariadb'
+Provides-Extra: mysql
+Requires-Dist: pymysql (>=1.0.2) ; extra == 'mysql'
+Provides-Extra: postgresql
+Requires-Dist: psycopg2 (>=2.8.6) ; extra == 'postgresql'
+
+.. image:: https://readthedocs.org/projects/api2db/badge/?version=latest
+
+
+``pip install api2db``
+
+Read The Docs
+-------------
+
+https://api2db.readthedocs.io/en/latest/
+
+

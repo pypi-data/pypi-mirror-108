@@ -1,0 +1,10 @@
+[console_scripts]
+cadd = api2db.install.collector_add:_cadd
+clab = api2db.install.clear_lab:clab
+clist = api2db.install.collector_list:_clist
+crem = api2db.install.collector_remove:_crem
+mlab = api2db.install.make_lab:mlab
+pclear = api2db.install.project_clear:_pclear
+pmake = api2db.install.project_make:_pmake
+rlab = api2db.install.run_lab:rlab
+
