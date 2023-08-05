@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: PyPipackaging
+Version: 0.0.4
+Summary: Say Hello
+Home-page: https://github.com/Totilarson/CorePy
+Author: Toti Larson
+Author-email: totlarson@gmail.com
+License: LICENSE.txt
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Description-Content-Type: text/markdown
+
+# Packaging Tutorial
+
+This is a tutorial on setting up python packages for PyPi. 
+**Steps were learned from:** [Publishing (Perfect) Python Packages on PyPi](https://www.youtube.com/watch?v=GIF3LaRqgXo&t=1281s)
+
+# Notes
+
+1)	From the folder level with setup.py : **python setup.py sdist bdist_wheel**
+- Builds a wheel that is appropriate to upload to PyPi
+- The name used in the setup.py file is added. This was a point of confusion for me. **this name is what you pip install not necessarily the name of the pythjon code that will be imported**
+2)	From the folder level with setup.py : **pip install â€“e .**
+- **installs it locally**. Tests packaging and makes it useful to your system.
+- The â€˜â€“eâ€™ allows it to link to the code you are working on rather than building copies . The â€˜ .â€™ means install in the current directory. Everytime you change the setup.py file you need to run this
+- The name used in the setup.py file is added. This was a point of confusion for me
+3)	Test it:
+- from python environment in any folder **from hellototi import say_hello**
+- **â€˜hellototiâ€™** is the python module
+- The name **â€˜PyPipackagingâ€™** is from setup.py -> name=â€™hellototinameâ€™. It is the name of the python script in the src folder. Within this script is the function say_hello
+4)	Remove excessive files with gitignore.io
+5)	Pip install twine
+- Twine upload dist/*    **user name and pasword from PyPi.com**
+
+# Folder structure
+packaging_tutorial
+
+    |-LICENSE.txt         **MIT**
+
+    |-README.md           **edited in markdown**
+
+    |-setup.py            **name=PyPipackaging, package=src, python module=hellototi**
+
+    |-src
+
+        |-hellototi.py    **contains a function called say_hello()**
+
+        |-__init__.py     ** empty**
+
+
