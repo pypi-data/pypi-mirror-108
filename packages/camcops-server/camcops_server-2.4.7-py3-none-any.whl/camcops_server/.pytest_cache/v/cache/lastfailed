@@ -1,0 +1,3 @@
+{
+  "cc_modules/tests/cc_patient_tests.py::PatientDeleteTests::test_deleting_patient_deletes_patient_task_schedule": true
+}
