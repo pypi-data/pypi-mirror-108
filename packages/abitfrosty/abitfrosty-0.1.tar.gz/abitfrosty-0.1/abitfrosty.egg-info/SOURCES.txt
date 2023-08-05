@@ -1,0 +1,10 @@
+setup.py
+abitfrosty/Binomialdistribution.py
+abitfrosty/Gaussiandistribution.py
+abitfrosty/Generaldistribution.py
+abitfrosty/__init__.py
+abitfrosty.egg-info/PKG-INFO
+abitfrosty.egg-info/SOURCES.txt
+abitfrosty.egg-info/dependency_links.txt
+abitfrosty.egg-info/not-zip-safe
+abitfrosty.egg-info/top_level.txt
