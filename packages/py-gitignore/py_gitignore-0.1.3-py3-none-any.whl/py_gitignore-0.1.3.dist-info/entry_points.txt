@@ -1,0 +1,3 @@
+[console_scripts]
+py-gitignore=py_gitignore.py_gitignore:main
+
