@@ -1,0 +1,6 @@
+gwcloud_python/__init__.py,sha256=Y_8kpNOUvxDdTehc_RuYIZBzQccceXP8yv326CfWWpg,82
+gwcloud_python/bilby_job.py,sha256=UrdU7sXZeOPwWGUarsXIAwXvEdlQaffvreUzs6prPCQ,309
+gwcloud_python/gwcloud.py,sha256=DlOyCr6B3ttLM_RY81tnQvV6YT5TE7lBXKOwoP17rZg,2939
+gwcloud_python-0.1.0.dist-info/WHEEL,sha256=VN2eEg4PHbTOniXb-cCYQPc6zUTS4dAcATjlgU3q-Lo,83
+gwcloud_python-0.1.0.dist-info/METADATA,sha256=--pbDFAUjZcaH3v7Oc9u48SQkwp6m4WeHrtYr-d9g8k,649
+gwcloud_python-0.1.0.dist-info/RECORD,,

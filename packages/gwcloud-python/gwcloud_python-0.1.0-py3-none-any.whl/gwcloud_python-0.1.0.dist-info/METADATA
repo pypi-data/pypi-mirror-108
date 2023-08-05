@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: gwcloud-python
+Version: 0.1.0
+Summary: Wrapper of GWDC API, used for interacting with the GWCloud endpoints
+Author: Thomas Reichardt
+Author-email: treichardt@swin.edu.au
+Requires-Python: >=3.6,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: graphene-file-upload (>=1.3.0,<2.0.0)
+Requires-Dist: gwdc-python (>=0.1.0,<0.2.0)
+Requires-Dist: jwt (>=1.2.0,<2.0.0)
+Requires-Dist: requests (>=2.25.1,<3.0.0)
