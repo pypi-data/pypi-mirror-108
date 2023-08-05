@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "stonehenge"
+version = "0.1.0"
+description = "A fast, flexible, and fully-featured web framework"
+authors = ["Robert Townley <me@roberttownley.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+uvicorn = "^0.13.4"
+pydantic = "^1.8.2"
+
+[tool.poetry.dev-dependencies]
+black = "^21.5b1"
+flake8 = "^3.9.2"
+pylint = "^2.8.2"
+mypy = "^0.812"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

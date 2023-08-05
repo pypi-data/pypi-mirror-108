@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: stonehenge
+Version: 0.1.0
+Summary: A fast, flexible, and fully-featured web framework
+License: MIT
+Author: Robert Townley
+Author-email: me@roberttownley.com
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: pydantic (>=1.8.2,<2.0.0)
+Requires-Dist: uvicorn (>=0.13.4,<0.14.0)
