@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+src/YAPBWD/YAPBWD.py
+src/YAPBWD/__init__.py
+src/YAPBWD.egg-info/PKG-INFO
+src/YAPBWD.egg-info/SOURCES.txt
+src/YAPBWD.egg-info/dependency_links.txt
+src/YAPBWD.egg-info/top_level.txt
