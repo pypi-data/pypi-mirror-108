@@ -1,0 +1,17 @@
+candleplot_trade/__init__.py,sha256=BUUT3NbWS0m36Js_QeolrIu9MmdtulOzz5rjXSHyyUQ,2725
+candleplot_trade/candles.py,sha256=CFEVV3-Fkolov-VAEH0Un53HWGvNrfytFsr3v6P2RtA,4281
+candleplot_trade/decisions.py,sha256=bylGhFufCtEutKBEQd4bti0Nf-ZD4YBU-ndwLEngmTQ,5297
+candleplot_trade/errors.py,sha256=GSVC8nyM7JPrEXXQlrac44TjFxW3ALtAZE2Q7Q0j-dY,660
+candleplot_trade/example_trade.py,sha256=d0Rx7l3ZpIp_VDX0jDxnJtJNSSd9ZKzqWD2P6LaD_KM,685
+candleplot_trade/figures.py,sha256=fq4_m5_6ywqYCiqPHtiHxB7I11LEsv_-JnO2-HioY1M,120
+candleplot_trade/helpfuncs.py,sha256=h9c1bV6lVX3NYjF5NOyrLo5Hs2kXvfYhtvvQKUPIiqA,4919
+candleplot_trade/indicators.py,sha256=eULeatTwQS6uJ0KbYLdHU77to30rGPHARDRZ9RsRrwQ,7706
+candleplot_trade/params.py,sha256=bIFz-Ljp2KgKbDCaCMZ-scSNsWhrKJ8_9l7qNq6x8Ic,950
+candleplot_trade/plot.py,sha256=qrMw9gAnhb5kHnVhA0YoEhsdpIOlxTX0H28r-3iwurU,18043
+candleplot_trade/setup.py,sha256=p4r_oN1nf3Z7weShPWlBmgGDNaGxJW2wF6r5cMjjXrE,593
+candleplot_trade/simple_trade.py,sha256=kEyyIXFGx8taajMfZz_-GDU2WOevXzYXf0PN0ysAxIA,3899
+candleplot_trade/trade.py,sha256=xlAM4JRT0umCRGaN4x4NEijFSy4Jg18oJtAu0MOWfzI,5902
+candleplot_trade-0.9.dist-info/METADATA,sha256=Q7NqlwYPBWyGdHh60qRe8PSYKN3QtL6HjhVWmgEiJcE,2692
+candleplot_trade-0.9.dist-info/WHEEL,sha256=S6zePDbUAjzMmpYOg2cHDxuYFWw7WiOXt6ogM6hIB5Q,92
+candleplot_trade-0.9.dist-info/top_level.txt,sha256=IInqEO5RxEzcxIi5CZbEwMqmSw97pXmFpJryDYAkKoQ,17
+candleplot_trade-0.9.dist-info/RECORD,,
