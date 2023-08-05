@@ -1,0 +1,16 @@
+DisMail/__init__.py,sha256=4VPBQw51NJkAHV3vp0wD0sChyS2f7dgRtQmr0B0Ki_8,26
+DisMail/__main__.py,sha256=uqaWrloeBE8uNoBZtE6Ni8CBpeusODg9VDMiekTXGO0,471
+DisMail/utils.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+DisMail/interface/__init__.py,sha256=4_h9meXMCLqsSk-Gd_Ga7oN72OBsncettC62vkLG6vE,21
+DisMail/interface/input.py,sha256=muzLQkvHUsIr752xKazSv_qshUqDBuc1f6d9pmgrLGI,457
+DisMail/interface/main.py,sha256=fGPwIwPlGS54jrYKfZbFPdjFXEsS3dk5xxQwbpfU73Y,3506
+DisMail/interface/options.py,sha256=dYqX90_2B3PaBzir7f8dz3N0xVc1CVJbmNvR6yMt4Y8,1501
+DisMail/interface/table.py,sha256=EHmXfI0ww3zTEY6892x70sT37nGiSqOX7N5SiZBY1Sw,723
+DisMail/secmail/__init__.py,sha256=__9Qb2MkcGrGtuyYLlkfqHFpqXJwD0LjN99zevZvBtY,35
+DisMail/secmail/account.py,sha256=M-6wFg2t3CQV2Mev21mofWGXK6tb6PqZkOeI7wuvVlk,2619
+DisMail-1.0.0rc2.dist-info/LICENSE,sha256=jdzHdFaOHR1Buikx2Dn3cyk-j5cs5ZNrvysbVsYoI74,1061
+DisMail-1.0.0rc2.dist-info/METADATA,sha256=LlGtK71NKc8axl9a9xJKVH6CRp0DzUMzVVGE7DL308c,1572
+DisMail-1.0.0rc2.dist-info/WHEEL,sha256=YUYzQ6UQdoqxXjimOitTqynltBCkwY6qlTfTh2IzqQU,97
+DisMail-1.0.0rc2.dist-info/entry_points.txt,sha256=2IljQJmrf8a_ypS9iIrxdAtErI0r44b5M4RTLxVM7NY,83
+DisMail-1.0.0rc2.dist-info/top_level.txt,sha256=e_3Zjjbfu3FsiFtE7U8S46nKqMOQI_Nzufih1gD_S9E,8
+DisMail-1.0.0rc2.dist-info/RECORD,,

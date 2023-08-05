@@ -1,0 +1,4 @@
+[console_scripts]
+DisMail = DisMail.__main__:main
+dismail = DisMail.__main__:main
+
