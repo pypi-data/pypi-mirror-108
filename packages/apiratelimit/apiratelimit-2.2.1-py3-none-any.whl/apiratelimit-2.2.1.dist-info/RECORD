@@ -1,0 +1,9 @@
+apiratelimit/__init__.py,sha256=vU-8dc2fa0_vRyJNmn2tnE93pow0zNNouf5UB3IfTmw,687
+apiratelimit/decorators.py,sha256=Gx6rl2tlqR4ZJGZKyPGLE1aHPEZgLJAENL7RyLo6L9A,4415
+apiratelimit/exception.py,sha256=LGP_o3yO9vlZyIoxbxtnHM-eRQ9QB0UP_M39U61t7wg,672
+apiratelimit/utils.py,sha256=KQeE2Tj4dwK9tzhuc15RO3nHAkBU9_gCz2BVSPqeSEw,291
+apiratelimit-2.2.1.dist-info/LICENSE.txt,sha256=Lcmqwidh0q4CXfDmP5Gzq6OzLnKJ192KG2icwEr6mRI,1066
+apiratelimit-2.2.1.dist-info/METADATA,sha256=pKIwuvhmqJXHya77bkThcdaXE9-psDjif5oPtQ3Se8A,4553
+apiratelimit-2.2.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+apiratelimit-2.2.1.dist-info/top_level.txt,sha256=8spTQKcpQv6Bt2ogDsL375KioTjSvTHvKR6ViEG6rj8,13
+apiratelimit-2.2.1.dist-info/RECORD,,
