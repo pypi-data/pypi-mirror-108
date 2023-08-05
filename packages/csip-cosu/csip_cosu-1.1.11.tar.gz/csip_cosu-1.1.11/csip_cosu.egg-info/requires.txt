@@ -1,0 +1,9 @@
+csip
+numpy
+requests
+scipy
+matplotlib
+attrs
+tqdm
+future
+pyyaml
