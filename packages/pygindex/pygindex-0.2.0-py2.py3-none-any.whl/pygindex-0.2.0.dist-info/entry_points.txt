@@ -1,0 +1,3 @@
+[console_scripts]
+pygi=pygindex:cli.app
+

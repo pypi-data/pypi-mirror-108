@@ -1,0 +1,23 @@
+IG instrument: {{ d.data.instrument.epic }}
+Expiry:        {{ d.data.instrument.expiry }}
+Name:          {{ d.data.instrument.name }}
+Market ID:     {{ d.data.instrument.marketId }}
+Market status: {{ d.data.snapshot.marketStatus }}
+Change (net):  {{ d.data.snapshot.netChange }}
+Change (%):    {{ d.data.snapshot.percentageChange }}
+Sell:          {{ d.data.snapshot.bid }}
+Buy:           {{ d.data.snapshot.offer }}
+High:          {{ d.data.snapshot.high }}
+Low:           {{ d.data.snapshot.low }}
+
+{% macro fmt_fl(item) %}
+{% if item %}{{ "{:9.2f}".format(item) -}}{% else %}     None{% endif %}
+{% endmacro %}
+
+{% if d.prices %}
+     Timestamp             Open (S/B)              Close                  High                  Low              Volume
+--------------------+---------------------+---------------------+---------------------+---------------------+----------
+{% for p in d.prices.prices %}
+{{ p.snapshotTime }}   {{ fmt_fl(p.openPrice.bid) }}/{{ fmt_fl(p.openPrice.ask) }}   {{ fmt_fl(p.closePrice.bid) }}/{{ fmt_fl(p.closePrice.ask) }}   {{ fmt_fl(p.highPrice.bid) }}/{{ fmt_fl(p.highPrice.ask) }}   {{ fmt_fl(p.lowPrice.bid) }}/{{ fmt_fl(p.lowPrice.ask) }}   {{ fmt_fl(p.lastTradedVolume) }}
+{% endfor %}
+{% endif %}
