@@ -1,0 +1,9 @@
+README.md
+setup.py
+transpi/__init__.py
+transpi/__version__.py
+transpi/core.py
+transpi.egg-info/PKG-INFO
+transpi.egg-info/SOURCES.txt
+transpi.egg-info/dependency_links.txt
+transpi.egg-info/top_level.txt
