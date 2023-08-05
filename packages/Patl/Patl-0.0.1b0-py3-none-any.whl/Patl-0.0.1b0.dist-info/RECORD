@@ -1,0 +1,10 @@
+patl/__init__.py,sha256=DM8sRpjHFySIx2QvHm6mCCkUeImyeMXes8zoMN_KqvM,22
+patl/commands.py,sha256=NIP4oqM1-d7PMlc4KrbM_La-FJTxJgfS3fz_a7uqJjg,714
+patl/core.py,sha256=yv7kysQ3JboM989Fs1prNd95IycDTj2MxfEimiKpgNM,3041
+patl/utils.py,sha256=bG4XEnueniokdkke3XbcDEwP5W1rAs9jjAuj2Ufjo5I,771
+Patl-0.0.1b0.dist-info/LICENCE,sha256=YoxtBzGd-AJWxpGeIehCd7qgb0aALYTAURSWcJD0RBw,1085
+Patl-0.0.1b0.dist-info/METADATA,sha256=S7n06oMCJtW4G0aqBhovk2Xpatp9XQ08aE_PSWtEdtw,2226
+Patl-0.0.1b0.dist-info/WHEEL,sha256=D1Wh14kWDxPnrM-5t_6UCB-UuQNrEODtRa3vF4OsvQY,97
+Patl-0.0.1b0.dist-info/entry_points.txt,sha256=U-q4X4yGomnWpKh3PoMu4U_VyIWdNHn30CdiPjKweKc,45
+Patl-0.0.1b0.dist-info/top_level.txt,sha256=VYJqjnJ-DcOzqZhszptJSfetDhfukM1rPEESXo7RXtA,5
+Patl-0.0.1b0.dist-info/RECORD,,
