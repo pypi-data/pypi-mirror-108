@@ -1,0 +1,5 @@
+[console_scripts]
+create_dataframe=src.lab_overrides.create_dataframe:create
+display_binary=src.lab_overrides.display_dataset:display_binary_classification_df
+display_overrides=src.lab_overrides.display_dataset:display_overrides_df
+
