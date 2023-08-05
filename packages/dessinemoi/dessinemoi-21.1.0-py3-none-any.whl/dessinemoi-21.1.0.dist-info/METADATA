@@ -1,0 +1,72 @@
+Metadata-Version: 2.1
+Name: dessinemoi
+Version: 21.1.0
+Summary: A simple Python factory system
+Home-page: https://github.com/leroyvn/dessinemoi
+Author: Vincent Leroy
+Maintainer: Vincent Leroy
+License: MIT
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: attrs
+Provides-Extra: dev
+Requires-Dist: black ; extra == 'dev'
+Requires-Dist: bump2version ; extra == 'dev'
+Requires-Dist: click ; extra == 'dev'
+Requires-Dist: conda-lock ; extra == 'dev'
+Requires-Dist: isort ; extra == 'dev'
+Requires-Dist: pip ; extra == 'dev'
+Requires-Dist: pip-tools ; extra == 'dev'
+Requires-Dist: ruamel.yaml ; extra == 'dev'
+Requires-Dist: setuptools ; extra == 'dev'
+Requires-Dist: twine ; extra == 'dev'
+Provides-Extra: docs
+Requires-Dist: sphinx (>=3.1) ; extra == 'docs'
+Requires-Dist: furo ; extra == 'docs'
+Requires-Dist: sphinx-copybutton ; extra == 'docs'
+Requires-Dist: sphinx-autodoc-typehints ; extra == 'docs'
+Provides-Extra: tests
+Requires-Dist: pytest ; extra == 'tests'
+Requires-Dist: pytest-cov ; extra == 'tests'
+
+# Dessine-moi, a simple Python factory
+
+> S'il vous plaît, dessine-moi un mouton.
+
+The narrator of Antoine de Saint-Exupéry's Little Prince probably dreamt of a factory like this one...
+
+[![Documentation Status](https://img.shields.io/readthedocs/dessinemoi?style=flat-square)](https://dessinemoi.readthedocs.io)
+[![PyPI version](https://img.shields.io/pypi/v/dessinemoi?color=blue&style=flat-square)](https://pypi.org/project/dessinemoi)
+[![Conda version](https://img.shields.io/conda/v/eradiate/dessinemoi?color=blue&style=flat-square)](https://anaconda.org/eradiate/dessinemoi)
+
+[![Code style: black](https://img.shields.io/badge/code%20style-black-black?style=flat-square)](https://black.readthedocs.io)
+[![Imports: isort](https://img.shields.io/badge/%20imports-isort-blue?style=flat-square&labelColor=orange)](https://pycqa.github.io/isort)
+
+## Motivation
+
+*Dessine-moi* is a simple Python implement of the factory pattern. It was born from the need to create dynamically object trees from nested dictionaries (*e.g.* a JSON document).
+
+## Features
+
+- Create a `Factory` object and register types to it
+- Use dictionaries to create objects from the factory
+- Create `attrs`-compatible converters to automatically convert dictionaries to instances of registered types
+- Customise factories to your needs
+
+Check the [documentation](https://dessinemoi.readthedocs.io) for more detail.
+
+## License
+
+*Dessine-moi* is distributed under the terms of the
+[MIT license](https://choosealicense.com/licenses/mit/).
+
+## About
+
+*Dessine-moi* is written and maintained by [Vincent Leroy](https://github.com/leroyvn).
+
+The development is supported by [Rayference](https://www.rayference.eu).
+
+*Dessine-moi* is a component of the
+[Eradiate radiative transfer model](https://www.eradiate.eu).
+
+
