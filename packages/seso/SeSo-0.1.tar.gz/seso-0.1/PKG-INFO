@@ -1,0 +1,53 @@
+Metadata-Version: 2.1
+Name: seso
+Version: 0.1
+Summary: Search and Sort Algorithms
+Home-page: https://github.com/AjithRamachandran/seso
+Author: Ajith Ramachandran
+Author-email: ajithar204@gmail.com
+License: MIT
+Keywords: search and sort
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# seso
+**A Search and Sort Extension Module for Python**
+
+## Install
+
+### from source
+
+```pip3 install seso```
+
+## Tests
+
+```python3 -m unittest discover tests```
+
+## List of Implementations
+
+- [Search](algorithms/search)
+    - [linear search](seso/include/search/linearsearch.h)
+    - [binary search](seso/include/search/binarysearch.h)
+    - [jump search](seso/include/search/jumpsearch.h)
+    - [interpolation search](seso/include/search/interpolationsearch.h)
+    - [exponential search](seso/include/search/exponentialsearch.h)
+    - [fibonacci search](seso/include/search/fibonaccisearch.h)
+    - [ternary search](seso/include/search/ternarysearch.h)
+
+- [Sort](algorithms/search)
+    - [bubble sort](seso/include/sort/bubblesort.h)
+    - [selection sort](seso/include/sort/selectionsort.h)
+    - [insertion sort](seso/include/sort/insertionsort.h)
+    - [merge sort](seso/include/sort/mergesort.h)
+    - [quick sort](seso/include/sort/quicksort.h)
+    - [heap sort](seso/include/sort/heapsort.h)
+    - [radix sort](seso/include/sort/radixsort.h)
+    - [bucket sort](seso/include/sort/bucketsort.h)
+
+## [Documentation](https://github.com/AjithRamachandran/seso/tree/main/docs)
+
+
