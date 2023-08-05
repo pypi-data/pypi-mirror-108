@@ -1,0 +1,11 @@
+README.md
+setup.py
+brc.egg-info/PKG-INFO
+brc.egg-info/SOURCES.txt
+brc.egg-info/dependency_links.txt
+brc.egg-info/requires.txt
+brc.egg-info/top_level.txt
+brc_pytorch/__init__.py
+brc_pytorch/benchmarks.py
+brc_pytorch/modules.py
+brc_pytorch/utils.py
