@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+ez-pg/src/ez-pg.py
+ez-pg/src/ez_pg.egg-info/PKG-INFO
+ez-pg/src/ez_pg.egg-info/SOURCES.txt
+ez-pg/src/ez_pg.egg-info/dependency_links.txt
+ez-pg/src/ez_pg.egg-info/requires.txt
+ez-pg/src/ez_pg.egg-info/top_level.txt
