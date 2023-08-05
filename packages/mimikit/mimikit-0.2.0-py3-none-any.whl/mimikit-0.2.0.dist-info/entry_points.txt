@@ -1,0 +1,4 @@
+[console_scripts]
+freqnet = mimikit.models.freqnet:main
+samplernn = mimikit.models.sample_rnn:main
+
