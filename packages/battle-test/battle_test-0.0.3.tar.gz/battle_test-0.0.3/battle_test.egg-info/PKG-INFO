@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: battle-test
+Version: 0.0.3
+Summary: A airtest package for battle test.
+Home-page: https://github.com/virtualeconomy/pyvsystems
+Author: bingo
+License: MIT
+Description: battle test package
+Keywords: battletest
+Platform: UNKNOWN
+Description-Content-Type: text/markdown

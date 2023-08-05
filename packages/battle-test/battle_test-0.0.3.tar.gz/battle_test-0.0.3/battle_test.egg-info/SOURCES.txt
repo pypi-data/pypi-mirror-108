@@ -1,0 +1,9 @@
+README.md
+setup.py
+battle_test/__init__.py
+battle_test/main.py
+battle_test.egg-info/PKG-INFO
+battle_test.egg-info/SOURCES.txt
+battle_test.egg-info/dependency_links.txt
+battle_test.egg-info/requires.txt
+battle_test.egg-info/top_level.txt
