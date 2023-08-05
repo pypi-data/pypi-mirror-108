@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: tidal-stability
+Version: 1.0.3
+Summary: Masters thesis code for generating solutions
+Home-page: UNKNOWN
+Author: Blake Staples
+Author-email: yourlocalblake@gmail.com
+License: GNU version 3
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Topic :: Scientific/Engineering
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: arrow (>=0.17.0)
+Requires-Dist: attrs (>=20.3.0)
+Requires-Dist: h5py (>=2.10.0)
+Requires-Dist: matplotlib (>=3.3.2)
+Requires-Dist: mpmath (>=1.1.0)
+Requires-Dist: numpy (>=1.19.2)
+Requires-Dist: scipy (>=1.5.2)
+
+UNKNOWN
+
+
