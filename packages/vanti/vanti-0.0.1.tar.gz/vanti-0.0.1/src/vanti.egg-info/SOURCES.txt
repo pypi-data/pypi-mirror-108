@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/vanti/__init__.py
+src/vanti/main.py
+src/vanti.egg-info/PKG-INFO
+src/vanti.egg-info/SOURCES.txt
+src/vanti.egg-info/dependency_links.txt
+src/vanti.egg-info/top_level.txt
