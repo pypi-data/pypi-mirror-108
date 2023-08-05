@@ -1,0 +1,45 @@
+from pathlib import Path
+
+from click.testing import CliRunner
+from hamcrest import assert_that, contains_string
+
+from {{ python_package_name }}.application.main_example import main
+from tests.{{ python_package_name }}.application.timeout_manager import timeout
+
+CLI_RUNNER_TIMEOUT = 3
+
+
+def test_main_should_start_on_local_fs(tmp_path: Path):
+    # Given
+    main_parameters = ["--backend", "local", "--work-dir", str(tmp_path)]
+
+    # When
+    with timeout(CLI_RUNNER_TIMEOUT):
+        result = CliRunner().invoke(main, main_parameters, catch_exceptions=False)
+
+    # Then
+    assert_that(str(result.stdout), contains_string("Hello Template App!"))
+
+
+def test_main_should_not_start_on_local_fs_given_no_work_dir_provided():
+    # Given
+    main_parameters = ["--backend", "local"]
+
+    # When
+    result = CliRunner().invoke(main, main_parameters, catch_exceptions=False)
+
+    # Then
+    stdout = str(result.stdout_bytes)
+    assert_that(stdout, contains_string("A working directory must be provided when using local backend"))
+
+
+def test_main_should_not_start_given_no_backend_provided():
+    # Given
+    main_parameters = []
+
+    # When
+    result = CliRunner().invoke(main, main_parameters, catch_exceptions=False)
+
+    # Then
+    stdout = str(result.stdout_bytes)
+    assert_that(stdout, contains_string("Missing option '--backend'"))

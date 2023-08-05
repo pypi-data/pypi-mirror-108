@@ -1,0 +1,12 @@
+_subdirectory: project
+_templates_suffix: .jinja
+_envops: !include ../jinja-config.yml
+
+project_name:
+  type: str
+  help: Your project name
+
+project_slug:
+  type: str
+  help: Your project slug
+  default: "{{project_name|lower|replace('-', '_')|replace(' ', '_')}}"

@@ -1,0 +1,24 @@
+import click
+from pilotis_io.local import LocalIoApi, LocalPandasApi
+from pilotis_io.parser import parse_dataset
+
+from {{ python_package_name }}.domain.persistence.landing.dataset_example import DatasetExamplePersistence
+
+
+DATASET_PERSISTENCE = {"dataset_example": DatasetExamplePersistence}
+
+
+@click.command(name="parse")
+@click.option("--workdir")
+@click.option("--dataset-name")
+@click.option("--dataset-version")
+def main(workdir: str, dataset_name: str, dataset_version: str) -> None:
+    io_api = LocalIoApi(workdir)
+    pandas_api = LocalPandasApi(io_api)
+    parse_dataset(
+        DATASET_PERSISTENCE[dataset_name](io_api, pandas_api), dataset_version
+    )
+
+
+if __name__ == "__main__":
+    main()

@@ -1,0 +1,3 @@
+_subdirectory: project
+_templates_suffix: .jinja
+_envops: !include ../../jinja-config.yml

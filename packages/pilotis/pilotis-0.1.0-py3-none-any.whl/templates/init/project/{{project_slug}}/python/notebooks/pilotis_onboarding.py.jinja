@@ -1,0 +1,106 @@
+# ---
+# jupyter:
+#   jupytext:
+#     formats: ipynb,py:percent
+#     text_representation:
+#       extension: .py
+#       format_name: percent
+#       format_version: '1.3'
+#       jupytext_version: 1.7.1
+#   kernelspec:
+#     display_name: Python 3
+#     language: python
+#     name: python3
+# ---
+
+# %%
+# This will import code from the refactored project
+import os.path
+import sys
+
+python_dir = os.path.abspath('..')
+sys.path.append(python_dir)
+
+# %%
+# This will configure Pandas to display all columns of DataFrames
+import pandas as pd
+
+pd.set_option("display.max_columns", None)
+
+# %%
+import {{ python_package_name }}
+
+# %%
+WORK_DIR = f'{os.path.dirname(os.path.realpath(__file__))}/../../workdir'
+
+# %% [markdown]
+# # Load raw data for schema discovery
+
+# %% [markdown]
+# ## Generate example data
+
+# %%
+# !cd ../.. && make generate-example
+
+# %% [markdown]
+# ## Load data
+
+# %%
+from pilotis_io.local import LocalIoApi, LocalPandasApi
+from pilotis_io.directory_structure import dataset_raw_dir_path
+
+# %%
+io_api = LocalIoApi(WORK_DIR)
+
+# %%
+dataset_name = 'dataset_example'
+dataset_version = 'version_1'
+
+dataset_path = dataset_raw_dir_path(dataset_name, dataset_version)
+
+# %%
+dataset_files = io_api.list_files_in_dir(dataset_path)
+
+# %%
+dataframe = LocalPandasApi(io_api).load_pandas_dataset(dataset_files)
+
+# %% [markdown]
+# ## Explore data
+
+# %%
+dataframe.dtypes
+
+# %%
+dataframe.head()
+
+# %% [markdown]
+# # Parse some files
+
+# %%
+# ! cd .. && poetry run python -m {{ python_package_name }}.application.parse_example --workdir ../workdir --dataset-name dataset_example --dataset-version version_1
+
+
+# %% [markdown]
+# # Load parquet
+
+# %%
+from pilotis_io.local import LocalIoApi, LocalPandasApi
+from pilotis_io.directory_structure import dataset_parsed_dir_path
+
+from {{ python_package_name }}.domain.persistence.landing.dataset_example import DatasetExamplePersistence
+
+# %%
+dataset_version = 'version_1'
+
+# %%
+io_api = LocalIoApi(WORK_DIR)
+pandas_api = LocalPandasApi(io_api)
+persistence = DatasetExamplePersistence(io_api, pandas_api)
+
+# %%
+dataframe = persistence.load_parsed(dataset_version)
+
+# %%
+dataframe.head()
+
+# %%
