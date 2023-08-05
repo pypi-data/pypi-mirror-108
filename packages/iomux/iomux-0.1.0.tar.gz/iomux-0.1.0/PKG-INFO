@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: iomux
+Version: 0.1.0
+Summary: IO buffer multiplexer
+Keywords: io multiplexer mux bytesio stringio process capture
+Home-page: https://github.com/FFY00/python-iomux
+Author: Filipe Laíns <lains@riseup.net>
+Author-Email: Filipe Laíns <lains@riseup.net>
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Project-URL: Homepage, https://github.com/FFY00/python-iomux
+Project-URL: Repository, https://github.com/FFY00/python-iomux
+Requires-Python: >=3.5
+Provides-Extra: test
+Requires-Dist: pytest; extra == "test"
+Requires-Dist: pytest-cov; extra == "test"
+Description-Content-Type: text/markdown
+
+# iomux
+
+IO buffer multiplexer.
+
+
+```python
+import sys
+
+from contextlib import redirect_stdout, redirect_stderr
+
+import iomux
+
+
+capture = iomux.StringMux()
+
+with redirect_stdout(capture.out), redirect_stderr(capture.err):
+    print('aaa')
+    print('bbb', file=sys.stderr)
+    print('aaa')
+    print('bbb', file=sys.stderr)
+
+assert capture.getvalue() == 'aaa\nbbb\naaa\nbbb\n'
+assert capture.getvalue('out') == 'aaa\naaa\n'
+assert capture.getvalue('err') == 'bbb\nbbb\n'
+assert list(capture.values()) == [
+    ('out', 'aaa\n'),
+    ('err', 'bbb\n'),
+    ('out', 'aaa\n'),
+    ('err', 'bbb\n'),
+]
+```
