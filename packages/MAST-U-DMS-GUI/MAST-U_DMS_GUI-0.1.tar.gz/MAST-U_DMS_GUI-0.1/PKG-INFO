@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: MAST-U_DMS_GUI
+Version: 0.1
+Summary: A GUI for spectral data analysis at MAST-U
+Home-page: UNKNOWN
+Author: Gareth Williams
+Author-email: gw878@york.ac.uk
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
