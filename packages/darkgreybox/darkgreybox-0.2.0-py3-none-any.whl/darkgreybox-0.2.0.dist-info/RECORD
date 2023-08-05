@@ -1,0 +1,9 @@
+darkgreybox/__init__.py,sha256=S7kryRn84C2lz8QrBuDnIaVJLyTVNru-fQcG854lIP8,914
+darkgreybox/base_model.py,sha256=hfOX5CustPy4eXWjRihk0eKvoDPS0DDPHGSPhO_iRJs,4880
+darkgreybox/fit.py,sha256=bS_MuejfEUQSfaLEg5jUDj3RWHnK4QGqOsUF-YZ5w5k,15858
+darkgreybox/models.py,sha256=MefFo04d3zWZW8zfN2dZg8b_aIxlpG5FPvo40z-5QxY,16530
+darkgreybox-0.2.0.dist-info/LICENSE,sha256=c8xJEX9CQFbfo64Lg8FoMMNW07BdFhSvcKtfnimz1Tg,1072
+darkgreybox-0.2.0.dist-info/METADATA,sha256=vgyPgHYyzgqi6zu5FXtNs0Qu8buuzytL3zbzMFQL6Rg,6552
+darkgreybox-0.2.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+darkgreybox-0.2.0.dist-info/top_level.txt,sha256=m_9hJiSkfWBfiTU6Q9Quoq7vW0YB-wY4wNtobzzLH80,12
+darkgreybox-0.2.0.dist-info/RECORD,,
