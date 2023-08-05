@@ -1,0 +1,24 @@
+
+[:platform_system == "Darwin"]
+astropy==4.2.1
+matplotlib==3.4.2
+numpy==1.20.3
+pandas==1.2.4
+PyQt5==5.15.4
+tqdm==4.61.0
+
+[:platform_system == "Linux"]
+astropy==4.2.1
+matplotlib==3.4.2
+numpy==1.20.3
+pandas==1.2.4
+PyQt5==5.15.4
+tqdm==4.60.0
+
+[:platform_system == "Windows"]
+astropy==4.2
+matplotlib==3.3.4
+numpy==1.20.2
+pandas==1.2.4
+pyqt==5.9.2
+tqdm==4.59.0
