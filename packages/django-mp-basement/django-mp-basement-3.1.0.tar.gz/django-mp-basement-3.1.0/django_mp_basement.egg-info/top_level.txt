@@ -1,0 +1,15 @@
+accounts
+assets
+basement
+cap
+flatpages
+history
+images
+model_search
+notify
+pagination
+seo
+site_config
+slider
+turbosms
+watermarks
