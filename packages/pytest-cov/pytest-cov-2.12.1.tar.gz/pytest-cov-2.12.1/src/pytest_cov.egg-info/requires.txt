@@ -1,0 +1,11 @@
+pytest>=4.6
+coverage>=5.2.1
+toml
+
+[testing]
+fields
+hunter
+process-tests
+six
+pytest-xdist
+virtualenv
