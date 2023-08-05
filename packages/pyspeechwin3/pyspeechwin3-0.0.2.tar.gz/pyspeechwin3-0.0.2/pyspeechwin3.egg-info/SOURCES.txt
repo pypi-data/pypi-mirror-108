@@ -1,0 +1,11 @@
+CHANGELOG.txt
+LICENSE.txt
+MANIFEST.in
+README.txt
+setup.py
+pyspeechwin3/__init__.py
+pyspeechwin3.egg-info/PKG-INFO
+pyspeechwin3.egg-info/SOURCES.txt
+pyspeechwin3.egg-info/dependency_links.txt
+pyspeechwin3.egg-info/requires.txt
+pyspeechwin3.egg-info/top_level.txt
