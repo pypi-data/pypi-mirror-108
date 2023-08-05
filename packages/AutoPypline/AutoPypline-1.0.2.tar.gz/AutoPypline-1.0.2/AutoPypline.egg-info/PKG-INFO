@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: AutoPypline
+Version: 1.0.2
+Summary: A package for automating python pipelines
+Home-page: https://github.com/Sumukha21/AutoPypline
+Author: Sumukha Manjunath
+Author-email: sumukha1996@gmail.com
+License: UNKNOWN
+Description: # AutoPypline
+        Automatic  execution of python pipelines defined in a yaml file 
+        Instructions required to use the library will be updated soon
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
