@@ -1,0 +1,83 @@
+Metadata-Version: 2.1
+Name: permute
+Version: 0.2
+Summary: Permutation tests and confidence sets for Python
+Home-page: http://statlab.github.io/permute/
+Author: K. Jarrod Millman, Kellie Ottoboni, and Philip B. Stark
+Author-email: permute@googlegroups.com
+License: BSD License
+Download-URL: http://github.com/statlab/permute
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Scientific/Engineering
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS
+Requires-Python: >=3.7
+License-File: LICENSE
+
+Permutation tests and confidence sets
+=====================================
+
+|PyPI| |Build Status| |Coverage Status|
+
+Permutation tests and confidence sets for a variety of nonparametric
+testing and estimation problems, for a variety of randomization designs.
+
+-  **Website (including documentation):**
+   http://statlab.github.io/permute
+-  **Mailing list:** http://groups.google.com/group/permute
+-  **Source:** https://github.com/statlab/permute
+-  **Bug reports:** https://github.com/statlab/permute/issues
+
+Installation from binaries
+--------------------------
+
+::
+
+   $ pip install permute
+
+Installation from source
+------------------------
+
+Install dependencies using:
+
+::
+
+   $ pip install -r requirements.txt
+
+Then, install permute using:
+
+::
+
+   $ pip install .
+
+If you plan to develop the package, you may run it directly from source:
+
+::
+
+   $ pip install -e .       # Do this once to add pkg to Python path
+
+License information
+-------------------
+
+See the file LICENSE for information on the history of this software,
+terms & conditions for usage, and a DISCLAIMER OF ALL WARRANTIES.
+
+.. |PyPI| image:: https://img.shields.io/pypi/v/permute.svg
+   :target: https://pypi.org/project/permute/
+.. |Build Status| image:: https://github.com/statlab/permute/workflows/default/badge.svg?branch=master
+   :target: https://github.com/statlab/permute/actions?query=workflow%3Adefault+branch%3Amaster
+.. |Coverage Status| image:: https://codecov.io/gh/statlab/permute/branch/master/graph/badge.svg
+   :target: https://codecov.io/gh/statlab/permute
+
+
