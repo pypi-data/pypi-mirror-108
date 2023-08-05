@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: scanflow
+Version: 0.0.1
+Summary: An MLOps Platform
+Home-page: UNKNOWN
+Author: BSC Scanflow Team
+Author-email: peini.liu@bsc.es
+License: MIT license
+Keywords: scanflow,kubernetes,mlflow,argo,seldon
+Platform: UNKNOWN
+Requires-Python: >=3.6
+License-File: LICENSE
+Requires-Dist: click (==8.0.1)
+Requires-Dist: mlflow (==1.14.1)
+Requires-Dist: docker (==4.1.0)
+Requires-Dist: matplotlib (==3.1.1)
+Requires-Dist: fastapi (==0.65.1)
+Requires-Dist: uvicorn (==0.14.0)
+Requires-Dist: kubernetes (==12.0.1)
+Requires-Dist: seldon-core (==1.8.0)
+Requires-Dist: boto3 (==1.17.53)
+Requires-Dist: couler
+Provides-Extra: dev
+Requires-Dist: click (==7.0) ; extra == 'dev'
+Requires-Dist: mlflow (==1.14.1) ; extra == 'dev'
+Requires-Dist: keras (==2.3.1) ; extra == 'dev'
+Requires-Dist: tensorflow (==2.4.0) ; extra == 'dev'
+Requires-Dist: docker (==4.1.0) ; extra == 'dev'
+Requires-Dist: jsonschema (==3.0.2) ; extra == 'dev'
+Requires-Dist: matplotlib (==3.1.1) ; extra == 'dev'
+Requires-Dist: numpy (==1.19.5) ; extra == 'dev'
+Requires-Dist: pandas (==0.25.3) ; extra == 'dev'
+Requires-Dist: pandas-profiling (==2.5.0) ; extra == 'dev'
+Requires-Dist: PyYAML (==5.3) ; extra == 'dev'
+Requires-Dist: scikit-learn (==0.21.3) ; extra == 'dev'
+Requires-Dist: seaborn (==0.9.0) ; extra == 'dev'
+Requires-Dist: six (==1.15.0) ; extra == 'dev'
+Requires-Dist: oyaml (==0.9) ; extra == 'dev'
+Requires-Dist: plotly (==4.5.1) ; extra == 'dev'
+Requires-Dist: fastapi (==0.63.0) ; extra == 'dev'
+Requires-Dist: uvicorn (==0.12.3) ; extra == 'dev'
+Requires-Dist: kubernetes (==12.0.1) ; extra == 'dev'
+Requires-Dist: couler ; extra == 'dev'
+Requires-Dist: seldon-core (==1.7.0) ; extra == 'dev'
+Requires-Dist: boto3 ; extra == 'dev'
+
+UNKNOWN
+
