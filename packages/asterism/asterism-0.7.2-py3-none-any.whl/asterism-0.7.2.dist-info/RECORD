@@ -1,0 +1,16 @@
+asterism/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+asterism/bagit_helpers.py,sha256=efhX7Uw2r0QxFUfi7UDczDSJLncEjMm5DW5tTbXxtkg,1493
+asterism/file_helpers.py,sha256=EMzX0Z7CeAhYRMoUCST6mW2I7bX0Urg1p6ZEiMcFPX0,4476
+asterism/models.py,sha256=pOentXr052fZrlF57Bh0xA85aXKENBOZmnAwrl5yPlA,1196
+asterism/views.py,sha256=AQbU0koSlgUVdonHDug9CiBIgCzcmvycftfi8pUScXY,1332
+asterism/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+asterism/tests/helpers.py,sha256=sCx1FeiKHpnWh53n3tpzjvV3oeLWKWllJuA3rdlCXxE,1947
+asterism/tests/test_bagit.py,sha256=YRlupaDzMCHA2mSSeFxsAmdeoVeCqKCRVyFZiKndc3c,1937
+asterism/tests/test_file_helpers.py,sha256=o-AL3dqP4s1W__t3ivFvT8C8uAgzSHgogyHQaJwpYQE,3332
+asterism/tests/test_models.py,sha256=_5tyqVACB3T0llhrYmuR7NRygKeIhvYMwk_T2hIsd8g,1477
+asterism/tests/test_views.py,sha256=S6uZG5JUm-Fr8e80Rek0Vf-sFubRF7HXSfAeGWiH_DU,2063
+asterism-0.7.2.dist-info/LICENSE,sha256=FiY8mzD4ojwHy-q8rZH9_M9N0_6alXPYHUCSsjm2KeU,1083
+asterism-0.7.2.dist-info/METADATA,sha256=prk2_Dk-v-DGzX0Ql3YVkn9KihzDXGcLrufsH8GMd7A,1696
+asterism-0.7.2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+asterism-0.7.2.dist-info/top_level.txt,sha256=Te76mXLeXG19HhFYtYIEd-LGNufMyHDIqPcClzbRitk,9
+asterism-0.7.2.dist-info/RECORD,,
