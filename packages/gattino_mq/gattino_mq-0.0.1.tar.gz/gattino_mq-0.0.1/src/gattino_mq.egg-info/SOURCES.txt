@@ -1,0 +1,10 @@
+README.md
+setup.cfg
+setup.py
+src/gattino_mq/__init__.py
+src/gattino_mq/gattino_mq.py
+src/gattino_mq.egg-info/PKG-INFO
+src/gattino_mq.egg-info/SOURCES.txt
+src/gattino_mq.egg-info/dependency_links.txt
+src/gattino_mq.egg-info/requires.txt
+src/gattino_mq.egg-info/top_level.txt
