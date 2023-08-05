@@ -1,0 +1,10 @@
+Pillow
+beautifulsoup4
+dnspython
+langdetect
+lxml
+netifaces
+pyOpenSSL
+requests
+scapy
+tld
