@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: CocoDataset
+Version: 0.1.2
+Summary: COCO Dataset Download
+Home-page: https://github.com/falahgs/
+Author: Falahgs.G.Saleih
+Author-email: falahgs07@gmail.com
+License: MIT
+Description: # COCO Dataset Download
+        This is a Python package for easy to download Determining Specific Part of CoCo Dataset
+        for any class name  and any a count images 
+        
+        ## Installation
+        ```
+        pip install CocoDataset==0.1.2
+        or in colab google cloud
+        !pip install CocoDataset==0.1.2
+        
+        ```
+        ## Tutorial
+        
+        ```
+        [source](https://colab.research.google.com/drive/1QuLLsvX-DnOcOVWxcKWglIzDnxV_OHxE?usp=sharing)
+        
+        u can see tutorial in colab google drive
+        
+        ```
+        # Usage
+        ## get images for specified class name
+        
+        ```
+        from coco_dataset import coco_dataset_download as cocod
+        class_name='person'  #class name 
+        images_count=50       #count of images  
+        annotations_path='/content/annotations/instances_train2014.json' #path of coco dataset annotations 
+        #call download function
+        cocod.coco_dataset_download(class_name,images_count,annotations_path)
+        ``` 
+        
+        
+Keywords: Keras,Tensorflow,Classification,coco dataset
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

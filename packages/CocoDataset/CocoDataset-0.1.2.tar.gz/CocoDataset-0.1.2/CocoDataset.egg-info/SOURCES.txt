@@ -1,0 +1,11 @@
+README.md
+setup.cfg
+setup.py
+CocoDataset.egg-info/PKG-INFO
+CocoDataset.egg-info/SOURCES.txt
+CocoDataset.egg-info/dependency_links.txt
+CocoDataset.egg-info/requires.txt
+CocoDataset.egg-info/top_level.txt
+coco_dataset/__init__.py
+coco_dataset/coco_dataset_download.py
+coco_dataset/test.py
