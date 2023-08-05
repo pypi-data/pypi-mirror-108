@@ -1,0 +1,3 @@
+[pyinstaller40]
+hook-dirs = donb_custom_widget._pyinstaller_hook_dir:get_hook_dirs
+
