@@ -1,0 +1,10 @@
+[console_scripts]
+aep-bundle = aep.tools.show_bundle:main
+aep-config = aep.tools.config:main
+aep-format-json = aep.tools.format_json:main
+aep-generate = aep.tools.generate:main
+aep-promise = aep.tools.show_promise:main
+aep-promise-search = aep.tools.promise_search:main
+aep-promise-usage = aep.tools.promise_usage:main
+aep-technique = aep.tools.show_technique:main
+
