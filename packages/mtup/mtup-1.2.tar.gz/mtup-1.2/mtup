@@ -1,0 +1,114 @@
+#!/bin/bash
+
+#MADHAVTH SHELL SCRIPT UPLOADER
+
+version="1.2"
+
+set -e
+
+uploading=""
+is_folder=0
+
+
+PROGNAME="mtup"
+
+die() {
+    echo "$PROGNAME: $*" >&2
+    exit 1
+}
+
+echop() {
+    echo "${@}" >&2
+}
+
+
+usage() {
+    if [ "$*" != "" ] ; then
+        echo "Error: $*"
+    fi
+
+    cat << EOF
+Usage: $PROGNAME [FILE]| [FOLDER]
+Madhavth Uploader Script usage
+Options:
+-h, --help                 display this usage message and exit
+-v, --version			   show version
+EOF
+    exit 1
+}
+
+check_if_flag_args()
+{
+  if [[ $2 == "-"* ]]; then
+    usage "Not a valid argument for $1"
+  fi
+}
+
+title=""
+REM_ARGS=()
+
+while [ $# -gt 0 ] ; do
+    case "$1" in
+    -h|--help)
+        usage
+        ;;
+
+	-v|--version)
+		echo "version == $version"
+    exit 0
+		;;
+
+    -*)
+        usage "Unknown option '$1'"
+        exit 0
+        ;;
+    *)
+        REM_ARGS+="$1"
+      ;;
+    esac
+    shift
+done
+
+#echop "REM_ARGS are ${REM_ARGS[@]}"
+
+file=${REM_ARGS[0]}
+
+
+if [[ ! -z $file ]]; then
+  echo "uploading $file..."
+else
+  echo "enter a file/folder name to upload"
+  exit 0
+fi
+
+uploading=""
+
+if test -f "$file"; then
+	echo ""
+	uploading="$file"
+elif test -d "$file"; then
+	echo "compressing folder.."
+	tar -zcvf "$file.gz" "$file"
+	uploading="$file.gz"
+	is_folder=1
+else
+	echo "file /folder doesnt exists"
+	exit 1
+fi
+
+link=$(curl --progress-bar --upload-file "$uploading" "https://transfer.sh/$uploading")
+
+#get download link instead of web page
+down_link=$(echo ${link//"https://transfer.sh/"/"https://transfer.sh/get/"})
+
+echo "uploaded $down_link and copied to clipboard"
+
+if [[ "$is_folder" == "1" ]]; then
+	rm -rf "$uploading"
+fi
+
+if [[ $(which cb) ]]; then
+cb $down_link
+else
+copy=$(echo $down_link | python -m pyclip copy &>/dev/null)
+fi
