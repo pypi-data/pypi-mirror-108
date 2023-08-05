@@ -1,0 +1,73 @@
+Metadata-Version: 2.1
+Name: flask_first
+Version: 0.1.1
+Summary: Flask extension for using “specification first” principle.
+Home-page: https://github.com/flask-pro/Flask-First
+Author: Konstantin Fadeev
+Author-email: fadeev@stantis.ru
+Description-Content-Type: text/x-rst
+Classifier: License :: OSI Approved :: MIT License
+
+Flask-First
+===========
+
+Flask extension for using "specification first" principle.
+
+Features:
+
+* Decorator for mapping routes from OpenAPI specification on Python's functions via Flask.
+* Building Flask routes with path-parameters. Flask converters are available:
+
+  * string - accepts any text without a slash (the default)
+  * int - accepts integers
+  * float - like int but for floating point values
+
+Installing
+----------
+
+Install and update using `pip`_:
+
+.. code-block:: text
+
+  $ pip install -U Flask-First
+
+.. _pip: https://pip.pypa.io/en/stable/quickstart/
+
+A Simple Example
+----------------
+OpenAPI 3 specification file `example.yaml`:
+
+.. code-block:: yaml
+
+    openapi: 3.0.3
+    info:
+      title: Simple API for Flask-First
+      version: 1.0.0
+    paths:
+      /index/{name}:
+        get:
+          operationId: index
+          summary: Returns a list of items
+          responses:
+            '200':
+              description: OK
+
+File with application initialization `main.py`:
+
+.. code-block:: python
+
+    from flask import Flask
+    from flask_first import First
+
+    basedir = os.path.abspath(os.path.dirname(__file__))
+    path_to_spec=os.path.join(basedir, "specs", "example.yaml")
+
+    app = Flask(__name__)
+    app.config["FIRST_RESPONSE_VALIDATION"] = True
+    First(app, path_to_spec=path_to_spec)
+
+
+    @app.specification
+    def index(name):
+        return f'Hello, {name}!'
+
