@@ -1,0 +1,5 @@
+cubicweb<3.30.0,>=3.26.22
+graphene<3,>=2.1
+graphql-core<3,>=2.3
+iso8601
+six>=1.12.0
