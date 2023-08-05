@@ -1,0 +1,5 @@
+[console_scripts]
+examples=runner:__poetry_run
+fmt=scripts:fmt
+rtd=scripts:rtd
+
