@@ -1,0 +1,7 @@
+tkinter==
+matplotlib==
+pandas==asa
+time==
+spe2py==
+numpy==
+scipy==
