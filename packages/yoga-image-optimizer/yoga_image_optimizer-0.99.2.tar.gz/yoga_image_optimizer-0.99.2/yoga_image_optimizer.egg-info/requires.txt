@@ -1,0 +1,9 @@
+PyGObject>=3.26
+pycairo
+yoga>=1.0.0
+
+[dev]
+black
+flake8
+nox
+pytest
