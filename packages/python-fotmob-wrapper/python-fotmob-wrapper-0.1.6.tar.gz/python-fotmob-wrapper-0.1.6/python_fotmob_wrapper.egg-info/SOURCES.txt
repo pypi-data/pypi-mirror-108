@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+fotmob/__init__.py
+fotmob/fotmob.py
+python_fotmob_wrapper.egg-info/PKG-INFO
+python_fotmob_wrapper.egg-info/SOURCES.txt
+python_fotmob_wrapper.egg-info/dependency_links.txt
+python_fotmob_wrapper.egg-info/top_level.txt
