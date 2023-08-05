@@ -1,0 +1,13 @@
+pykivdroid/__init__.py,sha256=a9UoNrZ-qNqofJcV5V_Exp2aYPftIaaz3mcTI9_Ie1o,9854
+pykivdroid/brightness.py,sha256=7I7gLdbaFA8ePYoaGNdFV-49-DU3t17BL5ActdEKUBM,590
+pykivdroid/orientation.py,sha256=uSr5ekPruwtO5y8f3yQXrsjN3XQzo1ao1db1UcamV-w,390
+pykivdroid/picker.py,sha256=ssmI05DsKGbooxNseA1gx9zxF9VfOfJ3zu8axXvi4MI,1739
+pykivdroid/screen.py,sha256=vJNJxfyJraCCvsvi5NiYYA1kL-a3xcLbSgAh55M66Kw,501
+pykivdroid/stt.py,sha256=PpObcVobDtw36TjNLufvUtZaXa40ET5IrVfs1MuKEyY,7230
+pykivdroid/videoview.py,sha256=SFxN3yY57M5DvxbR-hjTK_V76C5Cr33zMdIizagbtSk,3746
+pykivdroid-0.0.1.dist-info/DESCRIPTION.rst,sha256=w_EpPaFriNOkPsUH5qrfiBatpq0ghgfC_K0X2Voteoc,44
+pykivdroid-0.0.1.dist-info/METADATA,sha256=iO69W1xe7vUtuC9B0n5n9XN8u_Bz7T4H0jxIFHwrHSI,355
+pykivdroid-0.0.1.dist-info/RECORD,,
+pykivdroid-0.0.1.dist-info/WHEEL,sha256=8Lm45v9gcYRm70DrgFGVe4WsUtUMi1_0Tso1hqPGMjA,92
+pykivdroid-0.0.1.dist-info/metadata.json,sha256=f2HXe5pJvW9xsdQhgoHkUnh5iEnQSW1yh-Hv5RogKtI,473
+pykivdroid-0.0.1.dist-info/top_level.txt,sha256=YrGXCkltY_OCDbmY50aXY0mmDRSetVJ0N0r9csUYprc,11

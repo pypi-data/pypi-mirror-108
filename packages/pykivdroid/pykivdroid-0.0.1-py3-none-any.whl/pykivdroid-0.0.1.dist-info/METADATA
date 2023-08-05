@@ -1,0 +1,17 @@
+Metadata-Version: 2.0
+Name: pykivdroid
+Version: 0.0.1
+Summary: Python tools to control android
+Home-page: UNKNOWN
+Author: SK SAHIL
+License: UNKNOWN
+Keywords: python,kivy,android,pyjnius
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Requires-Dist: kivy
+Requires-Dist: pyjnius
+Requires-Dist: android
+
+Python tools to control android by python
+
+
