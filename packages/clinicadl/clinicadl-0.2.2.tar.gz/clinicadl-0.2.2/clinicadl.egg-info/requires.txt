@@ -1,0 +1,4 @@
+numpy>=1.17
+clinica>=0.3.8
+torch
+tensorboard
