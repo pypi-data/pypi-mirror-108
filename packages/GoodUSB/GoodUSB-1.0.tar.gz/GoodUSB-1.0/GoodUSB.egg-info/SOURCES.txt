@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+GoodUSB/goodUSB.py
+GoodUSB.egg-info/PKG-INFO
+GoodUSB.egg-info/SOURCES.txt
+GoodUSB.egg-info/dependency_links.txt
+GoodUSB.egg-info/requires.txt
+GoodUSB.egg-info/top_level.txt
