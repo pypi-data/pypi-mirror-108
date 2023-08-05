@@ -1,0 +1,4 @@
+sdkms
+gitpython
+PGPy<=0.4.4
+pyasn1>=0.4.8
