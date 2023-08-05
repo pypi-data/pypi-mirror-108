@@ -1,0 +1,4 @@
+matplotlib
+Biopython
+argparse
+Genskew-cc
