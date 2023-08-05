@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+infotr/__init__.py
+infotr/__main__.py
+infotr/infotr.py
+infotr.egg-info/PKG-INFO
+infotr.egg-info/SOURCES.txt
+infotr.egg-info/dependency_links.txt
+infotr.egg-info/entry_points.txt
+infotr.egg-info/requires.txt
+infotr.egg-info/top_level.txt
