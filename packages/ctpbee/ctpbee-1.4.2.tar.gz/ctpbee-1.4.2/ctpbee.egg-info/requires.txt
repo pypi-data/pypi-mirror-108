@@ -1,0 +1,8 @@
+pytz
+blinker
+requests
+simplejson
+lxml
+colour_printing>=0.3.16
+ctpbee_api
+numpy
