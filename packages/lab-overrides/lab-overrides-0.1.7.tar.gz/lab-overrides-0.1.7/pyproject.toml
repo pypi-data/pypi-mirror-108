@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "lab-overrides"
+version = "0.1.7"
+description = ""
+authors = ["Tova Hallas <tova.hallas@igentify.com>"]
+exclude = ['raw_data/']
+
+[tool.poetry.dependencies]
+python = "^3.6.9"
+pandas = "1.1.4"
+psycopg2 = "^2.8.6"
+sklearn = "^0.0"
+matplotlib = "3.3.4"
+tensorflow = "2.4.1"
+pickle5 = "^0.0.11"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[tool.poetry.scripts]
+create_dataframe = "src.lab_overrides.create_dataframe:create"
+display_overrides = "src.lab_overrides.display_dataset:display_overrides_df"
+display_binary =  "src.lab_overrides.display_dataset:display_binary_classification_df"
+
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+
