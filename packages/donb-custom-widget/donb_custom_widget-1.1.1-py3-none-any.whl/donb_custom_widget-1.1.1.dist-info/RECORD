@@ -1,0 +1,11 @@
+donb_custom_widget/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+donb_custom_widget/_pyinstaller_hook_dir.py,sha256=0wJzrQHPbhBU2v-vwWRIVyUVxxHYmS6yKpawA5yiSwc,329
+donb_custom_widget/hook-donb_custom_widget.py,sha256=s8m4VL3zv9h1BzR1bQvj8it62WqcO0mrrgnxRwae1bM,273
+donb_custom_widget/my_custom_widget.py,sha256=cEsIskwiEwfBGqH9VTi7EAP57l3FH9X9VQ-R37WC-oI,11129
+donb_custom_widget/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+donb_custom_widget/data/ui_files/my_msg_box.ui,sha256=26wgqjftanyfgrQUc8NKIFui36zYNHGW3FYUIh9OIDM,2543
+donb_custom_widget-1.1.1.dist-info/METADATA,sha256=dK2NdJMKcbIArOuqBuyALHSQ0SzSBbmBJC--dZ046ZU,304
+donb_custom_widget-1.1.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+donb_custom_widget-1.1.1.dist-info/entry_points.txt,sha256=Z20NELUwiYt8HKjrk9_cXAbp7m9CYr-UM1434VUaN_8,84
+donb_custom_widget-1.1.1.dist-info/top_level.txt,sha256=ePgxTGXSidO0Fr96i7JHfHBpQGbES8UL3jzHpLMIwzw,19
+donb_custom_widget-1.1.1.dist-info/RECORD,,
