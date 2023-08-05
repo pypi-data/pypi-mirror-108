@@ -1,0 +1,9 @@
+yascc/__init__.py,sha256=5qLm8MBNSgTM-1CWtuIC0qe57JRMuMtusYqxV3MTWXU,209
+yascc/_bench.py,sha256=xeC41bVMjtzU5oVU_chBgC7WHJPlJ3V78F5mwidD8No,814
+yascc/camelcase.py,sha256=nuOYfByCuXnsoj0aY4i_5_xCbWS-CkdBxTCM5sPWZic,395
+yascc/snakecase.py,sha256=VFPPTL1xhygjNsyQaMb2zE-IqYw4I5akyFPvp_mB10c,461
+_case.cpython-37m-x86_64-linux-gnu.so,sha256=_KpjpuLEc4_oVE33SOV8ly7s6Tnq8rsWs1aY2M8514k,31776
+yascc-0.1.3.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+yascc-0.1.3.dist-info/WHEEL,sha256=es924ZTtXQDjpmoHP747Qp3jRH0nKOrK3saQYWaEp58,104
+yascc-0.1.3.dist-info/METADATA,sha256=efH7EKVRerPRtQcNld5h7UlP69KHaLuc_71xnHyYo6E,482
+yascc-0.1.3.dist-info/RECORD,,
