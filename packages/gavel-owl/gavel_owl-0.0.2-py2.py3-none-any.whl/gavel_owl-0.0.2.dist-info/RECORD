@@ -1,0 +1,14 @@
+gavel_owl/__init__.py,sha256=IFIAtVZR6SwZUu8JeY7Yh6yDo6WHpyba9r7E3T4wAZ4,152
+gavel_owl/cli.py,sha256=hZj6HPB5nre5ufIAOLLphuTPEBBiU-gzaO3ksjL9ZZc,4429
+gavel_owl/dialects/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gavel_owl/dialects/owl/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gavel_owl/dialects/owl/dialect.py,sha256=YFk1sJImDj_xq7ngtGxCioJZONcjtViSvpvpgnB3_MA,276
+gavel_owl/dialects/owl/parser.py,sha256=eVGqGCK6a-jUePDCeOUhPT-CAovoWsJ7P0sCw6zf-Ok,5116
+gavel_owl/jars/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gavel_owl/jars/api.jar,sha256=IJBvWyaFF2t3nh0J1dNhQGvWIENQ826LbVrdTXVvDDo,22387372
+gavel_owl-0.0.2.dist-info/AUTHORS.rst,sha256=Tnw6wl3qTO7Qfv5EMeHRiJQe6kvC6DpnYPsoZS6gAoY,86
+gavel_owl-0.0.2.dist-info/METADATA,sha256=I1fO7r2GwEwOugLyLjDfzI9F5wNrRA2GyOb7FUw_E7w,4300
+gavel_owl-0.0.2.dist-info/WHEEL,sha256=oh0NKYrTcu1i1-wgrI1cnhkjYIi8WJ-8qd9Jrr5_y4E,110
+gavel_owl-0.0.2.dist-info/entry_points.txt,sha256=AsMuc32OMUsN4RmSR9HRw2POcCilwnHqqhTO82KDDzE,70
+gavel_owl-0.0.2.dist-info/top_level.txt,sha256=kJ1CBW5MthHi6cxpXaGrQWJwjUrq_sDDo67NZaY7uoE,10
+gavel_owl-0.0.2.dist-info/RECORD,,
