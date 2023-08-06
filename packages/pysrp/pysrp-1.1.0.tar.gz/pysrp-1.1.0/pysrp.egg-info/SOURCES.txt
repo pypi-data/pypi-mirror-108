@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+SRP/SRP.py
+SRP/SRP_files.py
+SRP/__init__.py
+SRP/flycheck_SRP.py
+pysrp.egg-info/PKG-INFO
+pysrp.egg-info/SOURCES.txt
+pysrp.egg-info/dependency_links.txt
+pysrp.egg-info/requires.txt
+pysrp.egg-info/top_level.txt
