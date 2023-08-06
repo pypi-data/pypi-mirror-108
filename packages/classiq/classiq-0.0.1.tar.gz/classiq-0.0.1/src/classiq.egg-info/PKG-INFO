@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: classiq
+Version: 0.0.1
+Summary: Classiq SDK Package
+Home-page: UNKNOWN
+Author: Classiq Technologies Inc.
+License: UNKNOWN
+Description: # Classiq SDK Package
+        
+        This is the Classiq SDK package README.
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown

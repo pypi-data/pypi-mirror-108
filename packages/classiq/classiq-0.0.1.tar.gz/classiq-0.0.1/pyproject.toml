@@ -1,0 +1,4 @@
+[build-system]
+# See https://packaging.python.org/tutorials/packaging-projects/#creating-pyproject-toml
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
