@@ -1,0 +1,4 @@
+djangorestframework>=3.0.4
+django-model-utils>=2.0
+celery
+Django
