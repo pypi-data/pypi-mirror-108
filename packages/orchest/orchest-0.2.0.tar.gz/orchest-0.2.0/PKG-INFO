@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: orchest
+Version: 0.2.0
+Summary: SDK for data passing in Orchest
+Home-page: https://github.com/ricklamers/orchest-pypi
+Author: Rick Lamers
+Author-email: rick@orchest.io
+License: UNKNOWN
+Project-URL: Documentation, https://orchest.readthedocs.io/en/stable/user_guide/sdk/python.html
+Project-URL: Source Code, https://github.com/orchest/orchest/tree/master/orchest-sdk
+Description: # Python - Orchest SDK
+        
+        [Docs](https://orchest.readthedocs.io/en/stable/user_guide/sdk/python.html)
+        
+        Python package for interacting with Orchest.
+        
+        ## Installation
+        
+        Note that the Orchest SDK comes pre-installed in Orchest.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
