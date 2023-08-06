@@ -1,0 +1,1500 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>QuickStart &mdash; vectorai 0.1.0 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "document", "processHtmlClass": "math|output_area"}}</script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Vector Search / Nearest Neighbors" href="industry_ecommerce.html" />
+    <link rel="prev" title="Vector AI - Essentials" href="intro.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home"> vectorai
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Vector AI - Essentials</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">QuickStart</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#Build-Image-Search-In-5-Minutes">Build Image Search In 5 Minutes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Build-Audio-Search-in-5-Minutes">Build Audio Search in 5 Minutes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#Build-Text-QA-Search-in-5-minutes">Build Text QA Search in 5 minutes</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Guides</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="industry_ecommerce.html">Vector Search / Nearest Neighbors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="industry_ecommerce.html#Search">Search</a></li>
+<li class="toctree-l1"><a class="reference internal" href="industry_ecommerce.html#Collection-Metadata">Collection Metadata</a></li>
+<li class="toctree-l1"><a class="reference internal" href="industry_ecommerce.html#Advanced-Search">Advanced Search</a></li>
+<li class="toctree-l1"><a class="reference internal" href="industry_ecommerce.html#Advanced-Vector-Search">Advanced Vector Search</a></li>
+<li class="toctree-l1"><a class="reference internal" href="industry_ecommerce.html#Vector-based-Recommendations-(Search-by-Id)">Vector based Recommendations (Search by Id)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="industry_ecommerce.html#Vector-Analytics/Aggregation">Vector Analytics/Aggregation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vector_analytics_example.html">Clustering</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vector_analytics_example.html#Dimensionality-Reduction">Dimensionality Reduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vector_analytics_example.html#Visualisations-(Advanced)">Visualisations (Advanced)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="custom_encodings_example.html">Custom Encodings</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Case Studies</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="industry_nba_players.html">Example - Vector Recommendations With NBA Players</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Frequently Asked Questions</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="FAQ.html">Frequently Asked Questions</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="client.html">Client</a></li>
+<li class="toctree-l1"><a class="reference internal" href="read.html">Read</a></li>
+<li class="toctree-l1"><a class="reference internal" href="write.html">Write</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cluster.html">Cluster</a></li>
+<li class="toctree-l1"><a class="reference internal" href="array_dict_vectorizer.html">Array &amp; Dictionary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dimensionality_reduction.html">Dimensionality Reduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vector_search.html">Search</a></li>
+<li class="toctree-l1"><a class="reference internal" href="image.html">Images</a></li>
+<li class="toctree-l1"><a class="reference internal" href="text.html">Texts</a></li>
+<li class="toctree-l1"><a class="reference internal" href="audio.html">Audios</a></li>
+<li class="toctree-l1"><a class="reference internal" href="analytics.html">Visualisations</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">vectorai</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>QuickStart</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/quickstart.ipynb.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS for nbsphinx extension */
+
+/* remove conflicting styling from Sphinx themes */
+div.nbinput.container div.prompt *,
+div.nboutput.container div.prompt *,
+div.nbinput.container div.input_area pre,
+div.nboutput.container div.output_area pre,
+div.nbinput.container div.input_area .highlight,
+div.nboutput.container div.output_area .highlight {
+    border: none;
+    padding: 0;
+    margin: 0;
+    box-shadow: none;
+}
+
+div.nbinput.container > div[class*=highlight],
+div.nboutput.container > div[class*=highlight] {
+    margin: 0;
+}
+
+div.nbinput.container div.prompt *,
+div.nboutput.container div.prompt * {
+    background: none;
+}
+
+div.nboutput.container div.output_area .highlight,
+div.nboutput.container div.output_area pre {
+    background: unset;
+}
+
+div.nboutput.container div.output_area div.highlight {
+    color: unset;  /* override Pygments text color */
+}
+
+/* avoid gaps between output lines */
+div.nboutput.container div[class*=highlight] pre {
+    line-height: normal;
+}
+
+/* input/output containers */
+div.nbinput.container,
+div.nboutput.container {
+    display: -webkit-flex;
+    display: flex;
+    align-items: flex-start;
+    margin: 0;
+    width: 100%;
+}
+@media (max-width: 540px) {
+    div.nbinput.container,
+    div.nboutput.container {
+        flex-direction: column;
+    }
+}
+
+/* input container */
+div.nbinput.container {
+    padding-top: 5px;
+}
+
+/* last container */
+div.nblast.container {
+    padding-bottom: 5px;
+}
+
+/* input prompt */
+div.nbinput.container div.prompt pre {
+    color: #307FC1;
+}
+
+/* output prompt */
+div.nboutput.container div.prompt pre {
+    color: #BF5B3D;
+}
+
+/* all prompts */
+div.nbinput.container div.prompt,
+div.nboutput.container div.prompt {
+    width: 4.5ex;
+    padding-top: 5px;
+    position: relative;
+    user-select: none;
+}
+
+div.nbinput.container div.prompt > div,
+div.nboutput.container div.prompt > div {
+    position: absolute;
+    right: 0;
+    margin-right: 0.3ex;
+}
+
+@media (max-width: 540px) {
+    div.nbinput.container div.prompt,
+    div.nboutput.container div.prompt {
+        width: unset;
+        text-align: left;
+        padding: 0.4em;
+    }
+    div.nboutput.container div.prompt.empty {
+        padding: 0;
+    }
+
+    div.nbinput.container div.prompt > div,
+    div.nboutput.container div.prompt > div {
+        position: unset;
+    }
+}
+
+/* disable scrollbars on prompts */
+div.nbinput.container div.prompt pre,
+div.nboutput.container div.prompt pre {
+    overflow: hidden;
+}
+
+/* input/output area */
+div.nbinput.container div.input_area,
+div.nboutput.container div.output_area {
+    -webkit-flex: 1;
+    flex: 1;
+    overflow: auto;
+}
+@media (max-width: 540px) {
+    div.nbinput.container div.input_area,
+    div.nboutput.container div.output_area {
+        width: 100%;
+    }
+}
+
+/* input area */
+div.nbinput.container div.input_area {
+    border: 1px solid #e0e0e0;
+    border-radius: 2px;
+    /*background: #f5f5f5;*/
+}
+
+/* override MathJax center alignment in output cells */
+div.nboutput.container div[class*=MathJax] {
+    text-align: left !important;
+}
+
+/* override sphinx.ext.imgmath center alignment in output cells */
+div.nboutput.container div.math p {
+    text-align: left;
+}
+
+/* standard error */
+div.nboutput.container div.output_area.stderr {
+    background: #fdd;
+}
+
+/* ANSI colors */
+.ansi-black-fg { color: #3E424D; }
+.ansi-black-bg { background-color: #3E424D; }
+.ansi-black-intense-fg { color: #282C36; }
+.ansi-black-intense-bg { background-color: #282C36; }
+.ansi-red-fg { color: #E75C58; }
+.ansi-red-bg { background-color: #E75C58; }
+.ansi-red-intense-fg { color: #B22B31; }
+.ansi-red-intense-bg { background-color: #B22B31; }
+.ansi-green-fg { color: #00A250; }
+.ansi-green-bg { background-color: #00A250; }
+.ansi-green-intense-fg { color: #007427; }
+.ansi-green-intense-bg { background-color: #007427; }
+.ansi-yellow-fg { color: #DDB62B; }
+.ansi-yellow-bg { background-color: #DDB62B; }
+.ansi-yellow-intense-fg { color: #B27D12; }
+.ansi-yellow-intense-bg { background-color: #B27D12; }
+.ansi-blue-fg { color: #208FFB; }
+.ansi-blue-bg { background-color: #208FFB; }
+.ansi-blue-intense-fg { color: #0065CA; }
+.ansi-blue-intense-bg { background-color: #0065CA; }
+.ansi-magenta-fg { color: #D160C4; }
+.ansi-magenta-bg { background-color: #D160C4; }
+.ansi-magenta-intense-fg { color: #A03196; }
+.ansi-magenta-intense-bg { background-color: #A03196; }
+.ansi-cyan-fg { color: #60C6C8; }
+.ansi-cyan-bg { background-color: #60C6C8; }
+.ansi-cyan-intense-fg { color: #258F8F; }
+.ansi-cyan-intense-bg { background-color: #258F8F; }
+.ansi-white-fg { color: #C5C1B4; }
+.ansi-white-bg { background-color: #C5C1B4; }
+.ansi-white-intense-fg { color: #A1A6B2; }
+.ansi-white-intense-bg { background-color: #A1A6B2; }
+
+.ansi-default-inverse-fg { color: #FFFFFF; }
+.ansi-default-inverse-bg { background-color: #000000; }
+
+.ansi-bold { font-weight: bold; }
+.ansi-underline { text-decoration: underline; }
+
+
+div.nbinput.container div.input_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight] > pre,
+div.nboutput.container div.output_area div[class*=highlight].math,
+div.nboutput.container div.output_area.rendered_html,
+div.nboutput.container div.output_area > div.output_javascript,
+div.nboutput.container div.output_area:not(.rendered_html) > img{
+    padding: 5px;
+    margin: 0;
+}
+
+/* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
+div.nbinput.container div.input_area > div[class^='highlight'],
+div.nboutput.container div.output_area > div[class^='highlight']{
+    overflow-y: hidden;
+}
+
+/* hide copybtn icon on prompts (needed for 'sphinx_copybutton') */
+.prompt a.copybtn {
+    display: none;
+}
+
+/* Some additional styling taken form the Jupyter notebook CSS */
+div.rendered_html table {
+  border: none;
+  border-collapse: collapse;
+  border-spacing: 0;
+  color: black;
+  font-size: 12px;
+  table-layout: fixed;
+}
+div.rendered_html thead {
+  border-bottom: 1px solid black;
+  vertical-align: bottom;
+}
+div.rendered_html tr,
+div.rendered_html th,
+div.rendered_html td {
+  text-align: right;
+  vertical-align: middle;
+  padding: 0.5em 0.5em;
+  line-height: normal;
+  white-space: normal;
+  max-width: none;
+  border: none;
+}
+div.rendered_html th {
+  font-weight: bold;
+}
+div.rendered_html tbody tr:nth-child(odd) {
+  background: #f5f5f5;
+}
+div.rendered_html tbody tr:hover {
+  background: rgba(66, 165, 245, 0.2);
+}
+
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="QuickStart">
+<h1>QuickStart<a class="headerlink" href="#QuickStart" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="Build-Image-Search-In-5-Minutes">
+<h2>Build Image Search In 5 Minutes<a class="headerlink" href="#Build-Image-Search-In-5-Minutes" title="Permalink to this headline">¶</a></h2>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>collection_name = &#39;pokemon_images&#39;
+
+documents = []
+for i in range(1, 20):
+    documents.append({
+        &#39;image&#39;: &#39;https://assets.pokemon.com/assets/cms2/img/pokedex/full/{}.png&#39;.format(f&#39;{i:03}&#39;),
+        &#39;pokemon_id&#39; : str(i),
+        &#39;_id&#39;: i
+    })
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>#1. specify the vdb client
+from vectorai.client import ViClient
+vi_client = ViClient(username, api_key, url)
+vi_client.delete_collection(collection_name)
+
+#2. specify an image encoder
+from vectorai.models.deployed import ViImage2Vec
+image_encoder = ViImage2Vec(username, api_key, url)
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Logged in. Welcome public-demo. To view list of available collections, call list_collections() method.
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+{&#39;status&#39;: &#39;complete&#39;, &#39;message&#39;: &#39;pokemon_images deleted&#39;}
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>#3. insert the documents and encode images simultaneously
+# using jobs means that the encoding process takes place on our servers as opposed to your computer
+use_jobs = False
+
+if use_jobs:
+    vi_client.insert_documents(collection_name, documents)
+    job = vi_client.encode_image_job(collection_name, &#39;image&#39;)
+    vi_client.wait_till_jobs_complete(collection_name, job[&#39;job_id&#39;], job[&#39;job_name&#39;])
+else:
+    vi_client.insert_documents(collection_name, documents, models={&#39;image&#39;:image_encoder.encode})
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "82cb6f5ed0d5415eac27727b6ee1bba8", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+{&#39;inserted_successfully&#39;: 19, &#39;failed&#39;: 0, &#39;failed_document_ids&#39;: []}
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>#4. search
+search_results = vi_client.search(collection_name,
+    image_encoder.encode(&#39;https://assets.pokemon.com/assets/cms2/img/pokedex/full/003.png&#39;),
+    &#39;image_vector_&#39;, page_size=5)
+
+#4.2 first result is the query audio itself
+vi_client.show_json(search_results, image_fields=[&#39;image&#39;], image_width=150)
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
+</pre></div>
+</div>
+<div class="output_area rendered_html docutils container">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>_id</th>
+      <th>image</th>
+      <th>pokemon_id</th>
+      <th>insert_date_</th>
+      <th>_search_score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>3</td>
+      <td><img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/003.png" width="150" ></td>
+      <td>3</td>
+      <td>2020-10-02T07:07:18.799559</td>
+      <td>1.000000</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td><img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/002.png" width="150" ></td>
+      <td>2</td>
+      <td>2020-10-02T07:07:18.797693</td>
+      <td>0.920337</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1</td>
+      <td><img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png" width="150" ></td>
+      <td>1</td>
+      <td>2020-10-02T07:07:18.795655</td>
+      <td>0.838996</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>17</td>
+      <td><img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/017.png" width="150" ></td>
+      <td>17</td>
+      <td>2020-10-02T07:07:30.587841</td>
+      <td>0.835111</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>16</td>
+      <td><img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/016.png" width="150" ></td>
+      <td>16</td>
+      <td>2020-10-02T07:07:30.585399</td>
+      <td>0.813012</td>
+    </tr>
+  </tbody>
+</table></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>#5 recommendation by id
+search_by_id_results = vi_client.search_by_id(collection_name, &#39;2&#39;, &#39;image_vector_&#39;, page_size=5)
+
+#5.2 first result is the id&#39;s audio itself
+vi_client.show_json(search_by_id_results, image_fields=[&#39;image&#39;], image_width=150)
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
+</pre></div>
+</div>
+<div class="output_area rendered_html docutils container">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>_id</th>
+      <th>image</th>
+      <th>pokemon_id</th>
+      <th>insert_date_</th>
+      <th>_search_score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2</td>
+      <td><img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/002.png" width="150" ></td>
+      <td>2</td>
+      <td>2020-10-02T07:07:18.797693</td>
+      <td>1.000000</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>3</td>
+      <td><img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/003.png" width="150" ></td>
+      <td>3</td>
+      <td>2020-10-02T07:07:18.799559</td>
+      <td>0.920337</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1</td>
+      <td><img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/001.png" width="150" ></td>
+      <td>1</td>
+      <td>2020-10-02T07:07:18.795655</td>
+      <td>0.895991</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>7</td>
+      <td><img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/007.png" width="150" ></td>
+      <td>7</td>
+      <td>2020-10-02T07:07:18.807199</td>
+      <td>0.839945</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>17</td>
+      <td><img src="https://assets.pokemon.com/assets/cms2/img/pokedex/full/017.png" width="150" ></td>
+      <td>17</td>
+      <td>2020-10-02T07:07:30.587841</td>
+      <td>0.833277</td>
+    </tr>
+  </tbody>
+</table></div>
+</div>
+</div>
+<div class="section" id="Build-Audio-Search-in-5-Minutes">
+<h2>Build Audio Search in 5 Minutes<a class="headerlink" href="#Build-Audio-Search-in-5-Minutes" title="Permalink to this headline">¶</a></h2>
+<p>Building Audio search is easy with Vi!</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>collection_name = &#39;audio_quickstart&#39;
+
+#create the documents
+documents = []
+for i in range(1, 1001):
+    documents.append({
+        &#39;audio&#39;: &#39;https://vecsearch-bucket.s3.us-east-2.amazonaws.com/voices/common_voice_en_{}.wav&#39;.format(i),
+        &#39;name&#39; : &#39;common_voice_en_{}.wav&#39;.format(i),
+        &#39;_id&#39;: i
+    })
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>#1. specify the vdb client
+from vectorai.client import ViClient
+vi_client = ViClient(username, api_key, url)
+vi_client.delete_collection(collection_name)
+
+#2. specify an audio encoder
+from vectorai.models.deployed import ViAudio2Vec
+audio_encoder = ViAudio2Vec(username, api_key, url)
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Logged in. Welcome public-demo. To view list of available collections, call list_collections() method.
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+{&#39;status&#39;: &#39;complete&#39;, &#39;message&#39;: &#39;audio_quickstart deleted&#39;}
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>#3. insert the documents and encode audio simultaneously
+use_jobs = True
+
+if use_jobs:
+    vi_client.insert_documents(collection_name, documents)
+    job = vi_client.encode_audio_job(collection_name, &#39;audio&#39;)
+    vi_client.wait_till_jobs_complete(collection_name, job[&#39;job_id&#39;], job[&#39;job_name&#39;])
+else:
+    vi_client.insert_documents(collection_name, documents, models={&#39;audio&#39;:audio_encoder.encode})
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+d:\kda\vectorai\vectorai\read.py:351: UserWarning: Potential issue. Cannot find a vector field. Check that the vector field is _vector_.
+  &#34;Potential issue. Cannot find a vector field. Check that the vector field is _vector_.&#34;
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "f1b5d6b126b4459facb92dadabb1764f", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+{&#39;inserted_successfully&#39;: 1000, &#39;failed&#39;: 0, &#39;failed_document_ids&#39;: []}
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+{&#39;status&#39;: &#39;Finished&#39;}
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&#39;Done&#39;
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>import IPython.display as ipd
+#4. search
+search_results = vi_client.search(collection_name, audio_encoder.encode(documents[0][&#39;audio&#39;]),
+    &#39;audio_vector_&#39;, page_size=5)
+
+vi_client.show_json(search_results, audio_fields=[&#39;audio&#39;])
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
+</pre></div>
+</div>
+<div class="output_area rendered_html docutils container">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>_id</th>
+      <th>name</th>
+      <th>insert_date_</th>
+      <th>audio</th>
+      <th>_search_score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>common_voice_en_1.wav</td>
+      <td>2020-10-02T07:07:34.725378</td>
+      <td><audio controls><source src='https://vecsearch-bucket.s3.us-east-2.amazonaws.com/voices/common_voice_en_1.wav' type='audio/wav'></audio></td>
+      <td>1.000000</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>12</td>
+      <td>common_voice_en_12.wav</td>
+      <td>2020-10-02T07:07:34.726100</td>
+      <td><audio controls><source src='https://vecsearch-bucket.s3.us-east-2.amazonaws.com/voices/common_voice_en_12.wav' type='audio/wav'></audio></td>
+      <td>0.893219</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>32</td>
+      <td>common_voice_en_32.wav</td>
+      <td>2020-10-02T07:07:35.271638</td>
+      <td><audio controls><source src='https://vecsearch-bucket.s3.us-east-2.amazonaws.com/voices/common_voice_en_32.wav' type='audio/wav'></audio></td>
+      <td>0.891373</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>20</td>
+      <td>common_voice_en_20.wav</td>
+      <td>2020-10-02T07:07:35.046128</td>
+      <td><audio controls><source src='https://vecsearch-bucket.s3.us-east-2.amazonaws.com/voices/common_voice_en_20.wav' type='audio/wav'></audio></td>
+      <td>0.882336</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>15</td>
+      <td>common_voice_en_15.wav</td>
+      <td>2020-10-02T07:07:34.726251</td>
+      <td><audio controls><source src='https://vecsearch-bucket.s3.us-east-2.amazonaws.com/voices/common_voice_en_15.wav' type='audio/wav'></audio></td>
+      <td>0.877323</td>
+    </tr>
+  </tbody>
+</table></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>#5 recommendation by id
+search_by_id_results = vi_client.search_by_id(collection_name, &#39;2&#39;, &#39;audio_vector_&#39;, page_size=5)
+
+vi_client.show_json(search_by_id_results, audio_fields=[&#39;audio&#39;])
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
+</pre></div>
+</div>
+<div class="output_area rendered_html docutils container">
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>_id</th>
+      <th>name</th>
+      <th>insert_date_</th>
+      <th>audio</th>
+      <th>_search_score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2</td>
+      <td>common_voice_en_2.wav</td>
+      <td>2020-10-02T07:07:34.725536</td>
+      <td><audio controls><source src='https://vecsearch-bucket.s3.us-east-2.amazonaws.com/voices/common_voice_en_2.wav' type='audio/wav'></audio></td>
+      <td>1.000000</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>40</td>
+      <td>common_voice_en_40.wav</td>
+      <td>2020-10-02T07:07:35.272603</td>
+      <td><audio controls><source src='https://vecsearch-bucket.s3.us-east-2.amazonaws.com/voices/common_voice_en_40.wav' type='audio/wav'></audio></td>
+      <td>0.884632</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>common_voice_en_3.wav</td>
+      <td>2020-10-02T07:07:34.725629</td>
+      <td><audio controls><source src='https://vecsearch-bucket.s3.us-east-2.amazonaws.com/voices/common_voice_en_3.wav' type='audio/wav'></audio></td>
+      <td>0.879187</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>14</td>
+      <td>common_voice_en_14.wav</td>
+      <td>2020-10-02T07:07:34.726200</td>
+      <td><audio controls><source src='https://vecsearch-bucket.s3.us-east-2.amazonaws.com/voices/common_voice_en_14.wav' type='audio/wav'></audio></td>
+      <td>0.874556</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>21</td>
+      <td>common_voice_en_21.wav</td>
+      <td>2020-10-02T07:07:35.046224</td>
+      <td><audio controls><source src='https://vecsearch-bucket.s3.us-east-2.amazonaws.com/voices/common_voice_en_21.wav' type='audio/wav'></audio></td>
+      <td>0.865409</td>
+    </tr>
+  </tbody>
+</table></div>
+</div>
+</div>
+<div class="section" id="Build-Text-QA-Search-in-5-minutes">
+<h2>Build Text QA Search in 5 minutes<a class="headerlink" href="#Build-Text-QA-Search-in-5-minutes" title="Permalink to this headline">¶</a></h2>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>%pip install datasets
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Requirement already satisfied: datasets in c:\users\jacky\anaconda3\lib\site-packages (1.0.1)
+Requirement already satisfied: filelock in c:\users\jacky\anaconda3\lib\site-packages (from datasets) (3.0.12)
+Requirement already satisfied: dill in c:\users\jacky\anaconda3\lib\site-packages (from datasets) (0.3.1.1)
+Requirement already satisfied: pyarrow&gt;=0.17.1 in c:\users\jacky\anaconda3\lib\site-packages (from datasets) (1.0.0)
+Requirement already satisfied: requests&gt;=2.19.0 in c:\users\jacky\anaconda3\lib\site-packages (from datasets) (2.22.0)
+Requirement already satisfied: numpy&gt;=1.17 in c:\users\jacky\anaconda3\lib\site-packages (from datasets) (1.19.1)
+Requirement already satisfied: pandas in c:\users\jacky\anaconda3\lib\site-packages (from datasets) (0.25.2)
+Requirement already satisfied: tqdm&gt;=4.27 in c:\users\jacky\anaconda3\lib\site-packages (from datasets) (4.36.1)
+Requirement already satisfied: xxhash in c:\users\jacky\anaconda3\lib\site-packages (from datasets) (2.0.0)
+Requirement already satisfied: certifi&gt;=2017.4.17 in c:\users\jacky\anaconda3\lib\site-packages (from requests&gt;=2.19.0-&gt;datasets) (2020.6.20)
+Requirement already satisfied: urllib3!=1.25.0,!=1.25.1,&lt;1.26,&gt;=1.21.1 in c:\users\jacky\anaconda3\lib\site-packages (from requests&gt;=2.19.0-&gt;datasets) (1.24.2)
+Requirement already satisfied: idna&lt;2.9,&gt;=2.5 in c:\users\jacky\anaconda3\lib\site-packages (from requests&gt;=2.19.0-&gt;datasets) (2.8)
+Requirement already satisfied: chardet&lt;3.1.0,&gt;=3.0.2 in c:\users\jacky\anaconda3\lib\site-packages (from requests&gt;=2.19.0-&gt;datasets) (3.0.4)
+Requirement already satisfied: pytz&gt;=2017.2 in c:\users\jacky\anaconda3\lib\site-packages (from pandas-&gt;datasets) (2019.3)
+Requirement already satisfied: python-dateutil&gt;=2.6.1 in c:\users\jacky\anaconda3\lib\site-packages (from pandas-&gt;datasets) (2.8.0)
+Requirement already satisfied: six&gt;=1.5 in c:\users\jacky\anaconda3\lib\site-packages (from python-dateutil&gt;=2.6.1-&gt;pandas-&gt;datasets) (1.12.0)
+Note: you may need to restart the kernel to use updated packages.
+</pre></div></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>collection_name = &#39;squad&#39;
+
+#use huggingface&#39;s datasets library to download squad
+import datasets
+squad_dataset = datasets.load_dataset(&#39;squad&#39;)
+documents = [{&#39;_id&#39;:str(n), **d} for n, d in enumerate(squad_dataset[&#39;validation&#39;])]
+vi_client.delete_collection(collection_name)
+</pre></div>
+</div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>#1. specify the vdb client
+from vectorai.client import ViClient
+vi_client = ViClient(username, api_key, url)
+vi_client.delete_collection(collection_name)
+
+#2. specify a text encoder
+from vectorai.models.deployed import ViText2Vec
+text_encoder = ViText2Vec(username, api_key, &#39;https://api.vctr.ai&#39;)
+</pre></div>
+</div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>#3. insert the documents and encode text simultaneously
+use_jobs = True
+
+if use_jobs:
+    vi_client.insert_documents(collection_name, documents)
+    job = vi_client.encode_text_job(collection_name, &#39;question&#39;)
+    vi_client.wait_till_jobs_complete(collection_name, job[&#39;job_id&#39;], job[&#39;job_name&#39;])
+else:
+    vi_client.insert_documents(collection_name, documents, models={&#39;question&#39;:text_encoder}, use_bulk_encode=True)
+</pre></div>
+</div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area stderr docutils container">
+<div class="highlight"><pre>
+d:\kda\vectorai\vectorai\read.py:351: UserWarning: Potential issue. Cannot find a vector field. Check that the vector field is _vector_.
+  &#34;Potential issue. Cannot find a vector field. Check that the vector field is _vector_.&#34;
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<script type="application/vnd.jupyter.widget-view+json">{"model_id": "cbe3f07f6cdb4be78030b4b89440a277", "version_major": 2, "version_minor": 0}</script></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+{&#39;inserted_successfully&#39;: 10570, &#39;failed&#39;: 0, &#39;failed_document_ids&#39;: []}
+</pre></div></div>
+</div>
+<div class="nboutput docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+{&#39;status&#39;: &#39;Finished&#39;}
+</pre></div></div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
+</pre></div>
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+&#39;Done&#39;
+</pre></div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>#4. search
+search_results = vi_client.search(collection_name,
+                                   text_encoder.encode(&#39;who was the winner for nfl fifty&#39;),
+                                   &#39;question_vector_&#39;, page_size=5)
+
+#4.2 first result is the query text itself
+vi_client.results_to_df(search_results)
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
+</pre></div>
+</div>
+<div class="output_area rendered_html docutils container">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>_id</th>
+      <th>question</th>
+      <th>answers</th>
+      <th>context</th>
+      <th>insert_date_</th>
+      <th>id</th>
+      <th>title</th>
+      <th>_search_score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>11</td>
+      <td>Who won Super Bowl 50?</td>
+      <td>{'answer_start': [177, 177, 177], 'text': ['De...</td>
+      <td>Super Bowl 50 was an American football game to...</td>
+      <td>2020-10-02T07:47:06.947313</td>
+      <td>56beace93aeaaa14008c91df</td>
+      <td>Super_Bowl_50</td>
+      <td>0.798744</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>24</td>
+      <td>Who won Super Bowl 50?</td>
+      <td>{'answer_start': [177, 177, 177], 'text': ['De...</td>
+      <td>Super Bowl 50 was an American football game to...</td>
+      <td>2020-10-02T07:47:07.285182</td>
+      <td>56d20362e7d4791d009025eb</td>
+      <td>Super_Bowl_50</td>
+      <td>0.798744</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>Which NFL team won Super Bowl 50?</td>
+      <td>{'answer_start': [177, 177, 177], 'text': ['De...</td>
+      <td>Super Bowl 50 was an American football game to...</td>
+      <td>2020-10-02T07:47:06.946694</td>
+      <td>56be4db0acb8001400a502ef</td>
+      <td>Super_Bowl_50</td>
+      <td>0.763209</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>55</td>
+      <td>Who was the Super Bowl 50 MVP?</td>
+      <td>{'answer_start': [248, 248, 252], 'text': ['Vo...</td>
+      <td>The Broncos took an early lead in Super Bowl 5...</td>
+      <td>2020-10-02T07:47:07.759154</td>
+      <td>56be4eafacb8001400a50302</td>
+      <td>Super_Bowl_50</td>
+      <td>0.754090</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>26</td>
+      <td>Which team won Super Bowl 50.</td>
+      <td>{'answer_start': [177, 177, 177], 'text': ['De...</td>
+      <td>Super Bowl 50 was an American football game to...</td>
+      <td>2020-10-02T07:47:07.285403</td>
+      <td>56d600e31c85041400946eb0</td>
+      <td>Super_Bowl_50</td>
+      <td>0.742759</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>#5 recommendation by id
+search_by_id_results = vi_client.search_by_id(collection_name, documents[50][&#39;_id&#39;], &#39;question_vector_&#39;, page_size=5)
+
+#5.2 first result is the id&#39;s text itself
+vi_client.results_to_df(search_by_id_results)
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
+</pre></div>
+</div>
+<div class="output_area rendered_html docutils container">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>_id</th>
+      <th>question</th>
+      <th>answers</th>
+      <th>context</th>
+      <th>insert_date_</th>
+      <th>id</th>
+      <th>title</th>
+      <th>_search_score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>50</td>
+      <td>Who did Denver beat in the 2015 AFC Championsh...</td>
+      <td>{'answer_start': [372, 368, 372], 'text': ['Ne...</td>
+      <td>The Panthers finished the regular season with ...</td>
+      <td>2020-10-02T07:47:07.758767</td>
+      <td>56d6017d1c85041400946ec1</td>
+      <td>Super_Bowl_50</td>
+      <td>1.000000</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>48</td>
+      <td>Who did Denver beat in the AFC championship?</td>
+      <td>{'answer_start': [372, 368, 372], 'text': ['Ne...</td>
+      <td>The Panthers finished the regular season with ...</td>
+      <td>2020-10-02T07:47:07.758541</td>
+      <td>56d2045de7d4791d009025f6</td>
+      <td>Super_Bowl_50</td>
+      <td>0.960072</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>331</td>
+      <td>Who did the Broncos beat to win their division...</td>
+      <td>{'answer_start': [25, 25, 36], 'text': ['Pitts...</td>
+      <td>The Broncos defeated the Pittsburgh Steelers i...</td>
+      <td>2020-10-02T07:47:12.209038</td>
+      <td>56d99f99dc89441400fdb628</td>
+      <td>Super_Bowl_50</td>
+      <td>0.923735</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>330</td>
+      <td>Who did the Broncos defeat in the AFC Champion...</td>
+      <td>{'answer_start': [192, 192, 204], 'text': ['Ne...</td>
+      <td>The Broncos defeated the Pittsburgh Steelers i...</td>
+      <td>2020-10-02T07:47:12.208876</td>
+      <td>56d7018a0d65d214001982c5</td>
+      <td>Super_Bowl_50</td>
+      <td>0.915792</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>328</td>
+      <td>Who did the Broncos beat in the divisional game?</td>
+      <td>{'answer_start': [25, 21, 36], 'text': ['Pitts...</td>
+      <td>The Broncos defeated the Pittsburgh Steelers i...</td>
+      <td>2020-10-02T07:47:11.956089</td>
+      <td>56d7018a0d65d214001982c2</td>
+      <td>Super_Bowl_50</td>
+      <td>0.906187</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+<div class="nbinput docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[23]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>#6 hybrid search combining traditional and nlp vector search
+search_results = vi_client.hybrid_search(collection_name, &#39;Peyton Men&#39;,
+                                          text_encoder.encode(&#39;Peyton Men&#39;),
+                                          [&#39;question_vector_&#39;], [&#39;question&#39;],
+                                          traditional_weight=0.015,
+                                          page_size=5)
+vi_client.results_to_df(search_results)
+</pre></div>
+</div>
+</div>
+<div class="nboutput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[23]:
+</pre></div>
+</div>
+<div class="output_area rendered_html docutils container">
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>_id</th>
+      <th>question</th>
+      <th>answers</th>
+      <th>context</th>
+      <th>insert_date_</th>
+      <th>id</th>
+      <th>title</th>
+      <th>_search_score</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>258</td>
+      <td>How old was Peyton Manning in 2015?</td>
+      <td>{'answer_start': [817, 817, 817], 'text': ['39...</td>
+      <td>Following their loss in the divisional round o...</td>
+      <td>2020-10-02T07:47:11.000830</td>
+      <td>56bf301c3aeaaa14008c9550</td>
+      <td>Super_Bowl_50</td>
+      <td>0.641220</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>276</td>
+      <td>How may yards did Peyton Manning throw?</td>
+      <td>{'answer_start': [77, 77, 77], 'text': ['2,249...</td>
+      <td>Manning finished the year with a career-low 67...</td>
+      <td>2020-10-02T07:47:11.239195</td>
+      <td>56bf38383aeaaa14008c956c</td>
+      <td>Super_Bowl_50</td>
+      <td>0.634783</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>270</td>
+      <td>What was Peyton Manning's passer rating for th...</td>
+      <td>{'answer_start': [44, 44, 44], 'text': ['67.9'...</td>
+      <td>Manning finished the year with a career-low 67...</td>
+      <td>2020-10-02T07:47:11.238646</td>
+      <td>56beb57b3aeaaa14008c9279</td>
+      <td>Super_Bowl_50</td>
+      <td>0.617874</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>252</td>
+      <td>Who did Peyton Manning play for as a rookie?</td>
+      <td>{'answer_start': [641, 637, 654], 'text': ['In...</td>
+      <td>Following their loss in the divisional round o...</td>
+      <td>2020-10-02T07:47:10.760423</td>
+      <td>56beb4e43aeaaa14008c9267</td>
+      <td>Super_Bowl_50</td>
+      <td>0.612926</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>356</td>
+      <td>Peyton Manning took how many different teams t...</td>
+      <td>{'answer_start': [57, 57, 57, 57], 'text': ['t...</td>
+      <td>Peyton Manning became the first quarterback ev...</td>
+      <td>2020-10-02T07:47:12.428915</td>
+      <td>56d704430d65d214001982de</td>
+      <td>Super_Bowl_50</td>
+      <td>0.611716</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="industry_ecommerce.html" class="btn btn-neutral float-right" title="Vector Search / Nearest Neighbors" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="intro.html" class="btn btn-neutral float-left" title="Vector AI - Essentials" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020, OnSearch Pty Ltd.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
