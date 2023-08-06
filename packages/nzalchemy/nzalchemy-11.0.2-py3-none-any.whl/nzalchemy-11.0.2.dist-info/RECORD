@@ -1,0 +1,10 @@
+nzalchemy/__init__.py,sha256=w_GWPwJWCQvGLDka-hMm5F3DNjXA7CNzbffLeonQfh8,3017
+nzalchemy/base.py,sha256=JHjoJ5iMxvOjdclkHAcFSQC3OehoXWPN9At0IbYNofA,41013
+nzalchemy/nzpy.py,sha256=o4XaUVy_kCF38D4K3vDvLqDBlFoqX1To7c9BzR0uSTQ,2563
+nzalchemy/pyodbc.py,sha256=K4NZQ8BLl6Y9gtiXqdlIistMrkOeZz0MG7pkexHNkgk,4383
+nzalchemy/requirements.py,sha256=dnX2ZQAGGFPlz4--vDMiKQq9ApyEE_M-oEzm2YMDDuw,9265
+nzalchemy-11.0.2.dist-info/METADATA,sha256=1cdI3TogGJN9SVLT9DupwZM3maEDi7BZywLcBppgcI8,9266
+nzalchemy-11.0.2.dist-info/WHEEL,sha256=EVRjI69F5qVjm_YgqcTXPnTAv3BfSUr0WVAHuSP3Xoo,92
+nzalchemy-11.0.2.dist-info/entry_points.txt,sha256=6Q01BJaPNeJ-e3PU0RMYqlkzBnBEv8b7GAcVkbbKc84,129
+nzalchemy-11.0.2.dist-info/top_level.txt,sha256=R6b7xJQetV4mVQrfxZkSi5rXErwmbjx6ZIgBkaP-ByE,10
+nzalchemy-11.0.2.dist-info/RECORD,,

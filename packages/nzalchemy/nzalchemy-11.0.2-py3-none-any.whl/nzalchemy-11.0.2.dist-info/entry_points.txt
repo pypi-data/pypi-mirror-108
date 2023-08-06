@@ -1,0 +1,4 @@
+[sqlalchemy.dialects]
+netezza.nzpy = nzalchemy.nzpy:NetezzaDialect_nzpy
+netezza.pyodbc = nzalchemy.pyodbc:NetezzaDialect_pyodbc
+
