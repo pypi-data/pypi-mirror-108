@@ -1,0 +1,11 @@
+xortool_ciphey/__init__.py,sha256=5RpLGahop916SeM-IBybvWyDoKIuatfa3Aw-NIlBIgA,75
+xortool_ciphey/args.py,sha256=HxwCdvet4fhaN6YZktffEWV19A3oF9S1QdbkyzlIruo,1472
+xortool_ciphey/charset.py,sha256=DnfsRjttat9_Zi3x2tV1P8ztbN8NP55aERHKi-rehOQ,756
+xortool_ciphey/colors.py,sha256=QlSsrkGPDT4ttkeCtaHlERA4d5wwHulA2Zkj08qPqrw,672
+xortool_ciphey/libcolors.py,sha256=KBOo_IPAGRXVSJzPUlXGhCBPCbka_YWsTSTRvJpBBD4,2249
+xortool_ciphey/routine.py,sha256=778dbxukqZ7RPrGjTqBrAGadtggzBlqA1UP7JeYVHWI,1580
+xortool_ciphey/tool_main.py,sha256=LHQDtu8OqVMS4D-YkMq2JS_b2PfNe6VS30ybJdZcmkk,13422
+xortool_ciphey/tool_xor.py,sha256=piUnolEXWccMmRDTeazVFicLMeIYkdRPL7BextgkY1w,2308
+xortool_ciphey-0.1.0.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+xortool_ciphey-0.1.0.dist-info/METADATA,sha256=5jeHH2GznGC3vxM-Y5MWkg0nC93DXefMCMmbg6tzkoo,593
+xortool_ciphey-0.1.0.dist-info/RECORD,,
