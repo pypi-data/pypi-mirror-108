@@ -1,0 +1,6 @@
+[console_scripts]
+Vacuubrand = vacuubrand.tango.server:main [tango]
+
+[sinstruments.device]
+DCP3000 = vacuubrand.simulator:DCP3000 [simulator]
+
