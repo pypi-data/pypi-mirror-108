@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: conanx
+Version: 0.0.1
+Summary: Embedded-system package management for C/C++ development base on conan
+Home-page: https://edgetoolkit.github.io/conanx
+Author: Mingyi Zhang
+Author-email: mingyi.z@outlook.com
+License: MIT
+Keywords: C/C++,package,libraries,developer,manager,dependency,tool,c,c++,cpp,conan
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+Requires-Dist: conan (>=1.33.0)
+Requires-Dist: ply (>=3.11)
+Provides-Extra: dev
+Requires-Dist: nose (<1.4.0,>=1.3.7) ; extra == 'dev'
+Requires-Dist: nose-summary-report ; extra == 'dev'
+Requires-Dist: skipnose ; extra == 'dev'
+Requires-Dist: parameterized (>=0.6.3) ; extra == 'dev'
+Requires-Dist: mock (<1.4.0,>=1.3.0) ; extra == 'dev'
+Requires-Dist: WebTest (<2.1.0,>=2.0.18) ; extra == 'dev'
+Requires-Dist: coverage (==4.2) ; extra == 'dev'
+Requires-Dist: codecov ; extra == 'dev'
+Requires-Dist: bottle ; extra == 'dev'
+Provides-Extra: test
+Requires-Dist: nose (<1.4.0,>=1.3.7) ; extra == 'test'
+Requires-Dist: nose-summary-report ; extra == 'test'
+Requires-Dist: skipnose ; extra == 'test'
+Requires-Dist: parameterized (>=0.6.3) ; extra == 'test'
+Requires-Dist: mock (<1.4.0,>=1.3.0) ; extra == 'test'
+Requires-Dist: WebTest (<2.1.0,>=2.0.18) ; extra == 'test'
+Requires-Dist: coverage (==4.2) ; extra == 'test'
+Requires-Dist: codecov ; extra == 'test'
+Requires-Dist: bottle ; extra == 'test'
+
+# conanx
+
+
+
