@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: rcpicar
+Version: 0.0.1
+Summary: RCPiCar: Radio-controlled Raspberry Pi Car - Library
+Home-page: https://github.com/franzmandl/rcpicar
+Author: Franz Mandl
+Author-email: noreply@franzmandl.com
+License: MIT
+Project-URL: Bug Tracker, https://github.com/franzmandl/rcpicar/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: client
+Provides-Extra: server
+Requires-Dist: pigpio (==1.78) ; extra == 'server'
+Provides-Extra: tests
+Requires-Dist: build ; extra == 'tests'
+Requires-Dist: mypy (==0.812) ; extra == 'tests'
+Requires-Dist: pigpio (==1.78) ; extra == 'tests'
+Requires-Dist: pycodestyle (==2.7.0) ; extra == 'tests'
+Requires-Dist: pytest (==6.2.4) ; extra == 'tests'
+Requires-Dist: pytest-cov (==2.11.1) ; extra == 'tests'
+Requires-Dist: pytest-xdist (==2.2.1) ; extra == 'tests'
+Requires-Dist: twine ; extra == 'tests'
+
+# RCPiCar: Radio-controlled Raspberry Pi Car - Library
+
+
