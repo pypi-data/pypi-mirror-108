@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.py
+mixstream/__init__.py
+mixstream.egg-info/PKG-INFO
+mixstream.egg-info/SOURCES.txt
+mixstream.egg-info/dependency_links.txt
+mixstream.egg-info/not-zip-safe
+mixstream.egg-info/top_level.txt
