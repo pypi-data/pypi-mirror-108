@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+pyunittests/src/pyunittests.egg-info/PKG-INFO
+pyunittests/src/pyunittests.egg-info/SOURCES.txt
+pyunittests/src/pyunittests.egg-info/dependency_links.txt
+pyunittests/src/pyunittests.egg-info/top_level.txt
+pyunittests/src/pyunittests.py
+pyunittests/src/pyunittests.egg-info/SOURCES.txt
