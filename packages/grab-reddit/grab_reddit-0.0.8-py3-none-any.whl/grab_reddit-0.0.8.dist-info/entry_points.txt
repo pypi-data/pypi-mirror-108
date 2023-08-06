@@ -1,0 +1,3 @@
+[console_scripts]
+grab-download = newgrab:main
+
