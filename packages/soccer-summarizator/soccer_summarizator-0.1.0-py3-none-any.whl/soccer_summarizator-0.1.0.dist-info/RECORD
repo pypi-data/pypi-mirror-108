@@ -1,0 +1,9 @@
+soccer_summarizator/__init__.py,sha256=yW3zV7U5_uGxQtzJDY_IwPHnb7XMOkaxjaPxpf4S0K8,113
+soccer_summarizator/model_builder.py,sha256=j2QsvSwVn1Z9WQvw7hIVU-MXXFtSu15kuv8gpxC8RLw,1331
+soccer_summarizator/soccer_summarizator.py,sha256=9vXdY2Z69--YZMIhk_SAOSKRMLDWFYeeQaXoXggwDs0,7272
+soccer_summarizator/checkpoints/resnet.pth,sha256=xQhehNB2cywjx_CslNJEzEbcKN2asOxxVI76jg-SElo,44789986
+soccer_summarizator/checkpoints/squeezenet.pth,sha256=ZiqAB2h1SIn0NprYypRCncqjIel-DIdRGmVhn7Iz8xY,2965820
+soccer_summarizator-0.1.0.dist-info/METADATA,sha256=CRIqGhYdyjLccuQ_EhPz0mIYEnbuVK29funp8a_fQYU,748
+soccer_summarizator-0.1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+soccer_summarizator-0.1.0.dist-info/top_level.txt,sha256=ZwvhpiRlkDtR9O_Pf8vYGCTHnUMePS0-ncwMW-ukCfA,20
+soccer_summarizator-0.1.0.dist-info/RECORD,,
