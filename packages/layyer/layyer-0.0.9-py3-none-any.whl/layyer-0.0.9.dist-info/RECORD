@@ -1,0 +1,12 @@
+layyer/__init__.py,sha256=lZoBoCrPmDHiztV57wRru9CSJWCzBJ4qzAHBIoqWxZQ,21
+layyer/discodef/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+layyer/discodef/cifar10_model.py,sha256=wJuqg-ryPaUv-gFFdgIntJMMocklwVN-yM0C6nEn1x8,2309
+layyer/discodef/disco_model.py,sha256=prvXaa_DTqSiLWiWJiSnlM9EQzWUR48Hy4klafSfEdw,16119
+layyer/discodef/getData.py,sha256=h-SDPEFdXNNvnOdliCtlgh_xpXc-yKuVHd9kTaa9Ggs,12925
+layyer/discodef/mnist_model.py,sha256=2MeVmc4bL_UDyWL9vgGA3KV2l51y76WTZIyzr6Cu0k0,2844
+layyer/discodef/utils.py,sha256=zwlF9B3YYByuEySnB2j7gKCeKsrSjS8FGeYawDxggAQ,3283
+layyer-0.0.9.dist-info/LICENSE.txt,sha256=z90sh8CW74ePwfyunNJmSFoek79fk3KxlSVXp8_a14o,1066
+layyer-0.0.9.dist-info/METADATA,sha256=T3nd1ccMgCIwDl8Pcbl-C9_I1jrgyHNaN7WWImZPgxg,440
+layyer-0.0.9.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+layyer-0.0.9.dist-info/top_level.txt,sha256=o8e18uKunabs5pJJEvescrBLqS-a3D04nsv37CdPNrU,7
+layyer-0.0.9.dist-info/RECORD,,
