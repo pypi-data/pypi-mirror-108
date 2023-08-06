@@ -1,0 +1,15 @@
+requests<3.0.0,>=2.9.2
+pyjwt[crypto]<3.0.0,>=2.0.0
+
+[dev]
+flake8<4
+isort<6
+black==21.5b1
+flake8-bugbear==21.4.3
+mypy==0.812
+pytest<7
+pytest-cov<3
+pytest-xdist<3
+responses==0.13.3
+sphinx<5
+furo==2021.04.11b34
