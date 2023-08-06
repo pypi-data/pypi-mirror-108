@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/timeset/__init__.py
+src/timeset/tests.py
+src/timeset/timeset.py
+src/timeset.egg-info/PKG-INFO
+src/timeset.egg-info/SOURCES.txt
+src/timeset.egg-info/dependency_links.txt
+src/timeset.egg-info/top_level.txt
