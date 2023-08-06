@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/base_mlflow_model/__init__.py
+src/mlflow_boilerplate_spavlyuk.egg-info/PKG-INFO
+src/mlflow_boilerplate_spavlyuk.egg-info/SOURCES.txt
+src/mlflow_boilerplate_spavlyuk.egg-info/dependency_links.txt
+src/mlflow_boilerplate_spavlyuk.egg-info/top_level.txt
