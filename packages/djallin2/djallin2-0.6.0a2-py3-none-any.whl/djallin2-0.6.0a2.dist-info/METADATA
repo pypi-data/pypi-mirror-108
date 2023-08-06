@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: djallin2
+Version: 0.6.0a2
+Summary: Twitch noisemaker
+Home-page: https://github.com/vilhelmen/djallin2
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft :: Windows
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: toml
+Requires-Dist: tomlkit
+Requires-Dist: requests
+Requires-Dist: python-dateutil
+Requires-Dist: websockets
+Requires-Dist: pyobjc ; platform_system == "Darwin"
+
+# DJALLIN2
+
+A mildly configurable twitch noisemaker capable of responding to chat and point redemptions.
+
+Available through pip (`djallin2`) or as a [standalone executable](https://github.com/vilhelmen/djallin2/releases) for macOS and Windows.
+
+
+## Configuration
+
+`config.txt` holds your token and configures chat and point responders.
+Take a look at the [example configuration](./example_config.txt) for an explanation of how it works.
+
+
+# TODO:
+1. This
+1. HTTP command receiver (lioran)
+1. custom hook code - lioran example? obs websocket?
+1. more flexible command triggers (regex??)
+1. Bits?
+1. Does linux support audio these days?
+
+
