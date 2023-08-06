@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: ryvencore-qt
+Version: 0.0.2
+Summary: Library for building Visual Scripting Editors with Qt
+Home-page: UNKNOWN
+Author: Leon Thomm
+Author-email: l.thomm@mailbox.org
+License: LGPLv2.1
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v2 or later (LGPLv2+)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: PySide2
+Requires-Dist: QtPy
+
+
+`rvencore-qt` is a library for building flow-based visual scripting editors for Python with Qt. It comes from the [Ryven](https://github.com/leon-thomm/Ryven) project. For more info see [GitHub](https://github.com/leon-thomm/ryvencore-qt).
+
+
