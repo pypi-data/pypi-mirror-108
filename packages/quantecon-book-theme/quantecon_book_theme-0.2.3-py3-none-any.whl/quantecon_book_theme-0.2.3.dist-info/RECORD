@@ -1,0 +1,12 @@
+quantecon_book_theme/__init__.py,sha256=IwQWPT-6VijyiDAxs8EehxE4j4qLE_d96EirbnJxhWQ,9992
+quantecon_book_theme/launch.py,sha256=38hjMOof3r0GVImJVPCzAJd2toPTaSdWIAjTiYQFuzA,6876
+quantecon_book_theme/layout.html,sha256=oWsjAlMXrcMPdFXIQYTOowDBMopzukKJIXDl53ye8iI,15856
+quantecon_book_theme/theme.conf,sha256=uvsJnM_P8rl3BavOvUUijDTlqcKx8FZoPOQ8Y2pPCjc,695
+quantecon_book_theme/static/quantecon-book-theme.a5462485f8dd312884626d20cc9f547c.js,sha256=cEnlinefPEOpwUcIHcutJFh8rHj-neSNIOtQsVvGa10,7153
+quantecon_book_theme/static/quantecon-book-theme.b2c9c855ebbf206c0b4223812193cad1.css,sha256=f7SYxFqXr3R3MHrYVVJsgjlrahMdwjcf7nC6Y8wYLg4,26694
+quantecon_book_theme-0.2.3.dist-info/LICENSE,sha256=-Cv_cPRy24L80aYDzcupcxZbAMsejif0nJZosW0qW34,1517
+quantecon_book_theme-0.2.3.dist-info/METADATA,sha256=n6qjBb-bz8LzdF-0vPXNstkpQd1A0yI5k9gBctb6ZRY,3229
+quantecon_book_theme-0.2.3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+quantecon_book_theme-0.2.3.dist-info/entry_points.txt,sha256=xewyYhynNSTIQi1kyxGkL4BMT7EH-3RWCBxYy_OTuO0,66
+quantecon_book_theme-0.2.3.dist-info/top_level.txt,sha256=kkPf3xGijn39M3FaiMLNdsvZn90KLMpHOODgYnWNges,21
+quantecon_book_theme-0.2.3.dist-info/RECORD,,
