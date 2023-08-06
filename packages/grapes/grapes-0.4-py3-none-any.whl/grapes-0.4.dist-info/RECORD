@@ -1,0 +1,10 @@
+grapes/__init__.py,sha256=8XCU2t5nPDncJqmN94nT-1KhXJdOC9kCJOO3_Nlk3mw,42
+grapes/core.py,sha256=NRAzfQaebIErUQ8Kw2a6B8q1nhz0xKGt0GNzZbCUjYY,18596
+grapes/function_composer.py,sha256=n69RTyW1wqUsO1vLzcJBeZLLbjjoxrblqfbKDCYpZyw,3786
+grapes/util.py,sha256=27GQWbrCRAo8sSg48L9AEdUzLSvvEvGfvNcnDktr2dM,3274
+grapes-0.4.dist-info/LICENSE.txt,sha256=JRR3LlR18ghhYXT4G2cWgXmnxRvcuVcKlqncWWK4MRY,10347
+grapes-0.4.dist-info/METADATA,sha256=980LCC0vVVUPPRaZHqJdMzajyE9zQs0p6ygsPAcVpPc,439
+grapes-0.4.dist-info/NOTICE.txt,sha256=YlylmIxfILtmYJs-UumN161qHkZfIi36BygXUhUb_pQ,566
+grapes-0.4.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+grapes-0.4.dist-info/top_level.txt,sha256=ssWKaj98H0-8OkS2BS_seYTGpa0LK556VtOlFOB8TdA,7
+grapes-0.4.dist-info/RECORD,,
