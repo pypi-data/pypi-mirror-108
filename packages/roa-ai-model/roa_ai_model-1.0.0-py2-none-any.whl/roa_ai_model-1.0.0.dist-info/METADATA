@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: roa-ai-model
+Version: 1.0.0
+Summary: ROA ML/DL modeling package
+Home-page: https://github.com/roa-ai/roa_ai_model
+Author: roa
+Author-email: dev@roa.ai
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: pandas
+Requires-Dist: numpy
+
+# RAM : Roa AI Model
+ㅁㄴㅇㄹㄴㅁㅇㄹㄴㅁㅇㄹㄴㅁㅇㄹㄴㅁㅇㄹㄴㅁㅇㄹㄴㅁㅇㄹㄴㅇㅁㄹㄴㅇㅁㄹㄴㅁㅇㄹㄴㅁㅇㄹㄴㅇㅁㄹㄴㅁㅇㄹㄴㅁㅇㄹㄴㅁㅇㄹㄴㅁㅇㄹㄴㅇㅁㄹㄴㅁㅇㄹㄴㅁㅇㄹㅁㄴㅇㄹㄴㅇㅁㄹㄴㅁㅇㄹㄴㅇㅁㄹㄴㅇㅁㄹㄴㅁㅇㄹㄴㅁㅇㄹㄴㅁㅇㄹㄴㅁㅇㄹㄴㅇㅁㄹㅁㄴㅇㄹㄴㅇㅁㄹㄴㅇㅁㄹㄴㅇㅁㄹㄴㅇㅁㄹㄴㅇㅁㄹㄴㅇㄹㄴㅁㅇㄹㄴㅁㅇㄹㄴㅇㄹㄴㅁㅇㄹㄴㅁㅇㄹㄴㅇㄹㄴㅁㄹ
+### Installation
+```python3
+pip install roa_ai_model
+```
+
+
+### Usage
+가나다라마사바가나다라마사바가나다라마사바가나다라마사바가나다라마사바가나다라마사바가나다라마사바가나다라마사바가나다라마사바가나다라마사바가나다라마사바가나다라마사바가나다라마사바가나다라마사바가나다라마사바가나다라마사바가나다라마사바가나다라마사바가나다라마사바가나다라마사바가나다라마사바가나다라마사바가나다라마사바가나다라마사바가나다라마사바
+```python3
+# 약어 지정
+import roa_ai_model as ram
+```
+```python3
+# 전체 함수 호출
+from roa_ai_model import * 
+```
+```python3
+# 특정 함수만 호출
+from roa_ai_model import update_company_rank
+```
+### Documentation
+- aasdfsadfsadfsadf
+- sdfasfasdfsdafsdaf
+### Contributors
+- Park Sang Hee, ML Enginner, sanghee@roa.ai
+
+### License
+- asdfsadfsadf
+- asdfsadfsadfsadfsdfsdfsdafsadfsdafa
+
