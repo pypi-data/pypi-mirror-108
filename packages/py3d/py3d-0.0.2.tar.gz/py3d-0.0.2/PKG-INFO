@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: py3d
+Version: 0.0.2
+Summary: a 3d library
+Home-page: https://github.com/Tumiz/scenario
+Author: Tumiz
+Author-email: hh11698@163.com
+License: GPL-3.0 License
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.5.0
