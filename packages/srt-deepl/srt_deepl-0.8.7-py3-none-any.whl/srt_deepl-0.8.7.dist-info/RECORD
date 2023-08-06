@@ -1,0 +1,13 @@
+srt_deepl/__init__.py,sha256=O_GfxdFYQLvc4C8TKzrxR5g7EwOwYqk60D98rspvSJQ,96
+srt_deepl/__main__.py,sha256=xPnIabAPWaHevUxb88Fy7a3gBPJydX4wC8B9ShVfvcw,2476
+srt_deepl/deepl.py,sha256=3NR0IWH3qB_fXujlfKeuAbvlBe1PABL94wfw1-SkJSQ,3295
+srt_deepl/elements.py,sha256=HFHUIpdw71nkh6TMZCqHU5LEqYCQAHXj5yC3ILgh20E,992
+srt_deepl/main.py,sha256=55POtqCszW2vJ-HTBYk0z-c6k9at_IarbhwEH_9PpZg,2461
+srt_deepl/srt_parser.py,sha256=qin7VfcLrdE69ztk2yZpKOw2BrcCCIrd3i6tAXkMe4I,1307
+test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+test/test_srt_parser.py,sha256=2-bqAraqQ03V41fxZ-FKQwZQxqPg5tULK-uTKT774pg,1882
+srt_deepl-0.8.7.dist-info/LICENSE.md,sha256=Vnc2eszzDFYpLYI93g2xkZ1KU6LDyEY-hm1KMlW2NTs,526
+srt_deepl-0.8.7.dist-info/METADATA,sha256=IH0Nb2WFR2ih1AMB4WzJQxlE7QH1Aci6EA7zaMzxh7E,838
+srt_deepl-0.8.7.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+srt_deepl-0.8.7.dist-info/top_level.txt,sha256=8cQKy2KO0lon6vJl7ui4J3fOKep1KOZuBujyduaG_fA,15
+srt_deepl-0.8.7.dist-info/RECORD,,
