@@ -1,0 +1,10 @@
+MANIFEST.in
+README.txt
+setup.py
+aurabot/_init_.py
+aurabot.egg-info/PKG-INFO
+aurabot.egg-info/SOURCES.txt
+aurabot.egg-info/dependency_links.txt
+aurabot.egg-info/top_level.txt
+aurabotd/.env
+aurabotd/main.py

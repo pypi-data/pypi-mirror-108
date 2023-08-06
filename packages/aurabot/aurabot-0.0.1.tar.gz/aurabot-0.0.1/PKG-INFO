@@ -1,0 +1,23 @@
+Metadata-Version: 1.1
+Name: aurabot
+Version: 0.0.1
+Summary: A very basic Fortnite Bot
+Home-page: UNKNOWN
+Author: FireGlitches
+Author-email: FireGlitches@protonmail.com
+License: MIT
+Description: aurabot is a bot for the game Fortnite.Aurabot create a lobbybot for you.
+        
+        Change Log
+        ==========
+        
+        0.0.1 (06/06/2021)
+        ------------------
+        - First Release
+Keywords: fortnite
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
