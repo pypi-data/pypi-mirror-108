@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: furs_fiscalization
+Version: 0.7.0
+Summary: Python library for simplified communication with FURS (Financna uprava Republike Slovenije).
+Home-page: https://github.com/HermesGH/furs-fiscalization
+Author: Hermes d.o.o.
+Author-email: info@hermes-solutions.si 
+License: MIT
+Download-URL: https://github.com/HermesGH/furs-fiscalization/archive/v0.7.0.zip
+Keywords: FURS,fiscal,fiscal register,davcne blagajne
+Platform: UNKNOWN
+License-File: LICENSE
+
+UNKNOWN
+
