@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: opsgenie-python-api
+Version: 0.1
+Summary: Python bindings for Opsgenie API
+Home-page: https://github.com/stanislavulrych/opsgenie-python-api
+Author: Stanislav Ulrych
+Author-email: stanislav.ulrych@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/stanislavulrych/opsgenie-python-api/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# opsgenie-python-api
+
+Low-level Python bindings for Opsgenie API.
+
+This is a Opsgenie API client library to simplify the interaction with Opsgenie.
+
+Opsgenie API documentation can be found at https://docs.opsgenie.com/docs/
+
+## Installation
+
+Install current reelase by pip
+
+```
+pip install opsgenie-python-api
+```
+
+## Getting Started
+
+You need an API token for communicating with tempo REST APIs. 
+
+```
+from opsgenie import client
+
+schedulesApi = SchedulesApi(auth_token='<your_api_auth_token>)
+
+schedules = self.schedulesapi.get_schedules()
+print(schedules)
+```
+
+
+## Contributing
+
+Contribution is welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) for more details.
+
+

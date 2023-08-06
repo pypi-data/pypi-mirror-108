@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+opsgenie/__init__.py
+opsgenie/rest_client.py
+opsgenie/schedules_api.py
+opsgenie_python_api.egg-info/PKG-INFO
+opsgenie_python_api.egg-info/SOURCES.txt
+opsgenie_python_api.egg-info/dependency_links.txt
+opsgenie_python_api.egg-info/top_level.txt
