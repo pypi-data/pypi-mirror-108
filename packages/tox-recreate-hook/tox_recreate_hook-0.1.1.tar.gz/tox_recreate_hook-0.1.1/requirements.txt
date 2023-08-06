@@ -1,0 +1,4 @@
+domdf-python-tools>=2.8.0
+first>=2.0.2
+pluggy>=0.13.1
+tox>=3.21.0
