@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+ntl/__init__.py
+pyntl.egg-info/PKG-INFO
+pyntl.egg-info/SOURCES.txt
+pyntl.egg-info/dependency_links.txt
+pyntl.egg-info/top_level.txt
