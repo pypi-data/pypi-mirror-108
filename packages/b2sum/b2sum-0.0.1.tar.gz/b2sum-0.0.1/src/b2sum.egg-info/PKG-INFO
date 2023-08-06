@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: b2sum
+Version: 0.0.1
+Summary: b2sum blake2
+Home-page: https://github.com/karlrink/b2sum
+Author: Karl Rink
+Author-email: karl@rink.us
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/krink/b2sum/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+Python command line tool for b2sum.
+

@@ -1,0 +1,3 @@
+[console_scripts]
+b2sum = b2sum.b2sum:main
+
