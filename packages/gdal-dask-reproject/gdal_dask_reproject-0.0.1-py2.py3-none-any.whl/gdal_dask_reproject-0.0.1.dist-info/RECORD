@@ -1,0 +1,7 @@
+cc_reproject/.version,sha256=Wf26zxtfxtc9MdAg4LIIwBsTXg4_UrnjZ5Fqk-skdok,85
+cc_reproject/__init__.py,sha256=Truhbuu6qW7eIla3N8nWCJmYMQUOOnwK1t14D1GEJcw,214
+cc_reproject/cc_reproject.py,sha256=GRN5YPdfkSNuJx-B_zxpbc_DC2Z9s5KnOUOK3dr1zXs,9982
+gdal_dask_reproject-0.0.1.dist-info/METADATA,sha256=-4tjjYtDAXENkwnb4p7GElrro5s0-LRTmV-DYOnOn_M,335
+gdal_dask_reproject-0.0.1.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+gdal_dask_reproject-0.0.1.dist-info/top_level.txt,sha256=OXauaAnCMOcV3X1FqemQmCjTY9Hy6NPGaJiSgwdk1uk,13
+gdal_dask_reproject-0.0.1.dist-info/RECORD,,
