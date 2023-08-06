@@ -1,0 +1,14 @@
+attributes
+availability
+cargo
+cart
+categories
+clothes
+comparison
+delivery
+exchange
+manufacturers
+offers
+orders
+product_images
+wishlist
