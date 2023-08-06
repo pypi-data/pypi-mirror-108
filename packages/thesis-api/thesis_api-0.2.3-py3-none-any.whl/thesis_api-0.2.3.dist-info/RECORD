@@ -1,0 +1,11 @@
+thesis_api/__init__.py,sha256=rT8VWPCrVx7naj8NDkKLQkVe0FGEDu5CHfCEOjilNHU,2729
+thesis_api/dir_structure.py,sha256=z2Kj4lxp6WAdeppgxjMohTcN-8eEE27Q5AV_uLgCseo,18119
+thesis_api/tools/__init__.py,sha256=4XhoZyT5B-KaSGsk9O8Us6wHh8B187x_5fS0Qwkz-nk,71
+thesis_api/tools/maintenance.py,sha256=uSjsuO3zqT6ImEgePZeJOJ6ejkL-MANGFrzUqkomgu8,14965
+thesis_api/tools/template_strings.py,sha256=Hnhh4S40CsVDO61W3XNOAjA7Tg2riHhQ4Hz1nzaRnF0,9031
+thesis_api/tools/templates/chapter.json,sha256=TOPiBeuCTwnxvHHcPIn1u7ZBVX-S3VdGxb0hiV7opYY,1487
+thesis_api/tools/templates/chapter.jsonc,sha256=I_bRDEFaanFUyL4OIBm_cM8C9X7Su-fSuE3H-dRZcAM,3883
+thesis_api-0.2.3.dist-info/LICENSE,sha256=k2YbfJq8qdkD1LWra133iRmuQb5PWBMgcK8Gpj-tFTY,1069
+thesis_api-0.2.3.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+thesis_api-0.2.3.dist-info/METADATA,sha256=fpw0ZjIbsw-9salOX3E8EYuJCCCClf5s1Nl93l0qcnE,309
+thesis_api-0.2.3.dist-info/RECORD,,
