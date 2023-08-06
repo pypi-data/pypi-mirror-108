@@ -1,0 +1,1 @@
+""" stores important values and constants """
