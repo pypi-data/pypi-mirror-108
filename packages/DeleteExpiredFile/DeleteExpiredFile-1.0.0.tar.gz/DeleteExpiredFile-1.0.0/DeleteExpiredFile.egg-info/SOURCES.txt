@@ -1,0 +1,9 @@
+LICENSE.txt
+MANIFEST.in
+setup.cfg
+setup.py
+DeleteExpiredFile/__init__.py
+DeleteExpiredFile.egg-info/PKG-INFO
+DeleteExpiredFile.egg-info/SOURCES.txt
+DeleteExpiredFile.egg-info/dependency_links.txt
+DeleteExpiredFile.egg-info/top_level.txt
