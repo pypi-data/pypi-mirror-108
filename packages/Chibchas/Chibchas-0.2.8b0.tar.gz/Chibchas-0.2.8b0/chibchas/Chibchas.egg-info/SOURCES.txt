@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+bin/chibchas_institulac
+bin/chibchas_server
+chibchas/Chibchas.egg-info/PKG-INFO
+chibchas/Chibchas.egg-info/SOURCES.txt
+chibchas/Chibchas.egg-info/dependency_links.txt
+chibchas/Chibchas.egg-info/requires.txt
+chibchas/Chibchas.egg-info/top_level.txt
