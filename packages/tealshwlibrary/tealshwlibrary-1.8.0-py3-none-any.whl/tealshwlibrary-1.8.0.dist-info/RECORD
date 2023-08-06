@@ -1,0 +1,13 @@
+example_pkg/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+example_pkg/functions.py,sha256=NoRu29XJHIMasDX2JA8PyrKMrSXvqR7B15X6EpGZRRU,1182
+functions/June7.py,sha256=NoRu29XJHIMasDX2JA8PyrKMrSXvqR7B15X6EpGZRRU,1182
+functions/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+functions/functions.py,sha256=O6mxJDNH0ZZSObbWXWbUKm6mfVD_TipNDE5XCTMn2iA,1181
+tealshwlibrary/June7.py,sha256=O6mxJDNH0ZZSObbWXWbUKm6mfVD_TipNDE5XCTMn2iA,1181
+tealshwlibrary/June8.py,sha256=FE0ZHRzgNTt5a3I6cBpufnCgACZ_69I1mHRNnEFcNyw,563
+tealshwlibrary/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tealshwlibrary-1.8.0.dist-info/LICENSE.txt,sha256=2bm9uFabQZ3Ykb_SaSU_uUbAj2-htc6WJQmS_65qD00,1073
+tealshwlibrary-1.8.0.dist-info/METADATA,sha256=_9QnA37FXZ1xw4-VAXckCpZn-O3OW8VCIgQMMOU-P5M,630
+tealshwlibrary-1.8.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+tealshwlibrary-1.8.0.dist-info/top_level.txt,sha256=zarZ2QXJrYBOXLuqFvVXti2CKfyOLmxPG8vyqMeNP9g,15
+tealshwlibrary-1.8.0.dist-info/RECORD,,
