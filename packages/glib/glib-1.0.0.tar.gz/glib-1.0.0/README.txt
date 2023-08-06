@@ -1,0 +1,1 @@
+This is a python graphics library that piggy-backs off of pyqt5
