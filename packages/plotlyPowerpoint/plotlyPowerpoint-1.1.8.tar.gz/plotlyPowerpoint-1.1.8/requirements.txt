@@ -1,0 +1,6 @@
+# listing out all package requirements
+pandas
+plotly
+python-pptx==0.6.19
+numerize
+scipy
