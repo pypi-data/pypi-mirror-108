@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: colorhex
+Version: 2.64
+Summary: A python module that makes your text colorful, inspired py termcolor & colorama
+Home-page: UNKNOWN
+Author: dev64
+Author-email: lazarecobani@gmail.com
+License: UNKNOWN
+Keywords: colored,hex,python color,colored text,linux,color
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Operating System :: Unix
+Classifier: Topic :: Text Processing :: Fonts
+Classifier: Environment :: Console
+
+A simple module to make your text colorful easily, using a hex digit & any color. Only for linux
+
+

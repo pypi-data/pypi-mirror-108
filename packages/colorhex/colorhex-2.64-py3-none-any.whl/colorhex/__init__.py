@@ -1,0 +1,1 @@
+from .colorex import colorex, BOLD, BLINKING, UNDERLINE, ITALIC
