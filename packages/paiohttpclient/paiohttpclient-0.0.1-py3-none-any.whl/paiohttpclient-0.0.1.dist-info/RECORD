@@ -1,0 +1,11 @@
+paiohttpclient/__init__.py,sha256=kT4J5XDYVHRW3OkygYNk22kInECx0el-qcibPS0HnJ4,135
+paiohttpclient/http/__init__.py,sha256=WMVU9MRjeIgOx-fKURQth9cKUKW-kirPvktCWJHSXE4,93
+paiohttpclient/http/graphql_response.py,sha256=FoxS05Y72oBbsYq_osXIZS2rUS1xezjg8QyBbgSAAWc,667
+paiohttpclient/http/http_client.py,sha256=OdatrFfy5_hOVbb9M5ciGUK-MM3aADvUZxe7b48tmJI,13860
+paiohttpclient/http/http_error.py,sha256=dPGc3lrxnky85HZb6UMhBkHqDRTjHvS6ajvMDVAKQSM,380
+paiohttpclient/utils/__init__.py,sha256=vC5yh3xpwtwlwMGsfHfqSigyIQMfaOpM0rK6PFwm7nc,47
+paiohttpclient/utils/jsonable_encoder.py,sha256=qc7YCiJdv87XDFxnCpcJdxl8bnkXZr1nZ6EO-lmWqCI,5358
+paiohttpclient-0.0.1.dist-info/METADATA,sha256=Dq6jus3eP7FZOWwMbov83PNisryQooRXkikHii54__M,4779
+paiohttpclient-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+paiohttpclient-0.0.1.dist-info/top_level.txt,sha256=BVVb9iZo8Q67ypKLIPY2W9c-_w1K1XJjAC9p4nWgVik,15
+paiohttpclient-0.0.1.dist-info/RECORD,,
