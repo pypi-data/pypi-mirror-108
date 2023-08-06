@@ -1,0 +1,8 @@
+LICENCE
+README.md
+pyproject.toml
+setup.cfg
+src/apyzme.egg-info/PKG-INFO
+src/apyzme.egg-info/SOURCES.txt
+src/apyzme.egg-info/dependency_links.txt
+src/apyzme.egg-info/top_level.txt
