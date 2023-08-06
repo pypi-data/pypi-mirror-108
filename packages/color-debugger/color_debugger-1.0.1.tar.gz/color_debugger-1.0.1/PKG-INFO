@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: color-debugger
+Version: 1.0.1
+Summary: Color debug to your terminal by termcolor library use all_func() to show all functions
+Author: Alex.Net
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
