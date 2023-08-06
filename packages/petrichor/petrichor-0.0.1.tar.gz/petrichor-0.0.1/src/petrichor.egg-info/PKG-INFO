@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: petrichor
+Version: 0.0.1
+Summary: Domain Helper
+Home-page: https://github.com/nymann/petrichor
+Maintainer: Kristian Nymann Jakobsen
+Maintainer-email: kristian@nymann.dev
+License: UNKNOWN
+Description: ## Petrichor
+        
+        Common modules that I use when creating RESTful API's.
+        
+Platform: UNKNOWN
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Provides-Extra: dev

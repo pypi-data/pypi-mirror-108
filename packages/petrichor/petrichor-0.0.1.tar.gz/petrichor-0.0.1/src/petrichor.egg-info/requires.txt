@@ -1,0 +1,17 @@
+fastapi
+pydantic
+asyncpg
+
+[dev]
+isort
+wemake-python-styleguide
+mypy
+black
+dlint
+nitpick
+cohesion
+flake8
+pyformat
+add-trailing-comma
+pre-commit
+devtools[pygments]
