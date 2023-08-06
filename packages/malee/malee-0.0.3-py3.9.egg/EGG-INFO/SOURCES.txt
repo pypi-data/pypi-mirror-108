@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+malee/__init__.py
+malee/_malee.py
+malee.egg-info/PKG-INFO
+malee.egg-info/SOURCES.txt
+malee.egg-info/dependency_links.txt
+malee.egg-info/top_level.txt
