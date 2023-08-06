@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: pyfoldx
+Version: 0.1.1
+Summary: Python Bindings for FoldX
+Home-page: https://github.com/leandroradusky/pyFoldX
+Author: Leandro Radusky
+Author-email: leandro.radusky@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Requires-Dist: biopython
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: tqdm
+Requires-Dist: lxml
+
+UNKNOWN
+
