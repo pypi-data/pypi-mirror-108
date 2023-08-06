@@ -1,0 +1,6 @@
+
+[:python_version < "3.7"]
+contextvars
+
+[hiredis]
+hiredis>=0.2.0
