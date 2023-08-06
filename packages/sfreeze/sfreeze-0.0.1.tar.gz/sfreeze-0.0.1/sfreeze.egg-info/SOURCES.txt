@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.py
+sfreeze/__init__.py
+sfreeze/freeze.py
+sfreeze.egg-info/PKG-INFO
+sfreeze.egg-info/SOURCES.txt
+sfreeze.egg-info/dependency_links.txt
+sfreeze.egg-info/not-zip-safe
+sfreeze.egg-info/requires.txt
+sfreeze.egg-info/top_level.txt
