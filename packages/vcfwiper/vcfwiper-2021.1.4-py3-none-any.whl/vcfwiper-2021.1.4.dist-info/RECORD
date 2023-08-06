@@ -1,0 +1,9 @@
+vcf_wiper/__init__.py,sha256=fiWxmh-0gDiZOZuNbhCv2Pb7TnpyZO5MVTNECRaxo48,1895
+vcf_wiper/color_log_formatter.py,sha256=D8nQSxo0--lIG77uDyfRJXSrM50SPi4Fx5U5EAECa-U,2078
+vcf_wiper/wiper.py,sha256=RaVMUMYyjep9BS6mRQrmewqMxwsmOTBj3JU6Zbd4rBU,5037
+vcfwiper-2021.1.4.dist-info/LICENSE,sha256=kDYjDVQGYucQafWFc1DGrJ0-fPp2mlDeAI_mZfNp4mI,1065
+vcfwiper-2021.1.4.dist-info/METADATA,sha256=7l5Tym36LmJsAHoTwj2onJ7ETiYCQtJDVlKNUcC0Hc0,3329
+vcfwiper-2021.1.4.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+vcfwiper-2021.1.4.dist-info/entry_points.txt,sha256=PbzsaAXfwX2J1CJGGRcF3_uUrPuMhCe7_uTPK2AFXoQ,58
+vcfwiper-2021.1.4.dist-info/top_level.txt,sha256=nEoc1yXY2pgBZysL6xDGm6vpU9HnpqQp5YClWByK-B4,10
+vcfwiper-2021.1.4.dist-info/RECORD,,

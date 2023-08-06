@@ -1,0 +1,3 @@
+[console_scripts]
+fastqwiper = vcf_wiper.wiper:vcf_fastq
+
