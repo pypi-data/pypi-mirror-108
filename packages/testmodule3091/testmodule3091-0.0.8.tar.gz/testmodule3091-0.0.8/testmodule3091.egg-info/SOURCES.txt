@@ -1,0 +1,10 @@
+MANIFEST.in
+setup.py
+testmodule3091/__init__.py
+testmodule3091/loadsetup.py
+testmodule3091/teiauxiliary.py
+testmodule3091.egg-info/PKG-INFO
+testmodule3091.egg-info/SOURCES.txt
+testmodule3091.egg-info/dependency_links.txt
+testmodule3091.egg-info/requires.txt
+testmodule3091.egg-info/top_level.txt
