@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: pencode
+Version: 0.1.0
+Summary: Basic but fairly configurable Python FFMPEG CLI batch thing.
+Home-page: https://github.com/rlaphoenix/pencode
+Keywords: encode,batch,x264,ffmpeg,vapoursynth
+Author: PHOENiX
+Author-email: rlaphoenix@pm.me
+Requires-Python: >=3.7
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Multimedia :: Video
+Requires-Dist: click (>=8.0.1,<9.0.0)
+Requires-Dist: coloredlogs (>=15.0,<16.0)
+Requires-Dist: numpy (>=1.20.3,<2.0.0)
+Requires-Dist: pymediainfo (>=5.1.0,<6.0.0)
+Requires-Dist: pytomlpp (>=1.0.2,<2.0.0)
+Project-URL: Repository, https://github.com/rlaphoenix/pencode
+Description-Content-Type: text/markdown
+
+# pencode
+Basic but fairly configurable Python FFMPEG CLI batch thing.
+
