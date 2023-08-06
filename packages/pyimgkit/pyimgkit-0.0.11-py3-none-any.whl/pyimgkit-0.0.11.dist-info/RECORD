@@ -1,0 +1,9 @@
+pyimgkit/__init__.py,sha256=THyIHH3N0KkfAb8MKJeS_qyMUUgpGy1C0H4YLnMIlzM,31
+pyimgkit/measure/__init__.py,sha256=PSHSzutiTD61rOq19cQPUVc9DkMhFU45K22qYkz6Bi8,78
+pyimgkit/measure/_bbox.py,sha256=Lchcjy_KpxV5wJp-X36FbMuZ1Q6tenjLoVdt6fAt1p4,1585
+pyimgkit-0.0.11.dist-info/DESCRIPTION.rst,sha256=OCTuuN6LcWulhHS3d5rfjdsQtW22n7HENFRh6jC6ego,10
+pyimgkit-0.0.11.dist-info/METADATA,sha256=uzKIxYXb12lp1FJ0ogZ2LID3-2GnfTTlhB10ohKg5iY,238
+pyimgkit-0.0.11.dist-info/RECORD,,
+pyimgkit-0.0.11.dist-info/WHEEL,sha256=8Lm45v9gcYRm70DrgFGVe4WsUtUMi1_0Tso1hqPGMjA,92
+pyimgkit-0.0.11.dist-info/metadata.json,sha256=fgx42IIc6H_vKt9ycCky7Iz6gNQHs8iDm7gSFtFG8lU,359
+pyimgkit-0.0.11.dist-info/top_level.txt,sha256=f1jmiOTfICz1pQxFfOfFEkHuaXI5n1u0bMO-4MPs_SM,9
