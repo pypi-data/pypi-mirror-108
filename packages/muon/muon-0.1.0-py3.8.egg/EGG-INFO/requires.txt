@@ -1,0 +1,13 @@
+numpy
+pandas
+matplotlib
+seaborn
+h5py
+anndata
+scanpy
+sklearn
+umap-learn
+numba
+loompy
+protobuf
+tqdm
