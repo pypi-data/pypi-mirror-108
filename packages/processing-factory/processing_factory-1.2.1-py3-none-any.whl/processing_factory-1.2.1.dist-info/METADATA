@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: processing-factory
+Version: 1.2.1
+Summary: Geo Processing Micro Service SDK
+Home-page: UNKNOWN
+Maintainer: Airbus Defense & Space
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: docker (>=3.1.0)
+Requires-Dist: wget
+Requires-Dist: cookiecutter
+Requires-Dist: loguru
+Requires-Dist: jsonschema
+Requires-Dist: sanic (==19.12.2)
+Requires-Dist: sanic-openapi (==0.4.0)
+Requires-Dist: requests-file
+Requires-Dist: numpy (>1.11)
+Requires-Dist: requests
+Requires-Dist: rasterio (<1.2.0,>1.x.y)
+Requires-Dist: jsonify
+Requires-Dist: jinja2
+Requires-Dist: Pillow
+
+UNKNOWN
+
+
