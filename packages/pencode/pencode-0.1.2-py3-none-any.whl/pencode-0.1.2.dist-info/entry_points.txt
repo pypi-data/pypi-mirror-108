@@ -1,0 +1,3 @@
+[console_scripts]
+pencode=pencode.pencode:main
+
