@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: sarkas
+Version: 1.0.0a0
+Summary: Sarkas - A Fast pure-python Molecular Dynamics code and toolkit for non-ideal plasmas
+Home-page: https://murillogroup.github.io/sarkas
+Author: Murillo Group
+Author-email: sarkasdev@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: pandas
+Requires-Dist: numba (>=0.50)
+Requires-Dist: pyfftw
+Requires-Dist: fdint
+Requires-Dist: pyyaml
+Requires-Dist: tqdm
+Requires-Dist: pyfiglet (==0.8.post1)
+Requires-Dist: pickle5
+Requires-Dist: jupyter
+Requires-Dist: jupyterlab
+Requires-Dist: notebook
+Requires-Dist: matplotlib
+Requires-Dist: seaborn
+
+# Sarkas
+A Pure Python Molecular Dynamics package for Non-Ideal Plasmas
+
+
+Sarkas is a pure-Python Molecular Dynamics (MD) package designed with plasma physics in mind. The
+pure-python construction allows users to quickly add their own features to model the systems of
+their choosing. 
+
+## Documentation
+https://murillo-group.github.io/sarkas/
+
+
