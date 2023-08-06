@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "itmo_routespd"
+version = "1.0.0"
+description = "Recommendation individual educational routes for ITMO university entrants"
+authors = ["Vladislav Pivosh <pivosh098@gmail.com>"]
+readme = "README.md"
+homepage = "https://github.com/RUGyron/itmo_routespd"
+repository = "https://github.com/RUGyron/itmo_routespd"
+keywords = ["itmo", "route", "education"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+pydantic = "1.8.1"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
