@@ -1,0 +1,3 @@
+[console_scripts]
+camelup=camelcalc.play:main
+
