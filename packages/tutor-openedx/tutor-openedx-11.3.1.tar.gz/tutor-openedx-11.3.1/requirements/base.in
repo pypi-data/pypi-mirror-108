@@ -1,0 +1,8 @@
+appdirs
+click
+click_repl
+mypy
+pycryptodome
+jinja2
+kubernetes
+pyyaml>=4.2b1
