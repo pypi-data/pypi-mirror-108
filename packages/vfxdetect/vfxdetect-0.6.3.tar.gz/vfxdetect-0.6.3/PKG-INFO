@@ -1,0 +1,7 @@
+Metadata-Version: 1.1
+Name: vfxdetect
+Version: 0.6.3
+Summary: A cross-platform, OpenCV-based VFX shot detection program and Python library.
+Home-page: https://github.com/ThomasWeckenmann/PyVfxShotDetect
+Author: Thomas Weckenmann
+Author-email: tweckenmann0711@gmail.com
