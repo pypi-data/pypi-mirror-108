@@ -1,0 +1,7 @@
+Metadata-Version: 1.1
+Name: py_edl_editor
+Version: 0.2.2
+Summary: A cross-platform, PySide2-based EDL (Edit Decision List) GUI.
+Home-page: https://github.com/ThomasWeckenmann/py_edl_editor
+Author: Thomas Weckenmann
+Author-email: tweckenmann0711@gmail.com

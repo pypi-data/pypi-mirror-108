@@ -1,0 +1,8 @@
+#
+# py_edl_editor Python Requirements
+#
+PySide2
+cdl_convert
+opentimelineio
+timecode
+edl
