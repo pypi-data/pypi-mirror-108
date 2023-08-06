@@ -1,0 +1,12 @@
+#!/bin/bash
+
+version="0.2"
+title=${1:-"default title"}
+description=${2}
+check=$(uname)
+
+if [[ $check == "Darwin" ]]; then
+	notipy "$title $description"
+else
+	notifyd "$title" "$description"
+fi
