@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: dataaug
+Version: 0.0.1
+Summary: A data augmentation library for tabular and time series data.
+Home-page: https://github.com/noklam/dataaug/tree/master/
+Author: Nok Chan
+Author-email: mediumnok@gmail.com
+License: Apache Software License 2.0
+Description: # dataaug
+        > (Work in Progress) - A data augmentation library for tabular and time series data.
+        
+        
+        ## Install
+        
+        `pip install dataaug`
+        
+        ## How to use
+        
+        Fill me in please! Don't forget code examples:
+        
+        ```
+        1+1
+        ```
+        
+        
+        
+        
+            2
+        
+        
+        
+Keywords: dataaug optimization
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: Apache Software License
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Provides-Extra: dev

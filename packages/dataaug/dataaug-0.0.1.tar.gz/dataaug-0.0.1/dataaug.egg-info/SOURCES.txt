@@ -1,0 +1,16 @@
+CONTRIBUTING.md
+LICENSE
+MANIFEST.in
+README.md
+settings.ini
+setup.py
+dataaug/__init__.py
+dataaug/_nbdev.py
+dataaug/core.py
+dataaug.egg-info/PKG-INFO
+dataaug.egg-info/SOURCES.txt
+dataaug.egg-info/dependency_links.txt
+dataaug.egg-info/entry_points.txt
+dataaug.egg-info/not-zip-safe
+dataaug.egg-info/requires.txt
+dataaug.egg-info/top_level.txt
