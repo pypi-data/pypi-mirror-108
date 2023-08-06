@@ -1,0 +1,8 @@
+README.md
+afreeze
+setup.py
+afreeze.egg-info/PKG-INFO
+afreeze.egg-info/SOURCES.txt
+afreeze.egg-info/dependency_links.txt
+afreeze.egg-info/requires.txt
+afreeze.egg-info/top_level.txt

@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: afreeze
+Version: 0.1.0
+Summary: Freeze alsa configuration settings.
+Home-page: https://github.com/Alexhuszagh/afreeze
+Author: Alex Huszagh
+Author-email: ahuszagh@gmail.com
+License: Unlicense
+Description: UNKNOWN
+Keywords: alsa linux sound
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Topic :: Multimedia :: Sound/Audio
+Requires-Python: >3.7.0
+Provides-Extra: daemon
