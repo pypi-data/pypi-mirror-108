@@ -1,0 +1,14 @@
+flake8>=3.9.2
+flake8-docstrings>=1.6.0
+flake8-rst>=0.8.0
+flake8-rst-docstrings>=0.2.3
+flake8-annotations>=2.6.2
+flake8-type-annotations>=0.1.0
+pep8-naming>=0.11.1
+mypy>=0.812
+wheel>=0.36.2
+pylint>=2.8.2
+coverage>=5.5
+mrtoolstheme>=0.1.0
+build>=0.4.0
+twine>=3.4.1

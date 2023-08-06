@@ -1,0 +1,77 @@
+Metadata-Version: 2.1
+Name: mrtinydbutils
+Version: 0.1.1
+Summary: mrtinydbutils - Utilities for the TinyDB
+Home-page: https://anatas_ch.gitlab.io/pyl_mrtinydb/
+Author: Michael Rippstein
+Author-email: info@anatas.ch
+License: AGPL-3.0
+Project-URL: Documentation, https://mrtinydbutils.readthedocs.io/
+Project-URL: Bug Tracker, https://gitlab.com/anatas_ch/pyl_mrtinydb/-/issues
+Project-URL: Source Code, https://gitlab.com/anatas_ch/pyl_mrtinydb
+Keywords: database,nosql
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3 or later (AGPLv3+)
+Classifier: Topic :: Database
+Classifier: Topic :: Database :: Database Engines/Servers
+Classifier: Topic :: Utilities
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Operating System :: OS Independent
+Classifier: Typing :: Typed
+Requires-Python: >=3.9
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+
+mrtinydbutils - Utilities for the TinyDB
+========================================
+
+The `mrtinydbutils` provide new `Table` classes witch add the function
+- to add crate and modification date
+- use `uuid` as `doc_id`.
+
+A new `Middleware` witch add the `doc_id` to the resulting `dict`.
+
+For more information about the TinyDB see: https://github.com/msiemens/tinydb
+
+Usage
+-----
+
+License
+-------
+GNU AFFERO GENERAL PUBLIC LICENSE Version 3
+
+Developer guide
+---------------
+
+Upgrade your setup tools and pip.
+They are needed for development and testing only:
+
+.. code:: bash
+
+    pip install --upgrade setuptools pip wheel
+
+Development steps for code changes
+
+.. code:: bash
+
+    git clone https://gitlab.com/anatas_ch/pyl_mrtinydb.git
+    pip install -e pyl_mrtinydb
+    cd pya_bibref
+
+Then install relevant development requirements:
+
+.. code:: bash
+
+    pip install -r requirements_rnd.txt
+    pip install -r tests/requirements.txt
+
+Once you have finished your changes, please provide test case(s) and relevant
+documentation.
+
+
