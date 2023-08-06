@@ -1,0 +1,16 @@
+onnxruntime_extensions/__init__.py,sha256=e3bhnQO_iaGcLLjZFmGD5-RADIgO4kKKkRGBLzbzqFA,748
+onnxruntime_extensions/_cuops.py,sha256=ZkhX-J4FPWov6Td8esQ5hAodQmSOZoaHYkDd069yamg,4050
+onnxruntime_extensions/_ocos.py,sha256=GoAc-i0f43JFrnAocihCiXBdYBI7yC_X7355FxMDUjI,5773
+onnxruntime_extensions/_ortcustomops.cp36-win_amd64.pyd,sha256=OXcPBz37EiSoOwfyCE7P00EpdQJZYPmGsd-AMP17DlA,1025024
+onnxruntime_extensions/eager_op.py,sha256=lmLEvoKuAZjvogq5UxuMF4BEY8Tk1OIZYZ54fScDzL4,3431
+onnxruntime_extensions/onnxprocess/__init__.py,sha256=BnveHXnu2nTQNbCLeZujZgZwO9A3yWFbQGTDthCFbIc,534
+onnxruntime_extensions/onnxprocess/_builder.py,sha256=EyFzRjk3VzQ_MbYaShOMhjmVHh0EcevL4T5NykhNAog,1823
+onnxruntime_extensions/onnxprocess/_onnx_ops.py,sha256=cWAatllUCKSzVf-nUgttL83gspgq7pwcOQlctahK_7Q,73214
+onnxruntime_extensions/onnxprocess/_session.py,sha256=A0_aD8djCZ_bQipm-Ma_j1iK3EYmgS_RSk3D9TTDOdc,14756
+onnxruntime_extensions/onnxprocess/_tensor.py,sha256=2MFHHcmYEc-OYL3z9e1PcEStq7vqfxD7TjCstgXOXSs,25329
+onnxruntime_extensions/onnxprocess/torch_wrapper.py,sha256=ICSQnkJyAxp0J0M90RX2BkjLBtzTGcxpMesFHu_bVJ4,890
+onnxruntime_extensions-0.3.1.dist-info/LICENSE,sha256=mQaUD2Gx8LUz-n2ZuvVReLKAj74RPqUd-_rYVyzNXys,1162
+onnxruntime_extensions-0.3.1.dist-info/METADATA,sha256=dF_H7a3zao4N39HYWcl47Y3pqHI-tQ3ALlq4_fM7uCo,6866
+onnxruntime_extensions-0.3.1.dist-info/WHEEL,sha256=epucrC2yyYTysDCMzXuz8eGMTMKryzRfNOvMGdslbjc,101
+onnxruntime_extensions-0.3.1.dist-info/top_level.txt,sha256=XyAgQDKyXsf6_0MJb58kRdHwigpTn7A7kl9diBEjs8M,23
+onnxruntime_extensions-0.3.1.dist-info/RECORD,,
