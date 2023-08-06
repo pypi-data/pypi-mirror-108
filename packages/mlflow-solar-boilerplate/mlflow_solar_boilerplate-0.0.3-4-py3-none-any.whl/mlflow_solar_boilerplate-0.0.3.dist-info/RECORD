@@ -1,0 +1,6 @@
+base_mlflow_model/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+base_mlflow_model/base_mlflow_model.py,sha256=n7Lthj8FyT4SgnHx6JWxymV85LmbowwZchKWdrEzzio,1770
+mlflow_solar_boilerplate-0.0.3.dist-info/METADATA,sha256=hNVkb8wLcRdeoUEx6NNq2ehrhkkA_47pdniGClwTsqI,527
+mlflow_solar_boilerplate-0.0.3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+mlflow_solar_boilerplate-0.0.3.dist-info/top_level.txt,sha256=BTfnoFRsjBUztj5lLuCSGpMs_EU_m4DCNH8vcElY1Uw,18
+mlflow_solar_boilerplate-0.0.3.dist-info/RECORD,,
