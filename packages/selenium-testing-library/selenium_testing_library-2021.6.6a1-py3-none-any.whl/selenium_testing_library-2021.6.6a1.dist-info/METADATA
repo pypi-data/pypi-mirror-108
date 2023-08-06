@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: selenium-testing-library
+Version: 2021.6.6a1
+Summary: 
+Author: Anže Pečar
+Author-email: anze@pecar.me
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: selenium (>=3.0.0,<4.0.0)
+Requires-Dist: typing-extensions (>=3.10.0,<4.0.0)
