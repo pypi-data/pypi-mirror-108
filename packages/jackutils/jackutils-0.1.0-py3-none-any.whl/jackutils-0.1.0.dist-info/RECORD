@@ -1,0 +1,12 @@
+core/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+core/const.py,sha256=Bt7yLbsgCUACDFZzh9xsu67ggcrPxscU0yi-STkRkHk,1590
+core/currency.py,sha256=SHLDAN8im7edaZXDjlM2puTO0VBzhQKoEH06Y5ixOuE,2488
+core/fomulas.py,sha256=T-DoA5bOrWMXgS8iYD0QScylhMQQNx7UojdyxZD1EVc,7233
+core/list_utils.py,sha256=OinZSp67UIZCxDIbtYIGGjw563ntuYYtP1yUL8HAt5I,477
+core/ph.py,sha256=T2Hg8kWZcoIBXA9tKITB4Jh63_Bn_S5ICW4wGzT3a1c,4451
+core/temp.py,sha256=zGDOMRhEBoEJSQ58Ri8I96gaxZ6ZKX5K0lj_WsVVWuQ,2883
+core/units.py,sha256=EWdAYFgYveEh2FgDQfnVSozx6-27qj08E2frecKdY6c,18255
+core/water_utils.py,sha256=WksPd6mMISe1X6AoqN_QKh-x89xX286Ts0chrG88lGk,14283
+jackutils-0.1.0.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+jackutils-0.1.0.dist-info/METADATA,sha256=XyFcdMOvPcU4Le_BTjFuozb1nCnKfkXS7Stgu6ERNfw,390
+jackutils-0.1.0.dist-info/RECORD,,
