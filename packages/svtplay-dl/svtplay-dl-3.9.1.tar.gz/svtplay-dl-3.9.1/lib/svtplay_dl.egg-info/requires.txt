@@ -1,0 +1,4 @@
+PySocks
+cryptography
+pyyaml
+requests>=2.0.0
