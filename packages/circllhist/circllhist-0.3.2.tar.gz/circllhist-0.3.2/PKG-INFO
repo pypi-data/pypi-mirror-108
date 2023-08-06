@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: circllhist
+Version: 0.3.2
+Summary: OpenHistogram log-linear histogram library
+Home-page: https://github.com/openhistogram/libcircllhist
+Maintainer: Circonus Packaging
+Maintainer-email: packaging@circonus.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: POSIX
+Requires-Python: >=2.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Python bindings for libcircllhist
+
+This package requires the [OpenHistogram](https://openhistogram.io) C library,
+libcircllhist, to be installed on your system:
+
+https://github.com/openhistogram/libcircllhist/
+
+The bindings themselves can be installed via pip:
+
+    pip install circllhist
+
+Or manually via
+
+    python setup.py install
+
+from this folder.
+
+## Usage Example
+
+```
+import circllhist
+
+h = circllhist.Circllhist()
+h.insert(123,3)        # Insert value 123, three times
+h.insert_intscale(1,1) # Insert 1x10^1
+print(h.count())       # Print the count of used bins
+print(h.sum())         # Print the sum of all values
+```
+
+
