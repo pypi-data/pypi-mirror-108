@@ -1,0 +1,11 @@
+pgsaw/Item.py,sha256=P6zPcasZLrynpUEUMhSxyCq6LV0P5nbRS68Ia3LcnH8,1061
+pgsaw/ItemNotFound.py,sha256=0zMtSKI3_qS1mj1OAkeWbbI8hig2wFOQoDMHFHamcWA,103
+pgsaw/Store.py,sha256=DQBCdO6HxF471T9oB6RpCF0JQ8tRic05OfldwxjL7AM,531
+pgsaw/UPC.py,sha256=Jf0YqoqMxlU7j9pV026qsm8DviQD3X6s509KgJgBzkE,5771
+pgsaw/UPCType.py,sha256=MwVCOSpwcN_M1__nDmmr5_9BaNnQQkSkMwgriUJjiE4,152
+pgsaw/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pgsaw-1.0.0.dist-info/LICENSE.md,sha256=gcuuhKKc5-dwvyvHsXjlC9oM6N5gZ6umYbC8ewW1Yvg,35821
+pgsaw-1.0.0.dist-info/METADATA,sha256=9tw3wNxr6fKZBZPC7rgaQG8aGCffxRqj4oU12gLjx2Y,405
+pgsaw-1.0.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pgsaw-1.0.0.dist-info/top_level.txt,sha256=gDnYBTv8ipDaaMRqVJdVUKbQQOo_ha6pPgngn9Lu7oU,6
+pgsaw-1.0.0.dist-info/RECORD,,
