@@ -1,0 +1,12 @@
+Metadata-Version: 1.2
+Name: py-ios-device
+Version: 2.0.2
+Summary: Get ios data and operate ios devices
+Home-page: https://github.com/YueChen-C/py-ios-device
+Author: chenpeijie & liyachao
+Author-email: cpjsf@163.com
+Maintainer: chenpeijie & liyachao
+Maintainer-email: 
+License: MIT
+Description: UNKNOWN
+Platform: any
