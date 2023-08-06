@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: pygenesig
+Version: 0.2.0
+Summary: Create and Validate Gene Signatures
+Home-page: https://github.com/grst/chunksub
+Author: Gregor Sturm
+Author-email: gregor.sturm@cs.tum.edu
+License: MIT
+Keywords: bioinformatics,gene expression,signatures
+Platform: UNKNOWN
+License-File: LICENSE
+Requires-Dist: jinja2
+Requires-Dist: pyyaml
+Requires-Dist: docopt
+Requires-Dist: seaborn
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: rpy2
+Requires-Dist: scikit-learn
+Requires-Dist: dask
+Requires-Dist: distributed
+Provides-Extra: docs
+Requires-Dist: recommonmark ; extra == 'docs'
+Requires-Dist: sphinx ; extra == 'docs'
+Requires-Dist: sphinx-rtd-theme ; extra == 'docs'
+Provides-Extra: tests
+Requires-Dist: nose ; extra == 'tests'
+Requires-Dist: black ; extra == 'tests'
+
+UNKNOWN
+
