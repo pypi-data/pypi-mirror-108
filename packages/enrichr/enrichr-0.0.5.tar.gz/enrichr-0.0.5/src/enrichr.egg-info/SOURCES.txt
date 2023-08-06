@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.py
+src/enrichr/__init__.py
+src/enrichr/config.py
+src/enrichr/datatypes.py
+src/enrichr/dispatch.py
+src/enrichr/exceptions.py
+src/enrichr/plugin.py
+src/enrichr.egg-info/PKG-INFO
+src/enrichr.egg-info/SOURCES.txt
+src/enrichr.egg-info/dependency_links.txt
+src/enrichr.egg-info/not-zip-safe
+src/enrichr.egg-info/requires.txt
+src/enrichr.egg-info/top_level.txt
+src/enrichr/plugins/__init__.py
