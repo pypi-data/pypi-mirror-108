@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: rsbcli
+Version: 0.1.3
+Summary: A RAM saving cli to run web applications
+Home-page: https://github.com/AvanindraC/RSB
+License: MIT
+Keywords: RSBCLI
+Author: Avanindra Chakraborty
+Author-email: avanindra.d2.chakraborty@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: PyQt5 (>=5.15.4,<6.0.0)
+Requires-Dist: PyQtWebEngine (>=5.15.4,<6.0.0)
+Requires-Dist: click (>=8.0.1,<9.0.0)
+Project-URL: Repository, https://github.com/AvanindraC/RSB
+Description-Content-Type: text/markdown
+
+# RSB
+
+## A RAM saving cli to run web applications
+
+### Note : It is my first cli, so please inform me if something is wrong
+
+PS: I am aware of some bugs but I will fix them after my exams
+
+pip3 install rsbcli
+
+#### Windows
+
+pip install rsbcli 
+
+### How to use
+
+#### Windows
+Open powershell and type rsb
+
+Then type rsb open (Enter your url)
+
+#### Linux/Mac
+Open terminal and type rsb
+
+Then type rsb open
+
+### Softwares used
+
+Visual Studio Code - https://github.com/Microsoft/vscode
+
+Python 3.9.1
+
+Special Thanks to https://github.com/arghyagod-coder
