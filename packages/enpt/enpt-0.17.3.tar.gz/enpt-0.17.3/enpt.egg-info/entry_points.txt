@@ -1,0 +1,3 @@
+[console_scripts]
+enpt = bin.enpt_cli:main
+
