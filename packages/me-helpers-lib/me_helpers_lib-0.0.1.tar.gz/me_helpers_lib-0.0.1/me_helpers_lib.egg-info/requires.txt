@@ -1,0 +1,9 @@
+me_main_libs
+bokeh
+pandas
+numpy
+psutil
+Pillow
+PyPDF2
+redis-decorator
+redis
