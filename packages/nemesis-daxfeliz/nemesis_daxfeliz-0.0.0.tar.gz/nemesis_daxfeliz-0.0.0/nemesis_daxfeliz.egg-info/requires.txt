@@ -1,0 +1,13 @@
+numpy
+scipy
+astropy
+matplotlib
+wotan
+transitleastsquares
+pandas
+astroquery
+fbpca
+
+[all]
+exoplanet
+corner

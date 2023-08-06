@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+nemesis/NEMESIS_pipeline.py
+nemesis/__init__.py
+nemesis_daxfeliz.egg-info/PKG-INFO
+nemesis_daxfeliz.egg-info/SOURCES.txt
+nemesis_daxfeliz.egg-info/dependency_links.txt
+nemesis_daxfeliz.egg-info/requires.txt
+nemesis_daxfeliz.egg-info/top_level.txt
