@@ -1,0 +1,13 @@
+subsql/__init__.py,sha256=aZwEnRfvr9eSXjRHfn_7_TUDgytZzu_c3kRKBoeyxkk,205
+subsql/sqlitedriver.py,sha256=YnvLCNLX0aASPhDDhXd_xTxhdRh8d97ipLHNLBVoVe8,5533
+subsql/subsql.py,sha256=ZE5so2-ChzMOrv0hUBiveJUVc0HW6m_gWQRX6IwY6eM,880
+subsql/driver/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+subsql/driver/sqlite.py,sha256=4TEgkh560DLRClYeSA0r6tbdXSPkKbHNMr3SPjKE_C4,5447
+subsql/parser/__init__.py,sha256=J8T3-aM2BppvewtI8k56EhuH5cGRlAMONsZrG60Uydk,95
+subsql/parser/parser.py,sha256=-zVKWv9LMgF-l-NnvS457K1zpAmSanTJ6zxuBk9Cjqk,3448
+subsql/parser/types.py,sha256=bxhBRrZo11mwZkw8cIVKXhI9JTYR9FAyXo8UnOtrNuc,672
+subsql/parser/util.py,sha256=gAbdFsJhVUXGMNScHaiEubjJ6ZcFHQn8Vfm-WEkqsR0,1136
+subsql-0.0.1.dist-info/METADATA,sha256=1p9-cNRPd74h_u9_G10SImJ8OSGfY0F9jUfwMB0fHXg,1212
+subsql-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+subsql-0.0.1.dist-info/top_level.txt,sha256=Zz9R_AMm50xPGmhgu2-qby542tsgp0i4GrTAHNf4q9I,7
+subsql-0.0.1.dist-info/RECORD,,
