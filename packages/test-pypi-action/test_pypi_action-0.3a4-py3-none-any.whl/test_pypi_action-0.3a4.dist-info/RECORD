@@ -1,0 +1,5 @@
+test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+test_pypi_action-0.3a4.dist-info/METADATA,sha256=IhoQezcfYipznZ5GFOeirTCJms7rvRumyRTE9PvF69w,292
+test_pypi_action-0.3a4.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+test_pypi_action-0.3a4.dist-info/top_level.txt,sha256=8sobtsfpB9Btr-Roflefznazfk6Tt2BQItpS5szCb9I,5
+test_pypi_action-0.3a4.dist-info/RECORD,,
