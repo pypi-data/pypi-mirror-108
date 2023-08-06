@@ -1,0 +1,4 @@
+pythonnet
+opencv-python
+numpy
+pyzbar
