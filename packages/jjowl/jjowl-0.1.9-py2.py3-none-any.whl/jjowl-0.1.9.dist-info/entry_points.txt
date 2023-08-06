@@ -1,0 +1,9 @@
+[console_scripts]
+owlcat=jjowl:mcat
+owlclass=jjowl:mclass
+owlexpandpp=jjowl:mexpandpp
+owlgrep=jjowl:mgrep
+owllabel2term=jjowl:mlabel2term
+owlxdxf=jjowl:mxdxf
+tmd2ttl=jjowl:mtmd2ttl
+
