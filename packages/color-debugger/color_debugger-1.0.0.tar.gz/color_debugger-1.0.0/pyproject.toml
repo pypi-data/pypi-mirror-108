@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "color_debugger"
+version = "1.0.0"
+description = "Color debug to your terminal by termcolor library"
+authors = ["Alex.Net <sascha@orlanm.ru>"]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
