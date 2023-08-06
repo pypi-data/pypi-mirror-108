@@ -1,0 +1,18 @@
+{% extends "admin/login.html" %}
+
+{% block extrahead %}
+    <script src="/static/cbor.js"></script>
+    <script src="/static/django_rest_mfa/utils.js"></script>
+    <script>authenticateFido2()</script>
+{% endblock %}
+
+{% block content %}
+<h2>Hardware key</h2>
+
+<h2>TOTP</h2>
+<form onsubmit="authenticateTOTP(event.target.elements.otp.value); return false;">
+    <label for="otp">One Time Pass Code</label>
+    <input name="otp"></input>
+    <input type="submit"></input>
+</form>
+{% endblock %}

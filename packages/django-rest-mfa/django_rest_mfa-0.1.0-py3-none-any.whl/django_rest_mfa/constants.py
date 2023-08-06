@@ -1,0 +1,1 @@
+USER_PK_SESSION_KEY = "mfa_user_pk"
