@@ -1,0 +1,15 @@
+dpu-utils
+halo
+invoke
+nltk
+numpy
+pyfiglet
+requests
+rich
+torch
+tqdm
+transformers==2.5.0
+tree_hugger
+
+[jupyter]
+jupytext
