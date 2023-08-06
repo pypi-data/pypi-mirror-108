@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.py
+synapseformation/__init__.py
+synapseformation/__main__.py
+synapseformation/__version__.py
+synapseformation/client.py
+synapseformation/create.py
+synapseformation/utils.py
+synapseformation.egg-info/PKG-INFO
+synapseformation.egg-info/SOURCES.txt
+synapseformation.egg-info/dependency_links.txt
+synapseformation.egg-info/entry_points.txt
+synapseformation.egg-info/not-zip-safe
+synapseformation.egg-info/requires.txt
+synapseformation.egg-info/top_level.txt
