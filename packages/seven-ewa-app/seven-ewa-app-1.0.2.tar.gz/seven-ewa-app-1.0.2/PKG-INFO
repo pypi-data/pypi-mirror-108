@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: seven-ewa-app
+Version: 1.0.2
+Summary: seven ewa app
+Home-page: UNKNOWN
+Author: seven
+Author-email: tech@gao7.com
+License: MIT
+Description: 
+        
+        ## 天志互联棉花娃娃App框架
+        
+        ### 1.0.2 更新内容
+        * 添加通用方法
+        
+        ### 1.0.1 更新内容
+        * 初始版本
+Platform: UNKNOWN
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: ~=3.4
+Description-Content-Type: text/markdown
