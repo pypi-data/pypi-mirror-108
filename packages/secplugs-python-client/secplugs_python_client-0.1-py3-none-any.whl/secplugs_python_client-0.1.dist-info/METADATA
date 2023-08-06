@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: secplugs-python-client
+Version: 0.1
+Summary: The python client for Secplugs REST API
+Home-page: https://github.com/SecPlugs/python-kit
+Author: TheStigAtSecPlugs
+Author-email: secplugs@secplugs.com
+License: Apache 2.0
+Platform: UNKNOWN
+Requires-Dist: certifi (==2020.12.5)
+Requires-Dist: chardet (==4.0.0)
+Requires-Dist: idna (==2.10)
+Requires-Dist: requests (==2.25.1)
+Requires-Dist: urllib3 (==1.26.5)
+
+UNKNOWN
+
+
