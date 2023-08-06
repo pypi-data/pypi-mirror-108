@@ -1,0 +1,14 @@
+aioflask/__init__.py,sha256=XPV1HAWGBJXzN6cUvH_IEhL2qSnjZcKP9sK8Jrba_H8,197
+aioflask/app.py,sha256=cdjfsAcalkA4Y_fxnlhVQb-9lC_cqobHQLv-_JYYvp4,4140
+aioflask/asgi.py,sha256=V3gfqnLwX6-964zXSTGE1_CiWcNWL17e-rdlf4wcscM,5444
+aioflask/cli.py,sha256=FZsIfuvxB65Od3rW9mT_OxCk1jKQwE4fYrZXZ4at_gE,7096
+aioflask/templating.py,sha256=JCZHV0HNZ8R_K7_K0mxdU04anf6VinwtyPcKArg91gc,1821
+aioflask/testing.py,sha256=lBDCxDeNCYy4DsCeZOXvcw-sUUITsuDZ9-gsJUp_fJ0,609
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_aioflask.py,sha256=D-ZJD8hSUnd52Um7RmVIpXa-Scr35hx-psU_eb9o7Wc,123
+aioflask-0.3.0.dist-info/LICENSE,sha256=JaEKcKBOfy5wUI8tQk4Z1uHrqMcmJgQ9JWsS9A4LmO4,1072
+aioflask-0.3.0.dist-info/METADATA,sha256=Y_5_LU9Ds-Jc5W69tb_JexTLK2hTrPXY3FHuTlXrJsI,2642
+aioflask-0.3.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+aioflask-0.3.0.dist-info/entry_points.txt,sha256=DhZFKLVHIcfnB6QyWoGvbaN9vA1_ieG4HMYO6GFikng,44
+aioflask-0.3.0.dist-info/top_level.txt,sha256=eEZKZvoyt9HGOv4GzqUtWo_FN1X0dkV0iR-pafigEB8,9
+aioflask-0.3.0.dist-info/RECORD,,
