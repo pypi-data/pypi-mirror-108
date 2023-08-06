@@ -1,0 +1,3 @@
+[qiime2.plugins]
+q2-umap = q2_umap.plugin_setup:plugin
+

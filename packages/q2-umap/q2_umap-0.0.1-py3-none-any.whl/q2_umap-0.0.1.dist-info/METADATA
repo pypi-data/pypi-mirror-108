@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: q2-umap
+Version: 0.0.1
+Summary: Sample Embedding with UMAP
+Home-page: UNKNOWN
+Author: George Armstrong
+Author-email: garmstro@eng.ucsd.edu
+License: BSD-3
+Platform: UNKNOWN
+License-File: LICENSE
+Requires-Dist: scikit-learn
+Requires-Dist: scipy
+Requires-Dist: scikit-bio
+Requires-Dist: umap-learn
+Requires-Dist: pandas
+
+UNKNOWN
+

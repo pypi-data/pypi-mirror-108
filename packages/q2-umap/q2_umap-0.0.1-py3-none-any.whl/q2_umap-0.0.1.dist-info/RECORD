@@ -1,0 +1,12 @@
+q2_umap/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+q2_umap/citations.bib,sha256=lGBqU4KBlg6c2v9OhlrURHcXHnIXViT7AMAzJI-Tf2E,277
+q2_umap/plugin_setup.py,sha256=EebEmpZUtNXu7W4BgJVfKljXUdS-6QSMWY1XjuCliGs,2036
+q2_umap/umap.py,sha256=RcgLC9UbM-YKzQMMkWMLJyUxPM_r0SsnPPY0cfYzxdo,2618
+q2_umap/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+q2_umap/tests/test_umap.py,sha256=3E8gTE6furgGvP4J4lVewyMxijiQs3aWXdTeFyBPDIY,2616
+q2_umap-0.0.1.dist-info/LICENSE,sha256=QIw9Uyr_U07rwx6QRchRohFksySc4bi1KpWR_x4wHLg,1553
+q2_umap-0.0.1.dist-info/METADATA,sha256=cMCfNFDvl1iOFMqXIhTjcMddQbQBSno7e0OHg2w80ow,355
+q2_umap-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+q2_umap-0.0.1.dist-info/entry_points.txt,sha256=vP-v00hnScTxTIy_oXdAdMv5KX0jzjozmEjHaoYWGRw,56
+q2_umap-0.0.1.dist-info/top_level.txt,sha256=gSFv3mrASxQhe1Jd7Vfm9Z463a0vI-PfopZo2CoTmXY,8
+q2_umap-0.0.1.dist-info/RECORD,,
