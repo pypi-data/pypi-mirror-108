@@ -1,0 +1,63 @@
+Metadata-Version: 2.1
+Name: pyxtream
+Version: 0.1.2
+Summary: xtream IPTV loader
+Home-page: https://github.com/superolmo/pyxtream
+Author: Claudio Olmi
+Author-email: superolmo2@gmail.com
+License: GPL3
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Natural Language :: English
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# PyXtream - A Python Xtream Loader
+
+## Summary
+
+PyXtream loads the xtream IPTV content from a provider server. Groups, Channels, Series are all organized in dictionaries. Season and Episodes are retireved as needed.
+This library was originally designed to work with Hypnotix at https://github.com/linuxmint/hypnotix
+
+## Installing
+
+```shell
+pip3 install pyxtream
+```
+
+## Example
+
+```python
+from pyxtream import XTream
+xt = XTream(servername, username, password, url)
+if xt.authData != {}:
+    xt.load_iptv()
+else:
+    print("Could not connect")
+```
+
+## API
+
+XTream.Groups
+
+XTream.Movies
+
+XTream.Channels
+
+XTream.Series
+
+XTream.getSeriesInfoByID(series_id)
+
+# Change Log
+
+| Date | Version | Description |
+| ----------- | -----| ----------- |
+| 2021-06-04 | 0.1.1 | Updated README.md |
+| 2021-06-04 | 0.1.0 | Initial Release |
+
+
