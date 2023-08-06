@@ -1,0 +1,3 @@
+[console_scripts]
+edl_editor=py_edl_editor.__main__:main
+
