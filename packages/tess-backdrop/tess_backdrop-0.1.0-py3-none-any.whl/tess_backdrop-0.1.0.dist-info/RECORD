@@ -1,0 +1,8 @@
+tess_backdrop/__init__.py,sha256=3GATg6Z6QBpZ7FotCv17xeD15wMga79xEHFEtLUKgvo,290
+tess_backdrop/backdrop.py,sha256=WoMWb_d_UPBmPiAQGddzjmP246ZCFtfZ6faqz-Z8z6U,27478
+tess_backdrop/tesscutcorrector.py,sha256=1Rt5zbm4KgFPlmMbHSZBoBH8BpxP7vbs1DObwHYPASU,5464
+tess_backdrop/version.py,sha256=FEFhrexaCmPsrIxqWvIbzMeLqSRRcdvHeWE0Hv-o5aU,156
+tess_backdrop-0.1.0.dist-info/LICENSE,sha256=-sILuSWFH3L-WYVMEMRfH4J6BaMy-1UHJmY5S5p7uPc,1073
+tess_backdrop-0.1.0.dist-info/WHEEL,sha256=VN2eEg4PHbTOniXb-cCYQPc6zUTS4dAcATjlgU3q-Lo,83
+tess_backdrop-0.1.0.dist-info/METADATA,sha256=lKNNFke1jwgQrF8jUCy2km5O3vqeqGtyha8lVA6-JXY,731
+tess_backdrop-0.1.0.dist-info/RECORD,,
