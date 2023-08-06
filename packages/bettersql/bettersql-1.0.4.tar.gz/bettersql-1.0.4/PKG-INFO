@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: bettersql
+Version: 1.0.4
+Summary: A package to use SQL with Pandas DataFrames, list and dict.
+Home-page: UNKNOWN
+Author: Joseph Gagliardo
+Author-email: joey@me.com
+License: UNKNOWN
+Description: A more feature rich alternative to Pandasql that allows for custom UDF, as well as lit and dict as source tables and return types
+Keywords: python,sql,pandas,udf
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: POSIX :: Linux
+Classifier: License :: OSI Approved :: Apache Software License
