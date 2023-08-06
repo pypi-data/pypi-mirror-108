@@ -1,0 +1,13 @@
+PythonFileLibrary/FileReader.py,sha256=S3u8rwkB5CXWRG23zFQ4U3cd5b8-KZvdUCaq4w2WYYg,5684
+PythonFileLibrary/RecursiveScanner.py,sha256=D_N_no3C3DtiwKKr-eySm7-qLOMk9dgfIDKXvexIBd4,2663
+PythonFileLibrary/__init__.py,sha256=OnCLDRRgdVfgQYt1nKM2YaPbA8ADhO7PaqTw_LifQ50,92
+PythonFileLibrary/integration/FileReaderTest.py,sha256=3qFWC0RSKKkWdd6H7iQEcTkRuYXv8cZkDFP1mGi9pLg,3257
+PythonFileLibrary/integration/IntegrationTestRunner.py,sha256=py55Kx-hwQevnsJ2ZXNvXyO_ThWFPFJjP3oLgfIuNdk,1282
+PythonFileLibrary/integration/RecursiveScannerTest.py,sha256=0SF7EDta6z5VLlOjlJqafrmGcCxIF92B03H6hTe1TSw,2694
+PythonFileLibrary/integration/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+PythonFileLibrary/integration/__main__.py,sha256=py55Kx-hwQevnsJ2ZXNvXyO_ThWFPFJjP3oLgfIuNdk,1282
+PythonFileLibrary-1.0.1.dist-info/LICENSE,sha256=QWQE5IWj93wAujO3h-kUwpkNR5Cez3Gs2EsvrQhsscc,1072
+PythonFileLibrary-1.0.1.dist-info/METADATA,sha256=YPUigk9Gvkx3WhK2vIzODGK3VKA5sydK-aGK3B-Q2NU,2810
+PythonFileLibrary-1.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+PythonFileLibrary-1.0.1.dist-info/top_level.txt,sha256=MLLOmZ-f6HmiYh4iImHhytOu0fHH_jS0J6J-kSrDR-U,18
+PythonFileLibrary-1.0.1.dist-info/RECORD,,
