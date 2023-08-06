@@ -1,0 +1,5094 @@
+#!/usr/bin/env python3
+
+import cf
+import cfplot as cfp
+import numpy as np
+import os
+import sys
+import argparse
+import matplotlib.pyplot as plt
+import matplotlib
+from PyQt5.QtWidgets import QApplication, QLabel, QCheckBox, QFileDialog, QDialog, QRadioButton
+from PyQt5.QtWidgets import QComboBox, QListWidget, QListWidgetItem, QHBoxLayout, QVBoxLayout, QWidget, QPushButton
+from PyQt5.QtWidgets import QLineEdit, QTextEdit, QSlider, QMenu, QAction, QFontDialog, QMenuBar
+from PyQt5.QtWidgets import QMainWindow, QFrame, QSizePolicy, QScrollArea, QFormLayout, QGroupBox, QTableWidget
+from PyQt5.QtWidgets import QTableWidgetItem, QTableView, QSlider, QAbstractScrollArea
+from PyQt5.QtCore import Qt, QObject, pyqtSignal, QAbstractTableModel, QVariant, QCoreApplication
+from PyQt5.QtGui import QFont, QPalette, QColor, QTextDocument, QPixmap, QStandardItemModel, QFontDatabase, QFontMetrics
+from copy import deepcopy
+from functools import partial
+
+
+
+# Initiate the pvars class
+# This is used for storing plotting variables in cfp.plotvars
+class pvars(object):
+    def __init__(self, **kwargs):
+        '''Initialize a new Pvars instance'''
+        for attr, value in kwargs.items():
+            setattr(self, attr, value)
+
+    def __str__(self):
+        '''x.__str__() <==> str(x)'''
+        a = None
+        v = None
+        out = ['%s = %s' % (a, repr(v))]
+        for a, v in self.__dict__.items():
+            return '\n'.join(out)
+
+cols = ['#abb6d4', '#7085c4', '#ffffff', '#f1f4fd', '#000000', '#000000']
+
+plotvars=pvars(pos=0, nplots=1, code='', plot_counter=0, title='', field_selected='',\
+               file_selected=None, data=None, levs_automatic_set=True, levs_set=False,\
+               levs_manual_set=False, levs_min='0', levs_max='0', levs_step='0',levs_manual='',\
+               levs_extend_lower=True, levs_extend_upper=True, colorbar=True,\
+               colorbar_orientation=None,\
+               proj='cyl', lonmin='-180', lonmax='180', latmin='-90', latmax='90',\
+               boundinglat='0', lon_0='0',
+               resolution='c', continent_thickness='1.5', continent_color='black',\
+               vect_ufield='', vect_auto_set=True, vect_length='10', vect_scale='100',\
+               vect_stride='1', vect_pts='30', vect_stride_set=False,vect_pts_set=False,\
+               cscales=None, cscale_automatic_set=True, cscale_reverse_set=False, cscale_white='',\
+               cscale_ncols='', cscale_above='', cscale_below='',cscale='viridis',\
+               invalid_input=False, field_number=0, fields=None,\
+               field__widget_indicies=None, field_widget_names=None, \
+               field_widget_listing='index', plot_type = 'Contour', contour_type='x-y', \
+               collapse_x='Off', collapse_y='Off', collapse_z='Off', collapse_t='Off',\
+               nx_length=None, ny_length=None, nz_length=None, nt_length=None,\
+               stored_dimensions=None, stored_collapses=None, stored_collapse_values=None,\
+               stored_lock = False,\
+               background_colour=cols[0], button_colour=cols[1], buttontext_colour=cols[2],\
+               highlight_colour=cols[3], text_colour=cols[4], windowtext_colour=cols[5],\
+               text_colour_insensitive = '#708090', font="DejaVu Sans", font_mono='DejaVu Sans Mono',
+               fontsize=15, fill=True, blockfill=False, lines=False, line_labels=False, titles=True,
+               write_defaults=False, collapse_types=None)
+
+
+cscales=['viridis', 'magma', 'inferno', 'plasma', 'parula', 'gray', 'hotcold_18lev', 'hotcolr_19lev',
+'mch_default', 'perc2_9lev', 'percent_11lev', 'precip2_15lev', 'precip2_17lev', 'precip3_16lev',
+'precip4_11lev', 'precip4_diff_19lev', 'precip_11lev', 'precip_diff_12lev', 'precip_diff_1lev', 'rh_19lev',
+'spread_15lev', 'amwg', 'amwg_blueyellowred', 'BlueDarkRed18', 'BlueDarkOrange18', 'BlueGreen14', 'BrownBlue12',
+'Cat12', 'cmp_flux', 'cosam12', 'cosam', 'GHRSST_anomaly', 'GreenMagenta16',
+'nrl_sirkes', 'nrl_sirkes_nowhite','prcp_1', 'prcp_2',
+'prcp_3', 'radar', 'radar_1', 'seaice_1', 'seaice_2', 'so4_21',
+'StepSeq25', 'sunshine_9lev', 'sunshine_diff_12lev', 'temp_19lev', 'temp_diff_18lev', 'temp_diff_1lev',
+'topo_15lev', 'wgne15', 'wind_17lev', 'amwg256', 'BkBlAqGrYeOrReViWh200', 'BlAqGrYeOrRe', 'BlAqGrYeOrReVi200',
+'BlGrYeOrReVi200', 'BlRe', 'BlueRed', 'BlueRedGray', 'BlueWhiteOrangeRed', 'BlueYellowRed', 'BlWhRe', 'cmp_b2r',
+'cmp_haxby', 'detail', 'extrema', 'GrayWhiteGray', 'GreenYellow', 'helix', 'helix1', 'hotres', 'matlab_hot',
+'matlab_hsv', 'matlab_jet', 'matlab_lines', 'ncl_default', 'ncview_default', 'OceanLakeLandSnow', 'rainbow',
+'rainbow_white_gray', 'rainbow_white', 'rainbow_gray', 'tbr_240_300', 'tbr_stdev_0_30', 'tbr_var_0_500',
+'tbrAvg1', 'tbrStd1', 'tbrVar1', 'thelix', 'ViBlGrWhYeOrRe', 'wh_bl_gr_ye_re', 'WhBlGrYeRe', 'WhBlReWh',
+'WhiteBlue', 'WhiteBlueGreenYellowRed', 'WhiteGreen', 'WhiteYellowOrangeRed', 'WhViBlGrYeOrRe', 'WhViBlGrYeOrReWh',
+'wxpEnIR', '3gauss', '3saw', 'posneg_2', 'posneg_1',
+'os250kmetres', 'wiki_1_0_2', 'wiki_1_0_3', 'wiki_2_0',
+'wiki_2_0_reduced', 'arctic', 'scale1', 'scale2', 'scale3', 'scale4', 'scale5', 'scale6', 'scale7', 'scale8',
+'scale9', 'scale10', 'scale11', 'scale12', 'scale13', 'scale14', 'scale15', 'scale16', 'scale17' , 'scale18',
+'scale19', 'scale20', 'scale21', 'scale22', 'scale23', 'scale24', 'scale25', 'scale26', 'scale27', 'scale28',
+'scale29', 'scale30', 'scale31', 'scale32', 'scale33', 'scale34', 'scale35', 'scale36', 'scale37', 'scale38',
+'scale39', 'scale40', 'scale41', 'scale42', 'scale43', 'scale44']
+
+plotvars.cscales=cscales
+
+plotvars.collapse_types = ['Off', 'mean', 'minimum', 'maximum', 'variance', 'standard_deviation']
+
+
+
+class EmittingStream(QObject):
+
+    textWritten = pyqtSignal(str)
+
+    def write(self, text):
+        self.textWritten.emit(str(text))
+
+    def flush(self):
+        pass
+
+
+def my_excepthook(type, value, tback):
+    # log the exception here
+
+    # then call the default handler
+    sys.__excepthook__(type, value, tback)
+
+sys.excepthook = my_excepthook
+
+def type_test(a):
+    # Test if input string is a string, integer or float
+    # Need to match the data to the value
+
+    try:
+        a = float(a)
+        if int(a)/a == 1:
+            return int(a)
+        if abs(a) > 1:
+            if a/int(a) > 1:
+                if plotvars.fields[plotvars.field_number].dtype == 'float32':
+                    return np.float32(a)
+                if plotvars.fields[plotvars.field_number].dtype == 'float64':
+                    return np.float64(a)
+
+        else:
+            return a
+    except ValueError:
+        return str(a)
+
+
+
+
+
+def field_name(field=None):
+    '''Work out the field name'''
+
+    name = 'No'
+    if field is None:
+        return name
+    nc = field.nc_get_variable(None)
+    if nc:
+        name = field.nc_get_variable()
+    if hasattr(field, 'short_name'):
+        name = field.short_name
+    if hasattr(field, 'long_name'):
+        name = field.long_name
+    if hasattr(field, 'standard_name'):
+        name = field.standard_name
+    return name
+
+
+
+def field_dims(field=None):
+    '''Work out the field dimensions'''
+
+    x = None
+    y = None
+    z = None
+    t = None
+
+    # Extract coordinate data if a matching CF standard_name or axis is found
+    for mydim in list(field.dimension_coordinates()):
+        sn = getattr(field.construct(mydim), 'standard_name', 'NoName')
+        an = field.construct(mydim).get_property('axis', 'NoName')
+
+        standard_name_x = ['longitude']
+        if (sn in standard_name_x or an == 'X'):
+            x = field.construct(mydim).array
+
+        standard_name_y = ['latitude']
+        if (sn in standard_name_y or an == 'Y'):
+            y = field.construct(mydim).array
+
+        standard_name_z = ['pressure', 'air_pressure', 'height', 'depth']
+        if (sn in standard_name_z or an == 'Z'):
+            z = field.construct(mydim).array
+
+        standard_name_t = ['time']
+        if (sn in standard_name_t or an == 'T'):
+            t = field.construct(mydim).dtarray
+
+    # CF defined units
+    lon_units = ['degrees_east', 'degree_east', 'degree_E',
+                 'degrees_E', 'degreeE', 'degreesE']
+    lat_units = ['degrees_north', 'degree_north', 'degree_N',
+                 'degrees_N', 'degreeN', 'degreesN']
+
+    height_units = ['mb', 'mbar', 'millibar', 'decibar', 'atmosphere',
+                    'atm', 'pascal', 'Pa', 'hPa']
+
+    time_units = ['day', 'days', 'd', 'hour', 'hours', 'hr', 'h', 'minute',
+                  'minutes', 'min', 'mins', 'second', 'seconds', 'sec',
+                  'secs', 's']
+
+    # Extract coordinate data if a matching CF set of units is found
+    for mydim in list(field.dimension_coordinates()):
+        units = getattr(field.construct(mydim), 'units', False)
+        if units in lon_units:
+            if x is None:
+                x = field.construct(mydim).array
+        if units in lat_units:
+            if y is None:
+                y = field.construct(mydim).array
+        if units in height_units:
+            if z is None:
+                z = field.construct(mydim).array
+        if units in time_units:
+            if t is None:
+                t = field.construct(mydim).dtarray
+
+    # Extract coordinate data from variable name if not already assigned
+    for mydim in list(field.dimension_coordinates()):
+        name = cf_var_name(field=field, dim=mydim)[0]
+
+        #print('name is ', name)
+
+        if name[0:3] == 'lon':
+            if x is None:
+                x = field.construct(mydim).array
+
+        if name[0:3] == 'lat':
+            if y is None:
+                y = field.construct(mydim).array
+
+        if (name[0:5] == 'theta' or name == 'p' or name == 'air_pressure'):
+            if z is None:
+                z = field.construct(mydim).array
+
+        if name[0:1] == 't':
+            if t is None:
+                t = field.construct(mydim).dtarray
+
+    # Assign 0 to all dimensions with no data
+    if x is None:
+        nx = 0
+        x = []
+    else:
+        nx = np.size(x)
+
+    if y is None:
+        ny = 0
+        y =[]
+    else:
+        ny = np.size(y)
+
+    if z is None:
+        nz = 0
+        z = []
+    else:
+        nz = np.size(z)
+
+    if t is None:
+        nt = 0
+        t =[]
+    else:
+        nt = np.size(t)
+
+
+    return (nx, ny, nz, nt, x, y, z, t)
+
+
+
+def cf_var_name(field=None, dim=None):
+    """
+     | cf_var_name - return the name from a supplied dimension
+     |               in the following order
+     |               ncvar
+     |               short_name
+     |               long_name
+     |               standard_name
+     |
+     | field=None - field
+     | dim=None - dimension required - 'dim0', 'dim1' etc.
+     |
+     :Returns:
+      name
+    """
+
+    id = getattr(field.construct(dim), 'id', False)
+    ncvar = field.construct(dim).nc_get_variable(False)
+    short_name = getattr(field.construct(dim), 'short_name', False)
+    long_name = getattr(field.construct(dim), 'long_name', False)
+    standard_name = getattr(field.construct(dim), 'standard_name', False)
+
+    name = 'No Name'
+    if id:
+        name = id
+    if ncvar:
+        name = ncvar
+    if short_name:
+        name = short_name
+    if long_name:
+        name = long_name
+    if standard_name:
+        name = standard_name
+
+    units = getattr(field.construct(dim), 'units', '()')
+    if units[0] != '(':
+        units = '(' + units + ')'
+    return name, units
+
+
+
+
+def fields_list(fields=None, order=None, search=False, order_changed=False):
+    """
+     | fields_list - return the field list for populating the field list widget
+     |               
+     | fields = None - list of fields to examine
+     | order = 'index' or 'field' - order the fields by supplied parameter
+     | search = False - return named search
+     | order_changed = False - order of the fields has changed.  Use the stored 
+     |                 fields_list rather than recalculating.
+     |
+     :Returns:
+      widget_names
+    """
+
+    if order_changed:
+        field_widget_names = plotvars.field_widget_names
+        field_widget_title = plotvars.field_widget_title
+    else:
+        names_list = []
+        index_list = []
+        nx_list = []
+        ny_list = []
+        nz_list = []
+        nt_list = []
+        field_widget_names = []
+    
+        # Assemble field information
+        for i in np.arange(len(fields)):
+            field = fields[i]
+            name = field_name(field)
+            nx, ny, nz, nt, x, y, z, t = field_dims(field=field)
+
+            nx_list.append(str(nx))
+            ny_list.append(str(ny))
+            nz_list.append(str(nz))
+            nt_list.append(str(nt))
+            names_list.append(name)
+            index_list.append(str(i))
+
+        # Work out the maximum lengths of the dimensions
+        nx_length = len(max(nx_list, key=len))
+        ny_length = len(max(ny_list, key=len))
+        nz_length = len(max(nz_list, key=len))
+        nt_length = len(max(nt_list, key=len))
+        index_length = len(max(index_list, key=len))
+
+        nx_length = max(nx_length, 2)
+        ny_length = max(ny_length, 2)
+        nz_length = max(nz_length, 2)
+        nt_length = max(nt_length, 2)
+
+        # Save the lengths into plotvars so they can be used when changing the dimensions
+        plotvars.index_length = index_length
+        plotvars.nx_length = nx_length
+        plotvars.ny_length = ny_length
+        plotvars.nz_length = nz_length
+        plotvars.nt_length = nt_length
+
+        # Work out the widget title
+        field_widget_title ='index '
+        field_widget_title += 'nx' + (nx_length - 1) * ' '
+        field_widget_title += 'ny' + (ny_length - 1) * ' '
+        field_widget_title += 'nz' + (nz_length - 1) * ' '
+        field_widget_title += 'nt' + (nt_length - 1) * ' '
+        field_widget_title += 'field name'
+
+        # Work out the widget names
+        for i in np.arange(len(fields)):
+            field_widget_name = index_list[i] + (6 -len(index_list[i])) * ' '
+            field_widget_name += nx_list[i] + (nx_length + 1 - len(nx_list[i])) * ' '
+            field_widget_name += ny_list[i] + (ny_length + 1 - len(ny_list[i])) * ' '
+            field_widget_name += nz_list[i] + (nz_length + 1 - len(nz_list[i])) * ' '
+            field_widget_name += nt_list[i] + (nt_length + 1 - len(nt_list[i])) * ' '
+            field_widget_name += names_list[i]
+            field_widget_names.append(field_widget_name)
+
+    plotvars.field_widget_names = field_widget_names
+
+    if order == 'index':
+        plotvars.field_widget_indicies = np.arange(len(field_widget_names))
+
+
+    if order == 'field':
+        # Split widget_name string into a list, remove empty strings and create 
+        # a numpy ordered list
+        names = []
+        for i in np.arange(len(field_widget_names)):
+            name_long = field_widget_names[i].split(' ')
+            name_field = [x for x in name_long if x != ''][5]
+            names.append(name_field)
+
+        ordered_indicies = np.argsort(names)
+
+        plotvars.field_widget_indicies = ordered_indicies
+        field_widget_names_ordered = []
+        for i in np.arange(len(field_widget_names)):
+            field_widget_names_ordered.append(field_widget_names[ordered_indicies[i]])
+ 
+        field_widget_names = field_widget_names_ordered
+
+
+
+    if search:
+        widget_names_searched = []
+        ordered_indicies = []
+        names = []
+        for i in np.arange(len(field_widget_names)):
+            name_long = field_widget_names[i].split(' ')
+            name_field = [x for x in name_long if x != ''][5]
+            if search in name_field:
+                widget_names_searched.append(field_widget_names[i])
+                ordered_indicies.append(i)
+
+        plotvars.field_widget_indicies = ordered_indicies
+        field_widget_names = widget_names_searched
+                
+
+
+    plotvars.field_widget_title = field_widget_title
+    return field_widget_names, field_widget_title
+
+
+
+
+class Cfview(QMainWindow):
+    def __init__(self, filename, defaults, parent=None):
+        super(Cfview, self).__init__()
+        plotvars.file_selected = filename
+        self.parent = self
+
+        # Read in the defaults file if it exists
+        full_path = os.path.expanduser(defaults)
+        check = os.path.isfile(full_path) 
+
+        if check:
+
+            datafile = open(full_path, 'r')
+            for line in datafile:
+                vars = line.split(' ')
+                if line[0] != '#' and len(vars) > 1:
+                    var = vars[0]
+                    value = ''
+                    for i in np.arange(len(vars[1:])):
+                        if i > 0:
+                            value += ' ' 
+                        value += vars[i+1]
+                    value = value.replace("\n", "")
+
+                    if value == 'True':
+                        value = True
+                    if value == 'False':
+                        value = False
+            
+                    if var == 'fontsize':
+                        value = int(value)
+
+                    setattr(plotvars, var, value)
+        else:
+            if defaults != '~/.cfview_defaults':
+                print("\nDefaults file " + defaults + " doesn't exist\n")
+
+
+        self.initUI()
+
+
+    def initUI(self):
+
+        # Set standard out to go to EmittingStream
+        sys.stdout = EmittingStream(textWritten=self.output_terminal_written)
+
+        QCoreApplication.setAttribute(Qt.AA_DontUseNativeDialogs)
+
+        # Add a top menu bar
+        bar = self.menuBar()
+        # Turn off Mac bar relocation 
+        bar.setNativeMenuBar(False)
+
+        file = bar.addMenu("File")
+        file.addAction("Open")
+        file.addAction("Save")
+        file.addAction("Exit")
+        file.triggered.connect(self.file_menu)
+
+        setup = bar.addMenu("Setup")
+        setup.addAction("cfview defaults")
+        setup.addAction("contours")
+        setup.addAction("vectors")
+        setup.addAction("map")
+        setup.addAction("colour scale")
+        setup.addAction("contour levels")
+        setup.triggered.connect(self.menu)
+
+        view = bar.addMenu("View")
+        view.addAction("code")
+        view.addAction("data")
+        view.addAction("names")
+        view.addAction("transform")
+        view.triggered.connect(self.menu)
+
+        help = bar.addMenu("Help")
+        help.addAction("cfview")
+        help.addAction("about")
+        help.triggered.connect(self.menu)
+
+
+        # Set up some buttons
+        plotButton = QPushButton("Plot")
+        plotButton.clicked.connect(self.plot)
+
+        reset_dimensionButton = QPushButton("Reset Dimensions")
+        reset_dimensionButton.clicked.connect(lambda: self.dim_reset('reset'))
+
+
+        # Plot type combobox
+        plot_type_ComboBox = QComboBox()
+        plot_type_ComboBox.addItem('Contour')
+        plot_type_ComboBox.addItem('Vector')
+        plot_type_ComboBox.addItem('Contour and vector')
+        plot_type_ComboBox.addItem('Line')
+        plot_type_ComboBox.activated[str].connect(self.plot_type)
+
+
+        # Contour type drop down menu
+        contour_type_ComboBox = QComboBox()
+        contour_type_ComboBox.addItem('x-y')
+        contour_type_ComboBox.addItem('x-z')
+        contour_type_ComboBox.addItem('x-logz')
+        contour_type_ComboBox.addItem('x-t')
+        contour_type_ComboBox.addItem('y-z')
+        contour_type_ComboBox.addItem('y-logz')
+        contour_type_ComboBox.addItem('y-t')
+        contour_type_ComboBox.addItem('t-x')
+        contour_type_ComboBox.addItem('t-y')
+        contour_type_ComboBox.addItem('t-z')
+        contour_type_ComboBox.addItem('t-logz')
+        contour_type_ComboBox.activated[str].connect(self.contour_type)
+
+
+        # Dimension selection
+        dimLabel = QLabel('Select:')
+        xRadioButton = QRadioButton("x")
+        yRadioButton = QRadioButton("y")
+        zRadioButton = QRadioButton("z")
+        tRadioButton = QRadioButton("t")
+        xRadioButton.clicked.connect(lambda: self.dim_view('x'))
+        yRadioButton.clicked.connect(lambda: self.dim_view('y'))
+        zRadioButton.clicked.connect(lambda: self.dim_view('z'))
+        tRadioButton.clicked.connect(lambda: self.dim_view('t'))
+        xRadioButton.setChecked(True)
+
+        # Collapse labels and boxes
+        collapse_areaLabel = QLabel('Area:')
+        collapse_xLabel = QLabel('X:')
+        collapse_yLabel = QLabel('Y:')
+        collapse_zLabel = QLabel('Z:')
+        collapse_tLabel = QLabel('T:')
+        collapse_types = plotvars.collapse_types
+        collapse_areaComboBox = QComboBox()
+        collapse_xComboBox = QComboBox()
+        collapse_yComboBox = QComboBox()
+        collapse_zComboBox = QComboBox()
+        collapse_tComboBox = QComboBox()
+        for collapse in collapse_types:
+            collapse_areaComboBox.addItem(collapse)
+            collapse_xComboBox.addItem(collapse)
+            collapse_yComboBox.addItem(collapse)
+            collapse_zComboBox.addItem(collapse)
+            collapse_tComboBox.addItem(collapse)
+        #collapse_areaComboBox.activated.connect(lambda: self.collapse_area())
+        collapse_areaComboBox.activated[str].connect(self.collapse_area)
+        collapse_xComboBox.activated.connect(lambda: self.collapse_type('x'))
+        collapse_yComboBox.activated.connect(lambda: self.collapse_type('y'))
+        collapse_zComboBox.activated.connect(lambda: self.collapse_type('z'))
+        collapse_tComboBox.activated.connect(lambda: self.collapse_type('t'))
+
+
+        # Field selection widgets
+        indexCheckBox = QCheckBox("index")
+        indexCheckBox.setChecked(True)
+        indexCheckBox.clicked.connect(lambda: self.field_widget_listing('index'))
+        fieldCheckBox = QCheckBox("field name")
+        fieldCheckBox.setChecked(False)
+        fieldCheckBox.clicked.connect(lambda: self.field_widget_listing('field'))
+        sort_byLabel = QLabel('Order by:')
+        search_fieldsLabel = QLabel('Search:')
+        search_fieldsTextbox = QLineEdit()
+        search_fieldsTextbox.textChanged.connect(self.search_fields)
+
+
+        fieldlist = QListWidget()
+        fieldlist.setSelectionMode(QListWidget.ExtendedSelection)
+
+        field_titles = QLabel('Index  nx  ny  nz  nt  field name')
+
+        if plotvars.file_selected is not None:
+            f = cf.read(plotvars.file_selected)
+            plotvars.fields = f
+
+            field_widget_names, field_widget_title = fields_list(fields=f, order=plotvars.field_widget_listing)
+            field_titles = QLabel(field_widget_title)
+
+            for i in np.arange(len(f)):
+                QListWidgetItem(field_widget_names[i], fieldlist) 
+            fieldlist.setCurrentRow(0)
+
+
+        fieldlist.setCurrentRow(0)
+        fieldlist.itemSelectionChanged.connect(self.fieldnumber)
+
+        # Set fixed width font for field titles
+        custom_font_fixed_width = QFont(plotvars.font_mono, plotvars.fontsize)
+        field_titles.setFont(custom_font_fixed_width)
+        fieldlist.setFont(custom_font_fixed_width)
+
+
+        # Messages label
+        messagesLabel = QLabel('Output messages')
+        messagesLabel.setAlignment(Qt.AlignCenter)
+
+        # Dimension lists
+        dimension_titles = QLabel('Dimension view')
+        if plotvars.file_selected is not None:
+            nx, ny, nz, nt, x, y, z, t = field_dims(field=f[0])
+            dims_field = [nx, ny, nz, nt, x, y, z, t]
+
+        xlist = QListWidget()
+        ylist = QListWidget() 
+        zlist = QListWidget()
+        tlist = QListWidget()
+
+        dim_lists = [xlist, ylist, zlist, tlist]
+        if plotvars.file_selected is not None:
+            for i in np.arange(4):
+                dim_lists[i].setSelectionMode(QListWidget.ExtendedSelection)
+
+                if dims_field[i] > 0:
+                    for val in dims_field[i+4]:
+                        QListWidgetItem(str(val), dim_lists[i])
+                    dim_lists[i].setCurrentRow(0)
+                    dim_lists[i].selectAll()
+                    dim_lists[i].itemSelectionChanged.connect(self.reset_field_title)
+
+
+        # Set the stored_dimensions and stored_collapses for each of the fields in the field list
+        # -1 indicates that the dimension is unchanged by the user
+        plotvars.stored_dimensions = {}
+        plotvars.stored_collapses = {}
+        plotvars.stored_collapse_values = {}
+        if plotvars.file_selected is not None:
+            for i in np.arange(len(f)):
+                plotvars.stored_dimensions['f' + str(i)] = {'x': -1, 'y': -1, 'z': -1, 't': -1}
+                plotvars.stored_collapses['f' + str(i)] = {'x': 'Off', 'y': 'Off', 'z': 'Off', 't': 'Off'}
+                plotvars.stored_collapse_values['f' + str(i)] = {'x': False, 'y': False, 'z': False, 't': False}
+
+
+        # Collapse lists - these will have just one value
+        xlist_collapse = QListWidget()
+        ylist_collapse = QListWidget()
+        zlist_collapse = QListWidget()
+        tlist_collapse = QListWidget()
+        
+
+        # Extended mode required so that the items can be selected with selectAll()
+        xlist_collapse.setSelectionMode(QListWidget.ExtendedSelection)
+        ylist_collapse.setSelectionMode(QListWidget.ExtendedSelection)
+        zlist_collapse.setSelectionMode(QListWidget.ExtendedSelection)
+        tlist_collapse.setSelectionMode(QListWidget.ExtendedSelection)
+
+
+        # Output window
+        output_terminal_textEdit = QTextEdit()
+
+        # Define the top level containers to put the widgets in
+        outerLayout = QHBoxLayout()
+        leftLayout = QVBoxLayout()
+        rightLayout = QVBoxLayout()
+
+        # Define the left layout widget boxes
+        leftHbox0 = QHBoxLayout()
+        leftHbox1 = QHBoxLayout()
+        leftHbox2 = QHBoxLayout()
+        leftHbox3 = QHBoxLayout()
+        leftHbox4 = QHBoxLayout()
+        leftHbox5 = QHBoxLayout()
+
+        # Define the right layout widget boxes
+        rightHbox1 = QHBoxLayout()
+        rightHbox2 = QHBoxLayout()
+        rightHbox3 = QHBoxLayout()
+        rightHbox4 = QHBoxLayout()
+
+        # containers for field and dimension lists
+        field_container = QVBoxLayout()
+        field_container1 = QVBoxLayout()
+        field_container1.setContentsMargins(2,0,0,0)
+        field_container2 = QVBoxLayout()
+        dimension_container = QVBoxLayout()
+
+        # Assemble the layout boxes
+        leftLayout.addLayout(leftHbox1)
+        leftLayout.addLayout(leftHbox2)
+        leftLayout.addLayout(leftHbox3)
+        leftLayout.addLayout(leftHbox4)
+        leftLayout.addLayout(leftHbox5)
+
+        rightLayout.addLayout(rightHbox1)
+        rightLayout.addLayout(rightHbox2)
+        rightLayout.addLayout(rightHbox3)
+        rightLayout.addLayout(rightHbox4)
+
+        outerLayout.addLayout(leftLayout)
+        outerLayout.addLayout(rightLayout)
+
+        # Add widgets to the appropriate boxes
+        rightHbox1.addWidget(plot_type_ComboBox)
+        rightHbox1.addWidget(contour_type_ComboBox)
+        rightHbox1.addWidget(plotButton)
+
+        leftHbox2.addLayout(field_container)
+
+        field_container.addLayout(field_container1)
+        field_container.addLayout(field_container2)
+        field_container1.addWidget(field_titles)
+        field_container2.addWidget(fieldlist)
+
+
+        rightHbox2.addLayout(dimension_container)
+        dimension_container.addWidget(dimension_titles)
+        dimension_container.addWidget(xlist)
+        dimension_container.addWidget(ylist)
+        dimension_container.addWidget(zlist)
+        dimension_container.addWidget(tlist)
+        dimension_container.addWidget(xlist_collapse)
+        dimension_container.addWidget(ylist_collapse)
+        dimension_container.addWidget(zlist_collapse)
+        dimension_container.addWidget(tlist_collapse)
+
+
+
+        rightHbox3.addWidget(dimLabel)
+        rightHbox3.addWidget(xRadioButton)
+        rightHbox3.addWidget(yRadioButton)
+        rightHbox3.addWidget(zRadioButton)
+        rightHbox3.addWidget(tRadioButton)
+        rightHbox3.addWidget(reset_dimensionButton)
+
+
+
+
+        leftHbox3.addWidget(sort_byLabel)
+        leftHbox3.addWidget(indexCheckBox)
+        leftHbox3.addWidget(fieldCheckBox)
+        leftHbox3.addWidget(search_fieldsLabel)
+        leftHbox3.addWidget(search_fieldsTextbox)
+        leftHbox4.addWidget(messagesLabel)
+        leftHbox5.addWidget(output_terminal_textEdit)
+        
+
+        widget = QWidget()
+        widget.setLayout(outerLayout)
+        self.setCentralWidget(widget)
+
+       
+
+
+        self.field_titles = field_titles
+        self.fieldlist = fieldlist
+        self.xlist = xlist
+        self.ylist = ylist
+        self.zlist = zlist
+        self.tlist = tlist
+        self.xlist_collapse = xlist_collapse
+        self.ylist_collapse = ylist_collapse
+        self.zlist_collapse = zlist_collapse
+        self.tlist_collapse = tlist_collapse
+        self.collapse_areaComboBox = collapse_areaComboBox
+        self.collapse_areaLabel = collapse_areaLabel
+        self.collapse_xLabel = collapse_xLabel
+        self.collapse_yLabel = collapse_yLabel
+        self.collapse_zLabel = collapse_zLabel
+        self.collapse_tLabel = collapse_tLabel
+
+        self.ylist.setVisible(False)
+        self.zlist.setVisible(False)
+        self.tlist.setVisible(False)
+        self.xlist_collapse.setVisible(False)
+        self.ylist_collapse.setVisible(False)
+        self.zlist_collapse.setVisible(False)
+        self.tlist_collapse.setVisible(False)
+
+
+        self.xRadioButton = xRadioButton
+        self.yRadioButton = yRadioButton
+        self.zRadioButton = zRadioButton
+        self.tRadioButton = tRadioButton
+
+        self.collapse_xComboBox = collapse_xComboBox
+        self.collapse_yComboBox = collapse_yComboBox
+        self.collapse_zComboBox = collapse_zComboBox
+        self.collapse_tComboBox = collapse_tComboBox
+
+
+
+        self.indexCheckBox = indexCheckBox
+        self.fieldCheckBox = fieldCheckBox
+        self.search_fieldsTextbox = search_fieldsTextbox
+        self.reset_dimensionButton = reset_dimensionButton
+
+        self.cfview_defaults = None  # No external window yet.
+        self.contour_window = None  # No external window yet.
+        self.contour_levels = None  # No external window yet.
+        self.colour_scale = None  # No external window yet.
+        self.map_window = None  # No external window yet.
+        self.data_window = None  # No external window yet.
+        self.names_window = None  # No external window yet.
+        self.transform_window = None  # No external window yet.
+        self.about_window = None  # No external window yet.
+        self.cfview_window = None  # No external window yet.
+
+        self.output_terminal_textEdit = output_terminal_textEdit
+
+
+        palette = QPalette()    
+        palette.setColor(QPalette.Window, QColor(plotvars.background_colour))
+        palette.setColor(QPalette.Base, QColor(plotvars.background_colour))    
+        palette.setColor(QPalette.Button, QColor(plotvars.button_colour))
+        palette.setColor(QPalette.ButtonText, QColor(plotvars.buttontext_colour))
+        palette.setColor(QPalette.Highlight, QColor(plotvars.highlight_colour))
+        palette.setColor(QPalette.HighlightedText, QColor(plotvars.text_colour))
+        palette.setColor(QPalette.Text,  QColor(plotvars.text_colour))    
+        palette.setColor(QPalette.WindowText, QColor(plotvars.windowtext_colour))
+        self.setPalette(palette)
+
+
+        # Set main font
+        db = QFontDatabase()
+        fonts = QFontDatabase().families()
+        test_fonts = ['Times', 'Helvetica', 'Arial', deepcopy(plotvars.font)]
+        for font in test_fonts:
+            if font in fonts:
+                plotvars.font = font
+
+        custom_font = QFont(plotvars.font, plotvars.fontsize)
+        self.window().setFont(custom_font)
+        file.setFont(custom_font)
+        setup.setFont(custom_font)
+        view.setFont(custom_font)
+        help.setFont(custom_font)
+
+        # Set mono font for field titles and field list
+        test_fonts = ['Times', 'Helvetica', 'Courier', 'Menlo', 'Monaco', deepcopy(plotvars.font_mono)]
+        for font in test_fonts:
+            if font in fonts:
+                plotvars.font_mono = font
+
+        custom_font_mono = QFont(plotvars.font_mono, plotvars.fontsize)
+        self.field_titles.setFont(custom_font_mono)
+        self.fieldlist.setFont(custom_font_mono)
+
+
+        # Set window size and show the window
+        self.setGeometry(0, 0, 1280, 1060)
+        self.setWindowTitle('cfview')
+        self.show()
+
+    def open_file(self, s):
+ 
+        dialog = QFileDialog()
+        dialog.setOption(QFileDialog.DontUseNativeDialog, True)
+        #dialog.setOption(QCoreApplication.AA_DontUseNativeDialogs, True)
+        dialog.setAcceptMode(QFileDialog.AcceptOpen)
+        dialog.setNameFilters(["netCDF Files (*.nc)", "Met Office PP Files (*.pp)", "All Files (*.*)"])
+
+
+ 
+        palette = QPalette()    
+        palette.setColor(QPalette.Window, QColor(plotvars.background_colour))
+        palette.setColor(QPalette.Base, QColor(plotvars.background_colour))    
+        palette.setColor(QPalette.Button, QColor(plotvars.button_colour))
+        palette.setColor(QPalette.ButtonText, QColor(plotvars.buttontext_colour))
+        palette.setColor(QPalette.Highlight, QColor(plotvars.highlight_colour))
+        palette.setColor(QPalette.HighlightedText, QColor(plotvars.text_colour))
+        palette.setColor(QPalette.Text,  QColor(plotvars.text_colour))    
+        palette.setColor(QPalette.WindowText, QColor(plotvars.windowtext_colour))
+        dialog.setPalette(palette)
+
+        custom_font = QFont(plotvars.font, plotvars.fontsize)
+        dialog.setFont(custom_font)
+
+        path =  ''
+        if dialog.exec_() == QDialog.Accepted:
+            path =  dialog.selectedFiles()[0]
+
+        #path = QFileDialog.getOpenFileName(self, 'Select file', '', "(*.nc *.pp);; All files (*.*)")
+
+        try:
+            if path != '':
+                f = cf.read(path)
+
+                plotvars.file_selected = path
+
+                self.fieldlist.clear()
+                self.search_fieldsTextbox.clear()
+                plotvars.field_number = 0
+                plotvars.fields=f
+                plotvars.field_widget_indicies=None
+
+                field_widget_names, field_widget_title = fields_list(fields=f, order=plotvars.field_widget_listing)
+
+                for i in np.arange(len(f)):
+                    QListWidgetItem(field_widget_names[i], self.fieldlist) 
+                self.fieldlist.setCurrentRow(0)
+
+                self.field_titles.setText(field_widget_title)
+
+                # Reset the dimension lists
+                self.xlist.clear()
+                self.xlist_collapse.clear()
+                if f[0].has_construct('X'):
+                    xvals = f[0].coord('X').array
+                    for xval in xvals:
+                        QListWidgetItem(str(xval), self.xlist) 
+                    self.xlist.selectAll()
+
+                self.ylist.clear()
+                self.ylist_collapse.clear()
+                if f[0].has_construct('Y'):
+                    yvals = f[0].coord('Y').array
+                    for yval in yvals:
+                        QListWidgetItem(str(yval), self.ylist) 
+                    self.ylist.selectAll()
+
+                self.zlist.clear()
+                self.zlist_collapse.clear()
+                if f[0].has_construct('Z'):
+                    zvals = f[0].coord('Z').array
+                    for zval in zvals:
+                        QListWidgetItem(str(zval), self.zlist) 
+                    self.zlist.selectAll()
+
+                self.tlist.clear()
+                self.tlist_collapse.clear()
+                if f[0].has_construct('T'):
+                    tvals = f[0].coord('T').dtarray
+                    for tval in tvals:
+                        QListWidgetItem(str(tval), self.tlist) 
+                    self.tlist.selectAll()
+
+                # Set the stored_dimensions
+                # -1 indicates that the dimension is unchanged
+                plotvars.stored_dimensions = {}
+                plotvars.stored_collapses = {}
+                if plotvars.file_selected is not None:
+                    for i in np.arange(len(f)):
+                        plotvars.stored_dimensions['f' + str(i)] = {'x': -1, 'y': -1, 'z': -1, 't': -1}
+                        plotvars.stored_collapses['f' + str(i)] = {'x': 'Off', 'y': 'Off', 'z': 'Off', 't': 'Off'}
+                        plotvars.stored_collapse_values['f' + str(i)] = {'x': False, 'y': False, 'z': False, 't': False}                             
+
+
+                # Reset lists and check boxes
+                self.dim_reset('reset')
+
+                # Print which file has been opened in the messages window
+                print('File read: ' + path)
+
+        except ValueError:
+            print('file not a valid, netCDF, PP or fields file')
+
+
+
+
+    def save_file(self, s):
+
+        dialog = QFileDialog()
+
+        dialog.setAcceptMode(QFileDialog.AcceptSave)
+        dialog.setNameFilters(["netCDF Files (*.nc)", "All Files (*.*)"])
+        dialog.setOption(QFileDialog.DontUseNativeDialog, True)
+        #dialog.setOption(QCoreApplication.DontUseNativeDialogs, True)
+        #dialog.setOption(QFileDialog.AA_DontUseNativeDialogs, True)
+ 
+        palette = QPalette()    
+        palette.setColor(QPalette.Window, QColor(plotvars.background_colour))
+        palette.setColor(QPalette.Base, QColor(plotvars.background_colour))    
+        palette.setColor(QPalette.Button, QColor(plotvars.button_colour))
+        palette.setColor(QPalette.ButtonText, QColor(plotvars.buttontext_colour))
+        palette.setColor(QPalette.Highlight, QColor(plotvars.highlight_colour))
+        palette.setColor(QPalette.HighlightedText, QColor(plotvars.text_colour))
+        palette.setColor(QPalette.Text,  QColor(plotvars.text_colour))    
+        palette.setColor(QPalette.WindowText, QColor(plotvars.windowtext_colour))
+        dialog.setPalette(palette)
+
+        custom_font = QFont(plotvars.font, plotvars.fontsize)
+        dialog.setFont(custom_font)
+
+        path =  ''
+        if dialog.exec_() == QDialog.Accepted:
+            path =  dialog.selectedFiles()[0]
+
+        # Return if no file specified or if cancel has been pressed
+        if len(path) == 0:
+            return
+
+
+        # Assemble cf-python code to write the file
+        com = 'import cf\n'
+        com += "f = cf.read('"+ plotvars.file_selected + "')\n"
+        com += 'write_fields = []\n'
+
+        # Assemble the selected field indicies from the field titles
+        selected = self.fieldlist.selectedItems()
+        indicies = []
+        for i in np.arange(len(selected)):
+            field_title = selected[i].text()
+            indicies.append(int(field_title.split()[0]))
+        print('selected indicies are ', indicies)
+
+        dims = ['X', 'Y', 'Z', 'T']
+
+        write_fields = []
+
+        # Set the data file
+        f = plotvars.fields
+
+        # Loop over the selected fields
+        for index in np.arange(len(indicies)):
+
+            # Form the subspace dictionary
+            stored = plotvars.stored_dimensions['f' + str(indicies[index])]
+
+            subspace_args = {}
+
+            # Find the original nx, ny, nz, nt for this field
+            #field = cf.read(plotvars.file_selected)[indicies[index]]
+            field = f[indicies[index]]
+            com += 'field = f[' + str(indicies[index]) + ']\n'
+            nx, ny, nz, nt, x, y, z, t = field_dims(field=field)
+            orig_vals = [nx, ny, nz, nt]
+
+            for i in np.arange(4):
+                # dim_indicies = -1 means no user change to this dimension
+                dim_indicies = stored[dims[i].lower()]
+                if i <= 2:
+                    dim_vals = field.coord(dims[i]).array
+                else:
+                    dim_vals = field.coord(dims[i]).dtarray
+
+
+                if dim_indicies != -1:
+                    if len(dim_indicies) == 1:
+                        subspace_args[dims[i]] = dim_vals[dim_indicies[0]]
+                        com += 'field = field.subspace(' + dims[i] + '=' + str(dim_vals[dim_indicies[0]]) + ')\n'
+                    else:
+
+                        # Check for contiguous data selection
+                        contig = True
+                        if max(dim_indicies) - min(dim_indicies) != len(dim_indicies) - 1:
+                            contig = False
+
+                        valmin = dim_vals[min(dim_indicies)]
+                        valmax = dim_vals[max(dim_indicies)]
+
+                        # cf-python needs ascending values for cf.wi
+                        if valmax < valmin:
+                            valmin, valmax = valmax, valmin
+
+                        if contig:
+                            subspace_args[dims[i]] = cf.wi(valmin, valmax)
+                            com += 'field = field.subspace(' + dims[i] + ' = cf.wi('
+                            com +=  str(valmin) + ', ' + str(valmax) + '))\n'
+                        else:
+                            subspace_args[dims[i]] = sorted(dim_indicies)
+                            com += 'field = field.subspace(' + dims[i] + '= ['
+                            for ind in np.arange(len((dim_indicies))):
+                                com += str(sorted(dim_indicies)[ind]) 
+                                if ind < len(dim_indicies) - 1:
+                                    com += ', ' 
+                            com += '])\n'
+
+
+            # Form the collapse string
+            collapse_str = ''
+            stored = plotvars.stored_collapses['f' + str(indicies[index])] 
+            for i in np.arange(4):
+                 if stored[dims[i].lower()] != 'Off':
+                     collapse_str += dims[i] + ': ' + stored[dims[i].lower()] + ' '
+            if len(collapse_str) > 0:
+                if collapse_str[-1] == ' ':
+                    collapse_str = collapse_str[:-1]
+
+
+            # Subspace and collapse the data if required
+            if len(subspace_args) > 0:
+                field = field.subspace(**subspace_args)
+
+            if len(collapse_str) > 0:
+                field = field.collapse(collapse_str)
+                write_fields.append(field)
+                com += "field = field.collapse('" + collapse_str + "')\n" 
+
+            write_fields.append(field)
+            com += 'write_fields.append(field)\n' 
+
+
+
+        # Write the netCDF file
+        cf.write(write_fields, path)
+
+        # Show the cf-python code
+        com += "cf.write(write_fields, '" + path + "')"
+        print('cf-python code to write file is:', com)
+
+
+        
+
+
+    def plot(self, s):
+        # Make a plot
+
+        index = plotvars.field_number
+
+        # Make a copy of the field for plotting
+        f = deepcopy(plotvars.fields[index])
+
+
+        # Check data and subspace if necessary
+        subspace_args = {}
+        con_args = {}
+
+        con_okay = True
+        dims = ['X', 'Y', 'Z', 'T']
+
+
+        if plotvars.plot_type == 'Contour':
+            # Check plot has enough items to be a contour plot
+            contour = True
+            if contour:
+                nx = len(self.xlist.selectedItems())
+                ny = len(self.ylist.selectedItems())
+                nz = len(self.zlist.selectedItems())
+                nt = len(self.tlist.selectedItems())
+
+                if plotvars.collapse_x != 'Off':
+                    nx = 1
+                if plotvars.collapse_y != 'Off':
+                    ny = 1
+                if plotvars.collapse_z != 'Off':
+                    nz = 1
+                if plotvars.collapse_t != 'Off':
+                    nt = 1
+
+                dim_sizes = [nx, ny, nz, nt]
+
+                for i in np.arange(4):
+                    if any(dim == dims[i].lower() for dim in plotvars.contour_type):
+                        if dim_sizes[i] < 2:
+                            con_okay = False
+
+                if con_okay is False:
+                    errstr = '\nContour error - not enough data to make requested '
+                    errstr += plotvars.contour_type + ' contour plot\n'
+                    errstr += 'Need a minimum of two values per contour plot dimension\n'
+                    errstr += 'Field dimensions are\n'
+                    errstr += 'nx = ' + str(nx) + '\n'
+                    errstr += 'ny = ' + str(ny) + '\n'
+                    errstr += 'nz = ' + str(nz) + '\n'
+                    errstr += 'nt = ' + str(nt) + '\n'
+                    print(errstr)
+                    return
+
+
+
+
+        # Form the subspace dictionary
+        nx, ny, nz, nt, x, y, z, t = field_dims(f)
+        dim_sizes = [nx, ny, nz, nt]
+
+        lists = [self.xlist.selectedItems(), self.ylist.selectedItems(),\
+                 self.zlist.selectedItems(), self.tlist.selectedItems()]
+
+        collapses = [plotvars.collapse_x, plotvars.collapse_y,\
+                    plotvars.collapse_z, plotvars.collapse_t]
+
+        for i in np.arange(4):
+            vals = []
+            for j in np.arange(len(lists[i])):
+                vals.append(str(lists[i][j].text()))
+
+            if any(dim == dims[i].lower() for dim in plotvars.contour_type):
+                if np.size(vals) < 2:
+                    con_okay = False
+            else:
+                if collapses[i] == 'Off':
+                    if dim_sizes[i] > 1:
+                        vals = [vals[0]]
+
+            if len(vals) != dim_sizes[i]:
+                if len(vals) == 1:
+
+                    if collapses[i] == 'Off':
+                        if dims[i] != 'T':
+                            subspace_args[dims[i]] = float(vals[0])
+                        else:
+                            subspace_args[dims[i]] = cf.dt(vals[0])
+                else:
+                    if dims[i] != 'T':
+                        # cf.wi needs to go from min to max but the widget return
+                        # goes in order of selection
+                        val1 = np.min(np.array(vals).astype(np.float))
+                        val2 = np.max(np.array(vals).astype(np.float))
+                        subspace_args[dims[i]] = cf.wi(val1, val2)
+                    else:
+                        val1 = min(vals)
+                        val2 = max(vals)
+                        subspace_args[dims[i]] = cf.wi(cf.dt(val1), cf.dt(val2))
+
+
+
+        # Form the contour dictionary
+
+        if plotvars.fill and not plotvars.lines:
+            con_args['lines'] = False
+        if not plotvars.fill and plotvars.lines:
+            con_args['fill'] = False
+            con_args['lines'] = True
+
+        if plotvars.blockfill and not plotvars.lines:
+            con_args['blockfill'] = True
+            con_args['lines'] = False
+
+        if plotvars.blockfill and plotvars.lines:
+            con_args['blockfill'] = True
+            con_args['lines'] = True
+
+        if plotvars.lines and not plotvars.line_labels:
+            con_args['line_labels'] = False
+
+        if plotvars.colorbar is False:
+            con_args['colorbar'] = False
+        else:
+            if plotvars.colorbar_orientation == 'horizontal':
+                con_args['colorbar_orientation'] = 'horizontal'
+            if plotvars.colorbar_orientation == 'vertical':
+                con_args['colorbar_orientation'] = 'vertical'
+
+        if 'log' in plotvars.contour_type:
+            con_args['ylog'] = True
+
+        if plotvars.title == '':
+            con_args['titles'] = True
+        else:
+            con_args['title'] = plotvars.title
+
+        if plotvars.contour_type[0] == 't':
+            con_args['swap_axes'] = True 
+
+
+        # Set the map
+        if plotvars.contour_type == 'x-y':
+            cfp.mapset(proj=plotvars.proj)
+
+
+        # Form the subspace command
+        com = ''
+        com_subspace = '' 
+        if con_okay:
+            if len(subspace_args) > 0:
+                i = 0
+                for arg in subspace_args:
+                    if i > 0:
+                        com_subspace += ', '
+                    i = i + 1
+                    if type(subspace_args[arg]) == cf.query.Query:
+                        vals = subspace_args[arg].value
+                        if arg != 'T':
+                            com_subspace += arg + '=cf.wi(' + str(vals[0]) + ', ' + str(vals[1]) + ')'
+                        else:
+                            com_subspace += arg + "=cf.wi(cf.dt('" + str(vals[0]) + "'), " + "cf.dt('" + str(vals[1]) + "'))"
+                    else:
+                        com_subspace += arg + '=' 
+                        if arg != 'T':
+                            com_subspace += str(subspace_args[arg])
+                        else:
+                            com_subspace += "cf.dt('" + str(subspace_args[arg]) + "')"
+
+        # Form the collapse command
+        com_collapse = ''
+        i = 0
+        area = False
+        dims = ['X', 'Y', 'Z', 'T']
+        dims_small = ['x', 'y', 'z', 't']
+        vars = [plotvars.collapse_x, plotvars.collapse_y, plotvars.collapse_z, plotvars.collapse_t]
+
+
+
+
+        if vars[0] != 'Off' and vars[1] != 'Off':
+            if vars[0] == vars[1]:
+                area = True
+                i = 1
+                com_collapse += "'area: " + vars[0]
+
+        for idim in np.arange(4):
+            if vars[idim] != 'Off':
+                if idim > 1:
+                    area = False
+                if not area:
+                    if i == 0:
+                        com_collapse += "'"
+                    if i > 0:
+                        com_collapse += ' '
+                    i = i + 1
+                    com_collapse += dims[idim] + ": " + vars[idim]
+
+        if i > 0:
+            com_collapse += "'"
+
+
+        com_con = 'import cf\n'
+        com_con += 'import cfplot as cfp\n'
+
+        if isinstance(plotvars.file_selected, str):
+             file = plotvars.file_selected.split('/')[-1]
+        else:
+             file = plotvars.file_selected[0]
+
+        com_con += "f = cf.read('" + file + "')[" + str(index) +']\n'
+
+        # Check for bounds if a collapse is required
+        # and add them if they are missing
+        for idim in np.arange(4):
+            if vars[idim] != 'Off':
+                coord = f.coord(dims[idim])
+                # Check axis has more than one cell
+                if len(coord.array) > 1:
+                    if coord.has_bounds() is False:
+                        bounds = coord.create_bounds()
+                        coord.set_bounds(bounds)
+                        com_con += '\n# Adding missing bounds for ' + dims[idim] + '\n'
+                        com_con += "coord = f.coord('" + dims[idim] + "')\n"
+                        com_con += 'bounds = coord.create_bounds()\n'
+                        com_con += 'coord.set_bounds(bounds)\n\n'
+
+
+
+        i = 0
+        variable_names = ['f', 'g', 'h']
+
+        if com_subspace != '':
+            com_con += variable_names[i+1] + ' = f.subspace(' + com_subspace + ')\n'
+            i = i + 1
+
+        if com_collapse != '':
+            com_con += variable_names[i+1] + ' = ' + variable_names[i]
+            com_con += '.collapse(' + com_collapse + ', weights=True)\n'
+            i = i + 1
+
+
+
+        # Add contour levels if specified
+        if plotvars.levs_set:
+            # Check inputs are numbers
+            vals = [plotvars.levs_min, plotvars.levs_max, plotvars.levs_step]
+            vals_okay = True
+            errstr = 'Error in manual contour levels\n'
+            for j in np.arange(3):
+                try:
+                    float(vals[j])
+                except:
+                    vals_okay = False
+                    errstr += str(vals[j]) + 'is not a number\n'
+
+            # Print errstr and return if an error in input values is found
+            if vals_okay is False:
+                print(errstr)
+                return
+
+            # Check min < max
+            if float(vals[0]) >= float(vals[1]):
+                errstr += 'minimum must be less than the maximum\n'
+                vals_okay = False
+
+            # Check step > 0
+            if float(vals[2]) <= 0:
+                errstr += 'step must be greater than zero\n'
+                vals_okay = False
+
+            # Print errstr and return if an error in input values is found
+            if vals_okay is False:
+                print(errstr)
+                return
+
+            # Check if all values are integers
+            myint = True
+            for i in np.arange(3):
+                val = vals[i]
+                if val[0] == '-':
+                    val = val[1:]
+                if not val.isdigit():
+                    myint = False
+
+            # Set up levels and add to the com_con code
+            if myint:
+                cfp.levs(min=int(vals[0]), max=int(vals[1]), step=int(vals[2]))
+            else:
+                cfp.levs(min=float(vals[0]), max=float(vals[1]), step=float(vals[2]))
+            com_con += 'cfp.levs(min=' + vals[0] + ', max=' + vals[1] + ', step=' + vals[2] + ')\n'
+
+        elif plotvars.levs_manual_set:
+            # Check inputs are numbers
+            vals = plotvars.levs_manual.split(' ')
+            vals_okay = True
+            errstr = 'Error in manual contour levels\n'
+            for j in np.arange(np.size(vals)):
+                try:
+                    float(vals[j])
+                except:
+                    vals_okay = False
+                    errstr += str(vals[j]) + 'is not a number\n'
+
+            # Print errstr and return if an error in input values is found
+            if vals_okay is False:
+                print(errstr)
+                return
+
+            # Check inputs are ascending
+            for j in np.arange(np.size(vals) - 2):
+                if float(vals[j+1]) <= float(vals[j]):
+                    vals_okay = False
+
+            # Print errstr and return if an error in input values is found
+            if vals_okay is False:
+                errstr += 'Manual levels must be ascending\n'
+                print(errstr)
+                return
+
+            # Check if all values are integers
+            myint = True
+            for j in np.arange(np.size(vals)):
+                val = vals[j]
+                if val[0] == '-':
+                    val = val[1:]
+                if not val.isdigit():
+                    myint = False
+
+            # Set up levels as a integer or float array
+            levels = []
+            for j in np.arange(np.size(vals)):
+                if myint:
+                    levels.append(int(vals[j]))
+                else:
+                    levels.append(float(vals[j]))
+
+            # Set up levels as a string array
+            levels_str = '['
+            for j in np.arange(np.size(vals)):
+                levels_str += vals[j]
+                if j < np.size(vals)-1:
+                    levels_str += ', '
+            levels_str += ']'
+
+            # Convert array to integer or float as appropriate
+            if myint:
+                levels = np.array(levels).astype(int)
+            else:
+                levels = np.array(levels).astype(float)
+
+
+            cfp.levs(manual=levels)
+            com_con += 'cfp.levs(manual=' + levels_str + ')\n'
+
+
+        elif plotvars.levs_automatic_set:
+            cfp.levs()
+
+
+
+        # Colour scale settings
+        if plotvars.cscale_automatic_set is False:
+            
+            # Check inputs are numbers
+            vals = ['cscale_ncols', 'cscale_above', 'cscale_below']
+            vals_okay = True
+            errstr = 'Error in colour scale values\n'
+            for j in np.arange(3):
+                if getattr(plotvars, vals[j]) != '':
+                    try:
+                        float(getattr(plotvars, vals[j]))
+                    except:
+                        vals_okay = False
+                        errstr += str(vals[j]) + 'is not a number\n'
+
+            # Print errstr and return if an error in input values is found
+            if vals_okay is False:
+                print(errstr)
+                return
+
+            # Check white are numbers if specified
+            errstr = 'Error in colour white values\n'
+            white_vals = plotvars.cscale_white.split(' ')
+            if plotvars.cscale_white != '' and len(white_vals) > 0:
+                for j in np.arange(len(white_vals)):
+                    try:
+                        float(white_vals[j])
+                    except:
+                        vals_okay = False
+                        errstr += str(white_vals[j]) + 'is not a number\n'
+
+                white_vals = [int(i) for i in white_vals]
+                if len(white_vals) == 1:
+                    white_vals = white_vals[0]
+
+            # Print errstr and return if an error in input values is found
+            if vals_okay is False:
+                print(errstr)
+                return
+
+
+            # Assemble the cscale command
+            # Reset cscale
+            cfp.cscale()
+
+            cscale_args = {}
+            if plotvars.cscale != 'viridis':
+                cscale_args['scale'] = plotvars.cscale
+            if plotvars.cscale_ncols != '':
+                cscale_args['ncols'] = int(plotvars.cscale_ncols)
+            if plotvars.cscale_above != '':
+                cscale_args['above'] = int(plotvars.cscale_above)
+            if plotvars.cscale_below != '':
+                cscale_args['below'] = int(plotvars.cscale_below)
+            if plotvars.cscale_white != '':
+                cscale_args['white'] = white_vals
+            if plotvars.cscale_reverse_set:
+                cscale_args['reverse'] = True
+
+            if len(cscale_args) > 0:
+                cfp.cscale(**cscale_args)
+                com_cscale = 'cfp.scale('
+                for key in cscale_args:
+                    print(key, cscale_args[key])
+                    if key == 'scale':
+                        com_cscale += "cscale='" + str(cscale_args[key]) + "',"
+                    else: 
+                        com_cscale += str(key) + '=' + str(cscale_args[key]) + ','
+                com_cscale = com_cscale[:-1] + ')\n'
+                com_con += com_cscale
+            
+
+
+        # Map settings
+        # Reset map
+        cfp.mapset()
+
+        if plotvars.proj == 'cyl':
+            # Check inputs are numbers
+            vals = ['lonmin', 'lonmax', 'latmin', 'latmax']
+            vals_okay = True
+            errstr = 'Error in map region numbers\n'
+            for j in np.arange(4):
+                try:
+                    float(getattr(plotvars, vals[j]))
+                except:
+                    vals_okay = False
+                    errstr += str(vals[j]) + ' is not a number\n'
+
+            # Print errstr and return if an error in input values is found
+            if vals_okay is False:
+                print(errstr)
+                return
+           
+            # Check lonmin < lonmax and latmin < latmax
+            vals_okay = True
+            errstr = 'Error in map region numbers\n'
+            if float(plotvars.lonmax) <= float(plotvars.lonmin):
+                errstr += 'lonmax <= lonmin'
+                vals_okay = False
+            if float(plotvars.lonmax) <= float(plotvars.lonmin):
+                errstr += 'latmax <= latmin'
+                vals_okay = False
+
+            # Print errstr and return if an error in input values is found
+            if vals_okay is False:
+                print(errstr)
+                return
+
+            if float(plotvars.lonmin) != -180.0 or float(plotvars.lonmax) != 180 or \
+               float(plotvars.latmin) != -90.0 or float(plotvars.latmax) != 90:
+                com_con += 'cfp.mapset(lonmin=' + str(plotvars.lonmin) + ', '
+                com_con += 'lonmax=' + str(plotvars.lonmax) + ', '
+                com_con += 'latmin=' + str(plotvars.latmin) + ', '
+                com_con += 'latmax=' + str(plotvars.latmax) + ')\n'
+                cfp.mapset(float(plotvars.lonmin), float(plotvars.lonmax), \
+                           float(plotvars.latmin), float(plotvars.latmax))
+
+
+
+        if plotvars.proj == 'spstere' or plotvars.proj == 'npstere':
+            # Check inputs are numbers
+            vals = ['boundinglat', 'lon_0']
+            vals_okay = True
+            errstr = 'Error in polar stereographic numbers\n'
+            for j in np.arange(2):
+                try:
+                    float(getattr(plotvars, vals[j]))
+                except:
+                    vals_okay = False
+                    errstr += str(vals[j]) + ' is not a number\n'
+
+            # Print errstr and return if an error in input values is found
+            if vals_okay is False:
+                print(errstr)
+                return
+
+            cfp.mapset(proj=plotvars.proj, boundinglat=float(plotvars.boundinglat),\
+                       lon_0 = float(plotvars.lon_0))
+
+            com_con += 'cfp.mapset(proj=' + plotvars.proj
+            if str(plotvars.boundinglat) != '0':
+                com_con += ', boundinglat=' + str(plotvars.boundinglat)
+            if str(plotvars.lon_0) != '0':
+                com_con += ', lon_0=' + plotvars.lon_0
+            com_con += ')\n'
+
+
+        if plotvars.proj in ['EuroPP', 'lcc', 'merc', 'ortho', 'OSGB', 'robin', 'UKCP']:
+            cfp.mapset(proj=plotvars.proj)
+            com_con += 'cfp.mapset(proj=' + plotvars.proj + ')\n'
+
+
+        # Set continent properties if changed
+        if plotvars.continent_thickness != '1.5' or plotvars.continent_color != 'black':
+            cfp.setvars(continent_thickness=float(plotvars.continent_thickness),\
+                        continent_color=plotvars.continent_color)
+            continent_opts = 0
+            com_con += 'cfp.setvars('
+            if plotvars.continent_thickness != '1.5':
+                com_con += 'continent_thickness=' + plotvars.continent_thickness
+                continent_opts += 1
+            if plotvars.continent_color != 'black':
+                if continent_opts != 0:
+                    com_con += ', '
+                com_con += 'continent_color=' + plotvars.continent_color
+
+            com_con += ')\n'
+ 
+
+
+        com_con += 'cfp.con(' + variable_names[i] 
+
+           
+        if len(con_args) > 0:
+            for arg in con_args:
+                com_con += ', ' + arg + '=' + str(con_args[arg])
+
+        com_con += ')'
+
+
+        if len(subspace_args) > 0:
+            f = f.subspace(**subspace_args)
+
+
+        if com_collapse != '':
+            f = f.collapse(com_collapse.strip("'"), weights=True)
+
+
+
+
+        print('### Code for plot is ###')
+        print(com_con)
+
+        cfp.con(f, **con_args)
+    
+
+    def fieldnumber(self):
+        
+        # Find out which fields are selected.
+        # If multiple fields then select the first.
+        selected = self.fieldlist.selectedItems()
+        if len(selected) == 0:
+            return
+
+        s = int(selected[0].text().split(' ')[0])
+
+        plotvars.field_number = s
+        f = plotvars.fields[s]
+
+        # Lock changes to stored variables while the new lists are made
+        plotvars.stored_lock = True
+
+
+        # Clear the dimension and collapse lists
+        lists_dim = [self.xlist, self.ylist, self.zlist, self.tlist]
+        lists_collapse = [self.xlist_collapse, self.ylist_collapse,\
+                          self.zlist_collapse, self.tlist_collapse]
+        for i in np.arange(4):
+            lists_dim[i].clear()
+            lists_collapse[i].clear()
+
+
+        # Set the lists based on the field dimensions
+        nx, ny, nz, nt, x, y, z, t = field_dims(field=f)
+        dims_field = [nx, ny, nz, nt, x, y, z, t]
+        dims = ['X', 'Y', 'Z', 'T']
+        dims_small = ['x', 'y', 'z', 't']
+        for i in np.arange(4):
+            vals = dims_field[i + 4]
+            if len(vals) > 0:
+                for val in vals:
+                    QListWidgetItem(str(val), lists_dim[i]) 
+
+
+        # Set selected dimensions based on stored values
+        for i in np.arange(4):
+            if plotvars.stored_dimensions['f' + str(s)][dims_small[i]] == -1:
+                lists_dim[i].selectAll()
+            else:
+                vals = plotvars.stored_dimensions['f' + str(s)][dims_small[i]]
+
+                for j in np.arange(len(vals)):
+                    lists_dim[i].item(vals[j]).setSelected(True)
+
+
+
+        # Set collapse methods from stored_collapses
+        collapses = [plotvars.collapse_x, plotvars.collapse_y,\
+                    plotvars.collapse_z, plotvars.collapse_t]
+        collapse_combos = [self.collapse_xComboBox, self.collapse_yComboBox,\
+                           self.collapse_zComboBox, self.collapse_tComboBox]
+        collapse_types = plotvars.collapse_types
+
+        for i in np.arange(4):
+            val = plotvars.stored_collapses['f' + str(s)][dims_small[i]]
+            index = collapse_types.index(val)
+            collapse_combos[i].setCurrentIndex(index)
+            collapses[i] = val
+
+            lists_collapse[i].clear()
+            val = plotvars.stored_collapse_values['f' + str(s)][dims_small[i]]
+            if val:
+                QListWidgetItem(str(val), lists_collapse[i]) 
+                lists_collapse[i].selectAll()
+
+
+        # Restore access to changing stored variables
+        plotvars.stored_lock = False
+
+
+        # Reset the field titles
+        self.reset_field_title()
+
+
+    def dim_reset(self, option):
+
+        # Clear the dimension lists and reset the collapse combos to be 'Off'
+        f = deepcopy(plotvars.fields[plotvars.field_number])
+        lists_dim = [self.xlist, self.ylist, self.zlist, self.tlist]
+        lists_collapse = [self.xlist_collapse, self.ylist_collapse,\
+                          self.zlist_collapse, self.tlist_collapse]
+        collapse_combos = [self.collapse_xComboBox, self.collapse_yComboBox,\
+                  self.collapse_zComboBox, self.collapse_tComboBox]
+        dims = ['X', 'Y', 'Z', 'T']
+        dims_small = ['x', 'y', 'z', 't']
+
+        for i in np.arange(4):
+            lists_dim[i].clear()
+            collapse_combos[i].setCurrentIndex(0)
+            field_var = 'f' + str(plotvars.field_number)
+            plotvars.stored_collapses[field_var][dims_small[i]] = 'Off'
+            plotvars.stored_collapse_values[field_var][dims_small[i]] = False
+
+        self.collapse_areaComboBox.setCurrentIndex(0)
+
+        self.collapse_xComboBox.setEnabled(True)
+        self.collapse_yComboBox.setEnabled(True)
+        color = plotvars.text_colour
+        pal = QPalette(self.collapse_xLabel.palette())
+        pal.setColor(QPalette.WindowText, QColor(color))
+        self.collapse_xLabel.setPalette(pal)
+        self.collapse_yLabel.setPalette(pal)
+
+        # Repopulate the dimension lists
+        for i in np.arange(4):
+            if f.has_construct(dims[i]):
+                if i <3:
+                    vals = f.coord(dims[i]).array
+                else:
+                    vals = f.coord(dims[i]).dtarray
+                for val in vals:
+                    QListWidgetItem(str(val), lists_dim[i]) 
+        self.xlist.selectAll()
+        self.ylist.selectAll()
+        self.zlist.selectAll()
+        self.tlist.selectAll()
+
+
+        # reset the plotvars collapse settings
+        plotvars.collapse_x = 'Off'
+        plotvars.collapse_y = 'Off'
+        plotvars.collapse_z = 'Off'
+        plotvars.collapse_t = 'Off'
+
+        # Reset the widget visibility and dimension check boxes
+        self.xlist.setVisible(True)
+        self.ylist.setVisible(False)
+        self.zlist.setVisible(False)
+        self.tlist.setVisible(False)
+        self.xlist_collapse.setVisible(False)
+        self.ylist_collapse.setVisible(False)
+        self.zlist_collapse.setVisible(False)
+        self.tlist_collapse.setVisible(False)
+
+        self.xRadioButton.setChecked(True)
+        self.yRadioButton.setChecked(False)
+        self.zRadioButton.setChecked(False)
+        self.tRadioButton.setChecked(False)
+
+        # Reset the field title
+        self.reset_field_title()
+
+    def contour_type(self, text):
+        # Set the contour plot type 
+        plotvars.contour_type = text
+
+
+    def plot_type(self, text):
+        # Set the contour plot type
+        plotvars.plot_type = text
+
+        if text == 'Vector':
+            print('vectors not implemented yet')
+
+        if text == 'Contour and vector':
+            print('Contours and vectors not implemented yet')
+
+        if text == 'Line':
+            print('Line plots not implemented yet')
+
+
+
+    def collapse_type(self, dim):
+
+        # Set the collapse widget states in plotvars
+        plotvars.collapse_x = self.collapse_xComboBox.currentText()
+        plotvars.collapse_y = self.collapse_yComboBox.currentText()
+        plotvars.collapse_z = self.collapse_zComboBox.currentText()
+        plotvars.collapse_t = self.collapse_tComboBox.currentText()
+
+
+        # Change the dimension lists
+        f = plotvars.fields[plotvars.field_number]
+        
+        dims = ['x', 'y', 'z', 't']
+        dims_upper = ['X', 'Y', 'Z', 'T']
+        lists_dim = [self.xlist, self.ylist, self.zlist, self.tlist]
+        lists_collapse = [self.xlist_collapse, self.ylist_collapse,\
+                          self.zlist_collapse, self.tlist_collapse]
+        combos = [self.collapse_xComboBox, self.collapse_yComboBox,\
+                  self.collapse_zComboBox, self.collapse_tComboBox]
+        collapses = [plotvars.collapse_x, plotvars.collapse_y,\
+                    plotvars.collapse_z, plotvars.collapse_t]
+
+
+        idim = dims.index(dim)
+        coord = f.construct(dims_upper[idim])
+        collapse = collapses[idim]
+        field_key = 'f' + str(plotvars.field_number)
+
+        #  Extract the selected list
+        selected = lists_dim[idim].selectedItems()
+        mylist = []
+        for j in np.arange(len(selected)):
+            mylist.append(str(selected[j].text()))
+
+
+        # Reject collapse if the dimension has just one selected item
+        if len(mylist) == 1:
+            print('\nWarning: Cannot collapse a dimension with just one selected item\n')
+            combos[idim].setCurrentIndex(0)
+            return
+
+        indicies = [i.row() for i in lists_dim[idim].selectedIndexes()]
+        mymin = min(indicies)
+        mymax = max(indicies)
+
+        # Code for bounds calculation
+        if coord.has_bounds() is False:
+            bounds = coord.create_bounds()
+            coord.set_bounds(bounds)
+
+        if idim <= 2:
+            # Code for data value calculation
+            #val_min = np.min(np.array(mylist).astype(np.float))
+            #val_max = np.max(np.array(mylist).astype(np.float))
+            #vals = [(val_max - val_min) / 2.0 + val_min]
+
+            # Code for bounds calculation
+            mybounds = coord.bounds.array[mymin:mymax+1, :]
+            vals = [(np.max(mybounds) - np.min(mybounds))/2.0 + np.min(mybounds)]
+        else:
+            ref_time = coord.units
+            ref_calendar = coord.calendar
+            time_units = cf.Units(ref_time, ref_calendar)
+
+            # Code for data value calculation
+            #times = [min(mylist), max(mylist)]
+            #tmin = cf.Data(times[0], units=time_units)
+            #tmax = cf.Data(times[1], units=time_units)
+            #midpt = (float(tmax.array) - float(tmin.array)) / 2.0 + float(tmin.array)
+            #vals = [str(cf.cftime.num2date(midpt, ref_time, ref_calendar))]
+
+            # Code for bounds calculation
+            mybounds = coord.bounds.array[mymin:mymax+1, :]
+            midpt = (np.max(mybounds) - np.min(mybounds)) / 2.0 + np.min(mybounds)
+            vals = [str(cf.cftime.num2date(midpt, ref_time, ref_calendar))]
+
+
+        # Set collapse in the stored_collapses
+        ## print('collapse_type idim and collapse are ', dims[idim], collapse)
+        plotvars.stored_collapses[field_key][dims[idim]] = collapse
+
+        ## print('idim is ', idim)
+
+        lists_collapse[idim].clear()
+        for val in vals:
+            ## print('adding val to idim list', val, idim)
+            QListWidgetItem(str(val), lists_collapse[idim]) 
+            lists_collapse[idim].selectAll()
+
+        plotvars.stored_collapse_values[field_key][dims[idim]] = vals[0]
+
+
+        lists_dim[idim].setVisible(False)
+        lists_collapse[idim].setVisible(True)
+
+        # Set the viewable dimension and collapse data
+        list_vis = [False, False, False, False]
+        list_collapse_vis = [False, False, False, False]
+        list_objs = [self.xlist, self.ylist, self.zlist, self.tlist]
+        list_collapse_objs = [self.xlist_collapse, self.ylist_collapse, self.zlist_collapse, self.tlist_collapse]
+
+        if self.xRadioButton.isChecked():
+            if plotvars.collapse_x == 'Off':
+                list_vis[0] = True
+            else:
+                list_collapse_vis[0] = True
+
+        if self.yRadioButton.isChecked():
+            if plotvars.collapse_y == 'Off':
+                list_vis[1] = True
+            else:
+                list_collapse_vis[1] = True
+
+        if self.zRadioButton.isChecked():
+            if plotvars.collapse_z == 'Off':
+                list_vis[2] = True
+            else:
+                list_collapse_vis[2] = True
+
+        if self.tRadioButton.isChecked():
+            if plotvars.collapse_t == 'Off':
+                list_vis[3] = True
+            else:
+                list_collapse_vis[3] = True
+
+        for i in np.arange(4):
+            list_objs[i].setVisible(list_vis[i])
+            list_collapse_objs[i].setVisible(list_collapse_vis[i])
+
+
+
+        # Reset the field title
+        self.reset_field_title()
+
+
+    def collapse_area(self, text):
+
+        nx = len(self.xlist.selectedItems())
+        ny = len(self.ylist.selectedItems())
+
+        enabled = True
+        index = 0
+
+        if nx < 2 or ny < 2:
+            print('Error - cannot collapse to an area')
+            print('Need more than 1 item for x and y')
+            print('nx = ' + str(nx))
+            print('ny = ' + str(ny))
+        else:
+            if text != 'Off':
+                enabled = False
+                index = plotvars.collapse_types.index(text)
+
+        self.collapse_xComboBox.setCurrentIndex(index)
+        self.collapse_yComboBox.setCurrentIndex(index)
+
+        self.collapse_xComboBox.setEnabled(enabled)
+        self.collapse_yComboBox.setEnabled(enabled)
+
+        color = plotvars.text_colour_insensitive
+        if enabled:
+            color = plotvars.text_colour
+        pal = QPalette(self.collapse_xLabel.palette())
+        pal.setColor(QPalette.WindowText, QColor(color))
+        self.collapse_xLabel.setPalette(pal)
+        self.collapse_yLabel.setPalette(pal)
+
+        # Reset the collapses
+        self.collapse_type('x')
+        self.collapse_type('y')
+
+
+    def dim_view(self, dim):
+        # Set the visible state of the dimension lists and lists_collapse 
+
+        dims = ['x', 'y', 'z', 't']
+        state = [False, False, False, False]
+        loc = dims.index(dim)
+        state[loc] = True
+        lists = [self.xlist, self.ylist, self.zlist, self.tlist]
+        lists_collapse = [self.xlist_collapse, self.ylist_collapse,\
+                          self.zlist_collapse, self.tlist_collapse]
+        collapses = [plotvars.collapse_x, plotvars.collapse_y,\
+                    plotvars.collapse_z, plotvars.collapse_t]
+
+
+        self.xRadioButton.setChecked(state[0])
+        self.yRadioButton.setChecked(state[1])
+        self.zRadioButton.setChecked(state[2])
+        self.tRadioButton.setChecked(state[3])
+
+        for i in np.arange(4):
+            if state[i]:
+                if collapses[i] == 'Off':
+                    lists[i].setVisible(True)
+                    lists_collapse[i].setVisible(False)
+                else:
+                    lists[i].setVisible(False)
+                    lists_collapse[i].setVisible(True)
+            else:
+                    lists[i].setVisible(False)
+                    lists_collapse[i].setVisible(False)
+
+
+
+    def field_widget_listing(self, listing):
+
+        plotvars.field_widget_listing = listing
+
+        listings = ['index', 'field']
+        ticked_state = [False, False]
+        loc = listings.index(listing)
+        ticked_state[loc] = True
+
+        self.indexCheckBox.setChecked(ticked_state[0])
+        self.fieldCheckBox.setChecked(ticked_state[1])
+        self.fieldlist.clear()
+
+        field_widget_names, field_widget_title = fields_list(order=plotvars.field_widget_listing,
+                                                order_changed=True)
+
+        for i in np.arange(len(field_widget_names)):
+            QListWidgetItem(field_widget_names[i], self.fieldlist) 
+        self.fieldlist.setCurrentRow(0)
+        self.field_titles.setText(field_widget_title)
+
+
+    def search_fields(self, text):
+        field_widget_names, field_widget_title = fields_list(order=plotvars.field_widget_listing,
+                                                 order_changed=True, search=text)
+
+        self.fieldlist.clear()
+        for i in np.arange(len(field_widget_names)):
+            QListWidgetItem(field_widget_names[i], self.fieldlist) 
+        self.fieldlist.setCurrentRow(0)
+        self.field_titles.setText(field_widget_title)
+
+
+
+    def output_terminal_written(self, text):
+        self.output_terminal_textEdit.append(text)
+
+
+    def reset_field_title(self):
+
+
+        # Reset the dimension sizes in the field string 
+        selected = self.fieldlist.selectedItems()
+
+        if len(selected) == 1:
+            index_length = plotvars.index_length
+            nx_length = plotvars.nx_length
+            ny_length = plotvars.ny_length
+            nz_length = plotvars.nz_length
+            nt_length = plotvars.nt_length
+
+            mylen = 6 + nx_length + 1 + ny_length + 1 + nz_length + 1 + nt_length + 1
+            field_title = selected[0].text()[mylen:]
+            index = selected[0].text()[0:6]
+
+            lists = [self.xlist, self.ylist, self.zlist, self.tlist] 
+            dims = [0, 0, 0, 0]
+            keys = ['x', 'y', 'z', 't']
+            for i in np.arange(4):
+                vals = [v.row() for v in lists[i].selectedIndexes()]
+                dims[i] = len(vals)
+
+
+                if plotvars.stored_lock is False:
+                    # Reset plotvars.stored_dimensions dictionary
+                    field_key = 'f' + str(plotvars.field_number)
+
+                    if len(lists[i]) == len(vals) or len(vals) == 0:
+                        plotvars.stored_dimensions[field_key][keys[i]] = -1
+                    else:
+                        plotvars.stored_dimensions[field_key][keys[i]] = vals
+
+    
+            collapses = [plotvars.collapse_x, plotvars.collapse_y, plotvars.collapse_z, plotvars.collapse_t]
+            field_key = 'f' + str(plotvars.field_number)
+ 
+            for i in np.arange(4):
+                collapses[i] = plotvars.stored_collapses[field_key][keys[i]]
+
+                if collapses[i] != 'Off':
+                    dims[i] = 1
+
+    
+            new_title = index 
+            new_title += str(dims[0]) +  (nx_length + 1 - len(str(dims[0]))) * ' '
+            new_title += str(dims[1]) +  (ny_length + 1 - len(str(dims[1]))) * ' '
+            new_title += str(dims[2]) +  (nz_length + 1 - len(str(dims[2]))) * ' '
+            new_title += str(dims[3]) +  (nt_length + 1 - len(str(dims[3]))) * ' '
+            new_title += field_title
+
+            selected[0].setText(new_title)
+
+
+
+    def menu(self, value):
+        '''Pop up a window based on which defaults are required'''
+
+        if value.text() == 'cfview defaults':
+            if self.cfview_defaults is None:
+                self.cfview_defaults = Cfview_defaults_window(self.parent)
+            self.cfview_defaults.show()
+
+
+        if value.text() == 'contour levels':
+            if self.contour_levels is None:
+                self.contour_levels = Contour_levels_window()
+            self.contour_levels.show()
+
+        if value.text() == 'colour scale':
+            if self.colour_scale is None:
+                self.colour_scale = Colour_scale_window()
+            self.colour_scale.show()
+
+
+        if value.text() == 'map':
+            if self.map_window is None:
+                self.map_window = Map_window()
+            self.map_window.show()
+
+        if value.text() == 'contours':
+            if self.contour_window is None:
+                self.contour_window = Contour_window()
+            self.contour_window.show()
+
+
+        if value.text() == 'data':
+            if self.data_window is None:
+                self.data_window = Data_window(self.parent)
+            self.data_window.show()
+
+        if value.text() == 'names':
+            if self.names_window is None:
+                self.names_window = Names_window(self.parent)
+            self.names_window.show()
+
+        if value.text() == 'transform':
+            if self.transform_window is None:
+                self.transform_window = Transform_window(self.parent)
+            self.transform_window.show()
+
+        if value.text() == 'about':
+            html = '<body><h2>About cfview</h2>'
+            html += '<b>This is version 2.0.0</b><p>'
+            html += 'cfview is a netCDF and Met Ofice file format data analysis and viewer for the atmospheric sciences '
+            html += 'and is intended to be an xconv+ replacement.<p>'
+            html += 'cfview uses:<br>'
+            html += '<b>cf-python</b> - data I/O and manipulation<br>'
+            html += 'https://ncas-cms.github.io/cf-python<p>'
+            html += '<b>cf-plot</b> - plotting<br>'
+            html += 'http://ajheaps.github.io/cf-plot<P>'
+            html += '<b>PyQt5</b> - GUI toolkit<p>'
+            html += 'Author: Andy Heaps andy.heaps@ncas.ac.uk<br>'
+            html += '&#169; NCAS CMS 2021'
+            self.about_help = Help(html)
+            self.about_help.show()
+
+        if value.text() == 'cfview':
+            html = '<body><h2>Using cfview</h2>'
+            html += 'cfview is available for the Unix and Mac platforms<p>'
+            html += '<h4>Starting cfview</h4>'
+            html += 'On the command line type<br><b>cfview</b><br>or<br><b>cfview datafile</b><p> At the moment cfview '
+            html += 'accepts just one data file for input at a time - this will change in a future version. '
+            html += 'Valid input formats match those of cf-python - netCDF, Met Office PP and fields files.<p>'
+            html += '<h4>The main interface</h4>'
+            html += 'The main interface has a list of fields on the top left with and an index number and the '
+            html += 'number of x, y, z and t values for a field.  The fields can be ordered by index or field name '
+            html += 'and a search function for when there are many fields in the dataset<p>'
+            html += 'An output messages panel lies underneath the fields listing. '
+            html += 'On the right hand side a dimension view panel has x, y, z and t radio buttons to allow showing of '
+            html += 'the four dimension values'
+            html += '<h4>Selecting dimension values</h4>'
+            html += 'Use the left mouse to highlight a particular value or shift and left mouse to select a range. '
+            html += 'On Linux control and left click will select multiple values and on a Mac this is Command and '
+            html += 'left click.'
+            html += '<h4>Contour plots</h4>'
+            html += 'The initial setting is for cfview to make a x-y contour plot.  The axes used for the contour '
+            html += 'plot can be changed using the dropdown menu above the dimension viewing panel. Contour, '
+            html += 'contour level, maps and colour scales can be changed using the Setup menu item.  Once changed the '
+            html += 'new settings are persistent until reset or changed again.<p>'  
+            html += '<h4>Default settings</h4>'
+            html += 'Default settings for fonts, font size and interface colour theme are changed in the Setup '
+            html += '-> cfview defaults menu item. Contour settings are also save to the cfview defaults file with is '
+            html += 'generally ~/.cfview_defaults.  To load in the new defaults start cfview again.  If the defaults file '
+            html += 'is ~.cfview_defaults then no additional command line arguments are required.  For a different defaults '
+            html += 'file use<br><b>cfview -d mydefaults.file datafile</b><p>'
+
+
+
+            self.cfview_help = Help(html)
+            self.cfview_help.show()
+
+    def file_menu(self, value):
+
+        if value.text() == 'Open':
+            self.open_file(self)
+
+        if value.text() == 'Save':
+            self.save_file(self)
+
+        if value.text() == 'Exit':
+            sys.exit(0)
+
+
+
+
+class Cfview_defaults_window(QWidget):
+    '''popup window for editing cfview defaults'''
+
+    def __init__(self, cfview_parent):
+        super(Cfview_defaults_window, self).__init__()
+
+        # Set the parent of cfview to this Window
+        #self.cfview = cfview(filename='ggap2.nc', parent=self)
+
+        self.cfview_parent = cfview_parent
+
+        self.initUI()
+
+
+    def initUI(self):
+
+        # Set up some buttons
+        resetButton = QPushButton("Reset")
+        resetButton.clicked.connect(self.reset)
+        helpButton = QPushButton("Help")
+        helpButton.clicked.connect(self.help)
+        saveButton = QPushButton("Save defaults to file:")
+        saveButton.clicked.connect(self.save)
+        quitButton = QPushButton("Quit")
+        quitButton.clicked.connect(self.close)
+
+        # Interface colour themes
+        themeComboBox = QComboBox()
+        themes = ['BlueMono', 'BluePurple', 'DarkBlue12', 'DarkGrey7',\
+                  'DarkTeal11', 'GreenMono', 'LightBrown2', 'NeutralBlue',\
+                  'SandyBeach', 'TealMono', 'SystemDefault', 'SystemDefault1', 'xconv']
+    
+        for theme in themes:
+            themeComboBox.addItem(theme)
+        themeComboBox.highlighted[str].connect(self.theme)
+
+        # Font size slider
+        font_Slider = QSlider(Qt.Horizontal)
+        font_Slider.sliderMoved.connect(self.fontsize)
+        font_Slider.setRange(2, 25)
+        font_Slider.setValue(15)
+
+        # Find available fonts
+        db = QFontDatabase()
+        fonts = QFontDatabase().families()
+
+        # Main font
+        fontComboBox = QComboBox()
+        for font in fonts:
+            fontComboBox.addItem(font)
+        
+
+        test_fonts = ['Times', 'Helvetica', 'Arial', 'DejaVu Sans', deepcopy(plotvars.font)]
+        index = 0
+        for font in test_fonts:
+            if font in fonts:
+                index = fonts.index(font)
+            else:
+                plotvars.font = font
+
+
+        fontComboBox.setCurrentIndex(index)
+        fontComboBox.highlighted[str].connect(self.font_main)
+
+
+        # Mono font
+        font_monoComboBox = QComboBox()
+        for font in fonts:
+            font_monoComboBox.addItem(font)
+
+        test_fonts = ['Times', 'Helvetica', 'Courier', 'Menlo', 'Monaco', deepcopy(plotvars.font_mono)]
+        index = 0
+        for font in test_fonts:
+            if font in fonts:
+                index = fonts.index(font)
+            else:
+                plotvars.font = font
+
+        font_monoComboBox.setCurrentIndex(index)
+        font_monoComboBox.highlighted[str].connect(self.font_mono)
+
+
+        # Create layout
+        vbox = QVBoxLayout()
+
+        hbox_font = QHBoxLayout()
+        font_Label = QLabel('Main font:')
+        hbox_font.addWidget(font_Label)
+        hbox_font.addWidget(fontComboBox)
+        vbox.addLayout(hbox_font)
+
+        hbox_font_mono = QHBoxLayout()
+        font_mono_Label = QLabel('Monospace font:')
+        hbox_font_mono.addWidget(font_mono_Label)
+        hbox_font_mono.addWidget(font_monoComboBox)
+        vbox.addLayout(hbox_font_mono)
+
+        hbox_font_size = QHBoxLayout()
+        font_size_Label = QLabel('Font size: 15')
+        hbox_font_size.addWidget(font_size_Label)
+        hbox_font_size.addWidget(font_Slider)
+        vbox.addLayout(hbox_font_size)
+
+        hbox_theme = QHBoxLayout()
+        themeLabel = QLabel('Interface colour theme:')
+        hbox_theme.addWidget(themeLabel)
+        hbox_theme.addWidget(themeComboBox)
+        vbox.addLayout(hbox_theme)
+
+        # Save text boxes
+        saveTextBox = QLineEdit()
+        saveTextBox.setText('~/.cfview_defaults')
+
+        save_hbox = QHBoxLayout()
+        vbox.addLayout(save_hbox)
+        save_hbox.addWidget(saveButton)
+        save_hbox.addWidget(saveTextBox)
+
+        hbox_buttons = QHBoxLayout()
+        vbox.addLayout(hbox_buttons)
+        hbox_buttons.addWidget(resetButton)
+        hbox_buttons.addWidget(helpButton)
+        hbox_buttons.addWidget(quitButton)
+
+        self.themeComboBox = themeComboBox
+        self.font_size_Label = font_size_Label
+        self.saveTextBox = saveTextBox
+        self.font_Slider = font_Slider
+        self.font_monoComboBox = font_monoComboBox
+        self.fontComboBox = fontComboBox
+        self.setWindowTitle('cfview defaults')
+
+        self.setLayout(vbox)
+
+        # Set the window theme
+        palette = QPalette()    
+        palette.setColor(QPalette.Window, QColor(plotvars.background_colour))
+        palette.setColor(QPalette.Base, QColor(plotvars.background_colour))    
+        palette.setColor(QPalette.Button, QColor(plotvars.button_colour))
+        palette.setColor(QPalette.ButtonText, QColor(plotvars.buttontext_colour))
+        palette.setColor(QPalette.Highlight, QColor(plotvars.highlight_colour))
+        palette.setColor(QPalette.HighlightedText, QColor(plotvars.text_colour))
+        palette.setColor(QPalette.Text,  QColor(plotvars.text_colour))    
+        palette.setColor(QPalette.WindowText, QColor(plotvars.windowtext_colour))
+        self.setPalette(palette)
+
+        # Set font 
+        custom_font = QFont(plotvars.font, plotvars.fontsize)
+        self.window().setFont(custom_font)
+
+        self.defaults_help = None  # No external window yet.
+
+        self.show()
+
+    def theme(self, name):
+
+        cols = ['#f5deb3', '#f5deb3', '#000000', '#bfdfff', '#000000', '#000000']
+
+        if name == 'BlueMono':
+            cols = ['#abb6d4', '#7085c4', '#ffffff', '#f1f4fd', '#000000', '#000000']
+
+        if name == 'BluePurple':
+            cols = ['#a5cadd', '#313852', '#ffffff', '#dff5ff', '#000000', '#7a2894']
+
+        if name == 'DarkBlue12':
+            cols = ['#324f7b', '#5067aa', '#ffffff', '#87a6df', '#dcf8cf', '#000000']
+
+        if name == 'DarkGrey7':
+            cols = ['#4c586e', '#434261', '#c7dfbd', '#574e6d', '#c7dfbd', '#c7dfbd']
+
+        if name == 'DarkTeal11':
+            cols = ['#40555a', '#69868c', '#ffffff', '#69868c', '#ffffff', '#ffffff']
+
+        if name == 'GreenMono':
+            cols = ['#a8c3b4', '#6e9e86', '#ffffff', '#e3e3e3', '#000000', '#000000']
+
+        if name == 'LightBrown2':
+            cols = ['#a7ad7f', '#5b8e7d', '#ffffff', '#e6d3a8', '#000000', '#000000']
+
+        if name == 'NeutralBlue':
+            cols = ['#92aa9d', '#d0dbbd', '#000000', '#fcfff6', '#000000', '#000000']
+
+        if name == 'SandyBeach':
+            cols = ['#efeccb', '#056484', '#ffffff', '#e6d3a8', '#002e30', '#00302b']
+
+        if name == 'SystemDefault':
+            cols = ['#f0f0f0', '#082567', '#ffffff', '#c8c8c8', '#000000', '#000000']
+
+        if name == 'SystemDefault1':
+            cols = ['#f0f0f0', '#f0efed', '#000000', '#c8c8c8', '#000000', '#000000']
+    
+        if name == 'TealMono':
+            cols = ['#a9cede', '#18243f', '#ffffff', '#dfecf2', '#000000', '#000000']
+
+        if name == 'xconv':
+            cols = ['#f5deb3', '#f5deb3', '#000000', '#bfdfff', '#000000', '#000000']
+
+
+        # assign colours and set them in plotvars
+        background = cols[0]
+        button = cols[1]
+        buttontext = cols[2]
+        highlight = cols[3]
+        text = cols[4]
+        windowtext=cols[5]
+
+        plotvars.background_colour = background
+        plotvars.button_colour = button
+        plotvars.buttontext_colour = buttontext
+        plotvars.highlight_colour = highlight
+        plotvars.text_colour = text
+        plotvars.windowtext_colour = windowtext
+
+
+
+        palette = QPalette()    
+        palette.setColor(QPalette.Window, QColor(background))
+        palette.setColor(QPalette.Base, QColor(background))    
+        palette.setColor(QPalette.Button, QColor(button))
+        palette.setColor(QPalette.ButtonText, QColor(buttontext))
+        palette.setColor(QPalette.Highlight, QColor(highlight))
+        palette.setColor(QPalette.HighlightedText, QColor(text))
+        palette.setColor(QPalette.Text,  QColor(text))    
+        palette.setColor(QPalette.WindowText, QColor(windowtext))
+        self.setPalette(palette)
+        self.cfview_parent.window().setPalette(palette)
+
+
+    def fontsize(self):
+
+        value = self.font_Slider.value()
+        font = QFont(plotvars.font, value)
+
+        self.cfview_parent.window().setFont(font)
+        plotvars.fontsize = value
+        self.font_size_Label.setText('Font size: ' + str(value))
+
+        font = QFont(plotvars.font_mono, plotvars.fontsize)
+        self.cfview_parent.window().field_titles.setFont(font)
+        self.cfview_parent.window().fieldlist.setFont(font)
+
+
+    def font_main(self, value):
+
+        plotvars.font = value
+        font = QFont(plotvars.font, plotvars.fontsize)
+        self.cfview_parent.window().setFont(font)
+
+
+    def font_mono(self, value):
+
+        plotvars.font_mono = value
+        font = QFont(plotvars.font_mono, plotvars.fontsize)
+
+        # Set mono font for field titles and field list
+        self.cfview_parent.window().field_titles.setFont(font)
+        self.cfview_parent.window().fieldlist.setFont(font)
+
+
+    def reset(self):
+        # Reset to defaults
+        self.saveTextBox.setText('~/.cfview_defaults')
+        plotvars.fontsize = 15
+        self.font_Slider.setValue(15)
+        self.font_size_Label.setText('Font size: 15')
+
+        # Find available fonts
+        db = QFontDatabase()
+        fonts = QFontDatabase().families()
+
+        # Main font
+        test_fonts = ['Times', 'Helvetica', 'Arial', 'DejaVu Sans']
+        for font in test_fonts:
+            if font in fonts:
+                index = fonts.index(font)
+                self.fontComboBox.setCurrentIndex(index)
+                plotvars.font = font
+        #self.font_main(plotvars.font)
+        font = QFont(plotvars.font, plotvars.fontsize)
+        self.cfview_parent.window().setFont(font)
+
+
+        # Mono font
+        test_fonts = ['Times', 'Helvetica', 'Courier', 'Menlo', 'Monaco', 'DejaVu Sans Mono']
+        for font in test_fonts:
+            if font in fonts:
+                index = fonts.index(font)
+                plotvars.font_mono = font
+                self.font_monoComboBox.setCurrentIndex(index)
+        #self.font_mono(plotvars.font_mono)
+        font = QFont(plotvars.font_mono, plotvars.fontsize)
+        self.cfview_parent.window().field_titles.setFont(font)
+        self.cfview_parent.window().fieldlist.setFont(font)
+
+        # Reset the theme
+        self.theme('BlueMono')
+        self.themeComboBox.setCurrentIndex(0)
+
+
+    def save(self):
+        print('In save -  file is ', self.saveTextBox.text())
+
+
+        # Ask to clobber existing file
+        full_path = os.path.expanduser(self.saveTextBox.text())
+        self.savefile = full_path
+        check = os.path.isfile(full_path) 
+        print('check is ', check)
+        if check:
+            html = ''
+            html += '<body>The file ' + full_path + ' already exists'
+            html += '<p>Okay to overwrite?</body>'
+
+
+            self.clobber = Clobber_file(html, self.savefile)
+
+            self.clobber.show()
+
+        else:
+            plotvars.write_defaults = True
+            
+        Save_defaults(self.savefile)
+
+
+
+
+
+    def help(self):
+
+        if self.defaults_help is None:
+
+            html = ''
+            html += '<body><h2>cfview default options</h2>'
+            html += 'The defaults file for cfview is generally stored in the file ~/.cfview_defaults '
+            html += 'which is read in when cfview starts up.  A different defaults file can be specified using '
+            html += 'the -d parameter to the cfview command line i.e.<br>'
+            html += '<b>cfview -d mydefaults.def file.nc</b><p>'
+            html += 'The main font applies to all text in the cfview display apart from the field titles and '
+            html += 'names where the monospace font applies.'
+            html += 'Interface colour schemes can be altered by manually editing the ~/.cfview_defaults file '
+            html += 'and replacing the six main colour definitions.<p>'
+            html += 'Contour options for fill, blockfill, lines and line labels that are currently selected '
+            html += 'are also saved into the ~/.cfview_defaults file.'
+
+            self.defaults_help = Help(html)
+
+        self.defaults_help.show()
+
+
+class Clobber_file(QWidget):
+    '''Popup window for clobbering a file'''
+
+    def __init__(self, html, savefile):
+        super(Clobber_file, self).__init__()
+        self.html = html
+        self.savefile = savefile
+        self.initUI()
+
+
+    def initUI(self):
+
+        yesButton = QPushButton("Yes")
+        yesButton.clicked.connect(self.clobber_yes)
+
+        noButton = QPushButton("No")
+        noButton.clicked.connect(self.clobber_no)
+
+        helpTextbox = QTextEdit()
+        helpTextbox.setReadOnly(True)
+
+
+        doc = QTextDocument()
+
+        doc.setHtml(self.html)
+        helpTextbox.setDocument(doc)
+
+
+        vbox = QVBoxLayout()
+        vbox.addWidget(helpTextbox)
+
+        hbox = QHBoxLayout()
+        hbox.addWidget(yesButton)
+        hbox.addWidget(noButton)
+        vbox.addLayout(hbox)
+
+        self.setLayout(vbox)
+       
+
+        palette = QPalette()    
+        palette.setColor(QPalette.Window, QColor(plotvars.background_colour))
+        palette.setColor(QPalette.Base, QColor(plotvars.background_colour))    
+        palette.setColor(QPalette.Button, QColor(plotvars.button_colour))
+        palette.setColor(QPalette.ButtonText, QColor(plotvars.buttontext_colour))
+        palette.setColor(QPalette.Highlight, QColor(plotvars.highlight_colour))
+        palette.setColor(QPalette.HighlightedText, QColor(plotvars.text_colour))
+        palette.setColor(QPalette.Text,  QColor(plotvars.text_colour))    
+        palette.setColor(QPalette.WindowText, QColor(plotvars.windowtext_colour))
+        self.setPalette(palette)
+
+        # Set font 
+        custom_font = QFont(plotvars.font, plotvars.fontsize)
+        self.window().setFont(custom_font)
+
+        self.setFixedWidth(600)
+
+        self.show()
+
+
+    def clobber_yes(self):
+        plotvars.write_defaults = True
+        #self.savefile()
+        Save_defaults(self.savefile)
+        self.close()
+
+    def clobber_no(self):
+        plotvars.write_defaults = False
+        self.close()
+
+     
+
+class Save_defaults():
+
+    def __init__(self, savefile):
+        super(Save_defaults, self).__init__()
+        self.savefile = savefile
+        self.save()
+
+    def save(self):
+        if plotvars.write_defaults:
+            print('writing file')
+            plotvars.write_defaults = False
+
+            datafile = open(self.savefile, 'w')
+
+            datafile.write('### cfview defaults file ###\n\n')
+            datafile.write('background_colour ' + plotvars.background_colour + '\n')
+            datafile.write('button_colour ' + plotvars.button_colour + '\n')
+            datafile.write('buttontext_colour ' + plotvars.buttontext_colour + '\n')
+            datafile.write('highlight_colour ' + plotvars.highlight_colour + '\n')
+            datafile.write('text_colour ' + plotvars.text_colour + '\n')
+            datafile.write('windowtext_colour ' + plotvars.windowtext_colour + '\n')
+            datafile.write('font ' + plotvars.font + '\n')
+            datafile.write('font_mono ' + plotvars.font_mono + '\n')
+            datafile.write('fontsize ' + str(plotvars.fontsize) + '\n')
+            datafile.write('fill ' + str(plotvars.fill) + '\n')
+            datafile.write('blockfill ' + str(plotvars.blockfill) + '\n')
+            datafile.write('lines ' + str(plotvars.lines) + '\n')
+            datafile.write('line_labels ' + str(plotvars.line_labels) + '\n')
+            datafile.write('titles ' + str(plotvars.titles) + '\n')
+
+            datafile.close()
+
+
+
+class Contour_levels_window(QWidget):
+    '''popup window for editing contour level defaults'''
+
+    def __init__(self):
+        super(Contour_levels_window, self).__init__()
+        self.initUI()
+
+
+    def initUI(self):
+
+        # Set up some buttons
+        resetButton = QPushButton("Reset")
+        resetButton.clicked.connect(self.reset)
+
+        helpButton = QPushButton("Help")
+        helpButton.clicked.connect(self.help)
+
+        quitButton = QPushButton("Quit")
+        quitButton.clicked.connect(self.close)
+
+        # Labels
+        automatic_Label = QLabel('Automatic levels')
+
+        min_Label = QLabel('Min:')
+        min_Label.setEnabled(False)
+        max_Label = QLabel('Max:')
+        max_Label.setEnabled(False)
+        step_Label = QLabel('Step:')
+        step_Label.setEnabled(False)
+
+        ascending_Label = QLabel('Ascending values separated by spaces')
+        extensions_Label = QLabel('Colourbar extensions - extend contours to cover all the data')
+        lower_Label = QLabel('Lower:')
+        upper_Label = QLabel('Upper:')
+
+
+        # Level type selection tick boxes
+        automaticCheckBox = QCheckBox("Automatic levels")
+        automaticCheckBox.setChecked(True)
+        automaticCheckBox.clicked.connect(lambda: self.level_type('automatic'))
+
+        evenCheckBox = QCheckBox("Evenly spaced levels")
+        evenCheckBox.setChecked(False)
+        evenCheckBox.clicked.connect(lambda: self.level_type('even'))
+
+        manualCheckBox = QCheckBox("User spaced levels")
+        manualCheckBox.setChecked(False)
+        manualCheckBox.clicked.connect(lambda: self.level_type('manual'))
+
+
+
+        # Extension type selection tick boxes
+        extension_lowerCheckBox = QCheckBox("Lower")
+        extension_lowerCheckBox.setChecked(True)
+        extension_lowerCheckBox.clicked.connect(lambda: self.extension_type('lower'))
+        extension_upperCheckBox = QCheckBox("Upper")
+        extension_upperCheckBox.setChecked(True)
+        extension_upperCheckBox.clicked.connect(lambda: self.extension_type('upper'))
+
+
+
+        # Levels entry Labels and Boxes
+        levs_minTextbox = QLineEdit()
+        levs_minTextbox.textChanged.connect(self.levs_even_changed)
+        levs_minTextbox.setEnabled(False)
+        levs_maxTextbox = QLineEdit()
+        levs_maxTextbox.textChanged.connect(self.levs_even_changed)
+        levs_maxTextbox.setEnabled(True)
+        levs_stepTextbox = QLineEdit()
+        levs_stepTextbox.textChanged.connect(self.levs_even_changed)
+        levs_stepTextbox.setEnabled(True)
+
+        levs_manualTextbox = QLineEdit()
+        levs_manualTextbox.textChanged.connect(self.levs_manual_changed)
+        levs_manualTextbox.setEnabled(True)
+
+
+        vbox = QVBoxLayout()
+        hbox_even = QHBoxLayout()
+        hbox_manual = QHBoxLayout()
+        hbox_extensions = QHBoxLayout()
+        hbox_buttons = QHBoxLayout()
+
+        vbox.addWidget(automaticCheckBox)
+        vbox.addWidget(HLine())
+
+        vbox.addWidget(evenCheckBox)
+        vbox.addLayout(hbox_even)
+        hbox_even.addWidget(min_Label)
+        hbox_even.addWidget(levs_minTextbox)
+        hbox_even.addWidget(max_Label)
+        hbox_even.addWidget(levs_maxTextbox)
+        hbox_even.addWidget(step_Label)
+        hbox_even.addWidget(levs_stepTextbox)
+
+        vbox.addWidget(HLine())
+        vbox.addWidget(manualCheckBox)
+        vbox.addLayout(hbox_manual)
+        hbox_manual.addWidget(ascending_Label)
+        hbox_manual.addWidget(levs_manualTextbox)
+
+        vbox.addWidget(HLine())
+        vbox.addWidget(extensions_Label)
+        vbox.addLayout(hbox_extensions)
+        hbox_extensions.addWidget(extension_lowerCheckBox)
+        hbox_extensions.addWidget(extension_upperCheckBox)
+
+        vbox.addLayout(hbox_buttons)
+        hbox_buttons.addWidget(resetButton)
+        hbox_buttons.addWidget(helpButton)
+        hbox_buttons.addWidget(quitButton)
+
+   
+        self.setWindowTitle('cfview contour levels')
+
+        self.setLayout(vbox)
+
+
+        self.automaticCheckBox = automaticCheckBox
+        self.evenCheckBox = evenCheckBox
+        self.levs_minTextbox = levs_minTextbox
+        self.levs_maxTextbox = levs_maxTextbox
+        self.levs_stepTextbox = levs_stepTextbox
+        self.manualCheckBox = manualCheckBox
+        self.levs_manualTextbox = levs_manualTextbox
+        self.extension_lowerCheck = extension_lowerCheckBox
+        self.extension_upperCheck = extension_upperCheckBox
+
+        self.min_Label = min_Label
+        self.max_Label = max_Label
+        self.step_Label = step_Label
+        self.ascending_Label = ascending_Label
+
+        self.contour_levels_help = None  # No external window yet.
+
+
+        palette = QPalette()    
+        palette.setColor(QPalette.Window, QColor(plotvars.background_colour))
+        palette.setColor(QPalette.Base, QColor(plotvars.background_colour))    
+        palette.setColor(QPalette.Button, QColor(plotvars.button_colour))
+        palette.setColor(QPalette.ButtonText, QColor(plotvars.buttontext_colour))
+        palette.setColor(QPalette.Highlight, QColor(plotvars.highlight_colour))
+        palette.setColor(QPalette.HighlightedText, QColor(plotvars.text_colour))
+        palette.setColor(QPalette.Text,  QColor(plotvars.text_colour))    
+        palette.setColor(QPalette.WindowText, QColor(plotvars.windowtext_colour))
+        self.setPalette(palette)
+
+        # Set font 
+        custom_font = QFont(plotvars.font, plotvars.fontsize)
+        self.window().setFont(custom_font)
+
+
+
+        # Set initial widget states
+        self.level_type('automatic')
+
+        self.show()
+
+
+    def level_type(self, text):
+
+        types = ['automatic', 'even', 'manual']
+        vars = [plotvars.levs_automatic_set,  plotvars.levs_set, plotvars.levs_manual_set]
+        checkboxes = [self.automaticCheckBox, self.evenCheckBox, self.manualCheckBox]
+        state = [False, False, False]
+        loc = types.index(text)
+        state[loc] = True
+
+        for i in np.arange(3):
+            vars[i] = state[i]
+            checkboxes[i].setChecked(state[i])
+
+
+        if plotvars.levs_automatic_set:
+            color = plotvars.text_colour_insensitive
+        else:
+            color = plotvars.text_colour
+
+
+        objs = [self.levs_minTextbox, self.levs_maxTextbox, self.levs_stepTextbox,\
+                self.levs_manualTextbox, self.min_Label , self.max_Label,\
+                self.step_Label, self.ascending_Label]
+
+        if text == 'automatic':
+            flags = [False, False, False, False, False, False, False, False]
+
+        if text == 'even':
+            flags = [True, True, True, False, True, True, True, False]
+
+        if text == 'manual':
+            flags = [False, False, False, True, False, False, False, True]
+
+        for i in np.arange(len(objs)):
+            obj = objs[i]
+            color = plotvars.text_colour_insensitive
+            if flags[i]:
+                color = plotvars.text_colour
+            obj.setEnabled(flags[i])
+            pal = QPalette(obj.palette())
+            pal.setColor(QPalette.WindowText, QColor(color))
+            obj.setPalette(pal)
+
+
+
+
+    def levs_even_changed(self):
+        plotvars.levs_min = self.levs_minTextbox.text()
+        plotvars.levs_max = self.levs_maxTextbox.text()
+        plotvars.levs_step = self.levs_stepTextbox.text()
+
+
+    def levs_manual_changed(self):
+        plotvars.levs_manual = self.levs_manualTextbox.text()
+        
+
+
+    def reset(self):
+        self.level_type('automatic')
+        self.levs_minTextbox.setText('')
+        self.levs_maxTextbox.setText('')
+        self.levs_stepTextbox.setText('')
+        self.levs_manualTextbox.setText('')
+
+
+
+
+    def help(self):
+        print('in help')
+        if self.contour_levels_help is None:
+
+
+            html = ''
+            html += '<body><h2>Contour level options</h2>'
+            html += 'Contour levels are initially set automatically based on the range of the field and '
+            html += 'split into reasonable contour levels. If a region of the field is chosen for contouring '
+            html += 'then the range of the full field is still used.'
+
+            html += '<h3>Setting contour levels</h3>'
+            html += 'When making plots that compare data click on the evenly or manually spaced levels tick '
+            html += 'boxes and set them as appropriate. Manualy spaced levels must be separated by spaces and ascend in value.'
+
+            html += '<h3>Colorbar extensions</h3>'
+            html += 'Colorbar extensions are a way of extending the contours to cover all the data at the ends of the '
+            html += 'contour range. Click on the colorbar extension tick boxes as appropriate if these are both required.</p></body>' 
+
+
+
+            self.contour_levels_help = Help(html)
+
+
+
+
+
+
+
+        self.contour_levels_help.show()
+
+
+    def extension_type(self, text):
+
+        plotvars.levs_extend_lower = self.extension_lowerCheck.isChecked()
+        plotvars.levs_extend_upper = self.extension_upperCheck.isChecked()
+
+
+
+class Help(QWidget):
+    '''Popup window showing help text'''
+
+    def __init__(self, html):
+        super(Help, self).__init__()
+        self.html = html
+        self.initUI()
+
+
+    def initUI(self):
+
+        quitButton = QPushButton("Quit")
+        quitButton.clicked.connect(self.close)
+
+
+        helpTextbox = QTextEdit()
+        helpTextbox.setReadOnly(True)
+
+
+
+        doc = QTextDocument()
+
+        doc.setHtml(self.html)
+        helpTextbox.setDocument(doc)
+
+
+
+
+
+        vbox = QVBoxLayout()
+        vbox.addWidget(helpTextbox)
+        vbox.addWidget(quitButton)
+
+        self.setLayout(vbox)
+       
+
+        palette = QPalette()    
+        palette.setColor(QPalette.Window, QColor(plotvars.background_colour))
+        palette.setColor(QPalette.Base, QColor(plotvars.background_colour))    
+        palette.setColor(QPalette.Button, QColor(plotvars.button_colour))
+        palette.setColor(QPalette.ButtonText, QColor(plotvars.buttontext_colour))
+        palette.setColor(QPalette.Highlight, QColor(plotvars.highlight_colour))
+        palette.setColor(QPalette.HighlightedText, QColor(plotvars.text_colour))
+        palette.setColor(QPalette.Text,  QColor(plotvars.text_colour))    
+        palette.setColor(QPalette.WindowText, QColor(plotvars.windowtext_colour))
+        self.setPalette(palette)
+
+        # Set font 
+        custom_font = QFont(plotvars.font, plotvars.fontsize)
+        self.window().setFont(custom_font)
+
+        self.setMinimumSize(600, 600)
+
+        self.show()
+
+
+
+class HLine(QFrame):
+    def __init__(self, parent=None, color=QColor(plotvars.text_colour)):
+
+        super(HLine, self).__init__(parent)
+        self.setFrameShape(QFrame.HLine)
+        self.setFrameShadow(QFrame.Plain)
+        self.setFixedHeight(40)
+        self.setLineWidth(0)
+        self.setMidLineWidth(3)
+        self.setContentsMargins(0, 0, 0, 0)
+        self.setColor(color)
+
+    def setColor(self, color):
+        pal = self.palette()
+        pal.setColor(QPalette.WindowText, color)
+        self.setPalette(pal)
+
+
+class Colour_scale_window(QWidget):
+    '''popup window for changing colour scale defaults'''
+
+    def __init__(self):
+        super(Colour_scale_window, self).__init__()
+        self.initUI()
+
+
+    def initUI(self):
+
+        # Set up some buttons
+        resetButton = QPushButton("Reset")
+        resetButton.clicked.connect(self.reset)
+
+        helpButton = QPushButton("Help")
+        helpButton.clicked.connect(self.help)
+
+        quitButton = QPushButton("Quit")
+        quitButton.clicked.connect(self.close)
+
+
+
+        # Scale selection tick boxes
+        automaticCheckBox = QCheckBox("Automatic colour scale")
+        automaticCheckBox.setChecked(True)
+        automaticCheckBox.clicked.connect(self.automatic)
+
+        reverseCheckBox = QCheckBox("Reverse colour scale")
+        reverseCheckBox.setChecked(False)
+        reverseCheckBox.clicked.connect(self.reverse)
+
+        # Text box labels
+        numberLabel = QLabel('Number of colours in the scale')
+        whiteLabel = QLabel('Set these indicies to be white')
+        aboveLabel = QLabel('Number of colours above the scale midpoint')
+        belowLabel = QLabel('Number of colours below the scale midpoint')
+
+        pal = QPalette(numberLabel.palette())
+        pal.setColor(QPalette.WindowText, QColor('#708090'))
+        numberLabel.setPalette(pal)
+
+        # Text boxes
+        numberTextBox = QLineEdit()
+        numberTextBox.textChanged.connect(lambda: self.text_changed('number'))
+        whiteTextBox = QLineEdit()
+        whiteTextBox.textChanged.connect(lambda: self.text_changed('white'))
+        aboveTextBox = QLineEdit()
+        aboveTextBox.textChanged.connect(lambda: self.text_changed('above'))
+        belowTextBox = QLineEdit()
+        belowTextBox.textChanged.connect(lambda: self.text_changed('below'))
+
+
+        # Set the layout
+        vbox = QVBoxLayout()
+        hbox_number = QHBoxLayout()
+        hbox_white = QHBoxLayout()
+        hbox_above = QHBoxLayout()
+        hbox_below = QHBoxLayout()
+        hbox_buttons = QHBoxLayout()
+
+        vbox.addWidget(automaticCheckBox)
+        vbox.addWidget(HLine())
+
+        vbox.addLayout(hbox_number)
+        hbox_number.addWidget(numberLabel)
+        hbox_number.addWidget(numberTextBox)
+
+        vbox.addLayout(hbox_white)
+        hbox_white.addWidget(whiteLabel)
+        hbox_white.addWidget(whiteTextBox)
+
+        vbox.addLayout(hbox_above)
+        hbox_above.addWidget(aboveLabel)
+        hbox_above.addWidget(aboveTextBox)
+
+        vbox.addLayout(hbox_below)
+        hbox_below.addWidget(belowLabel)
+        hbox_below.addWidget(belowTextBox)
+
+        vbox.addWidget(reverseCheckBox)
+
+        vbox.addWidget(HLine())
+
+        # Make a scrollable area for the colour bars and check boxes
+        vbox_scale = QVBoxLayout()
+        vbox.addLayout(vbox_scale)
+
+        formLayout = QFormLayout()
+        groupBox = QGroupBox('Colour scales')
+        checkboxlist = []
+        scaleimagelist = []
+
+        self.automaticCheckBox = automaticCheckBox
+        self.reverseCheckBox = reverseCheckBox
+        self.numberTextBox = numberTextBox
+        self.whiteTextBox = whiteTextBox
+        self.aboveTextBox = aboveTextBox
+        self.belowTextBox = belowTextBox
+        self.numberLabel = numberLabel
+        self.aboveLabel = aboveLabel
+        self.belowLabel = belowLabel
+        self.whiteLabel = whiteLabel
+
+
+
+        # Add the colours scale checkboxes and colour scales
+        for i in np.arange(len(plotvars.cscales)):
+            scale = plotvars.cscales[i]
+            if scale == 'viridis':
+                formLayout.addRow(QLabel('Perceptually neutral colour scales'))
+            if scale == 'hotcold_18lev':
+                formLayout.addRow(QLabel(''))
+                formLayout.addRow(QLabel('NCAR Command Language - MeteoSwiss colour maps'))
+            if scale == 'amwg':
+                formLayout.addRow(QLabel(''))
+                formLayout.addRow(QLabel('NCAR Command Language - small color maps (<50 colours)'))
+            if scale == 'amwg256':
+                formLayout.addRow(QLabel(''))
+                formLayout.addRow(QLabel('NCAR Command Language - large color maps (>50 colours)'))
+            if scale == 'StepSeq25':
+                formLayout.addRow(QLabel(''))
+                formLayout.addRow(QLabel('NCAR Command Language - Enhanced to help with colour blindness'))
+            if scale == 'os250kmetres':
+                formLayout.addRow(QLabel(''))
+                formLayout.addRow(QLabel('Orography/bathymetry colour scales'))
+            if scale == 'scale1':
+                formLayout.addRow(QLabel(''))
+                formLayout.addRow(QLabel('IDL guide scales'))
+
+            setattr(self, scale + 'CheckBox', QCheckBox(scale))
+            getattr(self, scale + 'CheckBox').setChecked(False)
+            getattr(self, scale + 'CheckBox').clicked.connect(partial(self.scale_changed, plotvars.cscales[i]))
+
+            image = QLabel()
+            pixmap = QPixmap('colour_scales/' + scale + '.png')
+            image.setPixmap(pixmap)
+
+            formLayout.addRow(getattr(self, scale + 'CheckBox'), image)
+
+
+        self.viridisCheckBox.setChecked(True)
+
+        groupBox.setLayout(formLayout)
+        #vbox_scale.setLayout(formLayout)
+        scroll = QScrollArea()
+        scroll.setWidget(groupBox)
+        scroll.setWidgetResizable(True)
+        scroll.setFixedHeight(400)
+        vbox_scale.addWidget(scroll)
+
+
+
+
+
+        vbox.addLayout(hbox_buttons)
+        hbox_buttons.addWidget(resetButton)
+        hbox_buttons.addWidget(helpButton)
+        hbox_buttons.addWidget(quitButton)
+
+
+        self.colour_scale_help = None  # No external window yet.
+
+        self.setWindowTitle('cfview colour scales')
+        self.setLayout(vbox)
+
+
+
+        # Set theme and font
+        palette = QPalette()
+        palette.setColor(QPalette.Window, QColor(plotvars.background_colour))
+        palette.setColor(QPalette.Base, QColor(plotvars.background_colour))
+        palette.setColor(QPalette.Button, QColor(plotvars.button_colour))
+        palette.setColor(QPalette.ButtonText, QColor(plotvars.buttontext_colour))
+        palette.setColor(QPalette.Highlight, QColor(plotvars.highlight_colour))
+        palette.setColor(QPalette.HighlightedText, QColor(plotvars.text_colour))
+        palette.setColor(QPalette.Text,  QColor(plotvars.text_colour))
+        palette.setColor(QPalette.WindowText, QColor(plotvars.windowtext_colour))
+        self.setPalette(palette)
+
+        custom_font = QFont(plotvars.font, plotvars.fontsize)
+        self.window().setFont(custom_font)
+
+        # Initial set of widget sensitivity
+        plotvars.cscale_automatic_set = self.automaticCheckBox.isChecked()
+        self.set_sensitive()
+
+        self.show()
+
+
+
+    def text_changed(self, textbox):
+        if textbox == 'number':
+            plotvars.cscale_ncols = self.numberTextBox.text()
+        if textbox == 'white':
+            plotvars.cscale_white = self.whiteTextBox.text()
+        if textbox == 'above':
+            plotvars.cscale_above = self.aboveTextBox.text()
+        if textbox == 'below':
+            plotvars.cscale_below = self.belowTextBox.text()
+
+
+
+
+
+    def automatic(self):
+        # Toggle automatic colour scales
+        if self.automaticCheckBox.isChecked():
+            self.reset()
+        else:
+            plotvars.cscale_automatic_set = self.automaticCheckBox.isChecked()
+            self.set_sensitive()
+
+
+    def set_sensitive(self):
+        # Set the sensitivity and color of the widgets
+
+        if plotvars.cscale_automatic_set:
+            color = plotvars.text_colour_insensitive
+            enabled = False
+        else:
+            color = plotvars.text_colour
+            enabled = True
+
+        objs = [self.reverseCheckBox, self.numberTextBox, self.whiteTextBox, self.aboveTextBox, \
+               self.belowTextBox, self.reverseCheckBox, self.numberLabel, self.aboveLabel,\
+               self.belowLabel, self.whiteLabel]
+        for scale in plotvars.cscales:
+            objs.append(getattr(self, scale + 'CheckBox'))
+
+        for obj in objs:
+            obj.setEnabled(enabled)
+            pal = QPalette(obj.palette())
+            pal.setColor(QPalette.WindowText, QColor(color))
+            obj.setPalette(pal)
+
+
+    def reverse(self):
+        plotvars.cscale_reverse_set = self.reverseCheckBox.isChecked()
+        print('reverse is ', plotvars.cscale_reverse_set)
+
+
+    def scale_changed(self, myscale):
+        for scale in plotvars.cscales:
+            getattr(self, scale + 'CheckBox').setChecked(False)
+
+        getattr(self, myscale + 'CheckBox').setChecked(True)
+        plotvars.cscale = myscale
+
+
+    def reset(self):
+
+        self.automaticCheckBox.setChecked(True)
+        plotvars.cscale_automatic_set = True
+        self.reverseCheckBox.setChecked(False)
+        self.numberTextBox.setText('')
+        self.whiteTextBox.setText('')
+        self.aboveTextBox.setText('')
+        self.belowTextBox.setText('')
+        
+        for scale in plotvars.cscales:
+            getattr(self, scale + 'CheckBox').setChecked(False)
+
+        self.viridisCheckBox.setChecked(True)
+        plotvars.scale = 'viridis'
+        self.set_sensitive()
+
+    def help(self):
+
+        if self.colour_scale_help is None:
+
+            html = ""
+            html += "<body><h2>Colour scale options</h2>"
+            html += "With the automatic colour scale option ticked cfview selects the colour scale depending "
+            html += "on the data to be contoured:<p>"
+            html += "viridis - fields that don\'t span zero - temperature in Kelvin etc.  This is a perceptually "
+            html += "neutral colour scale that doesn\'t draw the eye to any part of the scale <p>"
+            html += "scale1 - fields that span zero - zonal wind etc.  This is a blue - red scale suitable for "
+            html += "contour plots of fields that have a zero in their contour levels.  The scale is automatically "
+            html += "adjusted so that blue colours are below zero and red colours above.<p>"
+            html += "<h3>Selecting a colour scale</h3>"
+            html += "When a different colour scale is selected the scale will be automatically adjusted "
+            html += "to fit the number of contour levels.<p>"
+            html += "<h3>Selecting the number of colours</h3>"
+            html += "Set the number of colours in the scale to gain more control over the colour scale. "
+            html += "Once this is done then the white indicies and scale midpoint options become useful "
+            html += "to allow more precise scale manipulation.  Set a number of white colour indicies by leaving "
+            html += "a space between the indices required.<p>"
+
+            self.colour_scale_help = Help(html)
+
+        self.colour_scale_help.show()
+
+
+class Map_window(QWidget):
+    '''popup window for changing map defaults'''
+
+    def __init__(self):
+        super(Map_window, self).__init__()
+        self.initUI()
+
+
+    def initUI(self):
+
+        # Set up some buttons
+        resetButton = QPushButton("Reset")
+        resetButton.clicked.connect(self.reset)
+
+        helpButton = QPushButton("Help")
+        helpButton.clicked.connect(self.help)
+
+        quitButton = QPushButton("Quit")
+        quitButton.clicked.connect(self.close)
+
+
+        # Text box labels
+        lonminLabel = QLabel('lonmin')
+        lonmaxLabel = QLabel('lonmax')
+        latminLabel = QLabel('latmin')
+        latmaxLabel = QLabel('latmax')
+        boundinglatLabel = QLabel('Bounding latitude')
+        lon_0Label = QLabel('Longitude centre of map domain')
+        other_map_typesLabel = QLabel('Other map types')
+        continent_attributesLabel = QLabel('Continent Attributes')
+        continent_thicknessLabel = QLabel('Thickness')
+        continent_colorLabel = QLabel('Colour')
+
+        # Text boxes
+        lonminTextBox = QLineEdit()
+        lonminTextBox.setText('-180')
+        lonminTextBox.textChanged.connect(lambda: self.textbox_changed('lonmin'))
+        lonmaxTextBox = QLineEdit()
+        lonmaxTextBox.setText('180')
+        lonmaxTextBox.textChanged.connect(lambda: self.textbox_changed('lonmax'))
+        latminTextBox = QLineEdit()
+        latminTextBox.setText('-90')
+        latminTextBox.textChanged.connect(lambda: self.textbox_changed('latmin'))
+        latmaxTextBox = QLineEdit()
+        latmaxTextBox.setText('90')
+        latmaxTextBox.textChanged.connect(lambda: self.textbox_changed('latmax'))
+        boundinglatTextBox = QLineEdit()
+        boundinglatTextBox.setText('0')
+        boundinglatTextBox.textChanged.connect(lambda: self.textbox_changed('boundinglat'))
+        lon_0TextBox = QLineEdit()
+        lon_0TextBox.setText('0')
+        lon_0TextBox.textChanged.connect(lambda: self.textbox_changed('lon_0'))
+        continent_thicknessTextBox = QLineEdit()
+        continent_thicknessTextBox.setText('1.5')
+        continent_thicknessTextBox.textChanged.connect(lambda: self.textbox_changed('continent_thickness'))
+        continent_colorTextBox = QLineEdit()
+        continent_colorTextBox.setText('black')
+        continent_colorTextBox.textChanged.connect(lambda: self.textbox_changed('continent_color'))
+
+        # Map type check boxes
+        maps = ['Cylindrical', 'EuroPP', 'LambertConformal', 'Mercator', 'Mollweide',\
+                'NorthPoleStereographic', 'Orthographic', 'OSGB', 'Robinson',\
+                'SouthPoleStereographic', 'UKCP']
+        maps_short = ['cyl', 'EuroPP', 'lcc', 'merc', 'moll', 'npstere', 'ortho',\
+                      'OSGB', 'robin', 'spstere', 'UKCP']
+
+        for i in np.arange(len(maps)):
+            setattr(self, maps[i] + 'CheckBox', QCheckBox(maps[i]))
+            getattr(self, maps[i] + 'CheckBox').setChecked(False)
+            getattr(self, maps[i] + 'CheckBox').clicked.connect(partial(self.map_type, maps_short[i]))
+
+        self.CylindricalCheckBox.setChecked(True)
+
+
+
+
+        self.lonminLabel = lonminLabel
+        self.lonmaxLabel = lonmaxLabel
+        self.latminLabel = latminLabel
+        self.latmaxLabel = latmaxLabel
+        self.boundinglatLabel = boundinglatLabel
+        self.lon_0Label = lon_0Label
+        self.other_map_typesLabel = other_map_typesLabel
+        self.continent_attributesLabel = continent_attributesLabel
+        self.continent_thicknessLabel = continent_thicknessLabel
+        self.continent_colorLabel = continent_colorLabel
+
+        self.lonminTextBox = lonminTextBox
+        self.lonmaxTextBox = lonmaxTextBox
+        self.latminTextBox = latminTextBox
+        self.latmaxTextBox = latmaxTextBox
+        self.boundinglatTextBox = boundinglatTextBox
+        self.lon_0TextBox = lon_0TextBox
+        self.continent_thicknessTextBox = continent_thicknessTextBox
+        self.continent_colorTextBox = continent_colorTextBox
+
+        # Set the layout
+        vbox = QVBoxLayout()
+
+        # Cylindrical options
+        vbox.addWidget(self.CylindricalCheckBox)
+        hbox_lons = QHBoxLayout()
+        hbox_lons.addWidget(self.lonminLabel)
+        hbox_lons.addWidget(self.lonminTextBox)
+        hbox_lons.addWidget(self.lonmaxLabel)
+        hbox_lons.addWidget(self.lonmaxTextBox)
+        vbox.addLayout(hbox_lons)
+
+        hbox_lats = QHBoxLayout()
+        hbox_lats.addWidget(self.latminLabel)
+        hbox_lats.addWidget(self.latminTextBox)
+        hbox_lats.addWidget(self.latmaxLabel)
+        hbox_lats.addWidget(self.latmaxTextBox)
+        vbox.addLayout(hbox_lats)
+
+        vbox.addWidget(HLine())
+
+        # Polar options
+        hbox_polar = QHBoxLayout()
+        hbox_polar.addWidget(self.NorthPoleStereographicCheckBox)
+        hbox_polar.addWidget(self.SouthPoleStereographicCheckBox)
+        vbox.addLayout(hbox_polar)
+
+        hbox_polar2 = QHBoxLayout()
+        hbox_polar2.addWidget(self.boundinglatLabel)
+        hbox_polar2.addWidget(self.boundinglatTextBox)
+        vbox.addLayout(hbox_polar2)
+
+        hbox_polar3 = QHBoxLayout()
+        hbox_polar3.addWidget(self.lon_0Label)
+        hbox_polar3.addWidget(self.lon_0TextBox)
+        vbox.addLayout(hbox_polar3)
+
+        vbox.addWidget(HLine())
+
+        # Other maps
+        vbox.addWidget(self.other_map_typesLabel)
+        hbox_other1 = QHBoxLayout()
+        hbox_other1.addWidget(self.EuroPPCheckBox)
+        hbox_other1.addWidget(self.LambertConformalCheckBox)
+        hbox_other1.addWidget(self.MercatorCheckBox)
+        vbox.addLayout(hbox_other1)
+        hbox_other2 = QHBoxLayout()
+        hbox_other2.addWidget(self.OrthographicCheckBox)
+        hbox_other2.addWidget(self.OSGBCheckBox)
+        hbox_other2.addWidget(self.RobinsonCheckBox)
+        hbox_other2.addWidget(self.UKCPCheckBox)
+        vbox.addLayout(hbox_other2)
+        vbox.addWidget(HLine())
+
+        # Continent thickness and colour
+        vbox.addWidget(self.continent_attributesLabel)
+        hbox_thickness = QHBoxLayout()
+        hbox_thickness.addWidget(self.continent_thicknessLabel)
+        hbox_thickness.addWidget(self.continent_thicknessTextBox)
+        vbox.addLayout(hbox_thickness)
+        hbox_color = QHBoxLayout()
+        hbox_color.addWidget(self.continent_colorLabel)
+        hbox_color.addWidget(self.continent_colorTextBox)
+        vbox.addLayout(hbox_color)
+
+
+        # The buttons
+        hbox_buttons = QHBoxLayout()
+        vbox.addLayout(hbox_buttons)
+        hbox_buttons.addWidget(resetButton)
+        hbox_buttons.addWidget(helpButton)
+        hbox_buttons.addWidget(quitButton)
+
+
+        self.map_help = None  # No external window yet.
+
+        self.setWindowTitle('cfview map settings')
+        self.setLayout(vbox)
+
+        # Set theme and font
+        palette = QPalette()
+        palette.setColor(QPalette.Window, QColor(plotvars.background_colour))
+        palette.setColor(QPalette.Base, QColor(plotvars.background_colour))
+        palette.setColor(QPalette.Button, QColor(plotvars.button_colour))
+        palette.setColor(QPalette.ButtonText, QColor(plotvars.buttontext_colour))
+        palette.setColor(QPalette.Highlight, QColor(plotvars.highlight_colour))
+        palette.setColor(QPalette.HighlightedText, QColor(plotvars.text_colour))
+        palette.setColor(QPalette.Text,  QColor(plotvars.text_colour))
+        palette.setColor(QPalette.WindowText, QColor(plotvars.windowtext_colour))
+        self.setPalette(palette)
+
+        custom_font = QFont(plotvars.font, plotvars.fontsize)
+        self.window().setFont(custom_font)
+
+        # Set sensitivity of widgets
+        self.set_sensitive()
+
+        self.show()
+
+
+    def map_type(self, text):
+
+        maps = ['Cylindrical', 'EuroPP', 'LambertConformal', 'Mercator', 'Mollweide',\
+                'NorthPoleStereographic', 'Orthographic', 'OSGB', 'Robinson',\
+                'SouthPoleStereographic', 'UKCP']
+        maps_short = ['cyl', 'EuroPP', 'lcc', 'merc', 'moll', 'npstere', 'ortho', 'OSGB', 
+                      'robin', 'spstere', 'UKCP']
+
+
+        for i in np.arange(len(maps)):
+            getattr(self, maps[i] + 'CheckBox').setChecked(False)
+
+
+        index = maps_short.index(text)
+        getattr(self, maps[index] + 'CheckBox').setChecked(True)
+        
+        plotvars.proj = text
+
+        self.set_sensitive()
+
+
+    def textbox_changed(self, text):
+
+        textbox = getattr(self, text + 'TextBox') 
+        setattr(plotvars, text, textbox.text()) 
+
+
+    def set_sensitive(self):
+        # Set sensivity of plot widgets
+
+        objs = [self.lonminLabel, self.lonminTextBox, self.lonmaxLabel,\
+                self.lonmaxTextBox, self.latminLabel, self.latminTextBox,\
+                self.latmaxLabel, self.latmaxTextBox,\
+                self.boundinglatLabel,\
+                self.boundinglatTextBox, self.lon_0Label, self.lon_0TextBox]
+
+        colors = [plotvars.text_colour] * 15
+        enabled = [False] * 15
+
+        if plotvars.proj in ['cyl', 'EuroPP', 'lcc', 'merc', 'ortho', 'OSGB',\
+                             'robin', 'UKCP']:
+            enabled[0:7] = [True] * 8
+            colors[8:] = [plotvars.text_colour_insensitive] * 6
+        else:
+            colors[0:7] = [plotvars.text_colour_insensitive] * 8
+            enabled[8:] = [True] * 6
+
+        for i in np.arange(len(objs)):
+            obj = objs[i]
+            obj.setEnabled(enabled[i])
+            pal = QPalette(obj.palette())
+            pal.setColor(QPalette.WindowText, QColor(colors[i]))
+            obj.setPalette(pal)
+
+
+    def reset(self):
+        plotvars.proj = 'cyl'
+        maps = ['Cylindrical', 'EuroPP', 'LambertConformal', 'Mercator', 'Mollweide',\
+                'NorthPoleStereographic', 'Orthographic', 'OSGB', 'Robinson',\
+                'SouthPoleStereographic', 'UKCP']
+        for i in np.arange(len(maps)):
+            getattr(self, maps[i] + 'CheckBox').setChecked(False)
+
+        self.CylindricalCheckBox.setChecked(True)
+        self.set_sensitive()
+
+        plotvars.lonmin = -180
+        plotvars.lonmax = 190
+        plotvars.latmin = -90
+        plotvars.latmax = 90
+        self.lonminTextBox.setText('-180')
+        self.lonmaxTextBox.setText('180')
+        self.latminTextBox.setText('-90')
+        self.latmaxTextBox.setText('90')
+        
+
+
+        plotvars.boundinglat = 0
+        plotvars.lon_0 = 0
+        self.boundinglatTextBox.setText('0')
+        self.lon_0TextBox.setText('0')
+        self.continent_thicknessTextBox.setText('1.5')
+        self.continent_colorTextBox.setText('black')
+
+
+
+    def help(self):
+        print('in help')
+
+        if self.map_help is None:
+
+            html = ""
+            html += "<body><h2>Map options</h2>"
+            html += "<h3>Cylindrical projection</h3>"
+            html += "The default map projection is the cylindrical equidistant projection with "
+            html += "the limits of -180 to 180 degrees in longitude and -90 to 90 degrees in "
+            html += "latitude. Change these as appropriate to focus the plot onto the area of "
+            html += "interest."
+            html += "<h3>Polar stereographic plots</h3>"
+            html += "Polar plots are focussed on either the north or south pole. The bounding "
+            html += "latitude is the edge of the viewable latitudes and is set to the equator "
+            html += "by default. The centre of the map domain is where the map is centred. By "
+            html += "default this is 0 degrees which is the Greenwich meridian in the case of "
+            html += "the north pole. For the South Pole plot this is usually changed to 180 "
+            html += "degrees."
+            html += "<h3>Map resolution</h3>"
+            html += "The map resolution is set to a default of 110m. Higher resolutions such as "
+            html += "50m and 10m take more time to plot.  50m means 1:50,000,000 and not 50 metre."
+
+            html += "<h3>Continent color and thickness</h3>"
+            html += "These default to 1.5 and black. Matplotlib "
+            html += "named colors can be seen using the following Python code at the Python "
+            html += "command prompt:<p>"
+
+            html += "<b>import matplotlib<br>"
+            html += "for name in matplotlib.colors.cnames: print(name)</b>"
+
+            self.map_help = Help(html)
+
+        self.map_help.show()
+
+
+class Contour_window(QWidget):
+    '''popup window for changing contour defaults'''
+
+    def __init__(self):
+        super(Contour_window, self).__init__()
+        self.initUI()
+
+
+    def initUI(self):
+
+        # Set up some buttons
+        resetButton = QPushButton("Reset")
+        resetButton.clicked.connect(self.reset)
+
+        helpButton = QPushButton("Help")
+        helpButton.clicked.connect(self.help)
+
+        quitButton = QPushButton("Quit")
+        quitButton.clicked.connect(self.close)
+
+        # Text box labels
+        titleLabel = QLabel('title')
+        zero_thickLabel = QLabel('zero_thick')
+
+        # Text boxes
+        titleTextBox = QLineEdit()
+        titleTextBox.setText('')
+        titleTextBox.textChanged.connect(lambda: self.textbox_changed('title'))
+        zero_thickTextBox = QLineEdit()
+        zero_thickTextBox.setText('')
+        zero_thickTextBox.textChanged.connect(lambda: self.textbox_changed('zero_thick'))
+
+
+
+        types = ['fill', 'blockfill', 'lines', 'line_labels', 'colorbar', 'automatic', 'horizontal', 'vertical']
+        status = [True, False, False, False, True, True, False, False]
+        for i in np.arange(len(types)):
+            setattr(self, types[i] + 'CheckBox', QCheckBox(types[i]))
+            getattr(self, types[i] + 'CheckBox').setChecked(status[i])
+            getattr(self, types[i] + 'CheckBox').clicked.connect(partial(self.contour_type, types[i]))
+
+
+        self.titleLabel = titleLabel
+        self.zero_thickLabel = zero_thickLabel
+        self.titleTextBox = titleTextBox
+        self.zero_thickTextBox = zero_thickTextBox
+
+
+
+        # Set the layout
+        vbox = QVBoxLayout()
+
+        hbox_types = QHBoxLayout()
+        hbox_types.addWidget(self.fillCheckBox)
+        hbox_types.addWidget(self.blockfillCheckBox)
+        hbox_types.addWidget(self.linesCheckBox)
+        hbox_types.addWidget(self.line_labelsCheckBox)
+        vbox.addLayout(hbox_types)
+
+        hbox_titles = QHBoxLayout()
+        hbox_titles.addWidget(self.titleLabel)
+        hbox_titles.addWidget(self.titleTextBox)
+        vbox.addLayout(hbox_titles)
+
+        hbox_colourbar = QHBoxLayout()
+        hbox_colourbar.addWidget(self.colorbarCheckBox)
+        hbox_colourbar.addWidget(self.automaticCheckBox)
+        hbox_colourbar.addWidget(self.horizontalCheckBox)
+        hbox_colourbar.addWidget(self.verticalCheckBox)
+        vbox.addLayout(hbox_colourbar)
+
+
+        # The buttons
+        hbox_buttons = QHBoxLayout()
+        vbox.addLayout(hbox_buttons)
+        hbox_buttons.addWidget(resetButton)
+        hbox_buttons.addWidget(helpButton)
+        hbox_buttons.addWidget(quitButton)
+        vbox.addLayout(hbox_buttons)
+
+
+        self.contour_help = None  # No external window yet.
+
+        self.setWindowTitle('cfview contour settings')
+        self.setLayout(vbox)
+
+        # Set theme and font
+        palette = QPalette()
+        palette.setColor(QPalette.Window, QColor(plotvars.background_colour))
+        palette.setColor(QPalette.Base, QColor(plotvars.background_colour))
+        palette.setColor(QPalette.Button, QColor(plotvars.button_colour))
+        palette.setColor(QPalette.ButtonText, QColor(plotvars.buttontext_colour))
+        palette.setColor(QPalette.Highlight, QColor(plotvars.highlight_colour))
+        palette.setColor(QPalette.HighlightedText, QColor(plotvars.text_colour))
+        palette.setColor(QPalette.Text,  QColor(plotvars.text_colour))
+        palette.setColor(QPalette.WindowText, QColor(plotvars.windowtext_colour))
+        self.setPalette(palette)
+
+        custom_font = QFont(plotvars.font, plotvars.fontsize)
+        self.window().setFont(custom_font)
+
+
+        self.show()
+
+
+    def contour_type(self, text):
+        cbox = getattr(self, text + 'CheckBox')
+        val = cbox.isChecked()
+
+        if text == 'fill' and val:
+            plotvars.blockfill = False
+            self.blockfillCheckBox.setChecked(False)
+
+        if text == 'blockfill' and val:
+            plotvars.fill = False
+            self.fillCheckBox.setChecked(False)
+
+        if text == 'lines' and not val:
+            plotvars.line_labels = False
+            self.line_labelsCheckBox.setChecked(False)
+
+        if text == 'lines' and val:
+            plotvars.line_labels = True
+            self.line_labelsCheckBox.setChecked(True)
+
+        if text == 'automatic':
+            plotvars.colorbar_orientation = 'None'
+            self.horizontalCheckBox.setChecked(False)
+            self.verticalCheckBox.setChecked(False)
+
+        if text == 'horizontal':
+            plotvars.colorbar_orientation = 'horizontal'
+            self.automaticCheckBox.setChecked(False)
+            self.verticalCheckBox.setChecked(False)
+
+        if text == 'vertical':
+            plotvars.colorbar_orientation = 'vertical'
+            self.automaticCheckBox.setChecked(False)
+            self.horizontalCheckBox.setChecked(False)
+
+        if self.colorbarCheckBox.isChecked():
+            color = plotvars.text_colour
+            enabled = True
+        else:
+            color = plotvars.text_colour_insensitive
+            enabled = False
+
+        objs = [self.automaticCheckBox, self.horizontalCheckBox, self.verticalCheckBox]
+        for obj in objs:
+            obj.setEnabled(enabled)
+            pal = QPalette(obj.palette())
+            pal.setColor(QPalette.WindowText, QColor(color))
+            obj.setPalette(pal)
+
+
+        setattr(plotvars, text, val) 
+
+
+    def reset(self):
+        # reset contour options
+        self.fillCheckBox.setChecked(True)
+        self.blockfillCheckBox.setChecked(False)
+        self.linesCheckBox.setChecked(False)
+        self.line_labelsCheckBox.setChecked(False)
+        self.titleTextBox.setText('')
+
+        self.automaticCheckBox.setChecked(True)
+        self.horizontalCheckBox.setChecked(False)
+        self.verticalCheckBox.setChecked(False)
+
+        plotvars.fill = True
+        plotvars.blockfill = False
+        plotvars.lines = False
+        plotvars.line_labels = False
+        plotvars.text = ''
+        plotvars.colorbar_orientation = None
+
+
+
+
+    def help(self):
+
+        if self.contour_help is None:
+
+            html = '<body><h2>Contour options</h2>'
+            html += 'Contour options of fill and blockfill are mutually exclusive.  If a '
+            html += 'grid with lots of points in x and y is plotted then the blockfill '
+            html += 'grid will not be readily visible until the plot is zoomed in'
+            
+
+            self.contour_help = Help(html)
+
+        self.contour_help.show()
+
+
+    def textbox_changed(self, text):
+
+        textbox = getattr(self, text + 'TextBox') 
+        setattr(plotvars, text, textbox.text()) 
+
+
+
+class TableModel(QAbstractTableModel):
+
+    def __init__(self, data, x, y, ndecs, datamin, datamax, datamin_colour, datamax_colour):
+        super(TableModel, self).__init__()
+        self._data = data
+        self._x = x
+        self._y = y
+        self._ndecs = ndecs
+        self._datamin = datamin
+        self._datamax = datamax
+        self._datamin_colour = datamin_colour
+        self._datamax_colour = datamax_colour
+
+
+    def data(self, index, role): 
+
+        try:
+            v = float(self._datamax)
+            if role == Qt.BackgroundRole and  self._data[index.row(), index.column()] >= float(self._datamax):
+                return QColor(self._datamax_colour)
+        except:
+            pass
+
+        try:
+            v = float(self._datamin)
+            if role == Qt.BackgroundRole and  self._data[index.row(), index.column()] <= float(self._datamin):
+                return QColor(self._datamin_colour)
+        except:
+            pass
+
+
+        if role == Qt.DisplayRole:
+            value = self._data[index.row(), index.column()]
+            if self._ndecs == 0:
+                return str(int(value))
+            else:
+                 return str(round(value, self._ndecs))
+
+    def rowCount(self, index):
+        return self._data.shape[0]
+
+    def columnCount(self, index):
+        return self._data.shape[1]
+
+    def headerData(self, section, orientation, role):
+        #if role != Qt.DisplayRole or orientation != Qt.Horizontal:
+        #    return QVariant()
+
+        if role != Qt.DisplayRole:
+            return QVariant()
+
+        if orientation == Qt.Horizontal:
+            xlabels = []
+            for ix in np.arange(len(self._x)):
+                xlabels.append(str(self._x[ix]))
+            return xlabels[section]
+
+        if orientation == Qt.Vertical:
+            ylabels = []
+            for iy in np.arange(len(self._y)):
+                ylabels.append(str(self._y[iy]))
+            return ylabels[section]
+ 
+
+
+
+class Data_window(QWidget):
+    '''popup window for viewing data'''
+
+    def __init__(self, cfview_parent):
+        super(Data_window, self).__init__()
+        self.cfview_parent = cfview_parent
+        self.initUI()
+
+    def initUI(self):
+
+        # Set up some buttons
+        resetButton = QPushButton("Reset")
+        resetButton.clicked.connect(self.reset)
+
+        plotButton = QPushButton("Plot selected cells")
+        plotButton.clicked.connect(self.plot)
+
+        helpButton = QPushButton("Help")
+        helpButton.clicked.connect(self.help)
+
+        quitButton = QPushButton("Quit")
+        quitButton.clicked.connect(self.close)
+
+        # Text box labels
+        colouringLabel = QLabel('Data colouring:')
+        ndecsLabel = QLabel('Number of decimal places: 2')
+        text_sizeLabel = QLabel('Text size: ')
+        dataminLabel = QLabel('Minimum')
+        datamin_colourLabel = QLabel('Minimum Colour')
+        datamaxLabel = QLabel('Maximum')
+        datamax_colourLabel = QLabel('Maximum Colour')
+
+        # Text boxes
+        dataminTextBox = QLineEdit()
+        dataminTextBox.setText('')
+        dataminTextBox.textChanged.connect(self.value_changed)
+        datamaxTextBox = QLineEdit()
+        datamaxTextBox.setText('')
+        datamaxTextBox.textChanged.connect(self.value_changed)
+        datamin_colourTextBox = QLineEdit()
+        datamin_colourTextBox.setText('blue')
+        datamin_colourTextBox.textChanged.connect(self.value_changed)
+        datamax_colourTextBox = QLineEdit()
+        datamax_colourTextBox.setText('red')
+        datamax_colourTextBox.textChanged.connect(self.value_changed)
+
+        # ndecs and text size sliders
+        ndecsSlider = QSlider(Qt.Horizontal)
+        ndecsSlider.setMinimum(0)
+        ndecsSlider.setMaximum(9)
+        ndecsSlider.setValue(2)
+        ndecsSlider.valueChanged.connect(self.value_changed)
+
+        text_sizeSlider = QSlider(Qt.Horizontal)
+        text_sizeSlider.setMinimum(1)
+        text_sizeSlider.setMaximum(30)
+        text_sizeSlider.setValue(plotvars.fontsize)
+        text_sizeSlider.valueChanged.connect(self.value_changed)
+
+
+
+        
+        # Make a copy of the field
+        index = plotvars.field_number
+        f = deepcopy(plotvars.fields[index])
+        data = f[0, 0, :, :].array.squeeze()
+        print('shape of data is ', np.shape(data))
+        x = f.coord('X').array         
+        y = f.coord('Y').array         
+
+
+        ndecs = 2
+
+        table = QTableView()
+
+        datamin = ''
+        datamax = ''
+        datamin_colour = ''
+        datamax_colour = ''
+
+
+        model = TableModel(data, x, y, ndecs, datamin, datamax, datamin_colour, datamax_colour)
+
+        table.setModel(model)
+
+
+
+
+        xlabels = []        
+        for ix in np.arange(len(x)):
+            xlabels.append(str(x[ix]))
+
+
+        ylabels = []        
+        for iy in np.arange(len(y)):
+            ylabels.append(str(y[iy]))
+
+
+        self.table = table
+        self.ndecsLabel = ndecsLabel
+        self.ndecsSlider = ndecsSlider
+
+        self.text_sizeLabel = text_sizeLabel
+        self.text_sizeSlider = text_sizeSlider
+
+        self.dataminLabel = dataminLabel
+        self.datamaxLabel = datamaxLabel
+        self.datamin_colourLabel = datamin_colourLabel
+        self.datamax_colourLabel = datamax_colourLabel
+
+        self.dataminTextBox = dataminTextBox
+        self.datamaxTextBox = datamaxTextBox
+        self.datamin_colourTextBox = datamin_colourTextBox
+        self.datamax_colourTextBox = datamax_colourTextBox
+
+        self.data = data
+        self.x = x
+        self.y = y
+
+
+
+
+
+        vbox = QVBoxLayout()
+
+        vbox.addWidget(table)
+
+        sliders_hbox = QHBoxLayout()
+        sliders_hbox.addWidget(ndecsLabel)
+        sliders_hbox.addWidget(ndecsSlider)
+        sliders_hbox.addWidget(text_sizeLabel)
+        sliders_hbox.addWidget(text_sizeSlider)
+        vbox.addLayout(sliders_hbox)
+
+        datacolours_hbox = QHBoxLayout()
+        datacolours_hbox.addWidget(colouringLabel)
+        datacolours_hbox.addWidget(dataminLabel)
+        datacolours_hbox.addWidget(dataminTextBox)
+        datacolours_hbox.addWidget(datamin_colourLabel)
+        datacolours_hbox.addWidget(datamin_colourTextBox)
+        datacolours_hbox.addWidget(datamaxLabel)
+        datacolours_hbox.addWidget(datamaxTextBox)
+        datacolours_hbox.addWidget(datamax_colourLabel)
+        datacolours_hbox.addWidget(datamax_colourTextBox)
+        vbox.addLayout(datacolours_hbox)
+
+        # The buttons
+        hbox_buttons = QHBoxLayout()
+        vbox.addLayout(hbox_buttons)
+        hbox_buttons.addWidget(resetButton)
+        hbox_buttons.addWidget(plotButton)
+        hbox_buttons.addWidget(helpButton)
+        hbox_buttons.addWidget(quitButton)
+        vbox.addLayout(hbox_buttons)
+
+
+        self.data_help = None  # No external window yet.
+
+        self.setWindowTitle('cfview view data')
+        self.setLayout(vbox)
+
+        # Set theme and font
+        palette = QPalette()
+        palette.setColor(QPalette.Window, QColor(plotvars.background_colour))
+        palette.setColor(QPalette.Base, QColor(plotvars.background_colour))
+        palette.setColor(QPalette.Button, QColor(plotvars.button_colour))
+        palette.setColor(QPalette.ButtonText, QColor(plotvars.buttontext_colour))
+        palette.setColor(QPalette.Highlight, QColor(plotvars.highlight_colour))
+        palette.setColor(QPalette.HighlightedText, QColor(plotvars.text_colour))
+        palette.setColor(QPalette.Text,  QColor(plotvars.text_colour))
+        palette.setColor(QPalette.WindowText, QColor(plotvars.windowtext_colour))
+        self.setPalette(palette)
+
+        custom_font = QFont(plotvars.font, plotvars.fontsize)
+        self.window().setFont(custom_font)
+
+
+        self.show()
+
+
+
+    def help(self):
+
+        if self.data_help is None:
+
+            html = ""
+            html += "<body><h2>Data viewing</h2>"
+            html += "Describe window and options "
+
+            self.contour_help = Help(html)
+
+        self.contour_help.show()
+
+
+    def plot(self):
+        selected = self.table.selectionModel().selectedIndexes()
+
+        if selected:
+            xvals = []
+            yvals = []
+            for item in selected:
+                 xvals.append(item.column())
+                 yvals.append(item.row())
+
+            minx = min(xvals)
+            maxx = max(xvals)
+            miny = min(yvals)
+            maxy = max(yvals)
+
+            # Form the subspace dictionary from the currently selected data'''
+            index = plotvars.field_number
+            f = deepcopy(plotvars.fields[index])
+
+
+            # Form the subspace dictionary
+            nx, ny, nz, nt, x, y, z, t = field_dims(field=f)
+            dim_sizes = [nx, ny, nz, nt]
+            dims = ['X', 'Y', 'Z', 'T']
+            lists = [self.cfview_parent.xlist.selectedItems(), self.cfview_parent.ylist.selectedItems(),\
+                     self.cfview_parent.zlist.selectedItems(), self.cfview_parent.tlist.selectedItems()]
+            collapses = [plotvars.collapse_x, plotvars.collapse_y,\
+                     plotvars.collapse_z, plotvars.collapse_t]
+            subspace_args ={}
+
+            for i in np.arange(4):
+                vals = []
+                for j in np.arange(len(lists[i])):
+                    vals.append(str(lists[i][j].text()))
+
+                if any(dim == dims[i].lower() for dim in plotvars.contour_type):
+                    if np.size(vals) < 2:
+                        con_okay = False
+                else:
+                    if collapses[i] == 'Off':
+                        if dim_sizes[i] > 1:
+                            vals = [vals[0]]
+
+                if len(vals) != dim_sizes[i]:
+                    if len(vals) == 1:
+
+                        if collapses[i] == 'Off':
+                            if dims[i] != 'T':
+                                subspace_args[dims[i]] = float(vals[0])
+                            else:
+                                subspace_args[dims[i]] = cf.dt(vals[0])
+                    else:
+                        if dims[i] != 'T':
+                            # cf.wi needs to go from min to max but the widget return
+                            # goes in order of selection
+                            val1 = np.min(np.array(vals).astype(np.float))
+                            val2 = np.max(np.array(vals).astype(np.float))
+                            subspace_args[dims[i]] = cf.wi(val1, val2)
+                        else:
+                            val1 = min(vals)
+                            val2 = max(vals)
+                            subspace_args[dims[i]] = cf.wi(cf.dt(val1), cf.dt(val2))
+
+                
+            print('in contour plot code 1')
+
+            plot_type = 'single point selected'
+            if maxx > minx and maxy > miny:
+                print('in contour plot code 1')
+                plot_type = 'contour'
+                con_args ={}
+                if plotvars.fill and not plotvars.lines:
+                    con_args['lines'] = False
+                if not plotvars.fill and plotvars.lines:
+                    con_args['fill'] = False
+                    con_args['lines'] = True
+
+                if plotvars.blockfill and not plotvars.lines:
+                    con_args['blockfill'] = True
+                    con_args['lines'] = False
+
+                if plotvars.blockfill and plotvars.lines:
+                    con_args['blockfill'] = True
+                    con_args['lines'] = True
+
+                if plotvars.lines and not plotvars.line_labels:
+                    con_args['line_labels'] = False
+
+                if plotvars.titles:
+                    con_args['titles'] = True
+
+                if plotvars.contour_type[0] == 't':
+                    con_args['swap_axes'] = True 
+
+                cfp.con(f[0, 0, miny:maxy, minx:maxx], **con_args)
+
+            if maxx > minx and miny == maxy:
+                plot_type = 'line'
+                cfp.lineplot(f[0, 0, miny, minx:maxx ])
+
+            if maxx == minx and maxy > miny:
+                plot_type = 'line'
+                cfp.lineplot(f[0, 0, miny:maxy, minx])
+            print('plot_type is ', plot_type)
+
+        else:
+            print('\n\nError - No data selected\n\n')
+
+        if plot_type == 'single point selected':
+            print('\n\nError - Only a single point selected\n\n')
+
+
+
+
+    def reset(self):
+        # Reset data viewing values
+
+        self.ndecsSlider.setValue(2)
+        self.text_sizeSlider.setValue(plotvars.fontsize)
+        self.datamin_colourTextBox.setText('blue')
+        self.datamax_colourTextBox.setText('red')
+        self.dataminTextBox.setText('')
+        self.datamaxTextBox.setText('')
+
+
+
+
+
+    def value_changed(self, text):
+        # reset the table based on the text boxes and ndecs slider
+
+        datamin = self.dataminTextBox.text()
+        datamax = self.datamaxTextBox.text()
+        datamin_colour = self.datamin_colourTextBox.text()
+        datamax_colour = self.datamax_colourTextBox.text()
+
+        ndecs = int(self.ndecsSlider.value())
+        self.ndecsLabel.setText('Number of decimal places: ' + str(ndecs))
+
+        model = TableModel(self.data, self.x, self.y, ndecs, datamin, datamax, datamin_colour, datamax_colour)
+        self.table.setModel(model)
+
+        custom_font = QFont(plotvars.font, int(self.text_sizeSlider.value()))
+        self.table.setFont(custom_font)
+
+        #self.table.setSizeAdjustPolicy(QAbstractScrollArea.AdjustToContents)
+        #self.table.resizeColumnsToContents()  ## super slow resizing
+
+
+        font_metrics = QFontMetrics(QFont(plotvars.font, int(self.text_sizeSlider.value())))
+        data = np.round(self.data, ndecs)
+        if ndecs == 0:
+            data = data.astype(int)
+        mymin = str(np.min(data))
+        mymax = str(np.max(data))
+        max_len = max(len(mymin), len(mymax))
+        
+        text_width = font_metrics.width('a' * max_len)
+
+        #self.table.horizontalHeader().setDefaultSectionSize(text_width * 1.4)
+
+
+class Names_window(QWidget):
+    '''popup window for changing data name defaults'''
+
+    def __init__(self, cfview_parent):
+        super(Names_window, self).__init__()
+        self.cfview_parent = cfview_parent
+        self.initUI()
+
+    def initUI(self):
+
+        # Set up some buttons
+        saveButton = QPushButton("Save")
+        saveButton.clicked.connect(self.save)
+
+        new_nameButton = QPushButton("New name")
+        new_nameButton.clicked.connect(self.new_name)
+
+        helpButton = QPushButton("Help")
+        helpButton.clicked.connect(self.help)
+
+        quitButton = QPushButton("Quit")
+        quitButton.clicked.connect(self.close)
+
+
+        # Set the layout
+        vbox = QVBoxLayout()
+
+        # Set the field
+        field = plotvars.fields[plotvars.field_number]
+        self.field = field
+
+        # Make a copy in self for the reset
+        self.field = deepcopy(field)
+
+        # List of all variables
+        self.vardict = {}
+
+        formLayout = QFormLayout()
+        groupBox = QGroupBox('Data names')
+
+
+        #names = ['standard_name', 'long_name', 'units']
+        #for name in names:
+        #    val = getattr(field, name, 'not set')
+        #    if val != 'not set':
+        #        val_label = 'field_' + name
+        #        label = name + ':'
+        #        setattr(self, val_label + '_Label', QLabel(label))
+        #        setattr(self, val_label , QLineEdit())
+        #        getattr(self, val_label).setText(val)
+        #        getattr(self, val_label).setCursorPosition(0)
+        #        getattr(self, val_label).textChanged.connect(partial(self.textbox_changed, val_label))
+        #        formLayout.addRow(getattr(self, val_label + '_Label'), getattr(self, val_label))
+        #        self.vardict["field." + name] = val 
+
+        names = sorted(field.properties())
+        for name in names:
+            print('processing', name)
+            val = str(field.properties()[name])
+            val_label = 'field_' + name
+            label = name + ':'
+            setattr(self, val_label + '_Label', QLabel(label))
+            setattr(self, val_label , QLineEdit())
+            getattr(self, val_label).setText(val)
+            getattr(self, val_label).setCursorPosition(0)
+            getattr(self, val_label).textChanged.connect(partial(self.textbox_changed, val_label))
+            formLayout.addRow(getattr(self, val_label + '_Label'), getattr(self, val_label))
+            self.vardict["field." + name] = val 
+
+        dims = ['X', 'Y', 'Z', 'T']
+        for dim in dims:
+            if field.has_construct(dim):
+                 nc = field.nc_get_variable(None)
+                 #names = ['standard_name', 'long_name', 'units']
+                 names = sorted(field.coord(dim).properties())
+                 for name in names:
+                     val = getattr(field.coord(dim), name, 'not set')
+                     if val != 'not set':
+                         val_label = 'coord_' + dim + '_' + name
+                         label = dim.lower() + '-dimension ' + name + ':'
+                         setattr(self, val_label + '_Label', QLabel(label))
+                         setattr(self, val_label , QLineEdit())
+                         getattr(self, val_label).setText(val)
+                         getattr(self, val_label).setCursorPosition(0)
+                         getattr(self, val_label).textChanged.connect(partial(self.textbox_changed, val_label))
+                         formLayout.addRow(getattr(self, val_label + '_Label'), getattr(self, val_label))
+                         self.vardict["coord.('"+ dim + "')." + name] = val 
+
+
+
+
+        print('self.vardict is ', self.vardict)
+
+        groupBox.setLayout(formLayout)
+        scroll = QScrollArea()
+        scroll.setWidget(groupBox)
+        scroll.setWidgetResizable(True)
+        #scroll.setFixedHeight(600)
+        vbox.addWidget(scroll)
+
+ 
+
+        # The buttons
+        hbox_buttons = QHBoxLayout()
+        vbox.addLayout(hbox_buttons)
+        hbox_buttons.addWidget(saveButton)
+        hbox_buttons.addWidget(new_nameButton)
+        hbox_buttons.addWidget(helpButton)
+        hbox_buttons.addWidget(quitButton)
+        vbox.addLayout(hbox_buttons)
+
+        self.formLayout = formLayout
+        self.names_help = None  # No external window yet.
+
+        self.setWindowTitle('cfview data names')
+        self.setLayout(vbox)
+        self.new_name_window = None  # No external window yet.
+
+        # Set theme and font
+        palette = QPalette()
+        palette.setColor(QPalette.Window, QColor(plotvars.background_colour))
+        palette.setColor(QPalette.Base, QColor(plotvars.background_colour))
+        palette.setColor(QPalette.Button, QColor(plotvars.button_colour))
+        palette.setColor(QPalette.ButtonText, QColor(plotvars.buttontext_colour))
+        palette.setColor(QPalette.Highlight, QColor(plotvars.highlight_colour))
+        palette.setColor(QPalette.HighlightedText, QColor(plotvars.text_colour))
+        palette.setColor(QPalette.Text,  QColor(plotvars.text_colour))
+        palette.setColor(QPalette.WindowText, QColor(plotvars.windowtext_colour))
+        self.setPalette(palette)
+
+        custom_font = QFont(plotvars.font, plotvars.fontsize)
+        self.window().setFont(custom_font)
+
+
+        self.show()
+
+
+
+    def save(self):
+        # save variable data names
+
+        print('in save')
+        print('save self.vardict is ', self.vardict)
+
+        for var in self.vardict:
+            mytype = var[:6]
+
+            myvar = var[6:]
+            # Change value to int, float if appropriate
+            val = type_test(self.vardict[var])
+
+
+            if mytype == 'field.':
+
+                myvar = var[6:]
+                # Change string value to int, float if appropriate
+                val = type_test(self.vardict[var])
+
+                #print('var, val are ', myvar, val)
+                #setattr(plotvars.fields[plotvars.field_number], myvar, val)
+                if val == 'not set':
+                    pass
+                elif val == 'DELETE':
+                    plotvars.fields[plotvars.field_number].del_property(myvar)
+                else:
+                    plotvars.fields[plotvars.field_number].set_property(myvar, val)
+
+
+
+            if mytype == 'coord.':
+                myvar = var[12:]
+                dim = var[8]
+
+
+                # Change value to int, float if appropriate
+                val = type_test(self.vardict[var])
+
+                print('myvar, dim, val are ', myvar, dim, val)                    
+
+                if val == 'not set':
+                    pass
+                elif val == 'DELETE':
+                    plotvars.fields[plotvars.field_number].coord(dim).del_property(myvar)
+                else:
+                    plotvars.fields[plotvars.field_number].coord(dim).set_property(myvar, val)
+
+
+        # Reset the field title
+        selected = self.cfview_parent.fieldlist.selectedItems()[0]
+        title = selected.text()
+        new_name = field_name(plotvars.fields[plotvars.field_number])
+        title_new = title.replace(title.split(' ')[-1], '') + new_name
+        selected.setText(title_new)
+
+
+
+    def new_name(self):
+        print('in new_name')
+        # have a pop-up for a new name 
+
+        if self.new_name_window is None:
+            self.new_name_window = New_name_window(self)
+            self.new_name_window.show()
+ 
+
+
+
+
+    def help(self):
+
+        if self.names_help is None:
+
+            html = '<body><h2>Data names</h2>'
+            html += 'Editable names for the selected field'
+            html += 'To delete a name change the name value to DELETE'
+
+            self.names_help = Help(html)
+
+        self.names_help.show()
+
+
+    def textbox_changed(self, text):
+
+        if text[:6] == 'coord_':
+            textbox = getattr(self, text) 
+            mydict ="coord.('" + text[6] + "')." + text[8:]
+            self.vardict[mydict] = textbox.text()
+
+        if text[:6] == 'field_':
+            textbox = getattr(self, text) 
+            mydict ="field." + text[6:]
+            self.vardict[mydict] = textbox.text()
+
+
+class New_name_window(QWidget):
+    '''Popup window for adding a new name'''
+
+    def __init__(self, parent):
+        super(New_name_window, self).__init__()
+        self.parent = parent
+        self.initUI()
+
+
+    def initUI(self):
+
+        applyButton = QPushButton("Apply")
+        applyButton.clicked.connect(self.apply)
+        helpButton = QPushButton("Help")
+        helpButton.clicked.connect(self.help)
+        quitButton = QPushButton("Quit")
+        quitButton.clicked.connect(self.close)
+
+        fieldRadioButton = QRadioButton("field")
+        xRadioButton = QRadioButton("x")
+        yRadioButton = QRadioButton("y")
+        zRadioButton = QRadioButton("z")
+        tRadioButton = QRadioButton("t")
+        fieldRadioButton.clicked.connect(lambda: self.button_changed('field'))
+        xRadioButton.clicked.connect(lambda: self.button_changed('x'))
+        yRadioButton.clicked.connect(lambda: self.button_changed('y'))
+        zRadioButton.clicked.connect(lambda: self.button_changed('z'))
+        tRadioButton.clicked.connect(lambda: self.button_changed('t'))
+        fieldRadioButton.setChecked(True)
+
+
+
+        nameLabel = QLabel('New name')
+        nameTextbox = QLineEdit()
+
+        valueLabel = QLabel('Value')
+        valueTextbox = QLineEdit()
+
+
+        vbox = QVBoxLayout()
+
+        hbox_name = QHBoxLayout()
+        hbox_name.addWidget(nameLabel)
+        hbox_name.addWidget(nameTextbox)
+        vbox.addLayout(hbox_name)
+
+        hbox_value = QHBoxLayout()
+        hbox_value.addWidget(valueLabel)
+        hbox_value.addWidget(valueTextbox)
+        vbox.addLayout(hbox_value)
+
+        hbox_radio_buttons = QHBoxLayout()
+        hbox_radio_buttons.addWidget(fieldRadioButton)
+        hbox_radio_buttons.addWidget(xRadioButton)
+        hbox_radio_buttons.addWidget(yRadioButton)
+        hbox_radio_buttons.addWidget(zRadioButton)
+        hbox_radio_buttons.addWidget(tRadioButton)
+        vbox.addLayout(hbox_radio_buttons)
+
+        hbox_buttons = QHBoxLayout()
+        hbox_buttons.addWidget(applyButton)
+        hbox_buttons.addWidget(helpButton)
+        hbox_buttons.addWidget(quitButton)
+
+        vbox.addLayout(hbox_buttons)
+
+        self.setLayout(vbox)
+        self.nameTextbox = nameTextbox
+        self.valueTextbox = valueTextbox
+        self.fieldRadioButton = fieldRadioButton
+        self.xRadioButton = xRadioButton
+        self.yRadioButton = yRadioButton
+        self.zRadioButton = zRadioButton
+        self.tRadioButton = tRadioButton
+
+
+        self.new_name_help =  None  # No external window yet.
+
+        palette = QPalette()    
+        palette.setColor(QPalette.Window, QColor(plotvars.background_colour))
+        palette.setColor(QPalette.Base, QColor(plotvars.background_colour))    
+        palette.setColor(QPalette.Button, QColor(plotvars.button_colour))
+        palette.setColor(QPalette.ButtonText, QColor(plotvars.buttontext_colour))
+        palette.setColor(QPalette.Highlight, QColor(plotvars.highlight_colour))
+        palette.setColor(QPalette.HighlightedText, QColor(plotvars.text_colour))
+        palette.setColor(QPalette.Text,  QColor(plotvars.text_colour))    
+        palette.setColor(QPalette.WindowText, QColor(plotvars.windowtext_colour))
+        self.setPalette(palette)
+
+        # Set font 
+        custom_font = QFont(plotvars.font, plotvars.fontsize)
+        self.window().setFont(custom_font)
+
+        self.setFixedWidth(600)
+
+        self.show()
+
+    def apply(self):
+
+        name = self.nameTextbox.text()
+        val = self.valueTextbox.text()
+
+        print('self.parent.vardict is ', self.parent.vardict)
+
+        if self.fieldRadioButton.isChecked():
+            if 'field.' + name in self.parent.vardict:
+                print('Error - ' + name + ' already exists in the data')
+                return
+
+            val_label = 'field_' + name
+            label = name + ':'
+            setattr(self.parent, val_label + '_Label', QLabel(label))
+            setattr(self.parent, val_label , QLineEdit())
+            getattr(self.parent, val_label).setText(val)
+            getattr(self.parent, val_label).setCursorPosition(0)
+            getattr(self.parent, val_label).textChanged.connect(partial(self.parent.textbox_changed, val_label))
+            self.parent.formLayout.addRow(getattr(self.parent, val_label + '_Label'), getattr(self.parent, val_label))
+            self.parent.vardict["field." + name] = val 
+            print('self.parent.vardict is ', self.parent.vardict)
+
+        else:
+            print('dimension name selected')
+
+            dims = ['X', 'Y', 'Z', 'T']
+            if self.xRadioButton.isChecked():
+                dim = 'X'
+            if self.yRadioButton.isChecked():
+                dim = 'Y'
+            if self.zRadioButton.isChecked():
+                dim = 'Z'
+            if self.tRadioButton.isChecked():
+                dim = 'T'
+
+
+            if self.parent.field.has_construct(dim):
+                myname = "coord.('" + dim + "')." + name
+                if myname in self.parent.vardict:
+                    print('Error - ' + myname + ' already exists in the data')
+                    return
+
+                val_label = 'coord_' + dim + '_' + name
+                label = dim.lower() + '-dimension ' + name + ':'
+                setattr(self.parent, val_label + '_Label', QLabel(label))
+                setattr(self.parent, val_label , QLineEdit())
+                getattr(self.parent, val_label).setText(val)
+                getattr(self.parent, val_label).setCursorPosition(0)
+                getattr(self.parent, val_label).textChanged.connect(partial(self.parent.textbox_changed, val_label))
+                self.parent.formLayout.addRow(getattr(self.parent, val_label + '_Label'), getattr(self.parent, val_label))
+                self.parent.vardict["coord.('"+ dim + "')." + name] = val 
+            else:
+                print("field doesn't have " + dim + " dimension")
+
+        print('self.parent.vardict is ', self.parent.vardict)
+
+
+
+
+    def button_changed(self, text):
+
+
+        field = False
+        x = False
+        y = False
+        z = False
+        t = False
+         
+        if self.fieldRadioButton.isChecked():
+            field = True
+        if self.xRadioButton.isChecked():
+            x = True
+        if self.yRadioButton.isChecked():
+            y = True
+        if self.zRadioButton.isChecked():
+            z = True
+        if self.tRadioButton.isChecked():
+            t = True
+
+        self.fieldRadioButton.setChecked(field)
+        self.xRadioButton.setChecked(x)
+        self.yRadioButton.setChecked(y)
+        self.zRadioButton.setChecked(z)
+        self.tRadioButton.setChecked(t)
+
+
+
+    def help(self):
+
+        if self.new_name_help is None:
+
+            html = '<body><h2>New data name</h2>'
+            html += 'Editable new name for the selected field'
+
+
+            self.new_name_help = Help(html)
+
+        self.new_name_help.show()
+
+
+
+
+class Transform_window(QWidget):
+    '''popup window for transforming data'''
+
+    def __init__(self, cfview_parent):
+        super(Transform_window, self).__init__()
+        self.cfview_parent = cfview_parent
+        self.initUI()
+
+
+    def initUI(self):
+
+        # Labels
+        collapseLabel = QLabel('Dimension collapse methods')
+        #collapse_areaLabel = QLabel('Area:')
+        #collapse_xLabel = QLabel('X:')
+        #collapse_yLabel = QLabel('Y:')
+        #collapse_zLabel = QLabel('Z:')
+        #collapse_tLabel = QLabel('T:')
+        anchorLabel = QLabel('Anchor in longitude:')
+        interpolationLabel = QLabel('Interpolation:')
+        lonminLabel = QLabel('lonmin:')
+        lonmaxLabel = QLabel('lonmax:')
+        lonstepLabel = QLabel('lonstep:')
+        latminLabel = QLabel('latmin:')
+        latmaxLabel = QLabel('latmax:')
+        latstepLabel = QLabel('latstep:')
+
+        # Text box labels
+        titleLabel = QLabel('title')
+        zero_thickLabel = QLabel('zero_thick')
+
+        # Text boxes
+        anchorTextBox = QLineEdit()
+        lonminTextBox = QLineEdit()
+        lonmaxTextBox = QLineEdit()
+        lonstepTextBox = QLineEdit()
+        latminTextBox = QLineEdit()
+        latmaxTextBox = QLineEdit()
+        latstepTextBox = QLineEdit()
+
+        # Interpolation combobox
+        types = ['Off', 'linear', 'bilinear', 'conservative_1st', 'conservative_2nd', 'patch', 'nearest_stod', 'nearest_dtos']
+        interpolation_ComboBox = QComboBox()
+        for type in types:
+            interpolation_ComboBox.addItem(type)
+        interpolation_ComboBox.activated[str].connect(self.interpolation_type)
+
+        # Buttons
+        applyButton = QPushButton("Apply")
+        applyButton.clicked.connect(self.apply)
+
+        resetButton = QPushButton("Reset")
+        resetButton.clicked.connect(self.reset)
+
+        helpButton = QPushButton("Help")
+        helpButton.clicked.connect(self.help)
+
+        quitButton = QPushButton("Quit")
+        quitButton.clicked.connect(self.close)
+
+        self.anchorTextBox = anchorTextBox
+        self.lonminTextBox = lonminTextBox
+        self.lonmaxTextBox = lonmaxTextBox
+        self.lonstepTextBox = lonstepTextBox
+        self.latminTextBox = latminTextBox
+        self.latmaxTextBox = latmaxTextBox
+        self.latstepTextBox = latstepTextBox
+        self.interpolation_ComboBox = interpolation_ComboBox
+        self.lonminLabel = lonminLabel
+        self.lonmaxLabel = lonmaxLabel
+        self.lonstepLabel = lonstepLabel
+        self.latminLabel = latminLabel
+        self.latmaxLabel = latmaxLabel
+        self.latstepLabel = latstepLabel
+        #self.collapse_xLabel = collapse_xLabel
+        #self.collapse_yLabel = collapse_yLabel
+
+
+
+        # Set the layout
+        vbox = QVBoxLayout()
+
+        vbox.addWidget(collapseLabel)
+
+        # Collapse boxes  
+        # Define area collapse here
+        # x, y, z, t collapses are defined in the main cfview code 
+        #collapse_types = plotvars.collapse_types
+        #collapse_areaComboBox = QComboBox()
+        #for collapse in collapse_types:
+        #    collapse_areaComboBox.addItem(collapse)
+        #collapse_areaComboBox.activated[str].connect(self.collapse_area)
+        
+
+        hbox_area_collapse = QHBoxLayout()
+        hbox_area_collapse.addWidget(self.cfview_parent.collapse_areaLabel)
+        hbox_area_collapse.addWidget(self.cfview_parent.collapse_areaComboBox)
+        vbox.addLayout(hbox_area_collapse)
+
+        hbox_x_collapse = QHBoxLayout()
+        hbox_x_collapse.addWidget(self.cfview_parent.collapse_xLabel)
+        hbox_x_collapse.addWidget(self.cfview_parent.collapse_xComboBox)
+        vbox.addLayout(hbox_x_collapse)
+
+        hbox_y_collapse = QHBoxLayout()
+        hbox_y_collapse.addWidget(self.cfview_parent.collapse_yLabel)
+        hbox_y_collapse.addWidget(self.cfview_parent.collapse_yComboBox)
+        vbox.addLayout(hbox_y_collapse)
+
+        hbox_z_collapse = QHBoxLayout()
+        hbox_z_collapse.addWidget(self.cfview_parent.collapse_zLabel)
+        hbox_z_collapse.addWidget(self.cfview_parent.collapse_zComboBox)
+        vbox.addLayout(hbox_z_collapse)
+
+        hbox_t_collapse = QHBoxLayout()
+        hbox_t_collapse.addWidget(self.cfview_parent.collapse_tLabel)
+        hbox_t_collapse.addWidget(self.cfview_parent.collapse_tComboBox)
+        vbox.addLayout(hbox_t_collapse)
+
+        # Anchor box
+        hbox_anchor = QHBoxLayout()
+        hbox_anchor.addWidget(anchorLabel)
+        hbox_anchor.addWidget(anchorTextBox)
+        vbox.addLayout(hbox_anchor)
+
+        # Interpolation boxes
+        hbox_interp = QHBoxLayout()
+        hbox_interp.addWidget(interpolationLabel)
+        hbox_interp.addWidget(interpolation_ComboBox)
+        vbox.addLayout(hbox_interp)
+
+        hbox_lons = QHBoxLayout()
+        hbox_lons.addWidget(lonminLabel)
+        hbox_lons.addWidget(lonminTextBox)
+        hbox_lons.addWidget(lonmaxLabel)
+        hbox_lons.addWidget(lonmaxTextBox)
+        hbox_lons.addWidget(lonstepLabel)
+        hbox_lons.addWidget(lonstepTextBox)
+        vbox.addLayout(hbox_lons)
+
+        hbox_lats = QHBoxLayout()
+        hbox_lats.addWidget(latminLabel)
+        hbox_lats.addWidget(latminTextBox)
+        hbox_lats.addWidget(latmaxLabel)
+        hbox_lats.addWidget(latmaxTextBox)
+        hbox_lats.addWidget(latstepLabel)
+        hbox_lats.addWidget(latstepTextBox)
+        vbox.addLayout(hbox_lats)
+
+        hbox_buttons = QHBoxLayout()
+        hbox_buttons.addWidget(applyButton)
+        hbox_buttons.addWidget(resetButton)
+        hbox_buttons.addWidget(helpButton)
+        hbox_buttons.addWidget(quitButton)
+        vbox.addLayout(hbox_buttons)
+
+        #self.collapse_areaComboBox = collapse_areaComboBox
+        self.transform_help = None  # No external window yet.
+
+        self.setWindowTitle('cfview transform settings')
+        self.setLayout(vbox)
+
+
+        # Set theme and font
+        palette = QPalette()
+        palette.setColor(QPalette.Window, QColor(plotvars.background_colour))
+        palette.setColor(QPalette.Base, QColor(plotvars.background_colour))
+        palette.setColor(QPalette.Button, QColor(plotvars.button_colour))
+        palette.setColor(QPalette.ButtonText, QColor(plotvars.buttontext_colour))
+        palette.setColor(QPalette.Highlight, QColor(plotvars.highlight_colour))
+        palette.setColor(QPalette.HighlightedText, QColor(plotvars.text_colour))
+        palette.setColor(QPalette.Text,  QColor(plotvars.text_colour))
+        palette.setColor(QPalette.WindowText, QColor(plotvars.windowtext_colour))
+        self.setPalette(palette)
+
+        custom_font = QFont(plotvars.font, plotvars.fontsize)
+        self.window().setFont(custom_font)
+
+        self.interpolation_type('Off')
+
+        self.show()
+
+
+    def interpolation_type(self, text):
+        # Turn sensitvity of interpolation boxes on and off
+
+        objs = [self.lonminTextBox, self.lonmaxTextBox, self.lonstepTextBox, \
+                self.latminTextBox, self.latmaxTextBox, self.latstepTextBox, \
+                self.lonminLabel, self.lonmaxLabel, self.lonstepLabel, \
+                self.latminLabel, self.latmaxLabel, self.latstepLabel]
+
+        if text == 'Off':
+            flags = [False] * 12
+        else:
+            flags = [True] * 12
+
+        for i in np.arange(len(objs)):
+            obj = objs[i]
+            color = plotvars.text_colour_insensitive
+            if flags[i]:
+                color = plotvars.text_colour
+            obj.setEnabled(flags[i])
+            pal = QPalette(obj.palette())
+            pal.setColor(QPalette.WindowText, QColor(color))
+            obj.setPalette(pal)
+
+
+    #def collapse_area(self, text):
+
+    #    nx = len(self.cfview_parent.xlist.selectedItems())
+    #    ny = len(self.cfview_parent.ylist.selectedItems())
+
+    #    enabled = True
+    #    index = 0
+
+    #    if nx < 2 or ny < 2:
+    #        print('Error - cannot collapse to an area')
+    #        print('Need more than 1 item for x and y')
+    #        print('nx = ' + str(nx))
+    #        print('ny = ' + str(ny))
+    #    else:
+    #        if text != 'Off':
+    #            enabled = False
+    #            index = plotvars.collapse_types.index(text)
+
+    #    self.cfview_parent.collapse_xComboBox.setCurrentIndex(index)
+    #    self.cfview_parent.collapse_yComboBox.setCurrentIndex(index)
+
+    #    self.cfview_parent.collapse_xComboBox.setEnabled(enabled)
+    #    self.cfview_parent.collapse_yComboBox.setEnabled(enabled)
+
+    #    color = plotvars.text_colour_insensitive
+    #    if enabled:
+    #        color = plotvars.text_colour
+    #    pal = QPalette(self.collapse_xLabel.palette())
+    #    pal.setColor(QPalette.WindowText, QColor(color))
+    #    self.cfview_parent.collapse_xLabel.setPalette(pal)
+    #    self.cfview_parent.collapse_yLabel.setPalette(pal)
+
+    #    # Reset the collapses
+    #    self.cfview_parent.collapse_type('x')
+    #    self.cfview_parent.collapse_type('y')
+
+
+    def anchor(self):
+        print('Anchor - not connected yet')
+
+
+    def apply(self):
+        print('Apply - not connected yet')
+
+
+    def reset(self):
+        # Reset widget values
+        self.lonminTextBox.setText('')
+        self.lonmaxTextBox.setText('')
+        self.lonstepTextBox.setText('')
+        self.latminTextBox.setText('')
+        self.latmaxTextBox.setText('')
+        self.latstepTextBox.setText('')
+        self.anchorTextBox.setText('')
+        self.interpolation_ComboBox.setCurrentIndex(0)
+        self.interpolation_type('Off')
+        self.cfview_parent.collapse_areaComboBox.setCurrentIndex(0)
+        self.cfview_parent.collapse_xComboBox.setEnabled(True)
+        self.cfview_parent.collapse_yComboBox.setEnabled(True)
+        self.cfview_parent.collapse_areaComboBox.setCurrentIndex(0)
+        self.cfview_parent.collapse_xComboBox.setCurrentIndex(0)
+        self.cfview_parent.collapse_yComboBox.setCurrentIndex(0)
+        self.cfview_parent.collapse_zComboBox.setCurrentIndex(0)
+        self.cfview_parent.collapse_tComboBox.setCurrentIndex(0)
+        color = plotvars.text_colour
+        pal = QPalette(self.cfview_parent.collapse_xLabel.palette())
+        pal.setColor(QPalette.WindowText, QColor(color))
+        self.cfview_parent.collapse_xLabel.setPalette(pal)
+        self.cfview_parent.collapse_yLabel.setPalette(pal)
+        
+
+        # reset the plotvars collapse settings
+        plotvars.collapse_x = 'Off'
+        plotvars.collapse_y = 'Off'
+        plotvars.collapse_z = 'Off'
+        plotvars.collapse_t = 'Off'
+        dims_small = ['x', 'y', 'z', 't']
+        field_var = 'f' + str(plotvars.field_number)
+        for i in np.arange(4):
+            plotvars.stored_collapses[field_var][dims_small[i]] = 'Off'
+            plotvars.stored_collapse_values[field_var][dims_small[i]] = False
+
+        # Switch back to the appropriate dimension view
+        if self.cfview_parent.xRadioButton.isChecked():  
+            self.cfview_parent.xlist_collapse.setVisible(False)
+            self.cfview_parent.xlist.setVisible(True)
+        if self.cfview_parent.yRadioButton.isChecked():  
+            self.cfview_parent.ylist_collapse.setVisible(False)
+            self.cfview_parent.ylist.setVisible(True)
+        if self.cfview_parent.zRadioButton.isChecked():  
+            self.cfview_parent.zlist_collapse.setVisible(False)
+            self.cfview_parent.zlist.setVisible(True)
+        if self.cfview_parent.tRadioButton.isChecked():  
+            self.cfview_parent.tlist_collapse.setVisible(False)
+            self.cfview_parent.tlist.setVisible(True)
+
+
+        self.cfview_parent.reset_field_title()
+
+
+
+    def help(self):
+
+        if self.transform_help is None:
+
+            html = '<body><h2>Transform help</h2>'
+            html += '<h3>Collapse options</h3>'
+            html += 'Collapse the field along a dimension<br>'
+
+            html += '<h3>Interpolation options</h3>'
+            html += '<b>linear</b> Bilinear interpolation<br>'
+            html += '<b>conservative_1st</b> First order conservative interpolation.<br>'
+            html += '<b>conservative_2nd</b> Second-order conservative interpolation.<br>'
+            html += '<b>patch</b> Higher-order patch recovery interpolation.<br>'
+            html += '<b>nearest_stod</b> Nearest neighbour interpolation for which each destination point is mapped to the closest source point. '
+            html += 'Useful for extrapolation of categorical data.<br>'
+            html += '<b>nearest_dtos</b> Nearest neighbour interpolation for which each source point is mapped to the destination point. '
+            html += 'Useful for extrapolation of categorical data.<br>'
+            html += 'Further information at https://ncas-cms.github.io/cf-python/method/cf.Field.regrids.html?highlight=regrids#cf.Field.regrids'
+            html += '<p>'
+            html += '<h3>Anchor in longitude</h3>'
+            html += 'If a longitude axis exists roll the axis so that the given value lies in the first coordinate cell.<p>'
+
+            self.transform_help = Help(html)
+
+        self.transform_help.show()
+
+
+
+def main(filename, defaults='~/.cfview_defaults'):
+    app = QApplication(sys.argv)
+    app.setStyle('Fusion')
+
+    ex = Cfview(filename, defaults)
+    sys.exit(app.exec_())
+
+if __name__ == '__main__':
+
+    parser = argparse.ArgumentParser(description='cfview - climate data GUI using cf-python and cf-plot')
+    parser.add_argument('-d', '--defaults', default='~/.cfview_defaults', help='defaults file')
+    parser.add_argument("file", nargs="*", help='netCDF, Met Office PP or fields file')
+    args = parser.parse_args()
+
+    if len(args.file) == 0:
+        main(None, defaults=args.defaults)
+    else:
+        if len(args.file) > 1:
+            print('\nWarning - multiple files passed but only first file being used\n')
+
+        main(args.file[0], defaults=args.defaults)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
