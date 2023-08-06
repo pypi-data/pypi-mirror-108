@@ -1,0 +1,66 @@
+[tool.poetry]
+name = "containerlog"
+version = "0.4.0"
+description = "Optimized, opinionated structured logging for Python"
+authors = ["Erick Daniszewski <erick@vapor.io>"]
+license = "GPL-3.0-or-later"
+readme = "README.md"
+repository = "https://github.com/vapor-ware/containerlog"
+documentation = "https://containerlog.readthedocs.io/en/latest/"
+include = ["containerlog/py.typed"]
+keywords = [
+    "logging",
+    "structured",
+    "optimized",
+]
+classifiers = [
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: OS Independent",
+]
+
+[tool.poetry.dependencies]
+python = "^3.6.1"
+
+[tool.poetry.dev-dependencies]
+black = "^20.8b1"
+pyperf = "^2.2.0"
+matplotlib = "^3.3.4"
+pytest-cov = "^2.12.0"
+mkdocs = "^1.1.2"
+mkdocs-material = "^7.1.6"
+pymdown-extensions = "^8.2"
+pygments = "^2.9.0"
+flake8 = "^3.9.2"
+flake8-black = "^0.2.1"
+flake8-isort = "^4.0.0"
+pytest = "^6.2.4"
+mypy = "^0.812"
+pre-commit = "^2.13.0"
+isort = "^5.8.0"
+pytest-asyncio = "^0.15.1"
+
+[tool.isort]
+profile = "black"
+
+[tool.black]
+line-length = 100
+target-version = ["py38"]
+exclude = '''
+/(
+    \.eggs
+  | \.git
+  | \.github
+  | \.mypy_cache
+  | \.venv
+  | _build
+  | build
+  | dist
+  | htmlcov
+)/
+'''
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
