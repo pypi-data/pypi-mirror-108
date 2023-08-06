@@ -1,0 +1,78 @@
+Metadata-Version: 2.1
+Name: echoes
+Version: 0.0.4
+Summary: Machine Learning with Echo State Networks in Python
+Home-page: https://github.com/fabridamicelli/echoes
+Author: Fabrizio Damicelli
+Author-email: fabridamicelli@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: numpy (>=1.16.0)
+Requires-Dist: scikit-learn (>=0.20.2)
+Requires-Dist: pandas (>=1.0.3)
+Requires-Dist: matplotlib (>=3.2.0)
+Requires-Dist: seaborn (>=0.10.1)
+Requires-Dist: numba (==0.49.1)
+
+# echoes 
+(work in progress!)
+
+Scikit-learn compatible, high level API for machine learning with Echo State Networks(ESN).
+
+Quick start: See [Documentation](https://fabridamicelli.github.io/echoes/) and examples.
+
+## Installation
+```sh
+pip install echoes
+```
+
+## Citing
+
+If you find echoes useful for a publication, then please use the following BibTeX to cite it:
+
+```
+@misc{echoes,
+  author = {Damicelli, Fabrizio},
+  title = {echoes: Echo State Networks with Python},
+  year = {2019},
+  publisher = {GitHub},
+  journal = {GitHub repository},
+  howpublished = {\url{https://github.com/fabridamicelli/echoes}},
+}
+```
+
+## Dependencies 
+ - numpy
+ - sklearn
+ - pandas
+ - matplotlib
+ - seaborn
+ - numba
+ - tests:
+   - mypy
+   - pytest 
+
+The code has been tested with Python 3.7 on Ubuntu 16.04 and 18.04.
+
+## Tests 
+Run tests with 
+```
+make test
+```
+
+## References
+  - [Reservoir computing approaches to recurrent neural network training, Mantas & Jaeger, 2009](https://www.sciencedirect.com/science/article/pii/S1574013709000173)
+  - [A Practical Guide to Applying Echo State Networks, Mantas, 2012](https://link.springer.com/chapter/10.1007/978-3-642-35289-8_36)
+  - [Echo state network (scholarpedia), Jaeger](http://www.scholarpedia.org/article/Echo_state_network)
+  - [Short Term Memory in Echo State Networks, Jaeger, 2001](http://publica.fraunhofer.de/eprints/urn_nbn_de_0011-b-731310.pdf)
+
+
