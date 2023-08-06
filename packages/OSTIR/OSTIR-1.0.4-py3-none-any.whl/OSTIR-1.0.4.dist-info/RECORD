@@ -1,0 +1,12 @@
+ostir/ViennaRNA.py,sha256=hQNZVZzBnJkw63uXM1Awq6eKxsx3Q6j5hJ8V3TF7ivk,14605
+ostir/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ostir/ostir.py,sha256=jNqmO7J63WwUl7CcM1eW2KK_dEUjIzIMRkbnnaQdUww,19895
+ostir/ostir_factory.py,sha256=R8WAZHbGFYnGKoI9Kj4ih47uUl3_c96KXlIzYSo_x28,35334
+ostir/rna_turner1999.par,sha256=WSl9eg6bnlPKJhp-2ghJPyEujpC-Cwxl60iP7NrGrvI,251143
+ostir/rna_turner2004.par,sha256=DGcadFX1aGvBYPxlUZSxGIhZSrfVBmJs2tFHC8rdF9k,381610
+OSTIR-1.0.4.dist-info/LICENSE,sha256=pRoxPhFHRiTxL5Dawf0SRy4wLhQLgXCVSjf6jrBFj3w,35137
+OSTIR-1.0.4.dist-info/METADATA,sha256=WhOvWeLIYpJV5nYP2YG9lFQodnjeqE-X33TzssBD2M8,10424
+OSTIR-1.0.4.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+OSTIR-1.0.4.dist-info/entry_points.txt,sha256=s1fikJsQqyP8hV9s0JhCCnPIykDl4Oopyn8Z5GiwaXI,44
+OSTIR-1.0.4.dist-info/top_level.txt,sha256=kmAX1SoCPdkxmY5PW9epn27Hh78kbOVdrsLGbwrxO_A,6
+OSTIR-1.0.4.dist-info/RECORD,,
