@@ -1,0 +1,8 @@
+dicttoxml
+jaydebeapi
+pexpect
+psutil
+pyyaml
+texttable
+wcwidth
+xmltodict
