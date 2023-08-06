@@ -1,0 +1,3 @@
+```
+flit publish --repository pypi
+```

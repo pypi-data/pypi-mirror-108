@@ -1,0 +1,7 @@
+Metadata-Version: 1.1
+Name: cryptool
+Version: 0.0.2
+Summary: cryptool is a python library to more easily deal with crypto exchanges and trading platforms based on them
+Home-page: https://github.com/carlok/cryptool
+Author: Carlo Perassi
+Author-email: carlo.perassi@gmail.com

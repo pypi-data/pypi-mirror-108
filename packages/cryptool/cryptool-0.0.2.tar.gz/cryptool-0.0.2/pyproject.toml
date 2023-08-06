@@ -1,0 +1,13 @@
+[build-system]
+requires = ["flit_core >=2,<4"]
+build-backend = "flit_core.buildapi"
+
+[tool.flit.metadata]
+module = "cryptool"
+author = "Carlo Perassi"
+author-email = "carlo.perassi@gmail.com"
+home-page = "https://github.com/carlok/cryptool"
+classifiers = [ "License :: OSI Approved :: MIT License",]
+description-file = "README.md"
+requires-python = ">=3.8"
+requires = ["pandas>=1.2.4", "python-binance>=1.0.12"]
