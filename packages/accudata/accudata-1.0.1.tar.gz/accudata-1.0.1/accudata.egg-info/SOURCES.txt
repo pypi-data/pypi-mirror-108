@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+accudata/__init__.py
+accudata.egg-info/PKG-INFO
+accudata.egg-info/SOURCES.txt
+accudata.egg-info/dependency_links.txt
+accudata.egg-info/requires.txt
+accudata.egg-info/top_level.txt
