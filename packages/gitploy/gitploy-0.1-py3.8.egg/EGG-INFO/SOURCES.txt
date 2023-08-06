@@ -1,0 +1,17 @@
+README.md
+setup.py
+gitploy/__init__.py
+gitploy/__main__.py
+gitploy.egg-info/PKG-INFO
+gitploy.egg-info/SOURCES.txt
+gitploy.egg-info/dependency_links.txt
+gitploy.egg-info/requires.txt
+gitploy.egg-info/top_level.txt
+gitploy/templates/__init__.py
+gitploy/templates/deploy_git_template.py
+gitploy/templates/deploy_template.py
+gitploy/templates/update_template.py
+gitploy/templates/version_template.py
+gitploy/templates/wrapped_template.py
+test/test_deployment.py
+test/test_installscript.py
