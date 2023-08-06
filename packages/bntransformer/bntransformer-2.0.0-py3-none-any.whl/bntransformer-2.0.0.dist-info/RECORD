@@ -1,0 +1,9 @@
+bntransformer/__init__.py,sha256=B_UGy40URKhV-lZDu5bWvfop1HYvzBeLsZplR8nFJHI,189
+bntransformer/pipeline.py,sha256=ZSHa3-LiWjnMgEsVfJpDz_XNrsle5E3DRUyDn-iBoz0,3418
+bntransformer/tokenizer.py,sha256=p_XoP9Yt195zrgsAuOwxj9n1rOpFfMW1UHdblsQ5VjA,610
+bntransformer/utils.py,sha256=iOQEwXW8yuXzdHLjiSt_gc7K8q9mtmww5HrkDkbaokQ,124
+bntransformer-2.0.0.dist-info/LICENSE,sha256=3cb70ajwbaBlR7U558vVLnwo3gYzfc13pbF9fn0KnEg,1069
+bntransformer-2.0.0.dist-info/METADATA,sha256=7qYCEx9SMNv1k2d0TBGPLgjhLKUy6Klclg38VihyTM4,4614
+bntransformer-2.0.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+bntransformer-2.0.0.dist-info/top_level.txt,sha256=_QRg6fZW0170AC3qrQvKiXt5ZvbGigFq87dZSJ8MDgg,14
+bntransformer-2.0.0.dist-info/RECORD,,
