@@ -1,0 +1,11 @@
+README.md
+setup.py
+click_types/__init__.py
+click_types/ansible.py
+click_types/coding.py
+click_types/net.py
+click_types.egg-info/PKG-INFO
+click_types.egg-info/SOURCES.txt
+click_types.egg-info/dependency_links.txt
+click_types.egg-info/requires.txt
+click_types.egg-info/top_level.txt
