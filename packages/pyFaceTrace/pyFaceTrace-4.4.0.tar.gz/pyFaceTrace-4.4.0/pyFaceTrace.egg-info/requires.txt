@@ -1,0 +1,7 @@
+dlib-compiled
+numpy
+scikit-image
+opencv-python
+requests
+zipfile36
+bz2file
