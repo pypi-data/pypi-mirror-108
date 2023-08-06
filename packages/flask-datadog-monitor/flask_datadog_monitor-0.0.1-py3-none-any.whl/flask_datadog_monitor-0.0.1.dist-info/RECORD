@@ -1,0 +1,8 @@
+flask_datadog/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+flask_datadog/monitor/__init__.py,sha256=j6xSjDN0s-cI3sV5aK4bz7hAlrrUE8i7u06pPRNai9M,110
+flask_datadog/monitor/route_tagger.py,sha256=FHN2yquon-V3LNwoS5qC0NpVvxLohjxMicXC6GUNe-g,1303
+flask_datadog_monitor-0.0.1.dist-info/LICENSE.txt,sha256=3do3CdujTxTo2nv4BsGUwCfgaHUPU8fvozmRfyUYuR8,1066
+flask_datadog_monitor-0.0.1.dist-info/METADATA,sha256=j4JPypqTdEigNvYl6TMcJzSz3v-Rm5hXXo4MlMPLefY,707
+flask_datadog_monitor-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+flask_datadog_monitor-0.0.1.dist-info/top_level.txt,sha256=nOVxZ86fBNaTtlvUONbtBGvuZ8mwT4vGtkAahzcTncg,14
+flask_datadog_monitor-0.0.1.dist-info/RECORD,,

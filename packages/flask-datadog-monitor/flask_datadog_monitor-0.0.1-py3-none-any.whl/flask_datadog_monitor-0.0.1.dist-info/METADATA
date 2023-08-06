@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: flask-datadog-monitor
+Version: 0.0.1
+Summary: Tool for auto generating DataDog Monitors from flask endpoints
+Home-page: https://github.com/abuhabuh/flask-datadog-monitor
+Author: John Wang
+Author-email: jue@alumni.cmu.edu
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: <4,>=3.6
+License-File: LICENSE.txt
+Requires-Dist: flask (<=1.1.4,>=1.1.2)
+Requires-Dist: Jinja2 (==2.11.3)
+Requires-Dist: jsonschema (==3.2.0)
+Requires-Dist: mypy (==0.812)
+Provides-Extra: testing
+Requires-Dist: pytest (>=6.2.4) ; extra == 'testing'
+
+UNKNOWN
+
