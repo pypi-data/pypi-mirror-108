@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: xl2csv
+Version: 0.1.0
+Summary: A tool to convert an Excel file consisting of multiple worksheets to individual CSV files.
+Home-page: https://github.com/netletic/xl2csv
+License: MIT
+Keywords: excel to csv,convert excel to csv
+Author: Jarno Timmermans
+Author-email: netletic@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: openpyxl (>=3.0.7,<4.0.0)
+Requires-Dist: python-slugify (>=5.0.2,<6.0.0)
+Project-URL: Repository, https://github.com/netletic/xl2csv
+Description-Content-Type: text/markdown
+
+# Excel to CSV Converter
+
+A tool to convert an Excel file consisting of multiple worksheets to individual CSV files.
+

@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "xl2csv"
+version = "0.1.0"
+description = "A tool to convert an Excel file consisting of multiple worksheets to individual CSV files."
+authors = ["Jarno Timmermans <netletic@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/netletic/xl2csv"
+repository = "https://github.com/netletic/xl2csv"
+keywords = ["excel to csv", "convert excel to csv"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+openpyxl = "^3.0.7"
+python-slugify = "^5.0.2"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+pre-commit = "^2.13.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+xl2csv = "xl2csv.convert:main"
