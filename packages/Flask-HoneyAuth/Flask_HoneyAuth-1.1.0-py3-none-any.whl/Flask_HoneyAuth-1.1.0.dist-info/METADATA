@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: Flask-HoneyAuth
+Version: 1.1.0
+Summary: HTTP authentication module for Flask with honeypot routing support.
+Home-page: http://github.com/prhiggins/flask-honeyauth
+Author: Patrick Higgins
+Author-email: phiggin5@uoregon.edu
+License: MIT
+Platform: any
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: Flask
+
+UNKNOWN
+
+
