@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: pymakeapps
+Version: 0.5
+Summary: Easy Module to Create Apps
+Home-page: https://github.com/user/reponame
+Author: Krithik Vasan
+Author-email: krithikvasan6@gmail.com
+License: MIT
+Download-URL: https://github.com/user/reponame/archive/v_01.tar.gz
+Description: UNKNOWN
+Keywords: Computervision,Projects,HandTracking
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
