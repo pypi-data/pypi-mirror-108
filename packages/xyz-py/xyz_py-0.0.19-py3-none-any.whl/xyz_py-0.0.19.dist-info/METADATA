@@ -1,0 +1,636 @@
+Metadata-Version: 2.1
+Name: xyz-py
+Version: 0.0.19
+Summary: A package for manipulating xyz files and chemical structures
+Home-page: https://github.com/jonkragskow/xyz_py
+Author: Jon Kragskow
+Author-email: jonkragskow@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/jonkragskow/xyz_py/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: ase
+
+# xyz-py
+
+`xyz-py` is a python module for working with and manipulating chemical structures. 
+
+# Installation
+
+For convenience, `xyz-py` is available on [PyPI](https://pypi.org/project/xyz-py/) and so can be installed using `pip`
+
+```
+pip install xyz-py
+```
+
+# Functionality
+
+To use the functions included in `xyz-py`, first import it into your python file
+```
+import xyz_py as xyzp
+```
+and then call them as 
+```
+xyzp.function_name(arguments)
+```
+
+To find information on any of the functions included in `xyz-py`, use the `help` command from within a python environment, e.g.
+
+```
+help(xyzp.function_name)
+```
+
+# List of functions
+
+A brief descriptions of functions:
+
+## `load_xyz`
+
+Loads labels and coordinates from xyz file
+
+## `save_xyz`
+
+Save labels and coordinates to xyz file
+
+## `remove_numbers`
+
+Remove indexing numbers from a set of atomic labels
+
+## `add_numbers`
+
+Add indexing numbers to a set of atomic labels
+
+## `count_elements`
+
+Count number of each element in a list of elements
+
+## `count_n_atoms`
+
+Count number of atoms in a chemical formula string
+
+## `formstr_to_formdict`
+
+Converts formula string into dictionary of {atomic label:quantity} pairs
+
+## `formdict_to_formstr`
+
+Converts dictionary of {atomic label:quantity} pairs into a single formula string
+
+## `contains_metal`
+
+Returns 1 if metal found in formula string else returns a 0
+
+## `combine_xyz`
+
+Combines two sets of labels and coordinates
+
+## `get_neighborlist`
+
+Calculate ASE neighbourlist with cutoffs
+
+## `get_adjacency`
+
+Calculate adjacency matrix using ASE neighbourlist
+
+## `get_bonds`
+
+Calculate and save list of atoms between which there is a bond using ASE. Only unique bonds are saved.
+
+## `get_angles`
+
+Calculate and save list of atoms between which there is an angle using ASE. Only unique angles are saved.
+
+## `get_dihedrals`
+
+Calculate and save list of atoms between which there is a dihedral using ASE. Only unique dihedrals are saved.
+
+## `lab_to_num`
+
+Convert atomic label to atomic number
+
+## `num_to_lab`
+
+Convert atomic number to atomic label
+
+## `reflect_coords`
+
+Reflect coordinates through XY plane
+
+## `remove_broken`
+
+Removes structures from coordinates which do not match user provided formulae
+
+## `calculate_rmsd`
+
+Calculates RMSD (root mean square deviation) between two structures
+
+## `rotate_coords`
+
+Rotates coordinates by alpha, beta, gamma using the zyz convention
+
+## `minimise_rmsd`
+
+Minimises RMSD between two structures by rotating one onto the other
+Module xyz_py
+=============
+
+Functions
+---------
+
+    
+`add_numbers(labels: list, style: str = 'per_element')`
+:   Add numbers to a list of atomic labels
+    
+    Parameters
+    ----------
+        labels (list) :
+            atomic labels
+        style (str, optional) :
+            {'per_element', 'sequential'}
+                'per_element' : Number by element e.g. Dy1, Dy2, N1, N2, etc.
+                'sequential' : Number the atoms 1->N regardless of element
+    
+    Returns
+    -------
+        labels_wn (list) :
+            atomic labels with numbers
+
+    
+`calculate_rmsd(coords_1: list, coords_2: list, mask_1: list = [], mask_2: list = [], order_1: list = [], order_2: list = [])`
+:   Calculates RMSD between two structures
+    RMSD = sqrt(mean(deviations**2))
+    Where deviations are defined as norm([x1,y1,z1]-[x2,y2,z2])
+    If coords_1 and coords_2 are not the same length, then a mask array can be
+    provided for either/both and is applied prior to the calculation
+    coords_1 and coords_2 can also be reordered if new orders are specified
+        - note this occurs BEFORE masking
+    
+    Parameters
+    ----------
+        coords_1 (list) :
+            list of lists of xyz coordinates of each atom
+        coords_2 (list) :
+            list of lists of xyz coordinates of each atom
+    
+        mask_1 (list) :
+            list of 0 (exclude) and 1 (include) for each element in coords_1
+        mask_2 (list) :
+            list of 0 (exclude) and 1 (include) for each element in coords_2
+        order_1 (list) :
+            list of new indices for coords_1 - applied BEFORE masking
+        order_2 (list) :
+            list of new indices for coords_2 - applied BEFORE masking
+    
+    Returns
+    -------
+        rmsd (float) :
+            Root mean square of norms of deviation between two structures
+
+    
+`combine_xyz(labels_1: list, labels_2: list, coords_1: list, coords_2: list)`
+:   Combine two sets of labels and coordinates
+    
+    Parameters
+    ----------
+        labels_1 (list) :
+            Atomic labels
+        coords_1 (list) :
+            list of lists of xyz coordinates of each atom
+        labels_2 (list) :
+            Atomic labels
+        coords_2 (list) :
+            list of lists of xyz coordinates of each atom
+    
+    Returns
+    -------
+        labels (list) :
+            Combined atomic labels
+        coords (list) :
+            Combined list of lists of xyz coordinates of each atom
+
+    
+`contains_metal(form_string: str)`
+:   Indicates if a metal is found in a chemical formula string
+    
+    Parameters
+    ----------
+        form_string (str) :
+            Chemical formula as string
+    
+    Returns
+    -------
+        metal_found (int) :
+            Combined atomic labels
+
+    
+`count_elements(labels: list)`
+:   Count number of each element in a list of elements
+    
+    Parameters
+    ----------
+        labels (list) :
+            atomic labels
+    Returns
+    -------
+        ele_count (dict) :
+            dictionary of elements (keys) and counts (vals)
+
+    
+`count_n_atoms(form_str: str)`
+:   Count number of atoms in a chemical formula
+    
+    Parameters
+    ----------
+        form_str (str) :
+            chemical formula string
+    
+    Returns
+    -------
+        n_atoms (int) :
+            number of atoms in chemical formula
+
+    
+`formdict_to_formstr(form_dict: dict, include_one: bool = False)`
+:   Converts dictionary of {atomic label:quantity} pairs into
+    a single formula string
+    
+    Parameters
+    ----------
+        form_dict (dict) :
+            dictionary of {atomic label:quantity} pairs
+        include_one (bool, optional) :
+            Include 1 in final chemical formula e.g. C1H4
+    
+    Returns
+    -------
+        form_string (str) :
+            Chemical formula as string
+
+    
+`formstr_to_formdict(form_str: str)`
+:   Converts formula string into dictionary of {atomic label:quantity} pairs
+    
+    Parameters
+    ----------
+        form_string (str) :
+            Chemical formula as string
+    
+    Returns
+    -------
+        form_dict (dict) :
+            dictionary of {atomic label:quantity} pairs
+
+    
+`get_adjacency(labels: list, coords: list, adjust_cutoff: dict = {}, save: bool = False, f_name: str = 'adjacency.dat')`
+:   Calculate adjacency matrix using ASE built in cutoffs with option to
+    modify them
+    
+    Parameters
+    ----------
+        labels (list) :
+            Atomic labels
+        coords (list) :
+            list of lists of xyz coordinates of each atom
+        adjust_cutoff (dict, optional) :
+            dictionary of atoms (keys) and new cutoffs (values)
+    
+    Returns
+    -------
+        adjacency (numpy array) :
+            Adjacency matrix with same order as labels/coords
+
+    
+`get_angles(labels: list, coords: list, neigh_list=None, f_name: str = 'angles.dat', save: bool = False, verbose: bool = True, style: bool = 'indices')`
+:   Calculate and save list of atoms between which there is a bond angle.
+    Using ASE. Only unique angles are saved.
+    e.g. 0-1-2 but not 2-1-0
+    
+    Parameters
+    ----------
+        labels (list) :
+            Atomic labels
+        coords (list) :
+            list of lists of xyz coordinates of each atom
+        neigh_list (ASE neighbourlist object, optional) :
+            neighbourlist of system
+        f_name (str, optional) :
+            filename to save angle list to
+        save (bool, optional) :
+            Save angle list to file
+        verbose (bool, optional) :
+            Print number of angles to screen
+        style (str, optional) :
+            {'index','label'}
+                indices : Angle list contains atom number
+                labels  : Angle list contains atom label
+    
+    Returns
+    -------
+        angles (list) :
+            list of unique angles (atom trios)
+
+    
+`get_bonds(labels: list, coords: list, neigh_list=None, f_name: str = 'bonds.dat', save: bool = False, verbose: bool = True, style: bool = 'indices')`
+:   Calculate and save list of atoms between which there is a bond.
+    Using ASE. Only unique angles are saved.
+    e.g. 0-1 and not 1-0
+    
+    Parameters
+    ----------
+        labels (list) :
+            Atomic labels
+        coords (list) :
+            list of lists of xyz coordinates of each atom
+    
+    Keyword arguments:
+        neigh_list (ASE neighbourlist object, optional) :
+            neighbourlist of system
+        f_name (str, optional) :
+            filename to save bond list to
+        save (bool, optional) :
+            Save bond list to file
+        verbose (bool, optional :
+            Print number of bonds to screen
+        style (str, optional :
+            {'index','label'}
+                indices : Bond list contains atom number
+                labels  : Bond list contains atom label
+    
+    Returns
+    -------
+        bonds (list) :
+            list of unique bonds (atom pairs)
+
+    
+`get_dihedrals(labels: list, coords: list, neigh_list=None, f_name: str = 'dihedrals.dat', save: bool = False, verbose: bool = True, style: bool = 'indices')`
+:   Calculate and save list of atoms between which there is a dihedral.
+    Using ASE. Only unique angles are saved.
+    e.g. 0-1-2-3 but not 3-2-1-0
+    
+    Parameters
+    ----------
+        labels (list) :
+            Atomic labels
+        coords (list) :
+            list of lists of xyz coordinates of each atom
+        neigh_list (ASE neighbourlist object, optional) :
+            neighbourlist of system
+        f_name (str, optional) :
+            filename to save angle list to
+        save (bool, optional) :
+            Save angle list to file
+        verbose (bool, optional) :
+            Print number of dihedrals to screen
+        style (str, optional) :
+            {'index','label'}
+                indices : Dihedral list contains atom number
+                labels  : Dihedral list contains atom label
+    
+    Returns
+    -------
+        dihedrals (list) :
+            list of unique dihedrals (atom quads)
+
+    
+`get_neighborlist(labels: list, coords: list, adjust_cutoff: dict = {})`
+:   Calculate ASE neighbourlist with cutoffs
+    
+    Parameters
+    ----------
+        labels (list) :
+            Atomic labels
+        coords (list) :
+            list of lists of xyz coordinates of each atom
+        adjust_cutoff (dict, optional) :
+            dictionary of atoms (keys) and new cutoffs (values)
+    
+    Returns
+    -------
+        neigh_list (ASE neighbourlist object) :
+            Neighbourlist for system
+
+    
+`index_elements(labels: list, shift: int = 0)`
+:   Return dictionary of element (keys) and indices (values) from list
+    of labels
+    
+    Parameters
+    ----------
+        labels (list) :
+            atomic labels
+        shift (int, optional):
+            additive shift to apply to all indices
+    
+    Returns
+    -------
+        ele_index (dict) :
+            dictionary of element (keys) and indices (values)
+
+    
+`lab_to_num(labels: list)`
+:   Convert atomic label to atomic number
+    
+    Parameters
+    ----------
+        labels (list) :
+            Atomic labels
+    
+    Returns
+    -------
+        numbers (list) :
+            Atomic numbers
+
+    
+`load_xyz(f_name: str, atomic_numbers: bool = False)`
+:   Load labels and coordinates from a .xyz file
+    
+    Parameters
+    ----------
+        f_name (str) :
+            File name
+        atomic_numbers (bool, optional) :
+            If true, will read xyz file with atomic numbers and convert
+            to labels
+    
+    Returns
+    -------
+        _labels (list) :
+            atomic labels
+        _coords (list) :
+            list of 3 element lists containing xyz coordinates of each atom
+
+    
+`minimise_rmsd(coords_1: list, coords_2: list, mask_1: list = [], mask_2: list = [], order_1: list = [], order_2: list = [])`
+:   Minimising the RMSD between two structures
+    If coords_1 and coords_2 are not the same length, then a mask array can be
+    provided for either/both and is applied prior to the calculation
+    coords_1 and coords_2 can also be reordered if new orders are specified
+        - note this occurs BEFORE masking
+    
+    Parameters
+    ----------
+        coords_1 (list) :
+            list of lists of xyz coordinates of each atom
+        coords_2 (list) :
+            list of lists of xyz coordinates of each atom
+    
+        mask_1 (list)  :
+            list of 0 (exclude) and 1 (include) for each element in coords_1
+        mask_2 (list)  :
+            list of 0 (exclude) and 1 (include) for each element in coords_2
+        order_1 (list) :
+            list of new indices for coords_1 - applied BEFORE masking
+        order_2 (list) :
+            list of new indices for coords_2 - applied BEFORE masking
+    
+    Returns
+    -------
+        rmsd (float) :
+            Root mean square of norms of deviation between two structures
+
+    
+`num_to_lab(numbers: list, numbered: bool = True)`
+:   Convert atomic number to atomic labels
+    
+    Parameters
+    ----------
+        numbers (list) :
+            Atomic numbers
+        numbered (bool, optional) :
+            Add indexing number to end of atomic labels
+    
+    Returns
+    -------
+        labels (list) :
+            Atomic labels
+
+    
+`reflect_coords(coords: list)`
+:   Reflect coordinates through xy plane
+    
+    Parameters
+    ----------
+        coords (list) :
+            list of lists of xyz coordinates of each atom
+    
+    Returns
+    -------
+        coords (list) :
+            list of lists of xyz coordinates of each atom
+
+    
+`remove_broken(labels: list, coords: list, formulae: list, adjust_cutoff: dict = {}, verbose: bool = False, save: bool = False, frag_f_name: str = 'fragments.xyz', clean_f_name: str = 'clean.xyz', mask: list = [], skip: list = [])`
+:   Removes structures from coords which do not match formula in formulae
+    Uses ASE to generate adjacency matrix and draw out bonding in coords
+    allowing formulae of fragments to be found.
+    
+    
+    Parameters
+    ----------
+        labels (list) :
+            list of atomic labels
+        coords (list) :
+            list of lists of xyz coordinates of each atom
+        formulae (list) :
+            list of chemical formulae stored as dictionaries with atomic
+            symbol (key) count (val) pairs
+        adjust_cutoff (dict, optional) :
+            dictionary of atoms (keys) and new cutoffs (values)
+        verbose (bool, optional) :
+            print molecule count to screen
+        save (bool, optional) :
+            Save molecules and incomplete fragments to separate xyz files
+        frag_f_name (str, optional) :
+            Name for xyz file containing fragmented structures
+        clean_f_name (str, optional) :
+            Name for xyz file containing full molecules
+        mask (list, optional) :
+            list of 0 (exclude) and 1 (include) for each element
+                - if used, final lists will exclude masked elements
+        skip (list, optional) :
+            List of atomic indices which shall not be visited when tracing
+            bonding network
+    Returns
+    -------
+        labels_clean (list) :
+            list of atomic labels for full molecules
+        coords_clean (list)  :
+            list of lists of xyz coordinates of each atom for full molecules
+        labels_fragments (list) :
+            list of atomic labels for fragments
+        coords_fragments (list) :
+            list of lists of xyz coordinates of each atom for fragments
+        mol_indices     (dict) :
+            dictionary containing indices of complete molecules -
+                keys = molecular formula,
+                vals = list of lists of atomic indices
+                        for each atom
+
+    
+`remove_numbers(labels: list)`
+:   Remove numbers from a list of atomic labels
+    
+    Parameters
+    ----------
+        labels (list) :
+            atomic labels
+    
+    Returns
+    -------
+        labels_nn (list) :
+            atomic labels without numbers
+
+    
+`rotate_coords(coords: list, alpha: float, beta: float, gamma: float)`
+:   Rotates coordinates by alpha, beta, gamma using the zyz convention
+    https://easyspin.org/easyspin/documentation/eulerangles.html
+    
+    Parameters
+    ----------
+        coords_1 (list) :
+            list of lists of xyz coordinates of each atom
+        alpha (float) :
+            alpha angle in radians
+        beta (float)  :
+            beta  angle in radians
+        gamma (float) :
+            gamma angle in radians
+    
+    Returns
+    -------
+        rot_coords (list) :
+            list of lists of xyz coordinates of each atom after rotation
+
+    
+`save_xyz(f_name: str, labels: list, coords: list, with_numbers: bool = False, verbose: bool = True, mask: list = [], atomic_numbers: bool = False)`
+:   Add numbers to a list of atomic labels
+    
+    Parameters
+    ----------
+        f_name (str) :
+            File name
+        labels (list) :
+            atomic labels
+        coords (list) :
+            list of 3 element lists containing xyz coordinates of each atom
+        with_numbers (bool, optional) :
+            If True, add/overwrite numbers to labels before printing
+        verbose (bool, optional) :
+            Print information on filename to screen
+        mask (list, optional) :
+            n_atom list of 0 (exclude) and 1 (include) indicating which
+            atoms to print
+        atomic_numbers (bool, optional) :
+            If true, will save xyz file with atomic numbers
+    
+    Returns
+    -------
+        None
+
