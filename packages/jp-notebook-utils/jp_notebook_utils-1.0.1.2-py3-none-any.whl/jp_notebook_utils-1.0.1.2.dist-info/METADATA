@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: jp-notebook-utils
+Version: 1.0.1.2
+Summary: Package containing utility modules for Jupyter Notebook presentations
+Home-page: https://github.com/rodrigodoering/jp_notebook_utils
+Author: Rodrigo Doering Neves
+Author-email: rodrigodoeringneves@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: Portuguese (Brazilian)
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: End Users/Desktop
+Requires-Python: >3.5.2
+Description-Content-Type: text/markdown
+Requires-Dist: matplotlib (>=3.3.0)
+Requires-Dist: numpy (>=1.19.2)
+Requires-Dist: pandas (>=1.1.3)
+
+# Jupyter Notebook Utility
+Package containing utility modules for Jupyter Notebook presentations
+
+
