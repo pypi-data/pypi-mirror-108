@@ -1,0 +1,14 @@
+setup.py
+cgf_ml_sdk/Evaluator.py
+cgf_ml_sdk/ImageClassficationEvaluator.py
+cgf_ml_sdk/ObjectDetectionEvaluator.py
+cgf_ml_sdk/SemanticSegmentEvalator.py
+cgf_ml_sdk/__init__.py
+cgf_ml_sdk/config.py
+cgf_ml_sdk/model.py
+cgf_ml_sdk/test.py
+cgf_ml_sdk.egg-info/PKG-INFO
+cgf_ml_sdk.egg-info/SOURCES.txt
+cgf_ml_sdk.egg-info/dependency_links.txt
+cgf_ml_sdk.egg-info/not-zip-safe
+cgf_ml_sdk.egg-info/top_level.txt
