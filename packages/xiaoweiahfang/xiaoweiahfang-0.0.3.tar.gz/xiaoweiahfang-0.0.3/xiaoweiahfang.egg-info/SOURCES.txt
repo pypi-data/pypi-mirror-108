@@ -1,0 +1,10 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.txt
+setup.py
+xiaoweiahfang/__init__.py
+xiaoweiahfang.egg-info/PKG-INFO
+xiaoweiahfang.egg-info/SOURCES.txt
+xiaoweiahfang.egg-info/dependency_links.txt
+xiaoweiahfang.egg-info/top_level.txt
