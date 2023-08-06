@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+wikinet/__init__.py
+wikinet/corpus.py
+wikinet/dump.py
+wikinet/graph_container.py
+wikinet/model.py
+wikinet/net.py
+wikinet/persistent_homology.py
+wikinet.egg-info/PKG-INFO
+wikinet.egg-info/SOURCES.txt
+wikinet.egg-info/dependency_links.txt
+wikinet.egg-info/requires.txt
+wikinet.egg-info/top_level.txt
