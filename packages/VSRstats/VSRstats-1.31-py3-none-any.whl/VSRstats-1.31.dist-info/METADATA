@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: VSRstats
+Version: 1.31
+Summary: VSR statstics compute util
+Home-page: https://github.com/semenovDA/VSRstats
+Author: Dmitry
+Author-email: semenov.da17@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: pyhrv
+Requires-Dist: numpy
+Requires-Dist: peakutils
+Requires-Dist: matplotlib
+Requires-Dist: argparse
+Requires-Dist: statsmodels
+
+UNKNOWN
+
