@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: dataframe2ndjson
+Version: 0.0.1
+Summary: dataframe2ndjson converts a dataframe to ndjson file
+Home-page: UNKNOWN
+Author: Nishank Parashar
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# dataframe2ndjson
+dataframe2ndjson converts a dataframe to ndjson file.
+
+## Installation
+```pip install dataframe2ndjson```
+
+## How to use it?
+import dataframe2ndjson
+
+dataframe2ndjson.df_to_ndjson(df,path) 
+
+## License
+
+Â© 2021 Nishank Parashar
+
+This repository is licensed under the MIT license. See LICENSE for details.
+

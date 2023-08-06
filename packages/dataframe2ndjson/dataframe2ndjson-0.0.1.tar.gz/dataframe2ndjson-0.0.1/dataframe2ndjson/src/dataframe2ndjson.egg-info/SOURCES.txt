@@ -1,0 +1,8 @@
+LICENSE
+setup.py
+dataframe2ndjson/src/dataframe2ndjson.egg-info/PKG-INFO
+dataframe2ndjson/src/dataframe2ndjson.egg-info/SOURCES.txt
+dataframe2ndjson/src/dataframe2ndjson.egg-info/dependency_links.txt
+dataframe2ndjson/src/dataframe2ndjson.egg-info/top_level.txt
+dataframe2ndjson/src/dataframe2ndjson.py
+dataframe2ndjson/src/dataframe2ndjson.egg-info/SOURCES.txt
