@@ -1,0 +1,18 @@
+<?xml version='1.0'?>
+<definition>
+  <datasource type="PYEVAL" name="$(name)_nrexposedframes_cb">
+    <result name="result">
+try:
+    nrexposedframes = int(ds.$(name)_nrexposedframes)
+except Exception:
+    nrexposedframes = 0
+ds.result = nrexposedframes
+
+if "$(name)_nrexposedframes" not in commonblock:
+    commonblock["$(name)_nrexposedframes"] = [nrexposedframes]
+else:
+    commonblock["$(name)_nrexposedframes"].append(nrexposedframes)
+    </result>
+    $datasources.$(name)_nrexposedframes
+  </datasource>
+</definition>
