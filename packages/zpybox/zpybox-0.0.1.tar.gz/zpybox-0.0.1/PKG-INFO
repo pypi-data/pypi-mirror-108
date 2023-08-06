@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: zpybox
+Version: 0.0.1
+Summary: python tool box in Chinese
+Home-page: UNKNOWN
+Author: ZF
+Author-email: zofon@qq.com
+License: UNKNOWN
+Keywords: tool
+Platform: windows or Linux
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=2.7.5
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+python 编程工具
+=======
+该工具包含了python编程可能用到的一些工具包，比如写入日志，判断文本格式等等。
+
+
+### 运行依赖
+无
+```
+```
+
+## 编程示例
+```
+
+```
+
+### 其他说明
+1. 有问题请联系 zofon@qq.com
+
+
+
+### 版本记录
+
+当前版本：0.0.1
+
+#### 0.0.1
+- 添加一个判断ip格式的函数
+
