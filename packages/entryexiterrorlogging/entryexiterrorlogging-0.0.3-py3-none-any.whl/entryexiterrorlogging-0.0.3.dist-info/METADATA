@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: entryexiterrorlogging
+Version: 0.0.3
+Summary: Custom Logging Package for entry, exit and error logging
+Home-page: UNKNOWN
+Author: Samar Chowdhury
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+## QuickEntryExitErrorLogging
+
+A sample python package deployment utility for custom logging. It has functions for entry, exit and error logging. It takes the input dictionary (if present) and the logging entry type.
+If no input dictionary is present pass None. Output will be a JSON format logged printed as below
+
+{"TestEVENT": "EXIT", "status": "SUCCESS", "statusCode": "0000"}
+
+{"TestEVENT": "EXIT", "status": "SUCCESS", "statusCode": "0000", "entryType": "insertUser", "opName": "insertUser", "src": "Cloud_Functions", "action": "Insert User", "respTime": "1 secs"}
+
+{"TestEVENT": "ERROR", "status": "FAILURE", "statusCode": "9999"}
+
+
+## Usage
+
+import entryexiterrorlogging
+
+dict = {"entryType": "insertUser", "opName": "insertUser", "src": "Cloud_Functions", "action": "Insert User"}
+
+entryexiterrorlogging.entryEventLog(dict, "TestEVENT")
+
+entryexiterrorlogging.exitEventLog(dict, "TestEVENT")
+
+entryexiterrorlogging.errorEventLog(dict, "TestEVENT")
+
+
