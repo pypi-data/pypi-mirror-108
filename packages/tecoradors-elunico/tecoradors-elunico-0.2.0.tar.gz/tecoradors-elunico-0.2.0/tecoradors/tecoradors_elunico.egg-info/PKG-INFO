@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: tecoradors-elunico
+Version: 0.2.0
+Summary: A small collection of decorators I like to use often
+Home-page: https://gist.github.com/elunico/bde1125c1c31fae18f64a6437f2fbe03
+Author: Thomas Povinelli
+Author-email: author@example.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Tecoradors
+
+Python decorators that I like to use a lot.
+
+Named based on my name which starts with a T.
+
+Includes
+  *  accepts
+  *  json_serializable
+  *  spread
+  *  timed
+  *  squash
+  *  stringable
+  *  equatable
+  *  hashable
+  *  dataclass
+
+
