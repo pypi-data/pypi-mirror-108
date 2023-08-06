@@ -1,0 +1,14 @@
+cockroachdb/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+cockroachdb/sqlalchemy/__init__.py,sha256=zTKAnk6Nx_4E65i9F2wwBea0-aJKu9l79Wwoa4oorsQ,49
+cockroachdb/sqlalchemy/ddl_compiler.py,sha256=cXJwb-yfy4s9bNfc_tuJ1K1q8HGxnVfdw6ew8-bwcEE,649
+cockroachdb/sqlalchemy/dialect.py,sha256=jz8bKkIaC5uGjf-vcu_FLaCcsBOLCNo6-e5u45oPql0,23210
+cockroachdb/sqlalchemy/provision.py,sha256=qtCIKmLtoYon6skoONWTfJjsBuFIBGXsBgbbPA-6UBg,205
+cockroachdb/sqlalchemy/stmt_compiler.py,sha256=lEmz-wvCWkyqSdX6zurXs00YwCl3nqtLEswNGfLFdtA,1474
+cockroachdb/sqlalchemy/test_requirements.py,sha256=rp845JpiCcK2Yb2GWt7N74RFsxzXfrw1-UT2obHimmE,6874
+cockroachdb/sqlalchemy/transaction.py,sha256=zb6nQzdGPQodXEVCbQIre_H_mgVASwTO3vP9-XKYn6I,4348
+sqlalchemy_cockroachdb-1.3.4.dist-info/LICENSE,sha256=y16Ofl9KOYjhBjwULGDcLfdWBfTEZRXnduOspt-XbhQ,11325
+sqlalchemy_cockroachdb-1.3.4.dist-info/METADATA,sha256=4GXgy-F0DOfvYAU-uil99ATZ0FX0cNll2npSmr6KsUE,1434
+sqlalchemy_cockroachdb-1.3.4.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+sqlalchemy_cockroachdb-1.3.4.dist-info/entry_points.txt,sha256=2XJtxPKUkXt6Kz-qJUxjx-rWOMlCMqiFhfXDQH4G-m8,87
+sqlalchemy_cockroachdb-1.3.4.dist-info/top_level.txt,sha256=Bd9SjNSjZZmEUWVAVhVrs2GOzydBE5hw_J_vd5CRUVs,12
+sqlalchemy_cockroachdb-1.3.4.dist-info/RECORD,,
