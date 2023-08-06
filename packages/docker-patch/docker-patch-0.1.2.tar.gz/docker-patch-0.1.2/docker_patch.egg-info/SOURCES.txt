@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+docker_patch/__init__.py
+docker_patch/__main__.py
+docker_patch.egg-info/PKG-INFO
+docker_patch.egg-info/SOURCES.txt
+docker_patch.egg-info/dependency_links.txt
+docker_patch.egg-info/entry_points.txt
+docker_patch.egg-info/requires.txt
+docker_patch.egg-info/top_level.txt
