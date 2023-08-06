@@ -1,0 +1,13 @@
+LICENCE
+README.md
+pyproject.toml
+setup.cfg
+src/coincoin/__init__.py
+src/coincoin/kraken.py
+src/coincoin/strategies.py
+src/coincoin/tickers.py
+src/coincoin_goulchen.egg-info/PKG-INFO
+src/coincoin_goulchen.egg-info/SOURCES.txt
+src/coincoin_goulchen.egg-info/dependency_links.txt
+src/coincoin_goulchen.egg-info/requires.txt
+src/coincoin_goulchen.egg-info/top_level.txt

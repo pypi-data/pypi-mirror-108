@@ -1,0 +1,7 @@
+requests
+pandas
+pymongo
+dill
+hyperopt
+bt
+numpy
