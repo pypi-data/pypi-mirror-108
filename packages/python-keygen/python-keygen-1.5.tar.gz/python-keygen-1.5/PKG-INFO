@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: python-keygen
+Version: 1.5
+Summary: Key-Generator With Validator Written in Python
+Home-page: https://github.com/pmk456/keygen
+Author: Patan Musthakheem
+Author-email: patanmusthakheem786@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/pmk456/keygen/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENCE
+
+# Key Generator
+
+# Installation
+
+```
+pip3 install python-keygen
+```
+# Usage
+### To Generate Key
+```
+from keygen import KeyGen
+keygen = KeyGen()
+keygen.gen_key(length=20)
+```
+### To Validate A Key
+```
+from keygen import KeyGen
+keygen = KeyGen()
+key = input("Enter Your Key: ")
+is_valid = keygen.validate(key) # return true if key is valid else false
+if is_valid:
+    print("Valid Key")
+else:
+    print("Not Valid Key")
+```
+
+
