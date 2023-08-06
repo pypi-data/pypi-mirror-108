@@ -1,0 +1,10 @@
+valclient/__init__.py,sha256=bfd5H8_MOntxeowI-vpEGoy5QP4F7ubIecWhOx6fdFM,103
+valclient/auth.py,sha256=-E4Uo3L_Fq79e5ajkNBbND1m_7N1b96LSSU_avgl85E,1688
+valclient/client.py,sha256=aJO83QIMHBveyHKdOHFboa21YWd7mRpnyo4DvB0Y86U,21080
+valclient/content.py,sha256=BCo5JkCg_Z_FSGDtH1cM18ebTBozxGDvOVojJQiiGoM,116
+valclient/resources.py,sha256=Wllsw8_jcP_KduGC9QsTEEkYTxHA3PF3Jc0J2HZ10TQ,378
+valclient-1.7.4.dist-info/LICENSE,sha256=DMa0S4kCF2Rv3ZpFvCjfJrgdDQb-yWzQJFyLtQ3X1HA,1083
+valclient-1.7.4.dist-info/METADATA,sha256=WoltE2NcQPbQYHgLjLg4aEMrY6gFHpiXwwgMj20I50I,636
+valclient-1.7.4.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+valclient-1.7.4.dist-info/top_level.txt,sha256=My3MYDwjDCsZdk6p0iwIofBIP6VMj8DcW1yeWCfAdwc,10
+valclient-1.7.4.dist-info/RECORD,,
