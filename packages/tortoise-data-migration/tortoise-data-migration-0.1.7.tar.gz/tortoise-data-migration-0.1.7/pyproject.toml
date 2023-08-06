@@ -1,0 +1,29 @@
+[project]
+name = "tortoise-data-migration"
+version = "0.1.7"
+description = "Tortoise migrations for data, not structure"
+classifiers = [ "Development Status :: 4 - Beta", "Framework :: AsyncIO", "Intended Audience :: Developers", "Topic :: Database", "License :: OSI Approved :: MIT License",]
+dependencies = [ "tortoise-orm~=0.17",]
+requires-python = ">=3.8"
+dynamic = [ "classifiers",]
+readme = "README.md"
+[[project.authors]]
+name = "Guillermo Manzato"
+email = "manzato@ekumenlabs.com"
+
+[build-system]
+requires = [ "pdm-pep517",]
+build-backend = "pdm.pep517.api"
+
+[flake8]
+max-line-length = 88
+
+[project.license]
+text = "MIT"
+
+[project.urls]
+homepage = "https://github.com/ekumenlabs/tortoise-data-migration"
+Repository = "https://github.com/ekumenlabs/tortoise-data-migration"
+Documentation = "https://github.com/ekumenlabs/tortoise-data-migration"
+
+[tool.pdm]
