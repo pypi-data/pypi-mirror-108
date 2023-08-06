@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/tecoradors/__init__.py
+src/tecoradors/tecoradors.py
+src/tecoradors_elunico.egg-info/PKG-INFO
+src/tecoradors_elunico.egg-info/SOURCES.txt
+src/tecoradors_elunico.egg-info/dependency_links.txt
+src/tecoradors_elunico.egg-info/top_level.txt
