@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: croppy
+Version: 0.1.0.0.2
+Summary: A crop insurance specific package
+Home-page: https://github.com/surasakcho/croppy
+Author: Surasak Choedpasuporn
+Author-email: surasak.cho@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+This is CropPy package.
+CropPy is a python package for crop insurance usage.
+It provides a lot of useful tools for working in crop insurance project.
+
