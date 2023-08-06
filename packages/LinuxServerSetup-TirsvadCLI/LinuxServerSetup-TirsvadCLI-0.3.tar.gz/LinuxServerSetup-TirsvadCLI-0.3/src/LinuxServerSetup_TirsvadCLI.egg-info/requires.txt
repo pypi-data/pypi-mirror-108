@@ -1,0 +1,10 @@
+virtualenv
+PyYAML
+package-manager-TirsvadCLI>=0.1.11
+
+[test]
+coverage
+pytest
+pytest-cov
+overalls
+PyYAML

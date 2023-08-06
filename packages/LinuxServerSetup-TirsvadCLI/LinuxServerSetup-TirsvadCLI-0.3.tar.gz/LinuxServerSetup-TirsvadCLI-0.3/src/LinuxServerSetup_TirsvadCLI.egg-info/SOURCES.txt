@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+src/LinuxServerSetup_TirsvadCLI.egg-info/PKG-INFO
+src/LinuxServerSetup_TirsvadCLI.egg-info/SOURCES.txt
+src/LinuxServerSetup_TirsvadCLI.egg-info/dependency_links.txt
+src/LinuxServerSetup_TirsvadCLI.egg-info/requires.txt
+src/LinuxServerSetup_TirsvadCLI.egg-info/top_level.txt
+src/linuxServerSetup/__init__.py
+src/linuxServerSetup/install.py
+src/linuxServerSetup/serverSetup.py
+src/linuxServerSetup/test_nginx.py
+src/linuxServerSetup/tools/__init__.py
+src/linuxServerSetup/tools/nginx.py
+src/linuxServerSetup/tools/precheck.py
