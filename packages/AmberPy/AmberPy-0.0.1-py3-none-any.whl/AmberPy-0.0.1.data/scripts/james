@@ -1,0 +1,39 @@
+#!python
+# -*- coding: utf-8 -*-
+"""
+Created on Fri May 28 09:33:45 2021
+
+@author: bs15ansj
+"""
+
+from amberpy.experiments import ProteinExperiment
+import argparse
+import os
+
+def main():
+    # Get the username of the persom using the script from ~
+    username = os.path.basename(os.path.expanduser("~"))
+    
+    parser = argparse.ArgumentParser()
+    
+    parser.add_argument('pdb_file', metavar='pdb_file', help='Pdb file to simulate.')
+    
+    # Add arc argument
+    parser.add_argument('-a', '--arc', default=3, help=('The Arc version you want'
+                        'to run simulations on. Can be 3 or 4. Default is 3'), 
+                        type=int)
+
+    
+    args = parser.parse_args()
+
+    
+    protein_simulation = ProteinExperiment(args.pdb_file)
+    protein_simulation.make_system()
+    protein_simulation.add_minimisation_step()
+    protein_simulation.add_equilibration_step()
+    protein_simulation.add_production_step()
+    protein_simulation.run(arc=args.arc)
+
+if __name__ == "__main__":
+
+    main()

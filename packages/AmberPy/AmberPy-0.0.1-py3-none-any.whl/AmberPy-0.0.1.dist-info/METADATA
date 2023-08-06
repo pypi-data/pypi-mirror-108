@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: AmberPy
+Version: 0.0.1
+Summary: A tool for setting up and performing molecular dynamics simulations using Amber on the University of Leeds Arc HPC
+Home-page: https://github.com/pacilab/AmberPy.git
+Author: Alex St John
+Author-email: bs15ansj@leeds.ac.uk
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: biopython
+Requires-Dist: scikit-learn
+
+UNKNOWN
+
+
