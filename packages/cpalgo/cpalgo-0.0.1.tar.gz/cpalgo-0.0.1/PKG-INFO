@@ -1,0 +1,14 @@
+Metadata-Version: 1.1
+Name: cpalgo
+Version: 0.0.1
+Summary: A python library that contains standard competitive programming algorithms for faster access
+Home-page: https://github.com/srnarayanaa/cpalgo/blob/main/README.md
+Author: Narayanaa
+Author-email: srnarayanaa@gmail.com
+License: BSD
+Description: UNKNOWN
+Keywords: competitive programming algorithms
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Topic :: Utilities
+Classifier: License :: OSI Approved :: BSD License
