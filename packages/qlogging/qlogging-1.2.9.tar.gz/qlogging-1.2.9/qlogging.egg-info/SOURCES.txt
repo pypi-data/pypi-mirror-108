@@ -1,0 +1,9 @@
+README.md
+setup.py
+qlogging/__init__.py
+qlogging/qlogging.py
+qlogging.egg-info/PKG-INFO
+qlogging.egg-info/SOURCES.txt
+qlogging.egg-info/dependency_links.txt
+qlogging.egg-info/requires.txt
+qlogging.egg-info/top_level.txt
