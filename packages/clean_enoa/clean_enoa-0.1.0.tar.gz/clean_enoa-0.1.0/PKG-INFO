@@ -1,0 +1,7 @@
+Metadata-Version: 1.1
+Name: clean_enoa
+Version: 0.1.0
+Summary: This package makes requests to INEGI about unemployment in Mexico
+Home-page: https://github.com/nepito/clean-enoa
+Author: Nepo Rojas • GECI
+Author-email: nepo.rojas@islas.org.mx
