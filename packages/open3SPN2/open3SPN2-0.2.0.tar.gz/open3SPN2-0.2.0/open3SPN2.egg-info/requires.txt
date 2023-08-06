@@ -1,0 +1,8 @@
+biopython
+pandas
+numpy
+scipy
+mdtraj
+openmm
+pdbfixer
+nose

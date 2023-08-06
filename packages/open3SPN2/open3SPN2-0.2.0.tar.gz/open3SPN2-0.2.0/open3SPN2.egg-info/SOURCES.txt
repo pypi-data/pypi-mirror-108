@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+open3SPN2/__init__.py
+open3SPN2/_version.py
+open3SPN2/ff3SPN2.py
+open3SPN2/function_terms.py
+open3SPN2.egg-info/PKG-INFO
+open3SPN2.egg-info/SOURCES.txt
+open3SPN2.egg-info/dependency_links.txt
+open3SPN2.egg-info/requires.txt
+open3SPN2.egg-info/top_level.txt
