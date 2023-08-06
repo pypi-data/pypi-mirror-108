@@ -1,0 +1,9 @@
+README.md
+setup.py
+fathomdata/src/document.py
+fathomdata/src/fathomdata.py
+fathomdata/src/fathomdata.egg-info/PKG-INFO
+fathomdata/src/fathomdata.egg-info/SOURCES.txt
+fathomdata/src/fathomdata.egg-info/dependency_links.txt
+fathomdata/src/fathomdata.egg-info/requires.txt
+fathomdata/src/fathomdata.egg-info/top_level.txt
