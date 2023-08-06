@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: types-attrs
+Version: 19.1.0
+Summary: Typing stubs for attrs
+Home-page: https://github.com/python/typeshed
+License: Apache-2.0 license
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Typing :: Typed
+Description-Content-Type: text/markdown
+
+## Typing stubs for attrs
+
+This is an auto-generated PEP 561 type stub package for `attrs` package.
+It can be used by type-checking tools like mypy, PyCharm, pytype etc. to check code
+that uses `attrs`. The source for this package can be found at
+https://github.com/python/typeshed/tree/master/stubs/attrs. All fixes for
+types and metadata should be contributed there.
+
+*Note:* The `attrs` package includes type annotations or type stubs
+since version 18.2.0. Please uninstall the `types-attrs`
+package if you use this or a newer version.
+
+
+See https://github.com/python/typeshed/blob/master/README.md for more details.
+This package was generated from typeshed commit `746db19c3f199a7173f72e1598b8adad199a2f43`.
+
+
