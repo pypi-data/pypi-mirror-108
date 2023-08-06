@@ -1,0 +1,12 @@
+rockhopper-0.1.0.dist-info/RECORD,,
+rockhopper-0.1.0.dist-info/METADATA,sha256=X3tsQRg0ajjfHg1tfiMN0O6-rM54DvTPMRn6UEpW0q0,22041
+rockhopper-0.1.0.dist-info/top_level.txt,sha256=WGYKsNmNu2tDjg3qROHCv12tGvDI6DRfB9cyxAWjJGc,11
+rockhopper-0.1.0.dist-info/WHEEL,sha256=7NzloMi8lMRNvHNHLuX3vcbHqOUNZEWZfGMq9KRWzSw,145
+rockhopper-0.1.0.dist-info/LICENSE,sha256=XJfKwPNzYI7LfQ_CEIcttK1E5drqFZ4biLi-FmUvc-4,1077
+rockhopper-0.1.0.dist-info/entry_points.txt,sha256=kR68bIOIoOeDcIVlYgqE9uVoRDYQ1cmXMDuugvhyZXQ,56
+rockhopper/__init__.py,sha256=f5n4lV6YON-qOYVg7qpf-6ficYhTdMu6HdRYI6Fq5QM,657
+rockhopper/hook-rockhopper.py,sha256=T-eXsDNtDV4lPmX5C7_d1aVsIVdfBTIaxCE4557ZdOI,287
+rockhopper/_ragged_array.py,sha256=TOUT6ItMqrkrpUkryX1Z9nNPd22ymp6bfbt32-UOdxQ,31459
+rockhopper/_version.py,sha256=O7PVzm8Me5QLWCXv9RK9C33Y9Tzz3-vbIMk8-_GgEnw,105
+rockhopper/_slugs/ragged_array.json,sha256=sD9u7zIJM9dtfae0BwFP7azpbcp7-FvwdfhDnzpkSUM,1508
+rockhopper/_slugs/ragged_array-Linux-64bit.so,sha256=6iK10ZrC069BHI5Wm1glGD-6bem6DX2ypjFz6BW38TY,17208
