@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+gimmick.egg-info/PKG-INFO
+gimmick.egg-info/SOURCES.txt
+gimmick.egg-info/dependency_links.txt
+gimmick.egg-info/requires.txt
+gimmick.egg-info/top_level.txt
