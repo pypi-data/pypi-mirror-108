@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "gracefml"
+version = "0.0.4"
+description = "Framework for weakly-supervised regression"
+authors = ["chrisaddy <chris.william.addy@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "==3.*,>=3.8.0"
+pandas = "^1.2.4"
+pyro-ppl = "^1.6.0"
+Sphinx = "^4.0.2"
+
+[tool.poetry.dev-dependencies]
+pytest = "==6.*,>=6.2.4"
+dephell = "==0.*,>=0.8.3"
+mypy = "==0.*,>=0.812.0"
+pydocstyle = "==6.*,>=6.1.1"
+tox-poetry = "==0.*,>=0.4.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
