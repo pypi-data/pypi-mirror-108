@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: idle
+Version: 1.0.0
+Summary: idle is a python gui using tkinter
+Home-page: UNKNOWN
+Author: Devesh Sharma
+License: UNKNOWN
+Description: ## Text Editor
+        This is a program written in tkinter which acts as text editor.This can be used to edit file
+        ### Steps to Download textEditor
+        ```
+        pip install textEditor
+        ```
+        ### How to use it?
+        ```
+        import textEditor
+        ```
+        
+        ### About The Author
+        I am Devesh Sharma.I read in class 9. I live in samalkha,panipat located in India.
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

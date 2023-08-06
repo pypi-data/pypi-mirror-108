@@ -1,0 +1,7 @@
+README.md
+setup.py
+idle/src/idle.py
+idle/src/idle.egg-info/PKG-INFO
+idle/src/idle.egg-info/SOURCES.txt
+idle/src/idle.egg-info/dependency_links.txt
+idle/src/idle.egg-info/top_level.txt
