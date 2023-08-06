@@ -1,0 +1,10 @@
+setup.py
+pol_gnb_probability/Binomialdistribution.py
+pol_gnb_probability/Gaussiandistribution.py
+pol_gnb_probability/Generaldistribution.py
+pol_gnb_probability/__init__.py
+pol_gnb_probability.egg-info/PKG-INFO
+pol_gnb_probability.egg-info/SOURCES.txt
+pol_gnb_probability.egg-info/dependency_links.txt
+pol_gnb_probability.egg-info/not-zip-safe
+pol_gnb_probability.egg-info/top_level.txt
