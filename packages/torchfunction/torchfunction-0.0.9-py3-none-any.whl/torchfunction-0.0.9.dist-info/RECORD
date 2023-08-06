@@ -1,0 +1,11 @@
+torchfunction/__init__.py,sha256=00k0VmDJ4bh2hx9-7CG42Gzt9O5uIKiAaqe9J8NeFv8,17
+torchfunction/createtensor.py,sha256=QVlcOWsxJKXvGtdMyHxIqleNAAvT7390p_g7a-5q7x8,516
+torchfunction/functional.py,sha256=LTVHc69cHDkLLtVJNpEOwBkVuv_IeeJ4occakq_VzMI,656
+torchfunction/inspect.py,sha256=2-SrrNAR_gYG8xs3Uv9G4GsiiE_MqF-wEQP4i6BVETM,903
+torchfunction/lossfunc.py,sha256=T0kdgX_Fi5_NwvS8Jv5V23N8Lr7YcGEaQGxRfTZehjY,1649
+torchfunction/nn/__init__.py,sha256=5RlQ4iRCXMFStVngkGIGKnVn1SWLjpSQlu-aQiv2rCQ,27
+torchfunction/nn/linear.py,sha256=newa7C7UVUCglVKPJQAeHslPRXOixSMFVaXI4YhwZHM,3100
+torchfunction-0.0.9.dist-info/METADATA,sha256=CrbJ9O_aNAnzWCrwxnZXbaEVccz9DEiXpwd_2wJkD8E,3611
+torchfunction-0.0.9.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+torchfunction-0.0.9.dist-info/top_level.txt,sha256=S1oGrUz-aOKGsUhmfdOKpVoU6ZnohbHuQpCnjasyZVg,14
+torchfunction-0.0.9.dist-info/RECORD,,
