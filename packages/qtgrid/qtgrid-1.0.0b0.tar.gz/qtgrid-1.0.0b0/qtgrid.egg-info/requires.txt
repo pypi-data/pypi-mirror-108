@@ -1,0 +1,9 @@
+
+[dev]
+pytest
+pydoctor
+pydoctor[rst]
+pipenv-setup
+build
+twine
+mkdocs

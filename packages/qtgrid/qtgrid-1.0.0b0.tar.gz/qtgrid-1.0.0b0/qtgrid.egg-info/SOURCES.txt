@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+qtgrid/__init__.py
+qtgrid/qtgrid.py
+qtgrid.egg-info/PKG-INFO
+qtgrid.egg-info/SOURCES.txt
+qtgrid.egg-info/dependency_links.txt
+qtgrid.egg-info/requires.txt
+qtgrid.egg-info/top_level.txt
