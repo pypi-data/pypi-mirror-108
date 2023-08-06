@@ -1,0 +1,9 @@
+requests
+flask
+requests-toolbelt
+pyyaml
+
+[test]
+coverage
+pytest
+pytest-cov
