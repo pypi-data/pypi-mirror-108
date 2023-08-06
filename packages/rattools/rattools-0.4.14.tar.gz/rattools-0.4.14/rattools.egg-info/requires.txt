@@ -1,0 +1,9 @@
+yfinance
+pandas
+sklearn
+matplotlib
+seaborn
+plotly
+pymysql
+logging
+sshtunnel
