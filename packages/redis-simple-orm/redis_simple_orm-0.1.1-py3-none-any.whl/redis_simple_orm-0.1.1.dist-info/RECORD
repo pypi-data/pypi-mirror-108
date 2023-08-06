@@ -1,0 +1,13 @@
+RSO/__init__.py,sha256=rnObPjuBcEStqSO0S6gsdS_ot8ITOQjVj_-P1LUUYpg,22
+RSO/base.py,sha256=LRbT26azuRtcMQ7pMI6_Kc0slUURMQrdLIwwTvD9YxY,891
+RSO/index.py,sha256=BDh4T9ClDQN8mYegA6AfTlFe8zV8w6Ua2BzajWIwmQM,2493
+RSO/model.py,sha256=9dm7QtX1T6UNbRWPhlYw9TCQnbhSd2YQ5XHgUWumiTs,1124
+RSO/aioredis/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+RSO/aioredis/index.py,sha256=AiKW8BTv9Jgh80CbYnSi_Pkb6zrcXOvtcrTK5WGZUgk,2514
+RSO/aioredis/model.py,sha256=XO4q9Q9h1ePE65qW-TBFm9wwKnKDCIUMSXb5xqla8rQ,1430
+redis_simple_orm-0.1.1.data/data/LICENSE,sha256=OfKyUdPdeNlNXv5rNbiAPTzn-2xT2jhM8vIvsI0lgb8,1064
+redis_simple_orm-0.1.1.dist-info/LICENSE,sha256=OfKyUdPdeNlNXv5rNbiAPTzn-2xT2jhM8vIvsI0lgb8,1064
+redis_simple_orm-0.1.1.dist-info/METADATA,sha256=iIuKr698p3kqeD7EOUEw4IGb4w_0Leu_3i1urnoULLs,7565
+redis_simple_orm-0.1.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+redis_simple_orm-0.1.1.dist-info/top_level.txt,sha256=OVcPkJ1KNp-eG63Oc07SpHnrlO0zs08-bNkMr9ip_0A,4
+redis_simple_orm-0.1.1.dist-info/RECORD,,
