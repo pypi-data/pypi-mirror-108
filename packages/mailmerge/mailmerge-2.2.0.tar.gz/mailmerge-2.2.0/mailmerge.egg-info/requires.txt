@@ -1,0 +1,34 @@
+click
+freezegun
+future>0.18.0
+jinja2
+markdown
+html5
+
+[:python_version < "3.0"]
+backports.csv
+
+[:python_version < "3.6"]
+configparser
+pathlib2
+
+[dev]
+pdbpp
+twine
+tox
+
+[test]
+check-manifest
+codecov>=1.4.0
+pycodestyle
+pydocstyle
+pylint
+pytest
+pytest-cov
+sh
+
+[test:python_version < "3.0"]
+mock
+
+[test:python_version == "3.4"]
+typing
