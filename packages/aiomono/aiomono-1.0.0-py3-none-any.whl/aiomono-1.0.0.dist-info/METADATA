@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: aiomono
+Version: 1.0.0
+Summary: The asynchronous library for monobank API
+License: MIT
+Author: Artur
+Author-email: arturboyun@gmail.com
+Requires-Python: >=3.7,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: aiohttp (>=3.7.4,<4.0.0)
+Requires-Dist: pydantic (>=1.8.2,<2.0.0)
