@@ -1,0 +1,5 @@
+ansible-core
+boltons
+cerberus
+exrex
+torxtools
