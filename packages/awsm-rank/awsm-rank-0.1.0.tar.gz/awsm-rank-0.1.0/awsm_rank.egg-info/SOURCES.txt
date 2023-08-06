@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+awsm_rank/__init__.py
+awsm_rank/awsm_rank.py
+awsm_rank.egg-info/PKG-INFO
+awsm_rank.egg-info/SOURCES.txt
+awsm_rank.egg-info/dependency_links.txt
+awsm_rank.egg-info/entry_points.txt
+awsm_rank.egg-info/requires.txt
+awsm_rank.egg-info/top_level.txt
