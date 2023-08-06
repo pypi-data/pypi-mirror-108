@@ -1,0 +1,9 @@
+README.md
+setup.py
+aft_pytorch/__init__.py
+aft_pytorch/aft_pytorch.py
+aft_pytorch.egg-info/PKG-INFO
+aft_pytorch.egg-info/SOURCES.txt
+aft_pytorch.egg-info/dependency_links.txt
+aft_pytorch.egg-info/requires.txt
+aft_pytorch.egg-info/top_level.txt
