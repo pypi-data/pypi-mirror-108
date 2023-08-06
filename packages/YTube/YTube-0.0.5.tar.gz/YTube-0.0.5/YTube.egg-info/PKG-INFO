@@ -1,0 +1,76 @@
+Metadata-Version: 2.1
+Name: YTube
+Version: 0.0.5
+Summary: Youtube Video Downloader for Python
+Home-page: UNKNOWN
+Author: Bestin Lalu
+Author-email: bestinlalu.mec@gmail.com
+License: MIT
+Description: This is a simple YouTube Video Downloader which uses Pytube.
+        
+        Change Log
+        =============
+        
+        0.0.1 4/06/2021
+        ---------------
+        First Release
+        
+        0.0.2 4/06/2021
+        ---------------
+        Second Release
+        Corrected the Download module
+        
+        0.0.3 5/06/2021
+        ---------------
+        Third Release
+        Introduced options to download in different resolutions
+        
+        Methods:
+                YTube.download(link) - Download default video
+                YTube.download_highest(link) - Download in highest quality
+                YTube.download_144(link) - Download video in 144p
+                YTube.download_360(link) - Download video in 360p
+                YTube.download_480(link) - Download video in 480p
+                YTube.download_720(link) - Download video in 720p
+                YTube.download_1080(link) - Download video in 1080p
+        
+        0.0.4 5/06/2021
+        ---------------
+        Third Release
+        Introduced options to download in different resolutions
+        
+        Methods:
+                YTube.download(link) - Download default video
+                YTube.download_Highest(link) - Download in highest quality
+                YTube.download_144(link) - Download video in 144p
+                YTube.download_360(link) - Download video in 360p
+                YTube.download_480(link) - Download video in 480p
+                YTube.download_720(link) - Download video in 720p
+                YTube.download_1080(link) - Download video in 1080p
+        
+        0.0.4 5/06/2021
+        ---------------
+        Third Release
+        IFixed options to download in different resolutions
+        
+        Methods:
+                YTube.download(link) - Download default video,
+        
+                YTube.download_Highest(link) - Download in highest quality,
+        
+                YTube.download_144(link) - Download video in 144p,
+        
+                YTube.download_360(link) - Download video in 360p,
+        
+                YTube.download_480(link) - Download video in 480p,
+        
+                YTube.download_720(link) - Download video in 720p,
+        
+                YTube.download_1080(link) - Download video in 1080p
+Keywords: youtube
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
