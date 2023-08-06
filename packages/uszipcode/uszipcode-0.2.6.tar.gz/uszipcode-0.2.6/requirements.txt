@@ -1,0 +1,4 @@
+attrs
+SQLAlchemy
+pathlib_mate
+requests
