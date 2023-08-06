@@ -1,0 +1,3 @@
+pyfiglet<0.9,>=0.8.post1
+PyInquirer<2.0.0,>=1.0.3
+toml<0.11.0,>=0.10.1

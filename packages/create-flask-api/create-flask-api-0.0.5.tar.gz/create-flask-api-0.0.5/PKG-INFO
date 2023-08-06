@@ -1,0 +1,14 @@
+Metadata-Version: 1.2
+Name: create-flask-api
+Version: 0.0.5
+Summary: This is a create-react-app analog that creates a base Flask Aplication structure with boilerplates.
+Home-page: UNKNOWN
+Author: Pedro Henrique Germano Silva
+Author-email: pedrohenriquegs2001@gmail.com
+License: UNKNOWN
+Description: # Create Flask App
+        This is a create-react-app analog that creates a base Flask Aplication structure with boilerplates.
+        # Usage
+        Aaaaaa
+Platform: UNKNOWN
+Requires-Python: >=3.7,<4.0
