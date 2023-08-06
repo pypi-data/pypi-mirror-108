@@ -1,0 +1,4 @@
+bs4
+jsonpickle
+re
+requests
