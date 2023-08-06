@@ -1,0 +1,14 @@
+pyodoo/__init__.py,sha256=elsNT0u4o4HtKPSoIbGtVBiUx3IefJvSCGNeTlFkSi8,1061
+pyodoo/boolean_operator.py,sha256=hB2pt5-aORy3W-iDJqetSo1Wv3s_-dNPIHybXxyNHOo,951
+pyodoo/compare_type.py,sha256=o38vXZ9n92IpffQ2tAcrKobogh5kj-_cdcDT0tCPHoI,1109
+pyodoo/constants.py,sha256=Ecg9GrdkRtz8YTMmYmKrrBdX96xQfHO9a6oICrLmU3A,1089
+pyodoo/filter.py,sha256=zJ2BUk2cAfj3dLIe52OomF9DZZRda3ayeKkhzDnHBsI,1482
+pyodoo/v12/__init__.py,sha256=xfJR_F9XHMoY9wqK4DUUDLZ2GAjF0L8C9FJV0IznvzM,901
+pyodoo/v12/api.py,sha256=2_3yt2O6zxQL-YAbhB3i4nxPEVZnrJisM4t6obIQYO4,14262
+pyodoo/v12/contacts.py,sha256=UTGq3TJxqMkNBXJHVKD5-cqRILlIe4VNJphCHshE3GU,1043
+pyodoo/v12/object_model.py,sha256=5vZMsBe7vy-xJOcFl0Yl8DWrQyNwOfF64LhpmOTXO8I,4817
+PyOdoo-0.1.1.dist-info/LICENSE,sha256=KXtvAwlDxFxMIdHxHJfaPxp2LLs4cZoPCATTgfcKCTE,613
+PyOdoo-0.1.1.dist-info/METADATA,sha256=veS4bCZvW-4_GAJ7Av2BRqD-9WvSW3bBro_JrayMTLM,1654
+PyOdoo-0.1.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+PyOdoo-0.1.1.dist-info/top_level.txt,sha256=HwabTjELAPu1774H77QXjgermRn4sIz-tifFIEjYk40,7
+PyOdoo-0.1.1.dist-info/RECORD,,
