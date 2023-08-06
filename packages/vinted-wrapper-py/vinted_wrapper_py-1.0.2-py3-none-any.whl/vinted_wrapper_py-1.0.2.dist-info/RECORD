@@ -1,0 +1,12 @@
+vinted_wrapper/__init__.py,sha256=z4RRFoWeuoOYNZR7zXYy8FCOh0LkO6HObHznz6lzdZw,134
+vinted_wrapper/_version.py,sha256=G8z7Xth7Ni2N_Zi5WD2gnTTPvSuUOXcUST9tD2_r36E,497
+vinted_wrapper/requester.py,sha256=ksH6h7DccR2LCECmlvdbE2UBkvO7PZaAnnl8aeToNKM,1202
+vinted_wrapper/settings.py,sha256=Nvxirz5ICF9uaueTllEZk-bPBzK4E7QiRnjBog7nzLM,120
+vinted_wrapper/vinted.py,sha256=SHBgTCbNxOcPo138V77xK3aVwgDYO5PBiKYVrNsW7Ak,247
+vinted_wrapper/items/__init__.py,sha256=ribz-HUoFpFvn9xvFr-9oVxhLg6NqROI7OXiKdhfJew,45
+vinted_wrapper/items/item.py,sha256=YPhP6RUFbSpwCOt8ipkyg5nXqb8MM5PCTBgR-FcSJzI,731
+vinted_wrapper/items/items.py,sha256=BJsqXMJ8OdTfCDjRKqKTDfmAruzSbQXrN5SjEEn6508,2059
+vinted_wrapper_py-1.0.2.dist-info/METADATA,sha256=C8CuhyOv0WCHt5ol75-O7ZoF1H2TQaYcvMFlcNlb_nU,446
+vinted_wrapper_py-1.0.2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+vinted_wrapper_py-1.0.2.dist-info/top_level.txt,sha256=QWRZluyqBQpTVF3Kle0w_JABFyvgpnoJRTeLqihYHIg,15
+vinted_wrapper_py-1.0.2.dist-info/RECORD,,
