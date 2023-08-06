@@ -1,0 +1,11 @@
+hcaptcha_field/__init__.py,sha256=zbEuDbwGixnX0If_Uc4Szf1gMRHwcywwhlHUR53oXBc,291
+hcaptcha_field/apps.py,sha256=qcC_lcfT_-sGaiwSkBeTntOy6Huaqo9mav-MKrHT8Dw,138
+hcaptcha_field/fields.py,sha256=BAyJyE34SBIQGoKH1ieu8YjRoEZWravOlLv1uCNCky8,4287
+hcaptcha_field/settings.py,sha256=rZQ81kjU9e5OCcgaKYSrba7RJBjNu1fogS6RVREkPVY,728
+hcaptcha_field/widgets.py,sha256=Puqa48I34FjZ3P30p0-zbz9ly6Q9UG1HSWDwfcZu9vo,1311
+hcaptcha_field/templates/hcaptcha_widget.html,sha256=Mood5cdfBdZefLZ71zljaiNIh3vlXmaICaL3uLzLllM,113
+django_hcaptcha_field-0.9.dist-info/LICENSE,sha256=op-aMmae3z9rBo0ukNkCjjDz2_dwupr3vxYEsZbI4dQ,1557
+django_hcaptcha_field-0.9.dist-info/METADATA,sha256=snIHB9xGgMD36k9RaPBLZed9d9ORtc6jEai_l3w0mEY,3712
+django_hcaptcha_field-0.9.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+django_hcaptcha_field-0.9.dist-info/top_level.txt,sha256=dmRJrC99BOQsggRL8fMmO35DKnH2k_0uxf5Kl8enYTE,15
+django_hcaptcha_field-0.9.dist-info/RECORD,,
