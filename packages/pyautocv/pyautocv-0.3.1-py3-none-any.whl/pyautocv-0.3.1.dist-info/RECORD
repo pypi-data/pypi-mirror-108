@@ -1,0 +1,9 @@
+pyautocv/__init__.py,sha256=EG-EQSqleI_SV2KQSG4ma-nhpT9DgniSLUsCc8uJFbc,396
+pyautocv/__main__.py,sha256=R9PJfnSajvlcrk-DWfdv1QSxV1VTIdrIFUkbyYWhv5g,2939
+pyautocv/segmentation.py,sha256=1MXtGSU1_DhjRAJfqDgEfpSoxX7u98mt3T2QwCJ5b_A,12164
+pyautocv/version.py,sha256=r4xAFihOf72W9TD-lpMi6ntWSTKTP2SlzKP1ytkjRbI,22
+pyautocv-0.3.1.dist-info/LICENSE,sha256=U1eSs641zKCNsWeiMxcB_vgKbTDjY9msHRN-FHy8RA4,1073
+pyautocv-0.3.1.dist-info/METADATA,sha256=ee1TxrpZByURGwvXXEjl2wVXp89KSfJ6HP9BNklqi8Y,8913
+pyautocv-0.3.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pyautocv-0.3.1.dist-info/top_level.txt,sha256=r6X3bG1aUpLo3QBXZdr_YQvCZqu822CGXAc5hmhTTOs,9
+pyautocv-0.3.1.dist-info/RECORD,,
