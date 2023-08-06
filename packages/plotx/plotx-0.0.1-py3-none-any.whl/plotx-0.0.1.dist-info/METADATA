@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: plotx
+Version: 0.0.1
+Summary: Shortcuts for matplotlib
+Home-page: UNKNOWN
+Author: DaveAsator (Eugene Bolshakov)
+Author-email: <omnispark@gmail.com>
+License: UNKNOWN
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+
+
+# Python-PlotX
+
