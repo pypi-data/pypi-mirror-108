@@ -1,0 +1,8 @@
+setup.py
+switchem/__init__.py
+switchem/switchem.py
+switchem.egg-info/PKG-INFO
+switchem.egg-info/SOURCES.txt
+switchem.egg-info/dependency_links.txt
+switchem.egg-info/requires.txt
+switchem.egg-info/top_level.txt
