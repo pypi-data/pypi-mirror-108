@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/Dict2Model.egg-info/PKG-INFO
+src/Dict2Model.egg-info/SOURCES.txt
+src/Dict2Model.egg-info/dependency_links.txt
+src/Dict2Model.egg-info/top_level.txt
+src/dict2model/Dict2Model.py
+src/dict2model/Dict2ModelConsts.py
+src/dict2model/__init__.py
