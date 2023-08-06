@@ -1,0 +1,5 @@
+[sinstruments.device]
+Agilent4UHV = vazio.simulator.agilent:Agilent4UHV [simulator]
+MKS937 = vazio.simulator.mks:MKS937 [simulator]
+VarianDual = vazio.simulator.variandual:VarianDual [simulator]
+

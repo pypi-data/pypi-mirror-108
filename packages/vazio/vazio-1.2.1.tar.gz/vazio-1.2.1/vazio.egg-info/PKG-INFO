@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: vazio
+Version: 1.2.1
+Summary: multigauge protocol
+Home-page: https://gitlab.com/tiagocoutinho/vacuum
+Author: Jose Tiago Macara Coutinho
+Author-email: coutinhotiago@gmail.com
+License: MIT license
+Description: # Mutligauge protocol
+        
+        TODO
+Keywords: vacuum,multigauge,variandual
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+Provides-Extra: simulator
