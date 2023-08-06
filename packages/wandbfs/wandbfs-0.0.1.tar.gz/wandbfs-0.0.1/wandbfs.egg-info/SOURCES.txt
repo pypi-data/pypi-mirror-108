@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+wandbfs/__init__.py
+wandbfs/_wandbfs.py
+wandbfs.egg-info/PKG-INFO
+wandbfs.egg-info/SOURCES.txt
+wandbfs.egg-info/dependency_links.txt
+wandbfs.egg-info/entry_points.txt
+wandbfs.egg-info/requires.txt
+wandbfs.egg-info/top_level.txt
