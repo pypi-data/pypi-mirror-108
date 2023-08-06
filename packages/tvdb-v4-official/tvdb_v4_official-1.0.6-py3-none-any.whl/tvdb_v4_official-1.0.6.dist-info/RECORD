@@ -1,0 +1,12 @@
+tvdb_v4_official/__init__.py,sha256=5YdTwwQoP6maFB-_aV12Jf5cZJMLoUeunz-pb1XWKV0,14
+tvdb_v4_official/tvdb_v4_official.py,sha256=iPpEqzVEflnE4w0qtCf7-1TexLf3ZuXIpc9vIZRmmvY,7070
+tvdb_v4_official/auth/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tvdb_v4_official/auth/auth.py,sha256=phm2ju3s9tQOaoHCpm-SYGpLe_hRg_3Q56M5FrneAjc,651
+tvdb_v4_official/request/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tvdb_v4_official/request/request.py,sha256=NMLOKWmNGhcBhVd9mPde2NaH1txeRUTMcDRUe5hLy3E,479
+tvdb_v4_official/url/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tvdb_v4_official/url/url.py,sha256=f3ZMHi9Bk1xYOJpx8uxnN8RiUWCea9LCnB7TL3NH04Q,3660
+tvdb_v4_official-1.0.6.dist-info/METADATA,sha256=LU2rjWdf55_qK0NYKfPCMqCZVWp_p-jpjC3FoH7db14,548
+tvdb_v4_official-1.0.6.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+tvdb_v4_official-1.0.6.dist-info/top_level.txt,sha256=aF0MG0F0_cT1l_VWcH9i_HHOMh2pCxwf76Qutl0az7c,17
+tvdb_v4_official-1.0.6.dist-info/RECORD,,
