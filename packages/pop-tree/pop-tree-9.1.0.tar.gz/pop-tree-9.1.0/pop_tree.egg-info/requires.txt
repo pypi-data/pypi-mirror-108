@@ -1,0 +1,16 @@
+aiofiles
+pop
+
+[full]
+matplotlib
+scipy
+rend
+networkx
+
+[networkx]
+networkx
+scipy
+matplotlib
+
+[rend]
+rend
