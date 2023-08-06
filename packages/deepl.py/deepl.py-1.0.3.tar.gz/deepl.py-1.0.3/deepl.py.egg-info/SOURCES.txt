@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+deepl/__init__.py
+deepl/__main__.py
+deepl/adapter.py
+deepl/enums.py
+deepl/errors.py
+deepl/translator.py
+deepl.py.egg-info/PKG-INFO
+deepl.py.egg-info/SOURCES.txt
+deepl.py.egg-info/dependency_links.txt
+deepl.py.egg-info/requires.txt
+deepl.py.egg-info/top_level.txt
