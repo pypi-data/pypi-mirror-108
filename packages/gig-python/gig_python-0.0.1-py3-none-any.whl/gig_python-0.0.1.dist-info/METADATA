@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: gig-python
+Version: 0.0.1
+Summary: Interface For GIG Server
+Home-page: https://github.com/LSFLK/gig-python
+Author: ldf
+Author-email: umayangag@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/LSFLK/gig-python/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: attrs (==21.2.0)
+Requires-Dist: certifi (==2021.5.30)
+Requires-Dist: chardet (==4.0.0)
+Requires-Dist: idna (==2.10)
+Requires-Dist: iniconfig (==1.1.1)
+Requires-Dist: packaging (==20.9)
+Requires-Dist: pluggy (==0.13.1)
+Requires-Dist: py (==1.10.0)
+Requires-Dist: pyparsing (==2.4.7)
+Requires-Dist: requests (==2.25.1)
+Requires-Dist: toml (==0.10.2)
+Requires-Dist: urllib3 (==1.26.5)
+
+# gig-python
+Python Interface for GIG
+
+
