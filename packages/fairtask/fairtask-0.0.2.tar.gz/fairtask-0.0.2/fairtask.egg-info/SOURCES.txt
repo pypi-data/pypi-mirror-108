@@ -1,0 +1,6 @@
+setup.cfg
+setup.py
+fairtask.egg-info/PKG-INFO
+fairtask.egg-info/SOURCES.txt
+fairtask.egg-info/dependency_links.txt
+fairtask.egg-info/top_level.txt
