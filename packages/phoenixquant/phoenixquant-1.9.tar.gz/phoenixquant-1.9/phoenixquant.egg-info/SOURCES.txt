@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+phoenixquant/__init__.py
+phoenixquant/data_client.py
+phoenixquant/quote_client.py
+phoenixquant.egg-info/PKG-INFO
+phoenixquant.egg-info/SOURCES.txt
+phoenixquant.egg-info/dependency_links.txt
+phoenixquant.egg-info/requires.txt
+phoenixquant.egg-info/top_level.txt
