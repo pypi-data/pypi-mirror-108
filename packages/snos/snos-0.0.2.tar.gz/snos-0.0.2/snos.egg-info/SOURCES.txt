@@ -1,0 +1,7 @@
+README.md
+setup.py
+snos/snos
+snos.egg-info/PKG-INFO
+snos.egg-info/SOURCES.txt
+snos.egg-info/dependency_links.txt
+snos.egg-info/top_level.txt
