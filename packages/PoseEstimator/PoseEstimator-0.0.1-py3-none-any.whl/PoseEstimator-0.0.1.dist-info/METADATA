@@ -1,0 +1,71 @@
+Metadata-Version: 2.1
+Name: PoseEstimator
+Version: 0.0.1
+Summary: Basic Pose estimation Module
+Home-page: UNKNOWN
+Author: Syed Abdul Gaffar Shakhadri
+Author-email: <syed.17.beec@acharya.ac.in>
+License: UNKNOWN
+Keywords: python,pose,pose-estimation,Pose Estimation,opencv pose estimation,estimation
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+Requires-Dist: opencv-python
+Requires-Dist: mediapipe
+
+
+# Pose Estimation
+
+
+
+```python
+
+import cv2
+
+import time
+
+from PoseDetector.PoseModule import PoseDetector  #posedetector module
+
+
+
+cap = cv2.VideoCapture(0)
+
+pTime = 0
+
+detector = PoseDetector()
+
+while True:
+
+    success, img = cap.read()
+
+    img = detector.findPose(img)
+
+    lmList = detector.getPosition(img)
+
+    print(lmList)
+
+
+
+    cTime = time.time()
+
+    fps = 1 / (cTime - pTime)
+
+    pTime = cTime
+
+
+
+    cv2.putText(img, str(int(fps)), (50, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 3)
+
+    cv2.imshow("Image", img)
+
+    cv2.waitKey(1)
+
+```
+
+
+
