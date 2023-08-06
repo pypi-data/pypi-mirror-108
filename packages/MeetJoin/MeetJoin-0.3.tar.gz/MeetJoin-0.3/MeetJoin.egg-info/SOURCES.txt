@@ -1,0 +1,7 @@
+README.txt
+setup.py
+MeetJoin.egg-info/PKG-INFO
+MeetJoin.egg-info/SOURCES.txt
+MeetJoin.egg-info/dependency_links.txt
+MeetJoin.egg-info/requires.txt
+MeetJoin.egg-info/top_level.txt

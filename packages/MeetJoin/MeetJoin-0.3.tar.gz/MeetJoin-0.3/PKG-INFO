@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: MeetJoin
+Version: 0.3
+Summary: A Sinple Google Meet Bot
+Home-page: UNKNOWN
+Author: IronMan (Hridhan Dwivedi)
+Author-email: <dwivedihridhan@gmail.com>
+License: UNKNOWN
+Description: A package that can attend your google meet classes at different time with different links.
+Keywords: python,bot,google meet,online classes,selenium
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
