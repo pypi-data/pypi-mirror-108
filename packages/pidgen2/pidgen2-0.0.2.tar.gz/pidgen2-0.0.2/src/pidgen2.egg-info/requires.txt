@@ -1,0 +1,8 @@
+numpy
+scipy
+pandas
+matplotlib
+jax
+uproot3
+uproot4
+xrootd>=5.2

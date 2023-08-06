@@ -1,0 +1,3 @@
+[console_scripts]
+pidgen2.pidgen = pidgen2.pidgen:main
+
