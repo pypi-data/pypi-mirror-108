@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: jsonwspclient
+Version: 2.1.0
+Summary: Flexible JSON-WSP client.
+Home-page: http://github.com/ellethee/jsonwspclient
+License: LICENSE.txt
+Author: ellethee
+Author-email: luca800@gmail.com
+Requires-Python: >=3.6,<4.0
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: License :: Other/Proprietary License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Internet :: WWW/HTTP
+Provides-Extra: test
+Requires-Dist: requests
