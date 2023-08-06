@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: bebop-browser-finger
+Version: 0.1.0
+Summary: Finger plugin for the Bebop terminal browser
+Home-page: https://git.dece.space/Dece/Bebop
+Author: dece
+Author-email: shgck@pistache.land
+License: GPLv3
+Platform: UNKNOWN
+Classifier: Environment :: Console
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >= 3.7
+
+Finger plugin for Bebop
+=======================
+
+This is a minimal Finger protocol plugin for [Bebop][bebop], refer to its docs
+for details.
+
+[bebop]: https://git.dece.space/Dece/Bebop
+
+Requires:
+
+* Bebop >= 0.2.0
+* A `finger` command on your system
+
+
