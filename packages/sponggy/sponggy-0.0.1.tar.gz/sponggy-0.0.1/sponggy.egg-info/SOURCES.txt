@@ -1,0 +1,12 @@
+README.md
+setup.py
+sponggy/__init__.py
+sponggy/caddy.LICENSE
+sponggy/caddy.target.exe
+sponggy/download_release.py
+sponggy.egg-info/PKG-INFO
+sponggy.egg-info/SOURCES.txt
+sponggy.egg-info/dependency_links.txt
+sponggy.egg-info/entry_points.txt
+sponggy.egg-info/requires.txt
+sponggy.egg-info/top_level.txt
