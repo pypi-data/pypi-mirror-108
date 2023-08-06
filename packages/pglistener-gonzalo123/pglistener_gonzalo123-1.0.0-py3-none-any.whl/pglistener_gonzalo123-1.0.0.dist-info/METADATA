@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: pglistener-gonzalo123
+Version: 1.0.0
+Summary: psycopg2 db listener
+Home-page: https://github.com/gonzalo123/pglistener
+Author: Gonzalo Ayuso
+Author-email: gonzalo123@gmail.com
+License: MIT
+Keywords: psycopg2
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+Requires-Dist: psycopg2-binary (>=2.8.6)
+
+## Listen to PostgreSQL eventes with pg_notify and Python
+
+[dbutils](https://github.com/gonzalo123/pglistener)
+
+## Install
+
+```commandline
+pip install pglistener-gonzalo123
+```
+
+From github
+```commandline
+pip install -e git+https://github.com/gonzalo123/pglistener#egg=pglistener-gonzalo123
+```
+
+
