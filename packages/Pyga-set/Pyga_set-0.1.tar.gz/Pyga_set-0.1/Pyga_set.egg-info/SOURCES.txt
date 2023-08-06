@@ -1,0 +1,8 @@
+setup.cfg
+setup.py
+Pyga_set/Pyga_set.py
+Pyga_set.egg-info/PKG-INFO
+Pyga_set.egg-info/SOURCES.txt
+Pyga_set.egg-info/dependency_links.txt
+Pyga_set.egg-info/not-zip-safe
+Pyga_set.egg-info/top_level.txt
