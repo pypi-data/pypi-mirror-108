@@ -1,0 +1,7 @@
+LICENSE
+README.md
+setup.py
+cpf_cnpj_validator.egg-info/PKG-INFO
+cpf_cnpj_validator.egg-info/SOURCES.txt
+cpf_cnpj_validator.egg-info/dependency_links.txt
+cpf_cnpj_validator.egg-info/top_level.txt
