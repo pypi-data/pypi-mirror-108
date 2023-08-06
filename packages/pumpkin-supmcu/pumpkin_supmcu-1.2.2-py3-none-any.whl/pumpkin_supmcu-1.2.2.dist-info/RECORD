@@ -1,0 +1,17 @@
+pumpkin_supmcu/i2c/__init__.py,sha256=0Vyj6-XRnRREYAiR9a25epf_ZkqShB6U1fu6q1tt4vk,1556
+pumpkin_supmcu/i2c/master.py,sha256=DUhsTNUer9C3fr_duoW0rRabres2-cedMu7I-4kCCEE,2819
+pumpkin_supmcu/supmcu/__init__.py,sha256=OCABKQHRUBi5RIjeLt71167ICBsUjGKTa0eUUXltX9Y,1454
+pumpkin_supmcu/supmcu/discovery.py,sha256=1t5lfYV62XCVGel-fwkJZcKiWtCBzyUmNZUCjBeSatw,18819
+pumpkin_supmcu/supmcu/i2c.py,sha256=9c7BgYSOwtiDzfUx0t1hDfTFI3mE9hAV1knj86NjOv4,7913
+pumpkin_supmcu/supmcu/parsing.py,sha256=tlGzyDYa3GSkb2_dPUwuAofIArnuytKk0DM-xT4moIs,9326
+pumpkin_supmcu/supmcu/serial.py,sha256=pMN1uNSfLkRExdgSzDQtxeExXXX_c6h3YJbNdvzioXc,2648
+pumpkin_supmcu/supmcu/types.py,sha256=aolAO4AAOtTpXLgM-tcTywZ5DkyLQhwSMhLcVum1MYM,6483
+pumpkin_supmcu/utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pumpkin_supmcu/utils/benchmark.py,sha256=jYDKNBwxOBRnh91Kku9krffMWlpZytFB0xwBUNn9URY,10532
+utils/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+utils/benchmark.py,sha256=jYDKNBwxOBRnh91Kku9krffMWlpZytFB0xwBUNn9URY,10532
+pumpkin_supmcu-1.2.2.dist-info/LICENSE.md,sha256=TK9QI9baNcgzgkAAVWsCFiEsoTyh4aIoyTS2uOFvES8,1070
+pumpkin_supmcu-1.2.2.dist-info/METADATA,sha256=Eeh3NTrPS3l8yRruhinvIm5jm7WCzDxGmzcEdI7HnUk,1507
+pumpkin_supmcu-1.2.2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pumpkin_supmcu-1.2.2.dist-info/top_level.txt,sha256=XRqCT4Ac3aN_L9zWAAMXnzylWv7nvzT1xgnpI8wYcYQ,15
+pumpkin_supmcu-1.2.2.dist-info/RECORD,,
