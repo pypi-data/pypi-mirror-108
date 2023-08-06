@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+text_replace/__init__.py
+text_replace/__main__.py
+text_replace/replace.py
+text_replace/search_files.py
+text_replace.egg-info/PKG-INFO
+text_replace.egg-info/SOURCES.txt
+text_replace.egg-info/dependency_links.txt
+text_replace.egg-info/not-zip-safe
+text_replace.egg-info/top_level.txt
+text_replace/presets/__init__.py
+text_replace/presets/config.py
+text_replace/presets/relative_url_prefixer.py
