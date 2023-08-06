@@ -1,0 +1,5 @@
+# Tribolium Clustering
+This is a library that is specifically used for image analysis and data analysis of developing tribolium embryos. It is optimised for stained nuclei of the embryos and 3D imaging. Most functions are wrappers for other libraries, mostly [pyclesperanto](link), [scikit-image](link), [scikit-learn](link), [UMAP](link) and [HDBSCAN](link). 
+Image analysis is based almost entirely around functions from pyclesperanto which requires a powerful GPU with high memory capacities to work with high resolution files. If memory is insufficient you will probably encounter errors when using functions of this library and you need to make sure that you specify your powerful gpu in pyclesperanto (link to how to do that or which command). 
+The data analysis is based on scikit learn functions as well as other external data science algorithms that follow a similar convention. The basics of which can be found [here](link scikit learn).
+Since the functions were developed with a group of datasets modification of the functions could be required for the image analysis workflows but possibly also the data analysis workflows.

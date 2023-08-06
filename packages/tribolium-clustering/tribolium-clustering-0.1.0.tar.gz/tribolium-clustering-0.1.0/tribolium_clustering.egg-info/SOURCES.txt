@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+tribolium_clustering.egg-info/PKG-INFO
+tribolium_clustering.egg-info/SOURCES.txt
+tribolium_clustering.egg-info/dependency_links.txt
+tribolium_clustering.egg-info/requires.txt
+tribolium_clustering.egg-info/top_level.txt
