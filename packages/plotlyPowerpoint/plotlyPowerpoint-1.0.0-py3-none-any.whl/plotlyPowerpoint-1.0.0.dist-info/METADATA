@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: plotlyPowerpoint
+Version: 1.0.0
+Summary: A library using Plotly and Powerpoint to easily generate slides with plotly charts in them
+Home-page: https://github.com
+Author: Jon Boone
+Author-email: jonboone1@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Plotly & Powerpoint
+
+A library used to create powerpoint slides including plotly charts. Use this to automate powerpoint creation including certiain charts/visualizations.
+
