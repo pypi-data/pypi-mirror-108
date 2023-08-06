@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: battlecruiser
+Version: 0.0.1
+Summary: deep learning library
+Home-page: https://github.com/flarahome/battlecruiser
+Author: XMD
+License: UNKNOWN
+Description: # battlecruiser
+        Battle Cruiser Operational
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown

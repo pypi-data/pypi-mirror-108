@@ -1,0 +1,6 @@
+README.md
+setup.py
+battlecruiser.egg-info/PKG-INFO
+battlecruiser.egg-info/SOURCES.txt
+battlecruiser.egg-info/dependency_links.txt
+battlecruiser.egg-info/top_level.txt
