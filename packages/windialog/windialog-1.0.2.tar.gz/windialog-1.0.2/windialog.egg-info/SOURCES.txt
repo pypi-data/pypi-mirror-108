@@ -1,0 +1,8 @@
+LICENSE.txt
+README.md
+setup.py
+windialog/__init__.py
+windialog.egg-info/PKG-INFO
+windialog.egg-info/SOURCES.txt
+windialog.egg-info/dependency_links.txt
+windialog.egg-info/top_level.txt
