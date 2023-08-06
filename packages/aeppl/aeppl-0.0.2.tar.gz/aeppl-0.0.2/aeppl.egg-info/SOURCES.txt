@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+setup.cfg
+setup.py
+versioneer.py
+aeppl/__init__.py
+aeppl/_version.py
+aeppl/loglik.py
+aeppl/logpdf.py
+aeppl/utils.py
+aeppl.egg-info/PKG-INFO
+aeppl.egg-info/SOURCES.txt
+aeppl.egg-info/dependency_links.txt
+aeppl.egg-info/not-zip-safe
+aeppl.egg-info/requires.txt
+aeppl.egg-info/top_level.txt
