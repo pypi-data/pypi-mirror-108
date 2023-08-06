@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: polvo
+Version: 0.1.0
+Summary: It fits anywhere
+Home-page: UNKNOWN
+Author: Lucas Goulart Vazquez
+Author-email: lgvaz42@gmail.com
+License: UNKNOWN
+Description: # polvo
+        it fits anywhere
+        
+Keywords: machine learning
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: <4,>=3.7
+Description-Content-Type: text/markdown
+Provides-Extra: dev
