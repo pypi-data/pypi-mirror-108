@@ -1,0 +1,9 @@
+setup.py
+dqmarket/__init__.py
+dqmarket/history.py
+dqmarket.egg-info/PKG-INFO
+dqmarket.egg-info/SOURCES.txt
+dqmarket.egg-info/dependency_links.txt
+dqmarket.egg-info/requires.txt
+dqmarket.egg-info/top_level.txt
+dqmarket.egg-info/zip-safe
