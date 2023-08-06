@@ -1,0 +1,4 @@
+[console_scripts]
+obsolete-messages-hook = hooks.obsolete_messages:main
+untranslated-messages-hook = hooks.untranslated_messages:main
+
