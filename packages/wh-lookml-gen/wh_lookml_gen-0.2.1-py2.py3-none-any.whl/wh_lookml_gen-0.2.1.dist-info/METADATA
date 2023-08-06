@@ -1,0 +1,203 @@
+Metadata-Version: 2.1
+Name: wh-lookml-gen
+Version: 0.2.1
+Summary: generates lookml from a warehouse
+Home-page: https://github.com/lewischarlesbaker/wh_lookml_gen
+Author: Lewis Baker
+Author-email: lewischarlebaker@gmail.com
+License: MIT license
+Keywords: wh_lookml_gen
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
+Requires-Dist: Click (>=7.0)
+Requires-Dist: altgraph (==0.17)
+Requires-Dist: arrow (==1.1.0)
+Requires-Dist: attrs (==20.3.0)
+Requires-Dist: binaryornot (==0.4.4)
+Requires-Dist: bleach (==3.3.0)
+Requires-Dist: boto3 (==1.17.78)
+Requires-Dist: botocore (==1.18.18)
+Requires-Dist: cachetools (==4.2.1)
+Requires-Dist: certifi (==2020.12.5)
+Requires-Dist: cffi (==1.14.5)
+Requires-Dist: chardet (==3.0.4)
+Requires-Dist: click (==8.0.1)
+Requires-Dist: colorama (==0.4.4)
+Requires-Dist: cookiecutter (==1.7.3)
+Requires-Dist: docopt (==0.6.2)
+Requires-Dist: docutils (==0.17.1)
+Requires-Dist: gitdb (==4.0.7)
+Requires-Dist: GitPython (==3.1.17)
+Requires-Dist: google-api-core (==1.28.0)
+Requires-Dist: google-auth (==1.28.1)
+Requires-Dist: google-auth-oauthlib (==0.4.4)
+Requires-Dist: google-cloud-bigquery (==2.17.0)
+Requires-Dist: google-cloud-bigquery-storage (==2.4.0)
+Requires-Dist: google-cloud-core (==1.6.0)
+Requires-Dist: google-crc32c (==1.1.2)
+Requires-Dist: google-resumable-media (==1.3.0)
+Requires-Dist: googleapis-common-protos (==1.53.0)
+Requires-Dist: grpcio (==1.38.0)
+Requires-Dist: idna (==2.9)
+Requires-Dist: importlib-metadata (==3.9.0)
+Requires-Dist: isodate (==0.6.0)
+Requires-Dist: Jinja2 (==3.0.1)
+Requires-Dist: jinja2-time (==0.2.0)
+Requires-Dist: jmespath (==0.10.0)
+Requires-Dist: keyring (==23.0.1)
+Requires-Dist: libcst (==0.3.19)
+Requires-Dist: lkml (==1.1.0)
+Requires-Dist: macholib (==1.14)
+Requires-Dist: MarkupSafe (==2.0.1)
+Requires-Dist: mypy-extensions (==0.4.3)
+Requires-Dist: numpy (==1.20.2)
+Requires-Dist: oauthlib (==3.1.0)
+Requires-Dist: packaging (==20.9)
+Requires-Dist: pandas (==0.24.2)
+Requires-Dist: pandas-gbq (==0.15.0)
+Requires-Dist: pandas-redshift (==2.0.5)
+Requires-Dist: pkginfo (==1.7.0)
+Requires-Dist: poyo (==0.5.0)
+Requires-Dist: proto-plus (==1.18.1)
+Requires-Dist: protobuf (==3.15.6)
+Requires-Dist: psycopg2-binary (==2.8.6)
+Requires-Dist: pyarrow (==4.0.0)
+Requires-Dist: pyasn1 (==0.4.8)
+Requires-Dist: pyasn1-modules (==0.2.8)
+Requires-Dist: pycparser (==2.20)
+Requires-Dist: pydata-google-auth (==1.2.0)
+Requires-Dist: Pygments (==2.9.0)
+Requires-Dist: pyinstaller (==4.3)
+Requires-Dist: pyinstaller-hooks-contrib (==2021.1)
+Requires-Dist: pyparsing (==2.4.7)
+Requires-Dist: pyrsistent (==0.17.3)
+Requires-Dist: python-dateutil (==2.8.1)
+Requires-Dist: python-slugify (==4.0.1)
+Requires-Dist: pytimeparse (==1.1.8)
+Requires-Dist: pytz (==2020.5)
+Requires-Dist: PyYAML (==5.4.1)
+Requires-Dist: readme-renderer (==29.0)
+Requires-Dist: requests (==2.23.0)
+Requires-Dist: requests-oauthlib (==1.3.0)
+Requires-Dist: requests-toolbelt (==0.9.1)
+Requires-Dist: rfc3986 (==1.5.0)
+Requires-Dist: rsa (==4.7.2)
+Requires-Dist: s3transfer (==0.3.6)
+Requires-Dist: six (==1.15.0)
+Requires-Dist: smmap (==4.0.0)
+Requires-Dist: text-unidecode (==1.3)
+Requires-Dist: tqdm (==4.60.0)
+Requires-Dist: twine (==3.4.1)
+Requires-Dist: typing-extensions (==3.7.4.3)
+Requires-Dist: typing-inspect (==0.6.0)
+Requires-Dist: urllib3 (==1.25.11)
+Requires-Dist: webencodings (==0.5.1)
+Requires-Dist: zipp (==3.4.1)
+
+=============
+wh_lookml_gen
+=============
+
+
+.. image:: https://img.shields.io/pypi/v/wh_lookml_gen.svg
+        :target: https://pypi.python.org/pypi/wh_lookml_gen
+
+.. image:: https://img.shields.io/travis/lewischarlesbaker/wh_lookml_gen.svg
+        :target: https://travis-ci.com/lewischarlesbaker/wh_lookml_gen
+
+.. image:: https://readthedocs.org/projects/wh-lookml-gen/badge/?version=latest
+        :target: https://wh-lookml-gen.readthedocs.io/en/latest/?version=latest
+        :alt: Documentation Status
+
+
+
+
+generates lookml from a warehouse
+
+
+* Free software: MIT license
+* Documentation: https://wh-lookml-gen.readthedocs.io.
+
+
+Features
+--------
+
+### bq_lookml_generator v.0.1.1
+
+This automatic generator is buit over Josh Temples looker parser [https://github.com/joshtemple/lkml]. Building out lkml, it allows you to generate lookml from BigQuery metadata. 
+
+## getting started
+
+- make sure you are working in a venv.
+- pip install lookml_gen
+
+- config params 
+    - run lookml_gen_init 
+        - head to .lookml_gen and input your wh credentials
+            - warehouse configs 
+                - either input big_query or red_shift (current support warehouses) under warehouse_name
+                - input schema name
+                - input project name
+            - security 
+                - big_query 
+                    - input your keyfile path
+                - red_shift
+                    - input you credentials
+
+
+- input your warehouse schema target in here lookml/bq_lookml_gen/warehouse_target.py
+- type lookml_gen into terminal and watch the base explore generate... 
+
+## troubleshooting 
+
+- run pip install -r requirements.txt if you are running into dependency issues
+- you can run bq_lookml_gen.py from terminal if needed
+
+## to update
+
+twine upload --skip-existing dist/*
+
+## to develop
+
+- add new features to setup tools using: python setup.py develop
+
+
+rebuild the wheel 
+
+    python setup.py sdist bdist_wheel
+
+    pip install -e /Users/lewisbaker/Documents/GitHub/kaplan_data_warehouse/lookml/lookml_gen/lookml_gen.py
+
+pip freeze > requirements.txt
+
+cat requirements.txt
+
+
+
+Credits
+-------
+
+This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+
+.. _Cookiecutter: https://github.com/audreyr/cookiecutter
+.. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+
+
+=======
+History
+=======
+
+0.1.7 (2021-05-28)
+------------------
+
+* First release on PyPI.
+
+
