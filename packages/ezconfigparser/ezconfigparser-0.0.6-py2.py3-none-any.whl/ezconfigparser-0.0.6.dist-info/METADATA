@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: ezconfigparser
+Version: 0.0.6
+Summary: A package for easy manipulating configuration files.
+Home-page: UNKNOWN
+Author: Zesen
+Author-email: 451324565@qq.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=2.7
+Description-Content-Type: text/markdown
+
+# ez-config
+
+`ez-config` is a library aims at an easy way to manipulate configuration files.
+
+What it can do:
+
+- create template configure file
+- parse configure file
+- write configure file
+- merge configure file
+- parse command line arguments based on configure file
+
+
+
