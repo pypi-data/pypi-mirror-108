@@ -1,0 +1,5 @@
+# config.txt
+
+[project]
+gitlab_project =
+var_prefix = K8S_SECRET_
