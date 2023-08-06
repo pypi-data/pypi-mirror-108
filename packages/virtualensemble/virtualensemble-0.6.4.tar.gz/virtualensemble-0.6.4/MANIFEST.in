@@ -1,0 +1,4 @@
+include virtualensemble/*.*
+include virtualensemble/gui/*.*
+include virtualensemble/media/*.*
+include virtualensemble/utils/*.*
