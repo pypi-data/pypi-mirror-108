@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+yammpy/yammpy.c
+yammpy.egg-info/PKG-INFO
+yammpy.egg-info/SOURCES.txt
+yammpy.egg-info/dependency_links.txt
+yammpy.egg-info/top_level.txt
