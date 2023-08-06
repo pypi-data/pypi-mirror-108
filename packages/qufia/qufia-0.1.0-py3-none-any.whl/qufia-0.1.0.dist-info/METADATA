@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: qufia
+Version: 0.1.0
+Summary: Fast and extensible access to forest inventory data
+Home-page: UNKNOWN
+Author: Lucas Wells
+Author-email: lucas@holtzforestry.com
+License: GNU GPLv3
+Keywords: forest inventory and analysis,FIA
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
+
+# Qufia Python SDK
+
+The Python SDK for the qufia api
+
