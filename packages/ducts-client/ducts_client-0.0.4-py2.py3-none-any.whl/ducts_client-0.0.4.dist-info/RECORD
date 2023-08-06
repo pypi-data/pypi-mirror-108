@@ -1,0 +1,10 @@
+ducts_client/__init__.py,sha256=ICk4oN0ItkExh_aw0C3wYT8OUYYCQdVYzFiRe9gaBS0,21
+ducts_client/controllers.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+ducts_client/ducts.py,sha256=jSya4LQ7qEdSEZp2dE9gedjtXQ_PjvdFI3A0DyrkkIU,8055
+ducts_client/event_listeners.py,sha256=8ezgROxrNYmaxMGiIwZ343nDNcpDSWMWfieoshWAhZs,566
+ducts_client/events.py,sha256=pYE5EUO8gEtslVc67GB4hytbYxh5DDNJGf_XFznBvOU,361
+ducts_client-0.0.4.dist-info/LICENSE.txt,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+ducts_client-0.0.4.dist-info/METADATA,sha256=0N3EnwJjquxs--0JQ2HgarNKW3BOwxKsNoERcxx_zpM,902
+ducts_client-0.0.4.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+ducts_client-0.0.4.dist-info/top_level.txt,sha256=mIK5fEb-GoN30xHJaSrRONdL7MuGrBTpIOMfya74VVA,13
+ducts_client-0.0.4.dist-info/RECORD,,

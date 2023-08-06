@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: ducts-client
+Version: 0.0.4
+Summary: Python client library for DUCTS (DUplex Communication and Transactional Streaming Web Framework)
+Home-page: https://github.com/iflb/ducts-client-python
+Author: saito@iflab.tokyo
+Author-email: saito@iflab.tokyo
+License: UNKNOWN
+Project-URL: Project Owner, http://www.pcl.cs.waseda.ac.jp/
+Project-URL: Funding, https://www.waseda.jp/inst/gcs/news/2019/11/29/870/
+Keywords: framework asyncio websocket
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Framework :: AsyncIO
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: aiohttp
+Requires-Dist: async-timeout
+Requires-Dist: msgpack
+
+UNKNOWN
+
+
