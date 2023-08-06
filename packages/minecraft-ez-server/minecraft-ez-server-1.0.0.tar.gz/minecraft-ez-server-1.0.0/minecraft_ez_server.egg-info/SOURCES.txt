@@ -1,0 +1,8 @@
+README.md
+setup.py
+minecraft-ez-server/__init__.py
+minecraft-ez-server/__main__.py
+minecraft_ez_server.egg-info/PKG-INFO
+minecraft_ez_server.egg-info/SOURCES.txt
+minecraft_ez_server.egg-info/dependency_links.txt
+minecraft_ez_server.egg-info/top_level.txt
