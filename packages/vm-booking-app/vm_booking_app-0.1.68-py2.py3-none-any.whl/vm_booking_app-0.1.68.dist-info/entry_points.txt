@@ -1,0 +1,3 @@
+[console_scripts]
+vm-booking-app-manage = vm_booking_app.manage:main
+
