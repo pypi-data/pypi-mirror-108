@@ -1,0 +1,17 @@
+gym_fishing/__init__.py,sha256=QF3X22K9e2m0KXENJLQfj8gG4bHfYS_rMdQ7NsdwPbk,82
+gym_fishing/envs/__init__.py,sha256=WTjoMOXTqXAbhLB7QEOk1F0xvLrzjjtg3R6Lb1RSzyY,1339
+gym_fishing/envs/age_structured.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gym_fishing/envs/base_fishing_env.py,sha256=VRu8DsRPOiYZYvGJAGAQ-rTsVzZ1_BWr1fV6thvoQTo,4705
+gym_fishing/envs/fishing_cts_env.py,sha256=BIVXnQ5xP1FJSq7kPL9it7Egc4RnFOpqo6Vrw6JachM,352
+gym_fishing/envs/fishing_env.py,sha256=KHsd5K3WZ3xqKXLrgK1jkL9dXrjIVS45lfjBtXo4TeE,578
+gym_fishing/envs/fishing_model_error.py,sha256=0yuagVcwuXxD6PUzDeQIQL329EltCGrW0bUpK32EJbk,1316
+gym_fishing/envs/fishing_tipping_env.py,sha256=mIBZcNQCTDa3xu5nkvRvVKBtSl4aaRmcw-JnqHYtXvs,877
+gym_fishing/envs/growth_models.py,sha256=lFRu8EtmTjRRiOk3B8y304VuUDR1myLpmVTaV8I44D0,7076
+gym_fishing/envs/shared_env.py,sha256=ZzCJ_oELsP0qZDGolH3ioXjGKoSJza5M_CUiOxyGWkg,4195
+gym_fishing/models/__init__.py,sha256=IldIgI5Z9o_72INRz1arxuV1iTh4EO0iTaPg58rb06I,69
+gym_fishing/models/policies.py,sha256=5wcQ16FWlDI_tmV8GJ9OqqkZJhCWSmaLy7JB940owC8,1757
+gym_fishing-0.1.0.dist-info/LICENSE.txt,sha256=wX1LTsNYPTeEeJZMikDpDS8ik-BWpE69AGLrrdBkwCs,1073
+gym_fishing-0.1.0.dist-info/METADATA,sha256=EQAZuCJ6CaAavheGNSUcwMSZduQqJQfHqgDfCriZssA,1588
+gym_fishing-0.1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+gym_fishing-0.1.0.dist-info/top_level.txt,sha256=SFMuQeM3JvOP4IPgvWuzQ7264lgL48hMOnRC3h4AURA,12
+gym_fishing-0.1.0.dist-info/RECORD,,
