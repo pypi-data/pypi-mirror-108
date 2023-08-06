@@ -1,0 +1,3 @@
+[console_scripts]
+generate-graylog-config=phygitalism_logger.generate:gen
+
