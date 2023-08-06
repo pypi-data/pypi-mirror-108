@@ -1,0 +1,6 @@
+image_converter/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+image_converter/__main__.py,sha256=FUqhdwK3BnGdDs2Z8rpNWghBt76T6QA4I5Ls_nJEbZ4,37
+image_converter/code_recognizer.py,sha256=VEtVGZsHBSfP0PhepPP81pvZcdR46jtAOUI1XuxHvtU,2748
+code_image_to_text-0.1.4.dist-info/WHEEL,sha256=VN2eEg4PHbTOniXb-cCYQPc6zUTS4dAcATjlgU3q-Lo,83
+code_image_to_text-0.1.4.dist-info/METADATA,sha256=xpIeBJ2mzEYVAmy2pujQuqowdrlyIxs75YJoVMiVRDA,1762
+code_image_to_text-0.1.4.dist-info/RECORD,,
