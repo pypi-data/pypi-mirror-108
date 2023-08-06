@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: thonny-emac
+Version: 0.1.0
+Summary: Thonny support for EMAC, Inc. boards
+Home-page: http://git.emacinc.com/micropython-public/thonny-emac
+Author: Klint Youngmeyer
+Author-email: 8-kyoungmeyer@users.noreply.git.emacinc.com
+License: GPL
+Project-URL: Bug Tracker, http://git.emacinc.com/micropython-public/thonny-emac/issues
+Keywords: IDE thonny programming CutiPy MitiPy EMAC
+Platform: Windows
+Platform: macOS
+Platform: Linux
+Classifier: Environment :: MacOS X
+Classifier: Environment :: Win32 (MS Windows)
+Classifier: Environment :: X11 Applications
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: License :: Freeware
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Classifier: Natural Language :: English
+Classifier: Topic :: Software Development
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: POSIX :: Linux
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+# Thonny support for EMAC, Inc. boards
+
+This plugin brings support for the EMAC CutiPy and MitiPy to Thonny.
+
+
