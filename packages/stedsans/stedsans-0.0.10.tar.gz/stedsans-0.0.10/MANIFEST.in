@@ -1,0 +1,2 @@
+include src/stedsans/data/*
+include src/__init__.py
