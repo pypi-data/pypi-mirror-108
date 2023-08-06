@@ -1,0 +1,10 @@
+sh_junit_xml/__init__.py,sha256=w-C1S2LQXAgpKkUXoORAIsK14V3PI2VnkB5289qvDDI,2314
+sh_junit_xml/__main__.py,sha256=vPFDZJIg37q4DedPNZZhRXiLRPiEDKTwoLUeda4WSck,81
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_main.py,sha256=LMC9HYJ64h19SXzqypW-zxgSYMxmcLByd9kr5xwAl3I,2430
+sh_junit_xml-1.0.0.dist-info/LICENSE,sha256=bPmG02WB2cMielhz_DaA_izBbc88zdWQaW2i0AGr-g0,1068
+sh_junit_xml-1.0.0.dist-info/METADATA,sha256=LSOGmkuEWBUBY9XcKf53v9NvkvINLXK4xjVAXXdU8iY,1834
+sh_junit_xml-1.0.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+sh_junit_xml-1.0.0.dist-info/entry_points.txt,sha256=-nlZ6g-Bk57cEmSR46QNrkmCwhMzzT0mbu57z6vah5I,52
+sh_junit_xml-1.0.0.dist-info/top_level.txt,sha256=3dmWg5kOc0bFR9ku8fyt929GA_h4QCHKyH8GG-ZAYs8,13
+sh_junit_xml-1.0.0.dist-info/RECORD,,
