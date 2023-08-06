@@ -1,0 +1,13 @@
+coverlovin2.py,sha256=2gbE-SHZKszCgXsg5A_86sUnYxt2SXREiF21n10qlEw,105
+CoverLovin2-0.6.9.data/scripts/coverlovin2.py,sha256=oZAbzUuG4m3CZAvBHjBbipQTA226wrVPjoM2OPOoMyI,91195
+coverlovin2/__init__.py,sha256=FGsDhR825w2vtR4jSoTnifg0ktdH-IYwlWZJN2DB9jA,130
+coverlovin2/__main__.py,sha256=_PiFFO81tUBSHGLv23QEN2XgPVlTJjqeN5VBAyvFKRU,102
+coverlovin2/coverlovin2.py,sha256=EotQQQcMVPnWdd7p1XFeq07_dEk-19L9Z_silqlItQU,91211
+coverlovin2/test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+coverlovin2/test/test_coverlovin2.py,sha256=7OMCjh8hzquk83HeGY0EJM8z87FjXM5GEAoSXU6Wucg,26756
+CoverLovin2-0.6.9.dist-info/LICENSE.TXT,sha256=gZ3J2CkHoPiyBNHhAfJLgJoxAJt1InQhv87DcAxC88E,566
+CoverLovin2-0.6.9.dist-info/METADATA,sha256=F0lDjhDzXtnYEi1cC3Dbe0LIL7w2wIIhYpTV5UW6JZY,15956
+CoverLovin2-0.6.9.dist-info/WHEEL,sha256=EVRjI69F5qVjm_YgqcTXPnTAv3BfSUr0WVAHuSP3Xoo,92
+CoverLovin2-0.6.9.dist-info/entry_points.txt,sha256=aSvCRy0DpjrRQoiqStjf66g1ofvBw3NzJ5wfGF0YguM,50
+CoverLovin2-0.6.9.dist-info/top_level.txt,sha256=vYheNT8nwPCaK5MqmwdsNldGrfDZmS1UICv5G56Jfhw,12
+CoverLovin2-0.6.9.dist-info/RECORD,,
