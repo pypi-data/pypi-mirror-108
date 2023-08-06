@@ -1,0 +1,13 @@
+-e .
+ipykernel
+nbsphinx
+xarray
+pint
+pint_xarray
+numpy
+pandas
+openscm_units
+loguru
+git+https://github.com/keewis/sphinx-autosummary-accessors
+numpydoc
+matplotlib
