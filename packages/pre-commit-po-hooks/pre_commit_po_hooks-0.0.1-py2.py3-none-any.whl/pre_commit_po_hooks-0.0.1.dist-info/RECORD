@@ -1,0 +1,9 @@
+hooks/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+hooks/obsolete_messages.py,sha256=HvRONj_9pM57g5erpu7PaY-s9Zs28k5ixvmRePyubWY,1565
+hooks/untranslated_messages.py,sha256=WUWXcsDa4rIv6y3URUC6Y7Xz_u5IWqJWbNqGbQLQtNQ,1650
+pre_commit_po_hooks-0.0.1.dist-info/LICENSE,sha256=83856wsPIykp_I_X5cZYNP-ycCwVtmyEWE8JXfsfY7o,1170
+pre_commit_po_hooks-0.0.1.dist-info/METADATA,sha256=e3kSxdDc0WpVz7Z-XHyC4MI94QRv7DWKJgalp0FIMnU,1313
+pre_commit_po_hooks-0.0.1.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+pre_commit_po_hooks-0.0.1.dist-info/entry_points.txt,sha256=t41TCrrqmOe1NTjjjUw5-Okw_Nk7yB-03cd9j_3-q-E,135
+pre_commit_po_hooks-0.0.1.dist-info/top_level.txt,sha256=I0gcmmeA3xdjjkokY-bVx5WycqQcFVAk4RHQB-wl9h8,6
+pre_commit_po_hooks-0.0.1.dist-info/RECORD,,

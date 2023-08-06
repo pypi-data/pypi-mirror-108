@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: pre-commit-po-hooks
+Version: 0.0.1
+Summary: pre-commit hooks for PO files
+Home-page: https://github.com/mondeja/pre-commit-po-hooks
+Author: Alvaro Mondejar
+Author-email: mondejar1994@gmail.com
+License: BSD-3-Clause
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.6.1
+Description-Content-Type: text/markdown
+Provides-Extra: test
+Requires-Dist: pytest (==6.2.0) ; extra == 'test'
+Requires-Dist: pytest-cov (==2.12.1) ; extra == 'test'
+
+# pre-commit-po-hooks
+
+Hooks for pre-commit useful working with PO files.
+
+## Example configuration
+
+```yaml
+- repo: https://github.com/mondeja/pre-commit-po-hooks
+  rev: v1.0.0
+  hooks:
+    - id: obsolete-messages
+    - id: untranslated-messages
+```
+
+## Hooks
+
+- **`obsolete-messages`**: checks for obsolete messages printing their line
+ numbers if found.
+- **`untranslated-messages`**: checks for untranslated messages printing their
+ line numbers if found.
+
+
