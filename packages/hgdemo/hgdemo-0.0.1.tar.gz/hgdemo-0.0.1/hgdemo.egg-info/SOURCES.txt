@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+hgdemo/__init__.py
+hgdemo/circle.py
+hgdemo/square.py
+hgdemo.egg-info/PKG-INFO
+hgdemo.egg-info/SOURCES.txt
+hgdemo.egg-info/dependency_links.txt
+hgdemo.egg-info/top_level.txt
