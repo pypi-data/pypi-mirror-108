@@ -1,0 +1,7 @@
+#!/home/ldelisle/.conda/envs/baredSC_dev/bin/python
+# -*- coding: utf-8 -*-
+
+from baredSC.baredSC_1d_gamma import main
+
+if __name__ == "__main__":
+    main()
