@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: pyunittests
+Version: 0.0.1
+Summary: Python unit testing module
+Home-page: UNKNOWN
+Author: Jan Dziedziak
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# example program:
+
+```
+from pyunittests import *
+
+def funcBeingTested(inp):
+    return hi
+    if inp in [15]:
+        return inp*3
+    else:
+        return inp*2
+
+def raise_test():
+    return funcBeingTested(5)
+
+def test1():
+    expect(raise_test).toRaise(NameError)
+
+it(f'doubles 5 correctly', test1, 'max')
+```
+
+
