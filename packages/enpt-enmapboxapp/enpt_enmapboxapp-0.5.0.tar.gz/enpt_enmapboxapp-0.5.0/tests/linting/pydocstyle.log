@@ -1,0 +1,66 @@
+./enpt_enmapboxapp/version.py:1 at module level:
+        D100: Missing docstring in public module
+./enpt_enmapboxapp/enpt_enmapboxapp.py:61 in public class `EnPTEnMAPBoxApp`:
+        D200: One-line docstring should fit on one line with quotes (found 3)
+./enpt_enmapboxapp/enpt_enmapboxapp.py:61 in public class `EnPTEnMAPBoxApp`:
+        D400: First line should end with a period (not 'n')
+./enpt_enmapboxapp/enpt_enmapboxapp.py:65 in public method `__init__`:
+        D107: Missing docstring in __init__
+./enpt_enmapboxapp/enpt_enmapboxapp.py:73 in public method `icon`:
+        D205: 1 blank line required between summary line and description (found 0)
+./enpt_enmapboxapp/enpt_enmapboxapp.py:73 in public method `icon`:
+        D400: First line should end with a period (not 'n')
+./enpt_enmapboxapp/enpt_enmapboxapp.py:73 in public method `icon`:
+        D401: First line should be in imperative mood; try rephrasing (found 'This')
+./enpt_enmapboxapp/enpt_enmapboxapp.py:80 in public method `menu`:
+        D205: 1 blank line required between summary line and description (found 0)
+./enpt_enmapboxapp/enpt_enmapboxapp.py:80 in public method `menu`:
+        D400: First line should end with a period (not '`')
+./enpt_enmapboxapp/enpt_enmapboxapp.py:80 in public method `menu`:
+        D401: First line should be in imperative mood (perhaps 'Return', not 'Returns')
+./enpt_enmapboxapp/enpt_enmapboxapp.py:108 in public method `showAboutDialog`:
+        D102: Missing docstring in public method
+./enpt_enmapboxapp/enpt_enmapboxapp.py:113 in public method `processingAlgorithms`:
+        D202: No blank lines allowed after function docstring (found 1)
+./enpt_enmapboxapp/enpt_enmapboxapp.py:113 in public method `processingAlgorithms`:
+        D205: 1 blank line required between summary line and description (found 0)
+./enpt_enmapboxapp/enpt_enmapboxapp.py:113 in public method `processingAlgorithms`:
+        D400: First line should end with a period (not 'n')
+./enpt_enmapboxapp/enpt_enmapboxapp.py:113 in public method `processingAlgorithms`:
+        D401: First line should be in imperative mood; try rephrasing (found 'This')
+./enpt_enmapboxapp/enpt_enmapboxapp.py:121 in public method `startGUI`:
+        D200: One-line docstring should fit on one line with quotes (found 3)
+./enpt_enmapboxapp/enpt_enmapboxapp.py:121 in public method `startGUI`:
+        D400: First line should end with a period (not 'I')
+./enpt_enmapboxapp/enpt_enmapboxapp.py:121 in public method `startGUI`:
+        D401: First line should be in imperative mood (perhaps 'Open', not 'Opens')
+./enpt_enmapboxapp/enpt_enmapboxapp.py:138 in public class `EnPTAlgorithm`:
+        D101: Missing docstring in public class
+./enpt_enmapboxapp/enpt_enmapboxapp.py:178 in public method `group`:
+        D102: Missing docstring in public method
+./enpt_enmapboxapp/enpt_enmapboxapp.py:181 in public method `groupId`:
+        D102: Missing docstring in public method
+./enpt_enmapboxapp/enpt_enmapboxapp.py:184 in public method `name`:
+        D102: Missing docstring in public method
+./enpt_enmapboxapp/enpt_enmapboxapp.py:187 in public method `displayName`:
+        D102: Missing docstring in public method
+./enpt_enmapboxapp/enpt_enmapboxapp.py:190 in public method `createInstance`:
+        D102: Missing docstring in public method
+./enpt_enmapboxapp/enpt_enmapboxapp.py:218 in public method `initAlgorithm`:
+        D102: Missing docstring in public method
+./enpt_enmapboxapp/enpt_enmapboxapp.py:534 in public method `processAlgorithm`:
+        D102: Missing docstring in public method
+./enpt_enmapboxapp/enpt_enmapboxapp.py:608 in public method `shortHelpString`:
+        D202: No blank lines allowed after function docstring (found 1)
+./enpt_enmapboxapp/enpt_enmapboxapp.py:608 in public method `shortHelpString`:
+        D400: First line should end with a period (not ':')
+./enpt_enmapboxapp/enpt_enmapboxapp.py:608 in public method `shortHelpString`:
+        D401: First line should be in imperative mood; try rephrasing (found 'Example')
+./enpt_enmapboxapp/enpt_enmapboxapp.py:627 in public method `helpString`:
+        D102: Missing docstring in public method
+./enpt_enmapboxapp/enpt_enmapboxapp.py:631 in public method `helpUrl`:
+        D102: Missing docstring in public method
+./docs/conf.py:1 at module level:
+        D100: Missing docstring in public module
+./docs/conf.py:127 in public function `setup`:
+        D103: Missing docstring in public function
