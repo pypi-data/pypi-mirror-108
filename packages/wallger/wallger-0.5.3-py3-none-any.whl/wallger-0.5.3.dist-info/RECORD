@@ -1,0 +1,11 @@
+wallger/__init__.py,sha256=yL00s1NAtE7uzBxdlP24NNFK0gemK08ZXCtXlEy6c5c,50
+wallger/__main__.py,sha256=38QaBPeAZLGOEgoR31RY_80I7tcE4mMxVUifacYG7o4,37
+wallger/helpers.py,sha256=gpRjZuC6PX2FDPlHrfJRF4mAbq5BAGPvJjd7wntWGuY,1752
+wallger/run.py,sha256=ZwbwycRALxlwbsKvPvJU1GTdpP38EWAnr7ZoF0oMsN8,668
+wallger/version.py,sha256=tgzuqHKcEdKBaP57F5oXxq4XlW2n9J4Fj8ZGu7nGOZg,22
+wallger-0.5.3.dist-info/LICENSE,sha256=Nbq7yYTTspSY7zH5jjmRRUD0yoaMsryaYtolXTCP4d0,1072
+wallger-0.5.3.dist-info/METADATA,sha256=dbi6A3mqM8qEeVUeU92J-MOziDFK5IyswlG-wu5Y8sA,2302
+wallger-0.5.3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+wallger-0.5.3.dist-info/entry_points.txt,sha256=Db4E0DfArXFn2viEykxkGpfW0r80yRwqLSgST5-yHLA,46
+wallger-0.5.3.dist-info/top_level.txt,sha256=w0YgR6Rd1Xep1aw7Qlxnc7g7favmOiR9B7hyb8o4FfE,8
+wallger-0.5.3.dist-info/RECORD,,

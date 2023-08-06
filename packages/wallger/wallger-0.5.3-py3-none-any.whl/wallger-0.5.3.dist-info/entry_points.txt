@@ -1,0 +1,3 @@
+[console_scripts]
+wallger = wallger.run:main
+
