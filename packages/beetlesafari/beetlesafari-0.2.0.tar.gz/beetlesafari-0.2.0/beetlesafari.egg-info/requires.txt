@@ -1,0 +1,12 @@
+numpy
+pyopencl
+toolz
+scikit-image
+requests
+pyclesperanto-prototype==0.9.1
+napari==0.4.8
+magicgui
+dask
+cachetools
+napari_pyclesperanto_assistant==0.9.1
+scikit-learn
