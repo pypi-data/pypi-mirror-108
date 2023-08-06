@@ -1,0 +1,10 @@
+sidSimpleNN/__init__.py,sha256=9X2TNqr-xOuVveQn0rrjn8te5IKfAYTL5Ej42hp13fQ,135
+sidSimpleNN/autoencoder.py,sha256=IqpV4y7R-dMwdJBM0jBg7UhpznEuGiQoPO2Bh0dZPdQ,1885
+sidSimpleNN/function.py,sha256=-w0sCtNIT9reoEekkeqt-mEdzPiVgYNKy-Mo9FkXwOM,1017
+sidSimpleNN/mainTrain.py,sha256=ojohVsaeShOm3c-La8nQtHjwQ_khCzDyKMoMD4OyioU,2360
+sidSimpleNN/myNN.py,sha256=14zKJHcfZQaHE1goeZNiWkhDACBpcymfsMu_fDvOJHc,7188
+sidSimpleNN-0.2.8.dist-info/LICENSE.txt,sha256=eYKxXugpQviUStIVr2toG0bUyM_5taAekrU6qDp5EWQ,1057
+sidSimpleNN-0.2.8.dist-info/METADATA,sha256=8qFKzQ8ltzk5PEUqQY2wmNdcMGMxPRI6YfGxFNZRpo4,3467
+sidSimpleNN-0.2.8.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+sidSimpleNN-0.2.8.dist-info/top_level.txt,sha256=fBcG8TUoesVEujZPqQn45aR-nvAv8INkOUOBxcnT9-E,12
+sidSimpleNN-0.2.8.dist-info/RECORD,,
