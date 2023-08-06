@@ -1,0 +1,9 @@
+pytrading212/__init__.py,sha256=IGCUiCzfhmyxx4IsY5-iuNqqqKGw3x-zf_bB-J-XhaI,106
+pytrading212/order.py,sha256=XVaHiL3yE1jzVEpbsY5PczDj9UWw8OqLz_nl_E18bLk,4589
+pytrading212/position.py,sha256=lFdP-ZdAPH2qh-RwinCXGnpU5KdI12qXc26PbjyEaRI,236
+pytrading212/trading212.py,sha256=pWVWWDbtAinuG46pEqZKkBijZAdXeNPRSm-mTixm6lA,9255
+pytrading212-0.1.7.dist-info/LICENSE,sha256=uYjkZ694060lCMcBX8JZJ9XEh10D1yd1EoCApTSGWm0,1087
+pytrading212-0.1.7.dist-info/METADATA,sha256=U5oSQuT4Hr5vO_pHghxdUQnXh-ScH0Eq84BgEv6xvZc,5660
+pytrading212-0.1.7.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pytrading212-0.1.7.dist-info/top_level.txt,sha256=8Wq41h4pwQxbuI78fpvj3s4m9Es43lSHKFsdQdtO8YI,13
+pytrading212-0.1.7.dist-info/RECORD,,
