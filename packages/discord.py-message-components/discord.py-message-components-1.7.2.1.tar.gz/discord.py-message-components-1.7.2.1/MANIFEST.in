@@ -1,0 +1,6 @@
+include README.rst
+include LICENSE
+include src/discord/*
+include src/discord/bin/*.dll
+include src/discord/ext/commands/*
+include src/discord/ext/tasks/__init__.py
