@@ -1,0 +1,9 @@
+phygitalism_config/__init__.py,sha256=RCFFr9zW3PLi_qLravADSgxZZQsU2OT_nuggkP176-0,175
+phygitalism_config/config.py,sha256=2wgEeTLe5lHBcR2L6JxaW75T8l6wlTimFQt26VF_N_w,4011
+phygitalism_config/import_finder.py,sha256=oNyFUp0cbNbzN3oaNQZ4TWitEJiC79K-gF8Y1WH0j0g,491
+phygitalism_config/import_loader.py,sha256=OEOfIBMnWWwDs-SA3QIopn924pP4KB0v2rrz4YA1Yeo,1117
+phygitalism_config/loaders_constants.py,sha256=PUkZK-qIuMd93xTrPwicbQNEBnD1vzx8Up2bSrTE__Q,108
+phygitalism_config/type_caster.py,sha256=-ovrKNmHxsHAi4103Q90IM41d5jAMytR0y_CoEvQ9PM,2323
+phygitalism_config-0.1.8.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+phygitalism_config-0.1.8.dist-info/METADATA,sha256=nYeD9Z6DrUpUPhvBscQx_aGRLrdAHBnve2HAWtE9r1M,398
+phygitalism_config-0.1.8.dist-info/RECORD,,
