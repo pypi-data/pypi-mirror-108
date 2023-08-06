@@ -1,0 +1,9 @@
+README.md
+setup.py
+croppy/__init__.py
+croppy/pixval_tools.py
+croppy/plant_info_tools.py
+croppy.egg-info/PKG-INFO
+croppy.egg-info/SOURCES.txt
+croppy.egg-info/dependency_links.txt
+croppy.egg-info/top_level.txt
