@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+setup.py
+docs/README.adoc
+glustercli2/__init__.py
+glustercli2/glustercli.py
+glustercli2/parsers.py
+glustercli2/peer.py
+glustercli2/types.py
+glustercli2/volume.py
+glustercli2.egg-info/PKG-INFO
+glustercli2.egg-info/SOURCES.txt
+glustercli2.egg-info/dependency_links.txt
+glustercli2.egg-info/top_level.txt
