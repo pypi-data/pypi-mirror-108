@@ -1,0 +1,12 @@
+README.md
+setup.py
+alamari/__about__.py
+alamari/__init__.py
+alamari/convert.py
+alamari/humanize.py
+alamari/utils.py
+alamari.egg-info/PKG-INFO
+alamari.egg-info/SOURCES.txt
+alamari.egg-info/dependency_links.txt
+alamari.egg-info/requires.txt
+alamari.egg-info/top_level.txt
