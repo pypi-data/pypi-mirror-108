@@ -1,0 +1,11 @@
+pytest_mongo/__init__.py,sha256=W7aAkNtzszHR-6Rilburv_o-GB8bQ_yJQRNByMfLMJA,861
+pytest_mongo/executor_noop.py,sha256=A1-TAzb-jZbTj2Y92qTSZeOByT1blTjzoMDnDkwLSuA,1006
+pytest_mongo/factories.py,sha256=YmWJmXc0i8CvlhWRqAnosk8Zz1ArZ1AfgoBqbq05V8c,6290
+pytest_mongo/plugin.py,sha256=P0pMx7sgJma7AEUpbNR5vsUSwX6js5ZjSio9pAvVTps,2839
+pytest_mongo-2.1.1.dist-info/AUTHORS.rst,sha256=s1yUgvpabmzCaWQhXNXQ4PwDZLH0SlUVNFlxg40boTg,243
+pytest_mongo-2.1.1.dist-info/LICENSE,sha256=5Mu1MIARb4AKYXhrC7Hl1-D9mbYyzJbVO3RPfTJOPfg,7631
+pytest_mongo-2.1.1.dist-info/METADATA,sha256=fNwjzsmwKHZXNKga2SQc-_A_MocfEjyUcOZzX5vygkM,6882
+pytest_mongo-2.1.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pytest_mongo-2.1.1.dist-info/entry_points.txt,sha256=ErWeJD4DtjJb4uk8sfQXRi8t26o_7pq5GM_45Qayx_M,47
+pytest_mongo-2.1.1.dist-info/top_level.txt,sha256=UGN9jb7eVIJWM1o8d-e9oZ3hEZxzxmiKTCKmfWjslSk,13
+pytest_mongo-2.1.1.dist-info/RECORD,,
