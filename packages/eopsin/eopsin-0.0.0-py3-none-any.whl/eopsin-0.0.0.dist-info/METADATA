@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: eopsin
+Version: 0.0.0
+Summary: Yet another automated crypto trading framework
+Home-page: https://github.com/cxkoda/eopsin
+Author: David Huber
+Author-email: dave@yomi.eu
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: SQLAlchemy (>=1.4.15)
+Requires-Dist: numpy (>=1.19.5)
+Requires-Dist: python-binance (>=1.0.10)
+
+# Eopsin
+
+[![Test](https://github.com/cxkoda/plutus/workflows/Test/badge.svg)](https://github.com/cxkoda/plutus/actions)
+[![CodeQL](https://github.com/cxkoda/plutus/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/cxkoda/plutus/actions/workflows/codeql-analysis.yml)
+
+Yet another automated crypto trading framework featuring a flexible strategy backtesting and automatic caching of exchange data in a local database.
+
