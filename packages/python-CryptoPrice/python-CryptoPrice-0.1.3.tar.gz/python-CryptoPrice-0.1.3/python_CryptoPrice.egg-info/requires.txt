@@ -1,0 +1,5 @@
+requests
+appdirs
+python-binance
+kucoin-python
+cbpro@ git+https://github.com/teleprint-me/coinbasepro-python.git@2.1.28
