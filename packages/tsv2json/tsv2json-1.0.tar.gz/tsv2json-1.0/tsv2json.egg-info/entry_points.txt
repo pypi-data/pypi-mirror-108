@@ -1,0 +1,3 @@
+[console_scripts]
+tsv2json = tsv2json.bin.main:main
+

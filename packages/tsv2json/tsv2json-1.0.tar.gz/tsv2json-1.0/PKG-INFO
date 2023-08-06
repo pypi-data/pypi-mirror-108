@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: tsv2json
+Version: 1.0
+Summary: Convert TSV file to JSON
+Home-page: https://github.com/suqingdong/tsv2json
+Author: suqingdong
+Author-email: suqingdong1114@gmail.com
+License: BSD License
+Project-URL: Documentation, https://tsv2json.readthedocs.io
+Project-URL: Tracker, https://github.com/suqingdong/tsv2json/issues
+Description: # Convert TSV file to JSON
+        
+        ## Installation
+        ```bash
+        pip install tsv2json
+        ```
+        
+        ## Examples
+        ```bash
+        tsv2json examples/demo.tsv
+        
+        tsv2json examples/demo.tsv -i 2
+        
+        tsv2json examples/demo.tsv -i 2 -o out.json
+        
+        tsv2json examples/demo.tsv -i 2 -l 3
+        
+        tsv2json examples/demo.tsv -c 'name' -H 0
+        
+        tsv2json examples/demo.csv -s , 
+        ```
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Topic :: Software Development :: Libraries
+Description-Content-Type: text/markdown

@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+requirements.txt
+setup.py
+tsv2json/__init__.py
+tsv2json.egg-info/PKG-INFO
+tsv2json.egg-info/SOURCES.txt
+tsv2json.egg-info/dependency_links.txt
+tsv2json.egg-info/entry_points.txt
+tsv2json.egg-info/requires.txt
+tsv2json.egg-info/top_level.txt
+tsv2json/bin/__init__.py
+tsv2json/bin/main.py
+tsv2json/core/__init__.py
+tsv2json/version/version.json

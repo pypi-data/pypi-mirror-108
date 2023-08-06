@@ -1,0 +1,2 @@
+include requirements.txt
+include tsv2json/version/version.json
