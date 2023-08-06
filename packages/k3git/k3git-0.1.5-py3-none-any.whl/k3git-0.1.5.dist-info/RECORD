@@ -1,0 +1,9 @@
+k3git/__init__.py,sha256=_qb7-PtjTFbkZdh1_1h7K5H_zdKxIm4UmAUo6Es1y6c,472
+k3git/git_wrapper.py,sha256=O3tpePWzGGDwuKgvYGr2LdN7taEpnil0E_lbil3en6M,6177
+k3git/gitopt.py,sha256=UPUS1AwlRlmUavhOlilKKO41qxV40z0lKfelgzSohs8,5491
+k3git/giturl.py,sha256=BaU_DiNMbbYb64qJoOinI1w3yhjrCwgaXT3XpF37468,8336
+k3git/setup.py,sha256=GVAQnadT5va7cRI6dBuyWX6Kr9cN26h7CB-NiMat-oo,2261
+k3git-0.1.5.dist-info/METADATA,sha256=nGi683cmKUlXA16G1GrduS5fd_DrN7OgXGHj2XfI6uE,2065
+k3git-0.1.5.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+k3git-0.1.5.dist-info/top_level.txt,sha256=hKXgZTvGy-Q_HUjepwvNiaMMTjLXYXvJk_FyE8EdrqM,6
+k3git-0.1.5.dist-info/RECORD,,
