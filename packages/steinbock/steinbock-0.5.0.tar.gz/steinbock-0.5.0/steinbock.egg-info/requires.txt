@@ -1,0 +1,17 @@
+anndata
+click
+fcswrite
+h5py
+networkx
+numpy
+pandas
+scikit-image
+scipy
+tifffile
+xtiff
+
+[DeepCell]
+deepcell
+
+[IMC]
+imctools
