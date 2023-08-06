@@ -1,0 +1,14 @@
+pyshipupdate/__init__.py,sha256=doE1RkUJ7TxJZg44I6PRbgmoNzJzSet0t-vM6qQkoxk,521
+pyshipupdate/__version__.py,sha256=YZUtFXvtj4rbP3XMMA7Kkjt1gOJgTBfOnEUn6TlLy1E,341
+pyshipupdate/aws.py,sha256=UhXY-EnVhWBX_pSR4v4vQm_2rbE2uOo-NzQTlnbc85Y,2383
+pyshipupdate/bucket.py,sha256=iduQAp7udNeRWEXIQd8ah4WXfKryx1haw4QdNtqzz18,138
+pyshipupdate/exe_return_codes.py,sha256=HQzZFUtYQ7cMqnXALRpMZVtjxwq3-iKzx9pSfqF6ll8,265
+pyshipupdate/os_util.py,sha256=E9zh9RybylUbgWO1-xSi340Mo8lDcopYVSS7j8FYD14,3774
+pyshipupdate/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyshipupdate/updater.py,sha256=mjM_eWb59_USdcev9VdDvAXsnmHDy-JGwSBT8QPxnjk,3082
+pyshipupdate/version.py,sha256=_VXtLdTvHKhkwtGGAN5KEntfNjKDm-6W3XBELSdKzxY,1579
+pyshipupdate-0.1.0.dist-info/LICENSE,sha256=wJpPh6rC_YhbTZ7ZIy1VjrqeLdJ8Pz0ppx2MUi7s8Dg,1088
+pyshipupdate-0.1.0.dist-info/METADATA,sha256=gKCdU8Q1eMa1kjydJb2E-gj82sRRxrzOGUdlfyEcglU,807
+pyshipupdate-0.1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pyshipupdate-0.1.0.dist-info/top_level.txt,sha256=I9qgDlte-sdugTj5tfbrJRBXZASvPB19uIPACFTBsvI,13
+pyshipupdate-0.1.0.dist-info/RECORD,,
