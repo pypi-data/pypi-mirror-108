@@ -1,0 +1,8 @@
+{# 输出框架的目录,根据当前是主项目还是bundle项目,引用框架的路径有所区别 #}
+{% macro framework_path(prefix) -%}
+{% if prefix -%}
+../../../../frameworks
+{%- else -%}
+../../frameworks
+{%- endif %}
+{%- endmacro %}

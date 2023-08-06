@@ -1,0 +1,20 @@
+{% extends "common/comment_head.ts.j2" %}
+
+{% block content %}
+import {
+{% for table in tables %}
+    {{table.name}},
+{% endfor %}
+} from './{{prefix}}TableDefines';
+
+export let generate{{prefix}}TableClass = (name: string) => {
+    switch (name) {
+    {% for table in tables %}
+    case '{{ table.name }}':
+            return {{ table.name }};
+    {% endfor %}
+    }
+    return null;
+}
+
+{% endblock content %}
