@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: phoenixquant
+Version: 1.4
+Summary: This is PhoenixQuant API
+Home-page: https://www.phoenixquant.com
+Author: Aaron Qiu
+Author-email: chiminyau@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3
+License-File: LICENSE
+
+UNKNOWN
+
