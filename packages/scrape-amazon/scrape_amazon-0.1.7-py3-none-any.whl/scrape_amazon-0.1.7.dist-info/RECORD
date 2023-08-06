@@ -1,0 +1,12 @@
+scrape_amazon/__init__.py,sha256=RaNKmsXN35mfkVCoZonIbIv0H6GmgoQRPWJU3g8jg4g,59
+scrape_amazon/cli.py,sha256=y1hHP1ylE0Nk3zVKkU0R9p0yCP93TJNJgTFV7ks4-bM,890
+scrape_amazon/scraper.py,sha256=2UlVwgPosZfvTBrNrX71cnMNpDTL26o-jJ0u5-8F_-0,518
+scrape_amazon/util/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+scrape_amazon/util/scrape.py,sha256=pXk8Ce9RFCVt_Okw6aEeTHRhDDh3TGwy_Rre0uP6F3A,3686
+scrape_amazon/util/urlFunctions.py,sha256=KFtqD636BcfU6lYu1AHKEkrwRwQhva-AmJIUaSQ6j_E,928
+scrape_amazon-0.1.7.dist-info/LICENSE,sha256=GLr6HxCQzAqrEwsIC10UKQ03Eu0gFbrjlfC2hnZgH9o,1069
+scrape_amazon-0.1.7.dist-info/METADATA,sha256=seX0b2Wi9pyOyCMzb8iagF4AHZiHN1tVedIZ2g4-kJw,3213
+scrape_amazon-0.1.7.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+scrape_amazon-0.1.7.dist-info/entry_points.txt,sha256=F81qyqn_F3SPp7VIWeCBLqtkyFR7-Leqmw1psylR6b4,69
+scrape_amazon-0.1.7.dist-info/top_level.txt,sha256=FfyWcQKXnAmT-CETORV9mJkM36axr0TvJHf9Vy0OsHw,14
+scrape_amazon-0.1.7.dist-info/RECORD,,
