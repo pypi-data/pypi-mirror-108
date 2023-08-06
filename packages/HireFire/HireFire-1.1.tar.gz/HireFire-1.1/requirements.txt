@@ -1,0 +1,10 @@
+-e .
+celery
+flask
+redis
+rq
+Django
+pytest
+pytest-django
+coverage
+codecov
