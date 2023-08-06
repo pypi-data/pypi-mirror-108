@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+plyddl.egg-info/PKG-INFO
+plyddl.egg-info/SOURCES.txt
+plyddl.egg-info/dependency_links.txt
+plyddl.egg-info/requires.txt
+plyddl.egg-info/top_level.txt
