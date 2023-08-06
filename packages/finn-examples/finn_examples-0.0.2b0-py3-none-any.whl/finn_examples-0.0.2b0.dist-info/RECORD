@@ -1,0 +1,15 @@
+finn_examples/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+finn_examples/driver.py,sha256=3UA_W4Mj5MXYObEdAaDFXyfsW8gQH9OpaUvYcQYHVbQ,18615
+finn_examples/models.py,sha256=lyM2RHJRxMjI2As5uuN0oYJr0BYyjTukZHQ-fWdU1lw,7411
+finn_examples/bitfiles/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+finn_examples/bitfiles/bitfiles.zip.link,sha256=lb5tubQZhYSMPHqiCKsifkeiOIIqcxZH_f_AGR8cqc0,920
+finn_examples/notebooks/0_mnist_with_fc_networks.ipynb,sha256=uZ7sp_QYkhTnF1SxhNJVAXDN2FVwvpQvx2hTnLDXkas,16334
+finn_examples/notebooks/1_cifar10_with_cnv_networks.ipynb,sha256=txS2XBsN3dR5pcmVYYV3BCdSzvWO_SArGEmKzHjTngQ,22020
+finn_examples/notebooks/2_imagenet_with_mobilenet_v1.ipynb,sha256=EBPRgnMbZWxdkucNrWB7_JqrMcHz9yoslx9pp_KM27U,198514
+finn_examples-0.0.2b0.dist-info/AUTHORS.rst,sha256=uLolTfd2vZPK3kacidEhyHuwxltKptJNuIbcWa0oXUk,237
+finn_examples-0.0.2b0.dist-info/LICENSE,sha256=9QgXfsQaRVEjcDtpyW32dAf-8WRH7ctn8rIfeUrpn9s,10191
+finn_examples-0.0.2b0.dist-info/METADATA,sha256=NglfztxdYEubs4aPTneFwQ3fzxjsM4OgDbw4-Ufz20o,4400
+finn_examples-0.0.2b0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+finn_examples-0.0.2b0.dist-info/entry_points.txt,sha256=5vSXWeu9T63qDV0E38XV_dPG340Rha6GQJc4HFP-09I,58
+finn_examples-0.0.2b0.dist-info/top_level.txt,sha256=pPnIpB7C4LkZWv7siBhk7WZllW9oprpvwi09o1R5L6U,14
+finn_examples-0.0.2b0.dist-info/RECORD,,
