@@ -1,0 +1,31 @@
+################################################################################
+#                                                                              #
+#                  This is the sample test configuration file                  #
+#                                                                              #
+#                    @author Jack <jack@thinkingcloud.info>                    #
+#                                 @version 1.0                                 #
+#                          @date 2021-05-31 14:34:33                           #
+#                                                                              #
+################################################################################
+{% loadenv "tests/data/env.conf" %}
+a=1
+{% assign a = 1 %}
+b={{a}}
+c="{{'SHELL' | env }}"
+not_exists="{{ 'NOT_EXISTS' | env: 'not' }}"
+test={{'test' | env }}
+abc="{{'env' | env }}"
+d = "{% uuid %}"
+
+{% for i in range(5) %}
+seq_{{i+1}} = {{'hello' | seq }}
+{% endfor %}
+
+[section]
+a = {{a}}
+b = {% increment a %}
+
+[section.sub]
+a = {% increment a %}
+b = {% increment a %}
+c = {% increment a %}
