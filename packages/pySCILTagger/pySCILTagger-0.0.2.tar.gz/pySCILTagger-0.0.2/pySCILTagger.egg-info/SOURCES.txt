@@ -1,0 +1,16 @@
+README.md
+pyproject.toml
+setup.py
+pySCILTagger.egg-info/PKG-INFO
+pySCILTagger.egg-info/SOURCES.txt
+pySCILTagger.egg-info/dependency_links.txt
+pySCILTagger.egg-info/not-zip-safe
+pySCILTagger.egg-info/top_level.txt
+scil-tagger/__init__.py
+scil-tagger/config.py
+scil-tagger/getmodel.py
+scil-tagger/labelconvert.py
+scil-tagger/modeltest.py
+scil-tagger/pandm.py
+scil-tagger/tagger.py
+scil-tagger/test.py
