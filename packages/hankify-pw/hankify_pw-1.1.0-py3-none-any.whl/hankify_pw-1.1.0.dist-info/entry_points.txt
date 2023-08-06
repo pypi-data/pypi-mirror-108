@@ -1,0 +1,3 @@
+[console_scripts]
+hankify-pw = hankify_pw:hanky_pass
+
