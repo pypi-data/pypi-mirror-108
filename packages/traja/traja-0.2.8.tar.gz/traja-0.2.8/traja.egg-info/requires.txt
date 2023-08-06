@@ -1,0 +1,11 @@
+matplotlib
+pandas
+numpy
+shapely
+scipy
+tzlocal
+
+[all]
+torch
+tzlocal
+fastdtw
