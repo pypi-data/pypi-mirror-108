@@ -1,0 +1,3 @@
+[console_scripts]
+cli-proxy = modules.cli:main
+
