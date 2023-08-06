@@ -1,0 +1,15 @@
+LICENSE
+README.md
+setup.py
+papyrus/__init__.py
+papyrus/query.py
+papyrus/analysis/__init__.py
+papyrus/analysis/analysis.py
+papyrus/supplementaries/__init__.py
+papyrus/supplementaries/handlers.py
+papyrus/supplementaries/main.py
+papyrus_ai.egg-info/PKG-INFO
+papyrus_ai.egg-info/SOURCES.txt
+papyrus_ai.egg-info/dependency_links.txt
+papyrus_ai.egg-info/requires.txt
+papyrus_ai.egg-info/top_level.txt
