@@ -1,0 +1,9 @@
+company_name_matching/__init__.py,sha256=wOoY291EErVXexOYdI5E8LSELY0N-GJxWZYxv6NEXcc,71
+company_name_matching/abbreviations.json,sha256=Xbz1SDhdZbRVYdKPD_eTB5zWGUObyV45Gx5YkUmOPyw,2313
+company_name_matching/elf_company.csv,sha256=JlKwqti1x2a6No8wRsDPwTVtz0F9NXcr9AzepKYBuBY,200558
+company_name_matching/matching_function.py,sha256=_mqYCPjUCNcfDX4c3ilSw-Eaa_2fszaS082S7SGswmo,23208
+company_name_matching-0.1.8.dist-info/LICENSE,sha256=xZf2nwjVCWzKqcyHfFi-BUIAbMdnA1d-0ajtRjGhmgw,1067
+company_name_matching-0.1.8.dist-info/METADATA,sha256=Neo1xrSrCjMRCAWf2ftMRiCvtYrI7p_0DnHPWzBMddY,697
+company_name_matching-0.1.8.dist-info/WHEEL,sha256=EVRjI69F5qVjm_YgqcTXPnTAv3BfSUr0WVAHuSP3Xoo,92
+company_name_matching-0.1.8.dist-info/top_level.txt,sha256=DfsaYfYlgP9UWzUi9qUTYdzVy5ixA2d_dblhQitLrbw,22
+company_name_matching-0.1.8.dist-info/RECORD,,
