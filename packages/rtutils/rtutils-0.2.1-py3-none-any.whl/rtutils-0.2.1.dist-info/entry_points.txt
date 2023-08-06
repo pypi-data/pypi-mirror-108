@@ -1,0 +1,4 @@
+[console_scripts]
+gd = rtutils_cli.gdrive_wrapper:main
+rtdrive = rtutils.drive:main
+
