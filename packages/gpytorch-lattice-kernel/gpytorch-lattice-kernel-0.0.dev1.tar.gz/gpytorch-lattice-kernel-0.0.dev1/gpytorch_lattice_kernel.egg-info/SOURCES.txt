@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+gpytorch_lattice_kernel/__init__.py
+gpytorch_lattice_kernel/bilateral_kernel.py
+gpytorch_lattice_kernel/lattice_test.py
+gpytorch_lattice_kernel.egg-info/PKG-INFO
+gpytorch_lattice_kernel.egg-info/SOURCES.txt
+gpytorch_lattice_kernel.egg-info/dependency_links.txt
+gpytorch_lattice_kernel.egg-info/requires.txt
+gpytorch_lattice_kernel.egg-info/top_level.txt
+gpytorch_lattice_kernel/cpp/lattice.cpp
+gpytorch_lattice_kernel/cpp/permutohedral.h
+gpytorch_lattice_kernel/cuda/permutohedral_cuda.cpp
+gpytorch_lattice_kernel/cuda/permutohedral_cuda_kernel.cu
