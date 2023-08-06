@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+whirlcalc/__init__.py
+whirlcalc.egg-info/PKG-INFO
+whirlcalc.egg-info/SOURCES.txt
+whirlcalc.egg-info/dependency_links.txt
+whirlcalc.egg-info/requires.txt
+whirlcalc.egg-info/top_level.txt

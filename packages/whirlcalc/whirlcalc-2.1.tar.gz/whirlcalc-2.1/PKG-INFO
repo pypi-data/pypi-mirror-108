@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: whirlcalc
+Version: 2.1
+Summary: Install Compie instead...
+Home-page: https://github.com/Whirlpool-Programmer/whirlcalc
+Author: Whirlpool-Programmer
+Author-email: whirlpool.programmer@outlook.com
+License: MIT License
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Whirlcalc
+## Whirlcalc now has its successor [Compie](http://pypi.org/project/compie)
+
