@@ -1,0 +1,10 @@
+
+[dev]
+black
+coverage[toml]
+coveralls
+flake8
+isort>=5.0
+mypy
+pytest
+twine
