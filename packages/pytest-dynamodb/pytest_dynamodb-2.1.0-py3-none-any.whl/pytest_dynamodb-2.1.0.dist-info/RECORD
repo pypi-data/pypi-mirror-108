@@ -1,0 +1,11 @@
+pytest_dynamodb/__init__.py,sha256=KldtBdyMe5rP4FBv552f6f3vvqzeUKQR0NJwKjjkiEA,876
+pytest_dynamodb/factories.py,sha256=3bviWpedskc7e6UDyFHlaavjaEKiIEzutGU5dPrdZNk,5255
+pytest_dynamodb/plugin.py,sha256=fzyTrq5o0cIr1xsCbbNcWvetMKwV9skWw4L_TTtu2cM,3187
+pytest_dynamodb-2.1.0.dist-info/AUTHORS.rst,sha256=LYl2J_7aiQ2ARIQSlVT3lWNFuoJID6eTj-G3Qn7m110,220
+pytest_dynamodb-2.1.0.dist-info/COPYING,sha256=xTplwv1WHIfqq_EHLvXcq4ZTBCvBUwhGX1JBNYXrYnE,35146
+pytest_dynamodb-2.1.0.dist-info/COPYING.lesser,sha256=6or154nLLU6bELzjh0mCreFjt0m2v72zLi3yHE0QbeE,7650
+pytest_dynamodb-2.1.0.dist-info/METADATA,sha256=ifxUqa5xfl_hoviLhRJzwPEibqvy3-ylOQqarTdoMas,7090
+pytest_dynamodb-2.1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pytest_dynamodb-2.1.0.dist-info/entry_points.txt,sha256=-ESTY2pvDvsE2sgT4KmTiNTQCP6JGhkOUlcv-8cp15w,53
+pytest_dynamodb-2.1.0.dist-info/top_level.txt,sha256=l5KVuUnes7kPhpkbvZQuQqkglEV1uHT_VoQxfW2erWc,16
+pytest_dynamodb-2.1.0.dist-info/RECORD,,
