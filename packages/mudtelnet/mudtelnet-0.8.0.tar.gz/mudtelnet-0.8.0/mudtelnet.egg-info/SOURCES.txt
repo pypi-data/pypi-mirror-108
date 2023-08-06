@@ -1,0 +1,8 @@
+LICENSE.txt
+README.md
+setup.py
+mudtelnet/__init__.py
+mudtelnet.egg-info/PKG-INFO
+mudtelnet.egg-info/SOURCES.txt
+mudtelnet.egg-info/dependency_links.txt
+mudtelnet.egg-info/top_level.txt
