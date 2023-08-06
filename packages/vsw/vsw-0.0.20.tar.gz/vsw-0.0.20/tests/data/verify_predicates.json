@@ -1,0 +1,26 @@
+{
+  "requested_attributes": [
+    {
+      "schema_id": "UyDtaEFuTySAV9VZDykHkh:2:softwareCertificate:0.3",
+      "issuer_did": "A9cEertJWkV6zKDTwcuEho",
+      "softwarename": "vsw",
+      "softwareversion": "0.0.11",
+      "softwaredid": "P9VxHNTAmn8LHnbXP95i4q"
+    },
+    {
+      "schema_id": "UyDtaEFuTySAV9VZDykHkh:2:testCertificate:0.1",
+      "testerdid": "8ombbMgjNRDXYf2ZhfvdzM",
+      "softwaredid": "P9VxHNTAmn8LHnbXP95i4q",
+      "testspecurl": "https://github.com/verifiablesoftware/vsw-repo/tree/master/tests",
+      "testresult": "Pass"
+    }
+  ],
+  "requested_predicates": {
+    "1_ranking_GE_uuid": {
+      "name": "ranking",
+      "p_type": ">=",
+      "p_value": 3,
+      "restrictions": []
+    }
+  }
+}
