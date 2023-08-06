@@ -1,0 +1,12 @@
+LICENSE
+MANIFEST.in
+readme.md
+requirements.txt
+setup.cfg
+setup.py
+masz/__init__.py
+masz.egg-info/PKG-INFO
+masz.egg-info/SOURCES.txt
+masz.egg-info/dependency_links.txt
+masz.egg-info/requires.txt
+masz.egg-info/top_level.txt
