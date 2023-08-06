@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: idle
+Version: 1.0.1
+Summary: Idle is a python gui using tkinter.This is created using python tkinter. It can be used as alternavtive notepad
+Home-page: UNKNOWN
+Author: Devesh Sharma
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+## Idle Text Editor
+![PyPI - Format](https://img.shields.io/pypi/format/idle?style=for-the-badge)
+![PowerShell Gallery](https://img.shields.io/powershellgallery/p/DNS.1.1.1.1?style=for-the-badge)
+![PyPI - License](https://img.shields.io/pypi/l/idle?style=for-the-badge)
+![Lines of code](https://img.shields.io/tokei/lines/github/devesh01032008/idle?style=for-the-badge)
+This is a program written in tkinter which acts as text editor.This can be used to edit file and as alternative of notepad.
+
+### Steps to Download textEditor
+```
+#For Linux
+sudo apt install python3
+pip3 install idle
+
+#For Windows
+pip install idle
+
+#For macOs
+brew install python3
+pip install idle
+```
+It would automatically launch when it is imported in program and nothing is required to launch this program
+### How to use it?
+```
+import idle
+# run this command in python Interpretator and this will automatically launch idle display
+```
+
+### About The Author
+![Devesh Sharma](img/devesh.jpeg)
+I am Devesh Sharma.I read in class 9. I live in samalkha,panipat located in India.
+
+
