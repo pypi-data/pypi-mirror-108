@@ -1,0 +1,8 @@
+LICENSE
+README.rst
+pyproject.toml
+setup.py
+types_pycrypto.egg-info/PKG-INFO
+types_pycrypto.egg-info/SOURCES.txt
+types_pycrypto.egg-info/dependency_links.txt
+types_pycrypto.egg-info/top_level.txt
