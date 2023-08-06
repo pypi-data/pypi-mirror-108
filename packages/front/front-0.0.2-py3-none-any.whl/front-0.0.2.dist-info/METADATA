@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: front
+Version: 0.0.2
+Summary: Getting from python objects to UIs exposing them
+Home-page: https://github.com/i2mint/front
+Author: OtoSense
+License: apache-2.0
+Platform: any
+Description-Content-Type: text/markdown
+
+
+# front
+Getting from python objects to UIs exposing them
+
+
+To install:	```pip install front```
+
+
