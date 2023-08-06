@@ -1,0 +1,3 @@
+[console_scripts]
+stave = nlpviewer_backend.lib.stave_cli:main
+
