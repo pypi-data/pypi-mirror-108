@@ -1,0 +1,24 @@
+# compiled files
+*.pyc
+# editor backup files
+*~
+# data files
+*.fits
+# output files
+output/
+*.png
+*.jpg
+*.npy
+*.npz
+*.avi
+*.mov
+*.mp4
+*.mkv
+# packaging and generated documentation
+doc/
+dist/
+*egg-info/
+/lines
+/chiantihelper
+fiplcr/examples/aia_to_em
+fiplcr/linear_combination/#$#
