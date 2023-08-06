@@ -1,0 +1,5 @@
+setup.py
+osgeo.egg-info/PKG-INFO
+osgeo.egg-info/SOURCES.txt
+osgeo.egg-info/dependency_links.txt
+osgeo.egg-info/top_level.txt

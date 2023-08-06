@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: osgeo
+Version: 0.0.1
+Summary: A dummy placeholder for the `gdal` package
+Home-page: UNKNOWN
+License: MIT
+Platform: UNKNOWN
+Description-Content-Type: text/x-rst
+
+
+osgeo package
+===============
+A dummy placeholder for the `gdal` package
+
+In order to be able to run `from osgeo import gdal`, 
+You were probably trying to install `gdal` by running `pip install osgeo`.
+Instead, you should either `pip install gdal` or replace `osgeo` with `gdal` in your requirements.
+
+This package was made so an attacker would not be able to take advantage of this confusion.
+
+
