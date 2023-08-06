@@ -1,0 +1,12 @@
+requests_auth/__init__.py,sha256=kaQgApuveVfHi3jKHDwzycMHISlxT2P9Cre0PNSMRcY,786
+requests_auth/authentication.py,sha256=jjHb_5bYCez5aHPxE-FFAGHgu0pXG3YimPczcy72J54,59970
+requests_auth/errors.py,sha256=IEHtTYNmci7s0-aXwIqTycuHD4_tLUh93v78F6bw-ws,6423
+requests_auth/oauth2_authentication_responses_server.py,sha256=k5H-4sCV4nIo1OnpnyB1c6F1YqW5_hZBOHVIpILf_-I,8655
+requests_auth/oauth2_tokens.py,sha256=HvjoMqJ489sj5w8pGc3oDjp17rwVefvGwddlhatNIvw,8386
+requests_auth/testing.py,sha256=Yy7GbZ2vjHyDOeG6lvSeuw3I7td7qAC_u9Rliawi20s,5600
+requests_auth/version.py,sha256=jtDO5dvwkQHY7b84rZI73wt-dqyY9IJ2Eetbx1vZm6Q,371
+requests_auth-5.3.0.dist-info/LICENSE,sha256=xd320zQeoc-jRB1LnCTKMFT2x0yIIqqX64icuabaQtE,1071
+requests_auth-5.3.0.dist-info/METADATA,sha256=SGsmeY0_PxBunL8SvGx4VknYbnYzdwQRMDV77UyvhME,46085
+requests_auth-5.3.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+requests_auth-5.3.0.dist-info/top_level.txt,sha256=64Ecj2yU8YDfZZYyy45oyTmDD3hsfQ3sn7SQY3dKGVI,14
+requests_auth-5.3.0.dist-info/RECORD,,
