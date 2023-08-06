@@ -1,0 +1,11 @@
+timeflux>=0.10.0
+pyriemann
+
+[dev]
+mne
+matplotlib
+pytest>=5.3
+sphinx>=2.2
+sphinx_rtd_theme>=0.4
+setuptools_scm
+docinit
