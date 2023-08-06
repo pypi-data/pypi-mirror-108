@@ -1,0 +1,7 @@
+numpy
+scipy
+pandas
+obspy
+pyasdf
+numba
+pycwt
