@@ -1,0 +1,61 @@
+Metadata-Version: 2.1
+Name: googlesearch.py
+Version: 1.0
+Summary: googlesearch.py Version 1.0
+Home-page: https://github.com/Sijey-Praveen/googlesearch.py
+Author: Sijey Praveen
+Author-email: cjpraveen@hotmail.com
+License: UNKNOWN
+Keywords: googlesearch.py,python google search,google search pypi,sijey-praveen pypi,google api,sijey,sijey-praveen,sijey praveen projects
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/1200px-Google_%22G%22_Logo.svg.png" width="80px">
+
+# Google Search 
+
+**How It Works**
+- Get Query From User and Provides Results From <a href="https://www.google.com/">Google</a>.
+
+## How To Use
+
+- To show results in webbrowser create the code like this:
+
+```python
+# import the module
+
+import google_search_py
+
+# Use .search() to send query and get results from Google, Write The query inside the brackets
+
+google_search_py.search("how to use google api", True)
+
+```
+- To get results as **dict{}** create the code like this:
+```python
+import google_search_py
+
+# Use .search() to send query and get results from Google, Write The query inside the brackets
+
+search = google_search_py.search("how to use google api", False)
+print(search)
+
+# Output
+{'query': 'how to use google api', 'result': 'https://www.google.com/url?q=https://developers.google.com/cloud-search/docs/guides&sa=U&ved=2ahUKEwi05qzarP3wAhWGV30KHWR_DyEQr4kDMA96BAgBEAI&usg=AOvVaw21fgucAj2WKWCrixbchFqD'}
+```
+
+**MIT License | Copyright (c) 2021 Sijey**
+```
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software
+```
+
+
