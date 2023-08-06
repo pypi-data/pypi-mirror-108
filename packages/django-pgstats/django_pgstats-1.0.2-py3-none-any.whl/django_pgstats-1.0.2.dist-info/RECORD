@@ -1,0 +1,13 @@
+pgstats/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pgstats/management/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pgstats/management/commands/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pgstats/management/commands/snapshot_pgstats.py,sha256=Jhv9oUHGqPPDWoekHq0-3mfsrq-vKDS0EIB6YONJSho,319
+pgstats/migrations/0001_initial.py,sha256=yyWch9g-aia_qjjLQ5nLpwdec4Owk7f3MgCwFrfgsvk,1704
+pgstats/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pgstats/models.py,sha256=gX7P74UCB5d0nLvwjvJNSXEcHZgowkphH9Xo7xwiwJI,1722
+pgstats/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pgstats/tests/test_commands.py,sha256=G3jdNQDU_VWBbuP0A8QQe3Dminepps0TSxKyoT9ILJU,1022
+django_pgstats-1.0.2.dist-info/LICENSE,sha256=5hfMFN5-gtZ2GzumP6qmAKXdSZ_A1gm5DuPNGDcT6QQ,1456
+django_pgstats-1.0.2.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+django_pgstats-1.0.2.dist-info/METADATA,sha256=ZzT3QvmhmgHL6855gG5x-_UnCI729hSz3yBPGv02V2Q,2374
+django_pgstats-1.0.2.dist-info/RECORD,,
