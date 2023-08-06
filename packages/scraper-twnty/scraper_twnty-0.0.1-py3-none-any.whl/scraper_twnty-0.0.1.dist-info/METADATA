@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: scraper-twnty
+Version: 0.0.1
+Summary: Data scraping service
+Home-page: UNKNOWN
+Author: Kristina Kurhanska
+Author-email: kurganska@twnty.de
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.8.0
+Requires-Dist: pyjwt (==2.0.1)
+Requires-Dist: yoyo-migrations (==7.3.1)
+Requires-Dist: psycopg2-binary (==2.8.6)
+Requires-Dist: beautifulsoup4 (==4.9.3)
+Requires-Dist: lxml (==4.6.3)
+Requires-Dist: html5lib (==1.1)
+Requires-Dist: peewee (==3.14.4)
+
+UNKNOWN
+
+
