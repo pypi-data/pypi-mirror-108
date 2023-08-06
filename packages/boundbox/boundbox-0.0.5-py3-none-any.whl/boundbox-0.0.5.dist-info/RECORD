@@ -1,0 +1,11 @@
+boundbox/BoundBox_class.py,sha256=Gc0TWQKCW-124xHLgmzmq4M_Oj3m0hKlywnYifwY6wc,27679
+boundbox/BoundBox_utils.py,sha256=1vx5YAoA3hX9APdxZESL6FulF3MKFoNwzallKpD_TNw,150
+boundbox/Exceptions.py,sha256=6rlX6oTrrrdU_ricq9Xn2hwmzJpaGAFNt9jExQ6P0SI,43
+boundbox/Line_class.py,sha256=YT8OOnyU5qUg7SvcTHsD_BshiDy59CZ42tacA2qJ1D0,1444
+boundbox/Point_class.py,sha256=ha35OpssQhcH4gxCHgwsu78tTRTnR8ce4GzcjIOkhWk,1752
+boundbox/__init__.py,sha256=HxAeO5QxJ0anoFqZ5U5XoR6RA2n4kAt1bqOIu0_d9dw,97
+boundbox-0.0.5.dist-info/LICENSE,sha256=G_FTK9-IBFzvSIlbAEJvuMOVGYvxz5F5TpO6gJO4mgk,1062
+boundbox-0.0.5.dist-info/METADATA,sha256=fPHM00DqrgiikRwLof27bXVPsxJjCXSMztuDIikqxls,1048
+boundbox-0.0.5.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+boundbox-0.0.5.dist-info/top_level.txt,sha256=rFlK_p8RYKB47-HovZBH_zKqozNddguvP8TWfuiXle8,9
+boundbox-0.0.5.dist-info/RECORD,,
