@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: py-xel
+Version: 0.1.0
+Summary: Use common excel functions in python
+Home-page: UNKNOWN
+Author: Ivan
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: pandas
+
+UNKNOWN
+
+
