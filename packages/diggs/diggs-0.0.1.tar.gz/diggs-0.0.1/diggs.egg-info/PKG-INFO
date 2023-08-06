@@ -1,0 +1,60 @@
+Metadata-Version: 1.2
+Name: diggs
+Version: 0.0.1
+Summary: A Python package for Data Interchange for Geotechnical and Geoenvironmental Specialists (DIGGS).
+Home-page: https://github.com/xinp-hub/diggs
+Author: Xin Peng
+Author-email: xin_peng@outlook.com
+License: GNU General Public License v3
+Description: =====
+        diggs
+        =====
+        
+        
+        .. image:: https://img.shields.io/pypi/v/diggs.svg
+                :target: https://pypi.python.org/pypi/diggs
+        
+        .. image:: https://img.shields.io/travis/xinp-hub/diggs.svg
+                :target: https://travis-ci.com/xinp-hub/diggs
+        
+        .. image:: https://readthedocs.org/projects/diggs/badge/?version=latest
+                :target: https://diggs.readthedocs.io/en/latest/?version=latest
+                :alt: Documentation Status
+        
+        
+        
+        
+        A Python package for Data Interchange for Geotechnical and Geoenvironmental Specialists (DIGGS).
+        
+        
+        * Free software: GNU General Public License v3
+        * Documentation: https://diggs.readthedocs.io.
+        
+        
+        Features
+        --------
+        
+        * TODO
+        
+        
+        
+        =======
+        History
+        =======
+        
+        0.0.1 (2021-06-03)
+        ------------------
+        
+        * First release on PyPI.
+        
+Keywords: diggs
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
