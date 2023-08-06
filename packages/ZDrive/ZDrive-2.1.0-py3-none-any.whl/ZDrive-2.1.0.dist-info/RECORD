@@ -1,0 +1,13 @@
+zdrive/__init__.py,sha256=4WwkS1M-UIMAfwZ00TBStlPgJ_hKEplrXFQaXihOYiU,132
+zdrive/version.py,sha256=Q-YDmNHLLDmQVdMlEgVwAi2s87AWJzVvulSxTA6ZBVg,46
+zdrive/base/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+zdrive/base/base.py,sha256=HYuvaTlhx1lcuUJ3bm9ns6Eo1YOV-CF_1qub-wzWG6A,2830
+zdrive/download/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+zdrive/download/downloader.py,sha256=uCMjVpZXJCHdhSx0OtulTVoAmESV9ei75IsnVU4SjmY,2998
+zdrive/upload/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+zdrive/upload/uploader.py,sha256=0s_N1OUpja1kmHv9rfrILICAoPNgRPmbC-W63Fk1DvI,4721
+ZDrive-2.1.0.dist-info/LICENSE,sha256=mSXEfHYfDplHC9VDsz2SwPs3Z6zZVShSEBCZ3HbSeuI,1068
+ZDrive-2.1.0.dist-info/METADATA,sha256=MazhqOxsW8vc_C6K_hDgG8XRm-MqIj05vnjz8l81KR8,8428
+ZDrive-2.1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+ZDrive-2.1.0.dist-info/top_level.txt,sha256=kEuqSpwjrYE9MRBsCb_yLszC7sYO4nE3L5aJv3kd7wU,7
+ZDrive-2.1.0.dist-info/RECORD,,
