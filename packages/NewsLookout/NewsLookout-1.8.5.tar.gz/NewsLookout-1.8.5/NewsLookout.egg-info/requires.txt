@@ -1,0 +1,7 @@
+newspaper3k
+beautifulsoup4
+nltk
+requests
+tqdm
+pandas
+numpy

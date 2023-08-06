@@ -1,0 +1,7 @@
+include NewsLookout\\conf\\newslookout.conf
+include NewsLookout\\conf\\cookies.txt
+include NewsLookout\\run_newslookout.cmd
+include NewsLookout\\run_newslookout.sh
+include NewsLookout\\README.md
+include NewsLookout\\LICENSE
+include NewsLookout\\requirements.txt
