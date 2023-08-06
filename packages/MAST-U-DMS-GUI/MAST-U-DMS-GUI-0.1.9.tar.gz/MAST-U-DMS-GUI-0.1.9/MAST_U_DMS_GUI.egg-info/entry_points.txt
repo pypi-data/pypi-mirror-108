@@ -1,0 +1,3 @@
+[console_scripts]
+Run_MASTU_DMS_GUI = MASTUDMSGUI.Updated_for_real_data_GUI_plotter:run_program
+

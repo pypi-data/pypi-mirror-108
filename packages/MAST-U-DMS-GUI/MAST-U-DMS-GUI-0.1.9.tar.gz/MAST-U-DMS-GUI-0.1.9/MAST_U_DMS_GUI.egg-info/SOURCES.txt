@@ -1,0 +1,12 @@
+README.md
+setup.py
+MASTUDMSGUI/GUI_exportated_flies_extractor.py
+MASTUDMSGUI/Updated_for_real_data_GUI_plotter.py
+MASTUDMSGUI/__init__.py
+MASTUDMSGUI/df_manipulation.py
+MAST_U_DMS_GUI.egg-info/PKG-INFO
+MAST_U_DMS_GUI.egg-info/SOURCES.txt
+MAST_U_DMS_GUI.egg-info/dependency_links.txt
+MAST_U_DMS_GUI.egg-info/entry_points.txt
+MAST_U_DMS_GUI.egg-info/requires.txt
+MAST_U_DMS_GUI.egg-info/top_level.txt
