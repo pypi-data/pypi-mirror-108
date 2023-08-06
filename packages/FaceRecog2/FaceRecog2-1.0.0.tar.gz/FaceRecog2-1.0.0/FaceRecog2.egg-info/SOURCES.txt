@@ -1,0 +1,8 @@
+README.md
+setup.cfg
+setup.py
+FaceRecog2.egg-info/PKG-INFO
+FaceRecog2.egg-info/SOURCES.txt
+FaceRecog2.egg-info/dependency_links.txt
+FaceRecog2.egg-info/requires.txt
+FaceRecog2.egg-info/top_level.txt

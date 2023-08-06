@@ -1,0 +1,13 @@
+Metadata-Version: 1.2
+Name: FaceRecog2
+Version: 1.0.0
+Summary: A face recognition PAckage
+Home-page: https://github.com/SrinjoyMaity/Face
+Author: Suranjan Daw
+Author-email: spiderrawn@gmail.com
+License: MIT
+Download-URL: https://github.com/SrinjoyMaity/Face/archive/refs/tags/v1.0.0.tar.gz
+Description: UNKNOWN
+Keywords: face recognition,algorithm,machine learning,library
+Platform: UNKNOWN
+Requires-Python: >=3
