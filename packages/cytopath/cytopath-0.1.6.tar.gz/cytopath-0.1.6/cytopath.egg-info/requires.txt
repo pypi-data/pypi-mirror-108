@@ -1,0 +1,8 @@
+anndata
+fastdtw
+hausdorff
+joblib
+numpy
+scipy
+scvelo>=0.1.25
+tqdm
