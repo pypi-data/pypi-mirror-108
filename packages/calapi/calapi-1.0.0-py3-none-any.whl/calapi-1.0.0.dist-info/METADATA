@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: calapi
+Version: 1.0.0
+Summary: A light weight python wrapper for Google's Calendar API v3 written upon Google API Python Client.
+Home-page: http://github.com/rakeshgunduka/calapi/
+Author: Rakesh Gunduka
+Author-email: rakesh.gunduka@gmail.com
+License: http://www.opensource.org/licenses/mit-license.php
+Keywords: google calendar api client
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/plain
+Requires-Dist: google-api-python-client (==2.5.0)
+Requires-Dist: google-api-core (==1.28.0)
+Requires-Dist: google-auth (==1.30.0)
+Requires-Dist: google-auth-oauthlib (==0.4.4)
+Requires-Dist: google-auth-httplib2 (==0.1.0)
+
+Google calendar python api wrapper for Google's Calendar Reporting API v3 using Googles API python client.
+
+
