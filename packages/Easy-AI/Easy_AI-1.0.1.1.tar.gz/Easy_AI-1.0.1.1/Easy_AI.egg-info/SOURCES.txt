@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+Easy_AI/__init__.py
+Easy_AI/example.py
+Easy_AI/exampleGTTs.py
+Easy_AI.egg-info/PKG-INFO
+Easy_AI.egg-info/SOURCES.txt
+Easy_AI.egg-info/dependency_links.txt
+Easy_AI.egg-info/requires.txt
+Easy_AI.egg-info/top_level.txt
