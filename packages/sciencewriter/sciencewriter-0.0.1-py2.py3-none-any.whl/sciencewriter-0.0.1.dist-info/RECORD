@@ -1,0 +1,11 @@
+sciencewriter/__init__.py,sha256=TrX6r1ChGGt2Rl3dOY_GexTgfgeaBgBqTMUcyo95Vjo,142
+sciencewriter/_api.py,sha256=pEZRduM6wCbwzDV1KvpHQiK_vWZHrqdq2ynSkdbGvwc,639
+sciencewriter/analysisfeature.py,sha256=z306Fnd0rHEvKr_97fAhfTRt0DjWiJ3393Ubzc47Kww,5129
+sciencewriter/informationmodel.py,sha256=y7TFir8d0xrxnUjX6R-fUwdv9Hprg3Y9xfyHGXk6j04,6450
+sciencewriter/sciencewriter.py,sha256=OlRPNGGOMCyNBQ5fObasPnGWVgIToYCAd1f_096qh_o,982
+sciencewriter/suggestionsfeature.py,sha256=2ZLFzs8ho7FE4AcBw_yL3P_0vnNPuiy3GRJ6acqKi3Q,4668
+sciencewriter-0.0.1.dist-info/LICENSE,sha256=kjautse79anvQ2v-6agGUNZJ-hUqblqlt4sFQMntCgs,1622
+sciencewriter-0.0.1.dist-info/METADATA,sha256=wbC2H578nLcvAxB7sKK-akquNbGqxDJDf-R3JtjNw1A,2839
+sciencewriter-0.0.1.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+sciencewriter-0.0.1.dist-info/top_level.txt,sha256=csfGuLIiQ0Sbg169jmZu06gCzclxC04QMSJ_NMFZT_8,14
+sciencewriter-0.0.1.dist-info/RECORD,,
