@@ -1,0 +1,9 @@
+
+[dev]
+setuptools
+wheel
+pytest
+flake8
+twine
+sphinx
+sphinx_rtd_theme
