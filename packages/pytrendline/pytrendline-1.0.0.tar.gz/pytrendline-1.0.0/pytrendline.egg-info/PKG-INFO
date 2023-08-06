@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: pytrendline
+Version: 1.0.0
+Summary: Detection for support and resistance trendlines on python
+Home-page: https://github.com/ednunezg/pytrendline
+Author: Eduardo Nunez
+Author-email: ed@ednunez.me
+License: MIT
+Description: # README is currently WIP
+Platform: any
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
