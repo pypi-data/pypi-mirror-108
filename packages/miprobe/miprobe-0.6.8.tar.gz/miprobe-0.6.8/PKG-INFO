@@ -1,0 +1,73 @@
+Metadata-Version: 2.1
+Name: miprobe
+Version: 0.6.8
+Summary: MiProbe Sensor Serial Logging Tool.
+Home-page: https://gitlab.com/evantaylor/miprobe
+Author: Evan Taylor
+Author-email: evan@evantaylor.pro
+License: UNKNOWN
+Description: # MiProbe Data Logging Tool and Python Libraries
+        A USB/Serial data logging tool and python functions/libraries for MiProbe Sensor boards developed by under various U.S. Department of Energy Small Business Innovative Research grant awards for [Burge Environmental, Inc.](https://www.burgenv.com)
+        
+        ## Supported Platforms
+        Linux, Mac, and FreeBSD on amd64 and aarch64 system architectures.
+        
+        # Installation & Usage
+        python3 -m pip install miprobe
+        
+        The executable, miprober, is installed to ~/.local/bin on Linux and BSD systems and ~/Library/Python/<version>/bin on Mac OS X using homebrew.
+        
+        # miprober Usage
+        The miprober executable is an example python script that provides a simple interface for initializing automated data logging experiments using MiProbe system boards using the supplied mp_lib.py library.
+        
+        miprober -type "B56" -experimentname "ExperimentName" -interval 60 -number 1000 -query "N01,N02,N03,T1"
+        
+        ![miprober --help](https://gitlab.com/evantaylor/miprobe/-/raw/main/images/logging_data.png)
+        This will log only Nodes 1, 2, and 3 and Thermistor sensor 1.  Use the query "ALLVT" for all possible sensors.  The latest experiment configuration will be stored in ~/mp_data/ as latest_config.json.  
+        
+        Passing no arguments or configuration file to miprober will default to loading the latest_config.json file.
+        
+        ![miprober --help](https://gitlab.com/evantaylor/miprobe/-/raw/main/images/loading_latest_config.png)
+        See Help below for more advanced usage:
+        
+        ![miprober --help](https://gitlab.com/evantaylor/miprobe/-/raw/main/images/miprober_help.png)
+        
+        # API.key and API.url files
+        On first-run miprober will create a folder $HOME/mp_data and request a API URL endpoint and Key.  These files are stored in the mp_data folder as API.key and API.url respectively and are provided by the MiProbe team to access the MiProbe Cloud database servers.
+        
+        # mp_lib usage
+        mp_lib provides simple functions for initializing serial connections with MiProbe devices, querying them for sensor data, and pushing the data to an API server for further processing or database storage.
+        
+        # Experimental Network Logger JSON API
+        Since version 0.5 miprober now runs a flask server to allow a HTTP/JSON api for checking on data logger status over local networks.
+        
+        Supply the device name or IP address to query the system on port 5000 using http get requests:
+        
+        Get current experiment configuration:\
+        http://device:5000/miprobe/config
+        
+        Get latest reading off device:\
+        http://device:5000/miprobe/latest/json
+        
+        Get a JSON dump of ALL readings stored to /mp_data/ExperimentName.csv:\
+        http://device:5000/miprobe/dump/json
+        
+        ## Highly experimental:
+        Instruct miprober to immediately query the board, pushing data to the API server and responding in JSON to the query request.\
+        http://device:5000/miprobe/query/json
+        
+        # DynamoDB API Server (Example)
+        Example code for a rudimentary Python/Flask API Server to receive data using AWS API Gateways and Lambda Functions is provided for testing.  See api_server folder for example.
+        
+        You will need to configure your DynamoDB Tables to use ExperimentName and Timestamp as the has key and range key for the Data_DB table and just the ExperimentName as the Hash key for the ExperimentID_DB table.
+        
+Keywords: miprobe,serial,sensors,biosensor,dynamodb,logger
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: POSIX :: BSD :: FreeBSD
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
