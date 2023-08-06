@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: swinging-door
+Version: 0.1
+Summary: Implementation of the SwingingDoor algorithm in Python.
+Home-page: https://github.com/chelaxe/SwingingDoor
+Author: Aleksandr F. Mikhaylov (ChelAxe)
+Author-email: chelaxe@gmail.com
+License: MIT
+Description: 
+        
+        swinging_door
+        =============
+        
+        Implementation of the SwingingDoor algorithm in Python.
+        
+        
+Platform: any
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Software Development
+Classifier: Typing :: Typed
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/x-rst
