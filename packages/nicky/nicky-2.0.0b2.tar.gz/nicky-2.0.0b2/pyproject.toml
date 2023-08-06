@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "nicky"
+version = "2.0.0b2"
+description = "Nicky the nicknamer"
+authors = ["jrog612 <jrog612@gmail.com>"]
+license = "MIT"
+readme = 'README.rst'
+repository = 'https://github.com/jrog612/nicky'
+homepage = 'https://github.com/jrog612/nicky'
+include = ["nicky"]
+exclude = ['test*', '.*']
+
+[tool.poetry.dependencies]
+python = "^3.6"
+click = "7.0.0"
+
+[tool.poetry.dev-dependencies]
+
+[tool.poetry.scripts]
+nicky = "nicky.cli:cli"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
