@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: pysysfs-gpio
+Version: 0.12
+Summary: Linux SysFS GPIO Access
+Home-page: https://github.com/yuvalabou/pysysfs-gpio
+Author: Yuval Aboulafia
+Author-email: yuval.abou@gmail.com
+License: MIT
+Download-URL: https://github.com/yuvalabou/pysysfs-gpio/archive/refs/tags/0.12.tar.gz
+Description: UNKNOWN
+Keywords: sysfs,gpio,armbian,nanopi
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
