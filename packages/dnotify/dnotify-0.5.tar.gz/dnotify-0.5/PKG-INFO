@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: dnotify
+Version: 0.5
+Summary: attempt at a cross platform desktop notification cli
+Home-page: UNKNOWN
+Author: madhavth
+License: UNKNOWN
+Platform: UNKNOWN
+
+cross platform notification cli 
+
+usage
+
+dnotify "$title" "$description"
+
+use "dnotify -h" for more info
+
+
