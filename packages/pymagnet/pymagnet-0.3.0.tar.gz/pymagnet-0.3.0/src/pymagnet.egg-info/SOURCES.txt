@@ -1,0 +1,93 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+tox.ini
+examples/.DS_Store
+examples/First Steps.ipynb
+examples/Fields/1D Examples.ipynb
+examples/Fields/2D Examples.ipynb
+examples/Fields/2D PolyMagnet.ipynb
+examples/Fields/3D Examples - Assemblies.ipynb
+examples/Fields/3D_Examples Spheres.ipynb
+examples/Fields/Misc Examples.ipynb
+examples/Fields/.ipynb_checkpoints/1D Examples-checkpoint.ipynb
+examples/Fields/.ipynb_checkpoints/2D Examples-checkpoint.ipynb
+examples/Fields/.ipynb_checkpoints/2D PolyMagnet-checkpoint.ipynb
+examples/Fields/.ipynb_checkpoints/3D Examples - Assemblies-checkpoint.ipynb
+examples/Fields/.ipynb_checkpoints/3D_Examples Spheres-checkpoint.ipynb
+examples/Fields/.ipynb_checkpoints/Misc Examples-checkpoint.ipynb
+examples/Forces Torques/.DS_Store
+examples/Forces Torques/Cube Rotation.ipynb
+examples/Forces Torques/Cubes.ipynb
+examples/Forces Torques/Cylinders-Copy1.ipynb
+examples/Forces Torques/Cylinders.ipynb
+examples/Forces Torques/Forces and Torques.ipynb
+examples/Forces Torques/Spheres.ipynb
+examples/Forces Torques/.ipynb_checkpoints/Cube Rotation-checkpoint.ipynb
+examples/Forces Torques/.ipynb_checkpoints/Cubes-checkpoint.ipynb
+examples/Forces Torques/.ipynb_checkpoints/Cylinders-Copy1-checkpoint.ipynb
+examples/Forces Torques/.ipynb_checkpoints/Cylinders-checkpoint.ipynb
+examples/Forces Torques/.ipynb_checkpoints/Spheres-checkpoint.ipynb
+examples/Forces Torques/img/.DS_Store
+examples/Forces Torques/img/allag2009.png
+examples/Forces Torques/img/oconnell2020.png
+examples/Forces Torques/img/perp_field_slice.png
+examples/Forces Torques/img/pseudo_halbach_slice.png
+examples/Forces Torques/img/pseudo_halbach_volume.png
+examples/Forces Torques/img/ravaud2010.png
+examples/Forces Torques/img/rotated_discs_slice.png
+examples/Forces Torques/img/rotated_discs_volume.png
+examples/Forces Torques/img/sphere_slice.png
+examples/STL Magnets/.DS_Store
+examples/STL Magnets/STL Examples.ipynb
+examples/STL Magnets/Stanford Bunny.ipynb
+examples/STL Magnets/.ipynb_checkpoints/STL Examples-checkpoint.ipynb
+examples/STL Magnets/.ipynb_checkpoints/Stanford Bunny-checkpoint.ipynb
+examples/STL Magnets/img/donut_mesh.png
+examples/STL Magnets/img/donut_slice.png
+examples/STL Magnets/img/donut_volume.png
+examples/STL Magnets/stl/HalfDonut.stl
+examples/STL Magnets/stl/Stanford_Bunny_10000.stl
+examples/STL Magnets/stl/Stanford_Bunny_500.stl
+examples/STL Magnets/stl/cube.STL
+examples/STL Magnets/stl/hollow_hex.STL
+examples/STL Magnets/stl/pentagon_prism.STL
+examples/STL Magnets/stl/star.STL
+src/pymagnet/__init__.py
+src/pymagnet/__main__.py
+src/pymagnet.egg-info/PKG-INFO
+src/pymagnet.egg-info/SOURCES.txt
+src/pymagnet.egg-info/dependency_links.txt
+src/pymagnet.egg-info/requires.txt
+src/pymagnet.egg-info/top_level.txt
+src/pymagnet/forces/__init__.py
+src/pymagnet/forces/_cylinder_force.py
+src/pymagnet/forces/_mesh_force.py
+src/pymagnet/forces/_prism_force.py
+src/pymagnet/forces/_sphere_force.py
+src/pymagnet/magnets/__init__.py
+src/pymagnet/magnets/_magnet1D.py
+src/pymagnet/magnets/_magnet2D.py
+src/pymagnet/magnets/_magnet3D.py
+src/pymagnet/magnets/_magnet_base.py
+src/pymagnet/magnets/_polygon2D.py
+src/pymagnet/magnets/_polygon3D.py
+src/pymagnet/plots/__init__.py
+src/pymagnet/plots/_plot1D.py
+src/pymagnet/plots/_plot2D.py
+src/pymagnet/plots/_plotly2D.py
+src/pymagnet/plots/_plotly3D.py
+src/pymagnet/utils/__init__.py
+src/pymagnet/utils/_assemblies2D.py
+src/pymagnet/utils/_conversions.py
+src/pymagnet/utils/_fit.py
+src/pymagnet/utils/_point_structs.py
+src/pymagnet/utils/_quaternion.py
+src/pymagnet/utils/_routines2D.py
+src/pymagnet/utils/_routines3D.py
+src/pymagnet/utils/_trigonometry3D.py
+src/pymagnet/utils/_vector_structs.py
+src/pymagnet/utils/global_const.py
