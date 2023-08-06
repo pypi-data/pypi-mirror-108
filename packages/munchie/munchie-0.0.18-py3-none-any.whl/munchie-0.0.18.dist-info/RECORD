@@ -1,0 +1,9 @@
+munchie/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+munchie/__main__.py,sha256=5bG-zZ0nONcL7DEZI1mDq5flC3RGLFvwfMNdpCVNqWE,68
+munchie/_validation_util.py,sha256=m9cE-2U_rgODRu4qlVkYwsUKf1re0Ky05rdP7_GcNSA,880
+munchie/file_muncher.py,sha256=oPZbhMWxO6buMO2IlXSsF7QkIysQHGwm1dpavKtPcQo,38616
+munchie/pretty_print.py,sha256=vkSabrjo_KYOnx7xuW--nwNyYdu1TRdJ2QZSKO_IeaI,2791
+munchie-0.0.18.dist-info/METADATA,sha256=Fqclfa4tOgruexqdm8LNh9QU6muydvNIsNvL4ff9GVM,6952
+munchie-0.0.18.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+munchie-0.0.18.dist-info/top_level.txt,sha256=OnWkQcUeFhcVVpS61-xZDEYhLEDenewe9siv5vpR1AE,8
+munchie-0.0.18.dist-info/RECORD,,
