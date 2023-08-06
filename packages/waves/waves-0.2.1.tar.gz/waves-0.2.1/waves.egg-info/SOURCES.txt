@@ -1,0 +1,10 @@
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+waves/__init__.py
+waves.egg-info/PKG-INFO
+waves.egg-info/SOURCES.txt
+waves.egg-info/dependency_links.txt
+waves.egg-info/requires.txt
+waves.egg-info/top_level.txt
