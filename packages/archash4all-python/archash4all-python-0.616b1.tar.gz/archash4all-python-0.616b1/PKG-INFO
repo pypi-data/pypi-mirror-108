@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: archash4all-python
+Version: 0.616b1
+Summary: Generate x-random-challenge for arcapi requests
+Home-page: UNKNOWN
+Author: J.R w/ TheSnowfield
+License: MIT License
+Description: UNKNOWN
+Keywords: Python,hashing
+Platform: any
+Requires-Python: >=3.1
