@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: pyindia_zipcode
+Version: 0.0.1
+Summary: Indian Post office zip code Information
+Home-page: UNKNOWN
+Author: T.THAVASI GTI
+Author-email: ganeshanthavasigti1032000@gmail.com
+License: MIT
+Project-URL: Source, https://github.com/THAVASIGTI/pyindia_zipcode.git
+Project-URL: Tracker, https://github.com/THAVASIGTI/pyindia_zipcode/issues
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: System
+Classifier: Topic :: System :: Filesystems
+Classifier: Topic :: Utilities
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# pyindia_zipcode
+
+
