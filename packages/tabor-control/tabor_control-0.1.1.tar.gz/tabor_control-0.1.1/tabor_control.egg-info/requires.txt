@@ -1,0 +1,4 @@
+pyvisa>=1.11
+numpy
+packaging
+dataclasses
