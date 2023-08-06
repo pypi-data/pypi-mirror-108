@@ -1,0 +1,6 @@
+CGRtools<4.2,>=4.1
+tqdm
+StructureFingerprint
+torch
+pytorch-lightning
+torchmetrics
