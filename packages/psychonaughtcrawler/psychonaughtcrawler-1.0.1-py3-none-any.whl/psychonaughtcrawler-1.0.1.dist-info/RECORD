@@ -1,0 +1,10 @@
+psychonaughtcrawler/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+psychonaughtcrawler/crawler.py,sha256=1bZW5wBSvlQzA4YbIC6wjgB16eJjyCGUMBw4co3F4yQ,922
+psychonaughtcrawler-1.0.1.data/scripts/run.py,sha256=R-7DHNs8vJ4KBkzUTg-w0hJLgiwlFRQcj7nEuse7C8Q,198
+utilities/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+utilities/crawler.py,sha256=Bkk-FTKUvphPPh8B3vU-g7nrh1Bc3adiferYMGCps10,942
+psychonaughtcrawler-1.0.1.dist-info/LICENSE,sha256=Q2ptU2E48gOsMzhYz_kqVovmJ5d1KzrblLyqD2_-fvY,1235
+psychonaughtcrawler-1.0.1.dist-info/METADATA,sha256=gaU5HDZkRgs556EXCILx9AKQJ30wN7ERJfTjuMzbCo0,2220
+psychonaughtcrawler-1.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+psychonaughtcrawler-1.0.1.dist-info/top_level.txt,sha256=stbe7IqfMAZr8PnbxvUOx3etZnBcEVt5HmfPFFdrOe0,20
+psychonaughtcrawler-1.0.1.dist-info/RECORD,,
