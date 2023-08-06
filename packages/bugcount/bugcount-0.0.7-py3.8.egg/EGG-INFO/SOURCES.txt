@@ -1,0 +1,15 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+.github/README.md
+src/bugcount.py
+src/bugcount.egg-info/PKG-INFO
+src/bugcount.egg-info/SOURCES.txt
+src/bugcount.egg-info/dependency_links.txt
+src/bugcount.egg-info/entry_points.txt
+src/bugcount.egg-info/top_level.txt
+src/src/__init__.py
+src/src/__main__.py
+src/src/bugcount.py
