@@ -1,0 +1,13 @@
+MANIFEST.in
+pyproject.toml
+setup.cfg
+setup.py
+cc_reproject/.version
+cc_reproject/__init__.py
+cc_reproject/cc_reproject.py
+gdal_dask_reproject.egg-info/PKG-INFO
+gdal_dask_reproject.egg-info/SOURCES.txt
+gdal_dask_reproject.egg-info/dependency_links.txt
+gdal_dask_reproject.egg-info/not-zip-safe
+gdal_dask_reproject.egg-info/requires.txt
+gdal_dask_reproject.egg-info/top_level.txt
