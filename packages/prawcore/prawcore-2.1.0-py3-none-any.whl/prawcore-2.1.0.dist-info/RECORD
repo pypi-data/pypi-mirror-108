@@ -1,0 +1,14 @@
+prawcore/__init__.py,sha256=UGqL9u_reqvBxfu---BxCvLBuN20zJRP-vpO2oVBZAM,497
+prawcore/auth.py,sha256=oJtPtV1k4zx8ijFC9TGc6SS1K2jtM03FhBJmix2tQzs,14995
+prawcore/const.py,sha256=KOm9Kx2-goOq6Oasjr8dKvop_W3S62sFL7KbdPjc9Co,259
+prawcore/exceptions.py,sha256=ItqNtT-P8FxsL8UB7CPdBePsHl_pIRbZhZY6P8UWpZw,5671
+prawcore/rate_limit.py,sha256=GPcPH0rxPGDR3WXxehYhxbVSKR0uxUsaLLOzHIrTaiA,2831
+prawcore/requestor.py,sha256=VcTjgZ-678K_Cnsa6--BOitjn6OmSfPXXw1EeSRsa6I,2053
+prawcore/sessions.py,sha256=GfUQ96nsUFE3w8e0CDR23dRd8wD975q5DgU9H8H1ROU,10223
+prawcore/util.py,sha256=xZ6AmdJjcrWG5CRWhTzez240jRhTgMZX9SBHg4b--u8,662
+prawcore-2.1.0.dist-info/AUTHORS.rst,sha256=ddOnZw56r060W2gUAGiAGJnOVVTT84-8EvIKjnQoNSs,755
+prawcore-2.1.0.dist-info/LICENSE.txt,sha256=qWD9mQsMaIPPjQAVp1-LHyZXzM8nWqgConwibDyGFIY,1296
+prawcore-2.1.0.dist-info/METADATA,sha256=SjvIn2E8kga9mGOM_lFGcOgGC8v_EJueq169TX3FHnM,4470
+prawcore-2.1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+prawcore-2.1.0.dist-info/top_level.txt,sha256=I6b2BHtTmvgJ9TV6NMwqEJTdAJNh2nRP0XIGhmn1gjw,9
+prawcore-2.1.0.dist-info/RECORD,,
