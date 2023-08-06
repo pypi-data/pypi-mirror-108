@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: miraicle
+Version: 0.1.0
+Summary: A Python SDK of mirai
+Home-page: https://github.com/Excaive/miraicle
+Author: Excaive
+License: AGPL 3.0
+Description: # miraicle
+         A Python SDK of mirai
+        
+Keywords: mirai,bot
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
