@@ -1,0 +1,10 @@
+southpaw/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+southpaw/mock_test.py,sha256=I25DaonOoCVScNUQh-STyKM4lgAyt0zrLKoRHblrMH8,33
+southpaw/generators/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+southpaw/generators/linear.py,sha256=CgDywgSl_4XYxuea8GC-7EG0QEdrrz8fshG8uAh8POc,1922
+southpaw/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+southpaw/tests/test_linear.py,sha256=FiR5DO2Dq_C1teEYWKEAJyW1J6lUQMtcVkcaBl1cD7Q,464
+southpaw-0.0.6.dist-info/METADATA,sha256=B_sU61aFn0nF7SISKeKTNHsge4yecVpwazfPHkUElzY,327
+southpaw-0.0.6.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+southpaw-0.0.6.dist-info/top_level.txt,sha256=D1wW-YLzPjxB4BrH347ZmynXw9xnzbITXC0ZutJVGas,9
+southpaw-0.0.6.dist-info/RECORD,,
