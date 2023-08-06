@@ -1,0 +1,12 @@
+demes/__init__.py,sha256=CYPr6Iz3cvpmtDjxwyX-JuxnDNyzx3R4dbFrKmcuvUA,394
+demes/_version.py,sha256=nJw07NaAOarsjNXV62uCKxBueTVXsMnv45wa1HFr3pM,142
+demes/demes.py,sha256=pav7gAT-owI-chkB5vsr2TZ8vTbsEIJWbzSIKcKIFLI,97854
+demes/hypothesis_strategies.py,sha256=1XnJ_Fd0PzOZPwmCd1FkG9nn-8X7oaoHm9vqmaR08GI,16144
+demes/load_dump.py,sha256=FnXJwk14k2kM1ALvsQAi9eoWTmT44YHZM1XFmHyj0WI,7547
+demes/ms.py,sha256=8sIGUromEf-NR90JGxpXGhbgYDez44_483pWSHs0pUY,29597
+demes/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+demes-0.1.2.dist-info/LICENSE,sha256=gYYokh-j_mU2zcV0IlwMx3CnEH-whS3bH57CvF0Parw,732
+demes-0.1.2.dist-info/METADATA,sha256=sFQBKpdjvd4M11xX4VHtnBQcM7UUAOQUOVHWDcf_EPU,1852
+demes-0.1.2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+demes-0.1.2.dist-info/top_level.txt,sha256=REzzmqqZlHV_ju-NGlHzZS9bvZEXvLLnvdHLSXriLSM,6
+demes-0.1.2.dist-info/RECORD,,
