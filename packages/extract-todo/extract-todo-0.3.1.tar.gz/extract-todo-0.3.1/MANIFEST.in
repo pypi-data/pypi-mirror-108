@@ -1,0 +1,5 @@
+# Include files
+include LICENSE.txt
+include README.md
+include AUTHORS.md
+include CHANGELOG.md
