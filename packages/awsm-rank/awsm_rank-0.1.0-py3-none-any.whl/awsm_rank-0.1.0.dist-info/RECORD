@@ -1,0 +1,10 @@
+awsm_rank/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+awsm_rank/awsm_rank.py,sha256=iVBiDRp3sOSV4eXvtZmpYA5IPgOvI2QfMAaBI0creOk,4376
+awsm_ranker/__init__.py,sha256=IMjkMO3twhQzluVTo8Z6rE7Eg-9U79_LGKMcsWLKBkY,22
+awsm_ranker/awsm_rank.py,sha256=Pl98MCrxNGbt0pWKsl-rHxm-KSyaSsmRvlbzulV9o2M,4294
+awsm_rank-0.1.0.dist-info/LICENSE,sha256=gc9n8u8MXCC4ChTOGZHnr2ehB3q8aKC6uQfBtsTS22Q,1086
+awsm_rank-0.1.0.dist-info/METADATA,sha256=-7S51wLpKNBZLQCjYMa6eq7xjVybOMxENWKnrJtIp3c,357
+awsm_rank-0.1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+awsm_rank-0.1.0.dist-info/entry_points.txt,sha256=H3_VJNQJlA4apQaZRbXnKITOlZWYBcRfJzVwQFAgvIw,56
+awsm_rank-0.1.0.dist-info/top_level.txt,sha256=wnNfW8cBPsfj2TUcdzISmbtaguR5aDsCbZ81q5kdIm4,10
+awsm_rank-0.1.0.dist-info/RECORD,,
