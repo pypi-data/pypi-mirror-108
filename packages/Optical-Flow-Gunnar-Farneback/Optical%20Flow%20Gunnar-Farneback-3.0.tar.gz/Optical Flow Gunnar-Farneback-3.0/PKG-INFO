@@ -1,0 +1,51 @@
+Metadata-Version: 2.1
+Name: Optical Flow Gunnar-Farneback
+Version: 3.0
+Summary: Calculates the optical flow according to Gunnar-Farneback
+Home-page: https://gitlab.netrtl.com/smartdata/signature-code/opticalflow/-
+Author: Ramon Niet, Andreas Bloch
+Author-email: andreas.bloch@mediengruppe-rtl.de
+License: UNKNOWN
+Download-URL: https://gitlab.netrtl.com/smartdata/signature-code/opticalflow/-/archive/OpticalFlow_version03/opticalflow-OpticalFlow_version03.tar.gz
+Description: # Optical Flow
+        
+        Allows, based on the calculation of the Gunnar-Farneback optical flow, to observe the movement of objects within the spot. The result is divided into the total moving pixels, the movement of the pixels up, right, down and left and the speed with which the pixels move between two frames.   
+        
+        ## Installation
+        
+        Run
+        
+        ```shell
+        pip install Optical-Flow-Gunnar-Farneback==3.0
+        ```
+        
+        ## Usage
+        
+        Import and run optical_flow
+        
+        ```python
+        from optical_flow import optical_flow
+        
+        of = optical_flow.get_OF(scaling, inputPath, outputPath, information_saved))
+        of = optical_flow.get_OF(0.3, "W1_01_eon.mp4", '/Results/', 1) #An example of how function is called 
+        #Scaling float between 0.0 and 1.0; inputPath = str; outputPath = str; information_saved between 0.1 and max FPS)
+        of
+        # [(VideoDuration = 1.04, movedPixel = 0.662733593216252, upMovement = 0.24390145882731182, rightMovement = 0.4105051641683077, 
+        # downMovement = 0.16341277177189245, leftMovement = 0.17587911425471206, medianVelocity = 3.0)...]
+        
+        # The length of the result list depends on the parameter information_saved.  
+        ```
+        
+        ## Ideas
+        
+        The **Scaling** value is a factor that determines what percentage of the spot is viewed. With a value of 0.3, starting from the center of the video, 30 percent of the video is used to calculate the optical flow.  
+        The **Input Path** describes the video to be used for the Optical Flow calculation.  
+        The calculated video of the optical flow is stored under the **Output Path**.   
+        The **Information Saved** value specifies how often information is saved. This function has been integrated due to the time-consuming time required. With a value of 1, the data is calculated 1x per second. If the FPS value of the video is used (e.g. FPS = 25), the data is saved every frame. 
+        
+        ## Maintainer
+        
+        * [Andreas Bloch](mailto:andreas.bloch@mediengruppe-rtl.de)
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
