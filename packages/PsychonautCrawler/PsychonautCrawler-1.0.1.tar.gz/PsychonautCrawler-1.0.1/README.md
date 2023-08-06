@@ -1,0 +1,46 @@
+# PsychonautCrawler
+## What is this? Why?
+This project is a crawler, or scraper if you prefer, for the website [PsychonautWiki](https://psychonautwiki.org/). I plan to be very extensive with it since this is my first big project with Python, as I learn it in college. A web crawler is a bot that goes on websites and indexes them; search engines use them for this reason. However, they can be controversial because they can go and index websites meant to be private, thus leading to websites including ``robots.txt`` that request them not to index some, or all, of the website.
+
+Like I stated above this is a learning project for myself, thus it will be going to be going through a lot of changes and there probably are going to be mistakes.
+
+
+## Currently these are my plans *(are subject to change):*
+- [x] Fix the filing project structure
+- [ ] Understand how to recognize if there is a ``robots.txt`` warding me away
+- [x] Fix the name from Psychonaught -> Psychonaut
+- [ ]  Enable searching for specific substances
+- [ ] Print to documents
+	- [ ] JSON
+	- [ ] CSV
+	- [ ] Markdown
+- [ ] Ability to see other aspects
+	- [ ] Experience reports
+	- [ ] Subjective effects
+	- [ ] Research
+	- [ ] Dangerous interactions
+	- [ ] Legality
+- [ ] Documentation
+	- [ ] In ``/docs/`` would be nice
+	- [ ] Use the projects on GitHub more
+- [ ] Fix the PyPi resource
+
+## Project Structure
+This project also is [available on pypi](https://pypi.org/project/psychonaughtcrawler/), I use upload it there so that I can import the project globally and also people can install it using ``pip``.
+
+```
+PsychonautCrawler/
+├── bin/
+├── psychonautcrawler/
+│	 └── crawler.py
+└──  tests/
+```
+ 
+| Directory | Description |
+|--:|:--|
+| ``PsychonautCrawler/``  | Root  |
+| ``bin/`` | Programs and scripts wrote  with the package.|
+| ``tests/`` | Folder for conducting tests on variables, functions, libraries etc.|
+
+## Documentation
+``TODO``

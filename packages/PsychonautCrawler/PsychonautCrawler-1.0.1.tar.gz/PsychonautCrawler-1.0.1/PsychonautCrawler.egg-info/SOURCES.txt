@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+PsychonautCrawler.egg-info/PKG-INFO
+PsychonautCrawler.egg-info/SOURCES.txt
+PsychonautCrawler.egg-info/dependency_links.txt
+PsychonautCrawler.egg-info/top_level.txt
+bin/run.py
+psychonautcrawler/__init__.py
+psychonautcrawler/crawler.py
