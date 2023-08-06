@@ -1,0 +1,112 @@
+Metadata-Version: 2.1
+Name: pyign
+Version: 1.8.4
+Summary: OSU HALE rocket engine python control package
+Home-page: https://github.com/OSU-Hale/PyIGN_Teststand
+Author: ['Devon Burson', 'Karsen Burson']
+Author-email: bursond@oregonstate.edu
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Science/Research
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3
+License-File: LICENSE.txt
+
+PySTAGE User Control Panel GUI
+==============================
+
+Purpose
+-------
+
+The purpose of Python Ignite (PyIGN) is to allow OSU engineering
+students the ability to quickly and safely begin testing their developed
+rocketry hardware. This package is meant to remove the “control system
+barrier” when developing hardware that requires remote testing or
+autonomous control.
+
+Introduction
+------------
+
+This code was developed for the Oregon State University High Altitude
+Liquid Engine (HALE) rocketry team as well as the Oregon State
+University Propulsion Research Laboratory. This packaged is used at the
+P-Lab to control the rocket engine test stands and the HALE flight
+vehicles. This package was originally designed and developed by Devon
+Burson (2019-2021), Austin Gulstrom (2020), and Karsen E Burson
+(2020-2021). The control package is utilized by interfacing with a
+Nation Instruments (NI) or supporting hardware as a data aquisition and
+control system. Both sensor and user input telematry are streamed to the
+software package where PyIGN process the data and outputs an appropriete
+system control response to the control hardware. The package allows
+users to set system abort thersholds based off of input telemetary data.
+If telemetary data exceeds the designated thresholds PyIGN will
+“hardware-safe” the system and wait for furnther user response. PyIGN
+also allows users to run different types of automated control sequences.
+These autosequences are either time based and will execute for a
+predetermined time window, or telemetry based sequences. Temporal
+autosequences will excecute for a predetermined amount of time, then
+wait for user input. Telemetry based autosequences will run indefinetly
+until the user disables the sequence. Both methods are powerful tools,
+with the later autosequence type i
+
+Running the Code
+----------------
+
+PyIGN is built in Python 3.6, and the required libraries can be
+installed by running:
+
+``pip install -r requirements.txt``
+
+Changelog
+=========
+
+All notable changes to the PyIGN project will be documented in this
+file.
+
+[1.8.0] - 2021-06-01
+--------------------
+
+Changed or Added
+~~~~~~~~~~~~~~~~
+
+-  Literally years of development
+
+.. _section-1:
+
+[1.0.4] - 2019-06-13
+--------------------
+
+Changed
+~~~~~~~
+
+-  version.py
+-  CHANGELOG.md
+-  setup.cfg
+-  README.md
+
+[Unreleased]
+------------
+
+.. _section-2:
+
+[0.2.2] - 2019-06-11
+--------------------
+
+Added
+~~~~~
+
+-  version.py
+-  CHANGELOG.md
+-  setup.cfg
+
+.. _changed-1:
+
+Changed
+~~~~~~~
+
+-  setup.py format
+-  version to a version.py file
+
+
