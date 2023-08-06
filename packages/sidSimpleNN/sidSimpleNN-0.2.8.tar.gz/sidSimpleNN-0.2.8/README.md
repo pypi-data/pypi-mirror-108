@@ -1,0 +1,99 @@
+pip install sidSimpleNN
+
+you can also visit my website for testing manual Digit and Letters Recognition
+https://siddhantofficialsidsimpl-868fa.web.app
+you can also train your model through this lib and upload your weights and bias json file to this site to test your figures(letter, shape etc) recognition
+
+In data folder
+Can be downloaded from http://yann.lecun.com/exdb/mnist/
+
+net.chosenLoss='CE' 			## for classification use CE and for regression use MSE
+net.chosenActivation='relu' 	## can choose from relu, tanh, sigmoid
+net.applySoftmax=True 			## for classification make this true, gives output as probability
+net.applyRegularization=False 	## apply L2 regularization
+net.calcLoss=False 				## should calculate loss
+net.otherImplementation=False 	## for non batch wise training 
+net.saveWeightsBiasJSON() 		##save WB file for using it in my website
+net.save() 						## to save model
+net.load() 						## to load the model you need to have same name as saved model
+net.showModel() 				## details of model
+net.changeActivation() 			## to apply choosen activation
+net.lossGraph() 				## to display loss vs iter graph
+net.feedforward(input) 			## to get the last layer output
+
+from sidSimpleNN import mainTrain
+
+mainTrain.run()
+
+
+if data,mnist folder dont get made automatically then manualy download from MNIST dataset and place in datafolder 
+
+if above code doesnt work then test with this
+
+import numpy as np
+import mnist
+import sidSimpleNN.myNN as myNN
+
+
+def run():
+
+	# load data
+	num_classes = 10
+	train_images = mnist.train_images() #[60000, 28, 28]
+	train_labels = mnist.train_labels()
+	test_images = mnist.test_images()
+	test_labels = mnist.test_labels()
+
+	# print("Training...")
+
+	# # data processing
+	X_train = train_images.reshape(train_images.shape[0], train_images.shape[1]*train_images.shape[2]).astype('float32') #flatten 28x28 to 784x1 vectors, [60000, 784]
+	x_train = X_train / 255 #normalization
+	y_train = np.eye(num_classes)[train_labels] #convert label to one-hot
+
+	X_test = test_images.reshape(test_images.shape[0], test_images.shape[1]*test_images.shape[2]).astype('float32') #flatten 28x28 to 784x1 vectors, [60000, 784]
+	x_test = X_test / 255 #normalization
+	y_test = test_labels
+
+	np.random.seed(1)
+
+	net = myNN.Network(
+                 num_nodes_in_layers = [784, 10,20, 10], 
+                 batch = 1,
+                 epochs = 6,
+                 learning_rate = 0.001, 
+                 weights_file=None,
+                 chosenActivation='tanh'
+                 # name='tempnet3'
+                 # weightsAndBias_file = 'digitRecog',
+                 # includeWeightsBias=True
+
+             )
+
+
+	print('before training , testing with test dataset')
+	# net.chosenLoss='CE'
+	# net.applySoftmax=True
+	# net.applyRegularization=False
+	# net.regularizationConst=0.01
+	# net.calcLoss=False
+	# net.saveWeightsBiasJSON()
+	message=net.test(x_test, y_test)
+
+
+	net.train(x_train, y_train)
+	net.save()
+	net.lossGraph()
+	print('before training , testing with test dataset')
+	print(message)
+
+	print("after training")
+	net.test(x_test, y_test)
+	net.showModel()
+
+
+
+
+
+if __name__=='__main__':
+	run()

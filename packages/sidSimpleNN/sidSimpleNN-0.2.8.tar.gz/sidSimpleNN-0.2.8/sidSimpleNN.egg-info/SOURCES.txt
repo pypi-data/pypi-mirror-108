@@ -1,0 +1,11 @@
+README.md
+setup.py
+sidSimpleNN/__init__.py
+sidSimpleNN/autoencoder.py
+sidSimpleNN/function.py
+sidSimpleNN/mainTrain.py
+sidSimpleNN/myNN.py
+sidSimpleNN.egg-info/PKG-INFO
+sidSimpleNN.egg-info/SOURCES.txt
+sidSimpleNN.egg-info/dependency_links.txt
+sidSimpleNN.egg-info/top_level.txt
