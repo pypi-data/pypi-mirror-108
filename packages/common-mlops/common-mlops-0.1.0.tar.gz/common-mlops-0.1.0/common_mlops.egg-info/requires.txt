@@ -1,0 +1,7 @@
+boto3>=1.17.27
+pandas>=1.2.3
+gitdb2>=4.0.2
+dvc>=2.0.1
+s3-streaming>=0.0.3
+smart_open>=4.2.0
+scikit-learn>=0.24.1
