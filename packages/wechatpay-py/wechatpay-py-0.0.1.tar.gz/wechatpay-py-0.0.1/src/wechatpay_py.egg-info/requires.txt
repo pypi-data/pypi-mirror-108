@@ -1,0 +1,4 @@
+aiohttp
+orjson
+pybase64
+pycryptodome
