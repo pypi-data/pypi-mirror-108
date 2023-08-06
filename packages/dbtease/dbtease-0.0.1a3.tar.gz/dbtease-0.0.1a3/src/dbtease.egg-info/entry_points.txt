@@ -1,0 +1,3 @@
+[console_scripts]
+dbtease = dbtease.cli:cli
+
