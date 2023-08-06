@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: symmetrypy
+Version: 0.0.2
+Summary: Symmetry.py
+Home-page: UNKNOWN
+License: UNKNOWN
+Keywords: symmetry blockchain solana
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Requires-Python: >=3.8, <4
+Description-Content-Type: text/markdown
+Requires-Dist: solana
+
+# symmetry-py
+Python API for Symmetry
+
+
+
