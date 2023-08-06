@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+blendernc.egg-info/PKG-INFO
+blendernc.egg-info/SOURCES.txt
+blendernc.egg-info/dependency_links.txt
+blendernc.egg-info/requires.txt
+blendernc.egg-info/top_level.txt
+blendernc.egg-info/zip-safe
+cython_build/./blendernc/core/lic/lic_internal.c
