@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: ts-tariffs
+Version: 1.0.1
+Summary: Calculate bills from timeseries consumption data and different tariff structures
+Home-page: https://github.com/uts/tariff-module
+Author: Joe Wyndham
+Author-email: joseph.wyndham@uts.edu.au
+License: GNU Lesser General Public License v2.1
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
+Requires-Dist: boto3
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: dataclasses
+Requires-Dist: odin
+
+# tariff-module
+
+
