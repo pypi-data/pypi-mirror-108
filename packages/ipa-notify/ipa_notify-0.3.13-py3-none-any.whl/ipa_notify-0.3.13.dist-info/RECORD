@@ -1,0 +1,14 @@
+ipa_notify/__init__.py,sha256=xABUcGx77aRtSDAWPxMPw4YO7fdp9VS9qbuVQCYQir4,3516
+ipa_notify/__main__.py,sha256=S5hgHXEK6J4wvVIc08JVzRw9b34nNoR5lBSmy80jPbk,2675
+ipa_notify/email_notifier.py,sha256=1g_-897gZaS6lh6xWozh5XP36h-u-NEwwDHBjimLEIc,4119
+ipa_notify/ipa_adapter.py,sha256=5fIZPB1kyw8WUmOj-xPiOkfYIVeTOQ17e-VzPd_1p4U,4697
+ipa_notify/release.py,sha256=sjcsqC_HWENLZ0zJ8zp4sMdscTXC57MPKxwlpvhsgdk,601
+ipa_notify/templates/expired_password.j2,sha256=qN4cot1oN0UfZYUwkRHZs97sMqFSkxpXqI-3il6A-5k,82
+ipa_notify/templates/expiring_password.j2,sha256=O-KOV925wj6ZL5N-bY_u7q0VbUpKMoZV_hhY_v4kCd8,101
+ipa_notify/templates/locked_users.j2,sha256=lwkpDWor8NCaL3xPPlBRDC6UwhiKqXG7NkObodA6VAU,123
+ipa_notify-0.3.13.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+ipa_notify-0.3.13.dist-info/METADATA,sha256=cus6dgZXVPHFSeKsa0_MhlusFzIpJ9ZfePK3pGwaNvU,5933
+ipa_notify-0.3.13.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+ipa_notify-0.3.13.dist-info/entry_points.txt,sha256=kZKq2g8WWeVUcYzbY_VLt-xwy51do9VojPiJEeSRMWU,57
+ipa_notify-0.3.13.dist-info/top_level.txt,sha256=LPDwd2p-QOsIM7z4GqGjDl_TZ3cOnBHtT3DjfTsF4yk,11
+ipa_notify-0.3.13.dist-info/RECORD,,
