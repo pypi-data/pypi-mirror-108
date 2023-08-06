@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: dojot.module
+Version: 0.2.4
+Summary: Library for new dojot modules development
+Home-page: http://github.com/dojot/dojot-module-python
+Author: Matheus Campanha Ferreira
+Author-email: campanha@cpqd.com.br
+Maintainer: dojot team
+License: Apache-2.0
+Project-URL: Code, https://github.com/dojot/dojot-module-python.git
+Project-URL: Issue tracker, https://github.com/dojot/dojot-module-python/issues
+Platform: <built-in function any>
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Provides-Extra: dev
+License-File: LICENSE
+License-File: NOTICE
+
+# dojot-module-python [![PyPI version](https://badge.fury.io/py/dojot.module.svg)](https://badge.fury.io/py/dojot.module)
+
+Common library to be used within dojot modules.
+
+**Attention**: As of version v2.0, this library no longer has integration with the old "auth" service, but with the "keycloak" service.
+Be aware that the environment variables `KEYCLOAK_USER` and `KEYCLOAK_PASSWORD` will probably have to be passed to services that use this library. This user should be able to get the existing realm lists from keycloak.
+
+
