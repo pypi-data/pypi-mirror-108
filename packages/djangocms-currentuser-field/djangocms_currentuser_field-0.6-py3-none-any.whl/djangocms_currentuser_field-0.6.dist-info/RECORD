@@ -1,0 +1,15 @@
+djangocms_currentuser_field/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+djangocms_currentuser_field/cms_plugins.py,sha256=E-LfTgWODACF6RKYVJB-5yzl9L36HNh0NO-kd2UGkjg,6250
+djangocms_currentuser_field/models.py,sha256=RazERfvwT_cTEPym6wJHLLVZa-can1MbXnRJgGRNdI0,725
+djangocms_currentuser_field/__pycache__/__init__.cpython-38.pyc,sha256=Fv9IZzSPAw_SVMVY79Gqh-63uN9aXtPldTLvBEwuzXc,199
+djangocms_currentuser_field/__pycache__/cms_plugins.cpython-38.pyc,sha256=MR2eVGo2TwuKwFg2l8cC4JcGJqouOz3rf_lZoeISHXo,5304
+djangocms_currentuser_field/__pycache__/models.cpython-38.pyc,sha256=-XK9XgSK_nNKVVYY8oiD6yR28QuvAs5ylqeIwo3DP24,1017
+djangocms_currentuser_field/migrations/0001_initial.py,sha256=Xy2To38kZpd0PDZ0p-w2oE5tu1TajRbTJQQHYVECt3U,2578
+djangocms_currentuser_field/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+djangocms_currentuser_field/migrations/__pycache__/0001_initial.cpython-38.pyc,sha256=j24FO-qIIU_MHCzqT7XtZB3pPREdC2H_I3AA1cZzBq4,2272
+djangocms_currentuser_field/migrations/__pycache__/__init__.cpython-38.pyc,sha256=-I4efcBEgt_HTw8ZcwRS-Rrs-nuMcM_awd5yHrch210,210
+djangocms_currentuser_field-0.6.dist-info/LICENSE,sha256=gwJR0BVFTJkTgulHvqCFMHcUTbKuORk8V2m1GgVsnAs,1527
+djangocms_currentuser_field-0.6.dist-info/METADATA,sha256=iL5j7I0HdJ-HCLT-cvJ_L3Rb8nnmFl4ITaxboZmt3Qo,2389
+djangocms_currentuser_field-0.6.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+djangocms_currentuser_field-0.6.dist-info/top_level.txt,sha256=tohI0jVedq9KiCm_eHS7tIxZD1ACAXbeek9VKKxrt5Y,28
+djangocms_currentuser_field-0.6.dist-info/RECORD,,
