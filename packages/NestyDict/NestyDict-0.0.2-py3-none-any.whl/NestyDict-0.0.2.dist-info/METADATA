@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: NestyDict
+Version: 0.0.2
+Summary: A package to enable setting and getting of nested dictionaries using paths.
+Home-page: https://github.com/kieranlavelle/dotteddict
+Author: Kieran Lavelle
+Author-email: kmplavelle@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+License-File: LICENSE
+
+# DottedDict
+ 
+## Examples
+See dotted_dict/examples for example
+
