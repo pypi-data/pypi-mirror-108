@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: ohnodb
+Version: 1.0.1
+Summary: A very, very bad database
+Home-page: https://github.com/vcokltfre/ohnodb
+License: MIT
+Author: vcokltfre
+Author-email: vcokltfre@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: schema (>=0.7.4,<0.8.0)
+Project-URL: Repository, https://github.com/vcokltfre/ohnodb
+Description-Content-Type: text/markdown
+
+# ohnodb
+
+## Please never use this in production. I beg you, don't.
+
+``` pip install ohnodb ```
+
+Usage:
+
+```py
+from ohnodb import OhNoDB
+
+db = OhNoDB("./data")
+
+my_data = {
+    "hello":"world"
+}
+
+db.create("my_table", "my_item", my_data, is_json=True)
+
+print(db.fetch("my_table", "my_item", is_json=True))  # >>> {"hello": "world"}
+
+db.update("my_table", "my_item", {}, is_json=True)
+
+print(db.fetch("my_table", "my_item", is_json=True))  # >>> {}
+```
+
