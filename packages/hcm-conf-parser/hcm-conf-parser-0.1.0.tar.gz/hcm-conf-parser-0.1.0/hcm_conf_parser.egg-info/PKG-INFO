@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: hcm-conf-parser
+Version: 0.1.0
+Summary: HCM配置文件解析器.
+Home-page: https://code.hcmcloud.io/base/hcm-conf-parser
+Author: Tony Sui
+Author-email: suitj@hcmcloud.io
+License: MIT
+Description: 
+        # hcm-conf-parser
+        
+        HCM配置文件解析器
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: >=3.6.0
+Description-Content-Type: text/markdown

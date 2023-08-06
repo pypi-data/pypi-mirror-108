@@ -1,0 +1,8 @@
+README.md
+setup.py
+hcm_conf_parser/__init__.py
+hcm_conf_parser.egg-info/PKG-INFO
+hcm_conf_parser.egg-info/SOURCES.txt
+hcm_conf_parser.egg-info/dependency_links.txt
+hcm_conf_parser.egg-info/requires.txt
+hcm_conf_parser.egg-info/top_level.txt
