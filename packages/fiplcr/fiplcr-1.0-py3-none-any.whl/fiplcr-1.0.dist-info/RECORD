@@ -1,0 +1,14 @@
+fiplcr/__init__.py,sha256=3uSkucZWeBQA-AEzjl2P-VFC5A0umC0gX4bxXNmFirs,225
+fiplcr/config.py,sha256=UjZkvtFumcahwS2cGU2yKEslbmmxkSF_tgUJh0a9cUw,2371
+fiplcr/fip_map.py,sha256=DDXXrWCq0a29bZ4hZ22szV5CMTrWTP1eihalTWa25wM,6421
+fiplcr/linear_combination/__init__.py,sha256=iA4YoGWK7YO1iZdGmbFAbGNbvHTyVzwGQR0w654JN50,131
+fiplcr/linear_combination/linear_comb.py,sha256=ZMsZ18XyZ1TseH9T11ar7xizR1uRSps78V5lDhi33AA,22025
+fiplcr/specline/__init__.py,sha256=xtlqkPm5_YmJ_SaHSGxhGMU9TGW1mtlNATeqobi3iT4,164
+fiplcr/specline/read_abund.py,sha256=QYLj19hHNNMPuQHRJyYhED5oAA2aJLRw9QJ4M53mQ1I,1384
+fiplcr/specline/romannumeral.py,sha256=eHgY4WSElcLXeDmoRlqEEc91-_SUtt37nrHjC075NCU,5291
+fiplcr/specline/specline.py,sha256=VpiJrWAB8pKt0R_62KgRXd43pt4SlBPAIz2RcUxvO98,37204
+fiplcr-1.0.dist-info/LICENSE,sha256=1LCvyKWAIW74sfVjQYwpxQTwcjZ6SW7Gywma1H6h7-4,35097
+fiplcr-1.0.dist-info/METADATA,sha256=la_b8XgIbDVZpChivss1g-Ru8aalre00x_rpkCfjkDw,5388
+fiplcr-1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+fiplcr-1.0.dist-info/top_level.txt,sha256=wyA2VuvrZalQiGndLoTuT7unH7EpYADxTQXnrw6JB58,7
+fiplcr-1.0.dist-info/RECORD,,
