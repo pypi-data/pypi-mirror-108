@@ -1,0 +1,13 @@
+pyqec-0.8.0.dist-info/METADATA,sha256=ewz7R0txne6TYs8XJSLqaveRWQDjocT8ryspQUHaonA,226
+pyqec-0.8.0.dist-info/WHEEL,sha256=LsgJSWm_fQtJ1Cq5u5EXcmbI59EakivFPhzJDNb33NI,95
+pyqec/classical.py,sha256=YiUHF7-dA0rcbuX0yED2ov-8zG7pRaf9r3EcUY8Zfo8,139
+pyqec/experiments/classical_decoding.py,sha256=F4EyWGNTvu2R_hleCrBhp9Im1p4JD3rDjpdXRdolCm8,1737
+pyqec/experiments/laboratory.py,sha256=Sv7t0JcQpmI8dQuTnXftFXEqo0buou2NS8C-YH9HdeU,1688
+pyqec/experiments/results.py,sha256=bWGXEUA9-VlGVKazSuABt8h48UG8oSCBo5Ff6CpX1KE,3030
+pyqec/experiments/statistics.py,sha256=qvMMqDdiRzXSvG2cls7G55hCEQKx5MAdeRmZjEAW-2k,1469
+pyqec/experiments/__init__.py,sha256=geL1KLYap-nxfP0tzbuU6K1UnhPoTVuISrcbPzSYX38,163
+pyqec/quantum.py,sha256=lFS6OIjhyT6ScFj0ykyXAoy-ACeXjBeturmFkTXnVfg,72
+pyqec/sparse.py,sha256=VPJyJnRupijUY2sTYKeSqt2VAgH9-VMg6m90kiVMqfI,2622
+pyqec/__init__.py,sha256=SNaCyrCiPOKzLPm1WD4IeVFzEUAa1lJ-oL3eMFIWfpc,74
+pyqec/pyqec.pyd,sha256=MGP5yK5nJD_4BRCH3FOXWPVgnU8pcvusvbLddQiXnyc,1315328
+pyqec-0.8.0.dist-info/RECORD,,
