@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+jira_tracker/__init__.py
+jira_tracker/jira_auth.py
+jira_tracker/logger.py
+jira_tracker/project_tracker.py
+jira_tracker/tracker_issue.py
+jira_tracker.egg-info/PKG-INFO
+jira_tracker.egg-info/SOURCES.txt
+jira_tracker.egg-info/dependency_links.txt
+jira_tracker.egg-info/entry_points.txt
+jira_tracker.egg-info/requires.txt
+jira_tracker.egg-info/top_level.txt
