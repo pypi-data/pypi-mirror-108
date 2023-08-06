@@ -1,0 +1,9 @@
+serviceboot/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+serviceboot/build_docker.py,sha256=Vg3RKQQ8lqi4Z92jAbOTlwgoWsIplRITrnQy5iR1NNU,6340
+serviceboot/command.py,sha256=j9B3UZqcYkXhvbnmnhvgQO2wwoxaVZuKDdRdgAeQz9k,615
+serviceboot/serviceboot.py,sha256=nOdu-uixbBWwkr7XtcFVw69KCdaqf1VqUEXq2OkzHNg,29336
+serviceboot-0.3.7.dist-info/METADATA,sha256=nkZOo17uP4MYqrsX8KgLQUWnH4z_HTGbeg5X5R6NHw8,1318
+serviceboot-0.3.7.dist-info/WHEEL,sha256=EVRjI69F5qVjm_YgqcTXPnTAv3BfSUr0WVAHuSP3Xoo,92
+serviceboot-0.3.7.dist-info/entry_points.txt,sha256=3A5wlnIKe-KJZVJrGk4AhAKVmaPvDxizcPFWpTBsK-k,83
+serviceboot-0.3.7.dist-info/top_level.txt,sha256=iKLaMbRoat1Mqs02gt_pzVHWJNsOa-KRKQCMtH71FK0,12
+serviceboot-0.3.7.dist-info/RECORD,,
