@@ -1,0 +1,16 @@
+CHANGELOG.txt
+LICENSE.txt
+MANIFEST.in
+README.rst
+cli.py
+requirements.txt
+setup.py
+Trimports/__init__.py
+Trimports/arg_process.py
+Trimports/trimport.py
+Trimports/utils.py
+trimports.egg-info/PKG-INFO
+trimports.egg-info/SOURCES.txt
+trimports.egg-info/dependency_links.txt
+trimports.egg-info/entry_points.txt
+trimports.egg-info/top_level.txt
