@@ -1,0 +1,40 @@
+[tool.poetry]
+name = "olas"
+version = "0.1.7"
+description = "Library with wave tools like ESTELA"
+authors = [
+    "jorge.perez <j.perez@metocean.co.nz>"
+]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/jorgeperezg/olas"
+repository = "https://github.com/jorgeperezg/olas"
+documentation = "https://jorgeperezg.github.io/olas/estela.html"
+keywords = ["waves", "xarray", "ESTELA"]
+
+[tool.poetry.dependencies]
+python = "^3.7.1"
+xarray = "^0.17.0"
+dask = {extras = ["complete"], version = "^2021.3.0"}
+scipy = "^1.6.1"
+numpy = "^1.20.1"
+matplotlib = "^3.3.4"
+netCDF4 = "^1.5.6"
+Cartopy = "^0.18.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+pylint = "^2.7.2"
+black = {version = "^20.8b1", allow-prereleases = true}
+ipython = "^7.21.0"
+portray = "^1.6.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.portray.mkdocs.theme]
+favicon = "art/logo_small.png"
+logo = "art/logo_small.png"
+name = "material"
+palette = {primary = "indigo", accent = "pink"}
