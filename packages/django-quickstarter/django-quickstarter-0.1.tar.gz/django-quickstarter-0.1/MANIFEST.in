@@ -1,0 +1,6 @@
+include LICENSE
+include README.md
+recursive-include requirements *
+recursive-include conf/static *
+recursive-include conf/templates *
+global-exclude conf/settings/secret.py
