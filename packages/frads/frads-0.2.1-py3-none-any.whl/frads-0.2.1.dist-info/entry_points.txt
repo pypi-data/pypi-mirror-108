@@ -1,0 +1,13 @@
+[console_scripts]
+ep2rad = frads.epjson2rad:main
+eprad = frads.eprad:main
+genfmtx = frads.genfmtx:main
+gengrid = frads.radutil:gengrid
+genmtx = frads.genmtx:main
+genradroom = frads.room:genradroom
+geombsdf = frads.geombsdf:main
+getwea = frads.makesky:getwea
+mrad = frads.mrad:main
+rpxop = frads.radutil:rpxop
+varays = frads.radutil:varays
+
