@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: gdbundbrm
+Version: 1.1.0
+Summary: integração API RM
+Home-page: UNKNOWN
+Author: Grupo Dom Bosco
+Author-email: nti@undb.edu.br
+License: MIT License
+Description: # gdbundbrm
+        PyPI package.
+        
+        ## Getting Started
+        #### Dependencies
+        You need Python 3.7 or later to use **gdbundbrm**. You can find it at [python.org](https://www.python.org/).
+        You also need setuptools, wheel and twine packages, which is available from [PyPI](https://pypi.org). If you have pip, just run:
+        ```
+        pip install setuptools
+        pip install wheel
+        pip install twine
+        ```
+        #### Installation
+        run:
+        ```
+        pip install gdbundbrm
+        ```
+        ## Features
+        - File structure for PyPI packages
+        - Setup with package informations
+        - License
+Keywords: RM
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
