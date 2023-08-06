@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: snappi-trex
+Version: 0.0.53
+Summary: The T-Rex Open Traffic Generator Python Package
+Home-page: https://github.com/open-traffic-generator
+Author: ajbalogh
+Author-email: andy.balogh@keysight.com
+License: MIT
+Keywords: t-rex testing open traffic generator automation
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Testing :: Traffic Generation
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=2.7, <4
+Description-Content-Type: text/markdown
+Provides-Extra: dev
+License-File: LICENSE
+
+# snappi-trex
+Snappi plugin for TRex
+
+
