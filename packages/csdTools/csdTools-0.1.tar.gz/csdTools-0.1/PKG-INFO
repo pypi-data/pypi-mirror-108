@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: csdTools
+Version: 0.1
+Summary: A collection of scripts wrapping scipy.signal.csd for some extra features. Most notably, wrapped csd allows one to have more averaging in higher frequency bins of spectrum while getting same number of points per decade.
+Home-page: https://git.ligo.org/anchal.gupta/csdtools
+Author: Anchal Gupta
+Author-email: anchal@caltech.edu
+License: LICENSE
+Download-URL: https://git.ligo.org/anchal.gupta/csdtools/-/archive/0.1/csdtools-0.1.tar.gz
+Description: # CsdTools
+        
+        A collection of scripts wrapping scipy.signal.csd for some extra features. Most notably, wrapped csd allows one to get uncertainties when using averaging. Future goal is to have more averaging in higher frequency bins of spectrum while getting same number of points per decade.
+        
+Keywords: CSD,SCIPY,UNCERTAINTY,STANDARD DEVIATION
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
