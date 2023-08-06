@@ -1,0 +1,10 @@
+pymultirole_plugins/__init__.py,sha256=_L_GMmJXpy9QVrZ-J2_qDwdW8UYgYZ_laCVoLgNDTPs,54
+pymultirole_plugins/schema.py,sha256=GrtkkECRigjibpbfo-tgrzcPju-M1138KpcUic5eSt0,318
+pymultirole_plugins/v1/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pymultirole_plugins/v1/annotator.py,sha256=0jlwZoxfLYbKNLBiSc3VcCXp5DY9PNonDLB62ypGHJo,747
+pymultirole_plugins/v1/converter.py,sha256=05tIciILfoNUAyCk9pU7stPbZdC49qGTQ1ZY-wWXkKw,890
+pymultirole_plugins/v1/formatter.py,sha256=9PmD8y9uNzqmpzMGTGmM_Cx9qrhQL9SfhHaxmIKVEhk,784
+pymultirole_plugins/v1/schema.py,sha256=W0mYRPJ0NG11AVFxeWKRtYuTMOsV4piKUUE6JGYlX7o,3203
+pymultirole_plugins-0.2.68.dist-info/WHEEL,sha256=o-Q2E8s7BKkCJ1EC2uQdaymZVVu2aUt1e8uTTFpzHVs,81
+pymultirole_plugins-0.2.68.dist-info/METADATA,sha256=mUgXN0mjNkkooeGwjO-TXwugozYEOixWdOVJyd8uv3w,1657
+pymultirole_plugins-0.2.68.dist-info/RECORD,,
