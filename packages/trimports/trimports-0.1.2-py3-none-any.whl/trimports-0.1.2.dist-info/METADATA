@@ -1,0 +1,58 @@
+Metadata-Version: 2.1
+Name: trimports
+Version: 0.1.2
+Summary: A python class which automatically removes unused imports from your Python script.
+Home-page: https://github.com/amitjoshi9627/trimports
+Author: Amit Joshi
+Author-email: amitjoshi9627@gmail.com
+License: MIT
+Keywords: unused imports
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+License-File: LICENSE.txt
+
+=================================
+Trimports - Remove Unused Imports
+=================================
+
+Trimports is a program which automatically removes unused imports from your Python script.
+
+Install
+-------
+
+From PyPI :
+
+    $ pip install trimports
+
+Usage: trimports [-h] -l/--location "<FILE_LOCATION>"
+
+required arguments:
+-------------------
+
+ > -h, --help            show this help message and exit. \
+ > -l FILE_LOCATION,
+ > --location FILE_LOCATION   Location of Target file.
+ 
+Example: 
+--------
+
+ 1. `trimports -l "/home/Documents/Python/utils.py"`
+ 2. `trimports --location "/home/Documents/Python/utils.py"`
+
+
+
+Change Log
+==========
+
+v0.1.1
+-----------------
+> First Release
+
+v0.1.2
+----------------
+Removed import bugs
+

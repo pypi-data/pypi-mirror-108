@@ -1,0 +1,3 @@
+[console_scripts]
+trimports = Trimports.cli:main
+
