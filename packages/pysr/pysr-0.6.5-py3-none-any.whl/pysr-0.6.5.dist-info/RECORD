@@ -1,0 +1,17 @@
+Project.toml,sha256=d1X6k0nEjuXMZzQu1cawqIik2-ZB65LpTzZErd7TlIg,120
+datasets/FeynmanEquations.csv,sha256=mI3K10l8D88qshOXBaox-iB3q7Io5LrU8A4ZR4eMxM4,9433
+pysr/__init__.py,sha256=WqPJDar-dw30HradPtiy-yRTYJQJZd3Mqw2txLhmJEc,197
+pysr/export_jax.py,sha256=zOdCnCK_OmzUyGvKs0a_dsNCOJUy3pKJjucI4jcK6LM,5591
+pysr/export_torch.py,sha256=C9iXlN1q9eUvEl-E0LYAEFHuAE78k4U5yHutfuWa_jU,7030
+pysr/feynman_problems.py,sha256=fJ7RC2xaRd3zl2Xyjzr2AcB1e1YLKcnqVU9TY5h8VVw,5957
+pysr/sr.py,sha256=HCRKGpIOYzuJQjJaU2_8UhA4TImAlu85tM4O1Xn7dCM,40300
+test/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+test/test.py,sha256=uV9XCCE_vEkhPOnrhUoh_L3TxjGqJ4chhhAvx_LlRI8,4796
+test/test_jax.py,sha256=1_MCEjgpy7ZjgBfxOLrcycuHqHNJtHasrcSmcLafmuU,1590
+test/test_local.py,sha256=UuQ3ffAja9Ujri4BYObKZHoKzDLTwZHYgnLgafJtvT8,992
+test/test_torch.py,sha256=zhly8qWw8-FA_Z06wGsMhqyPZMraCezzmppJv2d61fA,1554
+pysr-0.6.5.dist-info/LICENSE,sha256=VkI5c6YZGF9Jj4u8ItxwJubUCtICpJu4ch7AnDVfJ6A,11343
+pysr-0.6.5.dist-info/METADATA,sha256=xU_6dSifmKN1roYd2rEm5lYKbbnEWmxJ0NUFNSVsWGI,4786
+pysr-0.6.5.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pysr-0.6.5.dist-info/top_level.txt,sha256=vj5L0khP7NmfxtYOm3LhLNWyy0kH4xof5NbhwDBhp8k,10
+pysr-0.6.5.dist-info/RECORD,,
