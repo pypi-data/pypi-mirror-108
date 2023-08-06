@@ -1,0 +1,2 @@
+dbt_adapter_tests
+pytest_dbt_adapter
