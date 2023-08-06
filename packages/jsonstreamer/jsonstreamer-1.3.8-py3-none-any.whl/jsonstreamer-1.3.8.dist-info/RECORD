@@ -1,0 +1,10 @@
+jsonstreamer/__init__.py,sha256=BEXS2Pymki_m-m6rTwAwIkb-ISl0zYPLXkySP-cCwOA,451
+jsonstreamer/jsonstreamer.py,sha256=qcSYByfxI1VuWtZAnDthznelwxq7cK7T16nTmYrhwvM,13475
+jsonstreamer/tape.py,sha256=Gn9-ntu2cJ9G01aAYtY7Y5v-9sYzspT66f1kAee9pDc,1119
+jsonstreamer/yajl/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+jsonstreamer/yajl/parse.py,sha256=RQtD-gXJmJd8L2pwienmRLwH3kT8FV9zPkvcohjQL4o,8062
+jsonstreamer-1.3.8.dist-info/LICENSE,sha256=tW29ZOFq1hrbly1z6lifNMS3rKxT8-y7yrJ0n9w_lf4,1083
+jsonstreamer-1.3.8.dist-info/METADATA,sha256=76r33UC7TFBX9iMj1ymvHwiHWv75nbgx2Ad1ZqQ26jg,490
+jsonstreamer-1.3.8.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+jsonstreamer-1.3.8.dist-info/top_level.txt,sha256=otXa-mQYXvMF-dMP_S8z0c2MRjTYb4BVq6auIvoNo74,13
+jsonstreamer-1.3.8.dist-info/RECORD,,
