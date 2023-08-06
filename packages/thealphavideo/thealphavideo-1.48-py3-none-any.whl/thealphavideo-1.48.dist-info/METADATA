@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: thealphavideo
+Version: 1.48
+Summary: UNKNOWN
+Home-page: https://alpha-video.andrewstech.me/
+Author: Unofficial-skills
+Author-email: hello@andrewstech.me
+License: UNKNOWN
+Project-URL: Bug Reports, https://github.com/unofficial-skills/alpha-video/issues
+Project-URL: Dev Docs, https://alpha-video.andrewstech.me/
+Project-URL: Discord, https://discord.gg/WAu8ApjwG2
+Platform: UNKNOWN
+Requires-Dist: sentry-sdk[flask]
+Requires-Dist: Flask (==1.1.1)
+Requires-Dist: PyYAML (==3.12)
+Requires-Dist: six (==1.11.0)
+Requires-Dist: Werkzeug (==0.16.1)
+Requires-Dist: youtube-dl
+Requires-Dist: pygtail
+Requires-Dist: pyfiglet
+Requires-Dist: Flask-Ask-alphavideo
+Requires-Dist: update-check
+
+UNKNOWN
+
+

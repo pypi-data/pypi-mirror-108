@@ -1,0 +1,3 @@
+[console_scripts]
+alpha-video = thealphavideo.__main__:start
+
