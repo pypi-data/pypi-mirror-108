@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: polvo
+Version: 0.1.1
+Summary: It fits anywhere
+Home-page: UNKNOWN
+Author: Lucas Goulart Vazquez
+Author-email: lgvaz42@gmail.com
+License: UNKNOWN
+Keywords: machine-learning
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: <4,>=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Provides-Extra: dev
+Requires-Dist: black (<21,>=20.8b1) ; extra == 'dev'
+Requires-Dist: pytest (<7,>=6) ; extra == 'dev'
+Requires-Dist: pytest-cov (<3,>=2.10.1) ; extra == 'dev'
+Requires-Dist: flake8 (<4,>=3.8.3) ; extra == 'dev'
+Requires-Dist: pre-commit (<3,>=2.8.2) ; extra == 'dev'
+
+# polvo
+it fits anywhere
+
+
