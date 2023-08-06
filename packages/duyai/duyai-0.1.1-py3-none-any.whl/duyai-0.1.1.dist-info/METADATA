@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: duyai
+Version: 0.1.1
+Summary: Describe your package in one sentence
+Home-page: https://github.com/you/your_package
+Author: Duy Nguyen Manh
+Author-email: manhduy160396@email.com
+License: Apache License 2.0
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: tensorflow-gpu (>=2.0.0)
+Requires-Dist: keras
+Requires-Dist: opencv-python
+Requires-Dist: gdown
+
+# duyai
+
