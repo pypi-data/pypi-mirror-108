@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/packagecake/__init__.py
+src/packagecake/__main__.py
+src/packagecake/bakery.py
+src/packagecake/pypi_cake_stats.py
+src/packagecake.egg-info/PKG-INFO
+src/packagecake.egg-info/SOURCES.txt
+src/packagecake.egg-info/dependency_links.txt
+src/packagecake.egg-info/requires.txt
+src/packagecake.egg-info/top_level.txt

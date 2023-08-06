@@ -1,0 +1,72 @@
+Metadata-Version: 2.1
+Name: packagecake
+Version: 1.0.2
+Summary: Turn your Python package into a delicious cake
+Home-page: https://github.com/sirfuzzalot/packagecake/
+Author: Tom Saunders
+License: MIT
+Project-URL: Tracker, https://github.com/sirfuzzalot/packagecake/issues
+Project-URL: Documentation, https://github.com/sirfuzzalot/packagecake/blob/main/README.md
+Project-URL: Source, https://github.com/sirfuzzalot/packagecake/
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Utilities
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Package Cake 🎂
+
+**Package Cake** is a simple utility that takes your package and turns it
+into cake 🍰.
+
+## Installation
+
+```bash
+python -m pip install packagecake
+```
+
+## Bake a Package Cake
+
+```bash
+python -m packagecake bake [your package name]
+```
+
+```bash
+>> python -m packagecake bake requests
+🍰
+```
+
+## PyPI Package Cake Stats
+
+In addition to single package baking, **Package Cake** can also bake all
+the packages in PyPI and provide the total of each type of cake.
+
+```bash
+>> python -m packagecake stats
+------------------------------
+|  PyPI Package Cake Stats   |
+------------------------------
+|🍩 - Donut         | 153821 |
+------------------------------
+|🧁 - Cupcake       | 77134  |
+------------------------------
+|🍰 - Shortcake     | 38769  |
+------------------------------
+|🎂 - Birthday Cake | 20632  |
+------------------------------
+|🥮 - Moon Cake     | 17793  |
+------------------------------
+|🍥 - Fish Cake     | 352    |
+------------------------------
+```
+
+
