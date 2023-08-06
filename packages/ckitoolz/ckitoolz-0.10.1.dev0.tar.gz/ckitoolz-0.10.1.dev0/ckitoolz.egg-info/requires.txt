@@ -1,0 +1,4 @@
+kitoolz>=0.1.2
+
+[cython]
+cython
