@@ -1,0 +1,36 @@
+version: '3.7'
+
+services:
+  testbrain-postgresql-service:
+    container_name: testbrain-postgresql
+    image: postgres:10.6
+    volumes:
+      - "{{DEPLOYMENT_DIR}}/var/lib/postgresql/data:/var/lib/postgresql/data"
+    command: ["postgres"]
+
+  testbrain-bundle-service:
+    container_name: testbrain-bundle
+    image: appsurifyinc/testbrain:latest
+    environment:
+      DEBUG: 'True'
+      DATABASE_NAME: 'testbrain'
+      DATABASE_USERNAME: 'postgres'
+      DATABASE_PASSWORD: ''
+      DATABASE_HOST: 'testbrain-postgresql'
+      DATABASE_PORT: '5432'
+      DJANGO_SETTINGS_MODULE: 'system.settings.standalone'
+    ports:
+      - 80:80
+    volumes:
+      - "{{DEPLOYMENT_DIR}}/storage:/opt/app/storage"
+      - "{{DEPLOYMENT_DIR}}/static:/opt/app/python/static"
+      - "{{DEPLOYMENT_DIR}}/media:/opt/app/python/media"
+      - "{{DEPLOYMENT_DIR}}/log:/opt/app/log"
+      - "{{DEPLOYMENT_DIR}}/run:/opt/app/run"
+      - "{{DEPLOYMENT_DIR}}/secret:/opt/app/secret"
+      - "{{DEPLOYMENT_DIR}}/var/lib/redis:/var/lib/redis"
+    command: ["bundle"]
+    links:
+      - testbrain-postgresql-service:testbrain-postgresql
+    depends_on:
+      - testbrain-postgresql-service
