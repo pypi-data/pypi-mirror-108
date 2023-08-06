@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: PyDnfEx
+Version: 0.0.1
+Summary: A data pack extract lib for dungeon & fighter.
+Home-page: https://github.com/HsOjo/PyDnfEx/
+Author: HsOjo
+Author-email: hsojo@qq.com
+License: UNKNOWN
+Keywords: python3 dnf
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# PyDnfEx
+
+* A data pack extract lib for dungeon & fighter.
+
+
