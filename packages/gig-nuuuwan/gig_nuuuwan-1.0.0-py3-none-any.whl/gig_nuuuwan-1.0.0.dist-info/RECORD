@@ -1,0 +1,12 @@
+gig/__init__.py,sha256=YlG1lGc7W1vjMWQQMaFD1bqLjt6noZZGZsugMSpKnFg,3795
+gig/_constants.py,sha256=oXJArsS5R_WaU88iILKt6wZN_oMRgGfd7qjMEtO4x-o,564
+gig/_remote_data.py,sha256=7z2JrkDU9xnpRUfFYX7dA75n-VjKM-xics6nn3CjS_U,470
+gig/ent_types.py,sha256=4YWcYYjEHmfud_hR4j6FxJL0JCa3tE0ZlgzMPHshiYU,1729
+gig/ents.py,sha256=cyrs_deRt9hF-M-34CVvq6gyGs9DsI4JOLIOEkf3_mM,4830
+gig/ext_data.py,sha256=dbNFBhvaCpyzSaed_U33OFmoWsTndNuV-qYKxryDWb0,3930
+gig/nearby.py,sha256=smg3O_RpWAkn8qbY0Od6YS2v9sfItJl60-LyKylqTPk,2347
+gig_nuuuwan-1.0.0.dist-info/LICENSE,sha256=DfIcv5mgPaPf0aSleXQh9n8i2rYdxtNVawdbmpk94bU,1064
+gig_nuuuwan-1.0.0.dist-info/METADATA,sha256=lwQsUC_i9axSP4fxM6zXE8yarol3ggpKVWZ44voXZp8,565
+gig_nuuuwan-1.0.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+gig_nuuuwan-1.0.0.dist-info/top_level.txt,sha256=Ym2TTFSjTMxDIhlT9Ow26xXNsA43PyoZv75XwlcdRtA,4
+gig_nuuuwan-1.0.0.dist-info/RECORD,,
