@@ -1,0 +1,15 @@
+batik/__init__.py,sha256=1m10G9zHLHBF-rmsFPJFmaOeG4q3Aa8IS60FekLS640,54
+batik/__main__.py,sha256=z3OQolCKD8rUd3pKYp_FISq2VctFhFl1mV-DVnaoNOM,29
+batik/cli.py,sha256=kiMWuVBtn8beIhqzgxA6lVwTUWVphRF7YkzEXmcRrys,1233
+batik/layer.py,sha256=G73uya6S_onvqWRU5XfeI1HSxq--CWpE9DUy_pF9Mjo,490
+batik/manifest.py,sha256=jAOMGHorHmzomWTaK3g7IhwJP46lsO3kPinSG1yxWJs,4185
+batik/commands/__init__.py,sha256=w_xAYiAPOeie8bh_wrIIFQ2zUoI9lI3mZzSbSPqXTp8,79
+batik/commands/base.py,sha256=Ort-53kh9q1ITH8XczepnejciVJhSrADlIJyR35vU1s,311
+batik/commands/invoke.py,sha256=urvU7FaqtkfSo0kvzPQeIUpDsqGBPyDHuPpbqb0wBbI,636
+batik/commands/reload.py,sha256=mQiO9Kt_r1mXFb98b0-Pw9ouUcA4UeEWBLzSgXg5UKs,204
+batik/commands/serve.py,sha256=s1yiwsp0R0o6lk8hm2ywiZdnfc2mU-mfWPseYeuczgo,1038
+batik-0.1.0.dist-info/METADATA,sha256=3rqsXGijuvC7xQj7FW2v62dvQWQPWgG_dg8GVwQ6pu0,1039
+batik-0.1.0.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+batik-0.1.0.dist-info/entry_points.txt,sha256=bA-ozKQGiqbCcHSJ6L4jxfdJh3j9KUQt2kREjmAzE_g,42
+batik-0.1.0.dist-info/top_level.txt,sha256=rGDOlv3qb-I70yT9Twkpq4p9f5JX3jHDh6602IYx__8,6
+batik-0.1.0.dist-info/RECORD,,
