@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: inspireapi
+Version: 0.0.2
+Summary: Unofficial API for Inspire Investing's Insight API that provides Biblically responsible insights to securities
+Home-page: https://github.com/carterjfulcher/inspireapi
+Author: carterjfulcher
+Author-email: fulcher.carter@gmail.com
+License: MIT
+Description: See https://github.com/carterjfulcher/inspireapi
+Platform: any
