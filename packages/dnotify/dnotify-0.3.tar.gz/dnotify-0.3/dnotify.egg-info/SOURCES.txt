@@ -1,0 +1,8 @@
+README.md
+dnotify
+setup.py
+dnotify.egg-info/PKG-INFO
+dnotify.egg-info/SOURCES.txt
+dnotify.egg-info/dependency_links.txt
+dnotify.egg-info/requires.txt
+dnotify.egg-info/top_level.txt
