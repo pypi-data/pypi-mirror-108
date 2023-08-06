@@ -1,0 +1,267 @@
+heat_template_version: rocky
+
+description: >
+  OpenStack containerized Iscsid service
+
+parameters:
+  ContainerIscsidImage:
+    description: image
+    type: string
+  ContainerIscsidConfigImage:
+    description: The container image to use for the iscsid config_volume
+    type: string
+  EndpointMap:
+    default: {}
+    description: Mapping of service endpoint -> protocol. Typically set
+                 via parameter_defaults in the resource registry.
+    type: json
+  ServiceData:
+    default: {}
+    description: Dictionary packing service data
+    type: json
+  ServiceNetMap:
+    default: {}
+    description: Mapping of service_name -> network name. Typically set
+                 via parameter_defaults in the resource registry.  This
+                 mapping overrides those in ServiceNetMapDefaults.
+    type: json
+  RoleName:
+    default: ''
+    description: Role name on which the service is applied
+    type: string
+  RoleParameters:
+    default: {}
+    description: Parameters specific to the role
+    type: json
+  DockerInsecureRegistryAddress:
+    description: Optional. The IP Address and Port of an insecure docker
+                 namespace that will be configured in /etc/sysconfig/docker.
+                 The value can be multiple addresses separated by commas.
+    type: comma_delimited_list
+    default: []
+  DefaultPasswords:
+    default: {}
+    type: json
+  LVMFilterEnabled:
+    default: false
+    description: Enables configuration of LVM2 with a filter so that devices not
+                 in use on the host or explicitly allowed are ignored by
+                 LVM2. Can be configured per-role.
+                 When disabled, the proposed lvm.conf file will be created
+                 regardless and left in /tmp/tripleo_lvmfilter.conf for
+                 debugging purposes.
+    type: boolean
+    tags:
+      - role_specific
+  LVMFilterAllowlist:
+    default: []
+    description: A list of block devices which should be allowed in the LVM2
+                 `global_filter`. Supports regular expressions, like `/dev/sd.*`
+                 and can be configured per-role. Any block device in use at boot
+                 time will be automatically allowed.
+    type: comma_delimited_list
+    tags:
+      - role_specific
+  LVMFilterDenylist:
+    default: ['.*']
+    description: A list of block devices which should be disallowed in the LVM2
+                 `global_filter`. Supports regular expressions, like `/dev/sd.*`
+                 and can be configured per-role.
+    type: comma_delimited_list
+    tags:
+      - role_specific
+
+conditions:
+  insecure_registry_is_empty: {equals : [{get_param: DockerInsecureRegistryAddress}, []]}
+
+resources:
+
+  ContainersCommon:
+    type: ../containers-common.yaml
+
+  RoleParametersValue:
+    type: OS::Heat::Value
+    properties:
+      type: json
+      value:
+        map_replace:
+          - map_replace:
+            - tripleo_tripleo_lvmfilter_enabled: LVMFilterEnabled
+              tripleo_tripleo_lvmfilter_devices_allowlist: LVMFilterAllowlist
+              tripleo_tripleo_lvmfilter_devices_denylist: LVMFilterDenylist
+            - values: {get_param: [RoleParameters]}
+          - values:
+              LVMFilterEnabled: {get_param: LVMFilterEnabled}
+              LVMFilterAllowlist: {get_param: LVMFilterAllowlist}
+              LVMFilterDenylist: {get_param: LVMFilterDenylist}
+
+outputs:
+  role_data:
+    description: Role data for the Iscsid role.
+    value:
+      service_name: iscsid
+      config_settings: {}
+      service_config_settings: {}
+      deploy_steps_tasks:
+      - name: Run lvmfilter role
+        include_role:
+          name: tripleo_lvmfilter
+        when:
+        - step|int == 1
+      ansible_group_vars: {get_attr: [RoleParametersValue, value]}
+      # BEGIN DOCKER SETTINGS
+      puppet_config:
+        config_volume: iscsid
+        puppet_tags: iscsid_config
+        step_config: |
+          include ::tripleo::profile::base::iscsid
+        config_image: {get_param: ContainerIscsidConfigImage}
+        volumes:
+          # NOTE(bogdando) Containerized or running on baremetal services
+          # on a node must use the same iSCSI Qualified Name (IQN).
+          # However, overcloud nodes must have a unique IQN. Allow full
+          # (write) access to /etc/iscsi so that puppet ensures the IQN
+          # is unique and is reset once, and only once.
+          - /etc/iscsi:/etc/iscsi:z
+      kolla_config:
+        /var/lib/kolla/config_files/iscsid.json:
+          command: /usr/sbin/iscsid -f
+          config_files:
+            - source: "/var/lib/kolla/config_files/src-iscsid/*"
+              dest: "/etc/iscsi/"
+              merge: true
+              preserve_properties: true
+      docker_config:
+        step_3:
+          iscsid:
+            start_order: 2
+            image: {get_param: ContainerIscsidImage}
+            net: host
+            privileged: true
+            restart: always
+            healthcheck:
+              test: /openstack/healthcheck
+            volumes:
+              list_concat:
+                - {get_attr: [ContainersCommon, volumes]}
+                -
+                  - /var/lib/kolla/config_files/iscsid.json:/var/lib/kolla/config_files/config.json:ro
+                  - /dev/:/dev/
+                  - /run/:/run/
+                  - /sys:/sys
+                  - /lib/modules:/lib/modules:ro
+                  - /etc/iscsi:/var/lib/kolla/config_files/src-iscsid:ro
+                  - /etc/target:/etc/target:z
+                  - /var/lib/iscsi:/var/lib/iscsi:z
+            environment:
+              KOLLA_CONFIG_STRATEGY: COPY_ALWAYS
+      host_prep_tasks:
+        - name: create persistent directories
+          file:
+            path: "{{ item.path }}"
+            state: directory
+            setype: "{{ item.setype }}"
+          with_items:
+            - { 'path': /etc/iscsi, 'setype': svirt_sandbox_file_t }
+            - { 'path': /etc/target, 'setype': svirt_sandbox_file_t }
+            - { 'path': /var/lib/iscsi, 'setype': svirt_sandbox_file_t }
+        - name: stat /lib/systemd/system/iscsid.socket
+          stat: path=/lib/systemd/system/iscsid.socket
+          register: stat_iscsid_socket
+        - name: Stop and disable iscsid.socket service
+          service: name=iscsid.socket state=stopped enabled=no
+          when: stat_iscsid_socket.stat.exists
+        - name: Check if iscsi.service is enabled
+          command: systemctl is-enabled --quiet iscsi.service
+          failed_when: false
+          register: iscsi_service_enabled_result
+        - name: Stop iscsi.service
+          service: name=iscsi.service state=stopped enabled=no
+          when:
+            - iscsi_service_enabled_result is changed
+            - iscsi_service_enabled_result.rc == 0
+      upgrade_tasks:
+        # nova_hybrid_state
+        - name: Gather missing facts
+          setup:
+            gather_subset: "distribution"
+          when: >-
+            ansible_facts['distribution'] is not defined or
+            ansible_facts['distribution_major_version'] is not defined
+          tags:
+            - never
+            - nova_hybrid_state
+        - name: Switch iscsid to hybrid state
+          vars:
+            iscsid_image: {get_param: ContainerIscsidImage}
+          tags:
+            - never
+            - nova_hybrid_state
+          when:
+            - step|int == 0
+            - ansible_facts['distribution'] == 'RedHat'
+            - ansible_facts['distribution_major_version'] is version('7', '==')
+          block:
+            - name: Check if iscsid is running with proper image
+              shell: |
+                docker ps | grep "{{iscsid_image}}"
+              failed_when: false
+              register: hybrid_iscsid
+            - name: Implement the hybrid state (only if the compute is still Queens)
+              when: hybrid_iscsid.rc != 0
+              block:
+                - name: Update the iscsid paunch image in config
+                  shell: |
+                    set -o pipefail
+                    jq '.iscsid.image = "{{ iscsid_image }}" | {"iscsid": .iscsid }' \
+                    /var/lib/tripleo-config/docker-container-startup-config-step_3.json >\
+                    /var/lib/tripleo-config/docker-container-hybrid_iscsid.json
+                # In case UC is registry we need to be able to resolve it
+                - name: Make sure the Undercloud hostname is included in /etc/hosts
+                  when:
+                    - undercloud_hosts_entries is defined
+                  lineinfile:
+                    dest: /etc/hosts
+                    line: "{{ undercloud_hosts_entries | join('') }}"
+                    state: present
+                - name: Set container_registry_insecure_registries fact.
+                  set_fact:
+                    container_registry_insecure_registries:
+                      if:
+                        - insecure_registry_is_empty
+                        - []
+                        - {get_param: DockerInsecureRegistryAddress}
+                - name: Set container_registry_insecure registries
+                  when: container_registry_insecure_registries != []
+                  ini_file:
+                    path: /etc/containers/registries.conf
+                    section: registries.insecure
+                    option: registries
+                    value: "{{ container_registry_insecure_registries }}"
+                  register: ini_read_result
+                - name: Restart docker and apply the paunch config
+                  when:
+                    - container_registry_insecure_registries != []
+                    - ini_read_result is changed
+                  shell: |
+                    set -o pipefail
+                    # Get list of running containers
+                    RUNNING="$( docker ps --format '{{ '{{' }}.Names{{ '}}' }}' )"
+                    # Restart docker
+                    systemctl restart docker
+                    # Compare running containers now vs before
+                    TO_STOP="$(grep -v -f <(echo "${RUNNING}")  <(docker ps --format '{{ '{{' }}.Names{{ '}}' }}'))"
+                    # Check if we need to stop anything and stop it
+                    if [ -n "${TO_STOP}" ]; then
+                      echo "${TO_STOP}" | xargs -r docker stop
+                    fi
+                  args:
+                    executable: /usr/bin/bash
+                - name: Remove iscsid container before applying new paunch config
+                  docker_container:
+                    name: iscsid
+                    state: absent
+                # Finally apply the paunch config to start the new iscsid
+                - name: Apply paunch config for iscsid
+                  shell: |
+                    paunch apply --file /var/lib/tripleo-config/docker-container-hybrid_iscsid.json --config-id hybrid_iscsid
