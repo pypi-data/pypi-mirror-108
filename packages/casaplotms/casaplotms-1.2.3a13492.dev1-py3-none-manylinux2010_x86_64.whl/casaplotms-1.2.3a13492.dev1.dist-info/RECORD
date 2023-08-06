@@ -1,0 +1,17 @@
+casaplotms/plotms.py,sha256=ZW55RR361q8pBSXkFKumP49EzplVBKLHaCLH_IlxvF4,45978
+casaplotms/__init__.py,sha256=kpOK27M6H4_sDcGIDgvpyF3z-qj6MG1310vjVFNyIqE,1380
+casaplotms/LICENSE.txt,sha256=IEfzsTvSd8f8JBZn3LoATY_RkNKJnAyr2p020oPTVfQ,25454
+casaplotms/gotasks/plotms.py,sha256=AK0TLzKIP5yJDPG6W0o4eZEXvrb1jt3CJN20OSowlD4,189174
+casaplotms/gotasks/__init__.py,sha256=CJ1LXJxPgWcE8THHIdJ6KWJZNDY3Cx97WA4C2CW3Fvg,63
+casaplotms/__bin__/casaplotms-x86_64.AppImage,sha256=DQpHDSrMvDkBt9zWWc93Wb0QsBVnmDB56JXW8IX_dwA,289868792
+casaplotms/private/plotms_pb2_grpc.py,sha256=qRUQctu5fDx2ggzIReKLSwKcViED1Lx9Y3YJ0du1Cv0,28107
+casaplotms/private/shutdown_pb2_grpc.py,sha256=lROgfE-6MuL32QYyiVOSgdR6eLGq_IfteVVaz-u0Tow,1449
+casaplotms/private/task_plotms.py,sha256=861si_pSkkBx296PrZ55WG2U3BAgJAMUgpOz1e9I2Z0,42716
+casaplotms/private/plotms_pb2.py,sha256=GYQbhqRy2402cIjUu5q8mPSU2MuXlZyyY4M2C7OY04s,77053
+casaplotms/private/shutdown_pb2.py,sha256=5XRQGKc8FHM6BeCuzstMPd6FYjtGSub7KgFuqUDBGE8,1817
+casaplotms/private/plotmstool.py,sha256=lpmnmqQdqH3Zyxfu0NPcq5_I5gHv5Fe4QaFSdZfj-Tc,40343
+casaplotms.libs/libz-eb09ad1d.so.1.2.3,sha256=Occ38Rdxpnqlv4lgkj2inrjERnLkx0ig9Kb0Ce5GMQ4,92080
+casaplotms-1.2.3a13492.dev1.dist-info/top_level.txt,sha256=0MR97dB_ED0dWq2BDpk0w9PqXAokjj_F-j1dBtmorqQ,11
+casaplotms-1.2.3a13492.dev1.dist-info/WHEEL,sha256=ySCtlGwQEDl70RgVHawRuNIoK6wecZaynKNMI_Hoao4,110
+casaplotms-1.2.3a13492.dev1.dist-info/RECORD,,
+casaplotms-1.2.3a13492.dev1.dist-info/METADATA,sha256=Qctmyu20xx4hNf_vdwbQ7XlT_vat_ugrbR226tmPleA,456
