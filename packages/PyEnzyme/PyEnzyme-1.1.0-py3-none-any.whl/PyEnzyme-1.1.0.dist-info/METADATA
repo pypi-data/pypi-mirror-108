@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: PyEnzyme
+Version: 1.1.0
+Summary: Handling of EnzymeML files
+Home-page: https://github.com/EnzymeML/PyEnzyme
+Author: Range, Jan
+Author-email: jan.range@simtech.uni-stuttgart.de
+License: BSD2
+Platform: UNKNOWN
+Requires-Dist: flask
+Requires-Dist: flask-restful
+Requires-Dist: flask-apispec
+Requires-Dist: flask-cors
+Requires-Dist: python-libsbml
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: python-libcombine
+Requires-Dist: python-copasi
+Requires-Dist: openpyxl
+Requires-Dist: marshmallow
+Requires-Dist: scipy
+Requires-Dist: apispec
+
+UNKNOWN
+
+
