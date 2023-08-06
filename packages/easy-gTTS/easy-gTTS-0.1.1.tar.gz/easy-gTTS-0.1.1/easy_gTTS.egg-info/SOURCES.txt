@@ -1,0 +1,14 @@
+LICENCE
+README.md
+pyproject.toml
+setup.cfg
+easy_gTTS.egg-info/PKG-INFO
+easy_gTTS.egg-info/SOURCES.txt
+easy_gTTS.egg-info/dependency_links.txt
+easy_gTTS.egg-info/requires.txt
+easy_gTTS.egg-info/top_level.txt
+easygTTS/__init__.py
+easygTTS/_decos.py
+easygTTS/easygTTS.py
+easygTTS/enums.py
+easygTTS/errors.py

@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: easy-gTTS
+Version: 0.1.1
+Summary: Async interfaces to the easy-gTTS-API
+Home-page: https://github.com/regulad/easy-gTTS-py
+Author: regulad
+Author-email: regulad@outlook.com
+License: MIT
+Download-URL: https://github.com/regulad/easy-gTTS-py/archive/refs/heads/master.zip
+Keywords: async,TTS,text to speech
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
+License-File: LICENCE
+
+# easy-gTTS-py
+
+Asynchronous interface to an [easy-gtts](https://github.com/regulad/easy-gTTS-API) server written with `aiohttp`.  
+
+## Examples
+
+```python
+import asyncio
+from easygTTS import AsyncEasyGTTSSession
+
+
+async def main():
+    async with AsyncEasyGTTSSession("https://easy-gtts-api.dingus-server.regulad.xyz/") as text_to_speech:
+        audio_bytes = await text_to_speech.synthesize("Hello, stinky world!")
+
+    with open("Hello_world.mp3", "wb") as f:
+        f.write(audio_bytes)
+asyncio.run(main())
+```
+
+
