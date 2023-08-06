@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: dtreeplot
+Version: 0.0.2
+Summary: A Decision Tree Visualization Packages.
+Home-page: UNKNOWN
+Author: suyin
+Author-email: suyin1203@gmail.com
+License: UNKNOWN
+Keywords: decision tree Visualize
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+
+决策树可视化包
+
+
