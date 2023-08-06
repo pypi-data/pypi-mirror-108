@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: pySCILTagger
+Version: 0.0.3
+Summary: A dialog-act tagger for pySCIL.
+Home-page: https://github.rpi.edu/LACAI/pySCIL-Tagger
+Author: Max Schwartz, Jeremy Macks
+Author-email: schwam4@rpi.edu, macksj@rpi.edu
+License: UNKNOWN
+Project-URL: Documentation, https://github.rpi.edu/LACAI/pySCIL-Tagger
+Project-URL: Source Code, https://github.rpi.edu/LACAI/pySCIL-Tagger
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# pySCIL-Tagger
+Tagger for SCIL
+
+Usage can be seen in tagger/test.py
+
+More documentation to be added later. This is a WIP.
+
+

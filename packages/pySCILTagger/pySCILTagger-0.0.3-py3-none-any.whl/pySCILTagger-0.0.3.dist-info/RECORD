@@ -1,0 +1,13 @@
+sciltagger/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sciltagger/config.py,sha256=xfF_S5Jj0moaYVZFeSsvE9pkIiAJQHsjcQL0PUl13gU,224
+sciltagger/getmodel.py,sha256=2dMDEtQWmfOhdK9LgWoAnNb-U2IDbARmswkOHirR6ZU,2069
+sciltagger/labelconvert.py,sha256=9fPBhWU14JT4nnsudTa-LlE8jc5II_lYhZ0YIChUnDM,11502
+sciltagger/modeltest.py,sha256=PutUQpMm6dztnSESIL9xMZVOCNKM3gJ0armjCHNfq04,5843
+sciltagger/pandm.py,sha256=XW9aN2zGhU8dQU2EVFU5uOWeYx7mfNp3kLGbzYGiedQ,9572
+sciltagger/tagger.py,sha256=CEAcibOkv2IHziklzX1OcEKydVMrzdU7fM8TdMhI1bA,5904
+sciltagger/test.py,sha256=qbjyy7MRPy5Y0kAW8FWXgiZ6ppxitPtGJGWdlOO1_pA,176
+pySCILTagger-0.0.3.dist-info/LICENSE,sha256=ZUveGItSDqKtsSU2O-Fsqqj6tLYXwYP_QgO8SBFRg-w,1067
+pySCILTagger-0.0.3.dist-info/METADATA,sha256=UtUQ-pierdVrqz9iSw3e9RYUsze4owBkRLAVMQXTDZs,764
+pySCILTagger-0.0.3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pySCILTagger-0.0.3.dist-info/top_level.txt,sha256=nOp1nMWfgpspGrZOCGr2jr5EwqFKcKoAK-36fpTE45g,11
+pySCILTagger-0.0.3.dist-info/RECORD,,
