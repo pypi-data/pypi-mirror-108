@@ -1,0 +1,9 @@
+README.md
+setup.py
+inspireapi/__init__.py
+inspireapi/dtypes.py
+inspireapi/main.py
+inspireapi.egg-info/PKG-INFO
+inspireapi.egg-info/SOURCES.txt
+inspireapi.egg-info/dependency_links.txt
+inspireapi.egg-info/top_level.txt
