@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+odimh5/__init__.py
+odimh5/reader.py
+odimh5.egg-info/PKG-INFO
+odimh5.egg-info/SOURCES.txt
+odimh5.egg-info/dependency_links.txt
+odimh5.egg-info/requires.txt
+odimh5.egg-info/top_level.txt
