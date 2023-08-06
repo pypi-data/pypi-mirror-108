@@ -1,0 +1,9 @@
+transformstorm/__init__.py,sha256=osVnIPCJ09RivkQtECD-MwtV32J6NmJtFl7fN0sVzsg,4099
+transformstorm/interfaces.py,sha256=grr0h1AAQAYmfMA7ebBXLDPTwi2gt4-W5PKeVTYiNeE,4428
+transformstorm/textgenerator.py,sha256=Xje5C9rwJu69jQZVOp74DfPrOp03Ed_ZI1s4b_KpAko,1338
+transformstorm-0.1.8.data/scripts/transformstorm,sha256=j7I5_Im35qBwDSEFhsha9DWb-onX_jJ-6do1a137VYc,52
+transformstorm-0.1.8.dist-info/LICENSE,sha256=Zz4xIcKM6y1QzBJ6WmhyJc3JRoqQd72RTinnz9MNsFY,1053
+transformstorm-0.1.8.dist-info/METADATA,sha256=45uiIIhOO18jIlj_lHhobcgueLdFoH1rKyW2kiXFbdI,334
+transformstorm-0.1.8.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+transformstorm-0.1.8.dist-info/top_level.txt,sha256=bUSNDqHna2aZDRDvLGsaNF17T9KMWSCnVtKx-oD5B0o,15
+transformstorm-0.1.8.dist-info/RECORD,,
