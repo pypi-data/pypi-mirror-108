@@ -1,0 +1,12 @@
+MANIFEST.in
+README.txt
+service_template.sh
+setup.cfg
+setup.py
+blalacar/__init__.py
+blalacar/blalacar.py
+blalacar.egg-info/PKG-INFO
+blalacar.egg-info/SOURCES.txt
+blalacar.egg-info/dependency_links.txt
+blalacar.egg-info/requires.txt
+blalacar.egg-info/top_level.txt
