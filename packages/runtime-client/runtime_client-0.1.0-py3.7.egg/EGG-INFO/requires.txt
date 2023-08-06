@@ -1,0 +1,13 @@
+argparse>=1.4.0
+dill>=0.3.3
+joblib
+numpy
+pandas
+requests>=2.25.1
+requests-toolbelt>=0.9.1
+
+[test]
+pytest
+pytest-asyncio
+pytest-tornasync
+mypy

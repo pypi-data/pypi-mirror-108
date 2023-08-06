@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: runtime-client
+Version: 0.1.0
+Summary: Model Server implementation for AI Runtime.
+Home-page: UNKNOWN
+Author-email: pydemia@gmail.com
+License: https://github.com/kubeflow/kfserving/LICENSE
+Description: # Runtime Client
+        
+        To request inferences.
+        
+Platform: UNKNOWN
+Requires-Python: >3.4
+Provides-Extra: test
