@@ -1,0 +1,41 @@
+# Polly Repositories
+
+`polly_repositories` is a Python library for dealing with polly repositories.
+
+## Installation
+
+Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+
+```bash
+pip install polly-repositories
+```
+
+## Usage
+
+```python
+from polly_repositories import Repositories
+
+REFRESH_TOKEN = 'YOUR-REFRESH-TOKEN'
+
+repo_client = Repositories(REFRESH_TOKEN)
+
+# Return Data about all current repositories
+all_repos = repo_client.get_all_repos()
+
+# Get all packages for a specific repository
+repo_packages = repo_client.get_all_packages(repo_id=16)
+
+# Make an ElasticSearch query for given index 
+query = { 'foo' : 'bar' } # ElasticSearch
+
+response = repo_client.elastic_query(index=INDEX,
+                                     query=query)
+```
+
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
