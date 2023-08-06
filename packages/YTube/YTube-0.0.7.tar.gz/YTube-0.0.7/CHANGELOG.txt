@@ -1,0 +1,70 @@
+Change Log
+=============
+
+0.0.1 4/06/2021
+---------------
+First Release
+
+0.0.2 4/06/2021
+---------------
+Second Release
+Corrected the Download module
+
+0.0.3 5/06/2021
+---------------
+Third Release
+Introduced options to download in different resolutions
+
+Methods:
+        YTube.download(link) - Download default video
+        YTube.download_highest(link) - Download in highest quality
+        YTube.download_144(link) - Download video in 144p
+        YTube.download_360(link) - Download video in 360p
+        YTube.download_480(link) - Download video in 480p
+        YTube.download_720(link) - Download video in 720p
+        YTube.download_1080(link) - Download video in 1080p
+
+0.0.4 5/06/2021
+---------------
+Fourth Release
+Introduced options to download in different resolutions
+
+Methods:
+        YTube.download(link) - Download default video
+        YTube.download_Highest(link) - Download in highest quality
+        YTube.download_144(link) - Download video in 144p
+        YTube.download_360(link) - Download video in 360p
+        YTube.download_480(link) - Download video in 480p
+        YTube.download_720(link) - Download video in 720p
+        YTube.download_1080(link) - Download video in 1080p
+
+0.0.5 5/06/2021
+---------------
+Fifth Release
+Fixed options to download in different resolutions
+
+
+0.0.6 5/06/2021
+---------------
+Sixth Release
+Fixed options to download in different resolutions
+
+Methods:
+        YTube.download(link) - Download default video,
+
+        YTube.fastDownload(link) - Download in highest quality,
+
+        YTube.download_144(link) - Download video in 144p,
+
+        YTube.download_360(link) - Download video in 360p,
+
+        YTube.download_480(link) - Download video in 480p,
+
+        YTube.download_720(link) - Download video in 720p,
+
+        YTube.download_1080(link) - Download video in 1080p
+
+0.0.7 5/06/2021
+---------------
+Seventh Release
+Fixed options to download in different resolutions
