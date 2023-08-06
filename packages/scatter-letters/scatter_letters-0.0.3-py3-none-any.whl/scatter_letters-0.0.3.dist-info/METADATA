@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: scatter-letters
+Version: 0.0.3
+Summary: A script to write letters with Matplotlib's scatter plots, create transitions from one plot to the other and build a GIF.
+Home-page: UNKNOWN
+Author: Thiago B Carvalho
+Author-email: UNKNOWN
+License: MIT
+Platform: UNKNOWN
+
+UNKNOWN
+
+
