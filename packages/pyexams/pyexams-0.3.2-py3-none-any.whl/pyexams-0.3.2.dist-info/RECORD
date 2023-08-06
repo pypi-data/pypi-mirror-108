@@ -1,0 +1,10 @@
+pyexams/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pyexams/metadata_collector.py,sha256=kerX-0IprOu3t8B7bO8K_OPzfhKUBpXp35QcfC-X7ag,4853
+pyexams/pyexams.py,sha256=YJylrj_eaBwFx3h2i9myVtoPFDzSDiedTmldTm3ynlM,8310
+pyexams/send.py,sha256=2H6cEMlkkxstpjCv0RqBtf5qJzCcPD4N7fxV4s8oL10,3148
+pyexams-0.3.2.data/scripts/pyexams,sha256=kFC29Ek7MpK83ToFwaooSmu6dWUN2_QELWKvKFUA24s,3978
+pyexams-0.3.2.dist-info/LICENSE,sha256=_sN9zX_2OCi3xTbp6KSvNNkLmmoxc35YpPeR7YZt3O0,2908
+pyexams-0.3.2.dist-info/METADATA,sha256=K9t9atusbiS4B2uGkX4ebrLNrtXHfPfa8v1dK-4g8q4,6837
+pyexams-0.3.2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pyexams-0.3.2.dist-info/top_level.txt,sha256=4ga7AktMMNKMGSu3Pi_-f3MYSGnR6kK5-9jtRdH5DsE,8
+pyexams-0.3.2.dist-info/RECORD,,
