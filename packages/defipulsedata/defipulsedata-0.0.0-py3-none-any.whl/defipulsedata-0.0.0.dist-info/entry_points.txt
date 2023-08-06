@@ -1,0 +1,3 @@
+[console_scripts]
+defipulsedata=defipulsedata.cli:main
+
