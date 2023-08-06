@@ -1,0 +1,3 @@
+[console_scripts]
+goli=goli.__main__:cli
+

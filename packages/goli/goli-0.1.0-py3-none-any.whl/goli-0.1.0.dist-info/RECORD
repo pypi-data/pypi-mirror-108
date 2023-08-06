@@ -1,0 +1,10 @@
+goli/__init__.py,sha256=OvE4LTTcZPt_V1C1mpiUWomHXoMZn7FeaXB6Fap8y4o,302
+goli/__main__.py,sha256=uCyT3ubnIHIsrrx_hHF-UXKvvuX2omfYhcc5u1wawyY,1273
+goli/constants.py,sha256=Fa6ngY0qLxs7OvrdjluvPodgL8n_7x3dlCj31qvfci0,344
+goli/cookiecutters.py,sha256=wTqQemVpXEX8LbQwiI_-MIfDwnxxMvMR8vbRNu-qI08,2389
+goli/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+goli-0.1.0.dist-info/entry_points.txt,sha256=Is-8lW5Pyy5TBu3zj45Jd6KacYCyOnmOAxlpYwEj3kk,42
+goli-0.1.0.dist-info/LICENSE,sha256=SlUg05TCAed0hyEYbLvBj3ziMCkyrN91YblngrVoNss,1074
+goli-0.1.0.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+goli-0.1.0.dist-info/METADATA,sha256=DbcDFMXOLYOj4IEFOjUOSg8RC7FY6EAmzRf7CyGvgEc,3887
+goli-0.1.0.dist-info/RECORD,,
