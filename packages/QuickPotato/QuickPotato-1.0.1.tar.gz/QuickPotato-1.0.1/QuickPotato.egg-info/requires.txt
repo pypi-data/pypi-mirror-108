@@ -1,0 +1,8 @@
+numpy
+SQLAlchemy-Utils
+scipy
+SQLAlchemy
+PyMySQL
+pandas
+PyYAML
+Jinja2
