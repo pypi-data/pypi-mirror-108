@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+word_gen/__init__.py
+word_gen/word_gen.py
+word_gener.egg-info/PKG-INFO
+word_gener.egg-info/SOURCES.txt
+word_gener.egg-info/dependency_links.txt
+word_gener.egg-info/top_level.txt
