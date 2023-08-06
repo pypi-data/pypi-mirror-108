@@ -1,0 +1,3 @@
+[console_scripts]
+rtop = rtop.__main__:main
+
