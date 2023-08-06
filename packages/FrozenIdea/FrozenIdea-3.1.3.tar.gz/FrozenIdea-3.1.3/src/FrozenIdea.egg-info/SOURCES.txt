@@ -1,0 +1,13 @@
+CHANGELOG.rst
+LICENSE.txt
+MANIFEST.in
+README.rst
+setup.py
+src/FrozenIdea.egg-info/PKG-INFO
+src/FrozenIdea.egg-info/SOURCES.txt
+src/FrozenIdea.egg-info/dependency_links.txt
+src/FrozenIdea.egg-info/top_level.txt
+src/FrozenIdea.egg-info/zip-safe
+src/frozeindea/__init__.py
+src/frozeindea/bot_api.py
+src/frozeindea/frozenidea.py
