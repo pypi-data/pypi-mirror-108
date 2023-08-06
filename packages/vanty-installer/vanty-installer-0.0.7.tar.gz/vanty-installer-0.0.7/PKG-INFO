@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: vanty-installer
+Version: 0.0.7
+Summary: Installer for the Vanty StarterKit.
+Home-page: https://www.advantch.com/
+Author: Themba
+Author-email: themba@advantch.com
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: PyYAML (>=5.3.1,<6.0.0)
+Requires-Dist: cookiecutter (>=1.7.2,<2.0.0)
+Project-URL: Documentation, https://docs.advantch.com
+Description-Content-Type: text/markdown
+
+# Vanty Installer
+
+
+<a href="https://docs.advantch.com/vanty-installer" style="margin-right:10px">
+    <img src="https://img.shields.io/badge/vanty docs-docs.advantch.com-brightgreen.svg" alt="Documentation" />
+</a>
+
+<a href="https://docs.advantch.com/vanty-installer">
+    <img src="https://img.shields.io/badge/version-0.0.7-orange.svg" alt="Documentation" />
+</a>
+<br>
+<br>
+
+This is the installer for the [Vanty StarterKit](https://www.advantch.com/).
+
+
+### 1. Getting started
+
+```
+$ pip install vanty-installer
+```
+
+### 2. Installing the Vanty StarterKit
+
+See the docs on how to install the [Vanty Starterkit](https://docs.advantch.com)
+
+

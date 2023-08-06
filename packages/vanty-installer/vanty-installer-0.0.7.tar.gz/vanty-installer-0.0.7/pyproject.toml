@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "vanty-installer"
+version = "0.0.7"
+description = "Installer for the Vanty StarterKit."
+authors = ["Themba <themba@advantch.com>"]
+homepage="https://www.advantch.com/"
+documentation="https://docs.advantch.com"
+readme="README.md"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+cookiecutter = "^1.7.2"
+PyYAML = "^5.3.1"
+
+[tool.poetry.dev-dependencies]
+pytest = "^4.6"
+
+[build-system]
+requires = [ "poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+poetry = 'poetry.console:run'
+
+[tool.poetry.plugins]
+[tool.poetry.plugins."vanty_installer"]
+vanty = '.__main__'
