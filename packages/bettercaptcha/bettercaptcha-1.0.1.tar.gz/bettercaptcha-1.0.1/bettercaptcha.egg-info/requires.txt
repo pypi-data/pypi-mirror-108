@@ -1,0 +1,4 @@
+Pillow
+
+[distortion]
+numpy
