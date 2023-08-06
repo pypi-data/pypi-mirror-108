@@ -1,0 +1,11 @@
+README.md
+setup.py
+dj_jwt.egg-info/PKG-INFO
+dj_jwt.egg-info/SOURCES.txt
+dj_jwt.egg-info/dependency_links.txt
+dj_jwt.egg-info/requires.txt
+dj_jwt.egg-info/top_level.txt
+djjwt/__init__.py
+djjwt/middleware.py
+djjwt/urls.py
+djjwt/views.py
