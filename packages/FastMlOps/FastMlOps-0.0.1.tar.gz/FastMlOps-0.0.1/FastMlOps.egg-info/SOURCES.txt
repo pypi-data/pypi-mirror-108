@@ -1,0 +1,7 @@
+README.md
+setup.py
+FastMlOps.egg-info/PKG-INFO
+FastMlOps.egg-info/SOURCES.txt
+FastMlOps.egg-info/dependency_links.txt
+FastMlOps.egg-info/requires.txt
+FastMlOps.egg-info/top_level.txt
