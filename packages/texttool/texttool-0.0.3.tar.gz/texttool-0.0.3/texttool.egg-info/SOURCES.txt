@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+texttool/__init__.py
+texttool/texttool.py
+texttool.egg-info/PKG-INFO
+texttool.egg-info/SOURCES.txt
+texttool.egg-info/dependency_links.txt
+texttool.egg-info/top_level.txt
