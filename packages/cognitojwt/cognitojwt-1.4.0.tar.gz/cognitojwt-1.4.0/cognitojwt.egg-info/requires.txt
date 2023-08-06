@@ -1,0 +1,17 @@
+python-jose[cryptography]
+
+[async]
+aiofile
+aiohttp
+async_lru
+
+[sync]
+requests
+
+[test]
+aiohttp
+attrs==19.1.0
+requests
+async_lru
+pytest==5.4.0
+pytest-asyncio==0.12.0
