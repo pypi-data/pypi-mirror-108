@@ -1,0 +1,17 @@
+useb/__init__.py,sha256=B_HCdU328mouYbXkcJqEYDI4BtR69iqVepr3ai0xilw,50
+useb/downloading.py,sha256=PJjci_NvRzP-3tEIYhqVWkdjiyEZK1xZDCrwxrYGGyA,2014
+useb/evaluating.py,sha256=RvtpUwrVQNjZgCa-H9rBDarCGb4YUM9VlG3ZOXls6Bs,3676
+useb/evaluators/__init__.py,sha256=CZIIdelQsAAHCsdqhKRv-2pAy-ZrlMW4J82bAjnqaog,172
+useb/evaluators/askubuntu.py,sha256=paE-ghFHasCLKr5zcKVIs51Rk4NKn-fILZcGFsuZtf8,5836
+useb/evaluators/base.py,sha256=10fglyDHHzhnT8_ABow5xsC-ExZiNKN-HL3rIF7gp2Q,1513
+useb/evaluators/cqadupstack.py,sha256=p7eiwyfOituDjveTCr8pmUcW7qXagqDQBMl-9mW5InA,6491
+useb/evaluators/scidocs.py,sha256=bYChk9W_FqGt1X8OrLtSEG-QNGHFv63UHOGGTtFrGpI,4320
+useb/evaluators/twitterpara.py,sha256=Rwn1geqvxYJ4f8-0848Y86rL8s07K0dYQbnHcspkHXg,4658
+useb/examples/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+useb/examples/eval_sbert_all.py,sha256=5GP2KOyH2kJ7P_BVrMOJFkqUkq27Ayuby9xlXqJQuDA,552
+useb/examples/eval_sbert_askubuntu.py,sha256=-FK5CE46SukhVuZ4msif0o-RzE8qfFj2G-ZwI4t219Y,447
+useb-0.0.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+useb-0.0.1.dist-info/METADATA,sha256=fp4ZtO0Hk5aZ6IY1onDP-RjSzac4Y7ZLpl6CksiT9-E,5238
+useb-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+useb-0.0.1.dist-info/top_level.txt,sha256=c2PrzDxZF6TQcRGHDazVrhvrRX46uhEFQeN5Gz7ze6s,5
+useb-0.0.1.dist-info/RECORD,,
