@@ -1,0 +1,13 @@
+polars-0.8.3.dist-info/METADATA,sha256=rZi-VvsKtHK-Go5kgcvxyieZtyNGrpleSyEdH9dzY3I,5507
+polars-0.8.3.dist-info/WHEEL,sha256=LsgJSWm_fQtJ1Cq5u5EXcmbI59EakivFPhzJDNb33NI,95
+polars/datatypes.py,sha256=RBPOFaB707dbgokT3MpX3ulpQNAxchcLw-_J4Tg5Vdg,3888
+polars/ffi.py,sha256=MhJWMMJYzi9SRjH6HxpnH1osvzNsAaa0nrUTgK9oSI4,875
+polars/frame.py,sha256=serNnGhHt4i0wTPhhWeu4Qy1X4PoQ4xSbvSKzKQcC1k,74490
+polars/functions.py,sha256=XjZ66wqffKxL2qAh8zbcuGpEccQ7Q5dAZfNqBVlFQX4,14168
+polars/lazy/__init__.py,sha256=CGyLopORuXCbsHdWtVL1pdgDziBojPwhHSDUpj_SXWg,64971
+polars/series.py,sha256=0IHVznCw67lNBbvV5J-p4YwO9-kTpLggDQBglFlkDIg,56810
+polars/utils.py,sha256=jcI47Rxr48CyWKwN3rw6Od2PNSGJl-YRSVGrYXjhzjs,1359
+polars/_html.py,sha256=_P3r3fcVR4IApy9A_UvGXPx-8OaDunJwok9tGdTiMOI,5391
+polars/__init__.py,sha256=bPFKApfA_z_mcO7m-SjlQROeanxsVUF1DAIb8Bko6oI,369
+polars/polars.pyd,sha256=Z33QiIHBeN-d0B-GUSihnV1JbbescaCk_R8PCJrW96I,37145600
+polars-0.8.3.dist-info/RECORD,,
