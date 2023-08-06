@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: vane2
+Version: 2.4.1
+Summary: UNKNOWN
+Home-page: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+License-File: LICENSE.md
+Requires-Dist: lxml (<5.0.0,>=4.0.0)
+Requires-Dist: termcolor (==1.1.0)
+Requires-Dist: hammertime-http[simhash-py] (<0.9,>=0.8)
+Requires-Dist: openwebvulndb-tools (<1.2,>=1.1.0)
+
+UNKNOWN
+
