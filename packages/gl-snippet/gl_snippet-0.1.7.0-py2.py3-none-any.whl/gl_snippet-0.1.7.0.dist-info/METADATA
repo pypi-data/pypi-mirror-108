@@ -1,0 +1,101 @@
+Metadata-Version: 2.1
+Name: gl-snippet
+Version: 0.1.7.0
+Summary: "Fetch snippet to local file"
+Home-page: https://gitlab.com/bredbeddle-open/gl-snippet
+Author: Curtis Forrester
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Framework :: Flake8
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=2.7
+License-File: LICENSE
+Requires-Dist: python-gitlab
+Requires-Dist: click
+
+Gitlab Snippet
+==============
+
+This tool is used to download a snippet from Gitlab to a local file.
+
+It is primarily intended for use within a Gitlab CI/CD pipeline, but may be used
+as a standalone tool elsewhere. When used in a pipeline the `--gl-url``, ``--proj_id``
+and ``token`` are already defined by Gitlab.
+
+Installation
+------------
+
+From Pypi:
+
+.. code-block:: bash
+
+    pip install gl-snippet
+
+Usage
+-----
+
+.. code-block::
+
+    Usage: gl-snippet [OPTIONS] SNIP_ID TARGET
+
+      Fetch a snippet contents from Gitlab.
+
+      This is used to fetch the contents of a snippet and save it to a file.
+      Note that the snippet must be a single-file snippet. Gitlab supports
+      snippets with multiple files (but their python-gitlab API doesn't really
+      handle multi-file snippets very well.)
+
+      The parameters --gl-url, --proj_id and --token may be specified directly
+      or as environment variables. These use the standard Gitlab CI/CD pipeline
+      variables.
+
+      A use-case for this is to store the contents for .pypirc or pip.conf in a
+      snippet to fetch for a Gitlab pipeline step.
+
+    Options:
+      --gl-url TEXT      URL to Gitlab server (CI_SERVER_URL)
+      --proj_id INTEGER  Project ID (CI_PROJECT_ID)
+      -t, --token TEXT   API access token (CI_JOB_TOKEN)
+      --help             Show this message and exit.
+
+Each snippet in Gitlab needs to be a single-file snippet (due to the limited way the
+`gitlab-python` snippet API works). A snipped may be a "global" or a project snippet. To
+access a "global" snippet from within a Gitlab pipeline supply ``--proj_id ""``
+
+Example from a ``.gitlab-ci.yml``:
+
+.. code-block:: yaml
+
+    before_script:
+      - pip install gl-snippet
+      - gl-snippet 25 ~/.pypirc
+
+Example from desktop:
+
+.. code-block:: bash
+
+    $ pip install gl-snippet
+    $ gl-snippet --gl-url https://gitlab.com --proj_id 529 --token <your_api_token> 25 ~/.pypirc
+
+Release Notes
+-------------
+
+0.1.6.0
+~~~~~~~
+
+* Build as "--universal"
+
+0.1.5.0
+~~~~~~~
+
+* Creates target directory if not already created
+* Default ``--proj_id`` to 0 for "global" snippets
+
+
