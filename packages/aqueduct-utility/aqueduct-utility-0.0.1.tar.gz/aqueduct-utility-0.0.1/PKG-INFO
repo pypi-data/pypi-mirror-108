@@ -1,0 +1,45 @@
+Metadata-Version: 2.1
+Name: aqueduct-utility
+Version: 0.0.1
+Summary: Automate Cloud Development Kit (CDK) bootstrapping into an AWS Organization using Single Sign-On (SSO) authentication.
+Home-page: https://github.com/4n6ir/aqueduct
+Author: John Lukach
+Author-email: abuse@lukach.net
+License: Apache-2.0
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# aqueduct
+
+```
+$ aqueduct --help
+usage: aqueduct [-h] [--addacct] [--addreg] [--addtag] [--bootstrap]
+                [--delacct] [--delreg] [--deltag] [--ssosetup]
+
+aqueduct v0.0.1
+
+optional arguments:
+  -h, --help   show this help message and exit
+  --addacct    Add Account
+  --addreg     Add Region
+  --addtag     Add Tag
+  --bootstrap  Bootstrap CDK
+  --delacct    Delete Account
+  --delreg     Delete Region
+  --deltag     Delete Tag
+  --ssosetup   SSO Setup
+```
+
+### Requirements
+
+##### AWS CLIv2 
+
+https://docs.aws.amazon.com/cli/latest/userguide/install-cliv2-linux.html
+
+##### YAWSSO
+
+https://github.com/victorskl/yawsso
+
+
