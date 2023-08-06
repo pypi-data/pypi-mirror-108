@@ -1,0 +1,12 @@
+CHANGELOG.rst
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+jsonmix/__init__.py
+jsonmix/validate.py
+jsonmix.egg-info/PKG-INFO
+jsonmix.egg-info/SOURCES.txt
+jsonmix.egg-info/dependency_links.txt
+jsonmix.egg-info/top_level.txt
