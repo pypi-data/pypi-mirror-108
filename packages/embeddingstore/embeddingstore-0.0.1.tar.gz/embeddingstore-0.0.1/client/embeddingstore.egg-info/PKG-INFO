@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: embeddingstore
+Version: 0.0.1
+Summary: Data infrastructure for machine learning embeddings.
+Home-page: https://github.com/featureform/embeddingstore
+Author: featureform
+Author-email: hello@featureform.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+Embedding Store OSS directory
+
+

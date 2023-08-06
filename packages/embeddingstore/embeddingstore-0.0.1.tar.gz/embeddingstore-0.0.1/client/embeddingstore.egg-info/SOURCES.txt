@@ -1,0 +1,8 @@
+LICENSE
+README
+pyproject.toml
+setup.py
+client/embeddingstore.egg-info/PKG-INFO
+client/embeddingstore.egg-info/SOURCES.txt
+client/embeddingstore.egg-info/dependency_links.txt
+client/embeddingstore.egg-info/top_level.txt
