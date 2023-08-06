@@ -1,0 +1,9 @@
+bronzebeard/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+bronzebeard/asm.py,sha256=yozn1aTUA_yx8gHuyuyLxZSbstjpedWEEXGxUEaXJI4,64099
+bronzebeard/dfu.py,sha256=N3-c4q5sFKoqlB8XODGlzXT-AjrahK_1_6s9_huusbg,10301
+bronzebeard/repl.py,sha256=PZDZlDQnqI52n7aoWJYokAVhy2AcprGjA829GH4TpZ0,1396
+bronzebeard-0.0.13.dist-info/LICENSE,sha256=dg6VE-tIGHzfaGLj3K1O-r1E3bv-emLUTYSSh2J7GJo,1070
+bronzebeard-0.0.13.dist-info/METADATA,sha256=9ArXrzeGVaF1GbDiYCS8zvBeBNwxOupGvxA1lI3JZqo,5932
+bronzebeard-0.0.13.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+bronzebeard-0.0.13.dist-info/top_level.txt,sha256=9-OUqF5CM0DtAyi61BQZm3u_ixHrtN3Z9HAimmcyefA,12
+bronzebeard-0.0.13.dist-info/RECORD,,
