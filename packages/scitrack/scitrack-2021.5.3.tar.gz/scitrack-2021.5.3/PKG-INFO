@@ -1,0 +1,7 @@
+Metadata-Version: 1.1
+Name: scitrack
+Version: 2021.5.3
+Summary: SciTrack provides basic logging capabilities to track scientific computations.
+Home-page: https://github.com/HuttleyLab/scitrack
+Author: Gavin Huttley
+Author-email: Gavin.Huttley@anu.edu.au
