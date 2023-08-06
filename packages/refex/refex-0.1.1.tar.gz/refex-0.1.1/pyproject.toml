@@ -1,0 +1,72 @@
+[tool.poetry]
+name = "refex"
+version = "0.1.1"
+description = "A syntactically-aware search and replace tool."
+authors = ["Devin Jeanpierre <jeanpierreda@gmail.com>"]
+
+license = "Apache-2.0"
+readme = "README.md"
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Operating System :: POSIX",
+    "Topic :: Software Development",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+[tool.poetry.scripts]
+refex = "refex.cli:main"
+
+[tool.poetry.dependencies]
+python = "^3.6"
+
+absl-py = "^0.9"
+asttokens = "^2"
+attrs = "^19.2"
+cached-property = "^1"
+colorama = "^0.4"
+six="*"
+
+# docs
+m2r = { version = "^0.2", optional = true }
+sphinx = { version = "^2.4", optional = true }
+
+[tool.poetry.dev-dependencies]
+# TODO: make absl a test-only dep
+pytest = "^6"
+# rxerr_debug
+pygments = "^2"
+
+[tool.poetry.extras]
+docs = ["m2r", "sphinx"]
+
+[tool.isort]
+profile = "google"
+# Upstream version within Google actually uses contextlib2 and mock for Python 2
+# compatibility, and this is transformed away by copybara.
+# Adding contextlib2 to the stdlib makes the sorting correct in the canonical
+# github version even when run on the upstream version pre-copybara. Adding
+# mock... doesn't help as much (sorts as "mock", not "unittest").
+# These can both go away starting in 2021.
+extra_standard_library = ["contextlib2", "mock"]
+
+# https://tox.readthedocs.io/
+[tool.tox]
+legacy_tox_ini = """
+
+[tox]
+isolated_build = True
+envlist = py38, py37, py36, pypy36
+
+[testenv]
+deps =
+    poetry
+commands =
+    poetry install -v
+    poetry run pytest
+"""
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
