@@ -1,0 +1,8 @@
+srvres/__init__.py,sha256=-3Bh7i_e7vTeIgRG5EsfOZzVLvX0OpA2YK_Txotw3Dk,40
+srvres/resolver.py,sha256=f4ORpWPIDCsurDPFZXfWv5_W_3_4F1uwYR0bgwvLBDU,1411
+srvres/service_ports.py,sha256=WA7lB6sQtp9elvGHe3hz2THeSbACkKBbwrXJiBRWjVs,1965
+srvres/utils.py,sha256=6MIfEq78vy392h9YECmLPOy9SXNtAsK3SfX61OSUQ4U,268
+srvres-1.0.0.dist-info/LICENSE,sha256=q5KTVk5_ID9UvA8dV9lADyl9PCLkZY3yLbE6i0Z6Neo,1134
+srvres-1.0.0.dist-info/WHEEL,sha256=Tf_JTHRUsYmRccQnQfn1tqmNatmXkNB0OFKM-B4YyuA,87
+srvres-1.0.0.dist-info/METADATA,sha256=_pTQu2LMjsDWn8Qhhd262Mt358G_X8cb9Zl0AhFF2F0,2769
+srvres-1.0.0.dist-info/RECORD,,
