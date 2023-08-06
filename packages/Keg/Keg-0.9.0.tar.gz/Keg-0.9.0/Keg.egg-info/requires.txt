@@ -1,0 +1,24 @@
+appdirs
+BlazeUtils
+blinker
+Click>=3.0
+Flask
+Flask-SQLAlchemy
+python-json-logger
+six
+sqlalchemy
+
+[i18n]
+morphi>=0.2.0
+
+[tests]
+flask-webtest
+flask-wtf
+pytest
+pytest-cov
+python-dotenv
+psycopg2-binary
+mock
+
+[tests:sys_platform == "win32"]
+sqlalchemy_pyodbc_mssql
