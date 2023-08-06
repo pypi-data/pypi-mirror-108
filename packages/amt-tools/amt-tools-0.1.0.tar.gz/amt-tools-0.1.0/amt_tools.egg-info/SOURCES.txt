@@ -1,0 +1,12 @@
+LICENSE.txt
+README.md
+setup.py
+amt_tools/__init__.py
+amt_tools/evaluate.py
+amt_tools/train.py
+amt_tools/transcribe.py
+amt_tools.egg-info/PKG-INFO
+amt_tools.egg-info/SOURCES.txt
+amt_tools.egg-info/dependency_links.txt
+amt_tools.egg-info/requires.txt
+amt_tools.egg-info/top_level.txt
