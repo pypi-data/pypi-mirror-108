@@ -1,0 +1,9 @@
+README.md
+pyproject.toml
+setup.py
+rule34_api.egg-info/PKG-INFO
+rule34_api.egg-info/SOURCES.txt
+rule34_api.egg-info/dependency_links.txt
+rule34_api.egg-info/not-zip-safe
+rule34_api.egg-info/requires.txt
+rule34_api.egg-info/top_level.txt
