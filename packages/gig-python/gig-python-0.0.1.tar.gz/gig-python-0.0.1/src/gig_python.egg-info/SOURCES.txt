@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/gig/__init__.py
+src/gig/gig.py
+src/gig/models.py
+src/gig_python.egg-info/PKG-INFO
+src/gig_python.egg-info/SOURCES.txt
+src/gig_python.egg-info/dependency_links.txt
+src/gig_python.egg-info/requires.txt
+src/gig_python.egg-info/top_level.txt
