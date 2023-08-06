@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/melty_streaming/__init__.py
+src/melty_streaming/api.py
+src/melty_streaming/proc.py
+src/melty_streaming.egg-info/PKG-INFO
+src/melty_streaming.egg-info/SOURCES.txt
+src/melty_streaming.egg-info/dependency_links.txt
+src/melty_streaming.egg-info/top_level.txt

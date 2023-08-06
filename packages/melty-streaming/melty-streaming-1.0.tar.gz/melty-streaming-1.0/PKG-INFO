@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: melty-streaming
+Version: 1.0
+Summary: A http server made for streaming Melty Blood
+Home-page: https://github.com/Kikasuru/melty_stream
+Author: Kikasuru
+Author-email: kikasurumail@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/Kikasuru/melty_stream/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: Microsoft :: Windows
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# melty_streaming
+A http server made for streaming Melty Blood
+
+## Dependencies
+
+ - [Python 3.6.x (Could be ran on a lower version, I haven't tested it yet.)](https://www.python.org/downloads/release/python-395/)
+ - [flask](https://pypi.org/project/flask/)
+ - [psutil](https://pypi.org/project/psutil/)
+## Installation
+Simply run `pip install melty-streaming`
+
+
