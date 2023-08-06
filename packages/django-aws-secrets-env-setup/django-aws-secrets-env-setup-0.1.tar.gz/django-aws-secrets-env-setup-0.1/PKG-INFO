@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: django-aws-secrets-env-setup
+Version: 0.1
+Summary: A helper function for setting environment variables from AWS secret manager
+Home-page: https://github.com/Lenders-Cooperative/django-aws-secrets-env-setup
+Author: Levi Anderson
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# django-aws-secrets-env-setup
+This is a helper function to set up environment variables from AWS secrets manager.
+The main function to use is `set_env_variables(secret_name, default_region_name)`.
+`secret_name` is the name of the secret to get from the manager.
+`default_region_name` is the region that should be used if `os.environ["SECRETS_REGION_NAME"]` is not set.
+
+
