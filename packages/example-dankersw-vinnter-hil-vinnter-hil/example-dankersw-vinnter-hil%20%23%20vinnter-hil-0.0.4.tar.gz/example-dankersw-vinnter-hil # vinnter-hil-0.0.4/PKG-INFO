@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: example-dankersw-vinnter-hil # vinnter-hil
+Version: 0.0.4
+Summary: a package to interact with the HIL platform
+Home-page: UNKNOWN
+Author: Wouter Dankers
+Author-email: wouter.dankers@vinnter.se
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+# Vinnter HIL
+
+Python package to interact with the hil hardware.
+
+## Usage 
+
+```
+pip3 install vinnter-hil
+```
+
+```python
+from vinnter_hil.hardware_interaction import HardwareControler
+
+serial_config = {'port': '/dev/ttyACM0', 'baudrate': 115200, 'term_seq': b'uart:~$ ', 'timeout': 1}
+gpio_config = {'host': '192.168.0.103', 'port': 8888}
+pinout = {'reset': 16, 'power': 17}
+hw_controler = HardwareControler(serial_config=serial_config, gpio_config=gpio_config, pinout=pinout)
+```
+
