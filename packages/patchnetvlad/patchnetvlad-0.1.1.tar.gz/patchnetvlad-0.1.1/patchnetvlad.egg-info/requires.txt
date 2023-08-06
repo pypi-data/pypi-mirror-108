@@ -1,0 +1,10 @@
+numpy
+torch
+torchvision
+tqdm
+scipy
+Pillow
+scikit-learn
+faiss
+natsort
+opencv-python
