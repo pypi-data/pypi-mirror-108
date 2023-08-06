@@ -1,0 +1,10 @@
+CHANGELOG.txt
+LICENSE.txt
+MANIFEST.in
+README.txt
+setup.py
+sgdatadog/__init__.py
+sgdatadog.egg-info/PKG-INFO
+sgdatadog.egg-info/SOURCES.txt
+sgdatadog.egg-info/dependency_links.txt
+sgdatadog.egg-info/top_level.txt
