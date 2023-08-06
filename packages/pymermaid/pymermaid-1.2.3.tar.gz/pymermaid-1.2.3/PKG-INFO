@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: pymermaid
+Version: 1.2.3
+Summary: a package in getting images output from mermaid markdown tags. Especially this package could be used in jupyter lab or notebook, cause it is lack of flowchart\gatt\seqeunses
+Home-page: https://gitee.com/longgenxing/jupyter_mermaid
+Author: Gavin Long
+Author-email: longgenxing@126.com
+License: MIT
+Project-URL: Documentation, https://gitee.com/longgenxing/jupyter_mermaid
+Project-URL: Funding, https://gitee.com/longgenxing/jupyter_mermaid
+Project-URL: Source, https://gitee.com/longgenxing/jupyter_mermaid
+Project-URL: Tracker, https://gitee.com/longgenxing/jupyter_mermaid
+Keywords: mermaid jupyter lab notebook
+Platform: UNKNOWN
+Requires-Python: >=3
+
+UNKNOWN
+
