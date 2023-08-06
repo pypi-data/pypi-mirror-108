@@ -1,0 +1,2 @@
+autoreduce_qp==22.0.0.dev0
+GitPython==3.1.14
