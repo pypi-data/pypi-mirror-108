@@ -1,0 +1,9 @@
+README.md
+setup.py
+plotx/__init__.py
+plotx/plotx.py
+plotx.egg-info/PKG-INFO
+plotx.egg-info/SOURCES.txt
+plotx.egg-info/dependency_links.txt
+plotx.egg-info/requires.txt
+plotx.egg-info/top_level.txt

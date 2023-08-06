@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: plotx
+Version: 0.0.1
+Summary: Shortcuts for matplotlib
+Home-page: UNKNOWN
+Author: DaveAsator (Eugene Bolshakov)
+Author-email: <omnispark@gmail.com>
+License: UNKNOWN
+Description: 
+        # Python-PlotX
+        extension for matplotlib library
+        
+Keywords: plot
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers, Mathematicians, BI
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
