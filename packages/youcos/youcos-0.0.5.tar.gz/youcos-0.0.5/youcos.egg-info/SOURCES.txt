@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+youcos/__init__.py
+youcos/scrape_youtube.py
+youcos/test.py
+youcos/yt_requests.py
+youcos.egg-info/PKG-INFO
+youcos.egg-info/SOURCES.txt
+youcos.egg-info/dependency_links.txt
+youcos.egg-info/requires.txt
+youcos.egg-info/top_level.txt
