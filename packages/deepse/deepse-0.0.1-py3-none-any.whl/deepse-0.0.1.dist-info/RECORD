@@ -1,0 +1,16 @@
+deepse/__init__.py,sha256=x6--sPsvtw5hvyHZkDG2vSVXB2n9oZHdqv8lAeGhAiU,122
+deepse/bert_embedding.py,sha256=XYzG2YxyPqkmghHiuk4GxIZudT27ytx423BdNDzLB-M,5994
+deepse/simcse.py,sha256=AGRVamgsLt382itGQwV-WjimYfjwnbUc_y28zouZoz0,4785
+deepse/simcse_dataset.py,sha256=h6zyfcB0pF4UJ44WcWYf2mpYvp_3VIAGR7pdsjUJjo8,2762
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/bert_embedding_test.py,sha256=BXec7_p0frQRbCpojKImYURwGvA-7wxbbBpNiNsN6bo,3473
+tests/simcse_client_test.py,sha256=zg8e2hwgzV378OLUi20Sls7OP5sDVUt_DK8i3rIpNCw,412
+tests/simcse_dataset_test.py,sha256=nAB4BU0qNmK3Kd0AhEnCJCB6Tik0jEiK3Io7bI_a9v8,708
+tests/simcse_test.py,sha256=KxmJ-ziaI4R3sspyMgjKW-lbZB3-EBLCHlqy8yWGqxU,1198
+tools/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tools/simcse_client.py,sha256=MxOpL8aW0_FkqumDNB-7KZEqf2EYi-2F4fJwFMMCskM,774
+deepse-0.0.1.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+deepse-0.0.1.dist-info/METADATA,sha256=0_i76EXrvC-2dbyFD97g0_orC2nf4dXBMVIUjlqFQN0,1505
+deepse-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+deepse-0.0.1.dist-info/top_level.txt,sha256=sSayAZ1WD64es9Ek8PygU2ZNSM0HKi4YLjV8Xi3jcOQ,19
+deepse-0.0.1.dist-info/RECORD,,

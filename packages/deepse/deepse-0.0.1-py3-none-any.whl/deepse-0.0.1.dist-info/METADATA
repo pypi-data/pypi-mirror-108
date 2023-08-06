@@ -1,0 +1,54 @@
+Metadata-Version: 2.1
+Name: deepse
+Version: 0.0.1
+Summary: **DeepSE**: **Sentence Embeddings** based on Deep Nerual Networks, designed for **PRODUCTION** enviroment!
+Home-page: https://github.com/luozhouyang/deepse
+Author: ZhouYang Luo
+Author-email: zhouyang.luo@gmail.com
+License: Apache Software License
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Description-Content-Type: text/markdown
+Requires-Dist: transformers-keras (>=0.2.6)
+Requires-Dist: tokenizers
+Provides-Extra: tf
+Requires-Dist: tensorflow (>=2.0.1) ; extra == 'tf'
+Provides-Extra: tf-gpu
+Requires-Dist: tensorflow-gpu (>=2.0.1) ; extra == 'tf-gpu'
+
+# DeepSE
+**DeepSE**: **Sentence Embeddings** based on Deep Nerual Networks, designed for **PRODUCTION** enviroment!
+
+## Installation
+
+Clone git repo:
+
+```bash
+git clone https://github.com/luozhouyang/deepse.git
+```
+
+or install from pypi:
+
+```bash
+pip install -U deepse
+```
+
+## SimCSE
+
+Train a **Unsup SimCSE** model in one line:
+```bash
+PRETRAINED_MODEL_PATH=/path/to/your/pretrained/bert/dir python run_simcse.py
+```
+
+> You can modify the parameters in `run_simcse.py` as you need.
+
+
+
+
