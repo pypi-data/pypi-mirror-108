@@ -1,0 +1,4 @@
+m9s-trytond<5.3,>=5.2
+python-sql
+python-stdnum
+trytond_company<5.3,>=5.2
