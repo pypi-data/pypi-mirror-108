@@ -1,0 +1,9 @@
+pulumi_miniflux/__init__.py,sha256=amcQmlx9MYqo0Gf3UW-1pZL1qNfNmb1yI6Xq6Sph5s0,659
+pulumi_miniflux/_utilities.py,sha256=tBRqsrFT7BOVe1VeXyWIpp6aA7b3VFPzEVFdhCOSEwk,6694
+pulumi_miniflux/miniflux_service.py,sha256=bKlfl9Oq33cPdARaiu4wYFDOGs0sWs63WzaC5rSzTAw,8484
+pulumi_miniflux/provider.py,sha256=fPJxxKci4Vdwdu9VSifX-Why35WPfAeG2kn_FgLvurQ,2787
+pulumi_miniflux/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pulumi_miniflux-0.0.16.dist-info/METADATA,sha256=LQ62dvU2jXjf4LNMWAANKcxp4KtDviEfxtPDW62zgSk,929
+pulumi_miniflux-0.0.16.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pulumi_miniflux-0.0.16.dist-info/top_level.txt,sha256=bTYcsnT7i2NMskj0wj_2nU6SIt378IXolYpgvtdRUSA,16
+pulumi_miniflux-0.0.16.dist-info/RECORD,,
