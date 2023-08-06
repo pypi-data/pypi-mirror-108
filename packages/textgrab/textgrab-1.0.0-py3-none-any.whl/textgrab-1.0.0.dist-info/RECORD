@@ -1,0 +1,11 @@
+textgrab/__init__.py,sha256=Jsl3RwUBwjqq_aHydgzzqXK09Ig6y3QyHXjgoi6AO9k,777
+textgrab/crop_mask_item.py,sha256=iY2zQ6pJyykk_7jYLV9G-HYLH8jaVLsD9OtWDihAIkM,6383
+textgrab/mainwindow.py,sha256=2dAZX8_S_dGoHeSYaujsSVqj2aT9CLK6D4U0EC2Vo_Q,6150
+textgrab/mainwindow.ui,sha256=zjG_ZcUh2bemUJScGMdXM4R5bfCx5gBSOB9o15ULdNY,2607
+textgrab/run.py,sha256=iTFy2FBqThacbG1xEvnWq5J6oV3CbXd7uf2Y-gTmFgo,1538
+textgrab/ui_mainwindow.py,sha256=kgVgnZ-Z2RgUBo9sJJgpvO5YCjoZrlXQwCCRR_zo7Uw,4157
+textgrab-1.0.0.dist-info/entry_points.txt,sha256=qdo7a7JmBDtU5eq41dRb8kF9rYP6UwxymuiDfTxncOw,46
+textgrab-1.0.0.dist-info/LICENSE,sha256=QwcOLU5TJoTeUhuIXzhdCEEDDvorGiC6-3YTOl4TecE,11356
+textgrab-1.0.0.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+textgrab-1.0.0.dist-info/METADATA,sha256=0GzoyZvuD4-k_41B-rccviA3UdV1k-PYMqyP8t_9fcU,492
+textgrab-1.0.0.dist-info/RECORD,,

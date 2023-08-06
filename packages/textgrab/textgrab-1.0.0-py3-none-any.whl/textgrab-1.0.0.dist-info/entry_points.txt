@@ -1,0 +1,3 @@
+[console_scripts]
+textgrab=textgrab.run:main
+
