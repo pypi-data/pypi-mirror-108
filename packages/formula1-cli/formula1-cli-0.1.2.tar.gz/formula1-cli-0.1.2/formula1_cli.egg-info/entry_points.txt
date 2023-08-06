@@ -1,0 +1,3 @@
+[console_scripts]
+f1 = formula1.f1:cli
+
