@@ -1,0 +1,15 @@
+LICENSE.txt
+README.md
+setup.py
+smsru_sender/__init__.py
+smsru_sender/dotted_dict.py
+smsru_sender/exceptions.py
+smsru_sender/request_response.py
+smsru_sender/smsru_sender.py
+smsru_sender/statuses.py
+smsru_sender.egg-info/PKG-INFO
+smsru_sender.egg-info/SOURCES.txt
+smsru_sender.egg-info/dependency_links.txt
+smsru_sender.egg-info/not-zip-safe
+smsru_sender.egg-info/requires.txt
+smsru_sender.egg-info/top_level.txt

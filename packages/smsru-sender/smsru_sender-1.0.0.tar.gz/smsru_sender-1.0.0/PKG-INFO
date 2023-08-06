@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: smsru_sender
+Version: 1.0.0
+Summary: SMS.RU library
+Home-page: https://github.com/egorgvo/smsru_sender.git
+Author: Egor Gvo
+Author-email: work.egvo@ya.ru
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+# SMS.RU python library
+
+## Usage example
+
+```python
+from smsru_sender import SMSruSender
+
+phone = '+79508887766'
+response = SMSruSender().send(phone, f"Your confirmation code is 1234")
+if not response.success:
+    print(response.status_message)
+```
+
+
