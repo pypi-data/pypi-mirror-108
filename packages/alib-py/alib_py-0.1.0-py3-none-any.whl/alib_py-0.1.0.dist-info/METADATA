@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: alib-py
+Version: 0.1.0
+Summary: General purpose Python libraries
+Home-page: https://github.com/codemicro/alib-py
+Author: Thomas Pain
+Author-email: tom@tdpain.net
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/codemicro/alib-py/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# alib-py
+
+![License](https://img.shields.io/github/license/codemicro/alib-go) ![Lines of code](https://img.shields.io/tokei/lines/github/codemicro/alib-py)
+
+## [`alib.cache`](http://github.com/codemicro/alib-py/tree/master/alib/cache)
+
+Package cache contains a Python clone of [go-cache](https://github.com/patrickmn/go-cache)
+
+
