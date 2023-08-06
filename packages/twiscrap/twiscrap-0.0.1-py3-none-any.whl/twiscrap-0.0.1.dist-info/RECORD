@@ -1,0 +1,8 @@
+twiscrap/__init__.py,sha256=WHizC8UzElmTH3641zjnMTLUHmP2rliWLTalgHU6vMA,75
+twiscrap/items.py,sha256=fbrYAkBeYDyQeVCLrz8_27astiggqx0GEOkNVf5-nPE,154
+twiscrap/settings.py,sha256=p3_b9N5zD196W-V5goAFQ_JSQfSflOB_v7jL2dGfKDc,497
+twiscrap/spiders/__init__.py,sha256=ULwecZkx3_NTphkz7y_qiazBeUoHFnCCWnKSjoDCZj0,161
+twiscrap/spiders/crawler.py,sha256=W3GZXj9JanQlJLfLL873VfYUl33KfW22jA1Xkx5OxFs,4899
+twiscrap-0.0.1.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+twiscrap-0.0.1.dist-info/METADATA,sha256=FezDaSzLUy9ihsFNF8XUHEHj_W3oN9xfm1t6216HVLI,389
+twiscrap-0.0.1.dist-info/RECORD,,
