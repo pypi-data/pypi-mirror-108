@@ -1,0 +1,1 @@
+from .fuhModules import File, dict_softwareversion, readheader, addTwo
