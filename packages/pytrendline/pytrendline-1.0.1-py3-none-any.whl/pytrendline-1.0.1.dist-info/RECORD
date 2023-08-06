@@ -1,0 +1,13 @@
+fixtures/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fixtures/example.csv,sha256=ZoItJ5gPmpf07VjtnLNjhTpy4RukNAy5vbFfFIZAB6c,1597
+fixtures/testcases.py,sha256=X7ULbjC4HSOa-3WN1xgQuWloHua6a3YD3Xjbe_9FJDQ,8196
+pytrendline/__init__.py,sha256=tST96LnytZMFG8HFf_gmVItGxNDfBLcZblfVBplTvPQ,194
+pytrendline/detect.py,sha256=pCPvs8hbART7iS6dao2eF10yBzRyjf6QjFlrbk5ttRk,21757
+pytrendline/plot.py,sha256=PP4cDWJuVlVjTOniiFTYXE04VBBGPsXpOja4jDJC_rA,10782
+pytrendline/structs.py,sha256=KAecA85xewT3XsBgDV9laVHKGD4lmlMR1XBKDFcfmdQ,3532
+pytrendline/util.py,sha256=cJBh1FHiLZi_x9yA2GEfV88TY9Akg-Bz1bdtIyWD56U,844
+pytrendline-1.0.1.dist-info/LICENSE,sha256=ASlrd7MAJgSxFxqMtDq7z5mqgV3V3N6VjzOKc6MWQpo,1070
+pytrendline-1.0.1.dist-info/METADATA,sha256=4GzQPebzLithJzRZH0Mr-40abFWSW0zT9ETswZHmR0g,7533
+pytrendline-1.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+pytrendline-1.0.1.dist-info/top_level.txt,sha256=gdlicK26ua9nOY3M6Ma5KMhXru2BgAGP_MjJaE1gISI,21
+pytrendline-1.0.1.dist-info/RECORD,,
