@@ -1,0 +1,13 @@
+License
+README.md
+pyproject.toml
+setup.cfg
+PNU.egg-info/PKG-INFO
+PNU.egg-info/SOURCES.txt
+PNU.egg-info/dependency_links.txt
+PNU.egg-info/requires.txt
+PNU.egg-info/top_level.txt
+tests/basename.xml
+tests/dirname.xml
+tests/echo.xml
+tests/yes.xml
