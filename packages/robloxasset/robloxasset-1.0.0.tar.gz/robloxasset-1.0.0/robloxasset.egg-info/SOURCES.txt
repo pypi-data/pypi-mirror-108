@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+Roasset/__init__.py
+Roasset/roasset.py
+robloxasset.egg-info/PKG-INFO
+robloxasset.egg-info/SOURCES.txt
+robloxasset.egg-info/dependency_links.txt
+robloxasset.egg-info/requires.txt
+robloxasset.egg-info/top_level.txt
