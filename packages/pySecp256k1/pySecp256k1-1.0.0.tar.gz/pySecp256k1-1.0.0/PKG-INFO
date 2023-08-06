@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: pySecp256k1
+Version: 1.0.0
+Summary: Pure python implementation for bitcoin curve
+Home-page: https://github.com/Moustikitos/elliptic-curve
+Author: Toons
+Author-email: moustikitos@gmail.com
+Maintainer: Toons
+Maintainer-email: moustikitos@gmail.com
+License: Copyright 2021, MIT licence
+Download-URL: https://github.com/Moustikitos/elliptic-curve/archive/master.zip
+Description: # elliptic-curve
+        Pure python implementation for bitcoin curve
+        
+Keywords: elliptic,curve,bitcoin
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
