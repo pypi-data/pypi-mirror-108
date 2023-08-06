@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+gon_pytorch/__init__.py
+gon_pytorch/modules.py
+gon_pytorch/utils.py
+gon_pytorch.egg-info/PKG-INFO
+gon_pytorch.egg-info/SOURCES.txt
+gon_pytorch.egg-info/dependency_links.txt
+gon_pytorch.egg-info/requires.txt
+gon_pytorch.egg-info/top_level.txt
