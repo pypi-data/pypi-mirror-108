@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: scraper_twnty
+Version: 0.0.2
+Summary: Data scraping service
+Home-page: UNKNOWN
+Author: Kristina Kurhanska
+Author-email: kurganska@twnty.de
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.8.0
