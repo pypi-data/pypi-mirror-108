@@ -1,0 +1,21 @@
+Metadata-Version: 2.0
+Name: cli-proxy-openstack
+Version: 0.1.1
+Summary: CLI for Proxy Service integrated with OpenStack
+Home-page: https://github.com/LamNguy/cli_pat
+Author: Nguyen Duc Lam
+Author-email: lamchipabc@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=2.7
+Requires-Dist: configparser
+Requires-Dist: openstacksdk (==0.36.5)
+Requires-Dist: pbr (>=2.0.0)
+Requires-Dist: pick
+Requires-Dist: prettytable
+
+# cli pat for administrator - graduation thesis
+
+# based on openstack version to install openstacksdk, go to /run/install.sh and edit compatible repository.
+
+
