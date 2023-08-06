@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+ProfanityDetector/__init__.py
+ProfanityDetector/detector.py
+ProfanityDetector/helpers.py
+ProfanityDetector.egg-info/PKG-INFO
+ProfanityDetector.egg-info/SOURCES.txt
+ProfanityDetector.egg-info/dependency_links.txt
+ProfanityDetector.egg-info/requires.txt
+ProfanityDetector.egg-info/top_level.txt
