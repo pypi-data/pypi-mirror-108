@@ -1,0 +1,4 @@
+include VERSION
+include LICENSE
+include PYPIREADME.md
+include CHANGES.md
