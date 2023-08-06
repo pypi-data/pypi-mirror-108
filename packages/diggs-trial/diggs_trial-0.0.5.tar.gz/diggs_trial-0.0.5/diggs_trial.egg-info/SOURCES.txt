@@ -1,0 +1,17 @@
+AUTHORS.rst
+LICENSE
+MANIFEST.in
+README.md
+requirements.txt
+setup.cfg
+setup.py
+diggs_trial/__init__.py
+diggs_trial/cli.py
+diggs_trial/diggs_trial.py
+diggs_trial.egg-info/PKG-INFO
+diggs_trial.egg-info/SOURCES.txt
+diggs_trial.egg-info/dependency_links.txt
+diggs_trial.egg-info/entry_points.txt
+diggs_trial.egg-info/not-zip-safe
+diggs_trial.egg-info/requires.txt
+diggs_trial.egg-info/top_level.txt

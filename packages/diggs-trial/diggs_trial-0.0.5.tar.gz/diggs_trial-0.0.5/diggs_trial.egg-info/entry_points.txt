@@ -1,0 +1,3 @@
+[console_scripts]
+diggs_trial = diggs_trial.cli:main
+
