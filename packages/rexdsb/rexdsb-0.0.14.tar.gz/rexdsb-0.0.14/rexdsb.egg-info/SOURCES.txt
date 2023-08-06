@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+rexdsb/__init__.py
+rexdsb.egg-info/PKG-INFO
+rexdsb.egg-info/SOURCES.txt
+rexdsb.egg-info/dependency_links.txt
+rexdsb.egg-info/top_level.txt
