@@ -1,0 +1,198 @@
+#!/usr/bin/env python3
+
+from python_terraform import *
+import requests
+import json
+import sys
+import argparse
+
+
+def post_slack(state, workspace, stack, _data, plan_output=None, color="#27d200",
+               webhook=None, pipeline_url=None, job_url=None, limit=4000,
+               author=None):
+    if state == "plan":
+        data = {
+            'text': f"Terraform {state} for stack *{stack}* ({workspace})",
+            'username': 'Terraform',
+            'icon_emoji': ':robot_face:',
+            "attachments": [
+                {
+                    "color": color,
+                    "title": f"{plan_output} - <{pipeline_url}|gitlab pipeline>",
+                    "text": f"```{_data[:limit]}``` view entire log <{job_url}|here>"
+                }
+            ]
+        }
+    else:
+        data = {
+            'text': f"Terraform {state} for stack *{stack}* ({workspace})",
+            'username': 'Terraform',
+            'icon_emoji': ':robot_face:',
+            "attachments": [
+                {
+                    "color": color,
+                    "title": f"{plan_output} - <{pipeline_url}|gitlab pipeline>",
+                    "text": f"view entire log <{job_url}|here>"
+                }
+            ]
+        }
+
+    requests.post(webhook, data=json.dumps(
+        data), headers={'Content-Type': 'application/json'})
+
+
+def parse_plan(data):
+    strip1 = data.split(': ')[-1]
+    strip2 = strip1.split(", ")
+    color = "#27d200"  # green
+    try:
+        for update in strip2:
+            if int(update.split(" ")[0]) > 0:
+                if 'add' in update.split(" ")[-1]:
+                    color = "#27d200"  # green
+                elif 'change' in update.split(" ")[-1]:
+                    color = "#e0cf24"  # yellow
+                elif 'destroy' in update.split(" ")[-1]:
+                    color = "#ec0000"  # red
+    except:
+        pass
+    return color
+
+
+def set_tf(workspace_name):
+    tf = Terraform(terraform_bin_path="/usr/local/bin/terraform")
+    tf.version()
+    tf.init()
+    try:
+        tf.create_workspace(workspace_name)
+        tf.set_workspace(workspace_name)
+    except:
+        tf.set_workspace(workspace_name)
+    return tf
+
+
+def tf_plan(tf, workspace_name, stack="", webhook=None, tfvar=False,
+            pipeline_url=None, job_url=None, limit=None, author=None):
+    if not tfvar:
+        return_code, stdout, stderr = tf.plan(
+            out=f"{workspace_name}.tfplan")
+    else:
+        return_code, stdout, stderr = tf.plan(
+            var_file=f"{workspace_name}.tfvars",
+            out=f"{workspace_name}.tfplan")
+
+    if return_code == 2:
+        #print("output - a change is required")
+        print(stdout)
+        data_list = stdout.strip().split('\n')
+        for line in data_list:
+            if line.startswith("Plan: "):
+                plan_out = line
+        color = parse_plan(plan_out)
+        if webhook is not None:
+            post_slack("plan", workspace_name, stack, stdout, plan_out,
+                       color, webhook, pipeline_url, job_url, limit, author)
+    elif return_code == 1:
+        print("ERROR:\n=======\n")
+        print(stderr)
+        sys.exit(1)
+    elif return_code == 0:
+        print("nothing changed, stop executing")
+        sys.exit(0)
+    else:
+        print("something else ...")
+
+
+def tf_apply(tf, workspace_name, stack="", skip_plan=True, webhook=None,
+             tfplan=False, pipeline_url=None, job_url=None, limit=None,
+             author=None):
+    if not tfplan:
+        return_code_apply, stdout_apply, stderr_apply = tf.apply(
+            var_file=f"{workspace_name}.tfvars",
+            skip_plan=skip_plan)
+    else:
+        return_code_apply, stdout_apply, stderr_apply = tf.apply(
+            f"{workspace_name}.tfplan",
+            var=None,
+            skip_plan=skip_plan)
+
+    if return_code_apply == 0:
+        print(stdout_apply)
+        data_list = stdout_apply.strip().split('\n')
+        for line in data_list:
+            if line.startswith("Apply complete! "):
+                plan_out = line
+        color = parse_plan(plan_out)
+        if webhook is not None:
+            post_slack("apply", workspace_name, stack, stdout_apply, plan_out,
+                       color, webhook, pipeline_url, job_url, limit, author)
+    else:
+        print("ERROR:\n=======\n")
+        print(stderr_apply)
+        sys.exit(1)
+
+    return return_code_apply, stdout_apply, stderr_apply
+
+
+####
+
+
+def main(argv=[]):
+    # specify command line options
+    parser = argparse.ArgumentParser(
+        description='terraform runner')
+    parser.add_argument("-w", "--workspace", dest="workspace",
+                        help="terraform workspace - default: 'test'", required=False, default="test")
+    parser.add_argument("--webhook", dest="webhook",
+                        help="slack webhook ", required=False)
+    parser.add_argument("-s", "--stack", dest="stack", help="terraform stack to deploy",
+                        required=False, default="gitlab")
+    parser.add_argument("-p", "--plan", dest="plan",
+                        help="terraform plan", action="store_true")
+    parser.add_argument("-a", "--apply", dest="apply",
+                        help="terraform apply", action="store_true")
+    parser.add_argument("--tfvar", dest="tfvar",
+                        help="use tfvars file - $WORKSPACE.tfvars", action="store_true")
+    parser.add_argument("--tfplan", dest="tfplan",
+                        help="generates a tfplan file in plan to use in apply", action="store_true")
+    parser.add_argument("--pipeline-url", dest="pipeline_url", help="gitlab-ci var CI_PIPELINE_URL",
+                        required=False, default=None)
+    parser.add_argument("--job-url", dest="job_url", help="gitlab-ci var CI_JOB_URL",
+                        required=False, default=None)
+    parser.add_argument("--limit", dest="limit", help="Character limit on output in slack message",
+                        required=False, default=4000)
+    parser.add_argument("--author", dest="author", help="author name of last commit",
+                        required=False, default=None)
+
+    args = parser.parse_args()
+
+    # terraform init and set workspace
+    tf = set_tf(workspace_name=args.workspace)
+
+    # plan
+    if args.plan:
+        tf_plan(tf=tf,
+                workspace_name=args.workspace,
+                stack=args.stack,
+                webhook=args.webhook,
+                tfvar=args.tfvar,
+                pipeline_url=args.pipeline_url,
+                job_url=args.job_url,
+                limit=args.limit,
+                author=args.author)
+
+    # apply
+    if args.apply:
+        tf_apply(tf=tf,
+                 workspace_name=args.workspace,
+                 stack=args.stack,
+                 webhook=args.webhook,
+                 tfplan=args.tfplan,
+                 pipeline_url=args.pipeline_url,
+                 job_url=args.job_url,
+                 limit=args.limit,
+                 author=args.author)
+
+
+if __name__ == '__main__':
+    main()

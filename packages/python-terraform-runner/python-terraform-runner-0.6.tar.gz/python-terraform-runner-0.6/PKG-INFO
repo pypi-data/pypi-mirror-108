@@ -1,0 +1,26 @@
+Metadata-Version: 1.1
+Name: python-terraform-runner
+Version: 0.6
+Summary: Script to run terraform in gitlab CI and post notifications to slack (via a webhook)
+Home-page: https://github.com/deknijf/python-terraform-runner
+Author: Bert De Knijf
+Author-email: bert.deknijf@gmail.com
+License: Apache Software License
+Description: UNKNOWN
+Keywords: python,terraform,slack,gitlab
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Operating System :: OS Independent
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Unix
