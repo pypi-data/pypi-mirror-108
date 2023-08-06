@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: CTFscan
+Version: 1.3.3
+Summary: web dir scanner
+Home-page: https://github.com/p7e4/CTFscan
+Author: p7e4
+Author-email: p7e4@qq.com
+License: Apache 2.0
+Description: # CTFscan
+        web dir scanner
+        
+        
+        ## install
+        
+        `pip install ctfscan`  
+        
+        
+        ## use
+        
+        `ctfscan http://localhost`
+        
+        
+        ## exclude
+        
+        `ctfscan http://localhost -e 403 -e "404 page"`
+        
+        
+        
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Information Technology
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
