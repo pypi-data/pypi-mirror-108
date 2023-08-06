@@ -1,0 +1,2 @@
+recursive-include optitrack *.dll
+recursive-include optitrack *.pyd
