@@ -1,0 +1,10 @@
+[project]
+name="PsychonaughtCrawler"
+
+[build-system]
+requires = [
+	"setuptools>=42",
+	"bs4",
+	"requests"
+]
+build-backend = 'setuptools.build_meta'
