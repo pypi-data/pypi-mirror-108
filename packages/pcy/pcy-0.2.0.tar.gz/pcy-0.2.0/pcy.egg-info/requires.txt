@@ -1,0 +1,5 @@
+py-progress
+
+[tests]
+black
+flake8

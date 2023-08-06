@@ -1,0 +1,14 @@
+README.md
+pyproject.toml
+setup.py
+pcy/__init__.py
+pcy.egg-info/PKG-INFO
+pcy.egg-info/SOURCES.txt
+pcy.egg-info/dependency_links.txt
+pcy.egg-info/requires.txt
+pcy.egg-info/top_level.txt
+pcy/rule_based/__init__.py
+pcy/rule_based/dictionary/__init__.py
+pcy/rule_based/dictionary/_node.py
+pcy/rule_based/dictionary/autocomplete.py
+pcy/rule_based/dictionary/dictionary_generator.py
