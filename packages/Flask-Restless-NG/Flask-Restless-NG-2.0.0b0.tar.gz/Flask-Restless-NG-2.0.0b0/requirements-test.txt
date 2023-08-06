@@ -1,0 +1,9 @@
+-r requirements.txt
+savalidation
+
+# For testing PostgreSQL specific operations...
+testing.postgresql
+
+# linting and formatting
+flake8
+isort
