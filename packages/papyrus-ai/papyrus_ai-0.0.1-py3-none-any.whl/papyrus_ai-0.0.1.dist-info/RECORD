@@ -1,0 +1,12 @@
+papyrus/__init__.py,sha256=TsRCsm-EovY4egG0if9VT02mpatIE2mSeQ75Ce7-3Cg,35
+papyrus/query.py,sha256=7Fa2IJFmVab72nVgc6YImnn9zOQQkhg8pIdCdJGxBZI,910
+papyrus/analysis/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+papyrus/analysis/analysis.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+papyrus/supplementaries/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+papyrus/supplementaries/handlers.py,sha256=7bhcZIMsjvhByCmWV-VKBr6s4mYI3ZM7sq1MAnHOXPs,21729
+papyrus/supplementaries/main.py,sha256=hAv2LdZLriee1I-4y9qDVgTH0jETZ0cW2Ly3PI4KHs0,1554
+papyrus_ai-0.0.1.dist-info/LICENSE,sha256=0UxLFJ-Fpcedt6zVLNlrCc53q1hHQ79qtUWrCNhMpYg,1050
+papyrus_ai-0.0.1.dist-info/METADATA,sha256=fi0fyVFnwgrkFwYrlioYeLWNKgT-YufIDQSQHleAkoE,8867
+papyrus_ai-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+papyrus_ai-0.0.1.dist-info/top_level.txt,sha256=iRJzE9NKBlunz74DvJdi9qm1L8S-TgaLFWAZ84lmO6Y,8
+papyrus_ai-0.0.1.dist-info/RECORD,,
