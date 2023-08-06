@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: pydlc
+Version: 0.2
+Summary: Python implementation of the Density Line Chart (Moritz & Fisher, 2018) to visualize large collections of time series.
+Home-page: https://github.com/clberube/pydlc
+Author: Charles L. Bérubé
+Author-email: charles.berube@polymtl.ca
+License: MIT
+Download-URL: https://github.com/clberube/pydlc/archive/refs/tags/v0.2.tar.gz
+Description: UNKNOWN
+Keywords: data visualization,density,time series
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
