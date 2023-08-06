@@ -1,0 +1,9 @@
+packagecake/__init__.py,sha256=DNBjmV-zCpV7EKQ1cHw4sK2d4q5Yt30mjQRX815b1dM,132
+packagecake/__main__.py,sha256=P4MyLinO8mLXQ0ADAKl-y6geKp1xDIbx8-iW1NH9cD4,903
+packagecake/bakery.py,sha256=B8Zkp1V3amawrpG2NS6kj3k39X6ZA45Qzj5TC9SYcGQ,1404
+packagecake/pypi_cake_stats.py,sha256=ZOLhGF-YElvbx8uHlpdHmD4fAF1spHHSVuKHui1Uvfw,1768
+packagecake-1.0.2.dist-info/LICENSE,sha256=t_3_vaI9t1E1gwrhVct1UgGqZZjUpVmPEeoY9ziJNKI,1070
+packagecake-1.0.2.dist-info/METADATA,sha256=j0FZnpzEYDoKso8gBDOn07dhxGpm5QVBF_qCInrZ3DI,2032
+packagecake-1.0.2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+packagecake-1.0.2.dist-info/top_level.txt,sha256=VMJ1T4-qSjYazEm-qGM0skfLUQNnNkiOGljgZ0aHGbM,12
+packagecake-1.0.2.dist-info/RECORD,,
