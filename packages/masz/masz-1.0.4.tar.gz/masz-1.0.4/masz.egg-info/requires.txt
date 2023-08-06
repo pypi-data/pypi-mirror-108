@@ -1,0 +1,4 @@
+requests
+typing
+python-dateutil
+rich
