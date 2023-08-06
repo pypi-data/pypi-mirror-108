@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: asciiplot
+Version: 0.1.1
+Summary: Platform-agnostic, highly customizable sequence plotting in terminal for GUIs
+Home-page: https://github.com/w2sv/asciiplot
+Author: w2sv
+Author-email: zangenbergjanek@googlemail.com
+License: MIT
+Keywords: plotting,terminal,console,ascii,gui,data,visualization,statistics
+Platform: Linux
+Platform: Windows
+Platform: MacOS
+Requires-Python: >=3.6
+License-File: LICENSE.txt
+Requires-Dist: colored (==1.4.2)
+Requires-Dist: more-itertools
+Requires-Dist: dataclasses
+
+UNKNOWN
+
