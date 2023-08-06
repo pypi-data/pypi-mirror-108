@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: contest-cli
+Version: 0.0.2
+Summary: Programming contest information for those who live in the terminal
+Home-page: http://packages.python.org/contest-cli
+Author: Liam Scalzulli
+Author-email: liamscalzulli@gmail.com
+License: BSD
+Project-URL: Source Code, https://github.com/terror/contest-cli
+Description: ## <p align='center'>contest-cli</p>
+        
+        <p align='center'>
+          A command line utility for viewing information about upcoming competitive programming contests<br/><br/>
+          <img src="https://github.com/terror/contest-cli/actions/workflows/ci.yml/badge.svg"/>
+        </p>
+        
+        ## Demo
+        [![asciicast](https://asciinema.org/a/a6eIilXEe1KCVZMsYfeCDB0UD.svg)](https://asciinema.org/a/a6eIilXEe1KCVZMsYfeCDB0UD)
+        
+        ## Installation
+        
+        You can install contest-cli by using pip:
+        
+        ```bash
+        $ pip install contest-cli
+        ```
+        
+        ## Usage
+        
+        ```
+        Options:
+          -s, --site TEXT  Programming contest website name
+          -l, --list       View supported contest websites
+          --help           Show this message and exit.
+        ```
+        
+Keywords: utility,programming,contests,cli
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Topic :: Utilities
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
