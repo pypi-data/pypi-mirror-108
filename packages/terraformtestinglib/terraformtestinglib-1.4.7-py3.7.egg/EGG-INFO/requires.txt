@@ -1,0 +1,5 @@
+pyhcl~=0.4.4
+pyyaml~=5.4.1
+colored~=1.4.2
+schema~=0.7.4
+colorama~=0.4.4
