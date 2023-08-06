@@ -1,0 +1,17 @@
+LICENSE
+README.md
+setup.py
+qgis-stubs/3d.pyi
+qgis-stubs/__init__.pyi
+qgis-stubs/_types.pyi
+qgis-stubs/analysis.pyi
+qgis-stubs/core.pyi
+qgis-stubs/gui.pyi
+qgis-stubs/processing.pyi
+qgis-stubs/server.pyi
+qgis-stubs/user.pyi
+qgis-stubs/utils.pyi
+qgis_stubs.egg-info/PKG-INFO
+qgis_stubs.egg-info/SOURCES.txt
+qgis_stubs.egg-info/dependency_links.txt
+qgis_stubs.egg-info/top_level.txt
