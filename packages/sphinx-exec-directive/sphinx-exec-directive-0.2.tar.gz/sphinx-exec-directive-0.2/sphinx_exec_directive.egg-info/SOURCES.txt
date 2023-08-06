@@ -1,0 +1,10 @@
+LICENSE.txt
+README.md
+setup.py
+sphinx_exec_directive/__init__.py
+sphinx_exec_directive/plot_directive.py
+sphinx_exec_directive.egg-info/PKG-INFO
+sphinx_exec_directive.egg-info/SOURCES.txt
+sphinx_exec_directive.egg-info/dependency_links.txt
+sphinx_exec_directive.egg-info/requires.txt
+sphinx_exec_directive.egg-info/top_level.txt
