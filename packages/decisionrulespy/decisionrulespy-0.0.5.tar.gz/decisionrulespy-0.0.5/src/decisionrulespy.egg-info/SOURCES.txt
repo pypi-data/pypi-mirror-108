@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/decisionrulespy/__init__.py
+src/decisionrulespy/decisionrules.py
+src/decisionrulespy.egg-info/PKG-INFO
+src/decisionrulespy.egg-info/SOURCES.txt
+src/decisionrulespy.egg-info/dependency_links.txt
+src/decisionrulespy.egg-info/top_level.txt
