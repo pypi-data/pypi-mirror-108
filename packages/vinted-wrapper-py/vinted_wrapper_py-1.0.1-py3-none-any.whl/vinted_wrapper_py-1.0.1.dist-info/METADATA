@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: vinted-wrapper-py
+Version: 1.0.1
+Summary: Simple Vinted Api for python 3
+Home-page: https://github.com/EduardoHerreraM/vinted-wrapper-py
+Author: EduardoHerreraM
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+
+# vinted-wrapper-py
+Python package to consume Vinted API.
+
