@@ -1,0 +1,17 @@
+LICENSE.txt
+setup.cfg
+setup.py
+speac/__init__.py
+speac/chopin_33_3.py
+speac/chopin_63_2.py
+speac/chopin_67_4.py
+speac/new_form.py
+speac/pattern_match.py
+speac/speac.py
+speac/speac_analysis.py
+speac/speac_settings.py
+speac/top_level.py
+speac.egg-info/PKG-INFO
+speac.egg-info/SOURCES.txt
+speac.egg-info/dependency_links.txt
+speac.egg-info/top_level.txt
