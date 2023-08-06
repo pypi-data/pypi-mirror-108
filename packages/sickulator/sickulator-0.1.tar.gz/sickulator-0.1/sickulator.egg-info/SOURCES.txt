@@ -1,0 +1,7 @@
+README.md
+pyproject.toml
+setup.cfg
+sickulator.egg-info/PKG-INFO
+sickulator.egg-info/SOURCES.txt
+sickulator.egg-info/dependency_links.txt
+sickulator.egg-info/top_level.txt
