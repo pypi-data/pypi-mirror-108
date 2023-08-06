@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: pr_dir
+Version: 1.0.0
+Summary: Directory`s files console-visualizer
+Home-page: https://github.com/gideko1/print_dir
+Author: Tarasenko V.E.
+Author-email: gidekoj@mail.ru
+License: UNKNOWN
+Description: # Print_dir - it`s a directory-visualizer python-package
+        ## How to install
+        pip install print_dir
+        ## Guide
+        
+        ```python
+        from print_dir.visualizer import Visualizer
+        
+        # You can start work with files from where you would
+        my_dir = my_dir = Visualizer(directory)  # directory вЂ“ path to start visualizer
+        
+        # You can see content of directory
+        my_dir.dir()
+        
+        # You can change directory
+        my_dir.cd(to)  # to вЂ“ path to new folder
+        
+        # Via cd-method you can move back
+        my_dir.cd('..')  # if to == '..' directory changes to parent
+        ```
+        ## Example of usage
+        
+        ```python
+        from print_dir.visualizer import Visualizer
+        
+        my_dir = Visualizer('/files/directory/')
+        my_dir.dir()  # OUTPUT:
+        """
+        рџ“Ѓ directory
+        |_ рџ“Ѓ print_dir
+        |_ рџ“Ѓ tests
+        |_ рџ“Ѓ venv
+        |_ рџ“ѓ .gitignore
+        |_ рџ“ѓ README.md
+        |_ рџ“ѓ setup.py
+        """
+        my_dir.cd('tests')
+        my_dir.dir()  # OUTPUT:
+        """
+        рџ“Ѓ tests
+        |_ рџ“ѓ test_Visualizer.py
+        |_ рџ“ѓ __init__.py
+        """
+        
+        ```
+Platform: any
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
