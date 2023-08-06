@@ -1,0 +1,56 @@
+from typing import Dict
+from uuid import uuid4
+import boto3
+import botocore.exceptions
+import circuitbreaker
+
+
+class InternalError(Exception):
+    pass
+
+
+class NotificationManager:
+
+    def __init__(self, resource_name: str, logger=None):
+        sns = boto3.resource("sns")
+        self._sns_topic = sns.Topic(resource_name)
+        self._logger = logger
+
+    def publish(self, event_type: str, message, group_id: str):
+        if type(message) is not str:
+            message = message.json()
+        try:
+            response = self._publish(
+                message=message,
+                message_deduplication_id=uuid4().hex,
+                group_id=group_id,
+                message_attributes={"eventType": event_type},
+            )
+        except InternalError as e:
+            if self._logger:
+                self._logger.exception(f"Notification couldn't be published: {e}")
+        except circuitbreaker.CircuitBreakerError:
+            if self._logger:
+                self._logger.exception(f"Didn't publish the notification because previous attempts failed")
+
+    @circuitbreaker.circuit(failure_threshold=2, recovery_timeout=None, expected_exception=InternalError)
+    def _publish(self, message_attributes: Dict, message: str, message_deduplication_id: str, group_id: str):
+        try:
+            response = self._sns_topic.publish(
+                Message=message,
+                MessageDeduplicationId=message_deduplication_id,
+                MessageGroupId=group_id,
+                MessageAttributes=message_attributes,
+            )
+            return response
+        except botocore.exceptions.ClientError as e:
+            raise InternalError() from e
+
+
+class NotificationManagerMock:
+
+    def __init__(self, resource_name: str):
+        pass
+
+    def publish(self, event_type: str, message, group_id: str):
+        pass
