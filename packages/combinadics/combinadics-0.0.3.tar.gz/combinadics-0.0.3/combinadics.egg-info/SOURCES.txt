@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+combinadics/__init__.py
+combinadics/combinadics.py
+combinadics.egg-info/PKG-INFO
+combinadics.egg-info/SOURCES.txt
+combinadics.egg-info/dependency_links.txt
+combinadics.egg-info/top_level.txt
