@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+githubapi2/__init__.py
+githubapi2/__main__.py
+githubapi2/githubuser.py
+githubapi2/version.py
+githubapi2.egg-info/PKG-INFO
+githubapi2.egg-info/SOURCES.txt
+githubapi2.egg-info/dependency_links.txt
+githubapi2.egg-info/entry_points.txt
+githubapi2.egg-info/requires.txt
+githubapi2.egg-info/top_level.txt
