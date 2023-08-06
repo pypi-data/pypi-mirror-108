@@ -1,0 +1,11 @@
+alpaca_trade_api
+yfinance
+pandas
+pandas_datareader
+flask-socketio
+flask-sqlalchemy
+flask-marshmallow
+marshmallow-sqlalchemy
+flask-security
+email_validator
+bcrypt
