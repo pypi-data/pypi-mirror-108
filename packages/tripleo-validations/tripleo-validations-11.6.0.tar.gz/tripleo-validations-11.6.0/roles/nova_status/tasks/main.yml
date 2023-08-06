@@ -1,0 +1,37 @@
+---
+- name: Check for docker cli
+  stat:
+    path: "/var/run/docker.sock"
+  register: check_docker_cli
+  check_mode: false
+
+- name: Set container_client fact
+  set_fact:
+    container_client: |-
+      {% set container_client = 'podman' %}
+      {%   if check_docker_cli.stat.exists|bool %}
+      {%     set container_client = 'docker' %}
+      {%   endif %}
+      {{ container_client }}
+
+- name: Check nova upgrade status
+  become: true
+  command: "{{ container_client }} exec -u root nova_api nova-status upgrade check"
+  changed_when: false
+  register: nova_upgrade_check
+
+- name: Warn if at least one check encountered an issue
+  warn:
+    msg: |
+      At least one check encountered an issue and requires further investigation.
+      This is considered a warning but the upgrade may be OK.
+      See the detail at https://docs.openstack.org/nova/latest/cli/nova-status.html#nova-status-checks
+  when: "nova_upgrade_check.rc == 1"
+
+- name: Fail if there was an upgrade status check failure
+  fail:
+    msg: |
+      There was an upgrade status check failure that needs to be investigated.
+      This should be considered something that stops an upgrade.
+      See the detail at https://docs.openstack.org/nova/latest/cli/nova-status.html#nova-status-checks
+  when: "nova_upgrade_check.rc not in [0, 1]"
