@@ -1,0 +1,3 @@
+[simplebot.plugins]
+simplebot_corpse = simplebot_corpse
+
