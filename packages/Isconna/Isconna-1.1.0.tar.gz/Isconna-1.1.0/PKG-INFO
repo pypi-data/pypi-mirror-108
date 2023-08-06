@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: Isconna
+Version: 1.1.0
+Summary: Python porting of the Isconna algorithm
+Home-page: https://github.com/liurui39660/Isconna.Python
+Author: Rui LIU
+Author-email: xxliuruiabc@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+Pypi does not support an AsciiDoc README<br>Please visit our GitHub repo https://github.com/liurui39660/Isconna.Python
+

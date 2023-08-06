@@ -1,0 +1,10 @@
+LICENSE
+setup.py
+src/Isconna/EdgeNodeCore.py
+src/Isconna/EdgeOnlyCore.py
+src/Isconna/__init__.py
+src/Isconna.egg-info/PKG-INFO
+src/Isconna.egg-info/SOURCES.txt
+src/Isconna.egg-info/dependency_links.txt
+src/Isconna.egg-info/requires.txt
+src/Isconna.egg-info/top_level.txt
