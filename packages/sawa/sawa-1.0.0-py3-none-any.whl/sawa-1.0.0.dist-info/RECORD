@@ -1,0 +1,17 @@
+sawa/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sawa/__version__.py,sha256=d_FseJGlchza_QhUu0qInxb66XJZpfU7J2ylzih6EmI,62
+sawa/cli.py,sha256=3I2isc2NMaJJZAN0_4GwIZAE9bTEtsC9g4SqyZWrZas,1294
+sawa/include.py,sha256=6Ho5vPRqezRZeElJeoxHL6MZUa0f2youMDGhs5a8HDo,778
+sawa/main.py,sha256=eM7yPSU5cbKuElm5lAN-B3Tpe61IWhgiAGWk6Z151wQ,6354
+sawa/process.py,sha256=KkgpTLaotwOzLPliUsF9NvzwM7WkAm1sf7YSmDBpzYA,7274
+sawa/util.py,sha256=_3XQ8klsqX-phpLT4ilMdDoMCLfxu2XBtJtNAdOphHM,424
+sawa/enum/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+sawa/enum/effected.py,sha256=auWj69-QtR0eUgZp5N7bZC7TE9e__6tYD6za_l_izdc,165
+sawa/enum/file_error.py,sha256=vFHN8Lx-lAI6GhRIcQKkxLFpXacbRNA-sB6tGpgTfCQ,152
+sawa/enum/token_error.py,sha256=DIarhBM76jdm7T5CwqNrinXWXi5T-1ck0D5_ryDfatU,230
+sawa-1.0.0.dist-info/LICENSE.md,sha256=JpSdyW7nFUmE8Qlv1IGUYtI7Fjr7n7ikIq07lkHvt8M,692
+sawa-1.0.0.dist-info/METADATA,sha256=DbJP9AQNqYmx1iz9Snlo-scTNRO9xaGj5N2uv93xwhE,3228
+sawa-1.0.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+sawa-1.0.0.dist-info/entry_points.txt,sha256=kMxJ7XXemHyl6cXOjGsSK0bZKsvWbe1di5PpSL43lK0,52
+sawa-1.0.0.dist-info/top_level.txt,sha256=hwEU6cNp7ulVnY2744fVnR4gpJ7-tFTrRll5iGszTTs,5
+sawa-1.0.0.dist-info/RECORD,,
