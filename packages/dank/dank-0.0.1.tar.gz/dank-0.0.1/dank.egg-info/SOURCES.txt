@@ -1,0 +1,17 @@
+README.md
+pyproject.toml
+setup.py
+dank/dank.cpp
+dank/dfa.cpp
+dank/dfa.hpp
+dank/encoder.cpp
+dank/encoder.hpp
+dank/infint.hpp
+dank/nfa.cpp
+dank/nfa.hpp
+dank.egg-info/PKG-INFO
+dank.egg-info/SOURCES.txt
+dank.egg-info/dependency_links.txt
+dank.egg-info/not-zip-safe
+dank.egg-info/requires.txt
+dank.egg-info/top_level.txt
