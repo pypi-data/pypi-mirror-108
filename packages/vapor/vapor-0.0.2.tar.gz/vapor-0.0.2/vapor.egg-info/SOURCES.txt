@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+vapor/__init__.py
+vapor.egg-info/PKG-INFO
+vapor.egg-info/SOURCES.txt
+vapor.egg-info/dependency_links.txt
+vapor.egg-info/top_level.txt
