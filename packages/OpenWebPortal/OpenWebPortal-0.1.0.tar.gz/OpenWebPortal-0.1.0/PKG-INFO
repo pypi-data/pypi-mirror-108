@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: OpenWebPortal
+Version: 0.1.0
+Summary: Edit variables on a web portal
+Home-page: https://github.com/Alex40144/OpenWebPortal
+Author: Alex40144
+License: GNU GPLv3
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+License-File: LICENSE
+
+UNKNOWN
+

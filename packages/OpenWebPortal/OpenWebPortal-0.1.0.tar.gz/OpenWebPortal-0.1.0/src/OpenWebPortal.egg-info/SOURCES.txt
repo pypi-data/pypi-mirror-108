@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+src/OpenWebPortal.egg-info/PKG-INFO
+src/OpenWebPortal.egg-info/SOURCES.txt
+src/OpenWebPortal.egg-info/dependency_links.txt
+src/OpenWebPortal.egg-info/requires.txt
+src/OpenWebPortal.egg-info/top_level.txt
