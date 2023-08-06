@@ -1,0 +1,10 @@
+_kiwipiepy.cpython-39-darwin.so,sha256=EnbXoZCRIEzAxPtPolrcWrTSozFnVmkrG2keB-tRN5k,863208
+kiwipiepy/__init__.py,sha256=jJrwScNYoGo-y0rMaVqpoJ9Cvgy5YiPlr4XfIwXT0Dk,1818
+kiwipiepy/__main__.py,sha256=uNAX4nT8gPTGvWR4tbZCSsNL12MNhR7f210t2H0v4ZM,179
+kiwipiepy/_version.py,sha256=83oJ8nCWXwQbno1uqIRolJfmli7BtUNqtuSvnzeSyxg,22
+kiwipiepy/documentation.rst,sha256=hIGT48beGBBR2eDP7a5DnEFS2zQIJw2LF496UbRAUBk,20624
+kiwipiepy-0.9.3.dist-info/LICENSE.txt,sha256=5KrHkWpWjbHZmhwE-Sc-mBCg-_cPxCBM09Q2NIAy0mM,831
+kiwipiepy-0.9.3.dist-info/METADATA,sha256=l1amggjL5092pt5MOtMTbB5LrJVBjZoZ8XXTt5xN0KY,927
+kiwipiepy-0.9.3.dist-info/WHEEL,sha256=7vkJ3ZnexegyTUl8grQkOVww_TVBMjxMIgcotcWEQj4,110
+kiwipiepy-0.9.3.dist-info/top_level.txt,sha256=2K_Miiwb0zKgJI99sA9LkDdzftl4hunBQbpA20gfeU8,21
+kiwipiepy-0.9.3.dist-info/RECORD,,
