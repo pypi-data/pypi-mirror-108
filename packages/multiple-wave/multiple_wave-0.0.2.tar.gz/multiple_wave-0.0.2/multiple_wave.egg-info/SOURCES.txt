@@ -1,0 +1,8 @@
+MANIFEST.in
+README.txt
+setup.py
+multiple_wave/__init__.py
+multiple_wave.egg-info/PKG-INFO
+multiple_wave.egg-info/SOURCES.txt
+multiple_wave.egg-info/dependency_links.txt
+multiple_wave.egg-info/top_level.txt

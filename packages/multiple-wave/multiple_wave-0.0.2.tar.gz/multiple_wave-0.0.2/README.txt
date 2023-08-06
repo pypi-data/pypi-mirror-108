@@ -1,0 +1,1 @@
+This is a simple multiple wave simulation of COVID-19 active cases using sum of Gaussian waves as an approximation
