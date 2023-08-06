@@ -1,0 +1,5 @@
+fluid_mq>=3.0.0rc2
+splunk-sdk==1.6.0
+iso8601==0.1.10
+six==1.10.0
+requests-toolbelt==0.6.0

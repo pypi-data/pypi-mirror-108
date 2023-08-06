@@ -1,0 +1,16 @@
+MANIFEST.in
+README
+setup.py
+fluid_report/__init__.py
+fluid_report/exceptions.py
+fluid_report/pdf_downloader.py
+fluid_report/queries.yaml
+fluid_report/reportbot.py
+fluid_report/transformers.py
+fluid_report/workers.py
+fluid_report.egg-info/PKG-INFO
+fluid_report.egg-info/SOURCES.txt
+fluid_report.egg-info/dependency_links.txt
+fluid_report.egg-info/entry_points.txt
+fluid_report.egg-info/requires.txt
+fluid_report.egg-info/top_level.txt
