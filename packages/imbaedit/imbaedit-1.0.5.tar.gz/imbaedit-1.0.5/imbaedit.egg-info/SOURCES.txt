@@ -1,0 +1,9 @@
+setup.py
+imbaedit/__init__.py
+imbaedit/imbaedit.py
+imbaedit.egg-info/PKG-INFO
+imbaedit.egg-info/SOURCES.txt
+imbaedit.egg-info/dependency_links.txt
+imbaedit.egg-info/entry_points.txt
+imbaedit.egg-info/requires.txt
+imbaedit.egg-info/top_level.txt
