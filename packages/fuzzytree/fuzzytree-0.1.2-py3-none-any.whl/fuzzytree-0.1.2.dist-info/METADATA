@@ -1,0 +1,60 @@
+Metadata-Version: 2.1
+Name: fuzzytree
+Version: 0.1.2
+Summary: A scikit-learn compatible implementation of fuzzy decision tree estimator.
+Home-page: https://balins.github.io/fuzzytree
+Maintainer: J. Balinski
+Maintainer-email: balinski.jakub@gmail.com
+License: new BSD
+Download-URL: https://pypi.org/project/fuzzytree
+Project-URL: Bug Tracker, https://github.com/balins/fuzzytree/issues
+Project-URL: Documentation, https://balins.github.io/fuzzytree
+Project-URL: Source Code, https://github.com/balins/fuzzytree
+Platform: UNKNOWN
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development
+Classifier: Topic :: Scientific/Engineering
+Classifier: Development Status :: 3 - Alpha
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.6
+Description-Content-Type: text/x-rst
+Requires-Dist: numpy
+Requires-Dist: scikit-learn
+Provides-Extra: docs
+Requires-Dist: sphinx ; extra == 'docs'
+Requires-Dist: sphinx-gallery ; extra == 'docs'
+Requires-Dist: sphinx-rtd-theme ; extra == 'docs'
+Requires-Dist: numpydoc ; extra == 'docs'
+Requires-Dist: matplotlib ; extra == 'docs'
+Provides-Extra: tests
+Requires-Dist: pytest ; extra == 'tests'
+
+.. -*- mode: rst -*-
+
+fuzzytree: fuzzy decision tree estimator
+========================================
+
+.. _scikit-learn: https://scikit-learn.org
+.. _documentation: https://balins.github.io/fuzzytree
+
+**fuzzytree** is a Python module implementing fuzzy (a.k.a. soft)
+decision trees. Its API is fully compatible with scikit-learn_.
+
+Refer to the documentation_ to find usage guide and some examples.
+
+Requirements
+    * scikit-learn >= 0.23.0
+    * numpy >= 13.3.3
+
+
