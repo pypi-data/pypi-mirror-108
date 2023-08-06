@@ -1,0 +1,4 @@
+[console_scripts]
+conanx = conanx.main:main_entry
+conanx.test = conanx.main:test_main
+
