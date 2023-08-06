@@ -1,0 +1,10 @@
+numpy<2.0.0,>=0.16.0
+pygtrie<3.0,>=2.1
+
+[dev]
+black
+flake8
+jupyter
+kenlm
+pylint
+pytest
