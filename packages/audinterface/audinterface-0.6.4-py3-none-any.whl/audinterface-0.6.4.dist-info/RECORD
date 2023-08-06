@@ -1,0 +1,13 @@
+audinterface/__init__.py,sha256=Q3nhMA2BeSzlEdLLVU1xEUS4El_MZ-t1Y3LWWcqfg0c,1597
+audinterface/core/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+audinterface/core/feature.py,sha256=YU4vDgID43kL-_D8yTKLsSQqUrYHCUeUSNcIxqwgE5U,18815
+audinterface/core/process.py,sha256=zjMn1ceLYXJrqIm0oOR0lVYlmm0Q5zBD7FmDz69srNs,26422
+audinterface/core/segment.py,sha256=3jk4QZ7KjFOccai9qLLcIppqvYyrC2xn69I3rGQp7Ng,15130
+audinterface/core/typing.py,sha256=rwz-XVWO79slSZg-VgyI6dpItjvEI-4rUcn-j9jgo6M,189
+audinterface/core/utils.py,sha256=ISuGovYe_x2XtMn4tLVub3cdhAkIb_JjBt6JZr6fbBs,4059
+audinterface/utils/__init__.py,sha256=L0ZMeVV-ZCKUg2EWukghYljFxIvV08g4X5as6-Dnl48,56
+audinterface-0.6.4.dist-info/LICENSE,sha256=p7vwM6XUwOGmWeANbTOYXOGSaodepWE0YbQF_Xzl3_s,1174
+audinterface-0.6.4.dist-info/METADATA,sha256=rRfdGWbCSWFBE2m7f8KTUDO1tfvtcDqlfKCRzaI9lU4,6976
+audinterface-0.6.4.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+audinterface-0.6.4.dist-info/top_level.txt,sha256=0VZCeOPqE7GerE6MtjOFAXZoVcKqQugSxbFCNWdzdBw,13
+audinterface-0.6.4.dist-info/RECORD,,
