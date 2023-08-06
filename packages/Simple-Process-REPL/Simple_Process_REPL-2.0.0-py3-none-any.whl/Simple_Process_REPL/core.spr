@@ -1,0 +1,201 @@
+'
+config:
+    REPL:
+        prompt        : 'SPR:> '
+
+    ssh:
+        pemfile       : 'server.pem'
+        ssh_server    : 'ubuntu@ec2-11-111-111-11.us-east-2.compute.amazonaws.com'
+
+    files:
+        logfile       : 'SPR.log'
+        loglevel      : 'debug'
+
+        config_file   : 'SPRConfig.yaml'
+
+    readme:
+        module: Simple_Python_REPL
+        filename: README.md
+        path: ""
+        md: ""
+        html: ""
+
+    exec:
+        # function name to autoexec when asked to run
+
+        autoexec : ui/hello
+
+        help:
+
+        # # a list of functions
+        functions :
+        #     id-it :
+        #         fn  : get reset wait pause pause identify
+        #         doc : 'Put your help text here'
+
+        hooks:
+            startup:
+
+            #- as/show config
+            #- ui/msg "Where ami"
+
+            shutdown:
+
+            - ui/msg "Goodbye have a nice day!"
+
+
+-def-path _results_ "The results stack, relative to With" results
+
+namespace as "Application State functionality"
+    Simple_Process_REPL.appstate
+    help
+    show
+    set_in
+    set
+    push
+    pop
+    _with
+    pop_with
+    _print_stack
+    _show_with
+    eval_default_process
+    save_config
+    load_config
+    load_yaml
+    load_pkg_resource
+    merge_yaml
+    sync_functions
+    reset_device
+    archive_log
+
+namespace cli "User interface using the cli"
+    Simple_Process_REPL.cli
+    help
+    msg
+    yes_no
+
+namespace ui "User interface using dialog"
+    Simple_Process_REPL.dialog
+    help
+    msg
+    yes_no
+    print_file_loop
+    print_file
+    input_count
+    _input_string
+    input_string
+    save_bcqr
+    print_bcqr
+
+
+namespace os "Python os library"
+    os
+    fchown lchown ctermid getcwd getcwdb link listdir
+    lstat mkdir readlink rename replace rmdir system umask
+    uname unlink remove getpid getpgrp getppid getuid getlogin
+    kill killpg setuid sendfile fstat curdir pardir makedirs
+    removedirs getenv
+
+
+namespace shutil "Python shutil library"
+    shutil
+    copyfile copymode copystat copy copy2 copytree rmtree move
+    get_archive_formats register_archive_format unregister_archive_format
+    make_archive get_unpack_formats register_unpack_format
+    unregister_unpack_format unpack_archive disk_usage chown
+    get_terminal_size which
+
+
+namespace sh "Subprocesses, shell etc."
+    Simple_Process_REPL.subcmd
+    help
+    do rm sleep environ
+
+namespace log "logger controls and messages"
+    Simple_Process_REPL.logs
+    help
+    level info warning error critical debug
+
+namespace dev "Device interaction, waiting for, handshaking."
+    Simple_Process_REPL.device
+    help
+    wait handshake pause
+
+namespace nw "Networking stuff, Wifi"
+    Simple_Process_REPL.network
+    help
+    connect_wifi
+    connect_tunnel create_tunnel sendlog
+
+namespace bq "Bar and QR code generation, scanning and printing"
+    Simple_Process_REPL.bar_qr
+    help
+    gen save write read_barcode_from_camera
+
+namespace pb "Particle Board CLI interface"
+    Simple_Process_REPL.particle_main
+    help
+    particle_help archive_log
+    reset_usb add product_add claim flash_image
+    release flash_tinker flash_test cloud_status
+    get_usb_and_id archive_log input_serial
+    dfu listen list identify inspect login
+    logout update setup_done _doctor _flash pcmd
+    name name_from
+
+namespace md "Markdown conversion to HTML"
+    Simple_Process_REPL.markdown
+    help
+    html
+
+namespace web "View HTML and urls."
+    Simple_Process_REPL.webview
+    help
+    view
+    browse
+
+in-ns
+
+import Simple_Process_REPL.mkext new_spr_extension_project
+
+# Set up readme folder with stuff,
+# then load the readme and convert to html.
+with /readme
+
+'
+package: Simple_Process_REPL
+filename: README.md
+url: https://github.com/EricGebhart/Simple_Process_REPL/blob/main/README.md
+title: "The SPR README!!!"
+
+
+# load the resource at readme. put it in markdown.
+# works because, 'with', readme has vars which match the function signature.
+as/load-pkg-resource
+
+# pop the last result to markdown.
+pop results markdown
+
+# convert the markdown to html, put it in html.
+md/html
+
+pop results html
+
+# view-with and browse-with are handy to have.
+# view and browse use the current 'with'...
+def view-doc "Display the Readme documentation in an html viewer."
+    web/view-with readme
+
+def browse-doc "Display the Readme documentation in a browser window."
+    web/browse-with readme
+
+pop-with
+
+with /foo
+
+'
+msg: this is my message. Hello.
+bar: cli/msg /foo/msg
+baz:
+- cli/msg /foo/msg
+- cli/msg "Hello from the middle"
