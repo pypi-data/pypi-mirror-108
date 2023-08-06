@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: escolors
+Version: 0.0.2
+Summary: Terminal formatting helpers
+Home-page: UNKNOWN
+Author: Lewis Youldon
+Author-email: lewisyouldon@gmail.com
+License: UNKNOWN
+Keywords: python,terminal,colors,formatting
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Microsoft :: Windows
+
+A package containing helpers for terminal output formatting
+

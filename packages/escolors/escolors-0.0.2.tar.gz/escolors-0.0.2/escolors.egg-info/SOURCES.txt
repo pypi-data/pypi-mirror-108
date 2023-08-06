@@ -1,0 +1,7 @@
+setup.py
+escolors/__init__.py
+escolors/termcolor.py
+escolors.egg-info/PKG-INFO
+escolors.egg-info/SOURCES.txt
+escolors.egg-info/dependency_links.txt
+escolors.egg-info/top_level.txt
