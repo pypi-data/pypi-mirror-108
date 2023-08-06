@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/clean_data/__init__.py
+src/clean_data_Caelon.egg-info/PKG-INFO
+src/clean_data_Caelon.egg-info/SOURCES.txt
+src/clean_data_Caelon.egg-info/dependency_links.txt
+src/clean_data_Caelon.egg-info/top_level.txt
