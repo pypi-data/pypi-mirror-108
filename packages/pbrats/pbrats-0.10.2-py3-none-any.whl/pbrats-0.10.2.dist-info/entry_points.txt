@@ -1,0 +1,5 @@
+[console_scripts]
+pbr = pbr.pbr:main
+pbr_gen = pbr.pbr_gen:main
+pbr_tables = pbr.pbr_tables:main
+
