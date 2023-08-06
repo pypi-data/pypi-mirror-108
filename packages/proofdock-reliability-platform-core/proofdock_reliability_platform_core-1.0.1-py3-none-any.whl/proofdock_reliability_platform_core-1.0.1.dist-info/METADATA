@@ -1,0 +1,60 @@
+Metadata-Version: 2.1
+Name: proofdock-reliability-platform-core
+Version: 1.0.1
+Summary: A chaos engineering framework for Python applications.
+Home-page: https://github.com/proofdock/chaos-middleware-python/tree/master/src/core
+Author: Proofdock Authors
+Author-email: support@proofdock.io
+License: Apache-2.0
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.5.*
+Description-Content-Type: text/markdown
+Requires-Dist: circuitbreaker
+Requires-Dist: logzero
+Requires-Dist: marshmallow
+Requires-Dist: requests
+Requires-Dist: contextvars ; python_version < "3.7"
+
+# Python integration
+
+[![Python versions](https://img.shields.io/pypi/pyversions/proofdock-chaos-middleware-flask.svg)](https://www.python.org/)
+
+## Install
+
+This package requires Python 3.5+
+
+```
+$ pip install -U proofdock-reliability-platform-core
+```
+
+## Usage
+
+The reliability platform client takes the following **input variables**:
+
+| Variable | Description |
+| ---      | ---         |
+| `RELIABILITY_PLATFORM_APPLICATION_NAME` | The service application's name |
+| `RELIABILITY_PLATFORM_APPLICATION_ENV` | The service application's deployed environment |
+| `RELIABILITY_PLATFORM_PROOFDOCK_API_TOKEN` | The API token to connect to Proofdock's Reliability Platform API |
+
+## References
+
+- [Chaos Middleware documentation][proofdock_middleware_docs]
+- [Support][proofdock_support]
+- [Proofdock website][proofdock]
+
+[proofdock]: https://proofdock.io/
+[proofdock_support]: https://github.com/proofdock/chaos-support/
+[proofdock_middleware_docs]: https://docs.proofdock.io/reliabilityplatform/usage/
+
+
