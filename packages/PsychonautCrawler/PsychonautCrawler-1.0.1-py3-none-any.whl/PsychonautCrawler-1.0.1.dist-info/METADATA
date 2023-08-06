@@ -1,0 +1,86 @@
+Metadata-Version: 2.1
+Name: PsychonautCrawler
+Version: 1.0.1
+Summary: A crawler for PsychonautWiki wrote in python.
+Home-page: https://github.com/BlakeBarnes00/PsychonautCrawler
+Author: Ellis Barnes
+Author-email: EllisBarnes00@gmail.com
+License: This is free and unencumbered software released into the public domain.        
+        Anyone is free to copy, modify, publish, use, compile, sell, or
+        distribute this software, either in source code form or as a compiled
+        binary, for any purpose, commercial or non-commercial, and by any
+        means.        
+        In jurisdictions that recognize copyright laws, the author or authors
+        of this software dedicate any and all copyright interest in the
+        software to the public domain. We make this dedication for the benefit
+        of the public at large and to the detriment of our heirs and
+        successors. We intend this dedication to be an overt act of
+        relinquishment in perpetuity of all present and future rights to this
+        software under copyright law.        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+        EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+        MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
+        IN NO EVENT SHALL THE AUTHORS BE LIABLE FOR ANY CLAIM, DAMAGES OR
+        OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE,
+        ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR
+        OTHER DEALINGS IN THE SOFTWARE.        
+        For more information, please refer to <https://unlicense.org>        
+Project-URL: Bug Tracker, https://github.com/BlakeBarnes00/PsychonautCrawler/issues
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: The Unlicense (Unlicense)
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Science/Research
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# PsychonautCrawler
+## What is this? Why?
+This project is a crawler, or scraper if you prefer, for the website [PsychonautWiki](https://psychonautwiki.org/). I plan to be very extensive with it since this is my first big project with Python, as I learn it in college. A web crawler is a bot that goes on websites and indexes them; search engines use them for this reason. However, they can be controversial because they can go and index websites meant to be private, thus leading to websites including ``robots.txt`` that request them not to index some, or all, of the website.
+
+Like I stated above this is a learning project for myself, thus it will be going to be going through a lot of changes and there probably are going to be mistakes.
+
+
+## Currently these are my plans *(are subject to change):*
+- [x] Fix the filing project structure
+- [ ] Understand how to recognize if there is a ``robots.txt`` warding me away
+- [x] Fix the name from Psychonaught -> Psychonaut
+- [ ]  Enable searching for specific substances
+- [ ] Print to documents
+	- [ ] JSON
+	- [ ] CSV
+	- [ ] Markdown
+- [ ] Ability to see other aspects
+	- [ ] Experience reports
+	- [ ] Subjective effects
+	- [ ] Research
+	- [ ] Dangerous interactions
+	- [ ] Legality
+- [ ] Documentation
+	- [ ] In ``/docs/`` would be nice
+	- [ ] Use the projects on GitHub more
+- [ ] Fix the PyPi resource
+
+## Project Structure
+This project also is [available on pypi](https://pypi.org/project/psychonaughtcrawler/), I use upload it there so that I can import the project globally and also people can install it using ``pip``.
+
+```
+PsychonautCrawler/
+├── bin/
+├── psychonautcrawler/
+│	 └── crawler.py
+└──  tests/
+```
+ 
+| Directory | Description |
+|--:|:--|
+| ``PsychonautCrawler/``  | Root  |
+| ``bin/`` | Programs and scripts wrote  with the package.|
+| ``tests/`` | Folder for conducting tests on variables, functions, libraries etc.|
+
+## Documentation
+``TODO``
+
+
