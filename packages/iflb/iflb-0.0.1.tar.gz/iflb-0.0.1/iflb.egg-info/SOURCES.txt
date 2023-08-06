@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+iflb/__init__.py
+iflb/collections.py
+iflb.egg-info/PKG-INFO
+iflb.egg-info/SOURCES.txt
+iflb.egg-info/dependency_links.txt
+iflb.egg-info/top_level.txt
