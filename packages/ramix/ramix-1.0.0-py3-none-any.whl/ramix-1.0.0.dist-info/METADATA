@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: ramix
+Version: 1.0.0
+Summary: RaMix: A Python package for generating Raman Mixture Spectra
+Home-page: https://github.com/DexterAntonio/ramix
+Author: Dexter Antonio
+Author-email: dexter.d.antonio@gmail.com
+License: MIT
+Project-URL: Documentation, https://kul-group.github.io/MAZE-sim/build/html/index.html
+Project-URL: Source, https://github.com/DexterAntonio/RaMix/
+Project-URL: Tracker, https://github.com/RaMix/issues
+Keywords: raman spectra synthetic
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3
+Description-Content-Type: text/plain
+Requires-Dist: numpy
+
+RaMix generates synthetic Raman mixture spectra.These mixture spectra can be used to compare the predictive performance of different chemoinformatics algorithms, such as partial least squares (PLS) and 1D Convolution Neural Networks (1D-CNN).
+
+
