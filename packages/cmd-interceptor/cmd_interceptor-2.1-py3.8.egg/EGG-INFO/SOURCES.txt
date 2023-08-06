@@ -1,0 +1,17 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+cmd_interceptor.egg-info/PKG-INFO
+cmd_interceptor.egg-info/SOURCES.txt
+cmd_interceptor.egg-info/dependency_links.txt
+cmd_interceptor.egg-info/entry_points.txt
+cmd_interceptor.egg-info/requires.txt
+cmd_interceptor.egg-info/top_level.txt
+interceptor/__init__.py
+interceptor/config.py
+interceptor/intercepting.py
+interceptor/run.py
+interceptor/whereis.py
+interceptor/templates/cmdline.py
+interceptor/templates/config
