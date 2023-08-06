@@ -1,0 +1,11 @@
+seqtk/__init__.py,sha256=bcgRh1-RhXDwOpjQWfjVc3xDLYTWP3m1nTZWGWWiouE,162
+seqtk/_concatenate.py,sha256=qnHeGCeTMebI7xspMva2z9_uHTVERXhEstJAE8StH_Y,1438
+seqtk/_gather.py,sha256=logPz7zFTJLwQur7-k5KZb39sRBBkKELm6-MRFnayUM,700
+seqtk/_helper.py,sha256=AH1P6bG6lxqMhSuYuBQ6XkwfE-rGv_rzJuL1AV0qGng,105
+seqtk/_map.py,sha256=25IvKJ_LS7aFnpHk_dZFBlT-tJCcKnwrztys6TzbCz8,2064
+seqtk/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+seqtk-0.4.0.dist-info/LICENSE,sha256=-ik2zmjNKgHNw9UJzVVh5-R0YSdLXM-6znkq4kStbIg,1074
+seqtk-0.4.0.dist-info/METADATA,sha256=fI8ej_A7xzDFHjRGVVY_fmws-lBXFW40hDmLxa4SgmE,237
+seqtk-0.4.0.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+seqtk-0.4.0.dist-info/top_level.txt,sha256=NT3BKqZZoi7KcBCUEn1_3yUT1nz34wchHgavnzjl8P8,6
+seqtk-0.4.0.dist-info/RECORD,,
