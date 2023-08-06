@@ -1,0 +1,3 @@
+[console_scripts]
+moduml = moduml.__main__:main
+
