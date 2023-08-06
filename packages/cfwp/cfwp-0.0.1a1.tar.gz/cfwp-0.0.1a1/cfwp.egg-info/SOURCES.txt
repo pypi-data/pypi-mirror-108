@@ -1,0 +1,7 @@
+README.md
+setup.py
+cfwp.egg-info/PKG-INFO
+cfwp.egg-info/SOURCES.txt
+cfwp.egg-info/dependency_links.txt
+cfwp.egg-info/requires.txt
+cfwp.egg-info/top_level.txt
