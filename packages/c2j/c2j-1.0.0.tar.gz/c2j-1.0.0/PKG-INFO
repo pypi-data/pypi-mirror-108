@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: c2j
+Version: 1.0.0
+Summary: .csv-.json transformator
+Home-page: https://github.com/3vlasenkov20/c2j
+Author: Vlasenkov A.S.
+Author-email: 3vlasenkov20@mail.ru
+License: UNKNOWN
+Description: # c2j - it`s a .csv-.json transformer python-package
+        ## How to install
+        pip install c2j
+        ## Guide
+        
+        ```python
+        from c2j.transform import csv_json, json_csv
+        
+        # You can transform .csv-file into .json-file
+        csv_json(csv_path)  # csv_path вЂ“ path to .csv-file
+        
+        # You can transform .json-file into .csv-file
+        json_csv(json_path)  # json_path вЂ“ path to .json-file
+        ```
+        ## Example of usage
+        
+        ```python
+        from c2j.transform import csv_json, json_csv
+        
+        csv_json('my_csv.csv') # transform .csv to .json
+        json_csv('my_json.json')  # transform .json to .csv
+        ```
+Platform: any
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
