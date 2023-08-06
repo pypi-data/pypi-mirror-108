@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: jira-tracker
+Version: 0.1.1
+Summary: Simple Jira story point tracking tool
+Home-page: https://github.com/josephbmanley/jira-tracker
+Author: Joseph Manley
+Author-email: j@cloudsumu.com
+License: MIT
+Keywords: Jira
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
+Requires-Dist: argparse
+Requires-Dist: jira
+Requires-Dist: pyyaml
+Requires-Dist: wheel
+
+# jira-tracker
+
+
