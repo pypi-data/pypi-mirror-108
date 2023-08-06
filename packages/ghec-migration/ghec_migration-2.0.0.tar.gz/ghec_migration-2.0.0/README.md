@@ -1,0 +1,107 @@
+# Github Enterprise cloud migration tool
+
+This tool helps you do the below tasks
+
+## Github Migration
+
+Migrates provided github repos from source org to target organization
+
+#### Generate Github Personal Access Token 
+
+- Follow the steps [here](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token) to generate personal access token. Copy the token.
+- For github enterprise cloud, the token should be enabled with SAML SSO
+- Follow the steps [here](https://docs.github.com/en/github/authenticating-to-github/authenticating-with-saml-single-sign-on/authorizing-a-personal-access-token-for-use-with-saml-single-sign-on)
+
+### Access Needed 
+
+- The user who is running this tool, should be an admin on the source and target organizations. 
+
+### Make Repos private
+
+Before running the tool for migration make all the repos private. You have to be an admin on the organization to do so
+
+```
+  #python3 make_private.py source_org token
+
+  python3 make_private.py nike-platform-fulfillment <PAT token>
+```
+
+#### Running the tool
+
+- Install python3 
+    - On MAC OS - ```brew install python3```
+    - On Windows, download the installer from [here](https://www.python.org/downloads/windows/)
+
+
+Run the below command to install the github migration tool
+
+```pip3 install --upgrade ghec-migration```
+
+Invoke the tool by running ```ghec-migration```
+
+Output of the tool
+
+```shell script
+
+➜  ~ ghec-migration
+Github Migration
+? What do you want to do?  Github Migration
+? Source github org  nike-platform-fulfillment
+? Target github org  nike-internal
+? Target Team Slug  fulfillment-squad-sec
+? Target Team Admin Slug  fulfillment-admins
+? Team Prefix  fulfillment
+? Github access token  <token>
+? How do you want to get the repos?  Provide list of Repos
+? Provide the file with the repo names to be migrated  /Users/vmari2/repos.txt
+Reading repos from /Users/vmari2/repos.txt
+#output
+
+
+Transferring bzfrconsumeradapter to target organization
+Renaming bzfrconsumeradapter to fulfillment.bzfrconsumeradapter
+Renamed successfully
+Renaming master to main
+Renamed master to main
+Transferring repo bzfrconsumeradapter to nike-internal
+Transfer completed for repo bzfrconsumeradapter
+changing team level access
+Changed fulfillment to be a push
+Changed fulfillment-squad-sec to be a maintain
+Changed fulfillment-admins to be a admin
+Changed fulfillment-external-contributors to be a push
+Made bzfrconsumeradapter internal after transfer
+Completed transfer for bzfrconsumeradapter
+
+
+```
+
+
+### Jenkins Migration
+
+We can change the github url in the bmx job using this tool
+
+Generate a jenkins following the steps [here](https://support.cloudbees.com/hc/en-us/articles/115003090592-How-to-re-generate-my-Jenkins-user-token)
+
+```shell script
+Github Migration
+? What do you want to do?  Jenkins BMX Migration
+? Update Jenkins Job with new repo  Yes
+? BMX Jenkins URL  https://mpartemis.jenkins.bmx.nikecloud.com/
+? Jenkins Token  <token>
+? Jenkins Username  Vamsikrishna.maringanti@nike.com
+? New Github Org  nike-internal
+? Old Github Org(s). Provide comma separated values   mp-commerce-fulfillment
+? Team Prefix  fulfillment
+? Provide the new credentials to Change credentials id. Leave blank if not changing   artemiscicd
+
+```
+
+
+### What this tool will not do
+
+- update QMA config in service now
+- Update ```master``` references to ```main``` in Code like Jenkinsfile, etc
+- If you use build flows based on the branch, you have to update them accordingly
+- Doesn't organize bmx jobs into folders
+- It can't skip bmx jobs
