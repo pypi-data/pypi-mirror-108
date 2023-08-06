@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: examdays
+Version: 0.0.2
+Summary: A module that helps you to calculate how many days will you have for preparing your exam.
+Home-page: UNKNOWN
+Author: meowmeowcat
+Author-email: 
+License: UNKNOWN
+Description: # Exam
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
