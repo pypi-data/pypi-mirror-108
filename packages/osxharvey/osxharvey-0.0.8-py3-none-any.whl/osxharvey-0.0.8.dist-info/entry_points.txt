@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        osxharvey=osxharvey.__main__:main
+    
