@@ -1,0 +1,11 @@
+gracefml/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gracefml/bounding/__init__.py,sha256=eHmM0Ixf1BKrLj4P__Q72w3q3Iu23HO_u9VSPvpnG-Q,68
+gracefml/bounding/bf.py,sha256=oqxqMagpb1aSMsqpdJsoXryznzsuZNYmjznauEiwjlI,302
+gracefml/datasets/__init__.py,sha256=XiWWUSASRnqKfGAAO3x5qkg_CMjtYXSsnrP9NyicVYo,123
+gracefml/datasets/core.py,sha256=1cg9FDSHPa2fJNkqLK6BjZLIWBybXbqpbVIaOgEq6Qo,741
+gracefml/datasets/data/boston_house_prices.gz,sha256=V-KqNrgD5vu7jorXEnpKcn74FDiGtdcQJnHhb1oSxV8,11758
+gracefml/types.py,sha256=erJJFcP_pbF66Aaj0XvjRg_ra5wzOj4Nn0JhyA3iH5U,39
+gracefml-0.0.4.dist-info/LICENSE,sha256=BSzzn0yVVpOMwioszoFYgT8dKPWqEH9K0Mjzvvdr9fo,1067
+gracefml-0.0.4.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+gracefml-0.0.4.dist-info/METADATA,sha256=g8sedEzPFN2o2Hy6uzRJLUpa_zovv5Kz2fMZudAk-zM,528
+gracefml-0.0.4.dist-info/RECORD,,
