@@ -1,0 +1,16 @@
+extract_todo/__init__.py,sha256=ZrNBdVH8ALkooF8gT1uiuYjMFAhXw5dspN3o-3r1wPk,150
+extract_todo/__main__.py,sha256=-ufSJGd95oeXpRoN_l1ijC_C6xq9SulUH8gEpa-hVGc,1978
+extract_todo/__version__.py,sha256=40aZtp0FcDc-4vUtyQaRuOqWaraHlubnhTz0GAnFCAU,791
+extract_todo/extractor.py,sha256=VKewgICg19YziisCJbEY4p2zGGAz_2KWiRIlWC-Gyw0,2137
+extract_todo/parser/__init__.py,sha256=5q-HRalUuCxyH0B4iFVZLLxc4oLvVrbYOGNvfGDbgzo,100
+extract_todo/parser/default_parser.py,sha256=752MlgKq4apboZHiJ4eaBNyPJTXYkLbCZWPV8e7XyEk,1713
+extract_todo/parser/latex_parser.py,sha256=2YvakRieUZLV1jX75o_SS8DHnc8sSoPSncUVLj9U20U,1082
+extract_todo/parser/parser_factory.py,sha256=KIAxzC013AQi2K0zsBO8P1EaTYESglYym4n0RrNlom0,2024
+extract_todo/parser/python_parser.py,sha256=oGTQXy-KIUkEN8AlBYWmIyQ-HRdgnuubjELQQBMzZDA,1085
+extract_todo-0.3.0.dist-info/AUTHORS.md,sha256=uM1RRp3zRb0p-n7YV4B_NgEs3nBjxcJXAaxCFEVEMP8,125
+extract_todo-0.3.0.dist-info/LICENSE.txt,sha256=WJ7YI-moTFb-uVrFjnzzhGJrnL9P2iqQe8NuED3hutI,35141
+extract_todo-0.3.0.dist-info/METADATA,sha256=LdGGlRS4EWDICHvhCuy_gkRVwg0DM3-JhlmBLkIjSVQ,2502
+extract_todo-0.3.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+extract_todo-0.3.0.dist-info/entry_points.txt,sha256=6ij_TYLdzbOxRahv55pR5IwReJkmF3tsggx3OeIW4JI,61
+extract_todo-0.3.0.dist-info/top_level.txt,sha256=H27dEoYwqYbBxCBy5oVE0zjnte4Jyxt09IYtgZG6lpU,13
+extract_todo-0.3.0.dist-info/RECORD,,
