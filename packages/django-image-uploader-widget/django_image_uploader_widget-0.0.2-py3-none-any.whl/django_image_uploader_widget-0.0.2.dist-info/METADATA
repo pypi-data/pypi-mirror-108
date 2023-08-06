@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: django-image-uploader-widget
+Version: 0.0.2
+Summary: Simple Image Uploader Widget for Django-Admin
+Home-page: https://github.com/EduardoJM/django-image-uploader-widget
+Author: Eduardo Oliveira
+Author-email: eduardo_y05@outlook.com
+License: MIT
+Keywords: django,admin,widget,image,uploader
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+License-File: LICENSE
+
+# Simple Image Uploader Widget for Django
+
+**Warning**: This was developed using the more recent version of django and i have not tested this with older django versions (because i created this for use in some recent projects). Is not my intentions to made this complete compatible with old versions of django, but if you want to try to use this with older versions of django and get some erros, please **contact-me** (or open a **issue** here) and we can talk about the errors and made this compatible to the version that you are geting errors.
+
+
+
+
