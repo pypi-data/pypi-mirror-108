@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: aws-vault-migrate
+Version: 0.2.2
+Summary: AWS Vault Migrate will allow seemless migration from plain text credentials
+Home-page: https://github.com/sudoinclabs/aws-vault-migrate
+Author: Hameedullah Khan
+Author-email: hameed@sudo.inc
+License: MIT
+Description: AWS-Vault migrate to help migrate from plain text credentials       to more secure aws-vault stored secrets
+Keywords: aws-vault aws-vault-migrate  python package sudoinclabs
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
