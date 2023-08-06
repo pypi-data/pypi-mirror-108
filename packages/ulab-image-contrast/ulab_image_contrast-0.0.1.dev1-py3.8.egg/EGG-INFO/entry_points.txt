@@ -1,0 +1,3 @@
+[console_scripts]
+ulab-image-contrast-cmd = ulab_image_contrast.command:command_line
+
