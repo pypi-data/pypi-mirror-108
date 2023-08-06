@@ -1,0 +1,2 @@
+[tox]
+recreate = tox_recreate_hook
