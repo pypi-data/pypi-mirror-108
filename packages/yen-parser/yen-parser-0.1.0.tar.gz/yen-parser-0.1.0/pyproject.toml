@@ -1,0 +1,35 @@
+[tool.poetry]
+name = "yen-parser"
+version = "0.1.0"
+description = "Yen currency string parser."
+authors = ["kenjimaru <kendimaru2@gmail.com>"]
+maintainers = ["kenjimaru <kendimaru2@gmail.com>"]
+readme = 'README.rst'
+repository = 'https://github.com/kendimaru/yen-parser'
+keywords = ['Japanese', 'yen', 'currency', 'parse']
+license = "MIT"
+
+classifiers=[
+    # How mature is this project? Common values are
+    #   3 - Alpha
+    #   4 - Beta
+    #   5 - Production/Stable
+    'Development Status :: 3 - Alpha',
+    'Intended Audience :: Developers',
+    'License :: OSI Approved :: MIT License',
+
+    'Programming Language :: Python :: 3.6',
+    'Programming Language :: Python :: 3.7',
+    'Programming Language :: Python :: 3.8',
+    'Programming Language :: Python :: 3.9',
+]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,78 @@
+Metadata-Version: 2.1
+Name: yen-parser
+Version: 0.1.0
+Summary: Yen currency string parser.
+Home-page: https://github.com/kendimaru/yen-parser
+License: MIT
+Keywords: Japanese,yen,currency,parse
+Author: kenjimaru
+Author-email: kendimaru2@gmail.com
+Maintainer: kenjimaru
+Maintainer-email: kendimaru2@gmail.com
+Requires-Python: >=3.6,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Project-URL: Repository, https://github.com/kendimaru/yen-parser
+Description-Content-Type: text/x-rst
+
+
+
+Yen currency string parser.
+
+============
+Installation
+============
+
+::
+
+    pip install yen-parser
+
+=====
+Usage
+=====
+
+-----------
+Basic usage
+-----------
+
+::
+
+    >>> from yen_parser import parse_yen
+    >>> parse_yen("¥45,000")
+    45000
+
+---------------
+Supported cases
+---------------
+
+parse-yen function accepts string in the very rough format::
+
+    >>> parse_yen("45000")
+    45000
+
+    >>> parse_yen("45,000")
+    45000
+
+    >>> parse_yen("¥45,000")
+    45000
+
+====
+Note
+====
+
+As the name of this library `yen-parsr` describes, only support Japanese yen currency format.
+If you want to deal with other currency, there are more nicely library exists on PyPI, e.g.
+price-parser
+
+========
+Disclaim
+========
+
+This library is not intended to be used for important and/or critical work like financial situation.
+
