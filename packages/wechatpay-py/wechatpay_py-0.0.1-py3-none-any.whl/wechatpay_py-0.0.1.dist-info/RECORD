@@ -1,0 +1,11 @@
+wechatpaypy/__init__.py,sha256=wDeHJD2CyKyAQax_nSoZLRkY1tyEI1XEbP_DEwU-eI4,72
+wechatpaypy/client.py,sha256=D7wYeshWPDF4ZbG7nSlkXSe-MqGgueMwNdZYO0r0ph0,3620
+wechatpaypy/credential.py,sha256=t12UGhJYqYdcZjhcQNytcS76WbAI6ZUHxF9Xqk1SH0w,1927
+wechatpaypy/errors.py,sha256=mOhf0RdUNuM_RTgqfCoGbRYG5Dmy0ZXU4Ixn4wn81gw,219
+wechatpaypy/main.py,sha256=trBMcJsCSdcbX3z5OJjaTQYI803gDFwPh1vZlfmOJic,1197
+wechatpaypy/validator.py,sha256=CnF7V1kFeU3ZYfATZq8XnNWrgCKBsXvRhbwbaGtPSdQ,1359
+wechatpay_py-0.0.1.dist-info/LICENSE,sha256=k3FkeSwvFcgOAeHLd2FB74Iq1PpG1q6vXrFSRjJZzbM,1069
+wechatpay_py-0.0.1.dist-info/METADATA,sha256=KTwVdlLUV4yu9R9hE09uiEbGg8UrD-M9tuP2XB_-o90,1734
+wechatpay_py-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+wechatpay_py-0.0.1.dist-info/top_level.txt,sha256=nBU6s4NE0Ia2GF2r2MExDbFL9_s79bNHtlSJAm9bx3k,12
+wechatpay_py-0.0.1.dist-info/RECORD,,

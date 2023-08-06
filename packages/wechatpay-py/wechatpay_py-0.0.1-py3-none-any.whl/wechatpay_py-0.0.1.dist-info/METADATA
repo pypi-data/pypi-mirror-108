@@ -1,0 +1,78 @@
+Metadata-Version: 2.1
+Name: wechatpay-py
+Version: 0.0.1
+Summary: A python implementation for wechatpay-apiv3
+Home-page: https://github.com/gudong-coding/wechatpay-py
+Author: Gudong Coding
+Author-email: opensource@gudong.run
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/gudong-coding/wechatpay-py/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: aiohttp
+Requires-Dist: orjson
+Requires-Dist: pybase64
+Requires-Dist: pycryptodome
+
+# wechatpay-py
+
+This is a python implementation of wechatpay apiv3. Implemented with aiohttp for now. The project is now at alpha state, some features are still missing, use at your own risk.
+
+## Install
+```sh
+pip install wechatpay-py
+```
+
+## Usage
+```py
+credential = WechatPayCredential(
+    mch_id='123456',
+    app_id='',
+    mch_certificateSerialNumber='asdfasdfadfasdfasdfasdf',
+    mch_priv_key_file='path to the key file'
+)
+validator = WechatPayValidator(
+    *, **kwargs
+)
+client = AsyncWechatPayClient(
+    credential,
+    validator
+)
+
+# get certificates
+client.get_certificates()
+
+# create order
+# create jsapi order
+client.jsapi_prepay(
+    description='description of the order',
+    out_trade_NO='side'
+    notify_url='url of the notification'
+    amount=100,
+    payer=xyz
+)
+
+# create native order
+client.native_prepay(
+    description='description of the order',
+    out_trade_NO='side'
+    notify_url='url of the notification'
+    amount=100,
+    payer=xyz
+)
+
+# querys
+client.get_order_by_transaction_id(
+
+)
+client.get_order_by_out-trade-no(
+
+)
+```
+
+
