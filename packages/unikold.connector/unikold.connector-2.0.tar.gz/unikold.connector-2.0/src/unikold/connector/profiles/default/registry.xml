@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<registry>
+  <records interface="unikold.connector.browser.controlpanel.IUniKoLdConnectorControlPanelView"
+           prefix="unikold_connector" />
+  <records interface="unikold.connector.browser.controlpanel_lsf.IUniKoLdConnectorLSFControlPanelView"
+           prefix="unikold_connector_lsf" />
+  <records interface="unikold.connector.browser.controlpanel_ldap.IUniKoLdConnectorLDAPControlPanelView"
+           prefix="unikold_connector_ldap" />
+</registry>
