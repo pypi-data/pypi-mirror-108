@@ -1,0 +1,11 @@
+vyoma_download/__init__.py,sha256=KSrW2rGHL6IUogFimFvlYAoNXQTgOJaYXHTl6ILzwDg,148
+vyoma_download/cli.py,sha256=6k3zaSO0odPCS-Jjzt1m0-aSfvQgIxhwwrl20H3ti-4,4607
+vyoma_download/verbose_logger.py,sha256=c6qizDf_bGUupR6eol0jDVe5Xf0nx2ViD5-cwILpoV4,3757
+vyoma_download/vyoma_download.py,sha256=iqrMZthJfwNZ5FZDU0W4JnD_4wlXud4mo4fnNNURVgs,17710
+vyoma_download-0.3.0.dist-info/AUTHORS.rst,sha256=oPn2na2vtwDDxf9ue6OF-iGY7SgGg0rx89WZ4W9ubBM,172
+vyoma_download-0.3.0.dist-info/LICENSE,sha256=edwcHxsrHLVumaMOtYH2McBniYmG7bDeXTk4H36D02s,1079
+vyoma_download-0.3.0.dist-info/METADATA,sha256=U6s4GxLoqXFaiEx5aRei4RQgHDzyE8fi-2W0c2ST7_8,2442
+vyoma_download-0.3.0.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+vyoma_download-0.3.0.dist-info/entry_points.txt,sha256=cUgBNZWanEQQ2Bh-PHyy0H07uz8ioFaaHa4v3-XAN90,60
+vyoma_download-0.3.0.dist-info/top_level.txt,sha256=-1kck5Vtoqhfs-H4e3KWj1xys9MOsYR6-UGTdaLc1ok,15
+vyoma_download-0.3.0.dist-info/RECORD,,
