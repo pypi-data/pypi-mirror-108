@@ -1,0 +1,23 @@
+Metadata-Version: 1.1
+Name: pymagnification
+Version: 0.0.1
+Summary: python wrapper to the windows magnification api
+Home-page: https://github.com/avivost/pymagnification
+Author: Aviv Ostrovsky
+Author-email: ostrovsky.aviv@gmail.com
+License: MIT
+Download-URL: https://github.com/avivost/pymagnification/archive/refs/tags/v0.0.1.zip
+Description: UNKNOWN
+Keywords: winuse32,pywin32,magnification,pymagnification
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
