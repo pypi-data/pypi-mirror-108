@@ -1,0 +1,4 @@
+[console_scripts]
+psview = progshot:web_server_main
+psview-cli = progshot:cli_main
+
