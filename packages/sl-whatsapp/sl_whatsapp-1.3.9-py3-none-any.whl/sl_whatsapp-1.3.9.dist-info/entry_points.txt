@@ -1,0 +1,3 @@
+[console_scripts]
+sl-whatsapp = sl_whatsapp.__main__:main
+
