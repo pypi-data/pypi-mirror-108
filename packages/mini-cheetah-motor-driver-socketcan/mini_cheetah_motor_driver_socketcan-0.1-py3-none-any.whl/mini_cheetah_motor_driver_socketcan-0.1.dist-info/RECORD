@@ -1,0 +1,7 @@
+motor_driver/__init__.py,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+motor_driver/canmotorlib.py,sha256=6R8enivDEp2nOsQukm-GMPuQC5gJXWzi-1b_bNXoxkQ,16569
+mini_cheetah_motor_driver_socketcan-0.1.dist-info/LICENSE,sha256=NUepy40xuJcq2Cy6sc-uerPEzVzWwmMzAXD9YGkk12Q,1068
+mini_cheetah_motor_driver_socketcan-0.1.dist-info/METADATA,sha256=9xrNRkbTG5L1AIYHdHCRm8nFW2u-pjDdPcy0bxdWwQ0,2828
+mini_cheetah_motor_driver_socketcan-0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+mini_cheetah_motor_driver_socketcan-0.1.dist-info/top_level.txt,sha256=LtwQi9hHqidAcZA_NBXW8F7xTeFheUuDfGtw_el3RAU,13
+mini_cheetah_motor_driver_socketcan-0.1.dist-info/RECORD,,
