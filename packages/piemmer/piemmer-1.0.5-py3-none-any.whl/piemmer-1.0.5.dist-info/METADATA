@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: piemmer
+Version: 1.0.5
+Summary: A algorithm that simplify the input for principal component analysis
+Home-page: UNKNOWN
+Author: Hao-Wei Chang
+Author-email: emmer.man42@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: matplotlib
+Requires-Dist: scikit-bio
+Requires-Dist: scipy
+Requires-Dist: tqdm
+Requires-Dist: statsmodels
+
+UNKNOWN
+
