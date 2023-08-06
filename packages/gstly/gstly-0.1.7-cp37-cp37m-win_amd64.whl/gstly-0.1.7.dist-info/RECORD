@@ -1,0 +1,11 @@
+gstly/__init__.cp37-win_amd64.pyd,sha256=V5rTh_c1H8JHFSOG34I7noMwlNDhUkqBuyo6iG8sVqY,40448
+gstly/abstract_stream_reader.cp37-win_amd64.pyd,sha256=9ihSjEz18eaC6L1XuW-2vFYzV12Og3L8gcmGeFPSMOI,77824
+gstly/gobject_init.cp37-win_amd64.pyd,sha256=fz1bIIiI7ZmN51bCAuwrkC4ICkaGtZrq8IXnBReUBXU,60928
+gstly/gst_stream_reader.cp37-win_amd64.pyd,sha256=2mGKj2NzdVtkKGrU6M-8UmuDJ5VKMrL0GiGSHvmcYTM,135680
+gstly/logger.cp37-win_amd64.pyd,sha256=nrFgi66N2KbT9Syr3tHNj9oV1k9Pzj09iv8M544J-F8,53760
+gstly/pipeline_factories.cp37-win_amd64.pyd,sha256=rdBMiB8TUyaafEmHNx73q-kX8cHqGjozEkVsoFoea1w,142848
+gstly/utils/gstreamer.cp37-win_amd64.pyd,sha256=lBjbRQcPJAg-ELzimBCDBSGFQisxsIctKT_mgHcXw8g,152064
+gstly/utils/timing.cp37-win_amd64.pyd,sha256=A-ofZIUUYCynPvTdyqWc3NQmlb4gxH4sgnFdeKpDKvI,54272
+gstly-0.1.7.dist-info/WHEEL,sha256=TlpHDKh5CWCG1lWGpUbvlMYcXkipGHCkdc3BYJ8kKh4,92
+gstly-0.1.7.dist-info/METADATA,sha256=k-5jnJbm9eYaFFB1cd9Ah6F4gnEYL_XSdDrc_Vv2L00,540
+gstly-0.1.7.dist-info/RECORD,,
