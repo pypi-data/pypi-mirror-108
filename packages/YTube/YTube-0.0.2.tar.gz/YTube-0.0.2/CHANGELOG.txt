@@ -1,0 +1,7 @@
+Change Log
+=============
+
+0.0.2 4/06/2021
+---------------
+Second Release
+Corrected the Download module
