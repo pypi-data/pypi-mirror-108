@@ -1,0 +1,12 @@
+azure-cognitiveservices-vision-customvision>=3
+azure.storage.blob>=12
+click>=8
+tqdm>=4
+
+[dev]
+black
+flake8
+pytest
+pytest-env
+setup-cfg-fmt
+setuptools_scm

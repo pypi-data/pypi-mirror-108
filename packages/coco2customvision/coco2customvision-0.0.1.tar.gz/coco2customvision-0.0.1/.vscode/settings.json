@@ -1,0 +1,29 @@
+{
+    "python.testing.pytestArgs": [
+        ".",
+        "-c", "pytest.ini"
+    ],
+    "python.testing.unittestEnabled": false,
+    "python.testing.nosetestsEnabled": false,
+    "python.testing.pytestEnabled": true,
+    "python.linting.enabled": true,
+    "python.linting.flake8Enabled": true,
+    "cSpell.words": [
+        "Pypi",
+        "bbox",
+        "customvision",
+        "iscrowd",
+        "junitxml",
+        "mkdir",
+        "msrest",
+        "pytest",
+        "setuptools",
+        "softprops",
+        "supercategory",
+        "testpypi",
+        "tqdm"
+    ],
+    "cSpell.enableFiletypes": [
+        "markdown"
+    ]
+}
