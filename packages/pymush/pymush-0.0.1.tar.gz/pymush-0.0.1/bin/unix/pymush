@@ -1,0 +1,7 @@
+#!/usr/bin/env python3
+from pymush.launcher import PyMUSHLauncher
+
+
+if __name__ == "__main__":
+    launcher = PyMUSHLauncher()
+    launcher.run()
