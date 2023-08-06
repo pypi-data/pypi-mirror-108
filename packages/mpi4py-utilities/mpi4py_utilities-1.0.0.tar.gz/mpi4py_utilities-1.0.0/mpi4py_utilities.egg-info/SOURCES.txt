@@ -1,0 +1,12 @@
+README.rst
+setup.cfg
+setup.py
+mpi4py_utilities/__init__.py
+mpi4py_utilities/world1D.py
+mpi4py_utilities/world2D.py
+mpi4py_utilities/world3D.py
+mpi4py_utilities.egg-info/PKG-INFO
+mpi4py_utilities.egg-info/SOURCES.txt
+mpi4py_utilities.egg-info/dependency_links.txt
+mpi4py_utilities.egg-info/requires.txt
+mpi4py_utilities.egg-info/top_level.txt
