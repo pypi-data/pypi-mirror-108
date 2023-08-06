@@ -1,0 +1,8 @@
+README.md
+setup.py
+alibabacloud_opensearch_util/__init__.py
+alibabacloud_opensearch_util/opensearch_util.py
+alibabacloud_opensearch_util.egg-info/PKG-INFO
+alibabacloud_opensearch_util.egg-info/SOURCES.txt
+alibabacloud_opensearch_util.egg-info/dependency_links.txt
+alibabacloud_opensearch_util.egg-info/top_level.txt
