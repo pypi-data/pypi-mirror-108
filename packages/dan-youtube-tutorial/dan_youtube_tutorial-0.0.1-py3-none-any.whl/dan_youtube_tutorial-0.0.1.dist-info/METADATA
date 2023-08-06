@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: dan-youtube-tutorial
+Version: 0.0.1
+Summary: A youtube tutorial on python packages.
+Home-page: https://github.com/danielwilczak101
+Author: Daniel Wilczak
+Author-email: danielwilczak101@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: matplotlib (~=3.3.2)
+Requires-Dist: pyserial (~=3.4)
+
+A youtube tutorial on python packages.
+
+
