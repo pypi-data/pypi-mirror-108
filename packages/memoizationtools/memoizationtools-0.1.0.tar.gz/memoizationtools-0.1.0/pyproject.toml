@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "memoizationtools"
+version = "0.1.0"
+description = ""
+authors = ["edkrueger <edkruegerdata@gmail.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.7"
+
+[tool.poetry.dev-dependencies]
+black = "*"
+pipenv-to-requirements = "*"
+pre-commit = "*"
+pylint = "*"
+pytest = "*"
+pytest-cov = "*"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
