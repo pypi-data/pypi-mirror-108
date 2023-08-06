@@ -1,0 +1,9 @@
+multicall/__init__.py,sha256=zTpRJWNn1COz2iQWYN2s5q7nlmcu96Eg6SQKygyGDlA,139
+multicall/call.py,sha256=ymA3lX3KyO91aB8UZnWWj-v1ZX46GVomJ_oNYqcGuDs,1350
+multicall/constants.py,sha256=KoN9aALSB9wgRK18WAHybySAU8N3QyeKF8_1-RE2l3c,485
+multicall/multicall.py,sha256=R3-zMpX4E-9DZ4__6fnh7mq_rfSnwsImh4JRKIXwMug,886
+multicall/signature.py,sha256=7YM5VE-Ho1xDppiFNG89M-lobjtzRc1-H7dqP3motiY,1284
+multicall-0.1.2.dist-info/LICENSE,sha256=D3yv848cDTRMIGHVWMr1qtnMSppEITkgdnHZzludn6E,1063
+multicall-0.1.2.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+multicall-0.1.2.dist-info/METADATA,sha256=_iBbicSIyPZVyxS-9c9pVCIyXR8MhhIXdNfs6-hWS-M,510
+multicall-0.1.2.dist-info/RECORD,,
