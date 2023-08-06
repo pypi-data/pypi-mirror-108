@@ -1,0 +1,9 @@
+README.md
+setup.cfg
+setup.py
+src/polvo.egg-info/PKG-INFO
+src/polvo.egg-info/SOURCES.txt
+src/polvo.egg-info/dependency_links.txt
+src/polvo.egg-info/not-zip-safe
+src/polvo.egg-info/requires.txt
+src/polvo.egg-info/top_level.txt
