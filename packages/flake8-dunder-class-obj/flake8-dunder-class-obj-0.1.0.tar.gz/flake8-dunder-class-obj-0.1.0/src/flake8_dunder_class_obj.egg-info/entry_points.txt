@@ -1,0 +1,3 @@
+[flake8.extension]
+DCO = flake8_dunder_class_obj:Plugin
+
