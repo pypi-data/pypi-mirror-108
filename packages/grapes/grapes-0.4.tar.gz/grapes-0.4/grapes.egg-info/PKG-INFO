@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: grapes
+Version: 0.4
+Summary: Helper for dataflow based programming
+Home-page: UNKNOWN
+Author: Giulio Foletto
+Author-email: giulio.foletto@outlook.com
+License: Apache
+Platform: UNKNOWN
+Provides-Extra: visualize
+Provides-Extra: testing
+License-File: LICENSE.txt
+License-File: NOTICE.txt
+
+UNKNOWN
+
