@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: robloxasset
+Version: 1.0.0
+Summary: An Wrapper for Roblox Web Asset Api.
+Home-page: https://github.com/hxnter69/robloxasset
+Author: hxnter
+Author-email: UNKNOWN
+License: UNKNOWN
+Download-URL: https://github.com/hxnter69/robloxasset/archive/refs/heads/main.zip
+Platform: UNKNOWN
+Requires-Dist: requests
+
+UNKNOWN
+
+
