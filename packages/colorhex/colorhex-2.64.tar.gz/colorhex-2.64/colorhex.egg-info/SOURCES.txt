@@ -1,0 +1,7 @@
+setup.py
+colorhex/__init__.py
+colorhex/colorex.py
+colorhex.egg-info/PKG-INFO
+colorhex.egg-info/SOURCES.txt
+colorhex.egg-info/dependency_links.txt
+colorhex.egg-info/top_level.txt
