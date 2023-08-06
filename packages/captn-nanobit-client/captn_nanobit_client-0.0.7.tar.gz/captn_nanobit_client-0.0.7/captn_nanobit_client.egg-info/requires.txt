@@ -1,0 +1,8 @@
+pip
+packaging
+pandas
+requests
+plotly
+kaleido
+
+[dev]
