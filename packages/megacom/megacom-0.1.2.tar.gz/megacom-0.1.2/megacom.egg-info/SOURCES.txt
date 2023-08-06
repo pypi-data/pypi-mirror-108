@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+megacom/__init__.py
+megacom/__main__.py
+megacom.egg-info/PKG-INFO
+megacom.egg-info/SOURCES.txt
+megacom.egg-info/dependency_links.txt
+megacom.egg-info/entry_points.txt
+megacom.egg-info/not-zip-safe
+megacom.egg-info/requires.txt
+megacom.egg-info/top_level.txt

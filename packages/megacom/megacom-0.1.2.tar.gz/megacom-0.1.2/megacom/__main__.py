@@ -1,0 +1,2 @@
+import megacom
+megacom.main()
