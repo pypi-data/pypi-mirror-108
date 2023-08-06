@@ -1,0 +1,3 @@
+[console_scripts]
+ꦱꦮ = sawa.cli:run_as_command
+
