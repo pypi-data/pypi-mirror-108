@@ -1,0 +1,5 @@
+daltools
+h5py
+loprop
+numpy
+scipy
