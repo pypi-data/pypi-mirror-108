@@ -1,0 +1,126 @@
+Metadata-Version: 2.1
+Name: connecty
+Version: 1.0.3
+Summary: Discord.py bot to connect channels across servers
+Home-page: https://discord.gg/fcZBB2v
+Author: Znunu
+License: UNKNOWN
+Description: # Connecty
+        You can either import the connecty module or run it directly.
+        Importing let's you fully customize and integrate connecty in other scripts.
+        Running offers limited customizability but is simpler and faster.
+        
+        ## Run approach
+        - Install python
+        - Install connecty
+        - Create a config file
+        - Run connecty
+        
+        ### Install Python
+        Get the installer [here](https://www.python.org/downloads/)
+        
+        ### Install Connecty
+        ```
+        pip install connecty
+        ```
+        
+        ### Create a config file
+        Save a new text file with your config.
+        The file must be in the .ini format and contain your token and all your connections.
+         ```ini
+        [BOT]
+        token = tokengoeshere
+        
+        [my_connection_1]
+        channels = 123456789 123456789 123456789
+        echo = yes
+        
+        [my_connection_2]
+        channels = 123456789 123456789 123456789
+        repeat = yes
+        template = yes
+        ```
+        The first section should be called `[BOT]` and contain your token.
+        Each subsequent section is a connection.
+        The exact name doesn't matter so name them something memorable.
+        
+        ### Run the bot
+         ```
+        connecty path/to/config.ini
+         ```
+        
+        
+        ## Import approach
+        ### Basic Example
+        ```python
+        from connecty import Bot
+        bot = Bot()
+        
+        @bot.configure
+        async def config():
+        
+            connection = await bot.register([YOUR CHANNEL IDs HERE])
+            
+            @connection.on_message
+            async def on_msg(message):
+                await connection.send(message)
+                
+        bot.run(YOUR TOKEN HERE)
+        ```
+        
+        ### Advanced Example
+        ```python
+        from connecty import Bot
+        bot = Bot()
+        
+        @bot.configure
+        async def config():
+        
+            connection = await bot.register([YOUR CHANNEL IDs HERE], echo=True)
+        
+            @connection.on_message
+            async def on_msg(message):
+                await connection.send(message)
+        
+            @connection.links[0].on_message
+            async def on_msg(message):
+                await connection.links[2].send("Message sent from 0")
+        
+            @connection.links[1].on_message
+            async def on_msg(message):
+                await connection.links[2].send("Message sent from 1")
+        
+        bot.run(YOUR TOKEN HERE)
+        ```
+        
+        
+        ## Options
+        
+        The options are boolean options that are unique for each connection.
+        They can be added to each section in the config file or passed to `connecty.Bot.register`.
+        If no value is given, a default value is assumed.
+        This default value can be changed by editing the internal default config file or when calling `connecty.Bot.__init__`.
+        You can find the directory where the internal config file is stored with
+         ```
+        python -c "import string, os;print(string.__file__)"
+         ```
+        
+        ### Echo
+        Guarantees that the bot will never echo a message in the same channel.
+        This takes precedence over any function call that instructs the bot to send a message.
+        False by default.
+        
+        ### Repeat
+        Guarantees that the bot will never send the same message twice in the same channel.
+        This takes precedence over any function call that instructs the bot to send a message.
+        False by default.
+        
+        ### Template
+        Enables substitution into messages sent.
+        Any words that are prefixed with $ will be looked up in the config file.
+        They will then be replaced if a match is found in the section belonging to the connection.
+        False by default.
+        Not available when importing.
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
