@@ -1,0 +1,17 @@
+LICENSE
+MANIFEST.in
+README.rst
+__pkginfo__.py
+pyproject.toml
+requirements.txt
+setup.cfg
+setup.py
+formate_black/__init__.py
+formate_black/py.typed
+formate_black.egg-info/PKG-INFO
+formate_black.egg-info/SOURCES.txt
+formate_black.egg-info/dependency_links.txt
+formate_black.egg-info/entry_points.txt
+formate_black.egg-info/not-zip-safe
+formate_black.egg-info/requires.txt
+formate_black.egg-info/top_level.txt
