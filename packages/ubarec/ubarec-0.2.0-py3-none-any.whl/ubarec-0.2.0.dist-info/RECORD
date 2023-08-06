@@ -1,0 +1,17 @@
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_functional.py,sha256=tE4MLNju8fSmLGLk5ta0200GzW0WUW0JKyALbBuUkQ4,265
+tests/test_handlers.py,sha256=fJiix0m9fgK2jRLeTh-2QYEWyl49IQZOrDl3Y67Loyg,255
+ubarec/__init__.py,sha256=qNlphaDLSEkF8JwBIsk1MJJ9MoFCfhhVQHkmlb6XGMM,93
+ubarec/__main__.py,sha256=zL5gmDty8VPaRw4j4le4qRxMfAFQuS3TuDCUpkXlvuo,47
+ubarec/_defaults.py,sha256=fn9ugzyWJpwn_84Wkyv9VGU0FcoPPtcK9MDMUoMOTic,2361
+ubarec/_version.py,sha256=lEzd83CQTK_8BJQGZlTl5hQlCG-xCdKmAK32_dasmug,498
+ubarec/backup.py,sha256=CmYjOCwdI20wpHGs0nWZEtN1UIhnmYq_2IpD6euQBI4,1942
+ubarec/drivers.py,sha256=V3woz5CGiFmVWgnVT0RjiYCai-I2Nmk8EMFerf0sEj0,2869
+ubarec/handlers.py,sha256=jlG0gB-n2J9prWdxhR3T_gf1-2bvF-_iciyv64Bz_UA,1372
+ubarec/main.py,sha256=QcJE61IYTIKVN9cJ5yDxEQ3DK2kupQabbOp4rwKZS-4,1627
+ubarec/restore.py,sha256=DAjOiS3Nxj64FXvFwDa-B1G3MQSuGflHcm5JQ1gi06o,3094
+ubarec-0.2.0.dist-info/LICENSE,sha256=so9WXG9RT0F9Q_h_CDbdGHyO47wapH00HPST5jT4QNU,1079
+ubarec-0.2.0.dist-info/METADATA,sha256=A4Myl_eY-hDSKH3Uyo96pr9Kme7RwGWx0odBH9fJvVM,5899
+ubarec-0.2.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+ubarec-0.2.0.dist-info/top_level.txt,sha256=59PIAfa1uhRDPC0HJLeTiogxblc89Sgu6L4L8w59lwE,13
+ubarec-0.2.0.dist-info/RECORD,,
