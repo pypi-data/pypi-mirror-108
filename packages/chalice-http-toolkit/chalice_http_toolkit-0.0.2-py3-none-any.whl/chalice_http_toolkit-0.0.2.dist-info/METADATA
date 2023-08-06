@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: chalice-http-toolkit
+Version: 0.0.2
+Summary: Several helpers for building serverless websites using Chalice
+Home-page: https://gitlab.com/chalice-http-toolkit/chalice-http-toolkit
+Author: Chris Lapa
+Author-email: 
+License: UNKNOWN
+Project-URL: Bug Tracker, https://gitlab.com/chalice-http-toolkit/chalice-http-toolkit/-/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Requires-Dist: chalice (>=1.22.3)
+Requires-Dist: python-magic (==0.4.22)
+Requires-Dist: requests-toolbelt (==0.9.1)
+Provides-Extra: layered
+Requires-Dist: Jinja2 (==2.10) ; extra == 'layered'
+Requires-Dist: Pillow (==8.2.0) ; extra == 'layered'
+
+UNKNOWN
+
