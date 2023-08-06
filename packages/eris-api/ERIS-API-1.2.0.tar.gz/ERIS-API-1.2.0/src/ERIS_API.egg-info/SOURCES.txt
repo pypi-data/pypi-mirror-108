@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/ERIS_API/ERIS_API.py
+src/ERIS_API/ERIS_Responses.py
+src/ERIS_API/__init__.py
+src/ERIS_API/utils.py
+src/ERIS_API.egg-info/PKG-INFO
+src/ERIS_API.egg-info/SOURCES.txt
+src/ERIS_API.egg-info/dependency_links.txt
+src/ERIS_API.egg-info/requires.txt
+src/ERIS_API.egg-info/top_level.txt
