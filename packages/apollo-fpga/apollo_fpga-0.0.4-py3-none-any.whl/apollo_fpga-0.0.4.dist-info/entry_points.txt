@@ -1,0 +1,3 @@
+[console_scripts]
+apollo=apollo_fpga.commands.cli:main
+
