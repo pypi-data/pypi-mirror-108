@@ -1,0 +1,10 @@
+flake8_loopy/__init__.py,sha256=blzZ_g52MAC7QYADvGY6Osa68Y9i8UT9RZdriBFruwI,839
+flake8_loopy/defs.py,sha256=C6st5Irf73be3H1NeoElFgTa_gi7FMpux1bOt4OQlCw,252
+flake8_loopy/error_codes.py,sha256=bW5BcfhPOEWa-HxE_Oe3C6rtcLlVvOS7DU4QggBnZv4,75
+flake8_loopy/visitor.py,sha256=i2W9faQnfRgaROoeikcNwRzsttx3BJtYFyIdvgZuvj8,1922
+flake8_loopy-1.0.1.dist-info/LICENSE,sha256=QX382FxOC-nHmxDt038qr3YQI71QttSZ2HeGeuNMJBI,1072
+flake8_loopy-1.0.1.dist-info/METADATA,sha256=oX68mOIdUBaUc8sxFezkB4EBz76pWom1S3EHOgMzHeo,2262
+flake8_loopy-1.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+flake8_loopy-1.0.1.dist-info/entry_points.txt,sha256=3rp-aFZovCf4MZKl2zJLCIfGwAHx-xYwr9HSoSnQnvs,51
+flake8_loopy-1.0.1.dist-info/top_level.txt,sha256=koYB2xolI3d9LTJBGWqYoCRYOpiOGn2uZNkYZfClH84,13
+flake8_loopy-1.0.1.dist-info/RECORD,,
