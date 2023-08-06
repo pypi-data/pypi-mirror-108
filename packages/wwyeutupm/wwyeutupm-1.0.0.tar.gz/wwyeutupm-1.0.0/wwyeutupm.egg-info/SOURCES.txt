@@ -1,0 +1,10 @@
+CHANGELOG.txt
+LICENSE.txt
+MANIFEST.in
+README.txt
+setup.py
+wwyeutupm/__init__.py
+wwyeutupm.egg-info/PKG-INFO
+wwyeutupm.egg-info/SOURCES.txt
+wwyeutupm.egg-info/dependency_links.txt
+wwyeutupm.egg-info/top_level.txt

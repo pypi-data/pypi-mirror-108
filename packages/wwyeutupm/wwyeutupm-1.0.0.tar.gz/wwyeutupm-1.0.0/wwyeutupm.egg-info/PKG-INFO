@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: wwyeutupm
+Version: 1.0.0
+Summary: A module that writes python
+Home-page: UNKNOWN
+Author: its_me
+Author-email: rycepie3909@gmail.com
+License: MIT
+Description: Why Would You Ever Use This Useless Python Module (wwyeutupm) is a module that writes python from python, idk look at a tutorial or something but its honestly pretty useless so have fun
+        
+        Change Log
+        ==========
+        
+        1.0.0 (7/06/2021)
+        -----------------
+        
+        - First Release
+Keywords: writer
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3

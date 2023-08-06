@@ -1,0 +1,1 @@
+Why Would You Ever Use This Useless Python Module (wwyeutupm) is a module that writes python from python, idk look at a tutorial or something but its honestly pretty useless so have fun
