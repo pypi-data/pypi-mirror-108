@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+get_datetime/__init__.py
+get_datetime.egg-info/PKG-INFO
+get_datetime.egg-info/SOURCES.txt
+get_datetime.egg-info/dependency_links.txt
+get_datetime.egg-info/top_level.txt
