@@ -1,0 +1,60 @@
+{% set name = "CarnaPy" %}
+{% set version = "0.0.12" %}
+
+package:
+  name: "{{ name|lower }}"
+  version: "{{ version }}"
+
+source:
+  url: "https://pypi.io/packages/source/{{ name[0]|lower }}/{{ name|lower }}/{{ name }}-{{ version }}.tar.gz"
+
+build:
+  number: 0
+
+requirements:
+  build: # tools and libraries required for building only
+    - git
+    - cmake
+    - pybind11
+    - boost-cpp
+    - eigen
+    - matplotlib # for tests only
+    - scipy      # for tests only
+  host: # shared libraries required for the target system
+    - pip
+    - python
+    - numpy
+    - glew
+    - pyyaml
+  run:
+    - numpy
+    - python
+    - packaging
+
+test:
+  imports:
+    - carna
+    - carna.py
+    - carna.base
+    - carna.helpers
+    - carna.presets
+    - carna.egl
+    - carna_debug
+    - carna_debug.py
+    - carna_debug.base
+    - carna_debug.helpers
+    - carna_debug.presets
+    - carna_debug.egl
+
+about:
+  home: "http://evoid.de"
+  license: MIT
+  license_family: MIT
+  license_file: 
+  summary: "General-purpose real-time 3D visualization"
+  doc_url: 
+  dev_url: 
+
+extra:
+  recipe-maintainers:
+    - kostrykin
