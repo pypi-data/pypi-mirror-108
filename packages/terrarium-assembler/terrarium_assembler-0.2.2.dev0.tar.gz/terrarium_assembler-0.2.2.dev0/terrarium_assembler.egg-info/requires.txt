@@ -1,0 +1,6 @@
+easydict
+pytictoc
+file-magic
+jinja2
+pyyaml
+wheel_filename
