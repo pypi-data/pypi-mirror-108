@@ -1,0 +1,3 @@
+[console_scripts]
+opu_test = lightonml.cmd_line.opu_test:main
+
