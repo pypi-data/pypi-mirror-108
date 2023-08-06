@@ -1,0 +1,6 @@
+webbrowser
+flask
+flask_cors
+numpy
+tqdm
+flask-compress
