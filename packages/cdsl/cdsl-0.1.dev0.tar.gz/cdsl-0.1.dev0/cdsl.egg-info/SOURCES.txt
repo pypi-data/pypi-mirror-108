@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+cdsl/__init__.py
+cdsl/cdsl.c
+cdsl.egg-info/PKG-INFO
+cdsl.egg-info/SOURCES.txt
+cdsl.egg-info/dependency_links.txt
+cdsl.egg-info/top_level.txt
