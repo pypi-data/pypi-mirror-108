@@ -1,0 +1,8 @@
+flake8_comments/__init__.py,sha256=hhTDw9Vd0WgdX9-ksPoe80ZpDEF7IKTyQ6lBR19Csss,137
+flake8_comments/_checker.py,sha256=x_xOXv0mHJVag-P7T_2aOzV-I2vtom5znVRVPmf7f4o,741
+flake8_comments/_core.py,sha256=_DA4Pumgi5oYFYBU4BP1dRpOdDBEf2OEE5ZBdlUpKGo,1720
+flake8_comments-0.1.0.dist-info/entry_points.txt,sha256=zLJotyks9M2wMP6N8grq9Vj5DR_Q4Xs30EuGy_X830M,49
+flake8_comments-0.1.0.dist-info/LICENSE,sha256=1H9qvuiJi571tvL2dRTkwzy53sr6KTbSlPurg0x8Y4I,1048
+flake8_comments-0.1.0.dist-info/WHEEL,sha256=o-Q2E8s7BKkCJ1EC2uQdaymZVVu2aUt1e8uTTFpzHVs,81
+flake8_comments-0.1.0.dist-info/METADATA,sha256=09dsX-r1e9FEofW4jDNvOx-9_lTRcMKaWxfZYa0IA3c,2348
+flake8_comments-0.1.0.dist-info/RECORD,,
