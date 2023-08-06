@@ -1,0 +1,6 @@
+winrt
+
+[api]
+Pillow
+fastapi
+uvicorn
