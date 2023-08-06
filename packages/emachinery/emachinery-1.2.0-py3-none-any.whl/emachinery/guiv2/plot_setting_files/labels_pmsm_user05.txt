@@ -1,0 +1,7 @@
+Speed [rpm]
+Position [rad]
+Position Error [rad]
+theta_t [deg]
+Vsat [V]
+Harmonics in current [A]
+LPF(Harmonics) [A]
