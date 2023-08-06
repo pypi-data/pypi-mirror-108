@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: transipddnsclient
+Version: 1.0.1
+Summary: TransIP dDNS Client
+Home-page: https://github.com/kvdheijden/transip-ddns-client
+Author: kvdheijden
+Author-email: koen@kvdheijden.com
+License: MIT
+Project-URL: Documentation, https://github.com/kvdheijden/transip-ddns-client/wiki
+Project-URL: Source, https://github.com/kvdheijden/transip-ddns-client
+Project-URL: Tracker, https://github.com/kvdheijden/transip-ddns-client/issues
+Keywords: dynamic dns transip ddns
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: requests (~=2.25.1)
+Requires-Dist: pyOpenSSL (~=20.0.1)
+Requires-Dist: netifaces (~=0.11.0)
+
+# TransIP dDNS Client
+
+TransIP dDNS Client is a dDNS client for TransIP. 
+It uses the API to add or update DNS entries with a TTL of 0 seconds.
+
+
+## Usage
+```
+usage: python -m transipddnsclient [-h] [--version] [-v [VERBOSITY]] [-c CFG]
+
+TransIP dDNS Client
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --version             show program's version number and exit
+  -v [VERBOSITY]        verbosity level
+  -c CFG, --config CFG  the configuration file (Default:
+                        /etc/transipddnsclient/config.ini)
+```
+
+## TODO
+ - [ ] Installation
+ - [ ] Documentation
+ - [ ] Testing
+
+## License
+See the [LICENSE](LICENSE) file for license right and limitations (MIT)
+

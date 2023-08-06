@@ -1,0 +1,11 @@
+transipddnsclient/__init__.py,sha256=3KXfAcA5rzzQXMtfwpHphgbJNZdA0XWaW96kdWVSZJw,22
+transipddnsclient/__main__.py,sha256=nYUfe3RqdlkSCmnFPNj2er-YnBH5uVJXP3FKOAHwmfg,3303
+transipddnsclient/core.py,sha256=5KPhUPTgwJ-6lGi3h8Tu6pXo5IKN7foqvU24efMGYWo,2047
+transipddnsclient/externalip.py,sha256=47iOCKrlmRLfcbiz41oPo7vqtTZG2cNeTfNsUkpVUQ0,2997
+transipddnsclient/transip.py,sha256=fl4Q8FNhkYcWi14UOrDTwf-UmgLO_XZqwhQw5HAfUCI,7386
+transipddnsclient/utils.py,sha256=Czp40WK9gkOv1v0UQFVmZ8d-VHACsCJceUy8HM2rQmM,747
+transipddnsclient-1.0.1.dist-info/LICENSE,sha256=Ni814xnKulbQa1-Lfeq3WO8z5H_t3q2UVp4tOhwi3pc,1066
+transipddnsclient-1.0.1.dist-info/METADATA,sha256=U3ZXa8irdUw5PTVIHy5A4e0x3bNQbE5IT__EptR59Tg,1526
+transipddnsclient-1.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+transipddnsclient-1.0.1.dist-info/top_level.txt,sha256=q-gp_nhIixLDQiznBQGa2CWv2880Z3lowh2CM1uit3Q,18
+transipddnsclient-1.0.1.dist-info/RECORD,,
