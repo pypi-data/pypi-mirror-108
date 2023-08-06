@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/cdsr_pack/__init__.py
+src/cdsr_pack/builder.py
+src/cdsr_pack/decoder.py
+src/cdsr_pack.egg-info/PKG-INFO
+src/cdsr_pack.egg-info/SOURCES.txt
+src/cdsr_pack.egg-info/dependency_links.txt
+src/cdsr_pack.egg-info/top_level.txt
