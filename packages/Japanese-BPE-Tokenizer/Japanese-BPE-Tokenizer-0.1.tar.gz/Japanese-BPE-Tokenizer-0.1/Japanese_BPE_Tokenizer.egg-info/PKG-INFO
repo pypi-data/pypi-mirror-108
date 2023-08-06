@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: Japanese-BPE-Tokenizer
+Version: 0.1
+Summary: Mecab-based BPE toknizer for Japanese text
+Home-page: http://github.com/stsuchi/Japanese-BPE-Tokenizer
+Author: Shiro T.
+Author-email: UNKNOWN
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
