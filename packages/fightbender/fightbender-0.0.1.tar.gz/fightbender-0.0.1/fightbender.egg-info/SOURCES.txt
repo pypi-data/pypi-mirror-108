@@ -1,0 +1,8 @@
+setup.py
+fightbender/__init__.py
+fightbender.egg-info/PKG-INFO
+fightbender.egg-info/SOURCES.txt
+fightbender.egg-info/dependency_links.txt
+fightbender.egg-info/top_level.txt
+fightbender/generators/__init__.py
+fightbender/generators/linear.py
