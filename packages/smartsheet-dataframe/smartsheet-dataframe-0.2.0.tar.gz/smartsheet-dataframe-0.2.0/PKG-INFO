@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: smartsheet-dataframe
+Version: 0.2.0
+Summary: Converts Smartsheet sheets and reports to a Pandas DataFrame
+Home-page: https://github.com/RCoff/Smartsheet-DataFrame
+Author: Ridge Coffman
+Author-email: coffman.ridge@gmail.com
+License: MIT
+Keywords: spreadsheet,smartsheet,pandas,dataframe
+Platform: UNKNOWN
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.6
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Office/Business :: Financial :: Spreadsheet
+Requires-Python: >=3.6.5
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+UNKNOWN
+
