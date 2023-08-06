@@ -1,0 +1,17 @@
+satisfy_calc/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+satisfy_calc/__main__.py,sha256=8tJcZ2wnd6C9iZ9FeONSVj06DydV_-6bXY2RxCsLcFU,1591
+satisfy_calc/building.py,sha256=EAyCWet5UuER4f9T0qKq-H1KFA7T-9AmElng_lkyl2Y,1485
+satisfy_calc/coproduct_recipes.py,sha256=gliextLncw4-w5CN_lhU1qFzLRELJeKpWyi-ESMpGWc,2619
+satisfy_calc/fetch_item_names.py,sha256=XugHwywzfNdblSy1kxmCO2kZ_CTSZVeIds6GifVocr8,3214
+satisfy_calc/fetch_recipes.py,sha256=iWO46sOx1WcGaamBbRWEgRd90YMdfH6Z3cfPxQLo2XA,6795
+satisfy_calc/item.py,sha256=MA3G6LNiFZUPPpU9WzmGDtY5S2tCYh35iRIdbYvxVC0,1624
+satisfy_calc/recipe.py,sha256=Eu7_o59Cbr8q26cjcGPg4vCIVqpdo1Xuoexdos6AnCI,5288
+satisfy_calc/recipe_storage.py,sha256=7EeYw6rT7mQd2hoiwK6UZA-N8-UJsVkQRF2hSfovcjE,2934
+satisfy_calc/soup.py,sha256=C2dD1bxa23LcL5NbzIvJBuzcmOpSgsrqwsHnLhK6Yuk,2101
+satisfy_calc/tree.py,sha256=agXX6Yv3Q9B5MspKWOA7GsIui47JUlxsLw7hUcuFNF0,8199
+satisfy_calc-1.1.1.dist-info/LICENSE,sha256=y3EK8prdR5IF7Ek6YeOZwqV2tJLRESQldzPZbotoIRA,1070
+satisfy_calc-1.1.1.dist-info/METADATA,sha256=_T4K-lJePFxGCrUVUisbK4gxxKvf_mVcaJPVlDs7RUA,7845
+satisfy_calc-1.1.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+satisfy_calc-1.1.1.dist-info/entry_points.txt,sha256=2OdMQEaOBtXlgDrsTpR6DxdALaLFHohCP6t5aDwV9Ao,61
+satisfy_calc-1.1.1.dist-info/top_level.txt,sha256=jYIk07VSpP49lK64xpzj658cTjyKmtgL0UW0Bn9oLfw,13
+satisfy_calc-1.1.1.dist-info/RECORD,,
