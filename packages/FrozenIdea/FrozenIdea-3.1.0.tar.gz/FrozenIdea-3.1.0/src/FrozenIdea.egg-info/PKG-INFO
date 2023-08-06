@@ -1,0 +1,37 @@
+Metadata-Version: 1.1
+Name: FrozenIdea
+Version: 3.1.0
+Summary: IRC bot toolkit.
+Home-page: https://github.com/Bystroushaak/FrozenIdea
+Author: Bystroushaak
+Author-email: bystrousak@kitakitsune.org
+License: MIT
+Description: Simple, event driven IRC bot class. This class can be used to **quickly** create IRC bots.
+        
+        
+        Changelog
+        =========
+        
+        3.1.0
+        -----
+            - Code ported to py3.
+            - Introduced bot_api.py, which simplifies the creation of new bots even more.
+            - Added more mature package structure.
+        
+        3.0.1
+        -----
+            - Fixed bug in PING handling code.
+        
+        3.0.0
+        -----
+            - Converted to python module.
+            - Uploaded to pypy.
+            - Renamed from FrozenIdea2 back to FrozenIdea.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Topic :: Communications
