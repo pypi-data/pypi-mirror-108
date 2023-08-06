@@ -1,0 +1,1 @@
+This is a code for renaming the image files before annotations.

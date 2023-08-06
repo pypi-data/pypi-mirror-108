@@ -1,0 +1,23 @@
+Metadata-Version: 1.1
+Name: RenameforeAnnotation
+Version: 0.0.1
+Summary: A very basic Rename
+Home-page: UNKNOWN
+Author: Shivesh narain
+Author-email: narainshivv@gmail.com
+License: MIT
+Description: This is a code for renaming the image files before annotations.
+        
+        Change Log
+        ==========
+        
+        0.0.1 (07/06/2021)
+        -------------------
+        - First Release
+Keywords: Rename
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
