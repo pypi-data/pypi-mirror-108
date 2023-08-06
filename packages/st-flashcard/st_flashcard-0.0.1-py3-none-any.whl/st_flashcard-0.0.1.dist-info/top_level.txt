@@ -1,0 +1,3 @@
+flash_card
+my_component
+starter_component
