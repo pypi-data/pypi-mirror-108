@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+WordEmbed/WordEmbed.egg-info/PKG-INFO
+WordEmbed/WordEmbed.egg-info/SOURCES.txt
+WordEmbed/WordEmbed.egg-info/dependency_links.txt
+WordEmbed/WordEmbed.egg-info/requires.txt
+WordEmbed/WordEmbed.egg-info/top_level.txt
