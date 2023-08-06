@@ -1,0 +1,14 @@
+shapreg/__init__.py,sha256=KcvJTHZGRYjddWrSpAq9qcB0BHlj8J9BHHqQqrd4h0I,200
+shapreg/games.py,sha256=iONnZXs-KmYZEUcpSrjQsrQH9l77UKzLv_efaAF-pTA,9730
+shapreg/plotting.py,sha256=258RArmpF8RG1WwtiTg0eGbVwa1hU5XmAvjtwtNT9Pc,10354
+shapreg/removal.py,sha256=QI5xwvRHjEKBgnp9vwFtURKgjoMgX-pwiPAU8J5GJXA,6536
+shapreg/shapley.py,sha256=97XYEd9tk9JwzQH_AiKElrqaGiqrn1HbiAtEwUGVfDw,8575
+shapreg/shapley_sampling.py,sha256=NZZC4qCxPxsvFsuJ-3mH2U9AFJZmNHg9UEOcdx0ceUc,4819
+shapreg/shapley_unbiased.py,sha256=DdzWGeC9eHlEkGkzxaSbM_SyOZE7AiQ_i5LKeQThLzs,7731
+shapreg/stochastic_games.py,sha256=5o3gWylMQM9Kp3FLMKR_r1F9QDvvgaY0W-CjS6TrUyg,5504
+shapreg/utils.py,sha256=xfniJE3J1nj2qv-JlMqZnI47QRMl4MqKfgUWgTbrY4o,5270
+shapley_regression-0.0.1.dist-info/LICENSE,sha256=VyJS6Z0wKL50XkGM3lPS5vD2sDL2pv6NcfYxI6ZjmLQ,1067
+shapley_regression-0.0.1.dist-info/METADATA,sha256=LQ0lYU4AEa6EPqS4ul55DZ87aB5dTk0hKh9OGdKg6qE,904
+shapley_regression-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+shapley_regression-0.0.1.dist-info/top_level.txt,sha256=HdErMQo_lUYy3LYIKUrKGzOOQ5b7CQLqPnZhj-Q_k2Y,8
+shapley_regression-0.0.1.dist-info/RECORD,,
