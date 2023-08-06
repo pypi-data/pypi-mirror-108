@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: hajkr-facebook-scraper
+Version: 0.1.2
+Summary: 
+Author: Tadej Hribar
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: facebook-scraper (>=0.2.41,<0.3.0)
