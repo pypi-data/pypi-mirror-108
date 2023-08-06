@@ -1,0 +1,24 @@
+cython
+flask
+gdown
+inflect
+jieba
+librosa==0.8.0
+matplotlib
+numpy==1.18.5
+pandas
+pypinyin
+pysbd
+pyyaml
+scipy>=0.19.0
+soundfile
+tensorboardX
+torch>=1.7
+tqdm
+numba==0.52
+umap-learn==0.4.6
+anyascii
+coqpit
+# japanese g2p deps
+mecab-python3==1.0.3
+unidic-lite==1.0.8
