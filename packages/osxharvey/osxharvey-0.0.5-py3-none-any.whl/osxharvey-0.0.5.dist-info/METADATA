@@ -1,0 +1,139 @@
+Metadata-Version: 2.1
+Name: osxharvey
+Version: 0.0.5
+Summary: Big White Rabbit, which can hop wifi channels while sniffing for information
+Home-page: https://github.com/kampfhamster309/osxharvey
+Author: Felix Harenbrock
+Author-email: felix.harenbrock@gmx.de
+License: MIT
+Download-URL: https://pypi.org/project/osxharvey/
+Project-URL: Bug Tracker, https://github.com/kampfhamster309/osxharvey/issues
+Keywords: OSX Sniffer,Channel Hopping,Wifi Sniffer,Wifi Sniffer Mac
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: MacOS
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Security
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+Requires-Dist: ouilookup (>=0.2.4)
+Requires-Dist: protobuf (>=3.15.4)
+Requires-Dist: scapy (>=2.4.5)
+Requires-Dist: six (>=1.15.0)
+Requires-Dist: tqdm (>=4.61.0)
+
+# OsxHarvey
+
+The *Big White Rabbit* OsxHarvey is a small tool/Wifi-Sniffer to grab all the data.
+
+Being a rabbit, Harvey hops from wifi-channel to wifi-channel to make sure he doesn't 
+miss anything.
+
+Harvey is intended to be used by security professionals for LEGAL purposes.
+
+## This package is in pre-Alpha and therefore still under construction
+
+# Installation:
+
+```commandline
+pip install osxharvey
+```
+
+# Usage:
+
+```python
+from osxharvey import OsxHarvey
+
+# Following params are default values
+
+bwr = OsxHarvey(
+        iface="en0", rounds=1,
+        ch_from=1, ch_to=15,
+        devices=False, ssids=False,
+        probes=False, vendors=False,
+        verbose=False
+    )
+
+# Params:
+
+"""
+:param str iface: Interface to sniff on
+:param int rounds: How many times to go through the Wifi channels
+:param int ch_from: Wifi channel to start sniffing on
+:param int ch_to: Wifi channel to end sniffing on
+:param bool devices: Write collected device/manufacturer combinations to file
+:param bool ssids: Write detected ssids to file
+:param bool probes: Write collected probe requests to file
+:param bool vendors: Write list of unique detected vendors to file
+:param bool verbose: Toggles verbose output
+"""
+
+# Disconnets the Wifi, enables monitor mode and starts scanning
+# returns a dictionary with the collected data
+results = bwr.start_scanning()
+
+```
+
+## TODO:
+* Enable installation as command line tool (WIP)
+* Expand testing
+  * Setup automated testing though github
+* Extend functionality
+* Generate proper documentation
+* Think about GUI
+* Think about portability
+
+# Changelog
+
+
+## 0.0.5 (2021-06-06)
+
+### New
+
+* Added tests for packet parser. [kampfhamster309]
+
+### Changes
+
+* Some minor changes to README. [kampfhamster309]
+
+### Fix
+
+* Fixed bug with writing collected data to files. [kampfhamster309]
+
+
+## 0.0.4 (2021-06-06)
+
+### New
+
+* Added actually useful info to README. [kampfhamster309]
+
+
+## 0.0.3 (2021-06-05)
+
+### Changes
+
+* Added README and LICENSE. [kampfhamster309]
+
+
+## 0.0.2 (2021-06-05)
+
+### Other
+
+* 'new' Added automated changelog. [kampfhamster309]
+
+* Applied black. [kampfhamster309]
+
+
+## 0.0.1 (2021-06-05)
+
+### Other
+
+* Applied basic package structure, versioning and basic test structure. [kampfhamster309]
+
+* Initial commit. [kampfhamster309]
+
+
+
+
