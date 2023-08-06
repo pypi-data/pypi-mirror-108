@@ -1,0 +1,11 @@
+thomas-core
+diffprivlib
+dill
+lifelines
+dython
+numpy
+pandas
+scipy
+scikit-learn
+matplotlib
+seaborn
