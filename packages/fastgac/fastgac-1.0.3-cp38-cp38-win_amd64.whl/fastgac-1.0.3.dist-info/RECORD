@@ -1,0 +1,15 @@
+fastgac_pybind.cp38-win_amd64.pyd,sha256=XL6hlhDpm5pcT2-Qtmq-tvvq6HqlHJuWHbSfQ7Q2zqs,606720
+fastgac/__init__.py,sha256=tsWU4faTrs9VkYgttIrAwou24F4x-t_hafDBNBBZDw8,341
+fastgac/__main__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fastgac/helper.py,sha256=3EuMzOYOLJ-P9br_mt2LZ3gGZUbnVfkCZPsrTaV26D0,984
+fastgac/o3d_util.py,sha256=wFA0gan1zZFEj61Khm81I4TYTwOa0fyoReLjUzLDnFM,10028
+fastgac/peak_and_cluster.py,sha256=JBfLRph2pgKKJhg6YR9GTvaViHBOu_VYhACj-lwUzKA,7888
+fastgac/scikit_image/LICENSE.txt,sha256=80cifFrDC6J0DXMfMlYU1ur_sYZ5g7S3R5CAa9LbQ2I,4377
+fastgac/scikit_image/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fastgac/scikit_image/rank_order.py,sha256=NYzrAMJun487NusD1SrxCcIO3OcVUvfldiKQNV7afEU,2127
+fastgac/scikit_image/skimage_feature_peak.py,sha256=yeUWWNSbq17uPxbZoUQFl7RKgVRe8PkJsir43s7tQgA,9887
+fastgac-1.0.3.dist-info/LICENSE,sha256=VVus4mzZYQtK5geMZYEiUT0kxPuCkpbxOFQU25ZYw8E,1093
+fastgac-1.0.3.dist-info/METADATA,sha256=uqWzs_taKGOH6ewdvR0uh88aW3fcgKtgZYahSt0_QoM,8911
+fastgac-1.0.3.dist-info/WHEEL,sha256=HLtxc_HoM-kGM7FPJVPSnTt0Nv2G3fZEAjT3ICdG8uY,100
+fastgac-1.0.3.dist-info/top_level.txt,sha256=V7n4HutKBrVoRyP6myWkcKH6ZCNaTqIKMI03eE-SEX8,23
+fastgac-1.0.3.dist-info/RECORD,,
