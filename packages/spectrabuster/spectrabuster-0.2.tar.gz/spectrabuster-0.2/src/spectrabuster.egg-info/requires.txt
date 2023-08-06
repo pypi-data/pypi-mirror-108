@@ -1,0 +1,8 @@
+scipy
+matplotlib
+
+[measurements]
+seabreeze
+
+[seabreeze_emulation]
+seatease
