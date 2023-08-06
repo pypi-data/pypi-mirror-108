@@ -1,0 +1,361 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Synthetic observations &mdash; aeolus 0.4.9+9.g5a71939.dirty documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "document", "processHtmlClass": "math|output_area"}}</script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Changelog" href="../changelog.html" />
+    <link rel="prev" title="Subset cubes using constraints" href="subset.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> aeolus
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.4.9+9.g5a71939.dirty
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../install.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../examples/index.html">Examples</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">API reference</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="calc.html">Science calculations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="core.html">Core hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="const.html">Physical constants</a></li>
+<li class="toctree-l2"><a class="reference internal" href="coord.html">Cube coordinate functionality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="io.html">I/O</a></li>
+<li class="toctree-l2"><a class="reference internal" href="model.html">Model-specific dictionaries of variable and coordinate names</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plot.html">Plotting functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="region.html">Regions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="subset.html">Subset cubes using constraints</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Synthetic observations</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing.html">Contributor’s Guide</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">aeolus</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html">API reference</a> &raquo;</li>
+        
+      <li>Synthetic observations</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/api/synthobs.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="synthetic-observations">
+<h1>Synthetic observations<a class="headerlink" href="#synthetic-observations" title="Permalink to this headline">¶</a></h1>
+<dl class="py function">
+<dt class="sig sig-object py" id="aeolus.synthobs.read_spectral_bands">
+<span class="sig-prename descclassname"><span class="pre">aeolus.synthobs.</span></span><span class="sig-name descname"><span class="pre">read_spectral_bands</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">spectral_file</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/aeolus/synthobs.html#read_spectral_bands"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#aeolus.synthobs.read_spectral_bands" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read spectral bands from a SOCRATES spectral file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>spectral_file</strong> (<a class="reference external" href="https://docs.python.org/3/library/pathlib.html#pathlib.PosixPath" title="(in Python v3.9)"><em>pathlib.PosixPath</em></a>) – Path to the location of a SOCRATES spectral file.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>An array with a list of tuples describing spectral bands.
+Tuple structure:
+(spectral_band_index, lower_wavelength_limit, upper_wavelength_limit).
+Units [m] as stated in a spectral file but not checked directly.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://numpy.org/doc/stable/reference/generated/numpy.ndarray.html#numpy.ndarray" title="(in NumPy v1.20)">numpy.ndarray</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="aeolus.synthobs.read_normalized_stellar_flux">
+<span class="sig-prename descclassname"><span class="pre">aeolus.synthobs.</span></span><span class="sig-name descname"><span class="pre">read_normalized_stellar_flux</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">spectral_file</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/aeolus/synthobs.html#read_normalized_stellar_flux"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#aeolus.synthobs.read_normalized_stellar_flux" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read the normalized stellar flux per spectral band.</p>
+<p>Read from a SOCRATES spectral file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>spectral_file</strong> (<a class="reference external" href="https://docs.python.org/3/library/pathlib.html#pathlib.PosixPath" title="(in Python v3.9)"><em>pathlib.PosixPath</em></a>) – Path to the location of a SOCRATES spectral file.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Normalized stellar flux per spectral band [1].</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://scitools-iris.readthedocs.io/en/latest/generated/api/iris/cube.html#iris.cube.Cube" title="(in Iris v3.1.dev0)">iris.cube.Cube</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="aeolus.synthobs.calc_stellar_flux">
+<span class="sig-prename descclassname"><span class="pre">aeolus.synthobs.</span></span><span class="sig-name descname"><span class="pre">calc_stellar_flux</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">spectral_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stellar_constant_at_1_au</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/aeolus/synthobs.html#calc_stellar_flux"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#aeolus.synthobs.calc_stellar_flux" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate the stellar flux per spectral band.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>spectral_file</strong> (<a class="reference external" href="https://docs.python.org/3/library/pathlib.html#pathlib.PosixPath" title="(in Python v3.9)"><em>pathlib.PosixPath</em></a>) – Path to the location of a SOCRATES spectral file.</p></li>
+<li><p><strong>stellar_constant_at_1_au</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a><em> or </em><a class="reference external" href="https://scitools-iris.readthedocs.io/en/latest/generated/api/iris/cube.html#iris.cube.Cube" title="(in Iris v3.1.dev0)"><em>iris.cube.Cube</em></a>) – Stellar constant at 1 AU [W m-2].</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Stellar flux per spectral band [W m-2].</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://scitools-iris.readthedocs.io/en/latest/generated/api/iris/cube.html#iris.cube.Cube" title="(in Iris v3.1.dev0)">iris.cube.Cube</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="aeolus.synthobs.calc_transmission_spectrum_day_night_average">
+<span class="sig-prename descclassname"><span class="pre">aeolus.synthobs.</span></span><span class="sig-name descname"><span class="pre">calc_transmission_spectrum_day_night_average</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="pre">spectral_file</span></em>, <em class="sig-param"><span class="pre">stellar_constant_at_1_au</span></em>, <em class="sig-param"><span class="pre">stellar_radius</span></em>, <em class="sig-param"><span class="pre">planet_top_of_atmosphere</span></em>, <em class="sig-param"><span class="pre">planet_transmission_day</span></em>, <em class="sig-param"><span class="pre">planet_transmission_night</span></em>, <em class="sig-param"><span class="pre">model=&lt;class</span> <span class="pre">'aeolus.model.base.Model'&gt;(80</span> <span class="pre">fields)</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/aeolus/synthobs.html#calc_transmission_spectrum_day_night_average"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#aeolus.synthobs.calc_transmission_spectrum_day_night_average" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calculate the synthetic transmission spectrum averaged over the dayside and the nightside.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>spectral_file</strong> (<a class="reference external" href="https://docs.python.org/3/library/pathlib.html#pathlib.PosixPath" title="(in Python v3.9)"><em>pathlib.PosixPath</em></a>) – Path to the location of a SOCRATES spectral file.</p></li>
+<li><p><strong>stellar_constant_at_1_au</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a><em> or </em><a class="reference external" href="https://scitools-iris.readthedocs.io/en/latest/generated/api/iris/cube.html#iris.cube.Cube" title="(in Iris v3.1.dev0)"><em>iris.cube.Cube</em></a>) – Stellar constant at 1 AU [W m-2].</p></li>
+<li><p><strong>stellar_radius</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a><em> or </em><a class="reference external" href="https://scitools-iris.readthedocs.io/en/latest/generated/api/iris/cube.html#iris.cube.Cube" title="(in Iris v3.1.dev0)"><em>iris.cube.Cube</em></a>) – Stellar radius [m].</p></li>
+<li><p><strong>planet_top_of_atmosphere</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.9)"><em>float</em></a><em> or </em><a class="reference external" href="https://scitools-iris.readthedocs.io/en/latest/generated/api/iris/cube.html#iris.cube.Cube" title="(in Iris v3.1.dev0)"><em>iris.cube.Cube</em></a>) – The extent of the planetary atmosphere [m].</p></li>
+<li><p><strong>planet_transmission_day</strong> (<a class="reference external" href="https://scitools-iris.readthedocs.io/en/latest/generated/api/iris/cube.html#iris.cube.Cube" title="(in Iris v3.1.dev0)"><em>iris.cube.Cube</em></a>) – Met Office Unified Model output of STASH item m01s01i755
+(in the case of hot Jupiters) from the dayside calculation.</p></li>
+<li><p><strong>planet_transmission_night</strong> (<a class="reference external" href="https://scitools-iris.readthedocs.io/en/latest/generated/api/iris/cube.html#iris.cube.Cube" title="(in Iris v3.1.dev0)"><em>iris.cube.Cube</em></a>) – Met Office Unified Model output of STASH item m01s01i755
+(in the case of hot Jupiters) from the nightside calculation.</p></li>
+<li><p><strong>model</strong> (<em>aeolus.model.Model</em><em>, </em><em>optional</em>) – Model class with relevant variable names.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p><ul class="simple">
+<li><p><em>iris.cube.Cube</em> – The ratio of the effective planetary radius to the stellar radius per spectral band [1].</p></li>
+<li><p><em>numpy.ndarray</em> – Spectral band centers [m].</p></li>
+</ul>
+</p>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>The transmission spectrum is the ratio of the effective planetary radius to the stellar
+radius calculated per spectral band:</p>
+<div class="math notranslate nohighlight">
+\[\frac{R_p (\nu)}{R_s} = \sqrt{(\frac{R_{p,TOA}}{R_s})^2 -
+ \frac{\sum_{lat,lon}^{}F_{transmitted} (\nu)}{F_{stellar} (\nu)}}\]</div>
+<p>where
+<span class="math notranslate nohighlight">\(R_p(\nu)\)</span> is the effective planetary radius,
+<span class="math notranslate nohighlight">\(R_s\)</span> is the stellar radius,
+<span class="math notranslate nohighlight">\(R_{p,TOA}\)</span> is the extent of the planetary atmosphere (which usually is the sum of
+the planetary radius and the height of the model domain),
+<span class="math notranslate nohighlight">\(\sum_{lat,lon}^{}F_{transmitted}(\nu)\)</span> is the total transmitted flux,
+<span class="math notranslate nohighlight">\(F_{stellar}(\nu)\)</span> is the stellar flux.</p>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="../changelog.html" class="btn btn-neutral float-right" title="Changelog" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="subset.html" class="btn btn-neutral float-left" title="Subset cubes using constraints" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2021, the aeolus developers.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
