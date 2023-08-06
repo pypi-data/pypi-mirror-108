@@ -1,0 +1,12 @@
+black
+pytest
+pylint
+pytest-html
+pydocstyle
+matplotlib
+requests
+tqdm
+scikit-learn
+dppy>=0.2.0
+pandas
+torch
