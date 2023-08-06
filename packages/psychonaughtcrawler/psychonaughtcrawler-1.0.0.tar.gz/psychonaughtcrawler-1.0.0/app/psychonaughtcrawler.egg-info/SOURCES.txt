@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+app/psychonaughtcrawler.egg-info/PKG-INFO
+app/psychonaughtcrawler.egg-info/SOURCES.txt
+app/psychonaughtcrawler.egg-info/dependency_links.txt
+app/psychonaughtcrawler.egg-info/top_level.txt
+app/utilities/__init__.py
+app/utilities/crawler.py

@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: psychonaughtcrawler
+Version: 1.0.0
+Summary: A crawler for PsychonaughtWiki wrote in python.
+Home-page: https://github.com/BlakeBarnes00/PsychonaughtCrawler
+Author: Ellis Barnes
+Author-email: EllisBarnes00@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/BlakeBarnes00/PsychonaughtCrawler/issues
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: The Unlicense (Unlicense)
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Science/Research
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# PsychonaughtCrawler
+Web crawler that I am making for fun to just get some experiece. It crawls over PsychonaughtWiki.
+
+
