@@ -1,0 +1,3 @@
+[console_scripts]
+rov = ihr.rov:main
+
