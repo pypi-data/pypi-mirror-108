@@ -1,0 +1,9 @@
+gist/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+gist/client.py,sha256=cdgyUJG_3acVrbm6QzCEDgbR8R1Rlvjp2wBhDbQJZRA,25692
+gist/gist.py,sha256=_ZIXojBlx-T0AloPWfko8NMVCuqjFBZmJnob98S-_A0,11584
+gist/version.py,sha256=yjofIu0EKgIWzRJNtQHO7nF92dtX_jrxFHKKL0VccLI,31
+python_gist-0.10.5.dist-info/entry_points.txt,sha256=v-Qy8OeZ2CgNd8h67IKfLuEAkIrhnZh0Iijbi_sRMt0,41
+python_gist-0.10.5.dist-info/LICENSE,sha256=mlVBynF-rAt8pmrdmKsPJgoCLb3JzF8mOuuekzgmmac,1081
+python_gist-0.10.5.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+python_gist-0.10.5.dist-info/METADATA,sha256=92UZzQ1DZ7nyLKq0Nj1GKXXTFYrhAikPMeIQHCSqGn8,11238
+python_gist-0.10.5.dist-info/RECORD,,
