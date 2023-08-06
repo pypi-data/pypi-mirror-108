@@ -1,0 +1,7 @@
+ffmpeg-python
+click
+music-tag
+requests
+pillow
+lyricsgenius
+dataclasses
