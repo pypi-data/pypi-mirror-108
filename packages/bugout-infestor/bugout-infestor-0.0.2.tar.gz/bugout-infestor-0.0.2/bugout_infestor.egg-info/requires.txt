@@ -1,0 +1,13 @@
+atomicwrites
+humbug
+pygit2
+
+[dev]
+black
+mypy
+wheel
+
+[distribute]
+setuptools
+twine
+wheel
