@@ -1,0 +1,1 @@
+This is just a simple python library where you can get a message when you provide CIK and Company name to it.
