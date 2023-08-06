@@ -1,0 +1,15 @@
+plato/__init__.py,sha256=SI5KdU6snx8-DK2owD1h0LvaeAaGBLkx6dazoyOhZUw,227
+plato/__version__.py,sha256=eXyryvR3Lx3Dg_Cr8u5TpyD0HQAweGCY3-M-Lluti_c,66
+plato/context.py,sha256=uT6WmL_OInJDCIYP6khq6EvyBWwzUbziC-DxaYwBLcU,3295
+plato/formclasses.py,sha256=a0BYROKG_-EH1bvdM2PFNbPYaKkF8kelWPPXZYbZoA8,9641
+plato/internal/__init__.py,sha256=IzjELLwBKtz1t7VQ34UAL_sDO13JitMNYhA76nx6C8o,55
+plato/internal/graph.py,sha256=9S27b975uIngOfpcbk22plai0v-0yJDQn1c_qo3_Fig,1595
+plato/internal/weak_id_dict.py,sha256=E3m8kB-_rSFAGwW3JnzqV0_EzgxuKjea-6TeEuKvxNQ,1179
+plato/providers/__init__.py,sha256=P5Oc1zY4o3T6zNyu-DjCnOvHl7sclVD6OccLY4MvW8M,79
+plato/providers/base.py,sha256=WZR2yH4taQ7nsMWYJx9B00s5dfdDpBOoulvBARAHGiA,2920
+plato/providers/common.py,sha256=u_iSi7uauXfiHrl3XOrIreazOw6cGcrfPltmpK8KCB8,2763
+plato/providers/faker.py,sha256=45D7_PhI9BmMuYksugkASGrwbcN6eA5CtplVqfl1Sis,2059
+plato-0.2.1.dist-info/LICENSE,sha256=ceMSjMTby6VZE5jMABZCAhp51Zs8Bi3qESM4Ib9gNA4,1069
+plato-0.2.1.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+plato-0.2.1.dist-info/METADATA,sha256=Dej-gWSRtiWRHzhlHEs79fhN19MwBkt9wTFGlBsnMbg,8548
+plato-0.2.1.dist-info/RECORD,,
