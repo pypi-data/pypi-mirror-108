@@ -1,0 +1,28 @@
+# dirganize
+
+Declutter you folders and get peace of mind.
+A command-line tool to organize files into category directories.
+
+## Installation
+
+```shell
+pip install dirganize
+```
+
+## Usage
+
+Move into your desired directory and run `dirganize`.
+
+It will put all files into their respective category folders, based on the
+default configuration.
+
+You can put a `.dirganize.yml` file ( inside the folder you want to dirganize )
+to override the default configuration.
+
+Basically you have the folder name, followed by file types to put in that folder.
+
+You can also specify which folder to organize:
+
+```shell
+dirganize --path ~/Downloads
+```
