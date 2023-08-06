@@ -1,0 +1,4 @@
+albumentations
+einops
+torch>=1.8.0
+wandb
