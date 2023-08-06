@@ -1,0 +1,10 @@
+biopython>=1.78
+celery
+dask[complete]
+numpy
+nwalign3
+pandas
+pyarrow
+pymongo
+pytest
+scikit-bio
