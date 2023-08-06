@@ -1,0 +1,3 @@
+[console_scripts]
+matching_network=matching_network.__main__:cli
+

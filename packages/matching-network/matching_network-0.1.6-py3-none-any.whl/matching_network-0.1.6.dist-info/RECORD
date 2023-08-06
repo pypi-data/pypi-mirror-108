@@ -1,0 +1,7 @@
+matching_network/__init__.py,sha256=6Rsr9oacg7LRgRT_B8n7NbVcMiK_DF75SJzP6hjqlNY,324
+matching_network/__main__.py,sha256=8vY3g2HrbI1TzF9nwRzC94BAnaIu0lGcI4nTydYvUDw,1500
+matching_network/notmain.py,sha256=_HjVnZcWLd3ShzDSpzz8vkTXyMpYuIvViTo5alr2BmY,10249
+matching_network-0.1.6.dist-info/entry_points.txt,sha256=xcMJOh23oSWP6Dz1bANTbWMzqkWo3E2gxSu0CRr0bEA,66
+matching_network-0.1.6.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+matching_network-0.1.6.dist-info/METADATA,sha256=-y7rZuUhtlsHnxCWxoibgTfcE_HqGrTQabK_Tqs_jB0,4160
+matching_network-0.1.6.dist-info/RECORD,,
