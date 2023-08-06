@@ -1,0 +1,3 @@
+[console_scripts]
+sh_junit_xml = sh_junit_xml:main
+

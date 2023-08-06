@@ -1,0 +1,13 @@
+LICENSE
+README.md
+setup.py
+sh_junit_xml/__init__.py
+sh_junit_xml/__main__.py
+sh_junit_xml.egg-info/PKG-INFO
+sh_junit_xml.egg-info/SOURCES.txt
+sh_junit_xml.egg-info/dependency_links.txt
+sh_junit_xml.egg-info/entry_points.txt
+sh_junit_xml.egg-info/requires.txt
+sh_junit_xml.egg-info/top_level.txt
+tests/__init__.py
+tests/test_main.py
