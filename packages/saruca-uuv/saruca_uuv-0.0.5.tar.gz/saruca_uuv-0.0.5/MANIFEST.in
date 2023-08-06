@@ -1,0 +1,6 @@
+saruca_uuv/comprehend_system_layer/Classes/*.py
+saruca_uuv/comprehend_system_layer/Methods/*.py
+saruca_uuv/control_system_layer/Classes/*.py
+saruca_uuv/control_system_layer/Methods/*.py
+saruca_uuv/sensing_system_layer/Classes/*.py
+saruca_uuv/sensing_system_layer/Methods/*.py
