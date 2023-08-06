@@ -1,0 +1,14 @@
+Mathics_Scanner>=1.2.0
+Mathics3<2.3.0,>=2.2.0
+click
+colorama
+columnize
+networkx
+prompt_toolkit>=3.0.18
+pygments
+mathics_pygments>=1.0.2
+term-background>=1.0.1
+
+[dev]
+PyYAML
+pytest
