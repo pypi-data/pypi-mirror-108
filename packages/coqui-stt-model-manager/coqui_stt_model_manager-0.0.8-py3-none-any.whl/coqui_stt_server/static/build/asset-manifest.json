@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/bundle.min.css",
+    "main.js": "/static/js/bundle.min.js",
+    "main.js.map": "/static/js/bundle.min.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.8d43c02af207a078feb641c23134d889.js": "/precache-manifest.8d43c02af207a078feb641c23134d889.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/bundle.min.css.map": "/static/css/bundle.min.css.map",
+    "static/js/bundle.min.js.LICENSE.txt": "/static/js/bundle.min.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/css/bundle.min.css",
+    "static/js/bundle.min.js"
+  ]
+}
