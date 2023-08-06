@@ -1,0 +1,11 @@
+README.md
+setup.py
+symmetry/__init__.py
+symmetry/example.py
+symmetry/values/__init__.py
+symmetry/values/addresses.py
+symmetrypy.egg-info/PKG-INFO
+symmetrypy.egg-info/SOURCES.txt
+symmetrypy.egg-info/dependency_links.txt
+symmetrypy.egg-info/requires.txt
+symmetrypy.egg-info/top_level.txt
