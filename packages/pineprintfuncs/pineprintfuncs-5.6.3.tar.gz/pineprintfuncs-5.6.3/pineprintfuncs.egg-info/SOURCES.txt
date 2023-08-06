@@ -1,0 +1,5 @@
+setup.py
+pineprintfuncs.egg-info/PKG-INFO
+pineprintfuncs.egg-info/SOURCES.txt
+pineprintfuncs.egg-info/dependency_links.txt
+pineprintfuncs.egg-info/top_level.txt
