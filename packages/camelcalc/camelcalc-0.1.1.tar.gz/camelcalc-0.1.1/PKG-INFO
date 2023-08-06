@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: camelcalc
+Version: 0.1.1
+Summary: A Camel Up simulator and optimizer
+Home-page: https://github.com/ArmaanT/camelcalc
+License: MIT
+Author: Armaan Tobaccowalla
+Author-email: armaan@tobaccowalla.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Project-URL: Repository, https://github.com/ArmaanT/camelcalc
+Description-Content-Type: text/markdown
+
+# camelcalc
+
+![Build and Publish](https://github.com/ArmaanT/camelcalc/workflows/Build%20and%20Publish/badge.svg)
+[![PyPi Package](https://img.shields.io/pypi/v/camelcalc.svg)](https://pypi.org/project/camelcalc/)
+
+A playable version of [Camel Up](https://en.wikipedia.org/wiki/Camel_Up). As well as a (soon to exist) calculator to help determine what move a team should make.
+
+## Requirements
+
+* Python 3.8+
+* Friends to play with
+
+## Installation
+
+Install with pip `pip install camelcalc`
+
+Then play Camel Up by running `camelup`
+
+## Why?
+
+At the end of every semester, the [CIS 120](https://www.seas.upenn.edu/~cis120/current/) TA staff play Camel Up. I've been telling myself that I wanted to attempt to build a calculator for it, so here's my attempt.
+
+## License
+
+See [LICENSE](./LICENSE)
+
