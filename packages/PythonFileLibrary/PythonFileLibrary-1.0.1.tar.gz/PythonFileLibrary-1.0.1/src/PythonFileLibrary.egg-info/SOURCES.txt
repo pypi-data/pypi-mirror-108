@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/PythonFileLibrary/FileReader.py
+src/PythonFileLibrary/RecursiveScanner.py
+src/PythonFileLibrary/__init__.py
+src/PythonFileLibrary.egg-info/PKG-INFO
+src/PythonFileLibrary.egg-info/SOURCES.txt
+src/PythonFileLibrary.egg-info/dependency_links.txt
+src/PythonFileLibrary.egg-info/top_level.txt
+src/PythonFileLibrary/integration/FileReaderTest.py
+src/PythonFileLibrary/integration/IntegrationTestRunner.py
+src/PythonFileLibrary/integration/RecursiveScannerTest.py
+src/PythonFileLibrary/integration/__init__.py
+src/PythonFileLibrary/integration/__main__.py
