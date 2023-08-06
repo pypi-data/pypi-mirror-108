@@ -1,0 +1,1 @@
+(self.webpackChunkrichie_education=self.webpackChunkrichie_education||[]).push([[56333],{56333:function(e,c,i){"use strict";i.r(c)}}]);
