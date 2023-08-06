@@ -1,0 +1,3 @@
+[console_scripts]
+github_user = githubapi2.githubuser:run
+
