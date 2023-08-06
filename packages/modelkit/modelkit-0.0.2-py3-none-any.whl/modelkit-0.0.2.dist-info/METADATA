@@ -1,0 +1,70 @@
+Metadata-Version: 2.1
+Name: modelkit
+Version: 0.0.2
+Summary: Machine learning lib.
+Home-page: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: aiohttp
+Requires-Dist: asgiref
+Requires-Dist: cachetools
+Requires-Dist: click
+Requires-Dist: filelock
+Requires-Dist: humanize
+Requires-Dist: numpy
+Requires-Dist: pydantic
+Requires-Dist: python-dateutil
+Requires-Dist: redis
+Requires-Dist: sniffio
+Requires-Dist: structlog
+Requires-Dist: tenacity
+Requires-Dist: tqdm
+Requires-Dist: rich
+Requires-Dist: typing-extensions ; python_version < "3.8"
+Provides-Extra: gcs
+Requires-Dist: google-cloud-storage ; extra == 'gcs'
+Provides-Extra: redis
+Requires-Dist: redis ; extra == 'redis'
+Provides-Extra: s3
+Requires-Dist: boto3 ; extra == 's3'
+Provides-Extra: tensorflow
+Requires-Dist: tensorflow ; extra == 'tensorflow'
+Requires-Dist: grpcio ; extra == 'tensorflow'
+Requires-Dist: tensorflow-serving-api ; extra == 'tensorflow'
+
+<h1 align="center"> modelkit </h1>
+<p align="center">
+  <em>Python framework for production ML systems.</em>
+</p>
+    
+---
+
+`modelkit` is a Python framework to maintain and run machine learning (ML) code in production environments.
+
+The key features are:
+
+- **type-safe** Models' inputs and outputs can be validated by [pydantic](https://pydantic-docs.helpmanual.io/)
+- **composable** Models are *composable*: they can depend on other models. 
+- **organized** Store and share your models as regular Python packages.
+- **extensible** Models can rely on arbitrary supporting configurations files called *assets* hosted on local or cloud object stores
+- **testable** Models carry their own unit test cases, and unit testing fixtures are available for [pytest](https://docs.pytest.org/en/6.2.x/)
+- **fast to code** Models can be served in a single CLI call using [fastapi](https://fastapi.tiangolo.com/)
+- **fast** Models' predictions can be batched for speed
+- **async** Models support async and synchronous prediction functions
+
+## Installation
+
+Install with `pip`:
+
+```
+pip install modelkit
+```
+
+## Documentation
+
+Refer to the [documentation](https://clustree.github.io/modelkit/) for more information.
+
+
