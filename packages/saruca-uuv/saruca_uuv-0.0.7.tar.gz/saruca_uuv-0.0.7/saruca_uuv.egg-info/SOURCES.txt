@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+saruca_uuv/__init__.py
+saruca_uuv/main.py
+saruca_uuv.egg-info/PKG-INFO
+saruca_uuv.egg-info/SOURCES.txt
+saruca_uuv.egg-info/dependency_links.txt
+saruca_uuv.egg-info/requires.txt
+saruca_uuv.egg-info/top_level.txt
