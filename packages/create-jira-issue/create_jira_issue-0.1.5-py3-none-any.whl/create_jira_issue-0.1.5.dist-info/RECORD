@@ -1,0 +1,7 @@
+create_jira_issue/__init__.py,sha256=9z804TqvyRF-uPKOGilX0UA9sqxZAMUPTC28FpTX9bU,44
+create_jira_issue/create_jira_issue.py,sha256=gMJscm8ApcX8NIdVX6IjpGPv05a5hKFbwQiwxObIBVA,4474
+create_jira_issue-0.1.5.dist-info/entry_points.txt,sha256=o6K6EX3j5HnFJ5AKHbdzhYHrqWSARyTGhLQ_-DiNrUM,66
+create_jira_issue-0.1.5.dist-info/LICENSE.txt,sha256=ae8rviHkHaTIdIAfyxeZngviNNdlQ0HB8EJrUC0Ek4Q,1076
+create_jira_issue-0.1.5.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+create_jira_issue-0.1.5.dist-info/METADATA,sha256=79drKsGTLcp2p63kdnoFBaQTfVCdbEPRPPjJeeWR-Ew,1699
+create_jira_issue-0.1.5.dist-info/RECORD,,
