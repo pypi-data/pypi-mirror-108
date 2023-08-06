@@ -1,0 +1,4 @@
+PySocks
+loguru
+paramiko
+requests
