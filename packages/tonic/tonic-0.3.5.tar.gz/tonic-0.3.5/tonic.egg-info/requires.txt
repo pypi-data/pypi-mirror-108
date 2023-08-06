@@ -1,0 +1,6 @@
+torch
+torchvision
+h5py
+importRosbag
+loris
+scipy
