@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: pyrefox
+Version: 0.0.1.dev2
+Summary: Firefox tools
+Home-page: https://github.com/nuno-andre/pyrefox
+Author: Nuno André
+Author-email: mail@nunoand.re
+License: BSD-3-Clause
+Project-URL: Source, https://github.com/nuno-andre/pyrefox
+Project-URL: Bug Tracker, https://github.com/nuno-andre/pyrefox/issues
+Platform: any
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Software Development
+Classifier: Typing :: Typed
+Requires-Python: >=3.6.1
+Description-Content-Type: text/markdown
+Requires-Dist: sqlalchemy
+Requires-Dist: pydantic
+Requires-Dist: lz4
+Requires-Dist: email-validator
+Provides-Extra: tests
+Requires-Dist: pytest ; extra == 'tests'
+Requires-Dist: pyyaml ; extra == 'tests'
+
+# Pyrefox
+
+> work in progress
+
+
