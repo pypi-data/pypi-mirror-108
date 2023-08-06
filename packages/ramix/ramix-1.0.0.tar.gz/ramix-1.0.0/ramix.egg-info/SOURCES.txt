@@ -1,0 +1,15 @@
+README.md
+setup.py
+ramix/__init__.py
+ramix/data_loader.py
+ramix/mixture_maker.py
+ramix/noise_maker.py
+ramix/noisy_spectrum_maker.py
+ramix/peak_funs.py
+ramix/peak_skeleton.py
+ramix/spectrum_skeleton.py
+ramix.egg-info/PKG-INFO
+ramix.egg-info/SOURCES.txt
+ramix.egg-info/dependency_links.txt
+ramix.egg-info/requires.txt
+ramix.egg-info/top_level.txt
