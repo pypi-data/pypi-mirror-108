@@ -1,0 +1,89 @@
+#!/usr/bin/env python3
+
+
+import os
+import subprocess
+import sys
+import rich
+from yaspin import yaspin
+from os.path import abspath
+from os import listdir, path
+from os.path import isfile, join, basename, normpath, relpath, dirname, abspath, isdir
+import pathlib
+import glob
+
+
+def checkmake_dir(directory: str):
+    return pathlib.Path(directory).mkdir(parents=True, exist_ok=True)
+
+
+def get_all_media_files_in_dir(fullsrcpath: str):
+    return glob.glob(fullsrcpath + '/**/*', recursive=True)
+
+
+def outfile_path(fullfilepath: str, outpath: str):
+    checkmake_dir(abspath(outpath)+'/'+dirname(fullfilepath))
+    return outpath+'/'+os.path.splitext(fullfilepath)[0]
+
+
+def dir_path(string):
+    if isdir(string):
+        return string
+    else:
+        return False
+
+
+if __name__ == '__main__':
+    try:
+        os.system('cls' if os.name == 'nt' else 'clear')
+        rich.print("""[bold yellow]
+        
+        FFenmass[/bold yellow]
+        [yellow]Simple ffmpeg wrapper to encode whole directories.[/yellow]
+        [blue]Written By :[/blue] NoPantsCrash
+        [blue]Version : 0.2.0[/blue]
+        
+        """)
+        args = ['ffmpeg', '-y']+sys.argv[1:]
+        try:
+            inpath = args[args.index('-i') + 1]
+        except ValueError:
+            rich.print('[bold red]ERROR : Could not catch -i argument[/bold red]')
+            exit()
+
+        outpath = args[len(args)-1:][0]
+        if dir_path(inpath):
+            pass
+        else:
+            rich.print('[bold red]Input is not a valid directory![/bold red]')
+            exit()
+        if dir_path(outpath):
+            pass
+        else:
+            rich.print('[bold red]Output is not a directory![/bold red]')
+            exit()
+
+        inputfiles = get_all_media_files_in_dir(fullsrcpath=inpath)
+        rich.print(
+            f'[bold yellow]Grabbed {len(inputfiles)} media files to encode.[/bold yellow]')
+        counter = 0
+        for file in inputfiles:
+            args[args.index('-i') + 1] = file
+            rich.print(
+                f"[bold magenta]Processed : {counter}/{len(inputfiles)}[/bold magenta]")
+            rich.print(
+                f"[bold magenta]Currently Processing  : {basename(file)}[/bold magenta]")
+            with yaspin() as sp:
+                sp.text = "Encoding..."
+                args[-1] = outfile_path(fullfilepath=file, outpath=outpath)
+                subprocess.call(args, stderr=subprocess.DEVNULL,
+                                                    stdout=subprocess.DEVNULL)
+            rich.print(f"[bold blue]Done ![/bold blue]\n")
+            rich.print("\n")
+            counter += 1
+    except KeyboardInterrupt:
+        print('Keyboard Exception, exiting.')
+        try:
+            sys.exit(0)
+        except SystemExit:
+            os._exit(0)
