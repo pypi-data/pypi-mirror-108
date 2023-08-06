@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: web3s
+Version: 4.9.1
+Summary: A Python library for interacting with Ethereum supporting asynchronous requests
+Home-page: https://github.com/www5226448/web3s
+Author: Jude
+Author-email: wangyifan7836@gmail.com
+License: MIT Licence
+Description: Base on the offical web3,this library supports asynchronous requests
+Keywords: pip,web3,ETH,Ethereum
+Platform: any
