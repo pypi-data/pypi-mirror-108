@@ -1,0 +1,8 @@
+attrs
+eccodes
+pandas
+
+[tests]
+flake8
+pytest
+pytest-cov
