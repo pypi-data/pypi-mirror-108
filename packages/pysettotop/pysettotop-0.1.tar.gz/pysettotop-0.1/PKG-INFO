@@ -1,0 +1,31 @@
+Metadata-Version: 1.1
+Name: pysettotop
+Version: 0.1
+Summary: used for selecting a window and bringing it to the top of other applications.
+Home-page: https://github.com/swordysrepo/settotop
+Author: Swordysrepo
+Author-email: swordysrepo@gmail.com
+License: MIT
+Download-URL: https://github.com/swordysrepo/settotop.git
+Description: # settotop
+        used for selecting a window and bringing it to the top of other applications.
+        ![](https://media.giphy.com/media/ln98uXJj98e0SKhgGs/giphy.gif)
+        
+        
+        
+        ## Installation
+        
+        ```pip install settotop```
+        ## Usage
+        
+        If you want to select the window to bring to the top
+        
+        ```settotop Select```
+        and select the window to bring to the front with your cursor . (wait 5 seconds)
+        
+Keywords: python windows top win32 settotop
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Topic :: Utilities
+Classifier: Operating System :: Microsoft
+Classifier: Environment :: Win32 (MS Windows)

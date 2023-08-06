@@ -1,0 +1,12 @@
+README.md
+setup.cfg
+setup.py
+pysettotop.egg-info/PKG-INFO
+pysettotop.egg-info/SOURCES.txt
+pysettotop.egg-info/dependency_links.txt
+pysettotop.egg-info/entry_points.txt
+pysettotop.egg-info/requires.txt
+pysettotop.egg-info/top_level.txt
+settotop/__init__.py
+settotop/__main__.py
+settotop/settotop.py
