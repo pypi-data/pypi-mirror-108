@@ -1,0 +1,3 @@
+[console_scripts]
+coco2customvision = coco2customvision:cli
+
