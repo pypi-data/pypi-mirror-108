@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+tkinterdnd2/TkinterDnD.py
+tkinterdnd2/__init__.py
+tkinterdnd2.egg-info/PKG-INFO
+tkinterdnd2.egg-info/SOURCES.txt
+tkinterdnd2.egg-info/dependency_links.txt
+tkinterdnd2.egg-info/top_level.txt
