@@ -1,0 +1,32 @@
+#!/usr/bin/python
+
+from telethon import TelegramClient
+
+from telegram_simulation_bot import ClusterStatusArgparser, AVAILABLE_HANDLERS, setup, read_config, CONF_API_ID, \
+    CONF_API_HASH, CONF_BOT_TOKEN, MITgcmHandler
+
+
+def _get_handler_or_none(type):
+    if type.lower() == "mitgcm":
+        return MITgcmHandler
+    else:
+        raise NotImplementedError(
+            f"We did not implement a handler for simulations of type {type}. Currently available: {AVAILABLE_HANDLERS}")
+
+
+def main():
+    parser = ClusterStatusArgparser()
+    args = parser.parse_args()
+    setup(args)
+    conf = read_config()
+
+    with TelegramClient("telegram_simulation_bot", int(conf[CONF_API_ID]), str(conf[CONF_API_HASH])).start(
+            bot_token=str(conf[CONF_BOT_TOKEN])) as telegram_bot:
+        if handler := _get_handler_or_none(args.type):
+            handler(telegram_bot)
+            print(f"started telegram_simulation_bot for {args.type}")
+            telegram_bot.run_until_disconnected()
+
+
+if __name__ == "__main__":
+    main()
