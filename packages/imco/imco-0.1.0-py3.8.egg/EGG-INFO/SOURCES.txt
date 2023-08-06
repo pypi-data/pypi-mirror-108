@@ -1,0 +1,10 @@
+README.md
+setup.py
+imco/__init__.py
+imco/compare_images.py
+imco.egg-info/PKG-INFO
+imco.egg-info/SOURCES.txt
+imco.egg-info/dependency_links.txt
+imco.egg-info/requires.txt
+imco.egg-info/top_level.txt
+imco.egg-info/zip-safe
