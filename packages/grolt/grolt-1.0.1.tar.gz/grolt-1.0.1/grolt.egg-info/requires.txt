@@ -1,0 +1,7 @@
+certifi
+click~=7.0
+docker
+urllib3<1.25,>=1.23
+
+[:platform_system == "Windows"]
+pyreadline>=2.1
