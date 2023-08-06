@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: poetry-release
+Version: 0.2.2
+Summary: Plugin for release management in projects based on Poetry
+Home-page: https://github.com/topenkoff/poetry-release
+License: MIT
+Author: Denis Kayshev
+Author-email: topenkoff@gmail.com
+Requires-Python: >=3.6,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Requires-Dist: poetry (>=1.2.0a1,<2.0.0)
+Project-URL: Repository, https://github.com/topenkoff/poetry-release
+Description-Content-Type: text/markdown
+
+# Poetry release
+
+Release managment plugin for poetry
+
+Inspired by [cargo-release](https://github.com/sunng87/cargo-release)
+
+## Features
+- [x] [Semver](https://semver.org/) support
+- [x] Creating git tag and commits after release
+- [ ] [Changelog](https://keepachangelog.com/en/1.0.0/) support
+
