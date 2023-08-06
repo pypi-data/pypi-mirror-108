@@ -1,0 +1,10 @@
+mutyper/__init__.py,sha256=OBTAU7Olr8fjpfWGzWv3rY4AyxmdBO0XagTLL4c8oqU,132
+mutyper/_version.py,sha256=qwIohgm8412AexsM9ANUeqoYPh7KbWZp075bMhylU9k,498
+mutyper/ancestor.py,sha256=SK7Y45KImBQmtl2A4IZ7CrIrpGys4RxfPtdLRKnA-es,7214
+mutyper/cli.py,sha256=6KjMsCRkHdUZXpJrM0NcrIY1C62bXkvq_WUwz7iTIiU,14540
+mutyper-0.5.5.dist-info/LICENSE,sha256=Ud_djvswAXlDE0dizQ8hDG_r3t8GTyXLAZR4WMP0Nis,1069
+mutyper-0.5.5.dist-info/METADATA,sha256=jk_OqQY6lEuSEWVm56bvRjpAndBo75I77LsHM58XW34,1145
+mutyper-0.5.5.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+mutyper-0.5.5.dist-info/entry_points.txt,sha256=snTT2UP6-FElXSY8fjqk5xtb_eyb82ksk3mJKUNyHX4,46
+mutyper-0.5.5.dist-info/top_level.txt,sha256=eqAXFznTI0PTGpZgSIrC-Y4cTzovQ6xjlnM3jlCm0v4,8
+mutyper-0.5.5.dist-info/RECORD,,
