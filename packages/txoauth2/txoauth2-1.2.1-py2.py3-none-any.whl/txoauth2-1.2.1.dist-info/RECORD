@@ -1,0 +1,14 @@
+txoauth2/__init__.py,sha256=WYSk0SG8Xfiyw-YGUS2xX-rUnEYsl_ny_IMX00eedZQ,294
+txoauth2/authorization.py,sha256=ArMunKbwbIUol0z8f7a6GZKHZ5F8MPU2wLwyWkEyDY0,4438
+txoauth2/clients.py,sha256=yDyuqYqbtEKG2ohclNYBejVCmxSeR0X_r-Q7RMTcm0w,5030
+txoauth2/errors.py,sha256=G1yfRlflhvqzWDTVgJuel0UD1PiFRxbUDSpKoZWLRCs,17459
+txoauth2/granttypes.py,sha256=0fIQsRed9Lrf_uJzzxpwc1AzBv4dCbq6Pd3wejd2UzQ,418
+txoauth2/imp.py,sha256=JMGea4J3eCrBiAnQCnOk--VxKP-KvZtvOwJv_-qMFqQ,7467
+txoauth2/resource.py,sha256=0l4GuFLzZPQ3v2MwnNTq7zjejiBpOkEs0V-bWX_qRic,21921
+txoauth2/token.py,sha256=KxWaMoLLSIb9rUaaqomKh8UV-1L9B__q-3pGUXDcCk8,30032
+txoauth2/util.py,sha256=KJCdemurqsLhPwo13248dXdS0CbicuFYzGgeIsQzEvk,1441
+txoauth2-1.2.1.dist-info/LICENSE,sha256=zck2WMcSVpABixhOIsmQP3T4qW84FMq3sf8bv2t88-0,1059
+txoauth2-1.2.1.dist-info/METADATA,sha256=lCpmRIjkxPwI6ffVincITcMgD7hfILElK6CW2HKO5EY,887
+txoauth2-1.2.1.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+txoauth2-1.2.1.dist-info/top_level.txt,sha256=3opMrMd3Bubattob1bk3EQzY1mREf8OW2N9VNOugOcQ,9
+txoauth2-1.2.1.dist-info/RECORD,,
