@@ -1,0 +1,95 @@
+Metadata-Version: 2.1
+Name: pidlock
+Version: 3.0.0
+Summary: Simple PID based locking for cronjobs, UNIX scripts or python programs
+Home-page: https://github.com/keiranmraine/pidlock
+Author: Keiran Raine
+Author-email: keiranmraine@gmail.com
+License: MIT
+Download-URL: https://github.com/keiranmraine/pidlock/archive/v3.0.0.tar.gz
+Description: # pidlock
+        
+        [![PyPI version](https://img.shields.io/pypi/v/pidlock.svg)](https://pypi.python.org/pypi/pidlock)
+        [![CircleCI](https://circleci.com/gh/keiranmraine/pidlock/tree/develop.svg?style=svg))](https://circleci.com/gh/keiranmraine/pidlock/tree/develop)
+        
+        Simple PID based locking for cronjobs, UNIX scripts or python programs.  Copes with locking between hosts.
+        
+        ## Requirement
+        
+        - requires python3
+        
+        ## Usage
+        
+        - Install with pip
+        
+        ```
+        sudo pip install -U pidlock
+        ```
+        
+        - Use it from inside python script
+        
+        ```
+        import time
+        from pidlock import PIDLock
+        
+        locker = PIDLock()
+        with locker.lock('sleepy_script'):
+            time.sleep(10)
+        ```
+        
+        - Use it as commandline/cron job
+        
+        ```
+        # To display help menu
+        pidlock -h    # Or pidlock --help
+        
+        # Example usage
+        pidlock -n sleepy_script -c 'sleep 10'
+        
+        # Same as
+        pidlock --name sleepy_script --command 'sleep 10'
+        ```
+        
+        ### Customization:
+        
+        - You can pass PID file location, verbosity, time limit and minimum interval as arguments
+        
+        ```
+        # Python Usage
+        locker = PIDLock(lockdir='~/.pidlock', verbose=True)
+        
+        with locker.lock('sleepy_script', wait=10, mininterval=1):
+            time.sleep(10)
+        ```
+        
+        ```
+        # Commandline usage
+        pidlock -n sleepy_script -c 'sleep 10' -l ~/.pidlock -v -w 10 -m 1
+        
+        # Same as
+        pidlock --name sleepy_script --command 'sleep 10' --lockdir ~/.pidlock --verbose --wait 10 --mininterval 1
+        ```
+        
+        ## Contributions
+        
+        Originally written and published by [Arijit Basu](https://github.com/sayanarijit/).  Adaptation to cope with race conditions
+        by Keiran Raine (ongoing owner/support).
+        
+Keywords: PID Based File Locking
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Utilities
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: POSIX
+Description-Content-Type: text/markdown
