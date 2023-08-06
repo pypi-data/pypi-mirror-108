@@ -1,0 +1,13 @@
+README.md
+pyproject.toml
+setup.py
+seqtk/__init__.py
+seqtk/_concatenate.py
+seqtk/_gather.py
+seqtk/_helper.py
+seqtk/_map.py
+seqtk/py.typed
+seqtk.egg-info/PKG-INFO
+seqtk.egg-info/SOURCES.txt
+seqtk.egg-info/dependency_links.txt
+seqtk.egg-info/top_level.txt
