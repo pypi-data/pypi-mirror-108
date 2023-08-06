@@ -1,0 +1,145 @@
+Metadata-Version: 2.1
+Name: discord-together
+Version: 1.0.7
+Summary: Utilize the BETA Discord VC Party Games feature!
+Home-page: https://github.com/apurv-r/discord-together
+Author: Apurv R
+License: MIT
+Download-URL: https://github.com/apurv-r/discord-together/archive/refs/tags/1.0.7.tar.gz
+Project-URL: Issue tracker, https://github.com/apurv-r/discord-together/issues
+Description: <h1><strong>Discord Together</strong></h1>
+        
+        ![PyPI - Downloads](https://img.shields.io/pypi/dm/discord-together?style=flat&logo=acclaim)
+        ![Made for discord.py](https://img.shields.io/badge/Made%20for-discord.py-blue?style=flat&logo=discord)
+        
+        [![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
+        
+        # 👋 Welcome!
+        ### Discord has released a BETA feature that they call Discord Party Games to only a certain hand-picked servers. This module allows you to temporarily enable such features for your servers! 
+        
+        <br/>
+        
+        # 🔩 Installation
+        ## Install [discord-together](https://pypi.org/project/discord-together/)
+        ```
+        pip install discord-together
+        ```
+        
+        #### Package dependencies include [discord.py](https://pypi.org/project/discord.py/) and [aiohttp](https://pypi.org/project/aiohttp/)
+        <br/>
+        
+        # 🔑 Features
+        - Easy to use
+        - Dynamic
+        - Actively maintained
+        - [discord.py](https://pypi.org/project/discord.py/) support
+        - Lightweight
+        
+        <br/>
+        
+        # 💻 Code example
+        This is a simple example of code using this package.
+        
+        ```py
+        from discord.ext import commands
+        from discordTogether import DiscordTogether
+        
+        client = commands.Bot(command_prefix="~")
+        togetherControl = DiscordTogether(client)
+        
+        @client.event
+        async def on_ready():
+            print(f"Bot logged into {client.user}.")
+        
+        @client.command()
+        async def startYT(ctx):
+            link = await togetherControl.create_link(ctx.author.voice.channel.id, 'youtube')
+            await ctx.send(f"Click the blue link!\n{link}")
+        
+        client.run("BOT_TOKEN_HERE")
+        ```
+        <br/>
+        
+        # 🔧 Options
+        - **Youtube**
+        ```py
+        link = await togetherControl.create_link(ctx.author.voice.channel.id, 'youtube')
+        ```
+        
+        - **Poker**
+        ```py
+        link = await togetherControl.create_link(ctx.author.voice.channel.id, 'poker')
+        ```
+        
+        - **Chess**
+        ```py
+        link = await togetherControl.create_link(ctx.author.voice.channel.id, 'chess')
+        ```
+        
+        - **Betrayal**
+        ```py
+        link = await togetherControl.create_link(ctx.author.voice.channel.id, 'betrayal')
+        ```
+        
+        - **Fishing**
+        ```py
+        link = await togetherControl.create_link(ctx.author.voice.channel.id, 'fishing')
+        ```
+        
+        - **Custom Activity**
+        ```py
+        link = await togetherControl.create_link(ctx.author.voice.channel.id, 'CUSTOM_APP_ID_HERE')
+        # Only use this if you know the exact ID for a application.
+        ```
+        
+        
+        # 📷 Image 
+        
+        ![Invite link](https://cdn.discordapp.com/attachments/450659049659170817/850783760009658389/Screenshot_2021-06-04_231039_3.png)
+        
+        ### *Note: you have to click on the **BLUE LINK**, not the 'Play' button, in order to start the activity !*
+        
+        <br/>
+        
+        ![YouTube Together](https://cdn.discordapp.com/attachments/450659049659170817/850782952724234290/Screenshot_2021-06-04_231612.png)
+        
+        <br/>
+        
+        # 🚀 Others
+        
+        **This package is under MIT license.** Tested PR's and forks are more than welcome.
+        
+        *Note: This package is not affiliated with Discord or YouTube.*
+        
+        If you have any problems, you can contact: `Bxllistic#4444`.
+        (*Discord server will be made if needed.*)
+        
+        This project was converted to support `discord.py` from the npm package [discord-together](https://www.npmjs.com/package/discord-together) made by [RemyK888](https://github.com/RemyK888)
+        
+        
+        [**Github repository**](https://github.com/apurv-r/discord-together)
+        
+        <hr>
+        
+        ## **Made with ❤ by Bxllistic#4444**
+        <br>
+        
+        Credits to [@RemyK888](https://github.com/RemyK888) for application IDs and foundations
+        
+        Thanks to [@VineyS](https://github.com/VineyS) for shifting from `requests` to `aiohttp`
+        <br/>
+Keywords: discordpy,discord.py,discord together,activity together,discord party games,party games,discord activities,discord,youtube together
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Internet
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
+Requires-Python: >=3.8.0
+Description-Content-Type: text/markdown
