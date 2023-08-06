@@ -1,0 +1,9 @@
+README.md
+setup.py
+Japanese_BPE_Tokenizer.egg-info/PKG-INFO
+Japanese_BPE_Tokenizer.egg-info/SOURCES.txt
+Japanese_BPE_Tokenizer.egg-info/dependency_links.txt
+Japanese_BPE_Tokenizer.egg-info/not-zip-safe
+Japanese_BPE_Tokenizer.egg-info/requires.txt
+Japanese_BPE_Tokenizer.egg-info/top_level.txt
+jpn_bpe_tokenizer/__init__.py
