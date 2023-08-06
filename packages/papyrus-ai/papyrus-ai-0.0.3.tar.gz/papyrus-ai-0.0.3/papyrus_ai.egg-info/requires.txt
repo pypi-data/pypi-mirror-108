@@ -1,0 +1,8 @@
+sklearn
+numpy
+pandas
+xgboost
+setuptools
+nltk
+bentoml
+autocorrect
