@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: secp256k1Crypto
+Version: 0.0.1
+Summary: Multi OS supported secp256k1-py
+Home-page: https://github.com/hoorin/secp256k1-py-multi-os
+Author: HooriRn
+Author-email: HooriRn@protonmail.com
+License: MIT
+Keywords: secp256k1,secp256k1-py,crypto
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# secp256k1 lib support for windowsOS, macOS, linux
+
+This is exact lib from secp256k1-py but with multi OS support.
+
+You'll need to install `setuptools` for installation.
+
+## INSTALL
+
+```python
+# in the repo folder
+pip3 install .
+```
+OR
+
+```python
+# in the repo folder
+python3 setup.py install
+```
+
+

@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+secp256k1Crypto/__init__.py
+secp256k1Crypto/__main__.py
+secp256k1Crypto.egg-info/PKG-INFO
+secp256k1Crypto.egg-info/SOURCES.txt
+secp256k1Crypto.egg-info/dependency_links.txt
+secp256k1Crypto.egg-info/requires.txt
+secp256k1Crypto.egg-info/top_level.txt
