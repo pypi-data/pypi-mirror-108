@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: ToushinReader
+Version: 0.2.3
+Summary: Japanese Mutual Fund data download library.
+Home-page: https://github.com/sawadyrr5/ToushinReader
+Author: sawady
+Author-email: riskreturn5@gmail.com
+License: Apache 2.0
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# About this library
+Downloading japanese mutual fund data.
+Data source [投信総合検索ライブラリー](https://toushin-lib.fwg.ne.jp/)
+
+## How to install
+```buildoutcfg
+pip install ToushinReader
+```
+
+## Usage
+see example.py
+```buildoutcfg
+from ToushinReader.core import Fund
+
+
+isin_code = "JP90C000KAH8"  # グローバルＥＳＧハイクオリティ成長株式ファンド（為替ヘッジなし）
+
+myFund = Fund(isin_code)
+```
+
+
