@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+VERSION
+requirements.txt
+setup.cfg
+setup.py
+Flask_S3_ng.egg-info/PKG-INFO
+Flask_S3_ng.egg-info/SOURCES.txt
+Flask_S3_ng.egg-info/dependency_links.txt
+Flask_S3_ng.egg-info/requires.txt
+Flask_S3_ng.egg-info/top_level.txt
+Flask_S3_ng.egg-info/zip-safe
+flask_s3/__init__.py
