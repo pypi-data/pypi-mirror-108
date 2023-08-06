@@ -1,0 +1,10 @@
+Trimports/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+Trimports/arg_process.py,sha256=N-Bx8gdJUB_5J-jgwQOvX440WHKq6JsFl42lZSHCb4U,753
+Trimports/trimport.py,sha256=9sDCEjJ29Au13wGn7bOj7reUHKrC83WOaoEmh6Plfa4,6667
+Trimports/utils.py,sha256=tROUb60LFSuYR6N96m6YUFTJ0xwWk2cbBWKAlT6-Xk4,225
+trimports-0.1.1.dist-info/LICENSE.txt,sha256=vIXSAftA6aQ4-kbNg9zT3XCrPuObXWTFKp1XbSZc9Yg,1050
+trimports-0.1.1.dist-info/METADATA,sha256=nEwDgDCqD-CjC1QHsCOh-F3_G5CeYRy0ymJpz_mYC9I,1336
+trimports-0.1.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+trimports-0.1.1.dist-info/entry_points.txt,sha256=zMkwCX-tfB8bH7zRdDKBu1MMmWfPJiNu6JTR03F53T8,50
+trimports-0.1.1.dist-info/top_level.txt,sha256=VIYD6KfIkyPVdJieCWe254qqATSX-too3iI1RkdHeHw,10
+trimports-0.1.1.dist-info/RECORD,,
