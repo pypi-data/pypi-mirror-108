@@ -1,0 +1,14 @@
+import_me/__init__.py,sha256=y8Bc8LTW8tTzCu2icGEKa21iWu22QASVeD6lhJquiPo,156
+import_me/columns.py,sha256=8nIY93gV0aWKRCM9AM6VSei-4ivPcvV0vufkfR5zroY,944
+import_me/constants.py,sha256=SFTkHdM7DcG4hY8L3JSAlRbVKzbjC_Vtz5080HLwxm8,734
+import_me/exceptions.py,sha256=FxfjYyE-o_YZx2NM13Iz2USWr6zOyeDYsnEJkDfuXDg,528
+import_me/processors.py,sha256=MkgZzXW0QOdWHIaKud32gNyjZj-l40ysXy3TjF6QSfc,12026
+import_me/parsers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+import_me/parsers/base.py,sha256=6WCC3JpigPZBhBgvPTjciw_1E63Kp6TN4llDWtU-jU8,9044
+import_me/parsers/csv.py,sha256=sdbcxSzBYQdJ12o3SZW80JVO-6x29fm6-9sPRANmh3c,3457
+import_me/parsers/xlsx.py,sha256=Fqe6p257tT4el9-ia6Y19z2h-KdG1IzEkTU5oJF4iDk,4123
+import_me-0.2.3.dist-info/LICENSE,sha256=sssCbYJLoAcqXzSAOqc7umDVY3Ife6n6efaWO0fy6Hs,1067
+import_me-0.2.3.dist-info/METADATA,sha256=I7wUEDPk8Ia_Xx88ugzTD6MKh3mqOXmhz4RXX0uz0Yg,3070
+import_me-0.2.3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+import_me-0.2.3.dist-info/top_level.txt,sha256=1hMjl7PsBDCBWuhO-lD78f3rFT4xyw6kYPia6kVp0tI,10
+import_me-0.2.3.dist-info/RECORD,,
