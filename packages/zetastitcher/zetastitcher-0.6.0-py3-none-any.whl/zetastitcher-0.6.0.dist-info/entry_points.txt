@@ -1,0 +1,5 @@
+[console_scripts]
+stitch-align = zetastitcher.align.__main__:main
+stitch-downscale = zetastitcher.scripts.stitch_downscale:main
+stitch-fuse = zetastitcher.fuse.__main__:main
+

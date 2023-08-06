@@ -1,0 +1,95 @@
+Metadata-Version: 2.1
+Name: zetastitcher
+Version: 0.6.0
+Summary: ZetaStitcher is a tool designed to stitch large volumetric images such as those produced by Light-Sheet Fluorescence Microscopes.
+Home-page: https://github.com/lens-biophotonics/ZetaStitcher
+Author: Giacomo Mazzamuto
+Author-email: mazzamuto@lens.unifi.it
+License: GPLv3+
+Keywords: stitch,microscopy
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Description-Content-Type: text/markdown
+Requires-Dist: cachetools
+Requires-Dist: coloredlogs
+Requires-Dist: cvxpy
+Requires-Dist: humanize
+Requires-Dist: imageio
+Requires-Dist: networkx (>=2.0)
+Requires-Dist: numpy
+Requires-Dist: opencv-python
+Requires-Dist: pandas
+Requires-Dist: pims
+Requires-Dist: psutil
+Requires-Dist: pyyaml
+Requires-Dist: qpsolvers
+Requires-Dist: scipy
+Requires-Dist: tifffile
+Provides-Extra: dcimg
+Requires-Dist: dcimg (>=0.4.0) ; extra == 'dcimg'
+Provides-Extra: dev
+Requires-Dist: pip-tools ; extra == 'dev'
+Provides-Extra: doc
+Requires-Dist: m2r2 ; extra == 'doc'
+Requires-Dist: numpydoc ; extra == 'doc'
+Requires-Dist: sphinx ; extra == 'doc'
+Requires-Dist: sphinx-rtd-theme ; extra == 'doc'
+Provides-Extra: test
+Requires-Dist: mock ; extra == 'test'
+
+<p align="center">
+<img src="https://raw.githubusercontent.com/lens-biophotonics/ZetaStitcher/master/doc/_static/zetastitcher.svg", height="150">
+</p>
+
+ZetaStitcher is a tool designed to stitch large volumetric images such as
+those produced by Light-Sheet Fluorescence Microscopes.
+
+Key features:
+
+* able to handle datasets as big as 10<sup>12</sup> voxels
+* multichannel images
+* powerful and simple Python API to query arbitrary regions within the fused
+volume
+
+## How to install
+On Ubuntu 20.04 LTS, run these commands:
+```
+sudo apt-get install python3-pip libgl1 libglib2.0-0
+pip3 install zetastitcher
+```
+
+## Docker image
+To build a docker image with ZetaStitcher:
+```
+make docker
+```
+You can call the stitching commands using an ephemeral container like this:
+```
+docker run -it -v`pwd`:/home --rm zetastitcher stitch-align -h
+docker run -it -v`pwd`:/home --rm zetastitcher stitch-fuse -h
+```
+
+## Documentation
+Please read the documentation and follow the tutorial at this page:<br/>
+https://lens-biophotonics.github.io/ZetaStitcher/
+
+
+## Acknowledgements
+This open source software code was developed in whole in the Human
+Brain Project, funded from the European Union’s Horizon 2020 Framework
+Programme for Research and Innovation under Specific Grant Agreements
+No. 720270 and No. 785907 (Human Brain Project SGA1 and SGA2).
+
+<p align="center">
+<img height="100" style="max-height: 100px" src="https://europa.eu/european-union/sites/europaeu/files/docs/body/flag_yellow_low.jpg">
+Co-funded by the European Union
+</p>
+
+
