@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "phygitalism_logger"
+version = "0.1.1"
+description = ""
+authors = ["Phygitalism","und3v3l0p3d <prohibitme@phygitalism.com>"]
+
+[tool.poetry.dependencies]
+python = ">=3.7,<4.0"
+pygelf = "^0.4.0"
+phygitalism-config = "^0.1.11"
+
+[tool.poetry.dev-dependencies]
+pytest = "^6.2.4"
+pytest-cov = "^2.12.1"
+
+[tool.poetry.scripts]
+generate-graylog-config = "phygitalism_logger.generate:gen"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
