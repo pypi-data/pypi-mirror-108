@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: cryptool
+Version: 0.0.2
+Summary: cryptool is a python library to more easily deal with crypto exchanges and trading platforms based on them
+Home-page: https://github.com/carlok/cryptool
+Author: Carlo Perassi
+Author-email: carlo.perassi@gmail.com
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: pandas>=1.2.4
+Requires-Dist: python-binance>=1.0.12
+
+# cryptool
+cryptool is a python library to more easily deal with crypto exchanges and trading platforms based on them.
+
+## Installation
+
+```
+pip install cryptool
+```
+
+## Example
+
+Read `scratch.py`.
+
+## Home
+
+On its [GitHub](https://github.com/carlok/cryptool) page.
