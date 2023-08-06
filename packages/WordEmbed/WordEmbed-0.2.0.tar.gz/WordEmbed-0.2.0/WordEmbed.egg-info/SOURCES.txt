@@ -1,0 +1,14 @@
+LICENSE
+README.md
+setup.py
+WordEmbed/__init__.py
+WordEmbed/cbow.py
+WordEmbed/correlation.py
+WordEmbed/glove.py
+WordEmbed/main.py
+WordEmbed/skipgram.py
+WordEmbed.egg-info/PKG-INFO
+WordEmbed.egg-info/SOURCES.txt
+WordEmbed.egg-info/dependency_links.txt
+WordEmbed.egg-info/requires.txt
+WordEmbed.egg-info/top_level.txt
