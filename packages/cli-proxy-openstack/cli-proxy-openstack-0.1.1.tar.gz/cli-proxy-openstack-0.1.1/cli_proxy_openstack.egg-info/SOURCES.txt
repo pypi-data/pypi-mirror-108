@@ -1,0 +1,7 @@
+setup.py
+cli_proxy_openstack.egg-info/PKG-INFO
+cli_proxy_openstack.egg-info/SOURCES.txt
+cli_proxy_openstack.egg-info/dependency_links.txt
+cli_proxy_openstack.egg-info/entry_points.txt
+cli_proxy_openstack.egg-info/requires.txt
+cli_proxy_openstack.egg-info/top_level.txt
