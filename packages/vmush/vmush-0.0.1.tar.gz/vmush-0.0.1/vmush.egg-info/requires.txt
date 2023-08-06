@@ -1,0 +1,2 @@
+pymush
+django>=3.2
