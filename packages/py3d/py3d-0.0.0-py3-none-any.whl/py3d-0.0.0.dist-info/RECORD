@@ -1,0 +1,8 @@
+py3d/__init__.py,sha256=uPIJtr3JkAjdwqGlmD8ddGHjgCguwA8Jz5pnzvMysvU,23
+py3d/vector3.py,sha256=M_zuuIjZ5-Xc7XKMXesW75hjlCRSdHrvvzcxwxk9awE,5584
+src/__init__.py,sha256=uPIJtr3JkAjdwqGlmD8ddGHjgCguwA8Jz5pnzvMysvU,23
+src/vector3.py,sha256=M_zuuIjZ5-Xc7XKMXesW75hjlCRSdHrvvzcxwxk9awE,5584
+py3d-0.0.0.dist-info/METADATA,sha256=_1cgC1dADnsIoFaWAGg1lNwbH3EGWNYPx72xXkcq9l4,259
+py3d-0.0.0.dist-info/WHEEL,sha256=EVRjI69F5qVjm_YgqcTXPnTAv3BfSUr0WVAHuSP3Xoo,92
+py3d-0.0.0.dist-info/top_level.txt,sha256=4FlxjVWKBmgtfYWCX2ZDGPpHIDerM_D2THqW4OT5GWc,5
+py3d-0.0.0.dist-info/RECORD,,
