@@ -1,0 +1,389 @@
+swagger: '2.0'
+x-endpoint-name: dbus
+x-products: ALTUS,CDP
+x-form-factors: public
+info:
+  version: __API_VERSION__
+  title: Cloudera DataBus Service
+  license:
+    name: Apache 2.0
+  description: Cloudera DataBus Service is a data transport infrastructure.
+schemes:
+  - https
+consumes:
+  - application/json
+produces:
+  - application/json
+paths:
+  /dbus/putRecord:
+    post:
+      summary: Put a single record.
+      description: Put a single record into the DataBus.
+      operationId: putRecord
+      x-right: dbus/putRecord
+      x-is-suppress-logging: true
+      parameters:
+        - name: input
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/PutRecordRequest'
+      responses:
+        200:
+          description: Expected response to a valid request.
+          schema:
+            $ref: '#/definitions/PutRecordResponse'
+        default:
+          description: The default response on an error.
+          schema:
+            $ref: '#/definitions/Error'
+  /dbus/listAutoActions:
+    post:
+      summary: List auto actions.
+      description: List auto actions.
+      operationId: listAutoActions
+      x-is-suppress-logging: true
+      x-entitlement: WXM_AUTO_ACTIONS
+      parameters:
+        - name: input
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/ListAutoActionsRequest'
+      responses:
+        200:
+          description: Expected response to a valid request.
+          schema:
+            $ref: '#/definitions/ListAutoActionsResponse'
+        default:
+          description: The default response on an error.
+          schema:
+            $ref: '#/definitions/Error'
+  /dbus/testPutRecord:
+    post:
+      summary: Test put a new record.
+      description: Test put a new record.
+      operationId: testPutRecord
+      x-right: dbus/putRecord
+      parameters:
+        - name: input
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/TestPutRecordRequest'
+      responses:
+        200:
+          description: Expected response to a valid request.
+          schema:
+            $ref: '#/definitions/TestPutRecordResponse'
+        default:
+          description: The default response on an error.
+          schema:
+            $ref: '#/definitions/Error'
+definitions:
+  Error:
+    type: object
+    description: An object returned on an error.
+    properties:
+      code:
+        type: string
+        description: The error code.
+      message:
+        type: string
+        description: The error message.
+  PutRecordRequest:
+    type: object
+    description: Request object for a put record request.
+    required:
+      - record
+    properties:
+      record:
+        $ref: '#/definitions/Record'
+        description: The record to send into the DataBus.
+        x-skip-logging: true
+  PutRecordResponse:
+    type: object
+    description: Response object for a put record request.
+    required:
+      - record
+    properties:
+      record:
+        $ref: '#/definitions/RecordReply'
+        description: The reply for sending the record.
+        x-skip-logging: true
+  Header:
+    type: object
+    description: Holds one piece of metadata for a record.
+    required:
+      - name
+      - value
+    properties:
+      name:
+        type: string
+        description: The name of the header.
+      value:
+        type: string
+        description: The value of the header.
+  RecordStatus:
+    type: string
+    description: The status of a record.
+    enum:
+      - SENT
+      - PENDING
+      - UNKNOWN
+  Record:
+    type: object
+    description: Represents small unit of data going into a stream.
+    required:
+      - streamName
+      - partitionKey
+      - payloadSize
+      - headers
+    properties:
+      streamName:
+        type: string
+        description: Name of the target DataStream.
+      partitionKey:
+        type: string
+        description: Partition key. Variance should be high enough to ensure even distribution.
+      payloadSize:
+        type: integer
+        format: int64
+        description: Expected size of the payload in bytes, whether inlined or to be sent out of band.
+      headers:
+        type: array
+        items:
+          $ref: '#/definitions/Header'
+        description: Arbitrary metadata that will be made available to subscribers of the message.
+      payload:
+        type: string
+        minLength: 0
+        maxLength: 1048576
+        description: Optional inlined payload encoded in base64 format. Decoded size cannot exceed 1MB.
+        x-skip-logging: true
+  RecordReply:
+    type: object
+    description: Reply for the transmission of an individual record.
+    required:
+      - recordId
+      - status
+    properties:
+      recordId:
+        type: string
+        description: Unique identifier for the record.
+      status:
+        $ref: '#/definitions/RecordStatus'
+        description: The status of the record.
+      uploadUrl:
+        type: string
+        description: Optional url to HTTP PUT the actual payload.
+  TestPutRecordRequest:
+    type: object
+    description: Request object for test put record request.
+  TestPutRecordResponse:
+    type: object
+    description: Response object for test put record response.
+  CriteriaResponse:
+    type: object
+    description: Criteria defined for the workload.
+    required:
+      - filterName
+      - value
+    properties:
+      filterName:
+        $ref: '#/definitions/CriteriaFilterName'
+        description: Supported filter name to add to the criteria when defining the workload.
+      value:
+        type: string
+        description: The value of the filter.
+      operator:
+        $ref: '#/definitions/CriteriaFilterOperator'
+        description: The operator to use for the filter.
+  CriteriaFilterName:
+    type: string
+    description: The supported columns for Workload Criteria.
+    enum:
+      - DEFAULTDB
+      - POOL
+      - QUERYTYPE
+      - USER
+      - HOUROFDAY
+      - TABLE
+      - DDLTYPE
+      - TYPE
+  CriteriaFilterOperator:
+    type: string
+    description: The operator to use for a filter.
+    enum:
+      - ANY
+      - NONE
+      - ALL
+      - GREATERTHAN
+      - LESSTHAN
+      - GREATERTHANEQUAL
+      - LESSTHANEQUAL
+  AutoActionsNotificationResponse:
+    type: object
+    description: Object containing the notification details of an auto action notification.
+    required:
+      - type
+    properties:
+      type:
+        $ref: '#/definitions/AutoActionsNotificationType'
+        description: Type of the notification.
+      details:
+        type: string
+        description: JSON formatted string containing additional details related to this notification. Check auto_action_notification_details.proto for the schema of this attribute.
+  AutoActionsTriggerOperator:
+    type: string
+    description: The operator used for an auto action trigger.
+    enum:
+      - GREATER_THAN
+      - LESS_THAN
+      - GREATER_THAN_EQUAL
+      - LESS_THAN_EQUAL
+      - EQUAL
+      - NOT_EQUAL
+  AutoActionsTriggerUnit:
+    type: string
+    description: The unit used for the action trigger.
+    enum:
+      - SECOND
+      - MEBI_BYTE
+  AutoActionStatus:
+    type: string
+    description: The status of the auto action.
+    enum:
+      - ENABLED
+      - DISABLED
+  ActionResponse:
+    type: object
+    description: Object containing the action to perform for an auto action definition.
+    required:
+      - type
+    properties:
+      type:
+        $ref: '#/definitions/ActionType'
+        description: Type of the action.
+      details:
+        type: string
+        description: Additional details related to this action.
+  EngineType:
+    type: string
+    description: The type of execution engine used.
+    enum:
+      - UNKNOWN
+      - HIVE
+      - IMPALA
+      - MAPREDUCE
+      - OOZIE
+      - SPARKAPP
+      - MLMONITORING
+  ActionType:
+    type: string
+    description: The actions that can be performed by an auto action.
+    enum:
+      - NONE
+      - KILL
+  AutoActionsNotificationType:
+    type: string
+    description: The type of notification.
+    enum:
+      - EMAIL
+  AutoActionsTriggerResponse:
+    type: object
+    description: Definition containing the details related to an auto action trigger.
+    required:
+      - metric
+      - operator
+    properties:
+      metric:
+        type: string
+        description: The metric for which the trigger is defined.
+      operator:
+        $ref: '#/definitions/AutoActionsTriggerOperator'
+        description: The operator to use for the trigger.
+      value:
+        type: string
+        description: The value of the trigger metric.
+      unit:
+        $ref: '#/definitions/AutoActionsTriggerUnit'
+        description: The unit of the trigger metric.
+  AutoAction:
+    type: object
+    description: Object representing an auto action definition.
+    required:
+      - id
+      - name
+      - environmentId
+      - engineType
+      - triggers
+      - notifications
+      - status
+      - creationDate
+      - lastModificationDate
+    properties:
+      id:
+        type: string
+        description: The ID of the auto action.
+      name:
+        type: string
+        description: The name of the auto action.
+      environmentId:
+        type: string
+        description: The ID of the environment for which the auto action is defined.
+      engineType:
+        $ref: '#/definitions/EngineType'
+        description: The target engine type for the auto action. The action defined by this auto action definition will be applicable for jobs/queries of this engine type.
+      triggers:
+        type: array
+        items:
+          $ref: '#/definitions/AutoActionsTriggerResponse'
+        description: List of trigger conditions which will trigger this auto action.
+      notifications:
+        type: array
+        items:
+          $ref: '#/definitions/AutoActionsNotificationResponse'
+        description: List of notifications which needs to be sent when this action is triggered.
+      status:
+        $ref: '#/definitions/AutoActionStatus'
+        description: Status of the auto action.
+      creationDate:
+        type: string
+        format: date-time
+        description: Date of creation of this auto action defintion.
+      lastModificationDate:
+        type: string
+        format: date-time
+        description: The last modification date of this auto action defintion.
+      action:
+        $ref: '#/definitions/ActionResponse'
+        description: Action to be performed by this auto action definition.
+      criteria:
+        type: array
+        items:
+          $ref: '#/definitions/CriteriaResponse'
+        description: Filter criteria defined for this auto action. The action will be applied only for the jobs/queries matching these criteria.
+  ListAutoActionsRequest:
+    type: object
+    description: Request object for a list auto actions request.
+    required:
+      - environmentId
+    properties:
+      environmentId:
+        type: string
+        description: The ID of the environment whose auto action definitions need to be retrieved.
+      engineType:
+        $ref: '#/definitions/EngineType'
+        description: The engineType whose auto action definitions need to be retrieved.
+  ListAutoActionsResponse:
+    type: object
+    description: Response object for a list auto actions request.
+    required:
+      - autoActions
+    properties:
+      autoActions:
+        type: array
+        items:
+          $ref: '#/definitions/AutoAction'
+        description: The list of requested auto actions.

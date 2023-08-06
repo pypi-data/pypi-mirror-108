@@ -1,0 +1,227 @@
+swagger: '2.0'
+x-interface-model: admin
+x-endpoint-name: sdxadmin
+x-products: ALTUS
+x-form-factors: public
+info:
+  version: __API_VERSION__
+  title: Cloudera SDX Administrative Service
+  license:
+    name: Apache 2.0
+  description: Cloudera SDX Administrative Service is a web service that provides an administrative interface to the Altus SDX service.
+schemes:
+  - https
+consumes:
+  - application/json
+produces:
+  - application/json
+paths:
+  /sdxadmin/setLimit:
+    post:
+      summary: Sets a limit for a account.
+      description: Sets a limit for a account overriding the default limit. To see a list of possible limits use 'listLimitsDescriptors'.
+      operationId: setLimit
+      x-right: altusadmin/callProtectedAdminAPIs
+      parameters:
+        - name: input
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/SetLimitRequest'
+      responses:
+        200:
+          description: Expected response to a valid request.
+          schema:
+            $ref: '#/definitions/SetLimitResponse'
+        default:
+          description: The default response on an error.
+          schema:
+            $ref: '#/definitions/Error'
+  /sdxadmin/listLimitsDescriptors:
+    post:
+      summary: Lists all possible limit descriptors that can be set through the SDX admin service.
+      description: Lists all possible limit descriptors that can be set through the SDX admin service. If no limit names are specified the call returns all limits descriptors.
+      operationId: listLimitsDescriptors
+      x-paging-default-max-items: 100
+      parameters:
+        - name: input
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/ListLimitsDescriptorsRequest'
+      responses:
+        200:
+          description: Expected response to a valid request.
+          schema:
+            $ref: '#/definitions/ListLimitsDescriptorsResponse'
+        default:
+          description: The default response on an error.
+          schema:
+            $ref: '#/definitions/Error'
+  /sdxadmin/listLimits:
+    post:
+      summary: Lists the current limits for an account.
+      description: Lists the current limit for an account. If no limit names are specified the call returns all the limits for an account.
+      operationId: listLimits
+      x-paging-default-max-items: 100
+      parameters:
+        - name: input
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/ListLimitsRequest'
+      responses:
+        200:
+          description: Expected response to a valid request.
+          schema:
+            $ref: '#/definitions/ListLimitsResponse'
+        default:
+          description: The default response on an error.
+          schema:
+            $ref: '#/definitions/Error'
+definitions:
+  Error:
+    type: object
+    description: An object returned on an error.
+    properties:
+      code:
+        type: string
+        description: The error code.
+      message:
+        type: string
+        description: The error message.
+  LimitDescriptor:
+    type: object
+    description: Information about a limit.
+    required:
+      - limitName
+      - description
+      - defaultValue
+      - customerVisible
+    properties:
+      limitName:
+        type: string
+        description: The limit name.
+      description:
+        type: string
+        description: A description of the limit.
+      defaultValue:
+        type: integer
+        format: int32
+        description: The limit's default value.
+      customerVisible:
+        type: boolean
+        description: Whether this is a customer visible limit or not.
+  Limit:
+    type: object
+    description: Information about a limit.
+    required:
+      - limitName
+      - limit
+    properties:
+      limitName:
+        type: string
+        description: The limit name.
+      limit:
+        type: integer
+        format: int32
+        description: The limit's value.
+  SetLimitRequest:
+    type: object
+    description: Request object for a set limit request.
+    required:
+      - accountId
+      - limitName
+      - limit
+    properties:
+      accountId:
+        type: string
+        description: The account ID.
+      limitName:
+        type: string
+        description: The limit name.
+      limit:
+        type: integer
+        description: The new limit value.
+        format: int32
+        minimum: 0
+  SetLimitResponse:
+    type: object
+    description: Response object for a set limit for account request.
+  ListLimitsDescriptorsRequest:
+    type: object
+    description: Request object for a list limits descriptors request.
+    properties:
+      limitNames:
+        type: array
+        items:
+          type: string
+        description: The limit names.
+      pageSize:
+        type: integer
+        format: int32
+        minimum: 1
+        maximum: 100
+        x-paging-page-size: true
+        description: The size of each page.
+      startingToken:
+        type: string
+        x-paging-input-token: true
+        description: A token to specify where to start paginating. This is the nextToken from a previously truncated response.
+  ListLimitsDescriptorsResponse:
+    type: object
+    description: Response object for a list limits defaults for account request.
+    required:
+      - limits
+    properties:
+      limits:
+        type: array
+        items:
+          $ref: '#/definitions/LimitDescriptor'
+        x-paging-result: true
+        description: The limits descriptors for the different Gridlink services.
+      nextToken:
+        type: string
+        x-paging-output-token: true
+        description: The token to use when requesting the next set of results. If not present, there are no additional results.
+  ListLimitsRequest:
+    type: object
+    description: Request object for a list limits request.
+    required:
+      - accountId
+    properties:
+      accountId:
+        type: string
+        description: The account ID.
+      limitNames:
+        type: array
+        items:
+          type: string
+        description: The limit names.
+      pageSize:
+        type: integer
+        format: int32
+        minimum: 1
+        maximum: 100
+        x-paging-page-size: true
+        description: The size of each page.
+      startingToken:
+        type: string
+        x-paging-input-token: true
+        description: A token to specify where to start paginating. This is the nextToken from a previously truncated response.
+  ListLimitsResponse:
+    type: object
+    description: Response object for a list limits for account request.
+    required:
+      - limits
+    properties:
+      limits:
+        type: array
+        items:
+          $ref: '#/definitions/Limit'
+        x-paging-result: true
+        description: The limits for the account.
+      nextToken:
+        type: string
+        x-paging-output-token: true
+        description: The token to use when requesting the next set of results. If not present, there are no additional results.

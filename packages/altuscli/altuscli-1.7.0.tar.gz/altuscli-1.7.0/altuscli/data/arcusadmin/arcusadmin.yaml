@@ -1,0 +1,805 @@
+swagger: '2.0'
+x-interface-model: admin
+x-endpoint-name: arcusadmin
+x-products: ALTUS
+x-form-factors: public
+info:
+  version: __API_VERSION__
+  title: Cloudera Arcus Administrative Service
+  license:
+    name: Apache 2.0
+  description: Cloudera Arcus Administrative Service is a web service that provides an administrative interface to the Altus Data Engineering service.
+schemes:
+  - https
+consumes:
+  - application/json
+produces:
+  - application/json
+paths:
+  /arcusadmin/createDirector:
+    post:
+      summary: Creates a new Director.
+      description: Creates a new Director.
+      operationId: createDirector
+      x-right: altusadmin/callProtectedAdminAPIs
+      parameters:
+        - name: input
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/CreateDirectorRequest'
+      responses:
+        200:
+          description: Expected response to a valid request.
+          schema:
+            $ref: '#/definitions/CreateDirectorResponse'
+        default:
+          description: The default response on an error.
+          schema:
+            $ref: '#/definitions/Error'
+  /arcusadmin/deleteDirector:
+    post:
+      summary: Deletes an existing Director.
+      description: Deletes an existing Director.
+      operationId: deleteDirector
+      x-right: altusadmin/callProtectedAdminAPIs
+      parameters:
+        - name: input
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/DeleteDirectorRequest'
+      responses:
+        200:
+          description: Expected response to a valid request.
+          schema:
+            $ref: '#/definitions/DeleteDirectorResponse'
+        default:
+          description: The default response on an error.
+          schema:
+            $ref: '#/definitions/Error'
+  /arcusadmin/stopDirector:
+    post:
+      summary: Stops an existing Director.
+      description: Stops an existing Director.
+      operationId: stopDirector
+      x-right: altusadmin/callProtectedAdminAPIs
+      parameters:
+        - name: input
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/StopDirectorRequest'
+      responses:
+        200:
+          description: Expected response to a valid request.
+          schema:
+            $ref: '#/definitions/StopDirectorResponse'
+        default:
+          description: The default response on an error.
+          schema:
+            $ref: '#/definitions/Error'
+  /arcusadmin/startDirector:
+    post:
+      summary: Starts an existing Director.
+      description: Starts an existing Director.
+      operationId: startDirector
+      x-right: altusadmin/callProtectedAdminAPIs
+      parameters:
+        - name: input
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/StartDirectorRequest'
+      responses:
+        200:
+          description: Expected response to a valid request.
+          schema:
+            $ref: '#/definitions/StartDirectorResponse'
+        default:
+          description: The default response on an error.
+          schema:
+            $ref: '#/definitions/Error'
+  /arcusadmin/listDirectors:
+    post:
+      summary: Lists Directors.
+      description: Lists Directors. If no Director names are specified, the call lists all Directors.
+      operationId: listDirectors
+      x-paging-default-max-items: 100
+      parameters:
+        - name: input
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/ListDirectorsRequest'
+      responses:
+        200:
+          description: Expected response to a valid request.
+          schema:
+            $ref: '#/definitions/ListDirectorsResponse'
+        default:
+          description: The default response on an error.
+          schema:
+            $ref: '#/definitions/Error'
+  /arcusadmin/setLimit:
+    post:
+      summary: Sets a limit for a account.
+      description: Sets a limit for a account overriding the default limit. To see a list of possible limits use 'listLimitsDescriptors'.
+      operationId: setLimit
+      x-right: altusadmin/callProtectedAdminAPIs
+      parameters:
+        - name: input
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/SetLimitRequest'
+      responses:
+        200:
+          description: Expected response to a valid request.
+          schema:
+            $ref: '#/definitions/SetLimitResponse'
+        default:
+          description: The default response on an error.
+          schema:
+            $ref: '#/definitions/Error'
+  /arcusadmin/listLimitsDescriptors:
+    post:
+      summary: Lists all possible limit descriptors that can be set through the Arcus admin service.
+      description: Lists all possible limit descriptors that can be set through the Arcus admin service. If no limit names are specified the call returns all limits descriptors.
+      operationId: listLimitsDescriptors
+      x-paging-default-max-items: 100
+      parameters:
+        - name: input
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/ListLimitsDescriptorsRequest'
+      responses:
+        200:
+          description: Expected response to a valid request.
+          schema:
+            $ref: '#/definitions/ListLimitsDescriptorsResponse'
+        default:
+          description: The default response on an error.
+          schema:
+            $ref: '#/definitions/Error'
+  /arcusadmin/listLimits:
+    post:
+      summary: Lists the current limits for an account.
+      description: Lists the current limit for an account. If no limit names are specified the call returns all the limits for an account.
+      operationId: listLimits
+      x-paging-default-max-items: 100
+      parameters:
+        - name: input
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/ListLimitsRequest'
+      responses:
+        200:
+          description: Expected response to a valid request.
+          schema:
+            $ref: '#/definitions/ListLimitsResponse'
+        default:
+          description: The default response on an error.
+          schema:
+            $ref: '#/definitions/Error'
+  /arcusadmin/syncUsers:
+    post:
+      summary: Synchronizes a secure cluster's user and group state with Altus.
+      description: Updates the users and user-to-group mappings maintained in-cluster to reflect the current state in Altus.
+      operationId: syncUsers
+      x-right: altusadmin/callProtectedAdminAPIs
+      parameters:
+        - name: input
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/SyncUsersRequest'
+      responses:
+        200:
+          description: Expected response to a valid request.
+          schema:
+            $ref: '#/definitions/SyncUsersResponse'
+        default:
+          description: The default response on an error.
+          schema:
+            $ref: '#/definitions/Error'
+  /arcusadmin/describeCluster:
+    post:
+      summary: Describe a cluster.
+      description: Describe a cluster.
+      operationId: describeCluster
+      parameters:
+        - name: input
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/DescribeClusterRequest'
+      responses:
+        200:
+          description: Expected response to a valid request.
+          schema:
+            $ref: '#/definitions/DescribeClusterResponse'
+        default:
+          description: The default response on an error.
+          schema:
+            $ref: '#/definitions/Error'
+  /arcusadmin/createTunnelingLoadBalancer:
+    post:
+      summary: Create an SSH Tunneling Load Balancer.
+      description: Create an SSH Tunneling Load Balancer.
+      operationId: createTunnelingLoadBalancer
+      x-right: altusadmin/callProtectedAdminAPIs
+      parameters:
+        - name: input
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/CreateTunnelingLoadBalancerRequest'
+      responses:
+        200:
+          description: Expected response to a valid request.
+          schema:
+            $ref: '#/definitions/CreateTunnelingLoadBalancerResponse'
+        default:
+          description: The default response on an error.
+          schema:
+            $ref: '#/definitions/Error'
+  /arcusadmin/listTunnelingLoadBalancers:
+    post:
+      summary: Lists SSH Tunneling Load Balancers.
+      description: Lists SSH Tunneling Load Balancers.
+      operationId: listTunnelingLoadBalancers
+      x-paging-default-max-items: 100
+      parameters:
+        - name: input
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/ListTunnelingLoadBalancersRequest'
+      responses:
+        200:
+          description: Expected response to a valid request.
+          schema:
+            $ref: '#/definitions/ListTunnelingLoadBalancersResponse'
+        default:
+          description: The default response on an error.
+          schema:
+            $ref: '#/definitions/Error'
+  /arcusadmin/deleteTunnelingLoadBalancer:
+    post:
+      summary: Delete an SSH Tunneling Load Balancer.
+      description: Delete an SSH Tunneling Load Balancer.
+      operationId: deleteTunnelingLoadBalancer
+      x-right: altusadmin/callProtectedAdminAPIs
+      parameters:
+        - name: input
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/DeleteTunnelingLoadBalancerRequest'
+      responses:
+        200:
+          description: Expected response to a valid request.
+          schema:
+            $ref: '#/definitions/DeleteTunnelingLoadBalancerResponse'
+        default:
+          description: The default response on an error.
+          schema:
+            $ref: '#/definitions/Error'
+definitions:
+  Error:
+    type: object
+    description: An object returned on an error.
+    properties:
+      code:
+        type: string
+        description: The error code.
+      message:
+        type: string
+        description: The error message.
+  Director:
+    type: object
+    description: Information about a Cloudera Director.
+    required:
+      - directorName
+      - crn
+      - creationDate
+      - status
+      - ami
+      - amiVersion
+      - endpoint
+    properties:
+      directorName:
+        type: string
+        description: The name of the Director.
+      crn:
+        type: string
+        description: The CRN of the Director.
+      endpoint:
+        $ref: '#/definitions/Endpoint'
+        description: The connection endpoint of the Director.
+      ami:
+        type: string
+        description: The AMI of the Director.
+      amiVersion:
+        type: integer
+        format: int64
+        description: Version of the Director AMI.
+      status:
+        $ref: '#/definitions/DirectorStatus'
+        description: The status of the Director.
+      creationDate:
+        type: string
+        format: date-time
+        description: The date when this Director record was created.
+  Endpoint:
+    type: object
+    description: An network endpoint.
+    required:
+      - address
+      - port
+    properties:
+      address:
+        type: string
+        description: An IP address.
+      port:
+        type: integer
+        format: int32
+        description: A port.
+  DirectorStatus:
+    type: string
+    description: The status of a director instance.
+    enum:
+      - CREATING
+      - STOPPED
+      - STARTING
+      - STARTED
+      - STOPPING
+      - TERMINATING
+      - FAILED
+  LimitDescriptor:
+    type: object
+    description: Information about a limit.
+    required:
+      - limitName
+      - description
+      - defaultValue
+      - customerVisible
+    properties:
+      limitName:
+        type: string
+        description: The limit name.
+      description:
+        type: string
+        description: A description of the limit.
+      defaultValue:
+        type: integer
+        format: int32
+        description: The limit's default value.
+      customerVisible:
+        type: boolean
+        description: Whether this is a customer visible limit or not.
+  Limit:
+    type: object
+    description: Information about a limit.
+    required:
+      - limitName
+      - limit
+    properties:
+      limitName:
+        type: string
+        description: The limit name.
+      limit:
+        type: integer
+        format: int32
+        description: The limit's value.
+  Nlb:
+    type: object
+    description: Information about a Network Load Balancer.
+    required:
+      - nlbId
+      - status
+      - totalPorts
+      - freePorts
+      - creatorCrn
+      - availableForPortAllocation
+      - generation
+      - creationDate
+    properties:
+      nlbId:
+        type: string
+        description: The stable, unique identifier of the Nlb.
+      status:
+        type: string
+        description: The status of the Nlb
+        enum:
+          - CREATING
+          - CREATED
+          - DELETING
+          - FAILED
+      totalPorts:
+        type: integer
+        format: int32
+        description: The total ports on the Nlb.
+      freePorts:
+        type: integer
+        format: int32
+        description: The free ports on the Nlb.
+      creatorCrn:
+        type: string
+        description: The CRN of the creator of the Nlb.
+      availableForPortAllocation:
+        type: boolean
+        description: Whether the Nlb is available for port allocation or not.
+      generation:
+        type: integer
+        format: int32
+        description: The generation number of the Nlb. The generation identifies the capabilities of the load balancer at the time it was created.
+      creationDate:
+        type: string
+        format: date-time
+        description: The date when the Nlb was created.
+      nlbArn:
+        type: string
+        description: The AWS Arn of the Nlb.
+      nlbFqdn:
+        type: string
+        description: The DNS name of the Nlb.
+      portsInUse:
+        type: array
+        items:
+          $ref: '#/definitions/PortAllocation'
+        description: The list of ports in use. May be empty.
+  PortAllocation:
+    type: object
+    description: Describes a port allocated to a Director.
+    required:
+      - directorCrn
+      - portNumber
+    properties:
+      directorCrn:
+        type: string
+        description: The Director CRN.
+      portNumber:
+        type: integer
+        format: int32
+        description: The port that has been allocated to the specified Director.
+  CreateDirectorRequest:
+    type: object
+    description: Request object for a create Director request.
+    required:
+      - accountId
+      - directorName
+    properties:
+      accountId:
+        type: string
+        description: The account id.
+      directorName:
+        type: string
+        description: The name of the Director. This name must be unique, must have a maximum of 128 characters, and must contain only alphanumeric characters, hyphens and underscores. Names are case-sensitive.
+  CreateDirectorResponse:
+    type: object
+    description: Response object for a create Director request.
+    required:
+      - director
+    properties:
+      director:
+        $ref: '#/definitions/Director'
+        description: The Director that was created.
+  DeleteDirectorRequest:
+    type: object
+    description: Request object for a delete Director request.
+    required:
+      - accountId
+      - directorName
+    properties:
+      accountId:
+        type: string
+        description: The account id.
+      directorName:
+        type: string
+        description: The name or CRN of the the Director.
+      forceDelete:
+        type: boolean
+        description: Flag to force delete the Director.
+  DeleteDirectorResponse:
+    type: object
+    description: Response object for a delete Director request.
+  StopDirectorRequest:
+    type: object
+    description: Request object for a stop Director request.
+    required:
+      - accountId
+      - directorName
+    properties:
+      accountId:
+        type: string
+        description: The account id.
+      directorName:
+        type: string
+        description: The name or CRN of the the Director.
+  StopDirectorResponse:
+    type: object
+    description: Response object for a stop Director request.
+  StartDirectorRequest:
+    type: object
+    description: Request object for a start Director request.
+    required:
+      - accountId
+      - directorName
+    properties:
+      accountId:
+        type: string
+        description: The account id.
+      directorName:
+        type: string
+        description: The name or CRN of the the Director.
+  StartDirectorResponse:
+    type: object
+    description: Response object for a stop Director request.
+  ListDirectorsRequest:
+    type: object
+    description: Request object for a list Directors request.
+    required:
+      - accountId
+    properties:
+      accountId:
+        type: string
+        description: The account id.
+      directorNames:
+        type: array
+        items:
+          type: string
+        description: The names or CRNs of the Directors to list.
+      pageSize:
+        type: integer
+        format: int32
+        minimum: 1
+        maximum: 100
+        x-paging-page-size: true
+        description: The size of each page.
+      startingToken:
+        type: string
+        x-paging-input-token: true
+        description: A token to specify where to start paginating. This is the nextToken from a previously truncated response.
+  ListDirectorsResponse:
+    type: object
+    description: Response object for a list Directors request.
+    required:
+      - directors
+    properties:
+      directors:
+        type: array
+        items:
+          $ref: '#/definitions/Director'
+        x-paging-result: true
+        description: The Directors.
+      nextToken:
+        type: string
+        x-paging-output-token: true
+        description: The token to use when requesting the next set of results. If not present, there are no additional results.
+  SetLimitRequest:
+    type: object
+    description: Request object for a set limit request.
+    required:
+      - accountId
+      - limitName
+      - limit
+    properties:
+      accountId:
+        type: string
+        description: The account ID.
+      limitName:
+        type: string
+        description: The limit name.
+      limit:
+        type: integer
+        description: The new limit value.
+        format: int32
+        minimum: 0
+  SetLimitResponse:
+    type: object
+    description: Response object for a set limit for account request.
+  ListLimitsDescriptorsRequest:
+    type: object
+    description: Request object for a list limits descriptors request.
+    properties:
+      limitNames:
+        type: array
+        items:
+          type: string
+        description: The limit names.
+      pageSize:
+        type: integer
+        format: int32
+        minimum: 1
+        maximum: 100
+        x-paging-page-size: true
+        description: The size of each page.
+      startingToken:
+        type: string
+        x-paging-input-token: true
+        description: A token to specify where to start paginating. This is the nextToken from a previously truncated response.
+  ListLimitsDescriptorsResponse:
+    type: object
+    description: Response object for a list limits defaults for account request.
+    required:
+      - limits
+    properties:
+      limits:
+        type: array
+        items:
+          $ref: '#/definitions/LimitDescriptor'
+        x-paging-result: true
+        description: The limits descriptors for the different Arcus services.
+      nextToken:
+        type: string
+        x-paging-output-token: true
+        description: The token to use when requesting the next set of results. If not present, there are no additional results.
+  ListLimitsRequest:
+    type: object
+    description: Request object for a list limits request.
+    required:
+      - accountId
+    properties:
+      accountId:
+        type: string
+        description: The account ID.
+      limitNames:
+        type: array
+        items:
+          type: string
+        description: The limit names.
+      pageSize:
+        type: integer
+        format: int32
+        minimum: 1
+        maximum: 100
+        x-paging-page-size: true
+        description: The size of each page.
+      startingToken:
+        type: string
+        x-paging-input-token: true
+        description: A token to specify where to start paginating. This is the nextToken from a previously truncated response.
+  ListLimitsResponse:
+    type: object
+    description: Response object for a list limits for account request.
+    required:
+      - limits
+    properties:
+      limits:
+        type: array
+        items:
+          $ref: '#/definitions/Limit'
+        x-paging-result: true
+        description: The limits for the account.
+      nextToken:
+        type: string
+        x-paging-output-token: true
+        description: The token to use when requesting the next set of results. If not present, there are no additional results.
+  SyncUsersRequest:
+    type: object
+    description: Request object for a sync users request.
+    required:
+      - accountId
+      - clusterName
+    properties:
+      accountId:
+        type: string
+        description: The account id.
+      clusterName:
+        type: string
+        description: The name or CRN of the cluster.
+  SyncUsersResponse:
+    type: object
+    description: Response object for a sync users request.
+  DescribeClusterRequest:
+    type: object
+    description: Request object for a describe cluster request.
+    required:
+      - accountId
+      - clusterName
+    properties:
+      accountId:
+        type: string
+        description: The account id.
+      clusterName:
+        type: string
+        description: The name or CRN of the cluster.
+  DescribeClusterResponse:
+    type: object
+    description: Response object for a describe cluster request.
+    required:
+      - cluster
+    properties:
+      cluster:
+        $ref: '#/definitions/Cluster'
+        description: The cluster.
+  Cluster:
+    type: object
+    description: Information about a cluster.
+    required:
+      - clusterName
+      - crn
+      - usingAccountLevelPrivateKey
+      - encryptedSshPrivateKey
+    properties:
+      clusterName:
+        type: string
+        description: The name of the cluster.
+      crn:
+        type: string
+        description: The CRN of the cluster.
+      usingAccountLevelPrivateKey:
+        type: boolean
+        description: Is using account level private key.
+      encryptedSshPrivateKey:
+        type: string
+        description: Encrypted private ssh key that is used to create the cluster.
+  CreateTunnelingLoadBalancerRequest:
+    type: object
+    description: Request object to create an SSH Tunneling Load Balancer.
+    properties:
+      generation:
+        type: integer
+        format: int32
+        description: The generation of nlb to create. If one is not specified, a service-specific default will be used. The generation determines the capabilities of the load balancer. This is useful for simulating older load balancers for backward compatibility testing.
+  CreateTunnelingLoadBalancerResponse:
+    type: object
+    description: Response object for creating an SSH Tunneling Load Balancer.
+    required:
+      - nlb
+    properties:
+      nlb:
+        $ref: '#/definitions/Nlb'
+        description: The SSH Tunneling Load Balancer created.
+  ListTunnelingLoadBalancersRequest:
+    type: object
+    description: Request object for a list SSH Tunneling Load Balancers request.
+    properties:
+      nlbIds:
+        type: array
+        items:
+          type: string
+        description: The IDs of the SSH Tunneling Load Balancers to list. If not specified all SSH Tunneling Load Balancers are returned.
+      pageSize:
+        type: integer
+        format: int32
+        minimum: 1
+        maximum: 100
+        x-paging-page-size: true
+        description: The size of each page.
+      startingToken:
+        type: string
+        x-paging-input-token: true
+        description: A token to specify where to start paginating. This is the nextToken from a previously truncated response.
+  ListTunnelingLoadBalancersResponse:
+    type: object
+    description: Response object for a list Nlbs request.
+    required:
+      - nlbs
+    properties:
+      nlbs:
+        type: array
+        items:
+          $ref: '#/definitions/Nlb'
+        x-paging-result: true
+        description: The list of SSH Tunneling Load Balancers.
+      nextToken:
+        type: string
+        x-paging-output-token: true
+        description: The token to use when requesting the next set of results. If not present, there are no additional results.
+  DeleteTunnelingLoadBalancerRequest:
+    type: object
+    description: Request object to delete an SSH Tunneling Load Balancer.
+    required:
+      - nlbId
+    properties:
+      nlbId:
+        type: string
+        description: The ID of the SSH Tunneling Load Balancer to delete.
+  DeleteTunnelingLoadBalancerResponse:
+    type: object
+    description: Response object for deleting an SSH Tunneling Load Balancer.

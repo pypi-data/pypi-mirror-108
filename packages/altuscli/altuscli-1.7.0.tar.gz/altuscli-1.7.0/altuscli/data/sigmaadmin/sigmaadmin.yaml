@@ -1,0 +1,1048 @@
+swagger: '2.0'
+x-endpoint-name: sigmaadmin
+x-products: ALTUS,CDP
+x-form-factors: public
+info:
+  version: __API_VERSION__
+  title: Cloudera Sigma Admin Service
+  license:
+    name: Apache 2.0
+  description: Cloudera Sigma Admin is a web service that helps Cloudera users administrate Sigma services.
+schemes:
+  - https
+consumes:
+  - application/json
+produces:
+  - application/json
+paths:
+  /sigmaadmin/listUploads:
+    post:
+      summary: List all uploads.
+      description: List uploads.
+      operationId: listUploads
+      x-paging-default-max-items: 100
+      x-right: sigmaadmin/callSigmaAdminAPIs
+      parameters:
+        - name: input
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/ListUploadsRequest'
+      responses:
+        200:
+          description: Expected response to a valid request.
+          schema:
+            $ref: '#/definitions/ListUploadsResponse'
+        default:
+          description: The default response on an error.
+          schema:
+            $ref: '#/definitions/Error'
+  /sigmaadmin/abortUploads:
+    post:
+      summary: Abort provided uploads.
+      description: Abort uploads.
+      operationId: abortUploads
+      x-right: sigmaadmin/callSigmaAdminAPIs
+      parameters:
+        - name: input
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/AbortUploadsRequest'
+      responses:
+        200:
+          description: Expected response to a valid request.
+          schema:
+            $ref: '#/definitions/AbortUploadsResponse'
+        default:
+          description: The default response on an error.
+          schema:
+            $ref: '#/definitions/Error'
+  /sigmaadmin/listEnvironments:
+    post:
+      summary: List all environments.
+      description: List environments.
+      operationId: listEnvironments
+      x-paging-default-max-items: 100
+      x-right: sigmaadmin/callSigmaAdminAPIs
+      parameters:
+        - name: input
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/ListEnvironmentsRequest'
+      responses:
+        200:
+          description: Expected response to a valid request.
+          schema:
+            $ref: '#/definitions/ListEnvironmentsResponse'
+        default:
+          description: The default response on an error.
+          schema:
+            $ref: '#/definitions/Error'
+  /sigmaadmin/deleteEnvironment:
+    post:
+      summary: Deletes an environment.
+      description: Deletes an environment.
+      operationId: deleteEnvironment
+      x-right: sigmaadmin/callSigmaAdminAPIs
+      parameters:
+        - name: input
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/DeleteEnvironmentRequest'
+      responses:
+        200:
+          description: Expected response to a valid request.
+          schema:
+            $ref: '#/definitions/DeleteEnvironmentResponse'
+        default:
+          description: The default response on an error.
+          schema:
+            $ref: '#/definitions/Error'
+  /sigmaadmin/getOperationExecutionDetails:
+    post:
+      summary: Get operation execution details.
+      description: Get operation execution details.
+      operationId: getOperationExecutionDetails
+      x-right: sigmaadmin/callSigmaAdminAPIs
+      parameters:
+        - name: input
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/GetOperationExecutionDetailsRequest'
+      responses:
+        200:
+          description: Expected response to a valid request.
+          schema:
+            $ref: '#/definitions/GetOperationExecutionDetailsResponse'
+        default:
+          description: The default response on an error.
+          schema:
+            $ref: '#/definitions/Error'
+  /sigmaadmin/flushWorkloadDatabases:
+    post:
+      summary: Flush pending buffers for workload metadata databases for analytical queries.
+      description: Flush pending buffers for workload metadata databases for analytical queries.
+      operationId: flushWorkloadDatabases
+      x-right: sigmaadmin/callSigmaAdminAPIs
+      parameters:
+        - name: input
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/FlushWorkloadDatabasesRequest'
+      responses:
+        200:
+          description: Expected response to a valid request.
+          schema:
+            $ref: '#/definitions/FlushWorkloadDatabasesResponse'
+        default:
+          description: The default response on an error.
+          schema:
+            $ref: '#/definitions/Error'
+  /sigmaadmin/dropWorkloadDatabase:
+    post:
+      summary: Drop workload metadata database.
+      description: Drop workload metadata database for a particular account.
+      operationId: dropWorkloadDatabase
+      x-right: sigmaadmin/callSigmaAdminAPIs
+      parameters:
+        - name: input
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/DropWorkloadDatabaseRequest'
+      responses:
+        200:
+          description: Expected response to a valid request.
+          schema:
+            $ref: '#/definitions/DropWorkloadDatabaseResponse'
+        default:
+          description: The default response on an error.
+          schema:
+            $ref: '#/definitions/Error'
+  /sigmaadmin/maintainWorkloadDatabase:
+    post:
+      summary: Maintain workload metadata database.
+      description: Signal begin or end of maintenance on an account's workload database.
+      operationId: maintainWorkloadDatabase
+      x-right: sigmaadmin/callSigmaAdminAPIs
+      parameters:
+        - name: input
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/MaintainWorkloadDatabaseRequest'
+      responses:
+        200:
+          description: Expected response to a valid request.
+          schema:
+            $ref: '#/definitions/MaintainWorkloadDatabaseResponse'
+        default:
+          description: The default response on an error.
+          schema:
+            $ref: '#/definitions/Error'
+  /sigmaadmin/rebuildWorkloadDatabase:
+    post:
+      summary: Rebuild workload metadata database.
+      description: Rebuild a workload database with the current schema and partitions.
+      operationId: rebuildWorkloadDatabase
+      x-right: sigmaadmin/callSigmaAdminAPIs
+      parameters:
+        - name: input
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/RebuildWorkloadDatabaseRequest'
+      responses:
+        200:
+          description: Expected response to a valid request.
+          schema:
+            $ref: '#/definitions/RebuildWorkloadDatabaseResponse'
+        default:
+          description: The default response on an error.
+          schema:
+            $ref: '#/definitions/Error'
+  /sigmaadmin/purgeOlapData:
+    post:
+      summary: Purges old data in OLAP database.
+      description: Purges old data in OLAP database.
+      operationId: purgeOlapData
+      x-right: sigmaadmin/callSigmaAdminAPIs
+      parameters:
+        - name: input
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/PurgeOlapDataRequest'
+      responses:
+        200:
+          description: Expected response to a valid request.
+          schema:
+            $ref: '#/definitions/PurgeOlapDataResponse'
+        default:
+          description: The default response on an error.
+          schema:
+            $ref: '#/definitions/Error'
+  /sigmaadmin/purgeBucketData:
+    post:
+      summary: Purges old Bucket data.
+      description: Purges old Bucket data.
+      operationId: purgeBucketData
+      x-right: sigmaadmin/callSigmaAdminAPIs
+      parameters:
+        - name: input
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/PurgeBucketDataRequest'
+      responses:
+        200:
+          description: Expected response to a valid request.
+          schema:
+            $ref: '#/definitions/PurgeBucketDataResponse'
+        default:
+          description: The default response on an error.
+          schema:
+            $ref: '#/definitions/Error'
+  /sigmaadmin/getWorkloadDatabaseStatus:
+    post:
+      summary: Get status of workload metadata database.
+      description: Get the status of an account's workload database.
+      operationId: getWorkloadDatabaseStatus
+      x-right: sigmaadmin/callSigmaAdminAPIs
+      parameters:
+        - name: input
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/GetWorkloadDatabaseStatusRequest'
+      responses:
+        200:
+          description: Expected response to a valid request.
+          schema:
+            $ref: '#/definitions/GetWorkloadDatabaseStatusResponse'
+        default:
+          description: The default response on an error.
+          schema:
+            $ref: '#/definitions/Error'
+  /sigmaadmin/getAdminOperation:
+    post:
+      summary: Get the detail of an administrative operation.
+      description: Get the detail of an administrative operation.
+      operationId: getAdminOperation
+      x-right: sigmaadmin/callSigmaAdminAPIs
+      parameters:
+        - name: input
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/GetAdminOperationRequest'
+      responses:
+        200:
+          description: Expected response to a valid request.
+          schema:
+            $ref: '#/definitions/GetAdminOperationResponse'
+        default:
+          description: The default response on an error.
+          schema:
+            $ref: '#/definitions/Error'
+definitions:
+  Error:
+    type: object
+    description: An object returned on an error.
+    properties:
+      code:
+        type: string
+        description: The error code.
+      message:
+        type: string
+        description: The error message.
+  ListUploadsRequest:
+    type: object
+    description: Request object for a list uploads request.
+    required:
+      - accountId
+    properties:
+      accountId:
+        type: string
+        description: The account ID for which to list uploads.
+      pageSize:
+        type: integer
+        format: int32
+        minimum: 1
+        maximum: 100
+        x-paging-page-size: true
+        description: The size of each page.
+      startingToken:
+        type: string
+        x-paging-input-token: true
+        description: A token to specify where to start paginating. This is the nextToken from a previously truncated response.
+  ListUploadsResponse:
+    type: object
+    description: Response object for a list uploads request.
+    required:
+      - uploads
+    properties:
+      uploads:
+        type: array
+        items:
+          $ref: '#/definitions/Upload'
+        x-paging-result: true
+        description: The uploads.
+      nextToken:
+        type: string
+        x-paging-output-token: true
+        description: The token to use when requesting the next set of results. If not present, there are no additional results.
+  AbortUploadsRequest:
+    type: object
+    description: Request object to abort uploads for provided upload IDs.
+    required:
+      - uploadIds
+    properties:
+      uploadIds:
+        type: array
+        items:
+          type: string
+        description: ID of uploads to be aborted.
+        x-skip-logging: true
+  AbortUploadsResponse:
+    type: object
+    description: Response object for aborting uploads.
+  PurgeOperationType:
+    type: string
+    description: The operation type of blobStore purger.
+    enum:
+      - SCHEDULE
+      - TRIGGER
+  UploadType:
+    type: string
+    description: The type of an upload.
+    enum:
+      - UNKNOWN
+      - MR_JOB_HISTORY
+      - MR_JOB_LOGS
+      - SPARK_APP_HISTORY
+      - SPARK_APP_LOGS
+  UploadStatus:
+    type: string
+    description: The status of an upload.
+    enum:
+      - UNKNOWN
+      - ALLOCATED
+      - RECEIVED
+      - ENQUEUED
+      - PROCESSING
+      - FINISHED
+      - INVALID
+  Upload:
+    type: object
+    description: Information about an upload.
+    required:
+      - crn
+      - creationDate
+      - status
+    properties:
+      crn:
+        type: string
+        description: The CRN of the upload.
+      creationDate:
+        type: string
+        format: date-time
+        description: The date when the upload was allocated.
+      status:
+        $ref: '#/definitions/UploadStatus'
+        description: The status of the upload.
+      id:
+        type: string
+        description: The ID of the upload.
+      updateDate:
+        type: string
+        format: date-time
+        description: The date when the last update about upload status was received.
+      expectedEntryCount:
+        type: integer
+        format: int64
+        description: Total number of entries that will be processed.
+      processedEntryCount:
+        type: integer
+        format: int64
+        description: Number of entries that have been processed successfully.
+      existingEntryCount:
+        type: integer
+        format: int64
+        description: Number of jobs that were already present in previous uploads and have not been processed.
+      failedEntryCount:
+        type: integer
+        format: int64
+        description: Number of jobs that failed to be processed.
+      failedEntries:
+        type: array
+        items:
+          type: string
+        description: Deprecated. Use failedEntryDetails instead.
+        x-skip-logging: true
+      failedEntryDetails:
+        type: array
+        items:
+          $ref: '#/definitions/FailedUploadEntry'
+        description: Entries that failed to be processed. Only the first 20 failed entries are returned.
+        x-skip-logging: true
+      environmentId:
+        type: string
+        description: The ID of the environment.
+      invalidReason:
+        type: string
+        description: The reason why an upload is considered to be invalid.
+      uploadType:
+        $ref: '#/definitions/UploadType'
+        description: The type of the upload.
+  FailedUploadEntry:
+    type: object
+    description: Details for a failed upload entry.
+    properties:
+      name:
+        type: string
+        description: The name of the failed upload entry.
+      details:
+        type: string
+        description: The details of why the upload failed.
+  ListEnvironmentsRequest:
+    type: object
+    description: Request object for a list environments request.
+    required:
+      - accountId
+    properties:
+      accountId:
+        type: string
+        description: The account ID for which to list environments.
+      pageSize:
+        type: integer
+        format: int32
+        minimum: 1
+        maximum: 100
+        x-paging-page-size: true
+        description: The size of each page.
+      startingToken:
+        type: string
+        x-paging-input-token: true
+        description: A token to specify where to start paginating. This is the nextToken from a previously truncated response.
+  DeleteEnvironmentRequest:
+    type: object
+    description: Request object to delete an environment.
+    required:
+      - id
+    properties:
+      id:
+        type: string
+        description: The id of the environment.
+  DeleteEnvironmentResponse:
+    type: object
+    description: Response object for a delete environment request.
+  Environment:
+    type: object
+    description: Information about an environment.
+    required:
+      - id
+      - name
+      - timezone
+    properties:
+      id:
+        type: string
+        description: The ID of the cluster.
+      name:
+        type: string
+        description: The name of the cluster.
+      timezone:
+        type: string
+        description: The timezone of the cluster.
+  ListEnvironmentsResponse:
+    type: object
+    description: Response object for a list uploads request.
+    required:
+      - environments
+    properties:
+      environments:
+        type: array
+        items:
+          $ref: '#/definitions/Environment'
+        x-paging-result: true
+        description: The environments.
+      nextToken:
+        type: string
+        x-paging-output-token: true
+        description: The token to use when requesting the next set of results. If not present, there are no additional results.
+  MetricUnit:
+    type: string
+    description: Unit of a metric.
+    enum:
+      - UNKNOWN
+      - BYTE
+      - MEGABYTE_MSEC
+      - CPU_MSEC
+      - MSEC
+      - BYTE_PER_SEC
+  OperationExecutionDetail:
+    type: string
+    description: Detail type of an operation execution.
+    enum:
+      - METRICS
+      - BASELINE
+      - HEALTH_CHECK_DETAILS
+      - MAPREDUCE_TASK_SUMMARY
+  OperationType:
+    type: string
+    description: The type of operation.
+    enum:
+      - UNKNOWN
+      - OOZIE
+      - HIVE
+      - MAPREDUCE
+      - PIG
+      - CASCADING
+      - SPARKAPP
+      - SPARKJOB
+      - SPARKSTAGE
+      - ALTUSDE
+      - MAPREDUCESTAGE
+      - TEZDAG
+      - TEZAPP
+  OperationExecutionSla:
+    type: object
+    description: SLA for Operation Execution.
+    properties:
+      durationMs:
+        type: integer
+        format: int64
+        description: Duration in milliseconds for the entire Operation Execution.
+  Operation:
+    type: object
+    description: Information about an operation.
+    required:
+      - id
+      - operationType
+    properties:
+      id:
+        type: string
+        description: The ID of the operation.
+      operationType:
+        $ref: '#/definitions/OperationType'
+        description: The type of operation.
+      displayName:
+        type: string
+        description: The display name of the operation.
+        x-sensitive: true
+      sla:
+        $ref: '#/definitions/OperationExecutionSla'
+        description: The SLA requirement for the Execution of this Operation.
+  OperationExecutionState:
+    type: string
+    description: The state of the operation execution.
+    enum:
+      - UNKNOWN
+      - RUNNING
+      - SUCCEEDED
+      - FAILED
+      - KILLED
+      - SKIPPED
+  PerformanceStatus:
+    type: string
+    description: Performance status of the operation execution compared to the baseline.
+    enum:
+      - UNKNOWN
+      - INSUFFICIENT_HISTORY
+      - NORMAL
+      - FAST
+      - SLOW
+  MetricGroup:
+    type: string
+    description: Counter group of the task metric.
+    enum:
+      - UNKNOWN
+      - FILE_SYSTEM_COUNTERS
+      - MAP_REDUCE_FRAMWORK_COUNTERS
+      - SHUFFLE_ERRORS
+      - FILE_INPUT_FORMAT_COUNTERS
+      - FILE_OUTPUT_FORMAT_COUNTERS
+      - NONE_GROUP
+  BaselineDeviation:
+    type: string
+    description: Deviation of metric compared to the baseline.
+    enum:
+      - UNKNOWN
+      - INSUFFICIENT_HISTORY
+      - NORMAL
+      - OVER
+      - UNDER
+  Baseline:
+    type: object
+    description: Values of a baseline.
+    properties:
+      deviation:
+        $ref: '#/definitions/BaselineDeviation'
+        description: Deviation of the metric.
+      value:
+        type: number
+        format: double
+        description: Baseline value as determined by the underlying model for a metric.
+  HealthCheckSummary:
+    type: string
+    description: Summary of the health check result.
+    enum:
+      - UNKNOWN
+      - GOOD
+      - CONCERNING
+      - BAD
+  HealthCheckID:
+    type: string
+    description: ID of the health check.
+    enum:
+      - UNKNOWN
+      - TASK_HDFS_READ_SPEED
+      - TASK_DURATION_OUTLIER
+      - TASK_INPUT_OUTLIER
+      - TASK_OUTPUT_OUTLIER
+      - TASK_SPILLED_RECORD
+      - TASK_SHUFFLE_INPUT_SIZE
+      - TASK_WAIT_DURATION
+      - FAILED_TASK_ATTEMPTS
+      - FAILED_TO_FINISH
+      - ABNORMAL_DURATION
+      - ABNORMAL_INPUT_SIZE
+      - ABNORMAL_OUTPUT_SIZE
+      - TASK_GC_DURATION
+      - SPARK_RDD_CACHING
+      - SPARK_EXECUTOR_MEMORY
+      - SPARK_EXECUTOR_CORES
+      - SPARK_SERIALIZER
+      - SPARK_DYNAMIC_ALLOCATION
+  OperationExecutionMetric:
+    type: object
+    description: Metric of an operation execution.
+    properties:
+      name:
+        type: string
+        description: Name of the metric.
+      displayName:
+        type: string
+        description: Display name of the metric.
+      value:
+        type: number
+        format: double
+        description: Value of the metric.
+      unit:
+        $ref: '#/definitions/MetricUnit'
+        description: Unit of the metric.
+      baseline:
+        $ref: '#/definitions/Baseline'
+        description: Details about the baseline and deviation.
+      metricGroup:
+        $ref: '#/definitions/MetricGroup'
+        description: Counter group of the task metric.
+  NodeConfigurationSnapshot:
+    type: object
+    description: Snapshot of cluster node configurations at a particular timestmap.
+    properties:
+      timestamp:
+        type: integer
+        format: int64
+        description: Timestamp when the snapshot is taken.
+      cloudWorkerInstanceType:
+        type: string
+        description: Type of worker instance in cloud.
+      cloudWorkerInstanceCount:
+        type: integer
+        format: int32
+        description: Number of worker instances in cloud.
+      cloudComputeWorkerInstanceType:
+        type: string
+        description: Type of compute worker instance in cloud.
+      cloudComputeWorkerInstanceCount:
+        type: integer
+        format: int32
+        description: Number of compute worker instances in cloud.
+  AltusEnvironmentType:
+    type: string
+    description: The type of Altus environment.
+    enum:
+      - AWS
+      - AZURE
+  NodeConfiguration:
+    type: object
+    description: Node configuration details for a cluster.
+    properties:
+      altusEnvironmentType:
+        $ref: '#/definitions/AltusEnvironmentType'
+        description: Type of Altus environment for the cluster.
+      snapshots:
+        type: array
+        items:
+          $ref: '#/definitions/NodeConfigurationSnapshot'
+        description: List of Node Configuration Snapshots at different timestamps.
+  OperationExecution:
+    type: object
+    description: Information about an operation execution.
+    required:
+      - id
+      - startTime
+      - operation
+      - state
+    properties:
+      id:
+        type: string
+        description: The ID of the operation execution.
+      startTime:
+        type: string
+        format: date-time
+        description: The time at which the operation execution started.
+      operation:
+        $ref: '#/definitions/Operation'
+        description: Information about the operation.
+      state:
+        $ref: '#/definitions/OperationExecutionState'
+        description: The state of the operation execution.
+      displayName:
+        type: string
+        description: The display name of the operation execution.
+      endTime:
+        type: string
+        format: date-time
+        description: The time at which the operation execution finished.
+      duration:
+        type: integer
+        format: int64
+        description: Duration of the operation execution in milliseconds.
+      completeTreeAvailable:
+        type: boolean
+        description: Whether the complete tree for the operation execution is available.
+      performanceStatus:
+        $ref: '#/definitions/PerformanceStatus'
+        description: Performance status of the operation execution compared to the baseline.
+      children:
+        type: array
+        items:
+          $ref: '#/definitions/OperationExecution'
+        description: Children of this operation execution.
+      metrics:
+        type: array
+        items:
+          $ref: '#/definitions/OperationExecutionMetric'
+        description: Metrics of the operation execution.
+        x-skip-logging: true
+      healthSummary:
+        $ref: '#/definitions/HealthCheckSummary'
+        description: Summary of this operation execution's health.
+      badHealthCheckIds:
+        type: array
+        items:
+          $ref: '#/definitions/HealthCheckID'
+        description: IDs of health checks for which this operation execution has bad result.
+      environmentId:
+        type: string
+        description: The ID of the environment to which this operation execution belongs.
+      nodeConfiguration:
+        $ref: '#/definitions/NodeConfiguration'
+        description: Node configuration details.
+      estimatedCost:
+        type: number
+        format: double
+        description: Estimated cost for running the Operation Execution if applicable.
+      sla:
+        $ref: '#/definitions/OperationExecutionSla'
+        description: The SLA requirement for this Operation Execution when it runs.
+  GetOperationExecutionDetailsRequest:
+    type: object
+    description: Request to get details about an operation execution.
+    required:
+      - id
+    properties:
+      id:
+        type: string
+        description: ID of the operation execution.
+      requestedDetails:
+        type: array
+        items:
+          $ref: '#/definitions/OperationExecutionDetail'
+        description: Details to get about the operation execution.
+      includeTree:
+        type: boolean
+        description: Whether to include sub-tree of this operation execution.
+  GetOperationExecutionDetailsResponse:
+    type: object
+    description: Response to get details about an operation execution.
+    properties:
+      tree:
+        $ref: '#/definitions/OperationExecution'
+        description: Tree of the operation execution.
+  FlushWorkloadDatabasesRequest:
+    type: object
+    description: Request to flush buffer for workload metadata databases.
+  FlushWorkloadDatabasesResponse:
+    type: object
+    description: Response to flush buffer for workload metadata database.
+  AqeEngineType:
+    type: string
+    description: The different engine type that may power an Analytical Query Execution (AQE).
+    enum:
+      - UNKNOWN
+      - ATHENA
+      - IMPALA
+  DropWorkloadDatabaseRequest:
+    type: object
+    description: Request to drop a workload metadata database.
+    required:
+      - accountId
+    properties:
+      accountId:
+        type: string
+        description: ID of the account to drop database for.
+      clusterId:
+        type: string
+        description: Optional ID of the cluster to drop data for. Database would remain.
+      deleteData:
+        type: boolean
+        description: Whether to delete the data underlying the database. Defaults to false.
+      engineType:
+        $ref: '#/definitions/AqeEngineType'
+        description: The type of engine that served the AQE.
+  DropWorkloadDatabaseResponse:
+    type: object
+    description: Response to drop a workload metadata database.
+    required:
+      - adminOperationId
+    properties:
+      adminOperationId:
+        type: string
+        description: ID for the administrative operation.
+  MaintainWorkloadDatabaseRequest:
+    type: object
+    description: Request to maintain a workload metadata database.
+    required:
+      - accountId
+      - engineType
+    properties:
+      accountId:
+        type: string
+        description: ID of the account to maintain database for.
+      engineType:
+        $ref: '#/definitions/AqeEngineType'
+        description: The type of engine that served the AQE.
+      exit:
+        type: boolean
+        description: Exit maintenance mode. Defaults to false.
+  MaintainWorkloadDatabaseResponse:
+    type: object
+    description: Response to maintain a workload metadata database.
+    properties:
+      success:
+        type: boolean
+        description: Whether the operation succeeded.
+  RebuildWorkloadDatabaseRequest:
+    type: object
+    description: Request to rebuild a workload metadata database.
+    properties:
+      accountId:
+        type: string
+        description: ID of the account to maintain database for. If unspecified, rebuilds all accounts.
+  RebuildWorkloadDatabaseResponse:
+    type: object
+    description: Response to rebuild a workload metadata database.
+    required:
+      - adminOperationId
+    properties:
+      adminOperationId:
+        type: string
+        description: ID for the administrative operation.
+  PurgeOlapDataRequest:
+    type: object
+    description: Request to purge old OLAP data.
+    properties:
+      accountId:
+        type: string
+        description: ID of the account to purge data for. If unspecified, purges all accounts.
+      deleteData:
+        type: boolean
+        description: Whether to delete the data underlying the database. Defaults to false.
+      ageThresholdDays:
+        type: integer
+        format: int32
+        description: Threshold for data purge in days. Default is 180.
+  PurgeOlapDataResponse:
+    type: object
+    description: Response to purge old OLAP data.
+    required:
+      - adminOperationId
+    properties:
+      adminOperationId:
+        type: string
+        description: ID for the administrative operation.
+  PurgeBucketDataRequest:
+    type: object
+    description: Request to purge old Bucket data.
+    required:
+      - purgeOperationType
+    properties:
+      purgeOperationType:
+        $ref: '#/definitions/PurgeOperationType'
+        description: Whether to schedule or trigger the clean process immediately.
+  PurgeBucketDataResponse:
+    type: object
+    description: Response to purge old Bucket data.
+    required:
+      - blobStorePurgerStatus
+    properties:
+      blobStorePurgerStatus:
+        type: string
+        description: the status of Blob Store Purger.
+  GetWorkloadDatabaseStatusRequest:
+    type: object
+    description: Request to get status for a workload metadata database.
+    required:
+      - accountId
+      - engineType
+    properties:
+      accountId:
+        type: string
+        description: ID of the account to maintain database for.
+      engineType:
+        $ref: '#/definitions/AqeEngineType'
+        description: The type of engine that served the AQE.
+  GetWorkloadDatabaseStatusResponse:
+    type: object
+    description: Response to get status of a workload metadata database.
+    properties:
+      maintenanceMode:
+        type: boolean
+        description: Whether the database is in matenance mode.
+      maintenanceModeBeginTime:
+        type: string
+        format: date-time
+        description: If in maintenance mode, the time when it started.
+      maintenanceModeActorCrn:
+        type: string
+        description: If in maintenance mode, user that began maintenance.
+  AdminOperationState:
+    type: string
+    description: The state of an operation.
+    enum:
+      - UNKNOWN
+      - INIT
+      - RUNNING
+      - FINISHED
+      - FAILED
+  AdminOperation:
+    type: object
+    description: Detail for an administrative operation.
+    required:
+      - id
+      - beginTime
+      - state
+    properties:
+      id:
+        type: string
+        description: The ID of the operation execution.
+      beginTime:
+        type: string
+        format: date-time
+        description: The time at which the operation began.
+      state:
+        $ref: '#/definitions/AdminOperationState'
+        description: The state of the administrative operation.
+      description:
+        type: string
+        description: Human readable description for the goal of the operation.
+      actorCrn:
+        type: string
+        description: The CRN of the actor who performed the operation.
+      lastUpdateTime:
+        type: string
+        format: date-time
+        description: The time at which the operation was last updated.
+      endTime:
+        type: string
+        format: date-time
+        description: The time at which the operation ended.
+      totalWorkUnit:
+        type: integer
+        format: int32
+        description: Total number of work units planned, available once state is RUNNING.
+      completedWorkUnit:
+        type: integer
+        format: int32
+        description: Number of work units completed.
+      failedWorkUnit:
+        type: integer
+        format: int32
+        description: Number of work units failed.
+      message:
+        type: string
+        description: Human readable message on the status of the operation.
+      parentId:
+        type: string
+        description: ID of the parent operation, if there is one.
+      children:
+        type: array
+        items:
+          $ref: '#/definitions/AdminOperation'
+        description: Children of this operation.
+  GetAdminOperationRequest:
+    type: object
+    description: Request to get detail of an administrative operation.
+    required:
+      - id
+    properties:
+      id:
+        type: string
+        description: ID of the administrative operation.
+  GetAdminOperationResponse:
+    type: object
+    description: Response to get detail of an administrative operation.
+    required:
+      - operation
+    properties:
+      operation:
+        $ref: '#/definitions/AdminOperation'
+        description: The requested operation.

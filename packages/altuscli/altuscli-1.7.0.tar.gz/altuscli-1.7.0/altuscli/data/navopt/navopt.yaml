@@ -1,0 +1,2227 @@
+swagger: '2.0'
+x-endpoint-name: navopt
+x-products: ALTUS
+x-form-factors: public
+info:
+  version: __API_VERSION__
+  title: Cloudera NavOpt Service
+  license:
+    name: Apache 2.0
+  description: Cloudera Navigator Optimizer API Service
+schemes:
+  - https
+consumes:
+  - application/json
+produces:
+  - application/json
+paths:
+  /navopt/getS3url:
+    post:
+      summary: Get S3 URL.
+      description: Get S3 presigned URL.
+      operationId: getS3url
+      x-hidden: true
+      x-hidden-reason: 'FOR_CLOUDERA_USE_ONLY: This is used by the navopt CLI extension.'
+      parameters:
+        - name: input
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/GetS3urlRequest'
+      responses:
+        200:
+          description: Expected response to a valid request.
+          schema:
+            $ref: '#/definitions/GetS3urlResponse'
+        default:
+          description: The default response on an error.
+          schema:
+            $ref: '#/definitions/Error'
+  /navopt/getTenant:
+    post:
+      summary: Get tenant.
+      description: Get current tenant id.
+      operationId: getTenant
+      parameters:
+        - name: input
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/GetTenantRequest'
+      responses:
+        200:
+          description: Expected response to a valid request.
+          schema:
+            $ref: '#/definitions/GetTenantResponse'
+        default:
+          description: The default response on an error.
+          schema:
+            $ref: '#/definitions/Error'
+  /navopt/getTopDatabases:
+    post:
+      summary: List of top databases.
+      description: Get information for top databases in workload.
+      operationId: getTopDatabases
+      x-paging-default-max-items: 100
+      parameters:
+        - name: input
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/GetTopDatabasesRequest'
+      responses:
+        200:
+          description: Expected response to a valid request.
+          schema:
+            $ref: '#/definitions/GetTopDatabasesResponse'
+        default:
+          description: The default response on an error.
+          schema:
+            $ref: '#/definitions/Error'
+  /navopt/getTopTables:
+    post:
+      summary: List of top tables.
+      description: Get information for top twenty tables in workload.
+      operationId: getTopTables
+      x-paging-default-max-items: 100
+      parameters:
+        - name: input
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/GetTopTablesRequest'
+      responses:
+        200:
+          description: Expected response to a valid request.
+          schema:
+            $ref: '#/definitions/GetTopTablesResponse'
+        default:
+          description: The default response on an error.
+          schema:
+            $ref: '#/definitions/Error'
+  /navopt/getTopQueries:
+    post:
+      summary: List of top queries.
+      description: Get information for top five queries.
+      operationId: getTopQueries
+      x-paging-default-max-items: 100
+      parameters:
+        - name: input
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/GetTopQueriesRequest'
+      responses:
+        200:
+          description: Expected response to a valid request.
+          schema:
+            $ref: '#/definitions/GetTopQueriesResponse'
+        default:
+          description: The default response on an error.
+          schema:
+            $ref: '#/definitions/Error'
+  /navopt/getTopColumns:
+    post:
+      summary: List of top columns.
+      description: Get information for top ten columns.
+      operationId: getTopColumns
+      x-paging-default-max-items: 100
+      parameters:
+        - name: input
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/GetTopColumnsRequest'
+      responses:
+        200:
+          description: Expected response to a valid request.
+          schema:
+            $ref: '#/definitions/GetTopColumnsResponse'
+        default:
+          description: The default response on an error.
+          schema:
+            $ref: '#/definitions/Error'
+  /navopt/getTopFilters:
+    post:
+      summary: List of top filters.
+      description: Get information for all top ten filters.
+      operationId: getTopFilters
+      x-paging-default-max-items: 100
+      parameters:
+        - name: input
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/GetTopFiltersRequest'
+      responses:
+        200:
+          description: Expected response to a valid request.
+          schema:
+            $ref: '#/definitions/GetTopFiltersResponse'
+        default:
+          description: The default response on an error.
+          schema:
+            $ref: '#/definitions/Error'
+  /navopt/getTopJoins:
+    post:
+      summary: List of top joins.
+      description: Get information for all top joinss.
+      operationId: getTopJoins
+      x-paging-default-max-items: 100
+      parameters:
+        - name: input
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/GetTopJoinsRequest'
+      responses:
+        200:
+          description: Expected response to a valid request.
+          schema:
+            $ref: '#/definitions/GetTopJoinsResponse'
+        default:
+          description: The default response on an error.
+          schema:
+            $ref: '#/definitions/Error'
+  /navopt/getTopAggs:
+    post:
+      summary: List of top Aggregates.
+      description: Get information for top ten aggregates.
+      operationId: getTopAggs
+      x-paging-default-max-items: 100
+      parameters:
+        - name: input
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/GetTopAggsRequest'
+      responses:
+        200:
+          description: Expected response to a valid request.
+          schema:
+            $ref: '#/definitions/GetTopAggsResponse'
+        default:
+          description: The default response on an error.
+          schema:
+            $ref: '#/definitions/Error'
+  /navopt/getDesignBucket:
+    post:
+      summary: List of design bucket.
+      description: Get information for all design buckets.
+      operationId: getDesignBucket
+      parameters:
+        - name: input
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/GetDesignBucketRequest'
+      responses:
+        200:
+          description: Expected response to a valid request.
+          schema:
+            $ref: '#/definitions/GetDesignBucketResponse'
+        default:
+          description: The default response on an error.
+          schema:
+            $ref: '#/definitions/Error'
+  /navopt/getHAQR:
+    post:
+      summary: HAQR information for the workload.
+      description: Get information generated via HAQR.
+      operationId: getHAQR
+      parameters:
+        - name: input
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/GetHAQRRequest'
+      responses:
+        200:
+          description: Expected response to a valid request.
+          schema:
+            $ref: '#/definitions/GetHAQRResponse'
+        default:
+          description: The default response on an error.
+          schema:
+            $ref: '#/definitions/Error'
+  /navopt/getQueryCompatible:
+    post:
+      summary: Get Query Compatibility information.
+      description: Find incompatible information for the query.
+      operationId: getQueryCompatible
+      parameters:
+        - name: input
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/GetQueryCompatibleRequest'
+      responses:
+        200:
+          description: Expected response to a valid request.
+          schema:
+            $ref: '#/definitions/GetQueryCompatibleResponse'
+        default:
+          description: The default response on an error.
+          schema:
+            $ref: '#/definitions/Error'
+  /navopt/getQueryRewrite:
+    post:
+      summary: Provides a rewritten query after syntactic fixes.
+      description: Analyzes the input query, runs it through predefined rules that identify incompatibilities between the source and target platforms, and then rewrites the query to fix the incompatibilities.
+      operationId: getQueryRewrite
+      parameters:
+        - name: input
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/GetQueryRewriteRequest'
+      responses:
+        200:
+          description: Expected response to a valid request.
+          schema:
+            $ref: '#/definitions/GetQueryRewriteResponse'
+        default:
+          description: The default response on an error.
+          schema:
+            $ref: '#/definitions/Error'
+  /navopt/getQueryRisk:
+    post:
+      summary: Risk analysis for a given query.
+      description: Get risk profile for a given query.
+      operationId: getQueryRisk
+      parameters:
+        - name: input
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/GetQueryRiskRequest'
+      responses:
+        200:
+          description: Expected response to a valid request.
+          schema:
+            $ref: '#/definitions/GetQueryRiskResponse'
+        default:
+          description: The default response on an error.
+          schema:
+            $ref: '#/definitions/Error'
+  /navopt/getSimilarQueries:
+    post:
+      summary: Similar query for a given query.
+      description: Get all similar for a given query.
+      operationId: getSimilarQueries
+      parameters:
+        - name: input
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/GetSimilarQueriesRequest'
+      responses:
+        200:
+          description: Expected response to a valid request.
+          schema:
+            $ref: '#/definitions/GetSimilarQueriesResponse'
+        default:
+          description: The default response on an error.
+          schema:
+            $ref: '#/definitions/Error'
+  /navopt/upload:
+    post:
+      summary: Upload a query file.
+      description: File that comprise of queries that needs to be uploaded..
+      operationId: upload
+      x-hidden: true
+      x-hidden-reason: 'FOR_CLOUDERA_USE_ONLY: This is used by the navopt CLI extension.'
+      parameters:
+        - name: input
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/UploadRequest'
+      responses:
+        200:
+          description: Expected response to a valid request.
+          schema:
+            $ref: '#/definitions/UploadResponse'
+        default:
+          description: The default response on an error.
+          schema:
+            $ref: '#/definitions/Error'
+  /navopt/uploadStatus:
+    post:
+      summary: Status of the upload.
+      description: Get status of a upload.
+      operationId: uploadStatus
+      parameters:
+        - name: input
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/UploadStatusRequest'
+      responses:
+        200:
+          description: Expected response to a valid request.
+          schema:
+            $ref: '#/definitions/UploadStatusResponse'
+        default:
+          description: The default response on an error.
+          schema:
+            $ref: '#/definitions/Error'
+  /navopt/workloadInfo:
+    post:
+      summary: Information about workload.
+      description: Workloads information for a given user
+      operationId: workloadInfo
+      parameters:
+        - name: input
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/WorkloadInfoRequest'
+      responses:
+        200:
+          description: Expected response to a valid request.
+          schema:
+            $ref: '#/definitions/WorkloadInfoResponse'
+        default:
+          description: The default response on an error.
+          schema:
+            $ref: '#/definitions/Error'
+  /navopt/getQueries:
+    post:
+      summary: List of all queries.
+      description: Get information for all queries.
+      operationId: getQueries
+      x-paging-default-max-items: 100
+      parameters:
+        - name: input
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/GetQueriesRequest'
+      responses:
+        200:
+          description: Expected response to a valid request.
+          schema:
+            $ref: '#/definitions/GetQueriesResponse'
+        default:
+          description: The default response on an error.
+          schema:
+            $ref: '#/definitions/Error'
+  /navopt/getQueriesDetail:
+    post:
+      summary: Get Query Detail.
+      description: Get detailed information for a given query.
+      operationId: getQueriesDetail
+      parameters:
+        - name: input
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/GetQueriesDetailRequest'
+      responses:
+        200:
+          description: Expected response to a valid request.
+          schema:
+            $ref: '#/definitions/GetQueriesDetailResponse'
+        default:
+          description: The default response on an error.
+          schema:
+            $ref: '#/definitions/Error'
+  /navopt/getTables:
+    post:
+      summary: List of all tables.
+      description: Get information for all tables.
+      operationId: getTables
+      x-paging-default-max-items: 100
+      parameters:
+        - name: input
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/GetTablesRequest'
+      responses:
+        200:
+          description: Expected response to a valid request.
+          schema:
+            $ref: '#/definitions/GetTablesResponse'
+        default:
+          description: The default response on an error.
+          schema:
+            $ref: '#/definitions/Error'
+  /navopt/getTablesDetail:
+    post:
+      summary: Get Table Detail.
+      description: Get detailed information for a given table.
+      operationId: getTablesDetail
+      parameters:
+        - name: input
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/GetTablesDetailRequest'
+      responses:
+        200:
+          description: Expected response to a valid request.
+          schema:
+            $ref: '#/definitions/GetTablesDetailResponse'
+        default:
+          description: The default response on an error.
+          schema:
+            $ref: '#/definitions/Error'
+  /navopt/getColumns:
+    post:
+      summary: List of all columns.
+      description: Get information for all columns.
+      operationId: getColumns
+      x-paging-default-max-items: 100
+      parameters:
+        - name: input
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/GetColumnsRequest'
+      responses:
+        200:
+          description: Expected response to a valid request.
+          schema:
+            $ref: '#/definitions/GetColumnsResponse'
+        default:
+          description: The default response on an error.
+          schema:
+            $ref: '#/definitions/Error'
+  /navopt/getColumnsDetail:
+    post:
+      summary: Get Column Detail.
+      description: Get detailed information for a given column.
+      operationId: getColumnsDetail
+      parameters:
+        - name: input
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/GetColumnsDetailRequest'
+      responses:
+        200:
+          description: Expected response to a valid request.
+          schema:
+            $ref: '#/definitions/GetColumnsDetailResponse'
+        default:
+          description: The default response on an error.
+          schema:
+            $ref: '#/definitions/Error'
+definitions:
+  Error:
+    type: object
+    description: An object returned on an error.
+    properties:
+      code:
+        type: string
+        description: The error code.
+      message:
+        type: string
+        description: The error message.
+  GetS3urlRequest:
+    type: object
+    description: Request object for a get S3url destination request.
+    x-hidden: true
+    x-hidden-reason: 'FOR_CLOUDERA_USE_ONLY: This is used by the navopt CLI extension.'
+    properties:
+      tenant:
+        type: string
+        description: The tenant id information associated with user. This info can be retrieved via getTenant API.
+      fileName:
+        type: string
+        description: The file name to be uploaded.
+  GetS3urlResponse:
+    type: object
+    description: Response object for a get S3url response.
+    x-hidden: true
+    x-hidden-reason: 'FOR_CLOUDERA_USE_ONLY: This is used by the navopt CLI extension.'
+    properties:
+      url:
+        type: string
+        description: The S3 presigned url.
+        x-sensitive: true
+  GetTenantRequest:
+    type: object
+    description: Request object for a get tenant destination request.
+    properties:
+      clusterId:
+        type: string
+        description: The tenant corresponding to a given clusterId.
+  GetTenantResponse:
+    type: object
+    description: Response object for a get tenant response.
+    properties:
+      tenant:
+        type: string
+        description: The tenant id information associated with user.
+  TopDatabases:
+    type: object
+    description: Information about Top Databases.
+    required:
+      - eid
+    properties:
+      eid:
+        type: string
+        description: Unique id of a database.
+      instanceCount:
+        type: integer
+        format: int32
+        description: Number of times databases was used througout workload.
+      dbName:
+        type: string
+        description: The name of database.
+      totalTableCount:
+        type: integer
+        format: int32
+        description: Number of tables in a given database.
+      workloadPercent:
+        type: integer
+        format: int32
+        description: Percentage of workload this database is used.
+      totalQueryCount:
+        type: integer
+        format: int32
+        description: Number of Queries Accessing this database.
+  GetTopDatabasesRequest:
+    type: object
+    description: Request object for a get top databases destination request.
+    required:
+      - tenant
+    properties:
+      tenant:
+        type: string
+        description: The tenant information corresponding to a user.
+      pageSize:
+        type: integer
+        format: int32
+        minimum: 1
+        maximum: 1000
+        x-paging-page-size: true
+        description: The size of each page.
+      startingToken:
+        type: string
+        x-paging-input-token: true
+        description: This indicate id for the next set of queries that can be fetched.
+  GetTopDatabasesResponse:
+    type: object
+    description: Response object for a get top tables destination request.
+    properties:
+      results:
+        type: array
+        items:
+          $ref: '#/definitions/TopDatabases'
+        x-paging-result: true
+        description: The Top DataBases part of the workload.
+      nextToken:
+        type: string
+        x-paging-output-token: true
+        description: This indicate id for the next set of queries that can be fetched.
+  TopTables:
+    type: object
+    description: Information about Top Tables.
+    required:
+      - eid
+    properties:
+      eid:
+        type: string
+        description: Unique id of a table.
+      columnCount:
+        type: integer
+        format: int32
+        description: Number of Columns in a table.
+      name:
+        type: string
+        description: The name of table.
+      patternCount:
+        type: integer
+        format: int32
+        description: Number of patterns in a table.
+      workloadPercent:
+        type: integer
+        format: int32
+        description: Percentage of workload this table is used.
+      total:
+        type: integer
+        format: int32
+        description: Number of Queries Accessing this table.
+      type:
+        type: string
+        description: The type of a table.
+  GetTopTablesRequest:
+    type: object
+    description: Request object for a get top tables destination request.
+    required:
+      - tenant
+    properties:
+      tenant:
+        type: string
+        description: The tenant information corresponding to a user.
+      dbName:
+        type: string
+        description: The database for which top tables needs to be retrieved.
+      pageSize:
+        type: integer
+        format: int32
+        minimum: 1
+        maximum: 1000
+        x-paging-page-size: true
+        description: The size of each page.
+      startingToken:
+        type: string
+        x-paging-input-token: true
+        description: This indicate id for the next set of queries that can be fetched.
+  GetTopTablesResponse:
+    type: object
+    description: Response object for a get top tables destination request.
+    properties:
+      results:
+        type: array
+        items:
+          $ref: '#/definitions/TopTables'
+        x-paging-result: true
+        description: The Top Tables part of the workload.
+      nextToken:
+        type: string
+        x-paging-output-token: true
+        description: This indicate id for the next set of queries that can be fetched.
+  TopQueries:
+    type: object
+    description: Information about Top Queries.
+    required:
+      - qid
+    properties:
+      qid:
+        type: string
+        description: The id of the query.
+      impalaCompatible:
+        type: boolean
+        description: If query is impala compatible.
+      hiveCompatible:
+        type: boolean
+        description: If query is hive compatible.
+      instanceCount:
+        type: integer
+        format: int32
+        description: Number of occurence of this query.
+      elapsedTime:
+        type: integer
+        format: int32
+        description: Elapsed time for this query.
+      customId:
+        type: string
+        description: The user passed id of this query.
+      complexity:
+        type: string
+        description: Complexity information for this query.
+      querySignature:
+        type: array
+        items:
+          type: string
+        description: The signature of a query
+  GetTopQueriesRequest:
+    type: object
+    description: Request object for a get top queries destination request.
+    required:
+      - tenant
+    properties:
+      tenant:
+        type: string
+        description: The tenant information corresponding to a user.
+      pageSize:
+        type: integer
+        format: int32
+        minimum: 1
+        maximum: 1000
+        x-paging-page-size: true
+        description: The size of each page.
+      startingToken:
+        type: string
+        x-paging-input-token: true
+        description: This indicate id for the next set of queries that can be fetched.
+  GetTopQueriesResponse:
+    type: object
+    description: Response object for a get top queries destination request.
+    properties:
+      results:
+        type: array
+        items:
+          $ref: '#/definitions/TopQueries'
+        x-paging-result: true
+        description: The Top Tables part of the workload.
+      nextToken:
+        type: string
+        x-paging-output-token: true
+        description: This indicate id for the next set of queries that can be fetched.
+  TopColumns:
+    type: object
+    description: Information about Top Columns.
+    required:
+      - cid
+    properties:
+      cid:
+        type: string
+        description: The id of the column.
+      columnCount:
+        type: integer
+        format: int32
+        description: Number of times this column was used.
+      columnName:
+        type: string
+        description: Name of the column.
+      groupbyCol:
+        type: integer
+        format: int32
+        description: Number of groupby in this column.
+      selectCol:
+        type: integer
+        format: int32
+        description: Number of select in this column.
+      filterCol:
+        type: integer
+        format: int32
+        description: Number of times filter was used in this column.
+      joinCol:
+        type: integer
+        format: int32
+        description: Number of times this column was used in join.
+      orderbyCol:
+        type: integer
+        format: int32
+        description: Number of times this orderby was used in join.
+      tableType:
+        type: string
+        description: The type of the table.
+      tableName:
+        type: string
+        description: The name of the table.
+      tid:
+        type: string
+        description: The id of the table
+      workloadPercent:
+        type: integer
+        format: int32
+        description: Percentage of workload this column is used.
+      dbName:
+        type: string
+        description: The database for a given column.
+  GetTopColumnsRequest:
+    type: object
+    description: Request object for a get top columns destination request.
+    required:
+      - tenant
+    properties:
+      tenant:
+        type: string
+        description: The tenant information corresponding to a user.
+      dbName:
+        type: string
+        description: The database for which top columns needs to be retrieved.
+      tableName:
+        type: string
+        description: The table for which top columns needs to be retrieved.
+      dbTableList:
+        type: array
+        items:
+          type: string
+        description: The database for which top columns needs to be retrieved.
+      pageSize:
+        type: integer
+        format: int32
+        minimum: 1
+        maximum: 1000
+        x-paging-page-size: true
+        description: The size of each page.
+      startingToken:
+        type: string
+        x-paging-input-token: true
+        description: This indicate id for the next set of queries that can be fetched.
+  GetTopColumnsResponse:
+    type: object
+    description: Response object for a get top columns destination request.
+    properties:
+      groupbyColumns:
+        type: array
+        items:
+          $ref: '#/definitions/TopColumns'
+        x-paging-result: true
+        description: The top groupby columns part of the workload.
+      joinColumns:
+        type: array
+        items:
+          $ref: '#/definitions/TopColumns'
+        description: The top join columns part of the workload.
+      selectColumns:
+        type: array
+        items:
+          $ref: '#/definitions/TopColumns'
+        description: The top select columns part of the workload.
+      orderbyColumns:
+        type: array
+        items:
+          $ref: '#/definitions/TopColumns'
+        description: The top orderby columns part of the workload.
+      filterColumns:
+        type: array
+        items:
+          $ref: '#/definitions/TopColumns'
+        description: The top filters columns part of the workload.
+      nextToken:
+        type: string
+        x-paging-output-token: true
+        description: This indicate id for the next set of queries that can be fetched.
+  ValGroup:
+    type: object
+    description: Information about Top Filters.
+    properties:
+      columnName:
+        type: string
+        description: The name of the column.
+      literal:
+        type: string
+        description: The literal part of filter.
+      op:
+        type: string
+        description: The operator information for this filter.
+      isLiteral:
+        type: boolean
+        description: If literal is present.
+  PopValue:
+    type: object
+    description: Information about popular values
+    properties:
+      group:
+        type: array
+        items:
+          $ref: '#/definitions/ValGroup'
+        description: The list of value group for filters
+      count:
+        type: integer
+        format: int32
+        description: Number of occurence of this popular value.
+  TopFilters:
+    type: object
+    description: Information about Top Filters.
+    properties:
+      popularValues:
+        type: array
+        items:
+          $ref: '#/definitions/PopValue'
+        description: The list of popular values and filters
+      totalQueryCount:
+        type: integer
+        format: int32
+        description: Number of query that has this filter.
+      tableName:
+        type: string
+        description: The name of the table.
+      tid:
+        type: string
+        description: The id of the table.
+      columns:
+        type: array
+        items:
+          type: string
+        description: The list of columns
+      qids:
+        type: array
+        items:
+          type: string
+        description: The list of query ids
+  GetTopFiltersRequest:
+    type: object
+    description: Request object for a get top filters destination request.
+    required:
+      - tenant
+    properties:
+      tenant:
+        type: string
+        description: The tenant information corresponding to a user.
+      dbName:
+        type: string
+        description: The database for which top filters needs to be retrieved.
+      tableName:
+        type: string
+        description: The table for which top filters needs to be retrieved.
+      colList:
+        type: array
+        items:
+          type: string
+        description: The columns for which top filters needs to be retrieved.
+      dbTableList:
+        type: array
+        items:
+          type: string
+        description: The database for which top filters needs to be retrieved.
+      pageSize:
+        type: integer
+        format: int32
+        minimum: 1
+        maximum: 1000
+        x-paging-page-size: true
+        description: The size of each page.
+      startingToken:
+        type: string
+        x-paging-input-token: true
+        description: This indicate id for the next set of queries that can be fetched.
+  GetTopFiltersResponse:
+    type: object
+    description: Response object for a get top filters destination request.
+    properties:
+      results:
+        type: array
+        items:
+          $ref: '#/definitions/TopFilters'
+        x-paging-result: true
+        description: The top filters part of the workload.
+      nextToken:
+        type: string
+        x-paging-output-token: true
+        description: This indicate id for the next set of queries that can be fetched.
+  AggInfo:
+    type: object
+    description: Information about Aggregates columns, table and databases.
+    properties:
+      columnName:
+        type: string
+        description: The aggregates column information.
+      tableName:
+        type: string
+        description: The aggregates table information.
+      databaseName:
+        type: string
+        description: The aggregates database information.
+  TopAgg:
+    type: object
+    description: Information about Top Aggregates.
+    properties:
+      aggregateClause:
+        type: string
+        description: The aggregates clause information.
+      totalQueryCount:
+        type: integer
+        format: int32
+        description: Number of occurence of this query.
+      aggregateFunction:
+        type: string
+        description: The aggregate function information.
+      functionType:
+        type: string
+        description: The type of aggregates function.
+      location:
+        type: string
+        description: The location of aggregate in the query
+      aggregateInfo:
+        type: array
+        items:
+          $ref: '#/definitions/AggInfo'
+        description: The aggregates info part of the workload.
+  GetTopAggsRequest:
+    type: object
+    description: Request object for a get top aggregates destination request.
+    required:
+      - tenant
+    properties:
+      tenant:
+        type: string
+        description: The tenant information corresponding to a user.
+      dbTableList:
+        type: array
+        items:
+          type: string
+        description: The database for which top joins needs to be retrieved.
+      pageSize:
+        type: integer
+        format: int32
+        minimum: 1
+        maximum: 1000
+        x-paging-page-size: true
+        description: The size of each page.
+      startingToken:
+        type: string
+        x-paging-input-token: true
+        description: This indicate id for the next set of queries that can be fetched.
+  GetTopAggsResponse:
+    type: object
+    description: Response object for a get top aggregates destination request.
+    properties:
+      results:
+        type: array
+        items:
+          $ref: '#/definitions/TopAgg'
+        x-paging-result: true
+        description: The Top aggregates part of the workload.
+      nextToken:
+        type: string
+        x-paging-output-token: true
+        description: This indicate id for the next set of queries that can be fetched.
+  JoinCols:
+    type: object
+    description: All Join columns.
+    properties:
+      columns:
+        type: array
+        items:
+          type: string
+        description: The list of columns
+  TopJoins:
+    type: object
+    description: Information about Top Joins.
+    properties:
+      totalTableCount:
+        type: integer
+        format: int32
+        description: Number of occurence of this query.
+      totalQueryCount:
+        type: integer
+        format: int32
+        description: Number of query that has this filter.
+      joinCols:
+        type: array
+        items:
+          $ref: '#/definitions/JoinCols'
+        description: The list of columns
+      tables:
+        type: array
+        items:
+          type: string
+        description: The list of tables
+      queryIds:
+        type: array
+        items:
+          type: string
+        description: The list of query ids
+      joinType:
+        type: string
+        description: The type of join
+      dbName:
+        type: string
+        description: The database name associated with this table.
+  GetTopJoinsRequest:
+    type: object
+    description: Request object for a get top joins destination request.
+    required:
+      - tenant
+      - dbTableList
+    properties:
+      tenant:
+        type: string
+        description: The tenant information corresponding to a user.
+      dbTableList:
+        type: array
+        items:
+          type: string
+        description: The database for which top joins needs to be retrieved.
+      pageSize:
+        type: integer
+        format: int32
+        minimum: 1
+        maximum: 1000
+        x-paging-page-size: true
+        description: The size of each page.
+      startingToken:
+        type: string
+        x-paging-input-token: true
+        description: This indicate id for the next set of queries that can be fetched.
+  GetTopJoinsResponse:
+    type: object
+    description: Response object for a get top joins destination request.
+    properties:
+      results:
+        type: array
+        items:
+          $ref: '#/definitions/TopJoins'
+        x-paging-result: true
+        description: The Top Joins part of the workload.
+      nextToken:
+        type: string
+        x-paging-output-token: true
+        description: This indicate id for the next set of queries that can be fetched.
+  DesignBucket:
+    type: object
+    description: Information about Design Bucket.
+    properties:
+      bucketName:
+        type: string
+        description: The name of the bucket.
+      numQueries:
+        type: integer
+        format: int32
+        description: Number queries in the bucket.
+      numTables:
+        type: integer
+        format: int32
+        description: Number tables in the bucket.
+      description:
+        type: string
+        description: The description information for this bucket.
+  GetDesignBucketRequest:
+    type: object
+    description: Request object for a get design bucket destination request.
+    required:
+      - tenant
+    properties:
+      tenant:
+        type: string
+        description: The tenant information corresponding to a user.
+  GetDesignBucketResponse:
+    type: object
+    description: Response object for a get design bucket destination request.
+    properties:
+      results:
+        type: array
+        items:
+          $ref: '#/definitions/DesignBucket'
+        description: The design bucket part of the workload.
+  IncompatibleQueries:
+    type: object
+    description: Information about incompatible queries.
+    properties:
+      qid:
+        type: string
+        description: The id of the query.
+      fromClauses:
+        type: array
+        items:
+          type: string
+        description: The list of the errored from clauses in the query
+      whereClauses:
+        type: array
+        items:
+          type: string
+        description: The list of the errored where caluses in the query.
+      selectClauses:
+        type: array
+        items:
+          type: string
+        description: The list of errored select clauses in the query
+      orderbyClauses:
+        type: array
+        items:
+          type: string
+        description: The list of errored orderby clauses in the query
+      groupbyClauses:
+        type: array
+        items:
+          type: string
+        description: The list of errored groupby clauses in a query.
+      otherClauses:
+        type: array
+        items:
+          type: string
+        description: The list of other error in query.
+      fromError:
+        type: integer
+        format: int32
+        description: Number of from clause in the query.
+      whereError:
+        type: integer
+        format: int32
+        description: Number of where clause with error.
+      selectError:
+        type: integer
+        format: int32
+        description: Number of select clause with error.
+      orderbyError:
+        type: integer
+        format: int32
+        description: Number of order by clause with error.
+      groupbyError:
+        type: integer
+        format: int32
+        description: Number of group by clause with error.
+      otherError:
+        type: integer
+        format: int32
+        description: Number of other errors in query.
+  GetHAQRRequest:
+    type: object
+    description: Request object for a get HAQR destination request.
+    required:
+      - tenant
+    properties:
+      tenant:
+        type: string
+        description: The tenant information corresponding to a user.
+  GetHAQRResponse:
+    type: object
+    description: Response object for a get HAQR destination request.
+    properties:
+      impala:
+        type: array
+        items:
+          $ref: '#/definitions/IncompatibleQueries'
+        description: The impala incompatible queries in this workload.
+      hive:
+        type: array
+        items:
+          $ref: '#/definitions/IncompatibleQueries'
+        description: The hive incompatible queries in this workload.
+  GetQueryCompatibleRequest:
+    type: object
+    description: Request object for a get query compatible destination request.
+    required:
+      - tenant
+      - query
+      - sourcePlatform
+      - targetPlatform
+    properties:
+      tenant:
+        type: string
+        description: The tenant information corresponding to a user.
+      query:
+        type: string
+        description: The query for which compatibility info needs to be retrieved.
+      sourcePlatform:
+        type: string
+        description: The source platform where this query was run againts.
+      targetPlatform:
+        type: string
+        description: The target platform where this query's comptaibility need to checked againts.
+  HighLightInfo:
+    type: object
+    description: Request object for a get query compatible destination request.
+    properties:
+      column:
+        type: integer
+        format: int32
+        description: The tenant information corresponding to a user.
+      lineNum:
+        type: integer
+        format: int32
+        description: The tenant information corresponding to a user.
+      tokenRank:
+        type: integer
+        format: int32
+        description: The tenant information corresponding to a user.
+      offset:
+        type: integer
+        format: int32
+        description: The tenant information corresponding to a user.
+  ClauseError:
+    type: object
+    description: Information about incompatible queries.
+    properties:
+      startLocator:
+        $ref: '#/definitions/HighLightInfo'
+        description: The clause level incompatibility info for a query.
+      endLocator:
+        $ref: '#/definitions/HighLightInfo'
+        description: The clause level incompatibility info for a query.
+  QueryError:
+    type: object
+    description: Information about incompatible queries.
+    properties:
+      encounteredString:
+        type: string
+        description: The id of the query.
+      errorString:
+        type: string
+        description: The id of the query.
+      expectedString:
+        type: string
+        description: The id of the query.
+  GetQueryCompatibleResponse:
+    type: object
+    description: Response object for a get query compatbile destination request.
+    properties:
+      clauseName:
+        type: string
+        description: The tenant information corresponding to a user.
+      clauseString:
+        type: string
+        description: The tenant information corresponding to a user.
+      clauseError:
+        $ref: '#/definitions/ClauseError'
+        description: The clause level incompatibility info for a query.
+      queryError:
+        $ref: '#/definitions/QueryError'
+        description: The query level incompatibility info.
+      status:
+        type: string
+        description: The status to identify if Query is compatible or not.
+      parseError:
+        type: string
+        description: The parse error for a given query.
+  GetQueryRiskRequest:
+    type: object
+    description: Request object for a get HAQR destination request.
+    required:
+      - tenant
+      - query
+    properties:
+      tenant:
+        type: string
+        description: The tenant information corresponding to a user.
+      query:
+        type: string
+        description: The query that needs to be analyzed for risk.
+      sourcePlatform:
+        type: string
+        description: The source platform where this query was compiled.
+      dbName:
+        type: string
+        description: The database where this query was run against.
+  RiskData:
+    type: object
+    description: Information about incompatible queries.
+    properties:
+      risk:
+        type: string
+        description: The id of the query.
+      riskAnalysis:
+        type: string
+        description: The id of the query.
+      riskRecommendation:
+        type: string
+        description: The id of the query.
+      riskId:
+        type: integer
+        format: int32
+        description: The id of a given risk.
+      riskTables:
+        type: array
+        items:
+          type: string
+        description: The list of tables used in Risk Analysis
+  GetQueryRiskResponse:
+    type: object
+    description: Response object for a get HAQR destination request.
+    properties:
+      impalaRisk:
+        type: array
+        items:
+          $ref: '#/definitions/RiskData'
+        description: The impala incompatible queries in this workload.
+      hiveRisk:
+        type: array
+        items:
+          $ref: '#/definitions/RiskData'
+        description: The hive incompatible queries in this workload.
+      errorMsg:
+        type: string
+        description: In case of error, description explainig cause of failure.
+      noDDL:
+        type: array
+        items:
+          type: string
+        description: The list of table with no DDL
+      noStats:
+        type: array
+        items:
+          type: string
+        description: The list of table with no stats
+  GetSimilarQueriesRequest:
+    type: object
+    description: Request object for a get similar query destination request.
+    required:
+      - tenant
+      - query
+      - sourcePlatform
+    properties:
+      tenant:
+        type: string
+        description: The tenant information corresponding to a user.
+      query:
+        type: string
+        description: The query that needs to be analyzed for similarities.
+      sourcePlatform:
+        type: string
+        description: The source platform where this query was compiled.
+  GetSimilarQueriesResponse:
+    type: object
+    description: Response object for a get similar query detail destination request.
+    properties:
+      orderByCount:
+        type: integer
+        format: int32
+        description: Number of orderby in a query.
+      groupByCount:
+        type: integer
+        format: int32
+        description: Number of groupby in a query.
+      hiveCompatible:
+        type: integer
+        format: int32
+        description: Indicates if query is hive compatible.
+      impalaCompatible:
+        type: integer
+        format: int32
+        description: Indicates if query is impala compatible.
+      selectCount:
+        type: integer
+        format: int32
+        description: Number of select in a query.
+      unionCount:
+        type: integer
+        format: int32
+        description: Number of union in a query.
+      unionAllCount:
+        type: integer
+        format: int32
+        description: Number of unionall in a query.
+      instanceCount:
+        type: integer
+        format: int32
+        description: Number of occurence of this query.
+      joinCount:
+        type: integer
+        format: int32
+        description: Number of joins in a query.
+      filterCount:
+        type: integer
+        format: int32
+        description: Number of filters in a query.
+      table:
+        type: array
+        items:
+          $ref: '#/definitions/QueryTable'
+        description: The tables that are part of a query.
+      qid:
+        type: string
+        description: The id of a query.
+      customId:
+        type: string
+        description: The user specified id of a query.
+      query:
+        type: string
+        description: The query text.
+      querySignature:
+        type: array
+        items:
+          type: string
+        description: The signature of a query
+  FailedQuery:
+    type: object
+    description: Information about failed queries.
+    properties:
+      query:
+        type: string
+        description: The query string.
+      error:
+        type: string
+        description: The syntax error in query.
+  UploadState:
+    type: string
+    description: The status of a upload
+    enum:
+      - WAITING
+      - IN_PROGRESS
+      - PROCESSING
+      - FINISHED
+      - FAILED
+  UploadStatus:
+    type: object
+    description: Information about status of upload.
+    properties:
+      state:
+        $ref: '#/definitions/UploadState'
+        description: The status of a upload.
+      workloadId:
+        type: string
+        description: The id of a workload.
+      statusMsg:
+        type: string
+        description: In case of error, description explainig cause of failure.
+      successQueries:
+        type: integer
+        format: int32
+        description: Number of queries successfully parsed.
+      failedQueries:
+        type: integer
+        format: int32
+        description: Number of queries failed to parse.
+      failQueryDetails:
+        type: array
+        items:
+          $ref: '#/definitions/FailedQuery'
+        description: The detail of failed queries in a upload.
+  ColType:
+    type: string
+    description: The csv type file column header information
+    x-hidden: true
+    x-hidden-reason: 'FOR_CLOUDERA_USE_ONLY: This is used by the navopt CLI extension.'
+    enum:
+      - NONE
+      - SQL_ID
+      - SQL_QUERY
+  HeaderField:
+    type: object
+    description: The csv type file header information.
+    x-hidden: true
+    x-hidden-reason: 'FOR_CLOUDERA_USE_ONLY: This is used by the navopt CLI extension.'
+    properties:
+      coltype:
+        $ref: '#/definitions/ColType'
+        description: The csv col type, maps to name field below.
+      name:
+        type: string
+        description: The column name in csv file, header supplied in csv needs to be used to determine this.
+      tag:
+        type: string
+        description: This is used to set custom column type.
+      use:
+        type: boolean
+        description: Specified will be used for computation.
+      count:
+        type: integer
+        format: int32
+        description: Count the specified field.
+  FileType:
+    type: string
+    description: The csv type file column header information
+    x-hidden: true
+    x-hidden-reason: 'FOR_CLOUDERA_USE_ONLY: This is used by the navopt CLI extension.'
+    enum:
+      - QUERY
+      - TABLE_STATS
+      - COLUMN_STATS
+  UploadRequest:
+    type: object
+    description: Request object for a upload destination request.
+    x-hidden: true
+    x-hidden-reason: 'FOR_CLOUDERA_USE_ONLY: This is used by the navopt CLI extension.'
+    required:
+      - tenant
+      - fileLocation
+      - sourcePlatform
+    properties:
+      tenant:
+        type: string
+        description: The tenant information corresponding to a user.
+      fileLocation:
+        type: string
+        description: The location of file that needs to be uploaded.
+      sourcePlatform:
+        type: string
+        description: The source platform of file that needs to be uploaded.
+      fileType:
+        $ref: '#/definitions/FileType'
+        description: The file type, could be either query, table or column stats file.
+      rowDelim:
+        type: string
+        description: The row delimiter if any for this file, applicable in csv style file.
+      colDelim:
+        type: string
+        description: The column delimiter if any for this file, applicable in csv style file.
+      fileName:
+        type: string
+        description: The name of the file that needs to be uploaded.
+      s3location:
+        type: string
+        description: The location in s3 bucket where file was copied.
+      headerFields:
+        type: array
+        items:
+          $ref: '#/definitions/HeaderField'
+        description: The per column header information associated with csv style file.
+  UploadResponse:
+    type: object
+    description: Response object for a upload destination request.
+    x-hidden: true
+    x-hidden-reason: 'FOR_CLOUDERA_USE_ONLY: This is used by the navopt CLI extension.'
+    properties:
+      status:
+        $ref: '#/definitions/UploadStatus'
+        description: The Current status of the upload.
+  UploadStatusRequest:
+    type: object
+    description: Request object for a upload status destination request.
+    required:
+      - tenant
+      - workloadId
+    properties:
+      tenant:
+        type: string
+        description: The tenant information corresponding to a user.
+      workloadId:
+        type: string
+        description: The id of the upload that was requested.
+  UploadStatusResponse:
+    type: object
+    description: Response object for a upload status destination request.
+    properties:
+      status:
+        $ref: '#/definitions/UploadStatus'
+        description: The Current status of the upload.
+  WorkloadData:
+    type: object
+    description: Information about workload.
+    required:
+      - workloadId
+    properties:
+      workloadId:
+        type: string
+        description: The id of the workload.
+      queries:
+        type: integer
+        format: int32
+        description: Number of queries in a workload.
+      workloadName:
+        type: string
+        description: The name of file that was uploaded.
+      processed_queries:
+        type: integer
+        format: int32
+        description: Number of queries that were parsed.
+      active:
+        type: boolean
+        description: If its currently uploaded workload.
+      source_platform:
+        type: string
+        description: The source platform of uploaded queries.
+      tenant:
+        type: string
+        description: The tenant information corresponding to a user.
+      timestamp:
+        type: integer
+        format: int64
+        description: The timestamp when upload was done.
+      etype:
+        type: string
+        description: The type information for this operation.
+  WorkloadInfoRequest:
+    type: object
+    description: Request object for a workload info destination request.
+    required:
+      - tenant
+    properties:
+      tenant:
+        type: string
+        description: The tenant information corresponding to a user.
+      workloadId:
+        type: string
+        description: The workload id for which information needs to be retrieved.
+      inActive:
+        type: boolean
+        description: If set to true this includes also historical or inactive uploads.
+      details:
+        type: boolean
+        description: If set to true includes detailed information about workload.
+  WorkloadInfoResponse:
+    type: object
+    description: Response object for a workload info destination request.
+    properties:
+      results:
+        type: array
+        items:
+          $ref: '#/definitions/WorkloadData'
+        description: The information about workload.
+  QueryData:
+    type: object
+    description: Information about Query.
+    required:
+      - qid
+    properties:
+      qid:
+        type: string
+        description: Unique id of a query.
+      query:
+        type: string
+        description: The query text
+  GetQueriesRequest:
+    type: object
+    description: Request object for a get queries destination request.
+    required:
+      - tenant
+    properties:
+      tenant:
+        type: string
+        description: The tenant information corresponding to a user.
+      pageSize:
+        type: integer
+        format: int32
+        minimum: 1
+        maximum: 1000
+        x-paging-page-size: true
+        description: The size of each page.
+      startingToken:
+        type: string
+        x-paging-input-token: true
+        description: This indicate id for the next set of queries that can be fetched.
+  GetQueriesResponse:
+    type: object
+    description: Response object for a get queries destination request.
+    properties:
+      results:
+        type: array
+        items:
+          $ref: '#/definitions/QueryData'
+        x-paging-result: true
+        description: The queries that are part of the workload.
+      nextToken:
+        type: string
+        x-paging-output-token: true
+        description: This indicate id for the next set of queries that can be fetched.
+  QueryTable:
+    type: object
+    description: Information about tables that are part of a query.
+    required:
+      - tid
+    properties:
+      tid:
+        type: string
+        description: Unique id of a table.
+      tableName:
+        type: string
+        description: The name of a table.
+      tableType:
+        type: string
+        description: The type of a table
+      dbName:
+        type: string
+        description: Database name.
+  GetQueriesDetailRequest:
+    type: object
+    description: Request object for a get query detail destination request.
+    required:
+      - tenant
+      - qid
+    properties:
+      tenant:
+        type: string
+        description: The tenant information corresponding to a user.
+      qid:
+        type: string
+        description: The id of a query whose information needs to be fetched.
+  GetQueriesDetailResponse:
+    type: object
+    description: Response object for a get query detail destination request.
+    properties:
+      orderByCount:
+        type: integer
+        format: int32
+        description: Number of orderby in a query.
+      groupByCount:
+        type: integer
+        format: int32
+        description: Number of groupby in a query.
+      hiveCompatible:
+        type: integer
+        format: int32
+        description: Indicates if query is hive compatible.
+      impalaCompatible:
+        type: integer
+        format: int32
+        description: Indicates if query is impala compatible.
+      selectCount:
+        type: integer
+        format: int32
+        description: Number of select in a query.
+      unionCount:
+        type: integer
+        format: int32
+        description: Number of union in a query.
+      unionAllCount:
+        type: integer
+        format: int32
+        description: Number of unionall in a query.
+      instanceCount:
+        type: integer
+        format: int32
+        description: Number of occurence of this query.
+      joinCount:
+        type: integer
+        format: int32
+        description: Number of joins in a query.
+      filterCount:
+        type: integer
+        format: int32
+        description: Number of filters in a query.
+      table:
+        type: array
+        items:
+          $ref: '#/definitions/QueryTable'
+        description: The tables that are part of a query.
+      qid:
+        type: string
+        description: The id of a query.
+      customId:
+        type: string
+        description: The user specified id of a query.
+      query:
+        type: string
+        description: The query text.
+      querySignature:
+        type: array
+        items:
+          type: string
+        description: The signature of a query
+  TableData:
+    type: object
+    description: Information about Table.
+    required:
+      - tid
+    properties:
+      tid:
+        type: string
+        description: Unique id of a query.
+      name:
+        type: string
+        description: The name of table
+  GetTablesRequest:
+    type: object
+    description: Request object for a get tables destination request.
+    required:
+      - tenant
+    properties:
+      tenant:
+        type: string
+        description: The tenant information corresponding to a user.
+      pageSize:
+        type: integer
+        format: int32
+        minimum: 1
+        maximum: 1000
+        x-paging-page-size: true
+        description: The size of each page.
+      startingToken:
+        type: string
+        x-paging-input-token: true
+        description: This indicate id for the next set of queries that can be fetched.
+  GetTablesResponse:
+    type: object
+    description: Response object for a get tables destination request.
+    properties:
+      results:
+        type: array
+        items:
+          $ref: '#/definitions/TableData'
+        x-paging-result: true
+        description: The tables that are part of the workload.
+      nextToken:
+        type: string
+        x-paging-output-token: true
+        description: This indicate id for the next set of tables that can be fetched.
+  ColStats:
+    type: object
+    description: Information about column statistics.
+    properties:
+      avgColLen:
+        type: string
+        description: The average column length.
+      numNulls:
+        type: string
+        description: The number of nulls for this columns
+      cid:
+        type: string
+        description: Unique id of a column.
+      dataType:
+        type: string
+        description: Data type of column.
+      numDistinct:
+        type: string
+        description: Number of distinct columns.
+      columnName:
+        type: string
+        description: Column name.
+  TableStats:
+    type: object
+    description: Information about column statistics.
+    properties:
+      numRows:
+        type: string
+        description: The number of rows in a table.
+      avgRowLen:
+        type: string
+        description: The average row length in a table.
+      rowRange:
+        type: string
+        description: The range information for number of rows in a table.
+      tableName:
+        type: string
+        description: The table name.
+  JoinTables:
+    type: object
+    description: Information about Join tables.
+    properties:
+      tableName:
+        type: string
+        description: Name of the table.
+      tableEid:
+        type: string
+        description: id of the table.
+      joinpercent:
+        type: integer
+        format: int32
+        description: The percentage value of join with this table.
+      numJoins:
+        type: integer
+        format: int32
+        description: The number of join with this table.
+      joinColumns:
+        type: array
+        items:
+          type: string
+        description: The column names of the table that has joins.
+      dbName:
+        type: string
+        description: Database name for this table.
+  QueryList:
+    type: object
+    description: The list of queries.
+    properties:
+      query:
+        type: string
+        description: The full query string.
+      qid:
+        type: string
+        description: The query id for this query.
+      queryCount:
+        type: integer
+        format: int32
+        description: The total number of occurence of this query.
+      queryChar:
+        type: array
+        items:
+          type: string
+        description: The characterstics of this query.
+      impalaCompatible:
+        type: boolean
+        description: If query is impala compatible.
+      hiveCompatible:
+        type: boolean
+        description: If query is hive compatible.
+      complexity:
+        type: string
+        description: Complexity score for a given query.
+  TopCols:
+    type: object
+    description: The Top Join columns.
+    properties:
+      name:
+        type: string
+        description: Name of the column.
+      score:
+        type: integer
+        format: int32
+        description: The popularity of this column in terms of how often it was joined.
+  GetTablesDetailRequest:
+    type: object
+    description: Request object for a get table detail destination request.
+    required:
+      - tenant
+    properties:
+      tenant:
+        type: string
+        description: The tenant information corresponding to a user.
+      tid:
+        type: string
+        description: The id of a table whose information needs to be fetched. Either id or table name needs to be passed
+      dbName:
+        type: string
+        description: The database for corresponding to this table needs.
+      tableName:
+        type: string
+        description: The table name for which data needs to be retrieved.
+  GetTablesDetailResponse:
+    type: object
+    description: Response object for a get table detail destination request.
+    properties:
+      columnCount:
+        type: integer
+        format: int32
+        description: Number of columns in a table.
+      createCount:
+        type: integer
+        format: int32
+        description: Number of queries with create against this table.
+      selectCount:
+        type: integer
+        format: int32
+        description: Number of select queries againts this table.
+      updateCount:
+        type: integer
+        format: int32
+        description: Number of update queries againts this table.
+      queryCount:
+        type: integer
+        format: int32
+        description: Number of queries that has this table.
+      insertCount:
+        type: integer
+        format: int32
+        description: Number of insert queries that has this table.
+      deleteCount:
+        type: integer
+        format: int32
+        description: Number of delete queries that has this table.
+      joinCount:
+        type: integer
+        format: int32
+        description: Number of join queries that has this table.
+      tableStats:
+        $ref: '#/definitions/TableStats'
+        description: The stats information for this table.
+      colStats:
+        type: array
+        items:
+          $ref: '#/definitions/ColStats'
+        description: The column stats information for this table.
+      name:
+        type: string
+        description: The name of table.
+      tid:
+        type: string
+        description: The unique id for this table.
+      type:
+        type: string
+        description: The type of table.
+      table_ddl:
+        type: string
+        description: The DDL information for table.
+      view_ddl:
+        type: string
+        description: The DDL view information for table.
+      iview_ddl:
+        type: string
+        description: The inline view DDL information for table.
+      queryList:
+        type: array
+        items:
+          $ref: '#/definitions/QueryList'
+        description: The list of queries coresponding to a given table.
+      joinTables:
+        type: array
+        items:
+          $ref: '#/definitions/JoinTables'
+          type: string
+        description: The list of join tables to a given table.
+      topJoinCols:
+        type: array
+        items:
+          $ref: '#/definitions/TopCols'
+        description: The top join columns on this table.
+      topCols:
+        type: array
+        items:
+          $ref: '#/definitions/TopCols'
+          type: string
+        description: The top columns on this table.
+      workloadPercent:
+        type: integer
+        format: int32
+        description: Percentage of workload this table is used.
+  ColumnData:
+    type: object
+    description: Information about Column.
+    required:
+      - cid
+    properties:
+      cid:
+        type: string
+        description: Unique id of a column.
+      name:
+        type: string
+        description: The name of column
+  GetColumnsRequest:
+    type: object
+    description: Request object for a get column destination request.
+    required:
+      - tenant
+    properties:
+      tenant:
+        type: string
+        description: The tenant information corresponding to a user.
+      pageSize:
+        type: integer
+        format: int32
+        minimum: 1
+        maximum: 1000
+        x-paging-page-size: true
+        description: The size of each page.
+      startingToken:
+        type: string
+        x-paging-input-token: true
+        description: This indicate id for the next set of columns that can be fetched.
+  GetColumnsResponse:
+    type: object
+    description: Response object for a get column destination request.
+    properties:
+      results:
+        type: array
+        items:
+          $ref: '#/definitions/ColumnData'
+        x-paging-result: true
+        description: The tables that are part of the workload.
+      nextToken:
+        type: string
+        x-paging-output-token: true
+        description: This indicate id for the next set of columns that can be fetched.
+  GetColumnsDetailRequest:
+    type: object
+    description: Request object for a get columns detail destination request.
+    required:
+      - tenant
+      - cid
+    properties:
+      tenant:
+        type: string
+        description: The tenant information corresponding to a user.
+      cid:
+        type: string
+        description: The id of a column whose information needs to be fetched.
+  GetColumnsDetailResponse:
+    type: object
+    description: Response object for a get columns detail destination request.
+    properties:
+      columnName:
+        type: string
+        description: Name of the Column.
+      colStats:
+        type: array
+        items:
+          $ref: '#/definitions/ColStats'
+        description: The column stats information for this table.
+      tid:
+        type: string
+        description: The unique id of table corresponding to this column.
+      cid:
+        type: string
+        description: The unique id of column
+      tableName:
+        type: string
+        description: Name of the Table.
+  GetQueryRewriteRequest:
+    type: object
+    description: Request object for a GetQueryRewrite request.
+    required:
+      - tenant
+      - query
+      - sourcePlatform
+      - targetPlatform
+    properties:
+      tenant:
+        type: string
+        description: Tenant information that corresponds to a user.
+      query:
+        type: string
+        description: Query to be analyzed.
+      sourcePlatform:
+        type: string
+        description: Source platform where query was originally compiled.
+      targetPlatform:
+        type: string
+        description: Target platform where the query is to be executed. Currently accepted values are hive/impala.
+      targetPlatformVersion:
+        type: string
+        description: Version of the target platform where query is to be executed.
+  GetQueryRewriteResponse:
+    type: object
+    description: Response object for a GetQueryRewrite request.
+    properties:
+      rewriteStatus:
+        type: string
+        description: Returns 'success' if no errors are found while rewriting the query. Shows the error message in case of an error.
+      isCompatible:
+        type: boolean
+        description: Evaluates to 'true' if the rewritten query is compatible to the specified target platform.
+      query:
+        type: string
+        description: Input query to be analyzed and transformed.
+      rewrittenQueries:
+        type: array
+        items:
+          type: string
+        description: Set of queries that are generated after rewriting the input query. Simple queries might contain only one rewritten query. Complex queries might be transformed to a sequence of two or more queries.

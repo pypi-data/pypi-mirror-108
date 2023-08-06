@@ -1,0 +1,1761 @@
+swagger: '2.0'
+x-interface-model: admin
+x-endpoint-name: coreadmin
+x-products: ALTUS,CDP
+x-form-factors: public
+x-audit: true
+x-audit-entitlement: AUDIT_API_EVENT_SUBMISSION_COREADMIN_API
+info:
+  version: __API_VERSION__
+  title: Core Administration Service
+  license:
+    name: Apache 2.0
+  description: The Core Administration Service is a web service that you can use to manage the core Cloudera Altus services, like the Altus IAM service. It exposes an API to create accounts in Altus IAM, APIs to configure limits on these core services and other administrative tasks. It is an internal service that can only be accessed from Cloudera corporate network and is used by authorized Cloudera employees.
+schemes:
+  - https
+consumes:
+  - application/json
+produces:
+  - application/json
+paths:
+  /coreadmin/createSFDCBasedAccount:
+    post:
+      summary: Creates a Cloudera Altus account from an SFDC account.
+      description: Creates a Cloudera Altus account from an SFDC external account.
+      operationId: createSFDCBasedAccount
+      x-right: coreadmin/createSFDCBasedAccount
+      x-mutating: true
+      parameters:
+        - name: input
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/CreateSFDCBasedAccountRequest'
+      responses:
+        200:
+          description: Expected response to a valid request.
+          schema:
+            $ref: '#/definitions/CreateSFDCBasedAccountResponse'
+        default:
+          description: The default response on an error.
+          schema:
+            $ref: '#/definitions/Error'
+  /coreadmin/createTrialAccount:
+    post:
+      summary: Creates an Altus Direct style trial account.
+      description: Creates an Altus Direct style trial account.
+      operationId: createTrialAccount
+      x-right: altusadmin/callProtectedAdminAPIs
+      x-mutating: true
+      parameters:
+        - name: input
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/CreateTrialAccountRequest'
+      responses:
+        200:
+          description: Expected response to a valid request.
+          schema:
+            $ref: '#/definitions/CreateTrialAccountResponse'
+        default:
+          description: The default response on an error.
+          schema:
+            $ref: '#/definitions/Error'
+  /coreadmin/getAccount:
+    post:
+      summary: Get information about a Cloudera Altus account.
+      description: Get information about a Cloudera Altus account.
+      operationId: getAccount
+      x-mutating: false
+      parameters:
+        - name: input
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/GetAccountRequest'
+      responses:
+        200:
+          description: Expected response to a valid request.
+          schema:
+            $ref: '#/definitions/GetAccountResponse'
+        default:
+          description: The default response on an error.
+          schema:
+            $ref: '#/definitions/Error'
+  /coreadmin/listAccounts:
+    post:
+      summary: List Cloudera Altus accounts.
+      description: List Cloudera Altus accounts.
+      operationId: listAccounts
+      x-paging-default-max-items: 100
+      x-mutating: false
+      parameters:
+        - name: input
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/ListAccountsRequest'
+      responses:
+        200:
+          description: Expected response to a valid request.
+          schema:
+            $ref: '#/definitions/ListAccountsResponse'
+        default:
+          description: The default response on an error.
+          schema:
+            $ref: '#/definitions/Error'
+  /coreadmin/setLimit:
+    post:
+      summary: Sets a limit for a account.
+      description: Sets a limit for a account overriding the default limit. To see a list of possible limits use 'listLimitsDescriptors'.
+      operationId: setLimit
+      x-right: altusadmin/callProtectedAdminAPIs
+      x-mutating: true
+      parameters:
+        - name: input
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/SetLimitRequest'
+      responses:
+        200:
+          description: Expected response to a valid request.
+          schema:
+            $ref: '#/definitions/SetLimitResponse'
+        default:
+          description: The default response on an error.
+          schema:
+            $ref: '#/definitions/Error'
+  /coreadmin/listLimits:
+    post:
+      summary: Lists the current limits for an account.
+      description: Lists the current limit for an account. If no limit names are specified the call returns all the limits for an account.
+      operationId: listLimits
+      x-paging-default-max-items: 100
+      x-mutating: false
+      parameters:
+        - name: input
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/ListLimitsRequest'
+      responses:
+        200:
+          description: Expected response to a valid request.
+          schema:
+            $ref: '#/definitions/ListLimitsResponse'
+        default:
+          description: The default response on an error.
+          schema:
+            $ref: '#/definitions/Error'
+  /coreadmin/listLimitsDescriptors:
+    post:
+      summary: Lists all possible limit descriptors that can be set through the core admin service.
+      description: Lists all possible limit descriptors that can be set through the core admin service. If no limit names are specified the call returns all limits descriptors.
+      operationId: listLimitsDescriptors
+      x-paging-default-max-items: 100
+      x-mutating: false
+      parameters:
+        - name: input
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/ListLimitsDescriptorsRequest'
+      responses:
+        200:
+          description: Expected response to a valid request.
+          schema:
+            $ref: '#/definitions/ListLimitsDescriptorsResponse'
+        default:
+          description: The default response on an error.
+          schema:
+            $ref: '#/definitions/Error'
+  /coreadmin/grantEntitlement:
+    post:
+      summary: Grants an entitlement to an account.
+      description: Grants an entitlement to and account. If the account is already entitled an error is thrown.
+      operationId: grantEntitlement
+      x-right: altusadmin/callProtectedAdminAPIs
+      x-mutating: true
+      parameters:
+        - name: input
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/GrantEntitlementRequest'
+      responses:
+        200:
+          description: Expected response to a valid request.
+          schema:
+            $ref: '#/definitions/GrantEntitlementResponse'
+        default:
+          description: The default response on an error.
+          schema:
+            $ref: '#/definitions/Error'
+  /coreadmin/revokeEntitlement:
+    post:
+      summary: Revokes an entitlement from an account.
+      description: Revokes an entitlement from an account. The entitlement to revoke must exist for the account otherwise an error is returned.
+      operationId: revokeEntitlement
+      x-right: altusadmin/callProtectedAdminAPIs
+      x-mutating: true
+      parameters:
+        - name: input
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/RevokeEntitlementRequest'
+      responses:
+        200:
+          description: Expected response to a valid request.
+          schema:
+            $ref: '#/definitions/RevokeEntitlementResponse'
+        default:
+          description: The default response on an error.
+          schema:
+            $ref: '#/definitions/Error'
+  /coreadmin/ensureDefaultEntitlementsGranted:
+    post:
+      summary: Ensures that the default entitlements are granted to an account.
+      description: Ensures that the default entitlements are granted to an account. An error will be returned for some disallowed requested accounts.
+      operationId: ensureDefaultEntitlementsGranted
+      x-right: coreadmin/ensureDefaultEntitlementsGranted
+      x-mutating: false
+      parameters:
+        - name: input
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/EnsureDefaultEntitlementsGrantedRequest'
+      responses:
+        200:
+          description: Expected response to a valid request.
+          schema:
+            $ref: '#/definitions/EnsureDefaultEntitlementsGrantedResponse'
+        default:
+          description: The default response on an error.
+          schema:
+            $ref: '#/definitions/Error'
+  /coreadmin/listUsers:
+    post:
+      summary: Lists users for an account.
+      description: Lists users for an account.
+      operationId: listUsers
+      x-paging-default-max-items: 100
+      x-mutating: false
+      parameters:
+        - name: input
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/ListUsersRequest'
+      responses:
+        200:
+          description: Expected response to a valid request.
+          schema:
+            $ref: '#/definitions/ListUsersResponse'
+        default:
+          description: The default response on an error.
+          schema:
+            $ref: '#/definitions/Error'
+  /coreadmin/listMachineUsers:
+    post:
+      summary: Lists machine users.
+      description: Lists machine users in the account.
+      operationId: listMachineUsers
+      x-paging-default-max-items: 100
+      x-mutating: false
+      parameters:
+        - name: input
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/ListMachineUsersRequest'
+      responses:
+        200:
+          description: Expected response to a valid request.
+          schema:
+            $ref: '#/definitions/ListMachineUsersResponse'
+        default:
+          description: The default response on an error.
+          schema:
+            $ref: '#/definitions/Error'
+  /coreadmin/listGroupsForActor:
+    post:
+      summary: Lists the groups and the workload administration groups that the actor is a member of.
+      description: Lists the groups and the workload administration groups that the actor is a member of.
+      operationId: listGroupsForActor
+      x-paging-default-max-items: 100
+      x-mutating: false
+      parameters:
+        - name: input
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/ListGroupsForActorRequest'
+      responses:
+        200:
+          description: Expected response to a valid request.
+          schema:
+            $ref: '#/definitions/ListGroupsForActorResponse'
+        default:
+          description: The default response on an error.
+          schema:
+            $ref: '#/definitions/Error'
+  /coreadmin/findUsers:
+    post:
+      summary: Find users across accounts based on email or workloadUsername.
+      description: Find users across accounts based on email or workloadUsername.
+      operationId: findUsers
+      x-paging-default-max-items: 100
+      x-mutating: false
+      parameters:
+        - name: input
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/FindUsersRequest'
+      responses:
+        200:
+          description: Expected response to a valid request.
+          schema:
+            $ref: '#/definitions/FindUsersResponse'
+        default:
+          description: The default response on an error.
+          schema:
+            $ref: '#/definitions/Error'
+  /coreadmin/getAccessToken:
+    post:
+      summary: Get an access token.
+      description: Get an access token.
+      operationId: getAccessToken
+      x-mutating: false
+      parameters:
+        - name: input
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/GetAccessTokenRequest'
+      responses:
+        200:
+          description: Expected response to a valid request.
+          schema:
+            $ref: '#/definitions/GetAccessTokenResponse'
+        default:
+          description: The default response on an error.
+          schema:
+            $ref: '#/definitions/Error'
+  /coreadmin/assignRole:
+    post:
+      summary: Assign a role to a user.
+      description: Assign a role to a user. If the role is already assigned to the user the request will fail.
+      operationId: assignRole
+      x-right: altusadmin/callProtectedAdminAPIs
+      x-mutating: true
+      parameters:
+        - name: input
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/AssignRoleRequest'
+      responses:
+        200:
+          description: Expected response to a valid request.
+          schema:
+            $ref: '#/definitions/AssignRoleResponse'
+        default:
+          description: The default response on an error.
+          schema:
+            $ref: '#/definitions/Error'
+  /coreadmin/unassignRole:
+    post:
+      summary: Unassign a role from a user.
+      description: Unassign a role from a user. If the role is not currently assigned to the user the request will fail.
+      operationId: unassignRole
+      x-right: altusadmin/callProtectedAdminAPIs
+      x-mutating: true
+      parameters:
+        - name: input
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/UnassignRoleRequest'
+      responses:
+        200:
+          description: Expected response to a valid request.
+          schema:
+            $ref: '#/definitions/UnassignRoleResponse'
+        default:
+          description: The default response on an error.
+          schema:
+            $ref: '#/definitions/Error'
+  /coreadmin/listAssignedRoles:
+    post:
+      summary: Lists the user's assigned roles.
+      description: Lists the user's assigned roles.
+      operationId: listAssignedRoles
+      x-paging-default-max-items: 100
+      x-mutating: false
+      parameters:
+        - name: input
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/ListAssignedRolesRequest'
+      responses:
+        200:
+          description: Expected response to a valid request.
+          schema:
+            $ref: '#/definitions/ListAssignedRolesResponse'
+        default:
+          description: The default response on an error.
+          schema:
+            $ref: '#/definitions/Error'
+  /coreadmin/listRoles:
+    post:
+      summary: Lists all the available roles for an account.
+      description: Lists all the available roles. Roles grant rights to users via policies that are attached to the roles.
+      operationId: listRoles
+      x-paging-default-max-items: 100
+      x-mutating: false
+      parameters:
+        - name: input
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/ListRolesRequest'
+      responses:
+        200:
+          description: Expected response to a valid request.
+          schema:
+            $ref: '#/definitions/ListRolesResponse'
+        default:
+          description: The default response on an error.
+          schema:
+            $ref: '#/definitions/Error'
+  /coreadmin/updateClouderaManagerLicenseKey:
+    post:
+      summary: Update the Cloudera Manager License Key for a specified account.
+      description: Update the Cloudera Manager License Key for a specified account.
+      operationId: updateClouderaManagerLicenseKey
+      x-right: coreadmin/updateClouderaManagerLicenseKey
+      x-mutating: true
+      parameters:
+        - name: input
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/UpdateClouderaManagerLicenseKeyRequest'
+      responses:
+        200:
+          description: Expected response to a valid request.
+          schema:
+            $ref: '#/definitions/UpdateClouderaManagerLicenseKeyResponse'
+        default:
+          description: The default response on an error.
+          schema:
+            $ref: '#/definitions/Error'
+  /coreadmin/listTerms:
+    post:
+      summary: List relevant terms for an account.
+      description: List relevant terms for an account.
+      operationId: listTerms
+      x-paging-default-max-items: 100
+      x-mutating: false
+      parameters:
+        - name: input
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/ListTermsRequest'
+      responses:
+        200:
+          description: Expected response to a valid request.
+          schema:
+            $ref: '#/definitions/ListTermsResponse'
+        default:
+          description: The default response on an error.
+          schema:
+            $ref: '#/definitions/Error'
+  /coreadmin/clearAcceptedTerms:
+    post:
+      summary: Clears an accepted set of terms for an account.
+      description: Clears an accepted set of terms for an account.
+      operationId: clearAcceptedTerms
+      x-right: altusadmin/callProtectedAdminAPIs
+      x-mutating: true
+      parameters:
+        - name: input
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/ClearAcceptedTermsRequest'
+      responses:
+        200:
+          description: Expected response to a valid request.
+          schema:
+            $ref: '#/definitions/ClearAcceptedTermsResponse'
+        default:
+          description: The default response on an error.
+          schema:
+            $ref: '#/definitions/Error'
+  /coreadmin/setTermsAcceptanceExpiry:
+    post:
+      summary: Sets the expiry date for the requested terms in an account.
+      description: Sets the expiry date for the requested terms in an account.
+      operationId: setTermsAcceptanceExpiry
+      x-right: altusadmin/callProtectedAdminAPIs
+      x-mutating: true
+      parameters:
+        - name: input
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/SetTermsAcceptanceExpiryRequest'
+      responses:
+        200:
+          description: Expected response to a valid request.
+          schema:
+            $ref: '#/definitions/SetTermsAcceptanceExpiryResponse'
+        default:
+          description: The default response on an error.
+          schema:
+            $ref: '#/definitions/Error'
+  /coreadmin/deleteActor:
+    post:
+      summary: Deletes an actor and all associated resources.
+      description: Deletes an actor. This includes removing the actor from all groups it belongs to, deleting all associated access keys, and unassigning all roles and resource roles assigned to the actor. If this is the first time deleting the actor, its State will be set to DELETING, and a SafeDeleteDate will be set. To delete the actor from storage, wait until the safe delete interval has passed, and then run this call a second time on the same actor.
+      operationId: deleteActor
+      x-right: altusadmin/callProtectedAdminAPIs
+      x-mutating: true
+      parameters:
+        - name: input
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/DeleteActorRequest'
+      responses:
+        200:
+          description: Expected response to a valid request.
+          schema:
+            $ref: '#/definitions/DeleteActorResponse'
+        default:
+          description: The default response on an error.
+          schema:
+            $ref: '#/definitions/Error'
+  /coreadmin/deleteUser:
+    post:
+      summary: Deletes a user and all associated resources.
+      description: Deletes a user. This includes deleting all associated access keys and unassigning all roles and resource roles assigned to the user. The user is also removed from all groups it belongs to. You might need to run this more than once with forceCleanup flag set to true from the second time to make sure all the associated reources are cleand up.
+      operationId: deleteUser
+      x-right: altusadmin/callProtectedAdminAPIs
+      x-mutating: true
+      parameters:
+        - name: input
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/DeleteUserRequest'
+      responses:
+        200:
+          description: Expected response to a valid request.
+          schema:
+            $ref: '#/definitions/DeleteUserResponse'
+        default:
+          description: The default response on an error.
+          schema:
+            $ref: '#/definitions/Error'
+  /coreadmin/setWorkloadSubdomain:
+    post:
+      summary: Sets the workload subdomain for an account.
+      description: Sets the workload subdomain for an account.
+      operationId: setWorkloadSubdomain
+      x-right: altusadmin/callProtectedAdminAPIs
+      x-mutating: true
+      parameters:
+        - name: input
+          in: body
+          required: true
+          schema:
+            $ref: '#/definitions/SetWorkloadSubdomainRequest'
+      responses:
+        200:
+          description: Expected response to a valid request.
+          schema:
+            $ref: '#/definitions/SetWorkloadSubdomainResponse'
+        default:
+          description: The default response on an error.
+          schema:
+            $ref: '#/definitions/Error'
+definitions:
+  Error:
+    type: object
+    description: An object returned on an error.
+    properties:
+      code:
+        type: string
+        description: The error code.
+      message:
+        type: string
+        description: The error message.
+  Entitlement:
+    type: object
+    description: Information about entitlement for an Altus account.
+    required:
+      - entitlementName
+      - grantorCrn
+      - grantDate
+    properties:
+      entitlementName:
+        type: string
+        description: Name of the entitlement
+      grantorCrn:
+        type: string
+        description: CRN of the grantor
+      grantDate:
+        type: string
+        format: date-time
+        description: Date when entitlement was granted.
+  WorkloadPasswordPolicy:
+    type: object
+    description: Information about the workload password policy for an account.
+    required:
+      - maxPasswordLifetimeDays
+    properties:
+      maxPasswordLifetimeDays:
+        type: integer
+        format: int32
+        description: The max lifetime, in days, of the password. If '0' passwords never expire.
+      minPasswordLength:
+        type: integer
+        format: int32
+        minimum: 6
+        maximum: 256
+        description: The min length of a password. Can be any number between 6 and 256. The default minimum password length is 1.
+      mustIncludeUpperCaseCharacters:
+        type: boolean
+        description: Whether passwords must include upper case characters. The default is 'false'.
+      mustIncludeLowerCaseCharacters:
+        type: boolean
+        description: Whether passwords must include lower case characters. The default is 'false'.
+      mustIncludeNumbers:
+        type: boolean
+        description: Whether passwords must include numbers. The default is 'false'.
+      mustIncludeSymbols:
+        type: boolean
+        description: Whether passwords must include symbols. The symbols are '#', '&', '*', '$', '%', '@', '^', '.', '_', and '!'. The default is 'false'.
+  AuthenticationPolicy:
+    type: object
+    description: Information about the authentication policy for an account.
+    properties:
+      accessKeyInactivityDurationSec:
+        type: integer
+        format: int32
+        description: The inactivity duration, in seconds, of the access key, which would invalidate the access key due to no activity. Set the value to '0' to use system default inactivity duration (which is 1 hour for CDP). There's no access key invalidation from no activity if the value is greater or equal to expiration.
+      accessKeyExpirationSec:
+        type: integer
+        format: int32
+        description: The expiration, in seconds, of the access key. Set the value to '0' to use system default expiration (which is 12 hours for CDP).
+      sessionTokenInactivityDurationSec:
+        type: integer
+        format: int32
+        description: The inactivity duration, in seconds, of the UI session token, which would invalidate the session token due to no activity. Set the value to '0' to use system default inactivity duration (which is 1 hour for CDP). There's no session token invalidation from no activity if the value is greater or equal to expiration.
+      sessionTokenExpirationSec:
+        type: integer
+        format: int32
+        description: The expiration, in seconds, of the UI session token. Set the value to '0' to use system default expiration (which is 12 hours for CDP).
+      workloadAuthTokenExpirationSec:
+        type: integer
+        format: int32
+        description: The expiration, in seconds, of the workload authentication token. Set the value to '0' to use system default expiration (which is 1 hour for CDP).
+  Account:
+    type: object
+    description: Information about a Cloudera Altus account.
+    required:
+      - accountId
+      - externalAccountId
+      - sfdcAccountId
+      - creationDate
+      - externalIdForAWSDelegatedAccess
+      - clouderaManagerLicenseKey
+      - entitlements
+      - accountType
+    properties:
+      accountId:
+        type: string
+        description: The ID of the account.
+      externalAccountId:
+        type: string
+        description: The external account id. The id uniquely identifies the account within Altus.
+      sfdcAccountId:
+        type: string
+        description: The SFDC account id associated with the account. Note that there may be more than one Altus account associated with an SFDC account.
+      creationDate:
+        type: string
+        format: date-time
+        description: The date when the account was created.
+      externalIdForAWSDelegatedAccess:
+        type: string
+        description: The Cloudera Altus generated ID to be used for AWS delegated access.
+      clouderaManagerLicenseKey:
+        type: string
+        description: The Cloudera Manager license key of the account.
+      entitlements:
+        type: array
+        items:
+          $ref: '#/definitions/Entitlement'
+        description: List of new entitlements for the account.
+      accountType:
+        type: string
+        description: The type of account.
+        enum:
+          - TRIAL
+          - REGULAR
+          - C1C
+      identityProviderId:
+        type: string
+        description: The identity provider id. This is generated by Altus to uniquely identify the specific identity provider used to authenticate users in the account. All Altus accounts always support the default Cloudera identity provider (Okta Altus Application).
+      workloadSubdomain:
+        type: string
+        description: The workload subdomain name for the account.
+      workloadPasswordPolicy:
+        $ref: '#/definitions/WorkloadPasswordPolicy'
+        description: The global workload password policy object.
+      machineUserWorkloadPasswordPolicy:
+        $ref: '#/definitions/WorkloadPasswordPolicy'
+        description: The machine user workload password policy object.
+      authenticationPolicy:
+        $ref: '#/definitions/AuthenticationPolicy'
+        description: The authentication policy object.
+  Limit:
+    type: object
+    description: Information about a limit.
+    required:
+      - limitName
+      - namespace
+      - limit
+    properties:
+      limitName:
+        type: string
+        description: The limit name.
+      namespace:
+        type: string
+        description: The limit namespace.
+      limit:
+        type: integer
+        format: int32
+        description: The limit's value.
+  LimitDescriptor:
+    type: object
+    description: Information about a limit.
+    required:
+      - limitName
+      - namespace
+      - description
+      - defaultValue
+      - customerVisible
+    properties:
+      limitName:
+        type: string
+        description: The limit name.
+      namespace:
+        type: string
+        description: The limit namespace.
+      description:
+        type: string
+        description: A description of the limit.
+      defaultValue:
+        type: integer
+        format: int32
+        description: The limit's default value.
+      customerVisible:
+        type: boolean
+        description: Whether this is a customer visible limit or not.
+  User:
+    type: object
+    description: Information about a Cloudera Altus user.
+    required:
+      - userId
+      - crn
+      - email
+      - firstName
+      - lastName
+      - creationDate
+      - accountAdmin
+      - externalUserId
+      - identityProviderCrn
+    x-limits:
+      - scope: account
+        value: 100
+        doc: The maximum number of users that can be created in an account.
+    properties:
+      userId:
+        type: string
+        description: The stable, unique identifier of the user.
+      crn:
+        type: string
+        description: The CRN of the user.
+      email:
+        type: string
+        description: The user's email address.
+      firstName:
+        type: string
+        description: The user's first name.
+      lastName:
+        type: string
+        description: The user's last name.
+      creationDate:
+        type: string
+        format: date-time
+        description: The date when this user record was created.
+      accountAdmin:
+        type: boolean
+        description: Whether the user is an administrator of their Altus account. Whether a user is an Altus account administrator is designated by the customer and managed through SFDC.
+      externalUserId:
+        type: string
+        description: The user's SFDC contact id.
+      identityProviderCrn:
+        type: string
+        description: The identity provider that the user belongs to. It can be "Cloudera-Default", "Cloudera-Administration", or a customer defined IdP.
+      lastInteractiveLogin:
+        type: string
+        format: date-time
+        description: The date of the user's last interactive login.
+      workloadUsername:
+        type: string
+        description: The username used in all the workload clusters of the user.
+      state:
+        type: string
+        description: The user state.
+        enum:
+          - ACTIVE
+          - DEACTIVATED
+          - DELETING
+      safeDeleteDate:
+        type: string
+        format: date-time
+        description: The date when the user record can be safely removed from storage.
+  MachineUser:
+    type: object
+    description: Information about a CDP machine user.
+    required:
+      - machineUserName
+      - crn
+      - creationDate
+    properties:
+      machineUserName:
+        type: string
+        description: The machine user name.
+      crn:
+        type: string
+        description: The CRN of the machine user.
+      creationDate:
+        type: string
+        format: date-time
+        description: The date when this machine user record was created.
+      workloadUsername:
+        type: string
+        description: The username used in all the workload clusters of the machine user.
+      state:
+        type: string
+        description: The machine user state.
+        enum:
+          - ACTIVE
+          - DEACTIVATED
+          - DELETING
+      safeDeleteDate:
+        type: string
+        format: date-time
+        description: The date when the machine user record can be safely removed from storage.
+      internal:
+        type: boolean
+        description: Whether this is an internal machine user.
+  AccessToken:
+    type: object
+    description: Information about an access token.
+    required:
+      - accessTokenId
+      - actorCrn
+      - crn
+      - creationDate
+      - expirationDate
+      - scope
+    properties:
+      accessTokenId:
+        type: string
+        description: The access token ID.
+      actorCrn:
+        type: string
+        description: The CRN of the user or machine user.
+      crn:
+        type: string
+        description: The access token CRN.
+      creationDate:
+        type: string
+        format: date-time
+        description: The access token creation date.
+      expirationDate:
+        type: string
+        format: date-time
+        description: The access token expiration date.
+      scope:
+        type: string
+        description: The access token scope.
+  PolicyStatement:
+    type: object
+    description: A policy statement is a list of rights and zero or more resources on which the rights are granted.
+    required:
+      - rights
+      - resources
+    properties:
+      rights:
+        type: array
+        items:
+          type: string
+        description: The list of rights in the policy statement.
+      resources:
+        type: array
+        items:
+          type: string
+        description: The resources on which the rights are granted.
+  Policy:
+    type: object
+    description: A policy contains a list of one or more policy statements.
+    required:
+      - crn
+      - policyStatements
+    properties:
+      crn:
+        type: string
+        description: The policy crn.
+      policyStatements:
+        type: array
+        items:
+          $ref: '#/definitions/PolicyStatement'
+        description: The policy statements.
+  Role:
+    type: object
+    description: Information about a role.
+    required:
+      - crn
+      - policies
+    properties:
+      crn:
+        type: string
+        description: The role's CRN.
+      policies:
+        type: array
+        items:
+          $ref: '#/definitions/Policy'
+        description: The list of policies that belong to the role. Cannot be empty.
+  TermsAcceptanceState:
+    type: string
+    description: The terms acceptance state.
+    enum:
+      - NOT_ACCEPTED
+      - ACCEPTED
+      - NOT_ACCEPTED_UPDATED_TERMS
+      - EXPIRED
+  TermsSummary:
+    type: object
+    description: Information about a set of terms.
+    required:
+      - termsName
+      - acceptanceState
+    properties:
+      termsName:
+        type: string
+        description: The name of the terms.
+      acceptanceState:
+        $ref: '#/definitions/TermsAcceptanceState'
+        description: The acceptance state.
+      acceptanceDate:
+        type: string
+        format: date-time
+        description: The date of the last time the terms have been acceptance. May be empty if the terms have not been accepted.
+      expiryDate:
+        type: string
+        format: date-time
+        description: The terms acceptance expiry date. Value is not set if the terms acceptance never expires.
+      acceptor:
+        type: string
+        description: The CRN of the last user who accepted the terms. May be empty if the terms have not been accepted.
+  ResourceRoleAssignment:
+    type: object
+    description: Information about a resource role assignment.
+    required:
+      - resourceCrn
+      - resourceRoleCrn
+    properties:
+      resourceCrn:
+        type: string
+        description: The resource's CRN.
+      resourceRoleCrn:
+        type: string
+        description: The resource role CRN.
+  CreateSFDCBasedAccountRequest:
+    type: object
+    description: Request object for a create SFDC based account request.
+    required:
+      - sfdcAccountId
+      - clouderaManagerLicenseKey
+    properties:
+      sfdcAccountId:
+        type: string
+        description: The SFDC account ID. This is the full 18-digit SFDC ID format.
+      clouderaManagerLicenseKey:
+        type: string
+        description: The Cloudera Manager licesnse key. This is used by Cloudera Altus in clusters it creates on behalf of the customer.
+  CreateSFDCBasedAccountResponse:
+    type: object
+    description: Response object for a create SFDC based account request.
+    required:
+      - account
+    properties:
+      account:
+        $ref: '#/definitions/Account'
+        description: Information about the account.
+  CreateTrialAccountRequest:
+    type: object
+    description: Request object for a create a trial account.
+    required:
+      - oktaUserId
+    properties:
+      oktaUserId:
+        type: string
+        description: The Okta user ID for the user.
+  CreateTrialAccountResponse:
+    type: object
+    description: Response object for a create trial account request.
+    required:
+      - account
+    properties:
+      account:
+        $ref: '#/definitions/Account'
+        description: Information about the account.
+  GetAccountRequest:
+    type: object
+    description: Request object for a get account request.
+    properties:
+      sfdcAccountId:
+        type: string
+        description: The 18-digit full SFDC account id. Either sfdcAccountId or accountId must be provided.
+      accountId:
+        type: string
+        description: The UUID account Id. Either sfdcAccountId or accountId must be provided.
+  GetAccountResponse:
+    type: object
+    description: Response object for a get account request.
+    required:
+      - account
+    properties:
+      account:
+        $ref: '#/definitions/Account'
+        description: Information about the account.
+  ListAccountsRequest:
+    type: object
+    description: Request object for a list accounts request.
+    properties:
+      pageSize:
+        type: integer
+        format: int32
+        minimum: 1
+        maximum: 100
+        x-paging-page-size: true
+        description: The size of each page.
+      startingToken:
+        type: string
+        x-paging-input-token: true
+        description: A token to specify where to start paginating. This is the nextToken from a previously truncated response.
+  ListAccountsResponse:
+    type: object
+    description: Response object for a list accounts request.
+    required:
+      - accounts
+    properties:
+      accounts:
+        type: array
+        items:
+          $ref: '#/definitions/Account'
+        x-paging-result: true
+        description: The accounts
+      nextToken:
+        type: string
+        x-paging-output-token: true
+        description: The token to use when requesting the next set of results. If not present, there are no additional results.
+  SetLimitRequest:
+    type: object
+    description: Request object for a set limit request.
+    required:
+      - accountId
+      - limitName
+      - namespace
+      - limit
+    properties:
+      accountId:
+        type: string
+        description: The account ID.
+      limitName:
+        type: string
+        description: The limit name.
+      namespace:
+        type: string
+        description: The limit namespace.
+      limit:
+        type: integer
+        description: The new limit value.
+        format: int32
+        minimum: 0
+  SetLimitResponse:
+    type: object
+    description: Response object for a set limit for account request.
+  ListLimitsRequest:
+    type: object
+    description: Request object for a list limits request.
+    required:
+      - accountId
+      - namespace
+    properties:
+      accountId:
+        type: string
+        description: The account ID.
+      namespace:
+        type: string
+        description: The limit namespace.
+      limitNames:
+        type: array
+        items:
+          type: string
+        description: The limit names.
+      pageSize:
+        type: integer
+        format: int32
+        minimum: 1
+        maximum: 100
+        x-paging-page-size: true
+        description: The size of each page.
+      startingToken:
+        type: string
+        x-paging-input-token: true
+        description: A token to specify where to start paginating. This is the nextToken from a previously truncated response.
+  ListLimitsResponse:
+    type: object
+    description: Response object for a list limits for account request.
+    required:
+      - limits
+    properties:
+      limits:
+        type: array
+        items:
+          $ref: '#/definitions/Limit'
+        x-paging-result: true
+        description: The limits for the account.
+      nextToken:
+        type: string
+        x-paging-output-token: true
+        description: The token to use when requesting the next set of results. If not present, there are no additional results.
+  ListLimitsDescriptorsRequest:
+    type: object
+    description: Request object for a list limits descriptors request.
+    required:
+      - namespace
+    properties:
+      namespace:
+        type: string
+        description: The limit namespace.
+      limitNames:
+        type: array
+        items:
+          type: string
+        description: The limit names.
+      pageSize:
+        type: integer
+        format: int32
+        minimum: 1
+        maximum: 100
+        x-paging-page-size: true
+        description: The size of each page.
+      startingToken:
+        type: string
+        x-paging-input-token: true
+        description: A token to specify where to start paginating. This is the nextToken from a previously truncated response.
+  ListLimitsDescriptorsResponse:
+    type: object
+    description: Response object for a list limits defaults for account request.
+    required:
+      - limits
+    properties:
+      limits:
+        type: array
+        items:
+          $ref: '#/definitions/LimitDescriptor'
+        x-paging-result: true
+        description: The limits descriptors for the different core services.
+      nextToken:
+        type: string
+        x-paging-output-token: true
+        description: The token to use when requesting the next set of results. If not present, there are no additional results.
+  GrantEntitlementRequest:
+    type: object
+    description: Request object for grant entitlement request.
+    required:
+      - entitlementName
+    properties:
+      entitlementName:
+        type: string
+        description: The entitlement name to grant to the account.
+      sfdcAccountId:
+        type: string
+        description: The 18-digit full SFDC account id. Either sfdcAccountId or accountId must be provided.
+      accountId:
+        type: string
+        description: The Altus account ID. Either sfdcAccountId or accountId must be provided.
+  GrantEntitlementResponse:
+    type: object
+    description: Response object for grant entitlement request.
+    required:
+      - account
+    properties:
+      account:
+        $ref: '#/definitions/Account'
+        description: Information about the account.
+  RevokeEntitlementRequest:
+    type: object
+    description: Request object for revoke entitlement request.
+    required:
+      - entitlementName
+    properties:
+      entitlementName:
+        type: string
+        description: The entitlement name to revoke from the account.
+      sfdcAccountId:
+        type: string
+        description: The 18-digit full SFDC account id. Either sfdcAccountId or accountId must be provided.
+      accountId:
+        type: string
+        description: The Altus account ID. Either sfdcAccountId or accountId must be provided.
+  RevokeEntitlementResponse:
+    type: object
+    description: Response object for revoke entitlement from an account request.
+    required:
+      - account
+    properties:
+      account:
+        $ref: '#/definitions/Account'
+        description: Information about the account.
+  EnsureDefaultEntitlementsGrantedRequest:
+    type: object
+    description: Request object for ensure default entitlements granted request.
+    properties:
+      sfdcAccountId:
+        type: string
+        description: The 18-digit full SFDC account id. Either sfdcAccountId or accountId must be provided.
+      accountId:
+        type: string
+        description: The Altus account ID. Either sfdcAccountId or accountId must be provided.
+  EnsureDefaultEntitlementsGrantedResponse:
+    type: object
+    description: Response object for ensure default entitlements granted to an account request.
+    required:
+      - account
+    properties:
+      account:
+        $ref: '#/definitions/Account'
+        description: Information about the account.
+  ListUsersRequest:
+    type: object
+    description: Request object for a list users request.
+    required:
+      - accountId
+    properties:
+      accountId:
+        type: string
+        description: The account id to list the users in.
+      userIds:
+        type: array
+        items:
+          type: string
+        description: The user IDs or CRNs of the users. If not specified all users in the account are returned.
+      includeDeleted:
+        type: boolean
+        description: Whether to include deleted users. Default value is false.
+      pageSize:
+        type: integer
+        format: int32
+        minimum: 1
+        maximum: 100
+        x-paging-page-size: true
+        description: The size of each page.
+      startingToken:
+        type: string
+        x-paging-input-token: true
+        description: A token to specify where to start paginating. This is the nextToken from a previously truncated response.
+  ListUsersResponse:
+    type: object
+    description: Response object for a list users request.
+    required:
+      - users
+    properties:
+      users:
+        type: array
+        items:
+          $ref: '#/definitions/User'
+        x-paging-result: true
+        description: The users.
+      nextToken:
+        type: string
+        x-paging-output-token: true
+        description: The token to use when requesting the next set of results. If not present, there are no additional results.
+  ListMachineUsersRequest:
+    type: object
+    description: Request object for a list machine users request.
+    required:
+      - accountId
+    properties:
+      accountId:
+        type: string
+        description: The account id to list the machine users in.
+      machineUserNames:
+        type: array
+        items:
+          type: string
+        description: The machine user names or CRNs of the macihne users. If not provided all machine users for the account are retrieved.
+      includeDeleted:
+        type: boolean
+        description: Whether to include deleted machine users. Default value is false.
+      pageSize:
+        type: integer
+        format: int32
+        minimum: 1
+        maximum: 100
+        x-paging-page-size: true
+        description: The size of each page.
+      startingToken:
+        type: string
+        x-paging-input-token: true
+        description: A token to specify where to start paginating. This is the nextToken from a previously truncated response.
+  ListMachineUsersResponse:
+    type: object
+    description: Response object for a list machine users request.
+    required:
+      - machineUsers
+    properties:
+      machineUsers:
+        type: array
+        items:
+          $ref: '#/definitions/MachineUser'
+        x-paging-result: true
+        description: The machine users.
+      nextToken:
+        type: string
+        x-paging-output-token: true
+        description: The token to use when requesting the next set of results. If not present, there are no additional results.
+  ListGroupsForActorRequest:
+    type: object
+    description: Request object for a list groups for actor request.
+    required:
+      - actorCrn
+    properties:
+      actorCrn:
+        type: string
+        description: The crn of the actor.
+      pageSize:
+        type: integer
+        format: int32
+        minimum: 1
+        maximum: 100
+        x-paging-page-size: true
+        description: The size of each page.
+      startingToken:
+        type: string
+        x-paging-input-token: true
+        description: A token to specify where to start paginating. This is the nextToken from a previously truncated response.
+  ListGroupsForActorResponse:
+    type: object
+    description: Response object for a list groups for actor request.
+    required:
+      - groups
+    properties:
+      groups:
+        type: array
+        items:
+          type: string
+        description: The group crns that the actor is a member of.
+        x-paging-result: true
+      nextToken:
+        type: string
+        x-paging-output-token: true
+        description: The token to use when requesting the next set of results. If not present, there are no additional results.
+  FindUsersRequest:
+    type: object
+    description: Request object for a find users request. Either email or workloadUsername must be provided.
+    properties:
+      email:
+        type: string
+        description: The email address for which to list the users.
+      workloadUsername:
+        type: string
+        description: The workloadUsername of users to find.
+      pageSize:
+        type: integer
+        format: int32
+        minimum: 1
+        maximum: 100
+        x-paging-page-size: true
+        description: The size of each page.
+      startingToken:
+        type: string
+        x-paging-input-token: true
+        description: A token to specify where to start paginating. This is the nextToken from a previously truncated response.
+  FindUsersResponse:
+    type: object
+    description: Response object for a find users request.
+    required:
+      - users
+    properties:
+      users:
+        type: array
+        items:
+          $ref: '#/definitions/User'
+        x-paging-result: true
+        description: The users.
+      nextToken:
+        type: string
+        x-paging-output-token: true
+        description: The token to use when requesting the next set of results. If not present, there are no additional results.
+  GetAccessTokenRequest:
+    type: object
+    description: Request object for a get access token request.
+    required:
+      - accountId
+      - accessToken
+    properties:
+      accountId:
+        type: string
+        description: The account id the access token belongs to.
+      accessToken:
+        type: string
+        description: The access token to get. Can be the access token ID or CRN.
+  GetAccessTokenResponse:
+    type: object
+    description: Response object for a get access token request.
+    required:
+      - accessToken
+    properties:
+      accessToken:
+        $ref: '#/definitions/AccessToken'
+        description: The access token
+  AssignRoleRequest:
+    type: object
+    description: Request object for an assign role request.
+    required:
+      - accountId
+      - user
+      - role
+    properties:
+      accountId:
+        type: string
+        description: The account id the user belongs to.
+      user:
+        type: string
+        description: The CRN of the user the role is assigned to. Can be the user's CRN or id.
+      role:
+        type: string
+        description: The role to assign to the user. Can be the role's CRN or name.
+  AssignRoleResponse:
+    type: object
+    description: Response object for an assign role request.
+  UnassignRoleRequest:
+    type: object
+    description: Request object for an unassign role request.
+    required:
+      - accountId
+      - user
+      - role
+    properties:
+      accountId:
+        type: string
+        description: The account id the user belongs to.
+      user:
+        type: string
+        description: The CRN of the user the role is assigned to. Can be the user's CRN or id.
+      role:
+        type: string
+        description: The role to unassigned from the user. Can be the role's CRN or name.
+  UnassignRoleResponse:
+    type: object
+    description: Response object for an unassign role request.
+  ListAssignedRolesRequest:
+    type: object
+    description: Request object for a list assigned roles request.
+    required:
+      - accountId
+      - user
+    properties:
+      accountId:
+        type: string
+        description: The account id the user belongs to.
+      user:
+        type: string
+        description: The user to list the assigned roles for. Can be the user's CRN or id. If it is not included, it defaults to the user making the request.
+      pageSize:
+        type: integer
+        format: int32
+        minimum: 1
+        maximum: 100
+        x-paging-page-size: true
+        description: The size of each page.
+      startingToken:
+        type: string
+        x-paging-input-token: true
+        description: A token to specify where to start paginating. This is the nextToken from a previously truncated response.
+  ListAssignedRolesResponse:
+    type: object
+    description: Response object for a list assigned roles request.
+    required:
+      - roleCrns
+    properties:
+      roleCrns:
+        type: array
+        items:
+          type: string
+        x-paging-result: true
+        description: The role CRNs assigned to the user.
+      nextToken:
+        type: string
+        x-paging-output-token: true
+        description: The token to use when requesting the next set of results. If not present, there are no additional results.
+  ListTermsRequest:
+    type: object
+    description: Request object for a list terms request.
+    required:
+      - accountId
+    properties:
+      accountId:
+        type: string
+        description: The account id for which terms are listed.
+      pageSize:
+        type: integer
+        format: int32
+        minimum: 1
+        maximum: 100
+        x-paging-page-size: true
+        description: The size of each page.
+      startingToken:
+        type: string
+        x-paging-input-token: true
+        description: A token to specify where to start paginating. This is the nextToken from a previously truncated response.
+  ListTermsResponse:
+    type: object
+    description: Response object for a list terms response.
+    required:
+      - termsAcceptanceStates
+    properties:
+      termsAcceptanceStates:
+        type: array
+        items:
+          $ref: '#/definitions/TermsSummary'
+        x-paging-result: true
+        description: The terms.
+      nextToken:
+        type: string
+        x-paging-output-token: true
+        description: The token to use when requesting the next set of results. If not present, there are no additional results.
+  ListRolesRequest:
+    type: object
+    description: Request object for a list roles request.
+    required:
+      - accountId
+    properties:
+      accountId:
+        type: string
+        description: The account id to list roles for.
+      roleNames:
+        type: array
+        items:
+          type: string
+        description: The roles names or CRNs to retrieve. If empty all roles will be returned.
+      pageSize:
+        type: integer
+        format: int32
+        minimum: 1
+        maximum: 100
+        x-paging-page-size: true
+        description: The size of each page.
+      startingToken:
+        type: string
+        x-paging-input-token: true
+        description: A token to specify where to start paginating. This is the nextToken from a previously truncated response.
+  ListRolesResponse:
+    type: object
+    description: Response object for a list roles request.
+    required:
+      - roles
+    properties:
+      roles:
+        type: array
+        items:
+          $ref: '#/definitions/Role'
+        x-paging-result: true
+        description: The list of roles in the account.
+      nextToken:
+        type: string
+        x-paging-output-token: true
+        description: The token to use when requesting the next set of results. If not present, there are no additional results.
+  UpdateClouderaManagerLicenseKeyRequest:
+    type: object
+    description: Request object for an update Cloudera Management license key request. Exactly one of sfdcAccountId or externalAccountId must be specified.
+    required:
+      - clouderaManagerLicenseKey
+    properties:
+      clouderaManagerLicenseKey:
+        type: string
+        description: The new license key.
+      sfdcAccountId:
+        type: string
+        description: The 18-digit full SFDC account id for which to update the license key.
+      externalAccountId:
+        type: string
+        description: The external account id. The id uniquely identifies the account within CDP.
+  UpdateClouderaManagerLicenseKeyResponse:
+    type: object
+    description: Response object for an update Cloudera Management license key request.
+    required:
+      - account
+    properties:
+      account:
+        $ref: '#/definitions/Account'
+        description: Information about the account.
+  ClearAcceptedTermsRequest:
+    type: object
+    description: Request object for clearing acceptance of a set of terms.
+    required:
+      - accountId
+      - termsName
+    properties:
+      accountId:
+        type: string
+        description: The account id to clear the terms from.
+      termsName:
+        type: string
+        description: The name of the terms to clear acceptance for.
+  ClearAcceptedTermsResponse:
+    type: object
+    description: Response object for clearing acceptance of a set of terms.
+  SetTermsAcceptanceExpiryRequest:
+    type: object
+    description: Request object to set the terms acceptance expiry.
+    required:
+      - accountId
+      - termsName
+      - expiryDate
+    properties:
+      accountId:
+        type: string
+        description: The account id for which the terms expiry is being set.
+      termsName:
+        type: string
+        description: The name of the terms for which expiry date is being set.
+      expiryDate:
+        type: string
+        format: date-time
+        description: Expiry date for the given terms name.
+  SetTermsAcceptanceExpiryResponse:
+    type: object
+    description: Response object for setting terms acceptance expiry date.
+  DeleteActorRequest:
+    type: object
+    description: Request object to delete an actor.
+    required:
+      - actorCrn
+    properties:
+      actorCrn:
+        type: string
+        description: The CRN of the actor being deleted.
+  DeleteActorResponse:
+    type: object
+    description: Response object to delete an actor.
+    required:
+      - accessKeysDeleted
+      - groupsModified
+      - roleUnassigned
+      - resourceRolesUnassigned
+    properties:
+      accessKeysDeleted:
+        type: array
+        items:
+          type: string
+        description: The list of associated access key CRNs that were deleted.
+      groupsModified:
+        type: array
+        items:
+          type: string
+        description: The list of group CRNs from which the actor has been removed.
+      roleUnassigned:
+        type: array
+        items:
+          type: string
+        description: The list of role CRNs unassigned from the actor.
+      resourceRolesUnassigned:
+        type: array
+        items:
+          $ref: '#/definitions/ResourceRoleAssignment'
+        description: The list of resource role assignments that have been unassigned from the actor.
+  DeleteUserRequest:
+    type: object
+    description: Request object to delete a user.
+    required:
+      - userCrn
+    properties:
+      userCrn:
+        type: string
+        description: The CRN of the user being deleted.
+      forceCleanup:
+        type: boolean
+        description: Whether to force the cleanup of resources associated with the supplied user even if the user does not exist any more. Default value is false.
+  DeleteUserResponse:
+    type: object
+    description: Response object to delete a user.
+    required:
+      - accessKeysDeleted
+      - groupsModified
+      - roleUnassigned
+      - resourceRolesUnassigned
+    properties:
+      accessKeysDeleted:
+        type: array
+        items:
+          type: string
+        description: The list of associated access key CRNs that were deleted.
+      groupsModified:
+        type: array
+        items:
+          type: string
+        description: The list of group CRNs from which the user has been removed.
+      roleUnassigned:
+        type: array
+        items:
+          type: string
+        description: The list of role CRNs unassigned from the user.
+      resourceRolesUnassigned:
+        type: array
+        items:
+          $ref: '#/definitions/ResourceRoleAssignment'
+        description: The list of resource role assignments that have been unassigned from the user.
+  SetWorkloadSubdomainRequest:
+    type: object
+    description: Request object for a set account workload subdomain.
+    required:
+      - accountId
+      - workloadSubdomain
+    properties:
+      accountId:
+        type: string
+        description: The account ID to set the workload subdomain for.
+      workloadSubdomain:
+        type: string
+        description: The workload subdomain. Must be a DNS valid name. The value is case insensitive. The input value will be lowercased before being set.
+  SetWorkloadSubdomainResponse:
+    type: object
+    description: Response object for a set account workload subdomain.
