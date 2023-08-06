@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+benamer/benamer.egg-info/PKG-INFO
+benamer/benamer.egg-info/SOURCES.txt
+benamer/benamer.egg-info/dependency_links.txt
+benamer/benamer.egg-info/top_level.txt
