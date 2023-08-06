@@ -1,0 +1,10 @@
+dblp_spider/__init__.py,sha256=RuSNpbLZcWGWLvropWoGIcu-HlHtv4s7DlfzPWsO86o,6522
+dblp_spider/core/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+dblp_spider/core/article.py,sha256=OKGA04W-BKgKwH5d-6r2voxPVMR5xMdHgmKKPWiHVjU,897
+dblp_spider/core/conference.py,sha256=3QRmIovLwLnSBMzgH1p57sY2TWBP5vbbOtzYvBDQKC0,9643
+DBLP_Spider-0.0.5.dist-info/LICENSE,sha256=-LN07KYWYNsucWvQJSLOxzFhOCKO6e_4uAcwyHjqG1k,1087
+DBLP_Spider-0.0.5.dist-info/METADATA,sha256=CjcvZXbIHIrm7mr0Dx0ji9-wXD5QYB4rBvKx_01g93o,2289
+DBLP_Spider-0.0.5.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+DBLP_Spider-0.0.5.dist-info/entry_points.txt,sha256=jqjbIuges12a8pCsVoAx0vqBnKO0xHA8IAMD-IU1FZU,50
+DBLP_Spider-0.0.5.dist-info/top_level.txt,sha256=C5MpUH1DxktFLC_31cpe82IeN8Jexk3PnsugxfO6QsU,12
+DBLP_Spider-0.0.5.dist-info/RECORD,,
