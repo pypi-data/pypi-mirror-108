@@ -1,0 +1,48 @@
+Metadata-Version: 2.1
+Name: pylnbits-lngames
+Version: 0.0.2
+Summary: python library for lnbits
+Home-page: https://github.com/lightningames/pylnbits
+Author: bitkarrot, coinguybri
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/lightningames/pylnbits/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: aiohttp (==3.7.4.post0)
+Requires-Dist: PyYAML (==5.4.1)
+Requires-Dist: pre-commit (==2.13.0)
+
+# pylnbits
+
+python library of methods for accessing lnbits.com API or your own install.
+
+Getting Started
+
+```
+git clone https://github.com/lightningames/pylnbits
+cd pylnbits
+python -m venv venv
+source venv/bin/activate
+pip install -r requirements.txt
+pip install -e .
+```
+
+Check linting and formatting
+`pre-commit run -a`
+
+Build for distribution
+`python3 -m build`
+
+Run Tests
+
+```
+TBD
+TBD
+```
+
+
