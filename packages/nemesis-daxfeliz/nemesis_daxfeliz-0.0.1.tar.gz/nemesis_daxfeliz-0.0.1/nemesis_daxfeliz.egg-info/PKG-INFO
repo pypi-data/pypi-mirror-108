@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: nemesis-daxfeliz
+Version: 0.0.1
+Summary: Python modules and scripts used for NEMESIS project.
+Home-page: https://github.com/daxfeliz/nemesis
+Author: Dax L. Feliz
+Author-email: <dax.feliz@vanderbilt.edu>
+License: MIT
+Description: # `NEMESIS`
+        exoplanet tra<span style="color:red">N</span>sit surv<span style="color:red">E</span>y of nearby <span style="color:red">M</span>-dwarfs in t<span style="color:red">ES</span>s full frame <span style="color:red">ImageS</span>
+        
+        Description
+        ----------
+        
+        This repository contains documentation, code, and small chunks of data
+        supporting the NEMESIS project. 
+        
+        To download data products from NEMESIS Planet Candidates detected in data from Sectors 1 to 5, visit our
+        [Filtergraph Portal](https://filtergraph.com/NEMESIS).
+        
+        Author
+        ----------
+        Dax Feliz
+        
+        License
+        ----------
+        MIT
+        
+        Install
+        ----------
+        `conda env create -f environment.yml -n nemesis`
+        
+        Update env
+        ----------
+        `conda env export --no-builds > environment.yml`
+        
+Keywords: python,astronomy,photometry,TESS
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Astronomy
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Description-Content-Type: text/markdown
+Provides-Extra: all
