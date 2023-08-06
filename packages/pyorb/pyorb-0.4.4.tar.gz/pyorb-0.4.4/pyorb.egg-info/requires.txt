@@ -1,0 +1,8 @@
+numpy>=1.18.4
+
+[dev]
+pytest
+sphinx
+sphinx-gallery
+coverage
+matplotlib
