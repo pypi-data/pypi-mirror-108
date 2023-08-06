@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+PingPongWr/PingPongWr.py
+PingPongWr/__init__.py
+PingPongWr/dd.py
+PingPongWr.egg-info/PKG-INFO
+PingPongWr.egg-info/SOURCES.txt
+PingPongWr.egg-info/dependency_links.txt
+PingPongWr.egg-info/requires.txt
+PingPongWr.egg-info/top_level.txt
