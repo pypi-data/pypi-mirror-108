@@ -1,0 +1,17 @@
+parsergen/__init__.py,sha256=Narv_UbQy-3CUke9W019EhCwcW1KptG7zqCbAPsiN0o,230
+parsergen/__main__.py,sha256=BhjgxVooghVEEix3dguwEbMQ5uUlFWSG1tIEvkQxRiI,480
+parsergen/grammar_parser.py,sha256=QXZIU_BSs2Wm5GJjOExipa2y84D4Uu61DsUWYAyKWNg,10147
+parsergen/lexer.py,sha256=beQtTO53oTp6aJsMcPd_lvehV8WJD1Ehh84-2xOFP_Y,6014
+parsergen/metagrammar.gram,sha256=BDKfn9GTH8k6vpLKppo0X4nlU6RkReagwybuqZa2Dpo,1035
+parsergen/parser.py,sha256=It2FysLht9trSTHniXXUNS_q6qQ5jTsHZognFbkJIDc,12909
+parsergen/parser_utils.py,sha256=toRkskXG_1-q36YGdsqz2Yh0G1UQEXT40YFB5-IyWTE,2625
+parsergen/parsergen.py,sha256=bu3mRBnA5xvoe3ETN1MONKskjm482vGMSv3czGWWNwg,9289
+parsergen/utils.py,sha256=dg8wFRFvgYDqfko6MKl5hkaOsgvpAZfhKF-xLi3MfFY,589
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/__main__.py,sha256=kjBtwZdjvSrVVqRowNQMQEaMbCaLsE-nTIsl6beGZmQ,28
+tests/test_generator.py,sha256=U9nbodngXfGAfNo5Pc7lUEdkGkRHfZcBZMrswmEzFcU,1322
+parsergen-2.0.0b2.dist-info/METADATA,sha256=ECA1dx93saeY-7-RNcBeB2miXOBKLxxWsunLsZAA8tk,7788
+parsergen-2.0.0b2.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+parsergen-2.0.0b2.dist-info/entry_points.txt,sha256=KaoNXpDPaoFprgA-0zRpC6Bxk7VHfCBJ8rFAIScA-B4,55
+parsergen-2.0.0b2.dist-info/top_level.txt,sha256=DyZD7FLO5_-WQHcdTavthCyeRT9XB4CBlO-nm5GFX_c,16
+parsergen-2.0.0b2.dist-info/RECORD,,
