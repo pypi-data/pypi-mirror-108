@@ -1,0 +1,13 @@
+gqlcli/__init__.py,sha256=2eiWQI55fd-roDdkt4Hvl9WzrTJ4xQo33VzFud6D03U,22
+gqlcli/federation.py,sha256=nDtVIhFBs0IRu9VnH3m2HpyPRTiPlP76LiJQdUetUHc,5401
+gqlcli/generator.py,sha256=DSK28ejqagQeoDTGhZV3BVZwlN3IWDiVrWP89Vu9fzk,7724
+gqlcli/main.py,sha256=GeychGuxdWbmGhMiMb5mUZu11zQfAsKbDrwp8rbbglM,12783
+gqlcli/make_schema.py,sha256=GWKZhZ87rLjfa2aPGw6VBkm_6beefqzk68a3lBf5oTM,4148
+gqlcli/playground.py,sha256=JzLT9Fg_l6Ustlj9pPB_XBzAHkjpb5rY88-IJCpKMX0,21263
+gqlcli/schema_visitor.py,sha256=v0wAtII6kHA1ickslI2ZAL_ILQnbfcsqwKXccEQuZcc,20681
+gqlcli/utils.py,sha256=w_0nDCOcCFRmLud3uFkzSk57_bXt8DQIupiH08i_eZY,981
+gqlcli-0.4.0.dist-info/entry_points.txt,sha256=-2J5eEtot3CN_zTx23lOwjq6C6EkvO4-nil6wDlOvOs,43
+gqlcli-0.4.0.dist-info/LICENSE,sha256=-2kU7AiBZZWHQREWNJjjZTQDMa-3yOv8t5ffhekSX-k,1061
+gqlcli-0.4.0.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+gqlcli-0.4.0.dist-info/METADATA,sha256=4D2y0-5VgC77p0A0tOm-k3hjge7FHexlHXQn2OSDPH4,508
+gqlcli-0.4.0.dist-info/RECORD,,
