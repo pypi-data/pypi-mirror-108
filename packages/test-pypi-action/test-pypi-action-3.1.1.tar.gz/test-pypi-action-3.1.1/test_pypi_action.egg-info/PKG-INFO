@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: test-pypi-action
+Version: 3.1.1
+Summary: To be deleted.
+Home-page: https://github.com/PabloLec/test-pypi-action
+Author: Pablo Lecolinet
+Author-email: pablolec@pm.me
+License: GNU GPLv3
+Description: To be deleted
+        test
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown

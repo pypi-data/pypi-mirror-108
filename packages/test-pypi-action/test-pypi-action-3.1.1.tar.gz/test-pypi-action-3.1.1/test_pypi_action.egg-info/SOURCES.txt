@@ -1,0 +1,10 @@
+README.md
+requirements.txt
+setup.py
+.github/workflows/publish.yml
+.github/workflows/python-publish.yml
+test/__init__.py
+test_pypi_action.egg-info/PKG-INFO
+test_pypi_action.egg-info/SOURCES.txt
+test_pypi_action.egg-info/dependency_links.txt
+test_pypi_action.egg-info/top_level.txt
