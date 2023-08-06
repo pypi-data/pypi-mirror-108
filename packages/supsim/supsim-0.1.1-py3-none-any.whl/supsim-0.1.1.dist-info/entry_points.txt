@@ -1,0 +1,3 @@
+[console_scripts]
+supsim = supsim.supsim:main
+
