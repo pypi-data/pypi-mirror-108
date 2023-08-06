@@ -1,0 +1,70 @@
+{% extends 'base.html' %}
+{% block extra_head %}
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@koumoul/vjsf@latest/dist/main.css">
+{% endblock extra_head %}
+{% block extra_js %}
+  <script src="https://cdn.jsdelivr.net/npm/@koumoul/vjsf@latest/dist/main.js"></script>
+  <!-- load third-party dependencies (markdown-it, vuedraggable) -->
+  <!-- you can also load them separately based on your needs -->
+  <script src="https://cdn.jsdelivr.net/npm/@koumoul/vjsf@latest/dist/third-party.js"></script> 
+{% endblock extra_js %}
+{% block vue_app %}
+  <script>
+    {{ axiosConfig(XSRF) }}
+    Vue.component('VJsf', VJsf.default);
+    new Vue({
+      name: 'App',
+      el: '#app',
+      vuetify: new Vuetify(),
+      created() {
+        console.log(this.schema.type + '3');
+        console.log(this.model);
+      },
+      // components: { VJsf },
+      data() {
+        return {
+          schema: {{ fields|tojson(indent=True) }},
+          model: {% if item %}{{ item|tojson(indent=True) }}{% else %}{}{% endif %},
+          valid: false,
+          message: {% if item %}'Update'{% else %}'Create'{% endif %},
+          path: {% if item %}''{% else %}'../'{% endif %},
+          {% include '_interface_vars.html' %}
+        };
+  		},
+      methods: {
+        _redirect() {
+          window.location = "../";
+        },
+        _submit() {
+          return axios.post(this.path, this.model).then((response) => {
+            this.model = response.data;
+            window.location = `../${this.model.id}/`;
+          });
+        },
+        _sub_redir() {
+          return axios.post(this.path, this.model).then((response) => {
+            this.model = response.data;
+            window.location = `../`;
+          });
+        },
+      },
+    });
+  </script>
+{% endblock vue_app %}
+{% block content %}
+  <v-form v-model="valid">
+    <v-jsf v-model="model" :schema="schema"/>
+  </v-form>
+  <v-btn @click="_redirect">
+    <v-icon left>mdi-reply</v-icon>
+    Cancel
+  </v-btn>
+  <v-btn :disabled="!valid" dark color="pink darken-4" @click="_submit" class="float-right">
+    <v-icon left>mdi-pencil</v-icon>
+    <span v-html="message + ' & keep Editing'"></span>
+  </v-btn>
+  <v-btn :disabled="!valid" dark color="pink" @click="_sub_redir" class="float-right">
+    <v-icon left>mdi-floppy</v-icon>
+    <span v-html="message"></span>
+  </v-btn>
+{% endblock content %}
