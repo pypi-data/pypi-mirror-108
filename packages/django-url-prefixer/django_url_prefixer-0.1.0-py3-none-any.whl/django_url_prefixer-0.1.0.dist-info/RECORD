@@ -1,0 +1,13 @@
+django_url_prefixer/__init__.py,sha256=XPneGzrULnXpgD-YrieBBnHyvZKshdCbiKh87cJxESI,49
+django_url_prefixer/admin.py,sha256=suMo4x8I3JBxAFBVIdE-5qnqZ6JAZV0FESABHOSc-vg,63
+django_url_prefixer/apps.py,sha256=fQlzWikzNFKiXwHUuqW-PaPE0nNEqMp-DvXIoAep8eY,168
+django_url_prefixer/middleware.py,sha256=UBCOwgYY_FQSlS0bqv7-5LcMfFBm7_NRZuyGZj-Z9dk,708
+django_url_prefixer/models.py,sha256=Vjc0p2XbAPgE6HyTF6vll98A4eDhA5AvaQqsc4kQ9AQ,57
+django_url_prefixer/tests.py,sha256=mrbGGRNg5jwbTJtWWa7zSKdDyeB4vmgZCRc2nk6VY-g,60
+django_url_prefixer/views.py,sha256=xc1IQHrsij7j33TUbo-_oewy3vs03pw_etpBWaMYJl0,63
+django_url_prefixer/migrations/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+django_url_prefixer-0.1.0.dist-info/LICENSE,sha256=WCeaKbK5LdQqFNHpr2VLnWiqohNoVQlH3QxXudAcuQY,1068
+django_url_prefixer-0.1.0.dist-info/METADATA,sha256=XoG1c94YzjXdYvZ22QJ-0E2Dd-peVGevyriPJ-CsNdA,6040
+django_url_prefixer-0.1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+django_url_prefixer-0.1.0.dist-info/top_level.txt,sha256=fnnyJWM1GRZyKCKFFpHmxEDPfBYT1y4ePsGCPwXxcWs,20
+django_url_prefixer-0.1.0.dist-info/RECORD,,
