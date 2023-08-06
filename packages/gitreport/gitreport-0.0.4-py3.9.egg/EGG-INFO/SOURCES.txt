@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+setup.py
+gitreport.egg-info/PKG-INFO
+gitreport.egg-info/SOURCES.txt
+gitreport.egg-info/dependency_links.txt
+gitreport.egg-info/entry_points.txt
+gitreport.egg-info/not-zip-safe
+gitreport.egg-info/requires.txt
+gitreport.egg-info/top_level.txt
+src/__init__.py
+src/cli.py
