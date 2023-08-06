@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: yt_search_api
+Version: 1.2.0
+Summary: A lightweight module to perform a Youtube search
+Home-page: https://github.com/ab-anand/yt_search_api
+Author: Abhinav Anand
+Author-email: abhinavanand1905@gmail.com
+License: MIT
+Download-URL: https://github.com/ab-anand/yt_search_api/tarball/1.2.0
+Description: YouTube-Search
+        ==============
+        
+        *A lightweight tool written in Python to perform a Youtube search without actually using the YT API.*
+        
+        :Author: Abhinav Anand
+        
+        .. contents::
+            :backlinks: none
+        
+        .. sectnum::
+        
+        What is it
+        ---------------
+        `[back to top] <https://github.com/ab-anand/yt_search_api#Youtube-Search>`__
+        
+        *A lightweight tool written in Python to perform a Youtube search without actually using the YT API.*
+Keywords: Youtube,search,Automation,api
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: System
+Classifier: Topic :: System :: Operating System
+Classifier: Topic :: Utilities
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Description-Content-Type: text/x-rst
