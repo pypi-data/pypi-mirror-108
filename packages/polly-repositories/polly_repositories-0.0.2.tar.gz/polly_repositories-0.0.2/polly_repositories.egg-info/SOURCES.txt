@@ -1,0 +1,10 @@
+MANIFEST.in
+README.md
+repositories.py
+setup.py
+polly_repositories.egg-info/PKG-INFO
+polly_repositories.egg-info/SOURCES.txt
+polly_repositories.egg-info/dependency_links.txt
+polly_repositories.egg-info/top_level.txt
+postman/repositories.postman_environment.json
+postman/repository_packages.postman_collection.json
