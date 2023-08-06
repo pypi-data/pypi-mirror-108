@@ -1,0 +1,2 @@
+class FFmpegReturnCodeError(Exception):
+    pass
