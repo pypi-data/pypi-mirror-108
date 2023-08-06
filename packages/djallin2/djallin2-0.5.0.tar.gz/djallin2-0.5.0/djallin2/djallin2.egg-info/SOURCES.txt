@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+setup.cfg
+djallin2/djallin2.egg-info/PKG-INFO
+djallin2/djallin2.egg-info/SOURCES.txt
+djallin2/djallin2.egg-info/dependency_links.txt
+djallin2/djallin2.egg-info/requires.txt
+djallin2/djallin2.egg-info/top_level.txt
