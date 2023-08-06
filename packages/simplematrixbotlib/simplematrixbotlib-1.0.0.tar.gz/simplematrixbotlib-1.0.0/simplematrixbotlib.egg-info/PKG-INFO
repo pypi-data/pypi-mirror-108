@@ -1,0 +1,15 @@
+Metadata-Version: 1.1
+Name: simplematrixbotlib
+Version: 1.0.0
+Summary: A simple matrix bot library.
+Home-page: UNKNOWN
+Author: krazykirby99999
+Author-email: krazykirby99999@gmail.com
+License: UNKNOWN
+Description: An easy to use bot library for the Matrix ecosystem written in Python.
+Keywords: python,matrix,bot,simple,library,simplepythonbotlibrary,simplepythonbotlib,simple-python-bot-library,simple-python-bot-lib
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Communications :: Chat
+Classifier: Topic :: Internet
