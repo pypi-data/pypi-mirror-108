@@ -1,0 +1,9 @@
+cdk8s_external_dns_route53/__init__.py,sha256=RJdF5s0aHFDpt1eRAqQWXOgC1RWFoFuEwNx5xBimi7U,11233
+cdk8s_external_dns_route53/py.typed,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+cdk8s_external_dns_route53/_jsii/__init__.py,sha256=fWfKoO4l5XGN0-B_q1OucT8vxJDW-AU3GkIMxM6DhY0,489
+cdk8s_external_dns_route53/_jsii/cdk8s-external-dns-route53@0.0.3.jsii.tgz,sha256=WvWnMyHS9UovCWXGJtxK8m5x_LKl0_KmA623lVxPPNw,205290
+cdk8s_external_dns_route53-0.0.3.dist-info/LICENSE,sha256=3_qQCtMX9YFh9Wjrso30bhoKVMsr88hrBPEVIrngitU,11345
+cdk8s_external_dns_route53-0.0.3.dist-info/METADATA,sha256=Tc5rkM49g-Siqj6g3y2EJZBEEgD-Mzlinb6BE8TXWCI,5401
+cdk8s_external_dns_route53-0.0.3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+cdk8s_external_dns_route53-0.0.3.dist-info/top_level.txt,sha256=qwwikBHWplsLK9jOVuV4vzxlOv21ghczXVHfUGlqyA0,27
+cdk8s_external_dns_route53-0.0.3.dist-info/RECORD,,
