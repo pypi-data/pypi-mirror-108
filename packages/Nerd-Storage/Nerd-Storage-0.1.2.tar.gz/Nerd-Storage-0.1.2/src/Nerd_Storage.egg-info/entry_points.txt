@@ -1,0 +1,3 @@
+[console_scripts]
+nerdstorage = NERD.__main__:main
+
