@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: jumpcloud
+Version: 1.1.2
+Summary: jumpcloud command for jumpcloud.com
+Home-page: https://gitlab.com/krink/jumpcloud
+Author: Karl Rink
+Author-email: karl@rink.us
+License: UNKNOWN
+Project-URL: Bug Tracker, https://gitlab.com/krink/jumpcloud/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+Python command line tool for administration of jumpcloud.com api.
+
