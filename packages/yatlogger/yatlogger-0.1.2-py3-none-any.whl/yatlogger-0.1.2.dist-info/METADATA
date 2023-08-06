@@ -1,0 +1,74 @@
+Metadata-Version: 2.1
+Name: yatlogger
+Version: 0.1.2
+Summary: Yet another telegram logger
+Home-page: https://github.com/cyd3r/yatlogger
+License: MIT
+Keywords: logger,telegram,chat bot,notification,exception handler
+Author: cyd3r
+Author-email: cyd3rhacker@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Communications :: Chat
+Classifier: Topic :: System :: Logging
+Requires-Dist: python-telegram-bot (>=13.6,<14.0)
+Project-URL: Repository, https://github.com/cyd3r/yatlogger
+Description-Content-Type: text/markdown
+
+# Yet Another Telegram Logger
+
+## Setup
+
+### 1. Create a bot
+
+First, [create a new bot](https://core.telegram.org/bots#creating-a-new-bot). It's basically sending some messages to [@BotFather](https://t.me/botfather).
+
+### 2. Create a config file (`.yatlogger.json`)
+
+Next, create a file named `.yatlogger.json` and place it in the same directory as your code or in a one of the parent directories. The file must look like this:
+
+``` json
+{
+    "token": "<your api key>"
+}
+```
+
+Replace `<your api key>` with the API key you got from the BotFather.
+
+### 3. Register chats
+
+Your bot must know to which chats it should send the logs. So the next step is to register receiving chats.
+
+Run `python -m yatlogger` to start the register service. As long as this service is running, you can register new chats.
+
+To register a chat, start a chat with your bot and enter the 6 digit pin you see on the logging machine.
+
+![register a new chat](https://raw.githubusercontent.com/cyd3r/yatlogger/main/docs/register_chat.jpg)
+
+When you are done, you can simply interrupt the register service with <kbd>Ctrl</kbd> + <kbd>C</kbd>
+
+## Usage
+
+yatlogger registers itself as a handler for the `logging` module. Here is an example:
+
+``` python
+import logging
+import yatlogger
+
+logger = yatlogger.register()
+logger.setLevel(logging.INFO)
+
+logger.info("Read this on your phone!")
+
+raise ValueError("This unhandled exception will be sent to Telegram, too!")
+
+```
+
+![log messages on telegram](https://raw.githubusercontent.com/cyd3r/yatlogger/main/docs/logs.jpg)
+
