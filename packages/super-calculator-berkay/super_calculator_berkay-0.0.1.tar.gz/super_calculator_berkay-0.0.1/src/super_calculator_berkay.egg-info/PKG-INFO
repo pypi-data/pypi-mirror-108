@@ -1,0 +1,22 @@
+Metadata-Version: 1.1
+Name: super-calculator-berkay
+Version: 0.0.1
+Summary: A package to do arithmetics
+Home-page: UNKNOWN
+Author: berkay
+Author-email: berkayyibis@hotmail.com
+License: GNU General Public License v2.0
+Description: This Python package allows doing four fundamental arithmetic operations. 
+        
+        The operations are:
+        * addition
+        * subtraction
+        * multiplication
+        * division
+Keywords: math
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: GNU General Public License v2 (GPLv2)
+Classifier: Programming Language :: Python :: 3
