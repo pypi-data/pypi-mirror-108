@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: twiscrap
+Version: 0.0.1
+Summary: 
+License: Proprietary
+Author: aahnik
+Author-email: daw@aahnik.dev
+Requires-Python: >=3.9,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: Scrapy (>=2.5.0,<3.0.0)
+Requires-Dist: scrapy-selenium (>=0.0.7,<0.0.8)
