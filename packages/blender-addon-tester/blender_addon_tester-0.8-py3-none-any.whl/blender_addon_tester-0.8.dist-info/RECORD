@@ -1,0 +1,12 @@
+blender_addon_tester/__init__.py,sha256=D8QF_THlRixzh3dnSE6CCDMUo9SPzlS1kryGsEE1Xu0,164
+blender_addon_tester/addon_helper.py,sha256=K1gwwqoZWn5dQaoJofM1x2Qrql8YOIdpLHx7xBu_Gig,6644
+blender_addon_tester/blender_load_pytest.py,sha256=ZGFshMdSn7BL1U8sUhLVNyPC-i44TlxTb9yWVlUXYV0,2676
+blender_addon_tester/blender_requirements.txt,sha256=Kx_a33lgl0plD9wrJuMwL3hEpUma0iXx1BesPr3-pww,44
+blender_addon_tester/get_blender.py,sha256=-mdsWn-UUbncZIz5qS8tmz2su4A9-hGcQy8ITD95ORw,11080
+blender_addon_tester/requirements.txt,sha256=o_VBJpCIZS8s5bgAmymb_Pcc_0aSa5vAD3UxLh94pHY,23
+blender_addon_tester/run_blender.py,sha256=ffcylIhAY9ayC1GsiXZb_OFbw4P6PBSyyJojj5zwdg4,6476
+blender_addon_tester-0.8.dist-info/LICENSE,sha256=FQDqdhfvOUA22g_EQd42ePG_wsdKTDI4qSOJz8uk-HQ,1092
+blender_addon_tester-0.8.dist-info/METADATA,sha256=6fGeIUCp31lnXhAvD6tFBYFgpXo7qUGAbOC_ayvY5ok,7171
+blender_addon_tester-0.8.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+blender_addon_tester-0.8.dist-info/top_level.txt,sha256=FAKIAEFu8a6gWth7jO6nI-Pz79YYdmEsrzbSyfFnoBo,21
+blender_addon_tester-0.8.dist-info/RECORD,,
