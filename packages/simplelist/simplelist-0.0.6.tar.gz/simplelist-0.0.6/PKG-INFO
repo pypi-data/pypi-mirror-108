@@ -1,0 +1,58 @@
+Metadata-Version: 2.1
+Name: simplelist
+Version: 0.0.6
+Summary: A Simple List Maker
+Home-page: UNKNOWN
+Author: Neil Shah
+Author-email: neil@insight3d.tech
+License: MIT
+Description: # SimpleList
+        ___
+        
+        SimpleList Python Package is a quick and easy way to intergrate TXT files with python.
+        
+        ## Installation
+        
+        To use SimpleList, run `pip install simplelist`, if you are on MacOS, install SimpleList with `pip3 install SimpleList`.
+        
+        ## Features
+        
+        * TXT From A Python List
+          * Read a Python list into a TXT and overwrite any old data on it.
+        * List From TXT
+          * Make a Python list from a TXT file.
+        * Inbuilt Lists
+          * SimpleList comes with 3 inbuilt lists available for use
+        
+        * MIT License
+        
+        ## Usage
+        
+        
+        
+        * The List From TXT is a simple way to read a TXT file into a python list
+            * Import: `from simplelist import listfromtxt`
+            * Syntax: `ListName = listfromtxt('myFile.txt')`
+        * The TXT From List is a simple way to read a python list into a TXT file
+            * Import: `from simplelist import txtfromlist`
+            * Syntax: `txtfromlist('myFile.txt', myList)`
+        * Inbuilt Lists
+          * Import `from simplelist import Lists`
+          * Load Class `class = Lists()`
+          * Set List `yes = list_yes()`
+          * Print List `print(yes)`
+          * Available Lists: `list_yes, list_no, list_tickers`
+          
+        ## Support
+        
+        - Email: [neil@insight3d.tech](mailto:neil@insight3d.tech)
+        - Discord: [InSight3D Discord Server](https://discord.gg/bfrEJcdBz7)
+        
+Keywords: lists
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
