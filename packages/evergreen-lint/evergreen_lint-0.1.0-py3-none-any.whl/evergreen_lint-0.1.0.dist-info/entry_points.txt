@@ -1,0 +1,4 @@
+[console_scripts]
+itest=tests.integration:main
+main=evergreen_lint.__main__:main
+
