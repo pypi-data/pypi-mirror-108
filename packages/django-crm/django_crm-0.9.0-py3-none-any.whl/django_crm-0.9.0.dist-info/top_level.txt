@@ -1,0 +1,14 @@
+accounts
+cases
+common
+contacts
+crm
+docs
+emails
+events
+invoices
+leads
+opportunity
+planner
+tasks
+teams
