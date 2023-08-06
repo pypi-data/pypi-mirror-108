@@ -1,0 +1,3 @@
+[console_scripts]
+mm-cli = memory_monitor_cli:main
+

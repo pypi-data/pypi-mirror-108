@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: memory-monitor-cli
+Version: 0.1.3
+Summary: Memory Monitor CLI
+Home-page: https://github.com/guallo/memory-monitor-cli
+Author: The memory-monitor-cli Authors
+Author-email: guallo.username@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: psutil
+Requires-Dist: plotext
+Requires-Dist: watchdog
+
+# memory-monitor-cli
+
+To install:
+```shell
+$ pip3 install memory-monitor-cli
+```
+
+Monitor the memory with a time window of `1` minute (`m`) and refresh each second (`60` times per minute):
+```shell
+$ mm-cli run --time-window 1 --time-unit m --frequency 60
+```
+
+Streaming to a file...
+```shell
+$ mm-cli run --time-window 1 --time-unit m --frequency 60 --stream-to-file memory-usage.gz
+```
+and (maybe later) show the stream:
+```shell
+$ mm-cli show --stream-from-file memory-usage.gz
+```
+
+
