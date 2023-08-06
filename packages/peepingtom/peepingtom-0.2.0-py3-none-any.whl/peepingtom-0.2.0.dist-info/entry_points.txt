@@ -1,0 +1,3 @@
+[console_scripts]
+peep = peepingtom.__main__:cli
+
