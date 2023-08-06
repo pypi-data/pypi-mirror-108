@@ -1,0 +1,9 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/checkbox_parser/__init__.py
+src/checkbox_parser.egg-info/PKG-INFO
+src/checkbox_parser.egg-info/SOURCES.txt
+src/checkbox_parser.egg-info/dependency_links.txt
+src/checkbox_parser.egg-info/top_level.txt
