@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: imbaedit
+Version: 1.0.5
+Summary: Image Batch Editor
+Home-page: https://github.com/jncraton/imbaedit
+Author: Jon Craton
+Author-email: jon@joncraton.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: pillow
+
+imbaedit
+========
+
+Image Batch Editor
+
+Installation
+------------
+
+`pip install imbaedit`
+
+Usage
+-----
+
+`imbaedit {files to edit}`
+
+Adjust available sliders to change filters and update the preview of the first image. Press `Run` to apply the filters to all images. **Original images will be overwritten**. It is recommended to not use this program on your original images or to have a backup of you images available in case of error.
+
+Reference
+---------
+
+- https://pysimplegui.readthedocs.io/en/latest/call%20reference/
+- https://pillow.readthedocs.io/en/5.1.x/reference/index.html
+
+
