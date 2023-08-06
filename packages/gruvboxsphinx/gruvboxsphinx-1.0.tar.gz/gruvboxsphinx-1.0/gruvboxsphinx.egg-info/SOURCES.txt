@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+gruvboxsphinx/__init__.py
+gruvboxsphinx.egg-info/PKG-INFO
+gruvboxsphinx.egg-info/SOURCES.txt
+gruvboxsphinx.egg-info/dependency_links.txt
+gruvboxsphinx.egg-info/entry_points.txt
+gruvboxsphinx.egg-info/not-zip-safe
+gruvboxsphinx.egg-info/top_level.txt
