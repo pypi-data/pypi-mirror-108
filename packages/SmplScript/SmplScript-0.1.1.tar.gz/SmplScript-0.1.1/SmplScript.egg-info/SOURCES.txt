@@ -1,0 +1,13 @@
+LICENCE
+MANIFEST.in
+README.md
+setup.py
+SmplScript/__init__.py
+SmplScript/run.py
+SmplScript/strings_with_arrows.py
+SmplScript.egg-info/PKG-INFO
+SmplScript.egg-info/SOURCES.txt
+SmplScript.egg-info/dependency_links.txt
+SmplScript.egg-info/entry_points.txt
+SmplScript.egg-info/requires.txt
+SmplScript.egg-info/top_level.txt

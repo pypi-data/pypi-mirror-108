@@ -1,0 +1,3 @@
+[console__scripts]
+SmplScript = SmplScript.run:run_language
+
