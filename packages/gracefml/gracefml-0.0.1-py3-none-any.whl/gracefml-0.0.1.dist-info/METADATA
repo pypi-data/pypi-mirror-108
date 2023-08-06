@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: gracefml
+Version: 0.0.1
+Summary: Framework for weakly-supervised regression
+License: MIT
+Author: chrisaddy
+Author-email: chris.william.addy@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: Sphinx (>=4.0.2,<5.0.0)
+Requires-Dist: pandas (>=1.2.4,<2.0.0)
+Requires-Dist: pyro-ppl (>=1.6.0,<2.0.0)
