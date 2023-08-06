@@ -1,0 +1,9 @@
+coincoin/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+coincoin/kraken.py,sha256=Sd67vfTVPdXhmFri1NSuu-2RMD3rh2jija1BwZdi6Go,5941
+coincoin/strategies.py,sha256=s2et8lavKWm5m3xV9dRJO7vD-P_6kOlkthaLdW2-BYo,2441
+coincoin/tickers.py,sha256=DZOloP--RuwZidLX0OW5Oou4gtoU-sLt-GAG_Lanm_M,2450
+coincoin_goulchen-0.0.12.dist-info/LICENCE,sha256=6kbiFSfobTZ7beWiKnHpN902HgBx-Jzgcme0SvKqhKY,1091
+coincoin_goulchen-0.0.12.dist-info/METADATA,sha256=dQyk8TD-HZBkZcBjduAbn6BilKerEAqpNHXk5cZeB6c,702
+coincoin_goulchen-0.0.12.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+coincoin_goulchen-0.0.12.dist-info/top_level.txt,sha256=E-OfhEJfnMGHWTnfTkNgOilGfFB0ip75y6xTjWTA7pc,9
+coincoin_goulchen-0.0.12.dist-info/RECORD,,
