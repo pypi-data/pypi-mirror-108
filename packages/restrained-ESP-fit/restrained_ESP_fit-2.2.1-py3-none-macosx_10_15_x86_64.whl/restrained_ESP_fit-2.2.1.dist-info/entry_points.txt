@@ -1,0 +1,3 @@
+[console_scripts]
+restrained-ESP-fit = restrained_ESP_fit.resp_wrapper:main
+
