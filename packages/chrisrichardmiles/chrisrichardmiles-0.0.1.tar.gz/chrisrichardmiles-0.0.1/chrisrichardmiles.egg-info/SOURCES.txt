@@ -1,0 +1,16 @@
+CONTRIBUTING.md
+LICENSE
+MANIFEST.in
+README.md
+settings.ini
+setup.py
+chrisrichardmiles/__init__.py
+chrisrichardmiles/_nbdev.py
+chrisrichardmiles/core.py
+chrisrichardmiles.egg-info/PKG-INFO
+chrisrichardmiles.egg-info/SOURCES.txt
+chrisrichardmiles.egg-info/dependency_links.txt
+chrisrichardmiles.egg-info/entry_points.txt
+chrisrichardmiles.egg-info/not-zip-safe
+chrisrichardmiles.egg-info/requires.txt
+chrisrichardmiles.egg-info/top_level.txt

@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: chrisrichardmiles
+Version: 0.0.1
+Summary: Helpful tools for machine learning and coding.
+Home-page: https://github.com/ChrisRichardMiles/chrisrichardmiles/tree/master/
+Author: Chris Richard Miles
+Author-email: chrisrichardmiles@gmail.com
+License: Apache Software License 2.0
+Description: # chrisrichardmiles
+        > Helpful tools for machine learning and coding.
+        
+        
+        ## Install
+        
+        `pip install chrisrichardmiles`
+        
+        ## How to use
+        
+        Simply import functions youd like to use and use them.
+        
+        ```
+        dict_to_str(d={
+            'name': 'f1',
+            'foo': 3,
+            'bar': 'zoo',
+            'bool': True,
+            'bool2': False,
+            'float': 3.45})
+        ```
+        
+        
+        
+        
+            'bar::zoo::bool::True::bool2::False::float::3.45::foo::3::name::f1'
+        
+        
+        
+Keywords: machine learning coding
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: Apache Software License
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Provides-Extra: dev
