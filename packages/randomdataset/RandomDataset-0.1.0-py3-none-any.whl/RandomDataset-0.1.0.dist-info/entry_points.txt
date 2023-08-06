@@ -1,0 +1,3 @@
+[console_scripts]
+generate_dataset = randomdataset:generate_dataset
+
