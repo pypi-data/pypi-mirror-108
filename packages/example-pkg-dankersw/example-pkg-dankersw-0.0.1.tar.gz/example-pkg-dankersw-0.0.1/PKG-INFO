@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: example-pkg-dankersw
+Version: 0.0.1
+Summary: A small example package
+Home-page: https://github.com/dankersw/tools
+Author: Wouter Dankrs
+Author-email: wouter.dankers@skynet.be
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# Hello from Wouter
+
+Just a basic example package to test uploading to pypi
+
+## Building steps
+
+```
+apt-get install python3-venv
+
+python3 -m pip install --upgrade build
+python3 -m build
+```
+
