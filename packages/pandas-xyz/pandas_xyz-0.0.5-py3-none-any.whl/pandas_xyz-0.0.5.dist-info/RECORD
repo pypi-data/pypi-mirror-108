@@ -1,0 +1,11 @@
+pandas_xyz/__init__.py,sha256=6h7-AiFs3Q5fryyG7eUvNEr-w343jIdudGgZmGWASeo,167
+pandas_xyz/_decorators.py,sha256=V5XrKIk35YPPef-L3rABd7iZbAhUaVZakbi6QbR3WDA,4019
+pandas_xyz/accessor.py,sha256=Rif0-s9XD9A5l8jOienQWctHuWdbbzIjL9i7dN1e9-Y,5783
+pandas_xyz/algorithms.py,sha256=U5LmMqhOa1M6LIeK341BxPeYiBPxPntKd4t21FRs-5Y,17307
+pandas_xyz/algorithms_old.py,sha256=jdDzxGC2FzUI_hL3xmg-K8CIzFjEEEwbhb4u5_FHcns,6960
+pandas_xyz/scalar.py,sha256=5s6OgtZJmvH5Yh2qhHfXh8NPnWeIFHbRNJ-d4idMs3U,1719
+pandas_xyz-0.0.5.dist-info/LICENSE,sha256=mLjGoRCcnuUCgQxwYfJbt9wofbjmXNGUeWBcmLZUGDs,1071
+pandas_xyz-0.0.5.dist-info/METADATA,sha256=nzwnN8cXaHLeaYW8eA52g3HR87Qx3VWtb_J7jaDmKYA,4217
+pandas_xyz-0.0.5.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pandas_xyz-0.0.5.dist-info/top_level.txt,sha256=6S3M4J-CaSeYvpcVS2TdhaPFw-aKY4CfS-0oykzBbyk,11
+pandas_xyz-0.0.5.dist-info/RECORD,,
