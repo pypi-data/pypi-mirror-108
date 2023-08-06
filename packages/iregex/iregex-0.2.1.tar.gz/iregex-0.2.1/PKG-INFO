@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: iregex
+Version: 0.2.1
+Summary: An idiomatic regex generator using OOP principals instead of long unreadable strings.
+Author: Ryan
+Author-email: ryanpeach@icloud.com
+Requires-Python: >=3.7,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
