@@ -1,0 +1,17 @@
+Metadata-Version: 1.1
+Name: rema
+Version: 0.0.0
+Summary: REusable MAchine learning codebase.
+Home-page: https://github.com/rakesh4real/rema
+Author: Asapanna Rakesh
+Author-email: rakesh.asapanna@gmail.com
+License: MIT
+Download-URL: https://github.com/rakesh4real/rema/archive/v0.0.0.tar.gz
+Description: UNKNOWN
+Keywords: machine learning,deep learning,data science
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.7
