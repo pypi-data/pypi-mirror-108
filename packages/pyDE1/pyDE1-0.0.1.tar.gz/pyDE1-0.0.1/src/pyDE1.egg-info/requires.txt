@@ -1,0 +1,2 @@
+aiologger
+bleak>=0.11.0
