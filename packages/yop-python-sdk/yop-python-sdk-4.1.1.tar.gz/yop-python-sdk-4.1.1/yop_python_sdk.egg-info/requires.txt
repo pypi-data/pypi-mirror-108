@@ -1,0 +1,6 @@
+future>=0.18.2
+pycryptodome>=3.10.1
+pyOpenSSL>=20.0.1
+python-dateutil>=2.8.1
+requests_toolbelt>=0.9.1
+simplejson>=3.17.2
