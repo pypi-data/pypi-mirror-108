@@ -1,0 +1,14 @@
+README.md
+setup.py
+tvdb_v4_official/__init__.py
+tvdb_v4_official/tvdb_v4_official.py
+tvdb_v4_official.egg-info/PKG-INFO
+tvdb_v4_official.egg-info/SOURCES.txt
+tvdb_v4_official.egg-info/dependency_links.txt
+tvdb_v4_official.egg-info/top_level.txt
+tvdb_v4_official/auth/__init__.py
+tvdb_v4_official/auth/auth.py
+tvdb_v4_official/request/__init__.py
+tvdb_v4_official/request/request.py
+tvdb_v4_official/url/__init__.py
+tvdb_v4_official/url/url.py
