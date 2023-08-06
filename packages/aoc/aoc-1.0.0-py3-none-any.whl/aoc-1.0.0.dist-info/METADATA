@@ -1,0 +1,61 @@
+Metadata-Version: 2.1
+Name: aoc
+Version: 1.0.0
+Summary: Multi-cluster management tool
+Home-page: https://github.com/Avielyo10/aoc.git
+Author: Aviel Yosef
+Author-email: Avielyo10@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: Click (>=7.1.2)
+Requires-Dist: PyYAML (>=5.4.1)
+Requires-Dist: tabulate (>=0.8.9)
+
+# AOC
+
+My multi-cluster management tool
+
+This basically a wrapper around `oc` tool with some commands to help managing multiple clusters.  
+So it can be used exactly like `oc`, for example `aoc get pods -A`.
+
+## prerequisites
+- python>=3.5
+- oc
+
+## Installation
+
+```bash
+pip3 install aoc
+```
+
+## Usage
+
+```
+Usage: aoc [OPTIONS] COMMAND [ARGS]...
+
+    __ _  ___   ___ 
+   / _` |/ _ \ / __|
+  | (_| | (_) | (__ 
+   \__,_|\___/ \___|
+
+    Multi-cluster management tool
+
+Options:
+  --version  Show the version and exit.
+  --help     Show this message and exit.
+
+Commands:
+  add-kube     Add a new cluster to aoc
+  auto-keep    Enable/disable auto keep
+  delete-kube  Remove a cluster from aoc
+  list         Show list of kubeconfigs
+  rename-kube  Rename cluster
+  switch-kube  Set the current kube
+```
+

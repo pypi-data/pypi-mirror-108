@@ -1,0 +1,10 @@
+aoc/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+aoc/cli.py,sha256=QzxAx8al_ZvIN457z7lJQavsfi7q83WF7n65UMVKmxQ,5400
+aoc/config.py,sha256=LdXEkoKtQz6YwI1O6Avq7yy3hw5m7xcIMaUmz8QZEkA,994
+aoc/util.py,sha256=nVfDFLYoa1YBZOAm2fb7dKU37ZLLoKtouc_Z55kCz9w,1986
+aoc-1.0.0.dist-info/LICENSE,sha256=6dBocHmDmmP0OTaczGFiy6cxcysTT_4msUVIF8bcPn4,1068
+aoc-1.0.0.dist-info/METADATA,sha256=gLiZxAoYaBcH8GKe2-aPWSLQQiO1CjVXncIimoEba3w,1352
+aoc-1.0.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+aoc-1.0.0.dist-info/entry_points.txt,sha256=LvRgMCVr_rZJSUmbhyf5AmqHJ3m2tMuAmWA_O94JkIY,56
+aoc-1.0.0.dist-info/top_level.txt,sha256=2KqkLE8U1POjrwJjvbCJffxd7hEYBtQ--4SsEuELL9I,4
+aoc-1.0.0.dist-info/RECORD,,
