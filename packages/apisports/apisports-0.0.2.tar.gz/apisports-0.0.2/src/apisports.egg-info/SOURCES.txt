@@ -1,0 +1,12 @@
+LICENSE
+README.rst
+setup.py
+src/apisports/__init__.py
+src/apisports/_client.py
+src/apisports/data.py
+src/apisports/response.py
+src/apisports.egg-info/PKG-INFO
+src/apisports.egg-info/SOURCES.txt
+src/apisports.egg-info/dependency_links.txt
+src/apisports.egg-info/requires.txt
+src/apisports.egg-info/top_level.txt
