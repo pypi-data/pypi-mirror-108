@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+cloudrail_knowledge.egg-info/PKG-INFO
+cloudrail_knowledge.egg-info/SOURCES.txt
+cloudrail_knowledge.egg-info/dependency_links.txt
+cloudrail_knowledge.egg-info/requires.txt
+cloudrail_knowledge.egg-info/top_level.txt
