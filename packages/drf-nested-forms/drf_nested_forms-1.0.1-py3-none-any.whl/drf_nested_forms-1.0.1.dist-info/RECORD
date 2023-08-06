@@ -1,0 +1,11 @@
+drf_nested_forms/__init__.py,sha256=PPWVMuArqAHizRzEEoXxyrK4yWniF5SpzmxLh05Nhk8,353
+drf_nested_forms/exceptions.py,sha256=La2oLS2uE41Ky5bQT2niIL1TG2Z3VUH77z0xzbyGvn0,95
+drf_nested_forms/mixins.py,sha256=DVLVt4fVld1yB75MCPe55cexm-2XoNWswF-Cu4gdYRQ,5601
+drf_nested_forms/parsers.py,sha256=M1sFManNQyszk2QU4lxIF5DmjJLueh8v2IQnUxnfbpc,1267
+drf_nested_forms/settings.py,sha256=6-I2lKCa4r6dji2amqaiCJumIhaOZEtIichsJd6Xyfg,307
+drf_nested_forms/utils.py,sha256=UpqRCvoLhtsqcMQUpQrVoVkbUUSDQF9Wi2oYUVk2X54,11951
+drf_nested_forms-1.0.1.dist-info/LICENSE,sha256=BWHWLO4Z9-PQCKccR1QOFhisNZvzo3B6p5TQME2-x4E,1089
+drf_nested_forms-1.0.1.dist-info/METADATA,sha256=WOoL-zFUQ-a02ENnxF08mz-5dWAUqQTl2WveJR5hwyM,6893
+drf_nested_forms-1.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+drf_nested_forms-1.0.1.dist-info/top_level.txt,sha256=ov2GvwMjAl7GMSqLWhnMU0gb54JDn-wMmOgKXqBjQls,17
+drf_nested_forms-1.0.1.dist-info/RECORD,,
