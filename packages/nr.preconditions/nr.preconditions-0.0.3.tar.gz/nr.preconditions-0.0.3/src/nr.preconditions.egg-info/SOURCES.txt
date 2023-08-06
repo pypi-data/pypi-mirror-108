@@ -1,0 +1,13 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+package.yml
+setup.py
+src/nr/__init__.py
+src/nr.preconditions.egg-info/PKG-INFO
+src/nr.preconditions.egg-info/SOURCES.txt
+src/nr.preconditions.egg-info/dependency_links.txt
+src/nr.preconditions.egg-info/not-zip-safe
+src/nr.preconditions.egg-info/top_level.txt
+src/nr/preconditions/__init__.py
+src/nr/preconditions/py.typed
