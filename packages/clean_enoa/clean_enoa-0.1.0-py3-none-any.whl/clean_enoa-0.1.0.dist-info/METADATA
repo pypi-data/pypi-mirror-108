@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: clean_enoa
+Version: 0.1.0
+Summary: This package makes requests to INEGI about unemployment in Mexico
+Home-page: https://github.com/nepito/clean-enoa
+Author: Nepo Rojas • GECI
+Author-email: nepo.rojas@islas.org.mx
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+
+# Clean ENOA
+
+[![codecov](https://codecov.io/gh/nepito/clean-enoa/branch/main/graph/badge.svg?token=DIoEtHqRMU)](https://codecov.io/gh/nepito/clean-enoa)
+![example branch parameter](https://github.com/nepito/clean-enoa/actions/workflows/actions.yml/badge.svg)
+
+Get a token [here](http://www3.inegi.org.mx//sistemas/api/indicadores/v1/tokenVerify.aspx).
+
