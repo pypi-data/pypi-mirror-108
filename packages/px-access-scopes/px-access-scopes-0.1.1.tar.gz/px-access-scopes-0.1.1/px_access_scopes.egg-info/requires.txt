@@ -1,0 +1,5 @@
+px-domains==0.1.0
+
+[dev]
+pytest<7.0,>=6.0
+pytest-watch<5.0,>=4.2
