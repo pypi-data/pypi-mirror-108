@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: BDHotfixPatchTool
+Version: 0.0.1
+Summary: A patch making tool for BDHotfix.
+Home-page: https://example.com
+Author: zhuyuanqing
+Author-email: zhuyuanqing@bytedance.com
+License: MIT
+Platform: macOS
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+## BDHotfixPatchTool
+A patch template generation tool for BDHotfix. BDHotfix is the iOS hotfix SDK provided by veMARS. For description in detail, please visit https://www.volcengine.com/docs/6363/69074.
+
+### LICENSE
+This tool is MIT licensed. 
+
+### Author
+zhuyuanqing@bytedance.com
+
+

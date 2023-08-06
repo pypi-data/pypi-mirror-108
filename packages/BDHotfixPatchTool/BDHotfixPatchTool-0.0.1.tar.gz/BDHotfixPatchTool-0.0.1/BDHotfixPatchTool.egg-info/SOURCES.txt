@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+BDHotfixPatchTool/__init__.py
+BDHotfixPatchTool/patchTool.py
+BDHotfixPatchTool.egg-info/PKG-INFO
+BDHotfixPatchTool.egg-info/SOURCES.txt
+BDHotfixPatchTool.egg-info/dependency_links.txt
+BDHotfixPatchTool.egg-info/entry_points.txt
+BDHotfixPatchTool.egg-info/top_level.txt
