@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: tabor-control
+Version: 0.1
+Summary: Small SCPI control interface for tabor awgs
+Home-page: https://git-ce.rwth-aachen.de/simon.humpohl/tabor_control
+Author: Simon Humpohl
+Author-email: simon.humpohl@rwth-aachen.de
+License: GPLv3
+Keywords: hardware,awg,tabor,tabor electronics
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Scientific/Engineering
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pyvisa (>=1.11)
+Requires-Dist: numpy
+Requires-Dist: packaging
+Requires-Dist: dataclasses
+
+# tabor_control
+
+This package provides a thin abstraction over SCPI controlled Tabor Electronics AWGs.
+
+ - Discovery of such devices in the networkl 
+ - Initialization of visa sessions with reasonable defaults
+ - Binary up- and download of waveform segments and sequencing tables
+ - Device properties like total memory and sequence restrictions
+ - Workaround some quirks if a simulator is used
+ - Basic object-oriented interface to the above
+
+
