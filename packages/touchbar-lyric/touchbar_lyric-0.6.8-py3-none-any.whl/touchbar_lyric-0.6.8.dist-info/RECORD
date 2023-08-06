@@ -1,0 +1,9 @@
+touchbar_lyric/__init__.py,sha256=RIZZDyox4b8uvBxxXhUcVR3y4o6r6HuyIk8UMWK-fSM,2060
+touchbar_lyric/__main__.py,sha256=bbmTe_x2ICtGWZlN5TZrwm1Mr9xTsvN3yZw5gq1leAk,1434
+touchbar_lyric/service/__init__.py,sha256=sVaBFIQKjk7Nho3ddLdnyWUnvabSd3Co1SR6pSyaW4Q,1215
+touchbar_lyric/service/netease.py,sha256=YkkqfIBPttwV7bmuMZ6UUddUYRZWWE6Ra3fpY2zuxe4,5195
+touchbar_lyric/service/qq.py,sha256=YQSyVL1jl_2cqc0kImX1cWBundqQFoWjOzo4eXLTroo,1353
+touchbar_lyric/utility/__init__.py,sha256=_sC8psf_KcRBfslNm5-jL8uxT6vsMLbUzMRR5ISgSUY,2499
+touchbar_lyric-0.6.8.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+touchbar_lyric-0.6.8.dist-info/METADATA,sha256=vWh4Rhz3VBXA8arpqKcMo_8_KSNHczSpIR3yLiRd46Q,3165
+touchbar_lyric-0.6.8.dist-info/RECORD,,
