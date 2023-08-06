@@ -1,0 +1,34 @@
+[tool.poetry]
+name = "struct-tools"
+version = "0.2.5"
+description = "Tools for working with dicts (and lists)"
+license = "MIT"
+authors = ["patricknraanes <patrick.n.raanes@gmail.com>"]
+
+readme = "README.md"
+
+#repository = "github..."
+keywords = ["dict", "list"]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+importlib-metadata = {version = "^1.0", python = "<3.8"}
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+#pytest-cov coverage pytest-sugar pytest-benchmark pytest-clarity pytest-xdist
+
+flake8 = "*"
+flakehell = "*"
+# flake8-docstrings, flake8-bugbear, flake8-comprehensions, flake8-isort
+
+line_profiler = "*"
+pre-commit = "*"
+ipython = "*"
+ipdb = "*"
+pdbpp = "*"
+pudb = "*"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
