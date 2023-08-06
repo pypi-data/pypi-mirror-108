@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+linqit/__init__.py
+linqit.egg-info/PKG-INFO
+linqit.egg-info/SOURCES.txt
+linqit.egg-info/dependency_links.txt
+linqit.egg-info/top_level.txt
+tests/__init__.py
+tests/test_list.py
