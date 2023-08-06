@@ -1,0 +1,2 @@
+autoreduce_qp
+GitPython==3.1.14
