@@ -1,0 +1,12 @@
+setup.py
+Model_Manager_Testing.egg-info/PKG-INFO
+Model_Manager_Testing.egg-info/SOURCES.txt
+Model_Manager_Testing.egg-info/dependency_links.txt
+Model_Manager_Testing.egg-info/requires.txt
+Model_Manager_Testing.egg-info/top_level.txt
+model_manager_test/__init__.py
+model_manager_test/evaluator.py
+model_manager_test/halo_profiling/__init__.py
+model_manager_test/halo_profiling/sub_halp_profiling.py
+model_manager_test/halo_validation/__init__.py
+model_manager_test/halo_validation/sub_halo_validation.py
