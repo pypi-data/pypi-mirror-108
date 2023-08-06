@@ -1,0 +1,10 @@
+CHANGELOG.txt
+EHN_Convert.py
+LICENCE.txt
+MANIFEST.in
+README.txt
+setup.py
+EHNconverter.egg-info/PKG-INFO
+EHNconverter.egg-info/SOURCES.txt
+EHNconverter.egg-info/dependency_links.txt
+EHNconverter.egg-info/top_level.txt
