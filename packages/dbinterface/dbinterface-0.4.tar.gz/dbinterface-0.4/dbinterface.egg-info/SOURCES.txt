@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.py
+dbinterface/__init__.py
+dbinterface/database_client.py
+dbinterface/database_interface.py
+dbinterface/db2_client.py
+dbinterface/mixins.py
+dbinterface/mysql_client.py
+dbinterface/postgres_client.py
+dbinterface/utils.py
+dbinterface.egg-info/PKG-INFO
+dbinterface.egg-info/SOURCES.txt
+dbinterface.egg-info/dependency_links.txt
+dbinterface.egg-info/requires.txt
+dbinterface.egg-info/top_level.txt
