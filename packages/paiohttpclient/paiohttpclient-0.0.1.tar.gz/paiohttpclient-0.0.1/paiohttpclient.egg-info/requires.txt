@@ -1,0 +1,5 @@
+aiohttp[speedups]>=3.7.4
+ujson>=4.0.2
+pydantic>=1.8.2
+tenacity>=7.0.0
+graphql-core
