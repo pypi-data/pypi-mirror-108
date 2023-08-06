@@ -1,0 +1,11 @@
+fabula/__init__.py,sha256=JFxaeEtTu51gpozNSb9QH2yeb764MFkdaoPb2K4OgeA,68
+fabula/objectlib.py,sha256=_aZzYFBp9gxZNDTfKrgApouBdUhakNdFbcIkW2-mM1M,6633
+fabula/skeel.py,sha256=Fpz8a7WTw2h20f7rqGkNzSObxi--V2xJK0FeFniCXCY,16205
+fabula/strategies.py,sha256=cgH1KBjUWtT78_C3RScUZeQ4R06VFu4KUwrh5XttoK8,4993
+fabula/remoteModules/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+fabula/remoteModules/chkPort.py,sha256=6FPkQx4pMCdiSxhXn5iyswW7cjuoIC236h_s3i9HRPU,1247
+fabula_py-0.0.4.dist-info/LICENSE,sha256=S3pPjjRCXsz8GiXNuTOePln9SBDCAu7ImusYXckVySw,36419
+fabula_py-0.0.4.dist-info/METADATA,sha256=pw_BqQbiswmqOkxKNGbYFy-WdsFqOGn6aoFhJOW4pxU,498
+fabula_py-0.0.4.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+fabula_py-0.0.4.dist-info/top_level.txt,sha256=w7DMHu6n682wCQxWL8zpDn46OQOkwCMeHqzE_i_EtiU,7
+fabula_py-0.0.4.dist-info/RECORD,,
