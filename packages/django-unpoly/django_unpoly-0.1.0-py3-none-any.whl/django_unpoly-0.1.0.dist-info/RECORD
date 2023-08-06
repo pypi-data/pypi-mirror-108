@@ -1,0 +1,12 @@
+django_unpoly/__init__.py,sha256=5KlV6Pi7oKEHVHx8dCAbZRxxvGFMVdpsMCtzLewjpKQ,134
+django_unpoly/cli.py,sha256=8jWOs-Tm8rVdPMlufBqwCSmH_564gOEumwFCcynB0C4,279
+django_unpoly/exceptions.py,sha256=I68V5eBWgGN-ltE6AWiBEdNn5IGgklHT6OEozZwvJ90,39
+django_unpoly/middleware.py,sha256=CnyXSDoTocHdhvAZ0gISFwLateGL-6WXG6kUcOuh25A,782
+django_unpoly/static/up/django_unpoly.js,sha256=91ZqCOi_Xi81Q4n1CHUCX66X0nEuKUXn10bxuChcPY8,186
+django_unpoly/templates/up/form.unpoly.html,sha256=xGNaK3uqSM-UcEY2Ih9GZbcjLu71hHy8NRZhRnnxXI8,568
+django_unpoly/up.py,sha256=GrJvU5GNQhZX0kHxgfN7Ipc6bqS7FUj199oG6gTdYVs,1812
+django_unpoly-0.1.0.dist-info/entry_points.txt,sha256=TxxqIisw9n8XXrhjRiGPv5CUWlnN3R1EVrtmpo0ofoY,56
+django_unpoly-0.1.0.dist-info/LICENSE,sha256=eyFr4VXET_q1UyIUnYekZygEmQgAI5efaSn0KB4v0MY,1072
+django_unpoly-0.1.0.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+django_unpoly-0.1.0.dist-info/METADATA,sha256=WbkNXgQibYTRP2CA4QHnMgkSwS2qQY9y455zJlwBujQ,3271
+django_unpoly-0.1.0.dist-info/RECORD,,
