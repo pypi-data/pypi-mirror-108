@@ -1,0 +1,16 @@
+pygithub>=1.55
+gitpython>=3.0.6
+
+[develop]
+coverage[toml]>=5.0.2
+pytest>=6.2.4
+furo==2020.12.*,>=2020.12.30b24
+sphinx>=3.5.0
+
+[docs]
+furo==2020.12.*,>=2020.12.30b24
+sphinx>=3.5.0
+
+[testing]
+coverage[toml]>=5.0.2
+pytest>=6.2.4
