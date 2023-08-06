@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: create-jira-issue
+Version: 0.1.2
+Summary: 
+License: MIT
+Author: Dmitrii Akhmetshin
+Author-email: elevation1987@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: PyYAML (>=5.4.1,<6.0.0)
+Requires-Dist: argparse (>=1.4.0,<2.0.0)
+Requires-Dist: requests (>=2.25.1,<3.0.0)
+Requires-Dist: url-normalize (>=1.4.3,<2.0.0)
+Requires-Dist: urllib3 (>=1.26.5,<2.0.0)
