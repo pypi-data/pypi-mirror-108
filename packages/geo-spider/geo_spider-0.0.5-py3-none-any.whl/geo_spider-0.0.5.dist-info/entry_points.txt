@@ -1,0 +1,3 @@
+[console_scripts]
+geo-spider = geo_spider:geo_spider
+
