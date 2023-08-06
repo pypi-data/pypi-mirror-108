@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: yanlp
+Version: 0.0.1
+Summary: yannlp
+Home-page: https://github.com/skull-ai-research/yanlp
+Author: skull.ai.research
+Author-email: skull.ai.research@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# yanlp
+Help nlp land in the project
+
+
