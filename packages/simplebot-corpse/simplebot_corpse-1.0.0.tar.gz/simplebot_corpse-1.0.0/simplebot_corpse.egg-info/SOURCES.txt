@@ -1,0 +1,14 @@
+CHANGELOG.rst
+LICENSE
+MANIFEST.in
+README.rst
+setup.py
+simplebot_corpse/__init__.py
+simplebot_corpse/orm.py
+simplebot_corpse.egg-info/PKG-INFO
+simplebot_corpse.egg-info/SOURCES.txt
+simplebot_corpse.egg-info/dependency_links.txt
+simplebot_corpse.egg-info/entry_points.txt
+simplebot_corpse.egg-info/not-zip-safe
+simplebot_corpse.egg-info/requires.txt
+simplebot_corpse.egg-info/top_level.txt
