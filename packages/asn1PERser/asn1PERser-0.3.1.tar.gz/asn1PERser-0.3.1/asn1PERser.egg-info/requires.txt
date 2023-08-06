@@ -1,0 +1,4 @@
+pyasn1
+pyparsing
+Jinja2
+future
