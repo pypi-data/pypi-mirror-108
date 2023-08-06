@@ -1,0 +1,12 @@
+hspfbintoolbox
+
+[dev]
+black
+cleanpy
+twine
+pytest
+coverage
+flake8
+pytest-cov
+pytest-mpl
+pre-commit
