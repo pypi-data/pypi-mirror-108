@@ -1,0 +1,21 @@
+Metadata-Version: 1.1
+Name: rhprocessor
+Version: 0.0.1-beta.1
+Summary: Pipeline processor
+Home-page: https://github.com/rhodief/rhprocessor
+Author: rhodie
+Author-email: rhandref@gmail.com
+License: MIT
+Download-URL: https://github.com/rhodief/rhprocessor/archive/refs/tags/v0.0.1-beta.1.tar.gz
+Description: UNKNOWN
+Keywords: pipeline,processor
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.8
