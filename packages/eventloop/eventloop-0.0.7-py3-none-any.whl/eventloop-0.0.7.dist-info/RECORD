@@ -1,0 +1,11 @@
+eventloop/__init__.py,sha256=FKS0iSbU3huX2S9GJvD8ge4Un8Ikjd2PrVDeTgXSfXs,3246
+eventloop/__main__.py,sha256=UmBpGfFPkFul8QrSIsLvkJ3kn5C5sZOMURFtfXh5bEo,2214
+eventloop/base.py,sha256=KKYhCwgVpIzjd09sNXDM9SSWIRySCoxkF7FBqlO5qfY,1114
+eventloop/common.py,sha256=dMuq2-szMmkNIssjEysl-ZibPxQxuxZQHa8pjDu0hMo,1898
+eventloop/qt.py,sha256=zdZYQBYOhhEKXmbdI7Jd4Y5BaGlXMw44mGkvHb48zpE,2285
+eventloop/uv.py,sha256=hDBlJd5rZpkGrOcPGtxr-XQ4MwJZf2TMIfgpOd39bHU,2597
+eventloop-0.0.7.dist-info/LICENSE,sha256=p5_2lGiDlTYb_HIuYAIoSQtmW7oxQn9SOirkkd8OW4o,1095
+eventloop-0.0.7.dist-info/METADATA,sha256=J6NMYonxzdEmRmHpqMVTYvtZ-eZYs6Ij0s9Yg5IwW5o,3288
+eventloop-0.0.7.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+eventloop-0.0.7.dist-info/top_level.txt,sha256=SVjnqcN-FSY-DGnHxuZb316QKIrg-BnWZtfWL1bc2lw,10
+eventloop-0.0.7.dist-info/RECORD,,
