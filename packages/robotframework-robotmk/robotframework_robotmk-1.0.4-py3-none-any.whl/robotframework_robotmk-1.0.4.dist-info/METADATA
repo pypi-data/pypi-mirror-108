@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: robotframework-robotmk
+Version: 1.0.4
+Summary: UNKNOWN
+Home-page: https://github.com/simonmeggle/robotframework-robotmk
+Author: Simon Meggle
+Author-email: simon.meggle@elabit.de
+License: GPLv3
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# robotframework-robotmk
+
+This is a small supplementary library for *Robotmk*, the Robot Framework integration project for *Checkmk*. 
+
+## Installation 
+
+```
+pip install robotframework-robotmk
+```
+
+## Links
+
+* **Keyword Documentation**: https://simonmeggle.github.io/robotframework-robotmk/
+* Github: https://github.com/simonmeggle/robotframework-robotmk
+* Author: Simon Meggle <simon.meggle@elabit.de>
+* Robotmk: https://www.robotmk.org
+* Checkmk: https://checkmk.com
+
+
+
