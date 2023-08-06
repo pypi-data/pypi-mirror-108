@@ -1,0 +1,17 @@
+Metadata-Version: 1.2
+Name: omegaup_cli
+Version: 0.1.0a1
+Summary: CLI for OmegaUp users.
+Home-page: https://github.com/Apocryphon-X/omegaup-cli
+Author: Dante Mendoza Leyva (Apocryphon-X)
+Author-email: apocryphon.x.contact@gmail.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.8
