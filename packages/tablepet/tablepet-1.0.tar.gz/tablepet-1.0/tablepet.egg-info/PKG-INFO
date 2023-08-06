@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: tablepet
+Version: 1.0
+Summary: 桌面宠物
+Home-page: https://github.com/leemams/godtoy
+Author: dml
+Author-email: kkleung88@gmali.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+tablepet
+

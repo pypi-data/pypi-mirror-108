@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+tablepet/__init__.py
+tablepet/pet.py
+tablepet.egg-info/PKG-INFO
+tablepet.egg-info/SOURCES.txt
+tablepet.egg-info/dependency_links.txt
+tablepet.egg-info/requires.txt
+tablepet.egg-info/top_level.txt
