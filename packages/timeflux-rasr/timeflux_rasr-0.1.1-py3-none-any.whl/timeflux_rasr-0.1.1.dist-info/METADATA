@@ -1,0 +1,77 @@
+Metadata-Version: 2.1
+Name: timeflux-rasr
+Version: 0.1.1
+Summary: Implementation of rASR filtering.
+Home-page: https://timeflux.io
+Author: Timeflux Team
+Author-email: contact@timeflux.io
+License: MIT
+Project-URL: Documentation, https://doc.timeflux.io/projects/timeflux-rasr/
+Project-URL: Source Code, https://github.com/timeflux/timeflux_rasr
+Project-URL: Bug Tracker, https://github.com/timeflux/timeflux_rasr/issues
+Keywords: timeflux
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+License-File: LICENSE
+Requires-Dist: timeflux (>=0.10.0)
+Requires-Dist: pyriemann
+Provides-Extra: dev
+Requires-Dist: mne ; extra == 'dev'
+Requires-Dist: matplotlib ; extra == 'dev'
+Requires-Dist: pytest (>=5.3) ; extra == 'dev'
+Requires-Dist: sphinx (>=2.2) ; extra == 'dev'
+Requires-Dist: sphinx-rtd-theme (>=0.4) ; extra == 'dev'
+Requires-Dist: setuptools-scm ; extra == 'dev'
+Requires-Dist: docinit ; extra == 'dev'
+
+Timeflux rASR
+=============
+
+This plugin performs real-time artifact correction on EEG data.
+
+Installation
+------------
+
+First, make sure that `Timeflux <https://github.com/timeflux/timeflux>`__ is installed.
+
+You can then install this plugin in the ``timeflux`` environment:
+
+::
+
+    $ conda activate timeflux
+    $ pip install timeflux_rasr
+
+
+If you encounter issues with ``pyRiemann``, try installing the latest version directly from the repository:
+
+::
+
+    $ pip install git+https://github.com/pyRiemann/pyRiemann
+
+
+Witness the magic!
+------------------
+
+::
+
+    $ timeflux -d examples/replay.yaml
+
+Screenshot
+----------
+
+.. image:: https://github.com/timeflux/timeflux_rasr/raw/master/doc/static/img/screenshot.png
+
+References
+----------
+
+* Blum-Jacobsen `paper <https://www.frontiersin.org/articles/10.3389/fnhum.2019.00141/full>`__
+* ASR EEGLAB implementation (`code <https://github.com/sccn/clean_rawdata>`__, `documentation <https://sccn.ucsd.edu/wiki/Artifact_Subspace_Reconstruction_(ASR)>`__)
+* rASR `Matlab implementation <https://github.com/s4rify/rASRMatlab>`__
+
+
