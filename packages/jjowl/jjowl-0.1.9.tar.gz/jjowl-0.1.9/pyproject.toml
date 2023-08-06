@@ -1,0 +1,26 @@
+[build-system]
+requires = ["flit_core >=2,<4"]
+build-backend = "flit_core.buildapi"
+
+[tool.flit.metadata]
+module = "jjowl"
+author = "JJoao"
+author-email = "jj@di.uminho.pt"
+home-page = "https://natura.di.uminho.pt/jjowl"
+classifiers = ["License :: OSI Approved :: MIT License"]
+
+requires = ["rdflib", "jjcli","owlrl", "unidecode", "pyyaml" ]
+
+description-file = "jjowl.md"
+
+[tool.flit.scripts]
+
+owlcat  = "jjowl:mcat"
+owlgrep = "jjowl:mgrep"
+owlexpandpp ="jjowl:mexpandpp"
+owlclass  = "jjowl:mclass"
+owllabel2term  = "jjowl:mlabel2term"
+owlxdxf = "jjowl:mxdxf"
+tmd2ttl = "jjowl:mtmd2ttl"
+
+
