@@ -1,0 +1,15 @@
+MANIFEST.in
+README.md
+VERSION
+setup.py
+pySecp256k1/__init__.py
+pySecp256k1/ecdsa.py
+pySecp256k1/schnorr.py
+pySecp256k1/sig.py
+pySecp256k1.egg-info/PKG-INFO
+pySecp256k1.egg-info/SOURCES.txt
+pySecp256k1.egg-info/dependency_links.txt
+pySecp256k1.egg-info/requires.txt
+pySecp256k1.egg-info/top_level.txt
+test/test_signatures.py
+test/test_vectors.py
