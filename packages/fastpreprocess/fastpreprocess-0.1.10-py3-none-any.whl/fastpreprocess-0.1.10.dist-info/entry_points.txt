@@ -1,0 +1,4 @@
+[console_scripts]
+fastpreprocess = fastpreprocess.fastwork:run_from_local
+fp = fastpreprocess.fastwork:run_from_local
+
