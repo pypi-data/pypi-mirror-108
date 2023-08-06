@@ -1,0 +1,3 @@
+[console_scripts]
+contest_cli = contest_cli.cli:cli
+
