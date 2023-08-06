@@ -1,0 +1,3 @@
+[console_scripts]
+pgn-downloader = pgn_downloader.__main__:main
+
