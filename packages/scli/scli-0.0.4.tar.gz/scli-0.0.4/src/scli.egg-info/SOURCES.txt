@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/scli/__init__.py
+src/scli.egg-info/PKG-INFO
+src/scli.egg-info/SOURCES.txt
+src/scli.egg-info/dependency_links.txt
+src/scli.egg-info/top_level.txt
+src/scli/contributors/__init__.py
+src/scli/contributors/dds.py

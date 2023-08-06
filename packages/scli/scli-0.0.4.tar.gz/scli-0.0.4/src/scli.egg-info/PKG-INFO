@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: scli
+Version: 0.0.4
+Summary: Package to make a world better place
+Home-page: https://github.com/pypa/sampleproject
+Author: Anonymous Boy
+Author-email: sourav.pes@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/pypa/sampleproject/issues
+Description: # SCLI - Daily utility functions
+        
+        
+        [SCLI](https://guides.github.com/features/mastering-markdown/)
+        
+        Yet to begin to make world a better place :-) !!
+        
+        Contributors:
+            SOS - Sourav Suresh
+            DD - Dilip Debsingha
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
