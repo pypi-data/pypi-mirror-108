@@ -1,0 +1,15 @@
+hdf5plugin/__init__.py,sha256=e2twwpuxjjVlW3KI94dN7m2WrFJqjiFwsaNJO5wlw1E,12086
+hdf5plugin/_config.py,sha256=8Br1mgu7JFWpVXsZ3MgDmXJNn36iuVX1zj8CUPHut5c,89
+hdf5plugin/_version.py,sha256=otDvhUSsKdNBn4zllCc00joMPGCJikCa93DCYIwTR5Y,4512
+hdf5plugin/test.py,sha256=pDrg_XAxL3FWNolmKidg-6bNpDlvcdgg_PBaO7LliEE,7584
+hdf5plugin/plugins/libh5blosc.dll,sha256=xnbEanLObrP-3X77sFmoyPgoWizBaV5BLZJQCLuCIqs,720384
+hdf5plugin/plugins/libh5bshuf.dll,sha256=qJ1zCZ_KnxzUFv1uqajCGYYI1Vk1BTGURdgm-Zl8l2o,30208
+hdf5plugin/plugins/libh5fcidecomp.dll,sha256=SaPglVnJILiPwcioTd5_09QfZsE2DCqLiT6XobVd7LY,168448
+hdf5plugin/plugins/libh5lz4.dll,sha256=Yn4-zGC4QLkT3tqKylCh6v9Qfw0DVrVfaabjQMr8C-8,22016
+hdf5plugin/plugins/libh5zfp.dll,sha256=kKcD4DXDL7hQwyLy98V-5-eNvA5qqhS8UyKQlSDnjGA,291840
+hdf5plugin/plugins/libh5zstd.dll,sha256=NJwsEeaBniq0oRsp2gcTitctxAUi6g36RS-GB1R-J9c,530432
+hdf5plugin-3.0.0.dist-info/LICENSE,sha256=-VZsscaorVXlp2tFgHuCnpa1NzFotVWQIxZDjXHqytk,1446
+hdf5plugin-3.0.0.dist-info/METADATA,sha256=AzuXywRvm2cXJWKrApRElJPhZ1iziGyAN1zLWueoauU,11169
+hdf5plugin-3.0.0.dist-info/WHEEL,sha256=7j5KnvZx7iXyUVyZ-9vLjWs2ne94AvsHS18_YLLWbeE,99
+hdf5plugin-3.0.0.dist-info/top_level.txt,sha256=jAEIrQv1oLDBJ_KZTG5Ah8w4TcQahNlN52faR_PcG24,11
+hdf5plugin-3.0.0.dist-info/RECORD,,
