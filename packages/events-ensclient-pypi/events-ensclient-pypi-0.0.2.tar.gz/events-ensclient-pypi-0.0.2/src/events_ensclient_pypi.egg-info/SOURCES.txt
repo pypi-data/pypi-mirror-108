@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+setup.cfg
+src/events_ensclient_pypi.egg-info/PKG-INFO
+src/events_ensclient_pypi.egg-info/SOURCES.txt
+src/events_ensclient_pypi.egg-info/dependency_links.txt
+src/events_ensclient_pypi.egg-info/top_level.txt
+src/example_pkg/__init__.py
