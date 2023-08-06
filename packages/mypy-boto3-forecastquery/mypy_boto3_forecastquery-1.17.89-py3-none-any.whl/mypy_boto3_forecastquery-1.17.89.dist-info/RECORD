@@ -1,0 +1,13 @@
+mypy_boto3_forecastquery/__init__.py,sha256=2pzv54YZ8Z18TKpMSaa5ls_Wo0hYaV6z9reCPlsp5Ds,521
+mypy_boto3_forecastquery/__init__.pyi,sha256=W7k827pkNucdYyjCkP8-c-LPlCP9zqbKb6hC16sXH1o,520
+mypy_boto3_forecastquery/__main__.py,sha256=UEcDyVY74J_BkFlZ_SMy5Vn32IdJHJJJ52S4gnz-HTg,763
+mypy_boto3_forecastquery/client.py,sha256=01G3bXzQcySdVqBPKJT6k9u-3H1ff45TKrle3bQHAoE,2950
+mypy_boto3_forecastquery/client.pyi,sha256=u8IoF1xWgzMXl3W7wgKMPYQpfcxf7W4IwpWZApqf9cs,2943
+mypy_boto3_forecastquery/py.typed,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mypy_boto3_forecastquery/type_defs.py,sha256=CHzGpHffxgNzv3r0rCxb8QP3rhXSo3loGlXCUUy_mqE,981
+mypy_boto3_forecastquery/type_defs.pyi,sha256=x-MVYsMryvywQl-8mspM0E5SYsiW5v_wPTweRzYDCno,980
+mypy_boto3_forecastquery/version.py,sha256=_PKZMoEbsCPFGM_mY5GdDkLaIv_sfo_1hyq4fOc5J_k,55
+mypy_boto3_forecastquery-1.17.89.dist-info/METADATA,sha256=qdQpyylUv64_fniIzmWnW1IXdsMYEYabZdOwxbSVaFc,7288
+mypy_boto3_forecastquery-1.17.89.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+mypy_boto3_forecastquery-1.17.89.dist-info/top_level.txt,sha256=_iDlP7XGMDyV95-H_TeFG7iL85zcNxw1Y35uSboHK-c,25
+mypy_boto3_forecastquery-1.17.89.dist-info/RECORD,,
