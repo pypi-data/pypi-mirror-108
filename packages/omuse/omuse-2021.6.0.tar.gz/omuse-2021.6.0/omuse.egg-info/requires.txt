@@ -1,0 +1,2 @@
+omuse-framework>=2021.6.0
+omuse-qgmodel>=2021.6.0
