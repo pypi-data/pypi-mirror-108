@@ -1,0 +1,136 @@
+#!/bin/bash
+#echo What is the artist of the song?
+#read ARTIST
+version="0.3"
+
+set -e 
+
+song_name=$@
+directory="/home/madhavth/Downloads/Songs"
+mp3=$(ls $directory -Art | tail -n 1)
+lds="$directory/$mp3"
+
+# Color
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[0;33m'
+NC='\033[0m' # No Color
+
+function red {
+    printf "${RED}$@${NC}\n"
+}
+
+function green {
+    printf "${GREEN}$@${NC}\n"
+}
+
+function yellow {
+    printf "${YELLOW}$@${NC}\n"
+}
+
+
+download_song()
+{
+
+if [[ $(which youtube-dl) ]]; then
+	echo ""
+else
+	echo "downloading youtube-dl"
+	sudo apt-get install -y youtube-dl
+fi
+
+name="$@"
+if [[ -z $name ]]; then
+	echo What is the name of the song?
+	read NAME
+else
+	NAME="$name"
+fi
+echo "##################################"
+echo "#### P L E A S E      W A I T  ###"
+echo "##################################"
+mkdir -p $directory && cd $directory
+youtube-dl -x --audio-format mp3 "ytsearch:$NAME album version"
+#mp3=$(ls $directory -Art | tail -n 1)
+mp3=$(find . -type f -exec ls -t \{\} \+ | tail -1)
+lds="$directory/$mp3"
+echo Your song has been downloaded successfully
+echo "saved as $mp3"
+}
+
+if [[ ! -z $song_name ]]; then
+		download_song "$song_name"
+fi
+
+
+while [[ true ]]; do
+	clear
+	mp3=$(ls $directory -t1 |  head -n 1)
+	lds="$directory/$mp3"
+	echo "$(green "Madhavth SONG DOWNLOADER ====")"
+	echo "1. Download song"
+
+	if [[ ! -z $mp3 ]]; then
+	echo "2. Delete last downloaded song"
+	echo "3. Open last downloaded song"
+	fi
+
+	echo "l. List All Songs"
+	echo "o. open music directory"
+	echo "x. Exit"
+
+
+	if [[ ! -z $mp3 ]]; then
+		echo ""
+		echo "last song --- $(yellow "$lds")"
+		echo ""
+	fi
+
+	echo ""
+	echo "choose an option or type the name of song"
+	echo ""	
+
+	read choice
+
+case $choice in
+"1")
+	download_song
+;;
+
+"o")
+	xdg-open $directory
+	;;
+
+"2")
+if [[ -f $lds ]]; then
+	echo "removing last downloaded song $lds"
+	rm "$lds"
+	lds=""
+else
+	echo "already removed or not downloaded yet"
+fi
+;;
+
+"3")
+	if [[ ! -z $lds ]]; then
+	echo "opening..."
+	xdg-open "$lds"
+else
+	echo "not downloaded yet"
+fi
+;;
+
+"x")
+	exit 0
+;;
+
+"l")
+	ls -t1 $directory --color=tty
+	read something
+	;;
+
+	*)
+  	download_song "$choice"
+  ;;
+esac
+done
