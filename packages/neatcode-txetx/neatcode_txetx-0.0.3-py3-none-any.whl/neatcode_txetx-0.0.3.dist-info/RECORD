@@ -1,0 +1,14 @@
+neatcode/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+neatcode/base.py,sha256=fCMlRu9FEzS4ElC_SuMjwKrbjSh_WszPHolqA0Od0AI,1498
+neatcode/context_management.py,sha256=_vbfC0DcHMDyp1XPF-C4J1FHkOmPYxksxdy3nqzruaE,7232
+neatcode/decoration.py,sha256=o8c_DQ_IWMDtsB2m0SzliMqScnSVTaYUz4zDM8DS-yM,6498
+neatcode/object_manipulation.py,sha256=cBw-1X0pXP5DuxXuK-WrhwU20IcXvH2AKPJOQ4qj2-s,1079
+neatcode/legacy/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+neatcode/legacy/neatcode.py,sha256=yhrgp5xKPYD2E0nGK5GRoDYqe5ZANfxzsSajQDOh3Yc,2945
+neatcode/policy/__init__.py,sha256=xgajI1WHQ_NenJ1qaO8FMR7TqrKQFxXTJbyI2pDkmJ8,87
+neatcode/policy/argument_substitution.py,sha256=auXJu92evgAy9QEzV0BmZqrlEFIrWhdf9jSeFmh_WxQ,3111
+neatcode_txetx-0.0.3.dist-info/LICENSE,sha256=O2etf42m8pMj7pLfpsBZ5ka6l3g4FNU0EsSzxqAE_mg,36911
+neatcode_txetx-0.0.3.dist-info/METADATA,sha256=ZXeIvvNp2yiShRVRPNKgFd6rv16JUb24hsQ2vbe1OKA,729
+neatcode_txetx-0.0.3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+neatcode_txetx-0.0.3.dist-info/top_level.txt,sha256=XEa23n5UEkGANp9UU4nPv9Ity2fyD0RJPjjrZZFhzrk,9
+neatcode_txetx-0.0.3.dist-info/RECORD,,
