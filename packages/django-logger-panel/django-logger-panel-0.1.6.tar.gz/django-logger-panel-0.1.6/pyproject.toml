@@ -1,0 +1,31 @@
+[tool.black]
+line-length = 88
+include = '\.pyi?$'
+target-version = ['py38']
+extend-exclude = '''
+# Files
+^/manage.py
+
+|
+
+# Directories
+/(
+  | migrations
+)/
+'''
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = """
+-v
+--cov
+--cov-branch
+--cov-fail-under 70
+--cov-report term-missing
+"""
+testpaths = [
+    "tests",
+]
+
+[tool.coverage.run]
+source = ['django_logger_panel']
