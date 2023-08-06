@@ -1,0 +1,17 @@
+coqui_stt_server/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+coqui_stt_server/__main__.py,sha256=CbXHx7Ozl0u4iy_4Z9jmRN4hEuui1Ju0gRExKFNDGD4,838
+coqui_stt_server/modelmanager.py,sha256=PEQUFkAP0y6pTuCyHZTQSekgjsV7rI4bvf42skI8cR4,9541
+coqui_stt_server/server.py,sha256=rqRttiA22ruCXeu-MBWjUNP5gR6a3k5XNgrTZgIAz-I,7696
+coqui_stt_server/static/bootstrap-icons.css,sha256=PDJQdTN7dolQWDASIoBVrjkuOEaI137FI15sqI3Oxu8,65696
+coqui_stt_server/static/bootstrap.min.css,sha256=0bkjvTIe3xttjHDoP8QAgYpUXY61T19nH6gbhxqbPys,140937
+coqui_stt_server/static/coqui-STT-logo-green.png,sha256=3hFXgnD01IbGUg40MpKDWznqBjxa9yNKUASrE5UGkyw,61544
+coqui_stt_server/static/fonts/bootstrap-icons.woff,sha256=w65Ia96N0QPyBYAPKofBeMuIOIM9IWo85wdBwHzfYjM,120468
+coqui_stt_server/static/fonts/bootstrap-icons.woff2,sha256=dlBuEo8rR7cXn1A3vYhaFnRFX_62tQk820x-779DbOg,90528
+coqui_stt_server/templates/index.html,sha256=ira7kkM83M8zyeU-yoMKs4hPoeEE9usJ9lRJqrvsQJ8,4107
+coqui_stt_server/templates/transcribe.html,sha256=Vk0pjxsuBnygth6SxFP-FbDYtjPSY2hv2ACZ6MS65kI,313
+coqui_stt_server-0.0.3.dist-info/LICENSE,sha256=HyVuytGSiAUQ6ErWBHTqt1iSGHhLmlC8fO7jTCuR8dU,16725
+coqui_stt_server-0.0.3.dist-info/METADATA,sha256=TTXB0u-Kc-4U7kYvlIQTL6i3cPHYWfvmD8J5k3wQh7g,18068
+coqui_stt_server-0.0.3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+coqui_stt_server-0.0.3.dist-info/entry_points.txt,sha256=XlGpJnEW-jDo2sYdOGt17zSayoVLGEhNPR0Y5v3fWIU,63
+coqui_stt_server-0.0.3.dist-info/top_level.txt,sha256=Sv9zTNIpp52bsB_RSIPgdBIAX6bW13m-oB97-6IXP1w,17
+coqui_stt_server-0.0.3.dist-info/RECORD,,
