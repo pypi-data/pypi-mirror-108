@@ -1,0 +1,6 @@
+bs4
+clipboard
+infi.systray
+requests
+system_hotkey
+win10toast

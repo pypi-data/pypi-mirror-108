@@ -1,0 +1,11 @@
+README.md
+setup.py
+u2t/__init__.py
+u2t.egg-info/PKG-INFO
+u2t.egg-info/SOURCES.txt
+u2t.egg-info/dependency_links.txt
+u2t.egg-info/entry_points.txt
+u2t.egg-info/requires.txt
+u2t.egg-info/top_level.txt
+u2t/resources/icon/normal.ico
+u2t/resources/icon/running.ico
