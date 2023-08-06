@@ -1,0 +1,4 @@
+[console_scripts]
+autoreduce-manual-remove = autoreduce_scripts.manual_operations.manual_remove:fire_entrypoint
+autoreduce-manual-submission = autoreduce_scripts.manual_operations.manual_submission:fire_entrypoint
+
