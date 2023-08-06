@@ -1,0 +1,8 @@
+pandas
+matplotlib
+requests
+requests_cache
+numpy
+bs4
+tqdm
+pytz

@@ -1,0 +1,7 @@
+setup.py
+me_main_libs/__init__.py
+me_main_libs.egg-info/PKG-INFO
+me_main_libs.egg-info/SOURCES.txt
+me_main_libs.egg-info/dependency_links.txt
+me_main_libs.egg-info/requires.txt
+me_main_libs.egg-info/top_level.txt
