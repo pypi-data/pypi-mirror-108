@@ -1,0 +1,11 @@
+README.md
+setup.py
+pypdf/__init__.py
+pypdf/logger.py
+pypdf/utils.py
+pypdf/bin/__init__.py
+pypdf_lib.egg-info/PKG-INFO
+pypdf_lib.egg-info/SOURCES.txt
+pypdf_lib.egg-info/dependency_links.txt
+pypdf_lib.egg-info/requires.txt
+pypdf_lib.egg-info/top_level.txt
