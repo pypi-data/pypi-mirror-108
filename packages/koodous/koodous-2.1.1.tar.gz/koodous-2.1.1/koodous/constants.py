@@ -1,0 +1,31 @@
+KOODOUS_API_URL = 'https://api.koodous.com'
+KOODOUS_API_ENDPOINTS = {
+    # Most used methods.
+    'apks': '/apks',
+    'apks_detail': '/apks/{sha256}',
+    'apks_detail_download': '/apks/{sha256}/download',
+    'apks_detail_upload': '/apks/{sha256}/get_upload_url',
+    'apks_detail_analysis': '/apks/{sha256}/analysis',
+    'apks_detail_analyze': '/apks/{sha256}/analyze',
+    'apks_feed': '/feed/apks?package={package}',
+    'analyses_feed': '/feed/analyses?package={package}',
+    'detected_feed': '/feed/detected?package={package}',
+    # Misc methods.
+    'apks_detail_comments': '/apks/{sha256}/comments',
+    'apks_detail_comments_detail': '/apks/{sha256}/comments/{comment_id}',
+    'apks_detail_votes': '/apks/{sha256}/votes',
+    'analysts': '/analysts',
+    'analysts_detail': '/analysts/{username}',
+    'analysts_detail_followers': '/analysts/{username}/followers',
+    'analysts_detail_following': '/analysts/{username}/following',
+    'analysts_detail_comments': '/analysts/{username}/comments',
+    'analysts_detail_activity': '/analysts/{username}/activity',
+    'analysts_detail_rulesets': '/analysts/{username}/rulesets',
+    'analysts_detail_follow': '/analysts/{username}/follow',
+    'analysts_detail_unfollow': '/analysts/{username}/unfollow',
+    'user_rulesets': '/user_rulesets',
+    'user_rulesets_detail': '/user_rulesets/{rule_id}',
+    'public_rulesets': '/public_rulesets',
+    'public_rulesets_detail': '/public_rulesets/{ruleset_id}',
+    'public_rulesets_detail_votes': '/public_rulesets/{ruleset_id}/votes',
+}
