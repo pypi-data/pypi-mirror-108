@@ -1,0 +1,12 @@
+tisdb/__init__.py,sha256=PAkDs4CqIkxZNqLzWKP4_BZl9b91MvU5d4S94oin824,292
+tisdb/api.py,sha256=3R3qSelUfCXarrOFSd2x9sJhRTZ4cEFhwyGBRc2Sqyc,7475
+tisdb/client.py,sha256=ONlxBX2ONNvDy__W02vKnwnHIcpQZTqYcct9OTOMDGY,6314
+tisdb/config.py,sha256=Sp-fRxYIncFGyE7T1SFWJDP-tyPMCtGwRQm4wyc7k80,1275
+tisdb/errors.py,sha256=j8m8JwXw8Be3ipefr6e83edwJqxDJFwUPQUPhHsv0iQ,1224
+tisdb/types.py,sha256=lRYJASX-jTy3z49U-BDTtvGFQYeiQOWqXUwsAhNMnzY,206
+tisdb/model/__init__.py,sha256=vezvyBsx472yYS0W1TXOaVnfQ38kzJFgLwbjC2HDF9g,2434
+tisdb/model/mysql/__init__.py,sha256=h1tXEzHpstAFwikGo7RmOLL6yr-IRi4wIqPudCJaYJw,1100
+tisdb-0.0.4b4.dist-info/METADATA,sha256=NP4YoMGfRiBdDcAR9BHVQVElxnzTI9uxotggs_x3Sfk,1115
+tisdb-0.0.4b4.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+tisdb-0.0.4b4.dist-info/top_level.txt,sha256=I1ALhHPlHQrWq9YsPM3l1hgsEu0a1o6-E5TrNdA4xy8,6
+tisdb-0.0.4b4.dist-info/RECORD,,
