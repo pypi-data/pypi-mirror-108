@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: elz-py-tools
+Version: 0.1.0
+Summary: Python tools for Elzeard modules
+License: Apache v2
+Author: Hervé
+Author-email: herve.descombe@elzeard.co
+Requires-Python: >=3.8,<4.0
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: aio-pika (>=6.8.0,<7.0.0)
+Requires-Dist: pymongo (>=3.11.4,<4.0.0)
