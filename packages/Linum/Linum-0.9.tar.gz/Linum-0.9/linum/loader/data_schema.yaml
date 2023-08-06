@@ -1,0 +1,9 @@
+map(include('task'))
+---
+task:
+  length: int(required=False)
+  date: day(required=False)
+  finish: day(required=False)
+  color: int(required=False)
+  sub: any(list(include('task')), map(include('task')), required=False)
+#  sub: map(include('task'), required=False)

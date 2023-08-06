@@ -1,0 +1,143 @@
+period: include('period', required=False)
+
+txt: include('txt_renderer', required=False)
+xlsx: include('excel_renderer', required=False)
+svg: include('svg_renderer', required=False)
+
+workdays: list(day(), required=False)
+days_off: list(day(), required=False)
+
+---
+
+period: &Period
+  start: day(required=False)
+  finish: day(required=False)
+  length: int(required=False)
+  months_in_row: int(required=False)
+
+
+# Txt renderer ###############################################################
+
+txt_renderer:
+  <<: *Period
+  cell_width: int()
+  inner_borders: bool(required=False)
+  month_inner_borders: bool(required=False)
+  left_border: bool(required=False)
+  right_border: bool(required=False)
+
+
+# Excel renderer #############################################################
+
+xlsxwriter_styles: &Xlsxwriter_styles
+  font_name: str(required=False)
+  font_size: int(required=False)
+  font_color: any(int(), Regex('^auto$'), required=False)
+  bold: bool(required=False)
+  italic: bool(required=False)
+  underline: bool(required=False)
+  num_format: str(required=False)
+  align: enum('left', 'center', 'right', required=False)
+  valign: enum('top', 'vcenter', 'bottom', required=False)
+  bg_color: any(int(), null(), required=False)
+  left: any(int(min=0, max=13), null(), required=False)
+  right: any(int(min=0, max=13), null(), required=False)
+  top: any(int(min=0, max=13), null(), required=False)
+  bottom: any(int(min=0, max=13), null(), required=False)
+  left_color: any(int(), Regex("^blackout$"), required=False)
+  right_color: any(int(), Regex("^blackout$"), required=False)
+  top_color: any(int(), Regex("^blackout$"), required=False)
+  bottom_color: any(int(), Regex("^blackout$"), required=False)
+
+excel_linum_styles: &Excel_linum_styles
+  <<: *Xlsxwriter_styles
+  use_blackout: bool(required=False)
+  blackout_value: num(min=0.0, max=1.0, required=False)
+  cell_width_px: int(min=0, required=False)
+  cell_height_px: int(min=0, required=False)
+
+excel_header:
+  <<: *Excel_linum_styles
+  months: include('excel_linum_styles', required=False)
+  days: include('excel_linum_styles', required=False)
+  weekdays: include('excel_linum_styles', required=False)
+
+excel_layers:
+  <<: *Excel_linum_styles
+  space_row: include('excel_linum_styles', required=False)
+  space: include('excel_linum_styles', required=False)
+  tasks: include('excel_linum_styles', required=False)
+
+excel_days_off:
+  <<: *Excel_linum_styles
+  header: include('excel_header', required=False)
+  layers: include('excel_layers', required=False)
+
+excel_styles:
+  <<: *Excel_linum_styles
+  header: include('excel_header', required=False)
+  layers: include('excel_layers', required=False)
+  days_off: include('excel_days_off', required=False)
+
+excel_renderer:
+  <<: *Period
+  styles: include('excel_styles', required=False)
+
+
+# Svg renderer ###############################################################
+
+svg_raw_styles: &SvgRawStyles
+  style: str(required=False)
+
+svg_border: &SvgBorder
+  left: bool(required=False)
+  right: bool(required=False)
+  top: bool(required=False)
+  bottom: bool(required=False)
+
+svg_linum_styles: &SvgLinumStyles
+  <<: *SvgRawStyles
+  <<: *SvgBorder
+  align: enum('left', 'center', 'right', required=False)
+  valign: enum('top', 'vcenter', 'bottom', required=False)
+  height: int(required=False)
+  padding-left: int(required=False)
+  padding-top: int(required=False)
+  padding-right: int(required=False)
+  padding-bottom: int(required=False)
+
+svg_cell: &SvgCell
+  <<: *SvgLinumStyles
+  background: include('svg_linum_styles', required=False)
+  text: include('svg_linum_styles', required=False)
+
+svg_header:
+  <<: *SvgLinumStyles
+  months: include('svg_cell', required=False)
+  days: include('svg_cell', required=False)
+  weekdays: include('svg_cell', required=False)
+
+svg_tasks:
+  <<: *SvgCell
+  indent: int(required=False)
+  auto-font-color: bool(required=False)
+
+svg_layers:
+  indent: int(required=False)
+  tasks: include('svg_tasks', required=False)
+
+svg_grid:
+  <<: *SvgRawStyles
+
+svg_styles:
+  <<: *SvgLinumStyles
+  header: include('svg_header', required=False)
+  layers: include('svg_layers', required=False)
+  grid: include('svg_grid', required=False)
+
+svg_renderer:
+  <<: *Period
+  css: str(required=False)
+  locale: str(required=False)
+  width: int(required=False)
+  styles: include('svg_styles', required=False)
