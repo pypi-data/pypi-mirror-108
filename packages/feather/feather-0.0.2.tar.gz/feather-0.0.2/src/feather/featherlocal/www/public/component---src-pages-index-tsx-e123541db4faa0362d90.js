@@ -1,0 +1,2 @@
+(self.webpackChunkfeather_components=self.webpackChunkfeather_components||[]).push([[691],{8308:function(e,n,t){"use strict";t.r(n);var r=t(7294),u=t(7645);n.default=function(){return r.createElement(r.Fragment,null,r.createElement(u.Z,null))}}}]);
+//# sourceMappingURL=component---src-pages-index-tsx-e123541db4faa0362d90.js.map
