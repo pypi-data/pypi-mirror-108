@@ -1,0 +1,11 @@
+LICENSE.txt
+README.md
+setup.py
+mudstring/__init__.py
+mudstring/demo.py
+mudstring/util.py
+mudstring.egg-info/PKG-INFO
+mudstring.egg-info/SOURCES.txt
+mudstring.egg-info/dependency_links.txt
+mudstring.egg-info/top_level.txt
+mudstring/__pycache__/__init__.cpython-38.pyc
