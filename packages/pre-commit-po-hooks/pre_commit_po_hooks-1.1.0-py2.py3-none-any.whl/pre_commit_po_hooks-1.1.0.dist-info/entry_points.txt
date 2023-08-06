@@ -1,0 +1,5 @@
+[console_scripts]
+lreplace-extracted-comments-hook = hooks.lreplace_extracted_comments:main
+obsolete-messages-hook = hooks.obsolete_messages:main
+untranslated-messages-hook = hooks.untranslated_messages:main
+
