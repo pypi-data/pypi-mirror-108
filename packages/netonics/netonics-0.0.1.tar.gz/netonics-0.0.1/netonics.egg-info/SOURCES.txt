@@ -1,0 +1,8 @@
+setup.py
+netonics.egg-info/PKG-INFO
+netonics.egg-info/SOURCES.txt
+netonics.egg-info/dependency_links.txt
+netonics.egg-info/requires.txt
+netonics.egg-info/top_level.txt
+zivlons/__init__.py
+zivlons/netonics.py

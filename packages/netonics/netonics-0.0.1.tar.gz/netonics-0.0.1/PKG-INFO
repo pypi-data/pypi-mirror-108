@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: netonics
+Version: 0.0.1
+Summary: A Python Package that allows you to search google easily and shorten links.
+Home-page: UNKNOWN
+Author: Programmer101 (WSLTitanic)
+Author-email: <wsl.com.uk@gmail.com>
+License: UNKNOWN
+Description: A Python Package that allows you to search google easily and shorten links. The commmands uptil now are "url_shorten(url)" to shorten a URL and "search_google(search)" to search Google.
+Keywords: python,shorten,Google,web,search,httpstream,shorten-links
+Platform: UNKNOWN
+Classifier: Development Status :: 1 - Planning
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
