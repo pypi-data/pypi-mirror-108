@@ -1,0 +1,13 @@
+efb_qq_slave/ChatMgr.py,sha256=5U3a3iUre3HhqK6EO-RJTZFRv6yje9TSO2gowfkoAfI,2330
+efb_qq_slave/ClientMgr.py,sha256=xnPhAdN34Y9YkNw42K44ZxrAA1c5lyKbXqmhK4clRO4,943
+efb_qq_slave/CustomTypes.py,sha256=Nr9GJO0xBaV1xd86SSoC8pD8TFpcv9YsK3f6w2rRNRI,227
+efb_qq_slave/__init__.py,sha256=j2VMz-xTEvpVCdYcT_MEumoCWpW9Y0gdblj-ZAjJmQA,3663
+efb_qq_slave/__version__.py,sha256=b2ntGoJvEkqNIi2KUAViEGoQ9xOSFlfVgomtAeesA38,39
+efb_qq_slave/Clients/BaseClient.py,sha256=TicpPJJvEwM_HgRWSyAaW_wkdiUcFKgJLZ3ZYzz285Q,1908
+efb_qq_slave/Clients/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+efb_qq_slave-2.0.1.dist-info/LICENSE,sha256=jOtLnuWt7d5Hsx6XXB2QxzrSe2sWWh3NgMfFRetluQM,35147
+efb_qq_slave-2.0.1.dist-info/METADATA,sha256=Oscm5D14bjJLQ4YJE6hfJVHD9yKUzHB_RVZiQTz3N-s,3450
+efb_qq_slave-2.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+efb_qq_slave-2.0.1.dist-info/entry_points.txt,sha256=5k70XuKuQqHzSYuSnFsnrCmaCuc9FqBiT4MmGMPbQt0,69
+efb_qq_slave-2.0.1.dist-info/top_level.txt,sha256=hfrOMCNW3JJIG3F-jLcyoKHBamZ9sRfKowLMTqZDuYs,13
+efb_qq_slave-2.0.1.dist-info/RECORD,,
