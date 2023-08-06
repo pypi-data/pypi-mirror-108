@@ -1,0 +1,9 @@
+apisports/__init__.py,sha256=i4YnBuI9st5cPT1CvfpuW-8o2-trKYZGcqJBP65CRz0,382
+apisports/_client.py,sha256=L1SnyNZocH4lyiu7BMFCHVyQZLMxuFSeJF_xI-3Dp_g,3209
+apisports/data.py,sha256=8Dqb_SKr5PcPayLXnjUti5Izi2s8kom_34vteLEXbSg,3955
+apisports/response.py,sha256=dkwieur21o9qV_GOpVHwFAPBYsKup-ZyO38fGmUPq_g,5688
+apisports-0.1.0.dist-info/LICENSE,sha256=7gyrkqrfOj3rIBJandAsW4_shQnqn1u9AOU6o-1wfhs,1068
+apisports-0.1.0.dist-info/METADATA,sha256=lHBHoMswu0O4MBOoltrfC-H7bQLabTwtOziS5r04WP4,2851
+apisports-0.1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+apisports-0.1.0.dist-info/top_level.txt,sha256=EWWidNlhBu4cpTEjqRMQs78nzRVASVTeRglGh1qvR80,10
+apisports-0.1.0.dist-info/RECORD,,
