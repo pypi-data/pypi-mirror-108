@@ -1,0 +1,11 @@
+gensim
+Orange3>=3.28
+
+[GUI]
+AnyQt
+
+[reST]
+numpydoc
+
+[test]
+coverage
