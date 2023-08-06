@@ -1,0 +1,14 @@
+README.md
+pyproject.toml
+setup.cfg
+subsql/__init__.py
+subsql/sqlitedriver.py
+subsql/subsql.py
+subsql.egg-info/PKG-INFO
+subsql.egg-info/SOURCES.txt
+subsql.egg-info/dependency_links.txt
+subsql.egg-info/top_level.txt
+subsql/parser/__init__.py
+subsql/parser/parser.py
+subsql/parser/types.py
+subsql/parser/util.py
