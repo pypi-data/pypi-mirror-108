@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: color-debugger
+Version: 1.0.0
+Summary: Color debug to your terminal by termcolor library
+Author: Alex.Net
+Author-email: sascha@orlanm.ru
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
