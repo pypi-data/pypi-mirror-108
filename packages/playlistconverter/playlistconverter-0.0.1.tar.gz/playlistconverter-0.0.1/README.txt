@@ -1,0 +1,1 @@
+PlaylistConverter takes an Apple Music playlist and creates an identical Spotify playlist under in the user's account
