@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+nistauthenticator/__init__.py
+nistauthenticator/nistauthenticator.py
+nistauthenticator.egg-info/PKG-INFO
+nistauthenticator.egg-info/SOURCES.txt
+nistauthenticator.egg-info/dependency_links.txt
+nistauthenticator.egg-info/requires.txt
+nistauthenticator.egg-info/top_level.txt
