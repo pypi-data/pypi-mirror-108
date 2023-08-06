@@ -1,0 +1,9 @@
+requests_hawk/__init__.py,sha256=KD7VgzY4aJ3ehAtwHp516LMlAARo_eoFz4R4EMrZ-Y8,4690
+requests_hawk/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+requests_hawk/tests/test_hawkauth.py,sha256=hAjPaX-DxsSFL4UUxfQd8f-szuSM81pUv2QlPJjRoNc,4949
+requests_hawk-1.1.1.dist-info/LICENSE.txt,sha256=oNEIMTuTJzppR5ZEyi86yvvtSagveMYXTYFn56zF0Uk,561
+requests_hawk-1.1.1.dist-info/METADATA,sha256=vDeFnLO5959-V83ZxIKAd1iPVIqFUrEHdK8Q-P6cFDc,5413
+requests_hawk-1.1.1.dist-info/WHEEL,sha256=ADKeyaGyKF5DwBNE0sRE5pvW-bSkFMJfBuhzZ3rceP4,110
+requests_hawk-1.1.1.dist-info/entry_points.txt,sha256=vWh8-BxUg8OWE91QrZ2jlr4nO7CSmZdY99J7YTWBBf8,65
+requests_hawk-1.1.1.dist-info/top_level.txt,sha256=sM7xfp7m-pNn5-a9Pxgsp_Iu2xzoZnjC5VIQos3MOYA,14
+requests_hawk-1.1.1.dist-info/RECORD,,
