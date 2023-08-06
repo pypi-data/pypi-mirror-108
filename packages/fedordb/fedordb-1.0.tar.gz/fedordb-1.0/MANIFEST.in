@@ -1,0 +1,4 @@
+include fedordb_test_client.py
+include fedordb.py
+include requirements.txt
+graft storage

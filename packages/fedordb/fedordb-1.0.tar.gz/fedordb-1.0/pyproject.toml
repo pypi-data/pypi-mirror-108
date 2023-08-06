@@ -1,0 +1,16 @@
+[build-system]
+requires = [
+    "flit_core >=2,<4",
+    "setuptools >= 35.0.2",
+    "setuptools_scm >= 2.0.0, <3",]
+
+build-backend = "setuptools.build_meta"
+
+[tool.flit.metadata]
+module = "fedordb"
+author = "Fedor Avdeev"
+author-email = "f.avdeev@list.ru"
+home-page = "https://github.com/fedor11235/fedordb"
+classifiers = [ "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",]
+description-file = "README.md"
+
