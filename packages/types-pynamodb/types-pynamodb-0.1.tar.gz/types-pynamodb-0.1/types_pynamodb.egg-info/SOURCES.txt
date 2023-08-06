@@ -1,0 +1,8 @@
+LICENSE
+README.rst
+pyproject.toml
+setup.py
+types_pynamodb.egg-info/PKG-INFO
+types_pynamodb.egg-info/SOURCES.txt
+types_pynamodb.egg-info/dependency_links.txt
+types_pynamodb.egg-info/top_level.txt
