@@ -1,0 +1,72 @@
+Metadata-Version: 2.1
+Name: proofdock-reliability-platform-django
+Version: 1.0.0
+Summary: A reliability platform client for Django applications.
+Home-page: https://github.com/proofdock/chaos-middleware-python/tree/master/src/contrib-django
+Author: Proofdock Authors
+Author-email: support@proofdock.io
+License: Apache-2.0
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.5.*
+Description-Content-Type: text/markdown
+Requires-Dist: django
+Requires-Dist: proofdock-reliability-platform-core
+
+# Django integration
+
+![CI](https://github.com/proofdock/chaos-middleware-python/workflows/CI/badge.svg?branch=master)
+[![Python versions](https://img.shields.io/pypi/pyversions/proofdock-chaos-middleware-django.svg)](https://www.python.org/)
+
+## Installation
+
+This package requires Python 3.5+
+
+```
+$ pip install -U proofdock-reliability-platform-django
+```
+
+## Usage
+
+The chaos middleware takes the following **input variables**:
+
+| Variable | Description |
+| ---      | ---         |
+| `RELIABILITY_PLATFORM_APPLICATION_NAME` | The service application's name |
+| `RELIABILITY_PLATFORM_APPLICATION_ENV` | The service application's deployed environment |
+| `RELIABILITY_PLATFORM_PROOFDOCK_API_TOKEN` | The API token to connect to Proofdock's Chaos API |
+
+The **configuration** exemplified as **code**:
+
+```python
+# file: settings.py
+MIDDLEWARE = [
+    '..'
+    'proofdock.rp.contrib.django.middleware.DjangoMiddleware',
+    '..'
+]
+
+# other settings ...
+
+CHAOS_MIDDLEWARE = {
+    'RELIABILITY_PLATFORM_APPLICATION_NAME': 'example-application-name',
+    'RELIABILITY_PLATFORM_APPLICATION_ENV': 'example-environment',
+    'RELIABILITY_PLATFORM_PROOFDOCK_API_TOKEN': 'eyJ0eXAi...05'
+}
+```
+
+Start your Django application and create an attack using **HTTP request header** or **control panel**. Read more about attacks [here][attack_usage].
+
+
+[attack_usage]: https://docs.proofdock.io/chaos/middleware/about/#usage
+
+

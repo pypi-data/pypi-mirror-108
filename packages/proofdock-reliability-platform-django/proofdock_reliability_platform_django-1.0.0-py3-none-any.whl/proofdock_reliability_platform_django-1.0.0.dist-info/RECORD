@@ -1,0 +1,8 @@
+proofdock/rp/contrib/django/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+proofdock/rp/contrib/django/config.py,sha256=B8H4gKwHFC0fYbJ3BaqK4TsKYjWcVheP_D1paJ8HV0Y,663
+proofdock/rp/contrib/django/middleware.py,sha256=g3fq9Zf6PmrKWTvMGu1Hi_5iQrIxLjFXdaGMl8vNZDQ,958
+proofdock/rp/contrib/django/version.py,sha256=RsZjRjMprNcDm97wqRRSk6rTLgTX8N0GyicZyZ8OsBQ,22
+proofdock_reliability_platform_django-1.0.0.dist-info/METADATA,sha256=54MYqKwHyTtPMKtmN1GRCDsk6mRHALNR5usbklyGoJE,2375
+proofdock_reliability_platform_django-1.0.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+proofdock_reliability_platform_django-1.0.0.dist-info/top_level.txt,sha256=s3H5DYH0zcyOYLZl2GLt2BDacI0Mx7bH3JEPMkfJIoA,10
+proofdock_reliability_platform_django-1.0.0.dist-info/RECORD,,
