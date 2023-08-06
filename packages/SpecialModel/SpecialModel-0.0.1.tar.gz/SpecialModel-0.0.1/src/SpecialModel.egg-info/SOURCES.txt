@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/SpecialModel.egg-info/PKG-INFO
+src/SpecialModel.egg-info/SOURCES.txt
+src/SpecialModel.egg-info/dependency_links.txt
+src/SpecialModel.egg-info/top_level.txt
+src/special_model/DictionaryModel.py
+src/special_model/DictionaryModelConsts.py
+src/special_model/__init__.py
