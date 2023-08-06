@@ -1,0 +1,3 @@
+[console_scripts]
+pycm=python_configuration_management.cli:pycm
+
