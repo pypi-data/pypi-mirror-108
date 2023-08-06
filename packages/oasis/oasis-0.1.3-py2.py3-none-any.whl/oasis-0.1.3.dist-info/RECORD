@@ -1,0 +1,13 @@
+oasis/__init__.py,sha256=5tZIky7mL7A0iJFoL9xh_EIDSA9trux7q86a-7Ce50c,553
+oasis/druck.py,sha256=WZbNdcWD8C1KcNysDBgKvQriPa4OsDq2M2sS4--TFpo,9949
+oasis/experiments.py,sha256=V-fuLohm9Qsbhaq38ijfLUWMCE-P0ieBny-lP-YFcHs,9185
+oasis/input_verification.py,sha256=wfG8RgSu19blzuay2ZPmQTr2iMBA_G4XkMPuPskpi2w,4806
+oasis/oasis.py,sha256=WR3qbHw1k6LLcYH0uhHD4NAcalcWPw1uqBYaf6NqBmA,18703
+oasis/passive.py,sha256=qfwNOjbNXYZolPH_gxAP3jD6Vc765Hoelxotond2G8I,10730
+oasis/sawade.py,sha256=oeK7i2yX9MOplpfViCxAfYsWjwi7Lqg6G-bks1wyqwE,7889
+oasis/stratification.py,sha256=ZCI6bMmR4mKti_u_x6NtZlfOMsktmgddFnQWzPBADIg,12860
+oasis-0.1.3.dist-info/LICENSE,sha256=1LOUENSMAj0eAU80fHEj_R4qx_p_Ctuj31jmdH3EqUw,1070
+oasis-0.1.3.dist-info/METADATA,sha256=4eEjTYEAoHY1WsCzt229RdhFtK079tm-ri9iOzR78jY,2617
+oasis-0.1.3.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+oasis-0.1.3.dist-info/top_level.txt,sha256=UxdmXisp4u6wv14DA6QucKU9Tx73bGF2aKqnjbhOwDg,6
+oasis-0.1.3.dist-info/RECORD,,
