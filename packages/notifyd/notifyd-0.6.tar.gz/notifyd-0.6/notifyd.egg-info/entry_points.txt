@@ -1,0 +1,3 @@
+[console_scripts]
+notifyd = notifyd.notifyd:main
+
