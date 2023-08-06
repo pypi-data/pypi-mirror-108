@@ -1,0 +1,3 @@
+[console_scripts]
+run-mdpp-experiments=mdp_playground.scripts.run_experiments:cli
+
