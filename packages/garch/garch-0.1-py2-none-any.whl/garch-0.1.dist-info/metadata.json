@@ -1,0 +1,1 @@
+{"extensions": {"python.details": {"contacts": [{"email": "mckenna.rogers@usu.edu", "name": "McKenna Rogers", "role": "author"}], "document_names": {"description": "DESCRIPTION.rst"}, "project_urls": {"Home": "https://github.com/mckennarogers/garch"}}}, "generator": "bdist_wheel (0.30.0)", "metadata_version": "2.0", "name": "garch", "summary": "GARCH (2,2)", "version": "0.1"}
