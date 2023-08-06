@@ -1,0 +1,10 @@
+icalendar
+lxml
+python-dateutil
+pytz
+
+[rally]
+pyral>1.5
+
+[smartsheet]
+smartsheet-python-sdk-py39
