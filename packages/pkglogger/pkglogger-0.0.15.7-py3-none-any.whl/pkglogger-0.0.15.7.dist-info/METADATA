@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: pkglogger
+Version: 0.0.15.7
+Summary: This package help you to keep logs
+Home-page: https://github.com/pypa/sampleproject
+Author: Avik Das
+Author-email: avik_das_2017@cba.isb.edu
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/pypa/sampleproject/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=2.0
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+**#Developer : Avik Das**
+
+*##Steps to run the package :*
+
+1. pip install pkglogger==<version number>
+2. from pkglogger import pkglogger
+
+*logger()*
+1. pkglogger.logger(,'','','','')
+2. var1 = Logger number
+3. var2 = Function name
+4. var3 = Task status
+6. var4 = Output path
+7. var5 = URL Link
+
+*exceptionlogger()*
+1. pkglogger.exceptionlogger(,'','','','')
+2. var1 = Logger number
+3. var2 = Function name
+4. var3 = Task status
+6. var4 = Output path
+7. var5 = URL Link
+8. var6 = e ( except Exception as e)
+
+*Return the exception details as well *
+
+
