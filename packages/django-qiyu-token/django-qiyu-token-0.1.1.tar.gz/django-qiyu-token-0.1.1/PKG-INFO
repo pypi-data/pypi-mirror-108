@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: django-qiyu-token
+Version: 0.1.1
+Summary: Django Token Management APP
+Home-page: https://oss.qiyutech.tech/
+Author: dev
+Author-email: dev@qiyutech.tech
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: django (>=3.2,<3.3)
+Project-URL: Documentation, https://github.com/QiYuTechOrg/django-qiyu-token
+Project-URL: Repository, https://github.com/QiYuTechOrg/django-qiyu-token
+Description-Content-Type: text/markdown
+
+# Django Token Management
+
+Django 令牌管理 APP
+
+## 当前支持:
+
+* Bearer 令牌
+
