@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: pseutopy
+Version: 3.0.7
+Summary: PseuToPy is a package that transpiles pseudocode into its equivalent Python code
+Home-page: https://github.com/PseuToPy/PseuToPy
+Author: Patrick Wang
+Author-email: patrick.wang@pseutopy.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/PseuToPy/PseuToPy/issues
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Education
+Classifier: Topic :: Education
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+License-File: LICENSE
+
+PseuToPy is a package that transpiles pseudocode into its equivalent Python code
+
