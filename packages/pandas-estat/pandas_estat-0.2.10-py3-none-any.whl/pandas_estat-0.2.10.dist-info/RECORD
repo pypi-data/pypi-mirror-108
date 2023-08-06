@@ -1,0 +1,10 @@
+pandas_estat/__init__.py,sha256=1bCY0prz9vYXsdTmlsrWrBoE2XXxCcpwzAK68TysS5Q,157
+pandas_estat/appid.py,sha256=9Ia7WMdMfXKYAbdo7zuV4u9bcW75vpyQ9AKc0EI5jdM,1132
+pandas_estat/base.py,sha256=mLsLhJqBo1Q6oLEpmovPFKdP5i_GEP3K_Ys0EDe0akU,4082
+pandas_estat/exceptions.py,sha256=SxPQ2RUHCnWjvzUXKnQ1tkkbAJELAw7hlnOdeKVQyAE,36
+pandas_estat/statsdata.py,sha256=MXPgxWaVq7fmrq4WhjHfIsAgyTfERPKTx52eYwDffUY,6070
+pandas_estat/statslist.py,sha256=9tf71UQzSI_4RiMLIPpZb0G6w5lv_grIMJvFECNZAHQ,7559
+pandas_estat-0.2.10.dist-info/LICENSE,sha256=dpxK5mCKnkTx4uBkZVeW0L7hB048YU9-136QpbItxrg,1516
+pandas_estat-0.2.10.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+pandas_estat-0.2.10.dist-info/METADATA,sha256=73zKclm0Ze7Uubwlsd9_HLH-KsNHEI4TVv8vFeQc0jc,665
+pandas_estat-0.2.10.dist-info/RECORD,,
