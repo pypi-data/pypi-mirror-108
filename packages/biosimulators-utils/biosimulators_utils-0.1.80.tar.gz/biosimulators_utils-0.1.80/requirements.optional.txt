@@ -1,0 +1,17 @@
+[cellml]
+libcellml
+
+[lems]
+pylems
+
+[neuroml]
+libneuroml
+
+[sbml]
+python_libsbml
+
+[containers]
+docker >= 4.4
+
+[logging]
+capturer
