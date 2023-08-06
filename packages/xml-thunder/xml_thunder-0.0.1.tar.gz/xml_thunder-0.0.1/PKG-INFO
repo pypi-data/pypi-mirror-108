@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: xml_thunder
+Version: 0.0.1
+Summary: XML Thunder is a compact library used to create xml parsers
+Home-page: https://github.com/HUNTERG5100/xml_thunder
+Author: HUNTER5100
+Author-email: hunterg5100@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/HUNTERG5100/xml_thunder/issues
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.0
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# xml_thunder
+

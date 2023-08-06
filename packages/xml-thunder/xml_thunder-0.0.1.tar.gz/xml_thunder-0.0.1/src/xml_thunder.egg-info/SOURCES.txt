@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/xml_thunder/__init__.py
+src/xml_thunder/core.py
+src/xml_thunder.egg-info/PKG-INFO
+src/xml_thunder.egg-info/SOURCES.txt
+src/xml_thunder.egg-info/dependency_links.txt
+src/xml_thunder.egg-info/top_level.txt
