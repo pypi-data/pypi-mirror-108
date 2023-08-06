@@ -1,0 +1,13 @@
+.gitignore
+LICENSE
+README.md
+README.rst
+requirements.txt
+setup.py
+braze_sdk/__init__.py
+braze_sdk/clients.py
+braze_sdk.egg-info/PKG-INFO
+braze_sdk.egg-info/SOURCES.txt
+braze_sdk.egg-info/dependency_links.txt
+braze_sdk.egg-info/not-zip-safe
+braze_sdk.egg-info/top_level.txt
