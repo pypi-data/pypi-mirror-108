@@ -1,0 +1,24 @@
+name: Test ENV
+
+on: [push, pull_request]
+
+jobs:
+  deploy:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+    - name: LSBLK
+      run: |
+        dd if=/dev/zero of=/tmp/loop bs=1M count=100
+        losetup /dev/loop0 /tmp/loop
+        pvcreate /dev/loop0
+        vgcreate vg1 /dev/loop0
+        lvcreate --size 90M --name lv1 vg1
+        mkfs.xfs /dev/vg1/lv1
+        lsblk
