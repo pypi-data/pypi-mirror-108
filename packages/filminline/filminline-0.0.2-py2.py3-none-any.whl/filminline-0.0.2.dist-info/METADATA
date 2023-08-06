@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: filminline
+Version: 0.0.2
+Summary: Python Boilerplate contains all the boilerplate you need to create a Python package.
+Home-page: https://github.com/rayniervanegmond/filminline
+Author: Raynier van Egmond
+Author-email: raynierx@gmail.com
+License: UNKNOWN
+Keywords: filminline
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+
+# filminline
+
+
+
+[![image](https://img.shields.io/pypi/v/filminline.svg)](https://pypi.python.org/pypi/filminline)
+[![image](https://github.com/rayniervanegmond/filminline/workflows/build/badge.svg)](https://github.com/rayniervanegmond/filminline/actions?query=workflow%3Abuild)
+[![image](https://pepy.tech/badge/filminline)](https://pepy.tech/project/filminline)
+
+
+**A package to develop financial language models from the extensible business reporting language.**
+
+
+## Features
+
+-   Create inline XBRL reader feature
+
+## Credits
+
+This package was created with [Cookiecutter](https://github.com/cookiecutter/cookiecutter) and the [rayniervanegmond/pypackage](https://github.com/rayniervanegmond/pypackage) project template.
+
+
