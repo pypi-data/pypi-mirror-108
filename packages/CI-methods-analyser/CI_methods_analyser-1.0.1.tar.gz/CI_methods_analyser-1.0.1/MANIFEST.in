@@ -1,0 +1,3 @@
+include BACKLOG.md
+include docs/*
+include 'efficacy of an arbitrary CI method for proportions - analytical solution.jpg'
