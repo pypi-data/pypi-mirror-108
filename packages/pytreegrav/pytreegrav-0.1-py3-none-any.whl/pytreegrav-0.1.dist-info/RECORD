@@ -1,0 +1,10 @@
+pytreegrav/__init__.py,sha256=mAS20UatPJAnUG9YqDpOWrL-70t97Y8rC3KftsBSVwg,46
+pytreegrav/frontend.py,sha256=lNEqRGsZBL4Rb4r2lEXnZ94eZENgF_CDY9KEo1JwT3w,8790
+pytreegrav/kernel.py,sha256=ZeiTN6Q_rtZZ0As_dUhDrprlW5H_kY84Hg7UXB2z1qE,1377
+pytreegrav/octree.py,sha256=ZlpCbi_PbZh309gYzJF98u4_FdqJasIw1Qpvu7Ax4Xc,7369
+pytreegrav/treewalk.py,sha256=QTsjWwXZ6xnPK3dluXGWEjO-AauV4K82kzhWanG1Cb0,7965
+pytreegrav-0.1.dist-info/LICENSE.txt,sha256=uZImcz4dBjAQhrwznfy6c27X0z2s0A0TsH0onAKYfxg,1062
+pytreegrav-0.1.dist-info/METADATA,sha256=5_kMnONl86pH21KbVX57VgRUtYQIF94R4weoqipj_Dk,508
+pytreegrav-0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pytreegrav-0.1.dist-info/top_level.txt,sha256=avvX4vy0S5PTjhj5CZKR3qI9O1mg8WW6vnqiLqbIb7Y,11
+pytreegrav-0.1.dist-info/RECORD,,
