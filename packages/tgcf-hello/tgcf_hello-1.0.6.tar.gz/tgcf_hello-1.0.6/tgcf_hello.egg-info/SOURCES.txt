@@ -1,0 +1,11 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.txt
+setup.py
+tgcf_hello/__init__.py
+tgcf_hello.egg-info/PKG-INFO
+tgcf_hello.egg-info/SOURCES.txt
+tgcf_hello.egg-info/dependency_links.txt
+tgcf_hello.egg-info/requires.txt
+tgcf_hello.egg-info/top_level.txt
