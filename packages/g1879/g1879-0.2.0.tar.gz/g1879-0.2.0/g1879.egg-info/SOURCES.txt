@@ -1,0 +1,5 @@
+setup.py
+g1879.egg-info/PKG-INFO
+g1879.egg-info/SOURCES.txt
+g1879.egg-info/dependency_links.txt
+g1879.egg-info/top_level.txt
