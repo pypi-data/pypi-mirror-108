@@ -1,0 +1,13 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+sl_whatsapp/__init__.py
+sl_whatsapp/__main__.py
+sl_whatsapp.egg-info/PKG-INFO
+sl_whatsapp.egg-info/SOURCES.txt
+sl_whatsapp.egg-info/dependency_links.txt
+sl_whatsapp.egg-info/entry_points.txt
+sl_whatsapp.egg-info/requires.txt
+sl_whatsapp.egg-info/top_level.txt
