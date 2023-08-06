@@ -1,0 +1,15 @@
+winrt
+
+[all]
+Pillow
+fastapi
+uvicorn
+opencv-python
+
+[api]
+Pillow
+fastapi
+uvicorn
+
+[cv2]
+opencv-python
