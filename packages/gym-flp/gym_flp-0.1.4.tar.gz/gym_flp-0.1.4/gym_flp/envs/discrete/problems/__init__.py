@@ -1,0 +1,1 @@
+from gym_flp.envs.discrete.problems import qap
