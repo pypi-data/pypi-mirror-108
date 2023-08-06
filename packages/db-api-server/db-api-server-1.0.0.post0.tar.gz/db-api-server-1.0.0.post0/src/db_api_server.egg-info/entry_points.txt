@@ -1,0 +1,3 @@
+[console_scripts]
+db_api_server = db_api_server.server:main
+
