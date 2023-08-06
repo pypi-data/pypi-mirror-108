@@ -1,0 +1,10 @@
+model_manager_test/__init__.py,sha256=LClZE7RDUUiXUP6fq2y_lMgVQaAr1VBQlE_oQpaz--k,187
+model_manager_test/evaluator.py,sha256=hSmlvvZv6HgKsTT_MNUfsbGL-xOtJQRGF2VycfGoT3c,90
+model_manager_test/halo_profiling/__init__.py,sha256=VFw4sJIt4Zc0-__eYnksN8Ku9qMhbPpHJEkXMWUiD30,4
+model_manager_test/halo_profiling/sub_halp_profiling.py,sha256=TsqHHzjvolGNmOqBDdivxTUVkvwRJt79pwfcvyBRQDM,51
+model_manager_test/halo_validation/__init__.py,sha256=zaUwswrL8s7hpf4_EzbXKd8eYDyYeGv73dPZeuh9auc,51
+model_manager_test/halo_validation/sub_halo_validation.py,sha256=xOKdxyLkNKcWeptsrQGWiid2XyJ7mN0tFCFSKqWjbcc,41
+Model_Manager_Testing-0.0.1.dist-info/METADATA,sha256=pwRR4bmxtPWHoCfKGQgX-BBSMXZL3qo-iVWtb1VQMPs,471
+Model_Manager_Testing-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+Model_Manager_Testing-0.0.1.dist-info/top_level.txt,sha256=TCa3bitMOXnMMTjjf0ix4E-Mz9p-94UqMDqxewEBymQ,19
+Model_Manager_Testing-0.0.1.dist-info/RECORD,,
