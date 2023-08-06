@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: mozart-signal-parser
+Version: 0.1.0
+Summary: 
+License: MIT
+Author: Sergey Anufrienko
+Author-email: serg@anufrienko.net
+Requires-Python: >=3.8,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: opencv-python (>=4.5.2,<5.0.0)
+Requires-Dist: pytesseract (>=0.3.7,<0.4.0)
