@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: dqclibs
+Version: 0.1.0
+Summary: Libraries for DQC
+Home-page: https://github.com/diffqc/dqclibs/
+Author: mfkasim1
+Author-email: firman.kasim@gmail.com
+License: Apache License 2.0
+Keywords: project library deep-learning dft quantum-chemistry
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# dqclibs
+Libraries for DQC, from PySCF's libraries.
+
+
