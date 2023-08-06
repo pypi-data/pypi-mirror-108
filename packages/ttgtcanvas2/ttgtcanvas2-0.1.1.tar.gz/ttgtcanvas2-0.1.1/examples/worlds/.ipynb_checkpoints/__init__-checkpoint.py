@@ -1,0 +1,1 @@
+from .test import load_world as test_world
