@@ -1,0 +1,15 @@
+yaspi/yaspi.py,sha256=2egUsgzjMCFDgl4H-ASkHcfCqF7I9hIGCX_c72LY8Dg,17016
+yaspi/misc/minimal_ray_example.py,sha256=_rThxCXbxrfD5KTjal97gd6xzg7WtRP5A6FG1mODiOg,978
+yaspi/templates/cpu-proc/master.sh,sha256=6eSfOYzO7GsoknEVnAvAalCAobIIJxzZVU-jGkWqzC0,93
+yaspi/templates/cpu-proc/template.sh,sha256=NCYWdKe6Tz4bbnq4UVAuiNOVeidRhsZH41B0g4R-ojk,880
+yaspi/templates/gpu-proc/master.sh,sha256=6eSfOYzO7GsoknEVnAvAalCAobIIJxzZVU-jGkWqzC0,93
+yaspi/templates/gpu-proc/template.sh,sha256=FL-tM_cpoAPj4641lJsjpVtmxF65nqThw1-Ph-dbiJE,940
+yaspi/templates/ray/ray-master.sh,sha256=UnRtU_mAZIWg9RLXxcqR9CF6Z_unTpJN9t_mMfvP-hU,567
+yaspi/templates/ray/ray-sbatch.sh,sha256=MatEgl8UbaHfW5OSAEK3nWk56AfYXpMA23cHVYuZsFM,2614
+yaspi/templates/ray/start-ray-head-node.sh,sha256=XhP5g4yo4Tzca2lpwESxa5Z4xuJBV-uuVpJ3UkuU0nQ,472
+yaspi/templates/ray/start-ray-worker-node.sh,sha256=M762LGYsgJb9Aq21GEHqqEWlRhBzKfk5Lf-D-UyYrtc,465
+yaspi-0.0.5.dist-info/METADATA,sha256=JkN-IX6TKED8SD-0addTfHnxxuAdPyWzgkgOB0aIkYU,7554
+yaspi-0.0.5.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+yaspi-0.0.5.dist-info/entry_points.txt,sha256=9jwy9KoMejJHmetJZeHQ-sgdXHjHPiVXPp0QZ7rnRwM,44
+yaspi-0.0.5.dist-info/top_level.txt,sha256=iwwGp4-yeuhc3sgk_oSBSpOFYk3vZCnzThGC5-u2tCY,6
+yaspi-0.0.5.dist-info/RECORD,,
