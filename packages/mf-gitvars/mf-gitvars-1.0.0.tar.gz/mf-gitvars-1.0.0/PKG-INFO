@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: mf-gitvars
+Version: 1.0.0
+Summary: A tool to parse CI/CD variables from Gitlab API
+Home-page: UNKNOWN
+Author: Adrian Mummey
+Author-email: adrian@momentfeed.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# GitVars
+Use the Gitlab API to extract CI/CD variables and output them in a format useable for running projects.
+
+
