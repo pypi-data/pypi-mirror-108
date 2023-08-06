@@ -1,0 +1,9 @@
+CurrencyDataCrawler/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+CurrencyDataCrawler/client.py,sha256=iY6HE3LD31ptdQXeTHLGOhDmL52EIs5H3dB3JHAJDgo,2989
+CurrencyDataCrawler/crawl_currency.py,sha256=26OzVT36LSPEJlSCEO8m48fALBjgyCyHb5t5sIe_Teg,6364
+CurrencyDataCrawler/map_data.txt,sha256=3mcI9bMpLs1gxTur2EiBBz17uH6meeUvhnr0Fj9s_cM,81367
+CurrencyDataCrawler/update_local_id_map.py,sha256=msFco4QGMgWCEbOPlV3jR5ntxg3FU8OEaZO1qXPxTk0,1053
+A_Simple_Currency_Data_Crawler-1.0.1.dist-info/METADATA,sha256=znOvNwmaSGZIHMnMjc4zw9nlUnRLKWKYpgoJt4-kGrQ,2809
+A_Simple_Currency_Data_Crawler-1.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+A_Simple_Currency_Data_Crawler-1.0.1.dist-info/top_level.txt,sha256=6UvBq2iqwSUpw1tTtXHk7eont78s-BjHNjMC3I4U4xk,20
+A_Simple_Currency_Data_Crawler-1.0.1.dist-info/RECORD,,
