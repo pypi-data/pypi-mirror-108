@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: sinatra
+Version: 0.0.1
+Summary: A high level machine learning library for fast, easy ML also aimed at students and anyone wanting to help get an idea of their data before using more involved techniques
+Home-page: UNKNOWN
+Author: James Calo
+Author-email: jamesafcalo@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/x-rst
+
+UNKNOWN
+

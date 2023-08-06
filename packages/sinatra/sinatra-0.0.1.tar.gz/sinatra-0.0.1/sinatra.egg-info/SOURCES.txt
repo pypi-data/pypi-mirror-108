@@ -1,0 +1,8 @@
+pyproject.toml
+setup.cfg
+setup.py
+sinatra.egg-info/PKG-INFO
+sinatra.egg-info/SOURCES.txt
+sinatra.egg-info/dependency_links.txt
+sinatra.egg-info/requires.txt
+sinatra.egg-info/top_level.txt
