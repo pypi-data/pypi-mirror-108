@@ -1,0 +1,3 @@
+[console_scripts]
+taozhibo = taozhibo.cli:main
+
