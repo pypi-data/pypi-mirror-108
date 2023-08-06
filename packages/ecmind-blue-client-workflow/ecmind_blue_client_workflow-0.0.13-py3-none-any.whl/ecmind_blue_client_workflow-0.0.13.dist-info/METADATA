@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: ecmind-blue-client-workflow
+Version: 0.0.13
+Summary: Helper modules for the `ecmind_blue_client` to ease the work with workflows, models and organisations.
+Home-page: https://gitlab.ecmind.ch/open/ecmind_blue_client_workflow
+Author: Roland Koller
+Author-email: info@ecmind.ch
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+Requires-Dist: ecmind-blue-client (>=0.3.6)
+Requires-Dist: XmlElement (>=0.3.0)
+
+# ECMind blue client: Workflow
+
+Helper modules for the `ecmind_blue_client` to ease the work with workflows, models and organisations. See discussion here: https://hub.ecmind.ch/t/119
+
+## Installation
+
+`pip install ecmind_blue_client_workflow`
+
+
+
+
