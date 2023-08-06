@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: congrid
+Version: 0.0.2
+Summary: A colorful grid built into the console.
+Home-page: https://github.com/UCYT5040/congrid.py
+Author: Saunders Tech
+Author-email: contact@saunderstech.dev
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/UCYT5040/congrid.py/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+
+"# Congrid Information\n## Example\n```py\nimport congrid as c\ngrid = c.newGrid(5, 5)\ngrid.plot(4, 4, "1")\ngrid.plot(3, 4, "purple_1b")\ngrid.plot(2, 4, "green")\ngrid.plot(1, 4, "73")\ngrid.plot(0, 4, "6")\ngrid.show()\n```\n## Documentation\n### `newGrid()`\nReturns a Grid.\n### `Grid` Object\n#### `Show`\nPrints grid to the console.\n#### `Plot`\nPlot a grid.\n\n`grid.plot(x, y, color)`\n\n`x` - int\n`y` - int\n`color` - string, defaults to the default color set in `newGrid()`\n## Colors\n![List Of Colors](https://congridimgs.ucyt5040.repl.co/g.png)"
+
+
