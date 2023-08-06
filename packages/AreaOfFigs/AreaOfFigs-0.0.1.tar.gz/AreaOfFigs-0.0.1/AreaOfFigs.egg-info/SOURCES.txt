@@ -1,0 +1,7 @@
+setup.py
+AreaOfFigs.egg-info/PKG-INFO
+AreaOfFigs.egg-info/SOURCES.txt
+AreaOfFigs.egg-info/dependency_links.txt
+AreaOfFigs.egg-info/top_level.txt
+python_tutorial/Area_Fig.py
+python_tutorial/__init__.py
