@@ -1,0 +1,9 @@
+[aiida.cmdline.data]
+fireworks-scheduler = aiida_fireworks_scheduler.cmdline:fw_cli
+
+[aiida.schedulers]
+fireworks = aiida_fireworks_scheduler.fwscheduler:FwScheduler
+
+[console_scripts]
+arlaunch = aiida_fireworks_scheduler.scripts.arlaunch_run:arlaunch
+
