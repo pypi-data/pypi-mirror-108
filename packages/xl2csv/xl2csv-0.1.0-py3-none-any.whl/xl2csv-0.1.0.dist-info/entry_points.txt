@@ -1,0 +1,3 @@
+[console_scripts]
+xl2csv=xl2csv.convert:main
+
