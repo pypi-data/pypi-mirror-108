@@ -1,0 +1,86 @@
+Metadata-Version: 2.1
+Name: flake8-dunder-class-obj
+Version: 0.1.0
+Summary: A flake8 plugin to report on double underscore class objects
+Home-page: https://github.com/jaustinpage/flake8-dunder-class-obj
+Author: Austin Page
+Author-email: jaustinpage@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: flake8 (>=3.7)
+Provides-Extra: tests
+Requires-Dist: pytest ; extra == 'tests'
+Requires-Dist: pytest-cov ; extra == 'tests'
+Requires-Dist: pytest-mock ; extra == 'tests'
+Requires-Dist: contracts ; extra == 'tests'
+Requires-Dist: black ; extra == 'tests'
+Requires-Dist: isort ; extra == 'tests'
+Requires-Dist: darglint ; extra == 'tests'
+Requires-Dist: flake8-2020 ; extra == 'tests'
+Requires-Dist: flake8-absolute-import ; extra == 'tests'
+Requires-Dist: flake8-annotations ; extra == 'tests'
+Requires-Dist: flake8-annotations-complexity ; extra == 'tests'
+Requires-Dist: flake8-bandit ; extra == 'tests'
+Requires-Dist: flake8-black ; extra == 'tests'
+Requires-Dist: flake8-blind-except ; extra == 'tests'
+Requires-Dist: flake8-breakpoint ; extra == 'tests'
+Requires-Dist: flake8-broken-line ; extra == 'tests'
+Requires-Dist: flake8-bugbear ; extra == 'tests'
+Requires-Dist: flake8-builtins ; extra == 'tests'
+Requires-Dist: flake8-class-attributes-order ; extra == 'tests'
+Requires-Dist: flake8-click ; extra == 'tests'
+Requires-Dist: flake8-coding ; extra == 'tests'
+Requires-Dist: flake8-comprehensions ; extra == 'tests'
+Requires-Dist: flake8-datetimez ; extra == 'tests'
+Requires-Dist: flake8-debugger ; extra == 'tests'
+Requires-Dist: flake8-docstrings ; extra == 'tests'
+Requires-Dist: flake8-eradicate ; extra == 'tests'
+Requires-Dist: flake8-executable ; extra == 'tests'
+Requires-Dist: flake8-expression-complexity ; extra == 'tests'
+Requires-Dist: flake8-fixme ; extra == 'tests'
+Requires-Dist: flake8-if-expr ; extra == 'tests'
+Requires-Dist: flake8-import-restrictions ; extra == 'tests'
+Requires-Dist: flake8-isort ; extra == 'tests'
+Requires-Dist: flake8-logging-format ; extra == 'tests'
+Requires-Dist: flake8-no-implicit-concat ; extra == 'tests'
+Requires-Dist: flake8-noqa ; extra == 'tests'
+Requires-Dist: flake8-pep3101 ; extra == 'tests'
+Requires-Dist: flake8-print ; extra == 'tests'
+Requires-Dist: flake8-pytest ; extra == 'tests'
+Requires-Dist: flake8-pytest-style ; extra == 'tests'
+Requires-Dist: flake8-raise (>=0.0.4) ; extra == 'tests'
+Requires-Dist: flake8-requirements (>=1.3.3) ; extra == 'tests'
+Requires-Dist: flake8-return (>=1.1.2) ; extra == 'tests'
+Requires-Dist: flake8-simplify (>=0.14.0) ; extra == 'tests'
+Requires-Dist: flake8-spellcheck (>=0.23.0) ; extra == 'tests'
+Requires-Dist: flake8-strftime (>=0.3.1) ; extra == 'tests'
+Requires-Dist: flake8-string-format (>=0.2.3) ; extra == 'tests'
+Requires-Dist: flake8-super ; extra == 'tests'
+Requires-Dist: flake8-use-pathlib ; extra == 'tests'
+Requires-Dist: mdformat ; extra == 'tests'
+Requires-Dist: pep8-naming ; extra == 'tests'
+Requires-Dist: pyproject-flake8 ; extra == 'tests'
+
+# flake8-dunder-class-obj
+
+A flake8 plugin which marks classes with leading double-underscored (dunder) class
+objects. A double underscored class object is subject to "Name Mangling", which can be a
+surprising behavior.
+
+```python
+class Test:
+    __my_var = 1
+```
+
+This is an example of a variable with a double underscore. It will be flagged with a
+message:
+`DCO100: class objects should not begin with __ unless name mangling is desired`
+
+See:
+[Python private variables](https://docs.python.org/3/tutorial/classes.html#private-variables)
+for more information about name mangling.
+
+
