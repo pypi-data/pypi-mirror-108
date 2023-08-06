@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/testrankhist/__init__.py
+src/testrankhist/funcs.py
+src/testrankhist.egg-info/PKG-INFO
+src/testrankhist.egg-info/SOURCES.txt
+src/testrankhist.egg-info/dependency_links.txt
+src/testrankhist.egg-info/requires.txt
+src/testrankhist.egg-info/top_level.txt
