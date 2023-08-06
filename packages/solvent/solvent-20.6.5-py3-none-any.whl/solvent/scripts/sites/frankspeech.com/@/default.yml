@@ -1,0 +1,89 @@
+locators:
+  inclusions:
+    - mode: ''
+      value: ''
+      index: 0
+      uses: 0
+  exclusions:
+    - mode: ''
+      value: ''
+      index: 0
+      uses: 0
+actions:
+  - verb: ''
+    name: ''
+    locators:
+      - mode: ''
+        value: ''
+        index: 0
+        uses: 0
+  - verb: fill
+    name: phone_number
+    locators:
+      - mode: ''
+        value: ''
+        index: 0
+        uses: 0
+      - mode: name
+        value: phone_number
+        index: 0
+        uses: -1
+      - mode: name
+        value: phone-number
+        index: 0
+        uses: -1
+      - mode: id
+        value: phone_number
+        index: 0
+        uses: -1
+      - mode: id
+        value: phone-number
+        index: 0
+        uses: -1
+      - mode: aria-label
+        value: Phone Number
+        index: 0
+        uses: -1
+      - mode: css
+        value: '[placeholder="Phone Number"]'
+        index: 0
+        uses: -1
+      - mode: id
+        value: PhoneNumber
+        index: 0
+        uses: -1
+      - mode: id
+        value: number
+        index: 0
+        uses: 11
+  - verb: click
+    name: submit
+    locators:
+      - mode: ''
+        value: ''
+        index: 0
+        uses: 0
+      - mode: text
+        value: Submit
+        index: 0
+        uses: 10
+      - mode: text
+        value: Submit
+        index: 0
+        uses: 0
+      - mode: text
+        value: submit
+        index: 0
+        uses: 0
+      - mode: value
+        value: Submit
+        index: 0
+        uses: 0
+      - mode: value
+        value: Submit
+        index: 0
+        uses: 0
+      - mode: value
+        value: submit
+        index: 0
+        uses: 0
