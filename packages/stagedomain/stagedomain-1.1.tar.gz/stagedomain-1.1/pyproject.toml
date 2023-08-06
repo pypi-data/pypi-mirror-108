@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "stagedomain"
+version = "1.1"
+description = ""
+authors = ["vionde <viondexd@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
