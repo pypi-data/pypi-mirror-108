@@ -1,0 +1,11 @@
+southpaw/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+southpaw/generators/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+southpaw/generators/genetic.py,sha256=pq82KPhBzArseqwaV88gGSoPQPzb3GdA27coAM1mPOM,6182
+southpaw/generators/linear.py,sha256=rwIE407vF2BdicztdRm5kve3wxvmOfHgIWCFwrPvVK0,1917
+southpaw/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+southpaw/tests/test_genetic.py,sha256=Z7XEXDqe-LOkciZma2mbnH4oHhjZF1MOPzynfBXBTgA,458
+southpaw/tests/test_linear.py,sha256=zd93Wj0QJcWr_S5_fmnUsL4jHHTGOfgAFnmQJA9TPYk,468
+southpaw-0.0.8.dist-info/METADATA,sha256=CyqvMw_TKBF_HDi4LPF-4eqmcsCxepCiO3YpRF9AHjs,327
+southpaw-0.0.8.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+southpaw-0.0.8.dist-info/top_level.txt,sha256=D1wW-YLzPjxB4BrH347ZmynXw9xnzbITXC0ZutJVGas,9
+southpaw-0.0.8.dist-info/RECORD,,
