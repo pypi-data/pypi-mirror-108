@@ -1,0 +1,9 @@
+_lzokay.cp38-win_amd64.pyd,sha256=52rbUksiGXst5tzZqBSQVoiB-3ykRzs74JDHIvkueLY,74752
+lzokay.lib,sha256=e6yaybGkf2TYG3yXoMQotskIL1PMYOB04shFA30NIos,14872
+lzokay/__init__.py,sha256=E32TSL_QnLEZZ0FelFOgmbv5-ZGGV32h7rwHpunENdM,264
+lzokay/version.py,sha256=HOQJejC0bivWCR4vSHOLD8qsA6bTSNdbRR8EGPMupfs,147
+lzokay-1.0.0.dist-info/LICENSE,sha256=DQlxF4FmV-Y_TWCo74unp8BYu7LHhYnEiVfc_-I3SeU,1108
+lzokay-1.0.0.dist-info/METADATA,sha256=wehdL3yNOALuWcuiZBpVeLa_KhvSgn9QBGmuI53epGU,693
+lzokay-1.0.0.dist-info/WHEEL,sha256=HLtxc_HoM-kGM7FPJVPSnTt0Nv2G3fZEAjT3ICdG8uY,100
+lzokay-1.0.0.dist-info/top_level.txt,sha256=_aSSV5MD2hixNdreKTD8nP-7G8JvtaWPvZ9PAjIH31c,15
+lzokay-1.0.0.dist-info/RECORD,,
