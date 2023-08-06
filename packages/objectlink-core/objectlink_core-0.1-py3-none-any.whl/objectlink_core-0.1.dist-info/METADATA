@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: objectlink-core
+Version: 0.1
+Summary: ObjectLink protocol support for Python
+Home-page: https://github.com/apigear-io/objectlink-core-python
+Author: ApiGear.io
+Author-email: info@apigear.io
+License: MIT
+Keywords: rpc objects apigear
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Code Generators
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Provides-Extra: dev
+Requires-Dist: websockets ; extra == 'dev'
+Requires-Dist: starlette ; extra == 'dev'
+Provides-Extra: test
+Requires-Dist: pytest ; extra == 'test'
+
+# ObjectLink Core Protocol in Python
+
+The ObjectLink protocol is designed to link a local object with a remote objec over a websocket connection.
+
+It supports distributed properties, asynchronous method invokation as also server side signals.
+
+It is designed to wort together with ApiGear Object Model to generate complete client and server side APIs.
+
+
+
+
+
