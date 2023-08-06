@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: course-certification
+Version: 1.0.1
+Summary: Generate course certificates from Google Spreadsheets
+Home-page: https://github.com/karthikpawar/certification
+Author: CloudxLab
+Author-email: karthik@cloudxlab.com
+License: MIT
+Description: Generate course certificates and      keep track of them using Google Spreadsheets API.
+Keywords: Certificate generation
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
