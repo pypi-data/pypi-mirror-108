@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: githubapi2
+Version: 0.3.0
+Summary: A wrapper for the GitHub Api.
+Home-page: https://github.com/UltiRequiem/githubapi2
+Author: UltiRequiem
+Author-email: eliaz.bobadilladev@gmail.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
