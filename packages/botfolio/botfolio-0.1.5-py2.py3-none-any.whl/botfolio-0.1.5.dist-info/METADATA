@@ -1,0 +1,50 @@
+Metadata-Version: 2.1
+Name: botfolio
+Version: 0.1.5
+Summary: A set of libraries for botfolio
+Home-page: https://github.com/dextervip/botfolio-library
+Author: Rafael Amorim
+Author-email: email@rafaelamorim.me
+License: GNU General Public License v3
+Keywords: botfolio
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
+License-File: LICENSE
+Requires-Dist: requests
+Requires-Dist: ciso8601
+
+# Botfolio Libraries
+
+
+
+.. image:: https://img.shields.io/pypi/v/botfolio.svg
+        :target: https://pypi.python.org/pypi/botfolio
+
+A set of libraries used for botfolio.io
+
+
+* Free software: GNU General Public License v3
+
+
+Features
+--------
+
+* FTX API Client
+
+Credits
+-------
+
+This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+
+.. _Cookiecutter: https://github.com/audreyr/cookiecutter
+.. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
+
+
