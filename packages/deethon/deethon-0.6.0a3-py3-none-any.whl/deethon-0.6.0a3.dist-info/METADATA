@@ -1,0 +1,58 @@
+Metadata-Version: 2.1
+Name: deethon
+Version: 0.6.0a3
+Summary: Python3 library to easily download music from Deezer
+Home-page: https://github.com/aykxt/deethon
+License: GPL-3.0-or-later
+Author: Aykut Yilmaz
+Author-email: aykuxt@gmail.com
+Maintainer: Aykut Yilmaz
+Maintainer-email: aykuxt@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: aiodns (>=2.0.0,<3.0.0)
+Requires-Dist: aiohttp (>=3.7.4,<4.0.0)
+Requires-Dist: cchardet (>=2.1.7,<3.0.0)
+Requires-Dist: mutagen (>=1.45.1,<2.0.0)
+Requires-Dist: pycryptodome (>=3.10.1,<4.0.0)
+Project-URL: Documentation, https://aykxt.github.io/deethon
+Project-URL: Repository, https://github.com/aykxt/deethon
+Description-Content-Type: text/markdown
+
+# Deethon
+
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/3a54b30586b941acb82079d0252e0320)](https://www.codacy.com/gh/deethon/deethon?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=deethon/deethon&amp;utm_campaign=Badge_Grade)
+[![Codacy Badge](https://app.codacy.com/project/badge/Coverage/3a54b30586b941acb82079d0252e0320)](https://www.codacy.com/gh/deethon/deethon?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=deethon/deethon&amp;utm_campaign=Badge_Coverage)
+[![PyPI](https://img.shields.io/pypi/v/deethon)](https://pypi.org/project/deethon/)
+[![PyPI - Downloads](https://pepy.tech/badge/deethon)](https://pepy.tech/project/deethon)
+![PyPI - Status](https://img.shields.io/pypi/status/deethon)
+[![GitHub license](https://img.shields.io/github/license/aykxt/deethon)](https://github.com/aykxt/deethon/blob/master/LICENSE)
+
+Deethon is a lightweight Python library for downloading high quality music from Deezer.
+
+## Getting started
+
+### Installation
+
+```sh
+pip install deethon
+```
+
+### Usage
+
+```python
+from deethon import Session, Quality
+
+deezer = Session("YOUR ARL TOKEN")
+
+deezer.download_track(
+    "https://www.deezer.com/track/1234567",
+    Quality.MP3_320  # defaults to FLAC
+)
+```
+
