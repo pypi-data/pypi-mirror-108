@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+apisnote/__init__.py
+apisnote/api.py
+apisnote.egg-info/PKG-INFO
+apisnote.egg-info/SOURCES.txt
+apisnote.egg-info/dependency_links.txt
+apisnote.egg-info/requires.txt
+apisnote.egg-info/top_level.txt
