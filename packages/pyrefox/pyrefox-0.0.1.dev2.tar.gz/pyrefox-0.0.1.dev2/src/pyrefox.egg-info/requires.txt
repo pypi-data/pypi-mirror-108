@@ -1,0 +1,8 @@
+sqlalchemy
+pydantic
+lz4
+email-validator
+
+[tests]
+pytest
+pyyaml
