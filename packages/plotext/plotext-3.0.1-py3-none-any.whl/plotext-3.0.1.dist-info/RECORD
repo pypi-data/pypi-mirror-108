@@ -1,0 +1,10 @@
+plotext/__init__.py,sha256=L3PBgsroGBTB-PspmH6-MAe6lN_N0JHofOfSIekvSCg,330
+plotext/__main__.py,sha256=SPj4aS93KqsM4l7OUzjBpAk3URnwUAH4fBzuMaNCVfk,55
+plotext/docstrings.py,sha256=jzoMDWWPVtUiJ8MxLFUykULXAMYEg_GmjdNAQFj7tRs,10069
+plotext/plot.py,sha256=94e0tNEhEY7c_NzeJ2MDrGG8BPGG0V7QenV7Rewy0nE,37931
+plotext/utility.py,sha256=R0RrrsSRXU40X8q57El1zkioY2XNcWDvzx46F0FzYIk,17591
+plotext-3.0.1.dist-info/LICENSE,sha256=QrIsKZIFpYZ1BgUDo3FhCL5L_zCh93s3cukxuBGM-60,1079
+plotext-3.0.1.dist-info/METADATA,sha256=5Gu3RKw3ngHXuGvRbtua53iZ2qX1-8jFSRKWWXCQWjI,24642
+plotext-3.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+plotext-3.0.1.dist-info/top_level.txt,sha256=T969wCaCiLz8-Gj-JN5bl8cjNyoQ-DLyAnBdo34PyyU,8
+plotext-3.0.1.dist-info/RECORD,,
