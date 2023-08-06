@@ -1,0 +1,3 @@
+[console_scripts]
+vfxdetect=scenedetect.__main__:main
+
