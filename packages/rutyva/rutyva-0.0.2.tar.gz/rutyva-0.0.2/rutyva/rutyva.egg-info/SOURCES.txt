@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+rutyva/rutyva.egg-info/PKG-INFO
+rutyva/rutyva.egg-info/SOURCES.txt
+rutyva/rutyva.egg-info/dependency_links.txt
+rutyva/rutyva.egg-info/top_level.txt
