@@ -1,0 +1,14 @@
+CHANGELOG.md
+LICENSE
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+sserender/__init__.py
+sserender/sse.py
+sserender.egg-info/PKG-INFO
+sserender.egg-info/SOURCES.txt
+sserender.egg-info/dependency_links.txt
+sserender.egg-info/not-zip-safe
+sserender.egg-info/top_level.txt
