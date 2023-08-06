@@ -1,0 +1,7 @@
+#sample for oracle 11
+#oracle11的样例文件
+db=oracle11
+loginname=loginname
+password=password
+dbserver=host address or ip or tnsname
+datadir=/tmp
