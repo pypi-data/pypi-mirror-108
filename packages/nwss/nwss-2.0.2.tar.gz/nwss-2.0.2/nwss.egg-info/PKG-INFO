@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: nwss
+Version: 2.0.2
+Summary: A marshmallow schema for the                 National Wastewater Surveillance System
+Home-page: https://github.com/datamade/nwss-data-standard
+Author: DataMade
+Author-email: info@datamade.us
+License: MIT
+Description: UNKNOWN
+Keywords: National Wastewater Surveillance System,NWSS,DCIPHER,United States Center for Disease Control,COVID-19
+Platform: any
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Provides-Extra: dev
