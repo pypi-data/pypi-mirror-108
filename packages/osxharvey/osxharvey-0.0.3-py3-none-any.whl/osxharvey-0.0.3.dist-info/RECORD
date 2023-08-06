@@ -1,0 +1,10 @@
+osxharvey/__init__.py,sha256=TXvUB1I6C2e8L1eDfDoJQdLzVMUSSqy-nQ9zV3-sdcg,146
+osxharvey/_version.py,sha256=IuyFCiqOQuJcd0BC5R0lLPeGwJhrwdYU87nRZz8rFLo,497
+osxharvey/main.py,sha256=AwlZhgtmhPi3BCFiRFEUnwZX-QCr5c9CB0fShOA1-yA,14128
+osxharvey/tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+osxharvey/tests/osxharvey_tests.py,sha256=rT06vUzZWK7RRFAvDzxWWxa8OwBf_9RI8hBVTCXKEns,67
+osxharvey-0.0.3.dist-info/LICENSE.md,sha256=ePvdMfe7q4-eXVAaN9HAkuczvlx6UDmYp8hs47BiJqU,1072
+osxharvey-0.0.3.dist-info/METADATA,sha256=kSUVB3dtaaFizOIoKqDPDc-f9W8sMiMEWxsdu7gNH88,1704
+osxharvey-0.0.3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+osxharvey-0.0.3.dist-info/top_level.txt,sha256=MOVgB8lxvdlPOV09BjjjzXNd4swEIaDY-EdKWIVv_c8,10
+osxharvey-0.0.3.dist-info/RECORD,,
