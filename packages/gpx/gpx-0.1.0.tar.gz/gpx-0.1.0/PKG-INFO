@@ -1,0 +1,7 @@
+Metadata-Version: 1.1
+Name: gpx
+Version: 0.1.0
+Summary: PyGPX is a python package that brings support for reading, writing and converting GPX files.
+Home-page: https://github.com/sgraaf/PyGPX
+Author: Steven van de Graaf
+Author-email: steven@vandegraaf.xyz
