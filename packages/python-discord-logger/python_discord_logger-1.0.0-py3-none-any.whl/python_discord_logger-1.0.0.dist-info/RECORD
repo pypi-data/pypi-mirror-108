@@ -1,0 +1,8 @@
+python_discord_logger/__init__.py,sha256=IFxn2J1LJUOUzRkCXmGaCaa8WmzTLqvAq-irj6xELQs,52
+python_discord_logger/formatters.py,sha256=Yzw-5VoGUXPTSfMQXTgBwb3vvYe3L0AC3nnQvGos40k,712
+python_discord_logger/handlers.py,sha256=DOLkZR1_pX5TKBqAFHGMDAQqMzX8PTlSs6xRmqeWy24,413
+python_discord_logger/utils.py,sha256=5wou3JNyVRO6-QXQchMWRfoswQmW_DIQUXmJmWaWa2s,456
+python_discord_logger-1.0.0.dist-info/LICENSE,sha256=loq4u-edB8hXl7kY2jcfMTKlpbgG00tp6EG6LYNVJUs,1068
+python_discord_logger-1.0.0.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+python_discord_logger-1.0.0.dist-info/METADATA,sha256=RFDmni5eU3OVvunWWSzLQiOVVPx5zul5F-SVBAKiNy4,296
+python_discord_logger-1.0.0.dist-info/RECORD,,
