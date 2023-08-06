@@ -1,0 +1,5 @@
+numpy
+scikit-image
+py-vox-io
+properscoring
+Pillow
