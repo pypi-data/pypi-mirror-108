@@ -1,0 +1,8 @@
+numpy
+tensorflow
+pandas
+opencv-python-headless
+dlib
+imutils
+scikit-learn
+dotenv
