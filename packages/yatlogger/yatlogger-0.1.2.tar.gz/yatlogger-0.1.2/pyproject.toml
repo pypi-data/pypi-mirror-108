@@ -1,0 +1,29 @@
+[tool.poetry]
+name = "yatlogger"
+version = "0.1.2"
+description = "Yet another telegram logger"
+authors = ["cyd3r <cyd3rhacker@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/cyd3r/yatlogger"
+repository = "https://github.com/cyd3r/yatlogger"
+keywords = ["logger", "telegram", "chat bot", "notification", "exception handler"]
+classifiers = [
+    "Topic :: System :: Logging",
+    "Topic :: Communications :: Chat",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License"
+]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+python-telegram-bot = "^13.6"
+
+[tool.poetry.dev-dependencies]
+pytest = "^5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
