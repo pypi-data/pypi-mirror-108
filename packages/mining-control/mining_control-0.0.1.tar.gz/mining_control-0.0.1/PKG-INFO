@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: mining_control
+Version: 0.0.1
+Summary: A package that stops mining when the python program starts and restart mining when the python program exit
+Home-page: https://github.com/Entropy-xcy/mining_control
+Author: Entropy Xu
+Author-email: entropy.xuceyu@gmail.com
+License: BSD 2-clause
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3
+License-File: LICENSE
+
+UNKNOWN
+
