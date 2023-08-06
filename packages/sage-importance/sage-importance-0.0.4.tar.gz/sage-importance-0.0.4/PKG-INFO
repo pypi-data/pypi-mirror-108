@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: sage-importance
+Version: 0.0.4
+Summary: For calculating global feature importance using Shapley values.
+Home-page: https://github.com/iancovert/sage/
+Author: Ian Covert
+Author-email: icovert@cs.washington.edu
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+
+        SAGE (Shapley Additive Global importancE) is a game theoretic approach 
+        for understanding black-box machine learning models. It summarizes each 
+        feature's importance based on the predictive power it contributes, and 
+        it accounts for complex interactions using the Shapley value from 
+        cooperative game theory. See the 
+        [GitHub page](https://github.com/iancovert/sage/) for examples, and see 
+        the [paper](https://arxiv.org/abs/2004.00668) for more details.
+    
+
