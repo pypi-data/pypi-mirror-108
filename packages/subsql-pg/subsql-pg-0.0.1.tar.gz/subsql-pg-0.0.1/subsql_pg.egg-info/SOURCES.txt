@@ -1,0 +1,10 @@
+README.md
+pyproject.toml
+setup.cfg
+subsql_pg/__init__.py
+subsql_pg/pgdriver.py
+subsql_pg.egg-info/PKG-INFO
+subsql_pg.egg-info/SOURCES.txt
+subsql_pg.egg-info/dependency_links.txt
+subsql_pg.egg-info/requires.txt
+subsql_pg.egg-info/top_level.txt
