@@ -1,0 +1,51 @@
+{
+    "analyze": {
+        "Sorani": {
+            "Arabic": {
+                "گوڵانە": [{"pos": "noun", "base": "گوڵ", "terminal_suffix": "انە", "formation": "derivational", "description": "diminutive_noun"}, {"pos": "noun", "base": "گوڵ", "terminal_suffix": "انە", "formation": "derivational", "description": "status_noun"}, {"pos": "propn", "base": "گوڵان", "terminal_suffix": "ە", "formation": "derivational", "description": "status_noun"}],
+                "سووتاندم": [{"pos": "verb", "description": "past_stem_transitive_active", "base": "سووتاند", "terminal_suffix": "م", "stem": "سووت"}],
+                "دەردەکەوێ": [{"base": "کەو", "terminal_suffix": "دەردەێ", "pos": "verb", "description": "present_stem_intransitive_active", "stem": "کەو"}],
+                "هەڵمسووتاند": [{"base": "سووتاند", "terminal_suffix": "هەڵم", "pos": "verb", "description": "past_stem_transitive_active", "stem": "سووت"}],
+                "هەڵمدەسووتاند": [{"base": "سووتاند", "terminal_suffix": "هەڵمدە", "pos": "verb", "description": "past_stem_transitive_active", "stem": "سووت"}],
+                "هەڵمنەدەسووتاند": [{"base": "سووتاند", "terminal_suffix": "هەڵمنەدە", "pos": "verb", "description": "past_stem_transitive_active", "stem": "سووت"}],
+                "دامدەسووتاندم": [{"base": "سووتاند", "terminal_suffix": "دامدەم", "pos": "verb", "description": "past_stem_transitive_active", "stem": "سووت"}],
+                "دیتمنەوە": [{"pos": "verb", "description": "past_stem_transitive_active", "base": "دیت", "terminal_suffix": "منەوە", "stem": "دی"}],
+                "هەڵمنەدەدیتنەوە": [{"base": "دی", "terminal_suffix": "هەڵمنەدەتنەوە", "pos": "verb", "description": "past_stem_transitive_active", "stem": "دی"}, {"base": "دیت", "terminal_suffix": "هەڵمنەدەنەوە", "pos": "verb", "description": "past_stem_transitive_active", "stem": "دی"}],
+                "خواردوومانەتەوە": [{"pos": "verb", "description": "past_stem_transitive_active", "base": "خوارد", "terminal_suffix": "وومانەتەوە", "stem": "خو"}],
+                "هەڵمانخواردووە": [{"base": "خوارد", "terminal_suffix": "هەڵمانووە", "pos": "verb", "description": "past_stem_transitive_active", "stem": "خو"}],
+                "کڕیومانە": [{"pos": "verb", "description": "past_stem_transitive_active", "base": "کڕی", "terminal_suffix": "ومانە", "stem": "کڕ"}],
+                "هەڵمدەسووتاندبووەوە": [{"base": "سووتاند", "terminal_suffix": "هەڵمدەبووەوە", "pos": "verb", "description": "past_stem_transitive_active", "stem": "سووت"}],
+                "هەڵمدەسووتاندبوونەوە": [{"base": "سووتاند", "terminal_suffix": "هەڵمدەبوونەوە", "pos": "verb", "description": "past_stem_transitive_active", "stem": "سووت"}],
+                "کڕیومەتەوە": [{"pos": "verb", "description": "past_stem_transitive_active", "base": "کڕی", "terminal_suffix": "ومەتەوە", "stem": "کڕ"}],
+                "کڕیومنەتەوە": [{"pos": "verb", "description": "past_stem_transitive_active", "base": "کڕی", "terminal_suffix": "ومنەتەوە", "stem": "کڕ"}],
+                "خواردوومنەتەوە": [{"pos": "verb", "description": "past_stem_transitive_active", "base": "خوارد", "terminal_suffix": "وومنەتەوە", "stem": "خو"}],
+                "دیتبووتان": [{"pos": "verb", "description": "past_stem_transitive_active", "base": "دیت", "terminal_suffix": "بووتان", "stem": "دی"}],
+                "دامسووتاندبێتن": [{"base": "سووتاند", "terminal_suffix": "دامبێتن", "pos": "verb", "description": "past_stem_transitive_active", "stem": "سووت"}],
+                "سووتاندبێتمان": [{"pos": "verb", "description": "past_stem_transitive_active", "base": "سووتاند", "terminal_suffix": "بێتمان", "stem": "سووت"}],
+                "خواردبێتمنەوە": [{"pos": "verb", "description": "past_stem_transitive_active", "base": "خوارد", "terminal_suffix": "بێتمنەوە", "stem": "خو"}],
+                "هەڵمنەسووتاندبێ": [{"base": "سووتاند", "terminal_suffix": "هەڵمنەبێ", "pos": "verb", "description": "past_stem_transitive_active", "stem": "سووت"}],
+                "نەدەهات": [{"base": "هات", "terminal_suffix": "نەدە", "pos": "verb", "description": "past_stem_intransitive_active", "stem": "ها"}],
+                "دیتبامن": [{"pos": "verb", "description": "past_stem_transitive_active", "base": "دیت", "terminal_suffix": "بامن", "stem": "دی"}],
+                "دیتبایانین": [{"pos": "verb", "description": "past_stem_transitive_active", "base": "دیت", "terminal_suffix": "بایانین", "stem": "دی"}],
+                "دیتبایانمەوە": [{"pos": "verb", "description": "past_stem_transitive_active", "base": "دیت", "terminal_suffix": "بایانمەوە", "stem": "دی"}],
+                "دیتایە": [{"pos": "verb", "description": "past_stem_transitive_active", "base": "دیت", "terminal_suffix": "ایە", "stem": "دی"}],
+                "سووتاندەوە": [{"pos": "verb", "description": "past_stem_transitive_active", "base": "سووتاند", "terminal_suffix": "ەوە", "stem": "سووت"}],
+                "دەریانبسووتاندنەوە": [{"base": "سووتاند", "terminal_suffix": "دەریانبنەوە", "pos": "verb", "description": "past_stem_transitive_active", "stem": "سووت"}],
+                "بتسووتاندایە": [{"base": "سووتاند", "terminal_suffix": "بتایە", "pos": "verb", "description": "past_stem_transitive_active", "stem": "سووت"}],
+                "جوان": [{"pos": "propn", "base": "جوان", "terminal_suffix": "0"}, {"pos": "adj", "base": "جوان", "terminal_suffix": "0"}]
+            },
+            "Latin": {}
+        },
+        "Kurmanji":{
+            "Latin": {
+                "dengdanekê": [{"base": "dengdan", "description": "n_f_sg_con_ind", "pos": "", "terminal_suffix": "", "formation": ""}, {"base": "dengdan", "description": "n_f_sg_obl_ind", "pos": "", "terminal_suffix": "", "formation": ""}],
+                "xêzikine": [{"base": "xêzik", "description": "n_f_pl_con_ind", "pos": "", "terminal_suffix": "", "formation": ""}],
+                "bêje": [{"base": "bêje", "description": "n_f_pl_nom_def", "pos": "", "terminal_suffix": "", "formation": ""}, {"base": "bêje", "description": "n_f_sg_nom_def", "pos": "", "terminal_suffix": "", "formation": ""}, {"base": "bêje", "description": "n_f_sg_obl_def", "pos": "", "terminal_suffix": "", "formation": ""}],
+                "dibêjim": [{"base": "gotin", "description": "vblex_tv_pri_p1_sg", "pos": "", "terminal_suffix": "", "formation": ""}],
+                "dixwî": [{"base": "xwarin", "description": "vblex_tv_pri_p2_sg", "pos": "", "terminal_suffix": "", "formation": ""}],
+                "nonesense": []
+            },
+            "Arabic": {}
+        }
+    }
+}
