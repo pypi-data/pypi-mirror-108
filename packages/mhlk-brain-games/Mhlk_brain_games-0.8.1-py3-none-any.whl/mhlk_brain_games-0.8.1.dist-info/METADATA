@@ -1,0 +1,10 @@
+Metadata-Version: 2.1
+Name: mhlk-brain-games
+Version: 0.8.1
+Summary: Run and go
+Author: KalashnikovM
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: prompt (>=0.4.1,<0.5.0)
