@@ -1,0 +1,11 @@
+docker: tomcat
+url: https://hub.docker.com/_/tomcat
+maintainer: '@vsoch'
+description: Apache Tomcat is an open source implementation of the Java Servlet and
+  JavaServer Pages technologies
+latest:
+  10.0.6-jdk11-adoptopenjdk-hotspot: sha256:c0019c8254bc1017f64e6ffd1612e25b50abca78d98d25f9ff8023e8999f0384
+tags:
+  10.0.5-jdk11-adoptopenjdk-hotspot: sha256:a7418f29d3dd7ad20bcf052b3b6dc2777d118344286c6374bc447fb217a97c08
+  10.0.6-jdk11-adoptopenjdk-hotspot: sha256:c0019c8254bc1017f64e6ffd1612e25b50abca78d98d25f9ff8023e8999f0384
+  latest: sha256:71703331e3e7f8581f2a8206a612dbeedfbc7bb8caeee972eadca1cc4a72e6b1

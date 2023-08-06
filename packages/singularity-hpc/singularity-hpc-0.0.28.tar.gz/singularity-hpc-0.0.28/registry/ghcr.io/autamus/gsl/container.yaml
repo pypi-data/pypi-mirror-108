@@ -1,0 +1,13 @@
+docker: ghcr.io/autamus/gsl
+url: https://github.com/orgs/autamus/packages/container/package/gsl
+maintainer: '@vsoch'
+description: The GNU Scientific Library.
+latest:
+  "2.6": sha256:f80eab493a7840fa0ff267af8ea15e4f2e1dd416548f733c582a2e10394cdf01
+tags:
+  "2.6": sha256:f80eab493a7840fa0ff267af8ea15e4f2e1dd416548f733c582a2e10394cdf01
+  latest: sha256:f80eab493a7840fa0ff267af8ea15e4f2e1dd416548f733c582a2e10394cdf01
+aliases:
+  gsl-config: /opt/view/bin/gsl-config
+  gsl-histogram: /opt/view/bin/gsl-histogram
+  gsl-randist: /opt/view/bin/gsl-randist

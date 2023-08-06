@@ -1,0 +1,13 @@
+docker: ghcr.io/autamus/migrate
+url: https://github.com/orgs/autamus/packages/container/package/migrate
+maintainer: '@vsoch'
+description: Migrate estimates effective population sizes and past migration rates
+  between n population assuming a migration matrix model with asymmetric migration
+  rates and different subpopulation sizes
+latest:
+  3.7.2: sha256:0b83f7af672d1a3d9c791a6fc949824939ec0a298630d018f286b675d043dcc9
+tags:
+  3.7.2: sha256:0b83f7af672d1a3d9c791a6fc949824939ec0a298630d018f286b675d043dcc9
+  latest: sha256:0b83f7af672d1a3d9c791a6fc949824939ec0a298630d018f286b675d043dcc9
+aliases:
+  migrate-n: /opt/view/bin/migrate-n
