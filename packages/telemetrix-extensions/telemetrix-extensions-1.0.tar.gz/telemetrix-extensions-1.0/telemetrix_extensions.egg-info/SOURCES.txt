@@ -1,0 +1,13 @@
+MANIFEST.in
+README.md
+pypi_desc.md
+setup.py
+telemetrix_extensions.egg-info/PKG-INFO
+telemetrix_extensions.egg-info/SOURCES.txt
+telemetrix_extensions.egg-info/dependency_links.txt
+telemetrix_extensions.egg-info/requires.txt
+telemetrix_extensions.egg-info/top_level.txt
+telemetrix_pca9685/__init__.py
+telemetrix_pca9685/pca9685_constants.py
+telemetrix_pca9685/telemetrix_pca9685.py
+telemetrix_pca9685/telemetrix_pca9685_aio.py
