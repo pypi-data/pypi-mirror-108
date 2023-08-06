@@ -1,0 +1,6 @@
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_files.py,sha256=HJFn6YkFwG8ILkdGGB9Jq4d4cikqnDpBN3yIpGkkYnU,26568
+munchie-0.0.16.dist-info/METADATA,sha256=58FP1Cn0BhhS9rAT8VPa-xqoLbyFdtL2yIgawdJZno4,6952
+munchie-0.0.16.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+munchie-0.0.16.dist-info/top_level.txt,sha256=EdW7283x-lr_cbuivW8Ij7ANAP-ZJ9sLtILQseEPxXg,6
+munchie-0.0.16.dist-info/RECORD,,
