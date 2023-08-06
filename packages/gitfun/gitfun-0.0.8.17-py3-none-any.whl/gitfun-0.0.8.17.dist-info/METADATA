@@ -1,0 +1,121 @@
+Metadata-Version: 2.1
+Name: gitfun
+Version: 0.0.8.17
+Summary: Make Git simplified for lazy developers 
+Home-page: https://github.com/memetics19/gitfun.git
+Author: Shreeda Bhat
+Author-email: shreeda@astaqc.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Requires-Dist: bleach (==3.3.0)
+Requires-Dist: certifi (==2020.12.5)
+Requires-Dist: cffi (==1.14.5)
+Requires-Dist: chardet (==4.0.0)
+Requires-Dist: click (==7.1.2)
+Requires-Dist: colorama (==0.4.4)
+Requires-Dist: Deprecated (==1.2.12)
+Requires-Dist: docutils (==0.17.1)
+Requires-Dist: idna (==2.10)
+Requires-Dist: importlib-metadata (==4.0.1)
+Requires-Dist: keyring (==23.0.1)
+Requires-Dist: packaging (==20.9)
+Requires-Dist: pkginfo (==1.7.0)
+Requires-Dist: pycparser (==2.20)
+Requires-Dist: PyGithub (==1.55)
+Requires-Dist: Pygments (==2.8.1)
+Requires-Dist: PyJWT (==2.1.0)
+Requires-Dist: PyNaCl (==1.4.0)
+Requires-Dist: pyparsing (==2.4.7)
+Requires-Dist: readme-renderer (==29.0)
+Requires-Dist: requests (==2.25.1)
+Requires-Dist: requests-toolbelt (==0.9.1)
+Requires-Dist: rfc3986 (==1.4.0)
+Requires-Dist: six (==1.15.0)
+Requires-Dist: tqdm (==4.60.0)
+Requires-Dist: twine (==3.4.1)
+Requires-Dist: urllib3 (==1.26.5)
+Requires-Dist: webencodings (==0.5.1)
+Requires-Dist: wrapt (==1.12.1)
+Requires-Dist: zipp (==3.4.1)
+
+<!-- Add banner here -->
+
+# GitFun
+A Simplified Automated CLI tool for GIT, It's for Lazy Developers and  Newbies 😜
+# Table of contents
+
+<!-- After you have introduced your project, it is a good idea to add a **Table of contents** or **TOC** as **cool** people say it. This would make it easier for people to navigate through your README and find exactly what they are looking for.
+
+Here is a sample TOC(*wow! such cool!*) that is actually the TOC for this README. -->
+
+- [GitFun](#GitFun)
+- [Installation](#Installation)
+- [Usage](#Usage)
+- [Development](#Development)
+- [Contribute](#Contribute)
+    - [Sponsor](#Sponsor)
+    - [Adding new features or fixing bugs](#)
+- [License](#License)
+
+
+# Installation
+It's  simple step to install
+
+Pre-requisites:
+ 1. Python > = 3.7 
+ 2. Python Package Installer(PyPI)
+
+``pip install gitfun``
+
+# Usage
+
+For initial push to the remote Repository  
+
+
+``fun initpush -url <link_of_the_github_repo> ``
+
+# Development
+
+
+for development setup 
+
+1. clone the repository 
+
+``git clone https://github.com/astaqc/gitfun.git``
+
+2. Create a virtualenv 
+
+``python3 -m virtualenv <virtualenvironment_name>``
+
+3. Activate the virtualenv 
+
+``source venv_name/bin/activate``
+
+4.Install the setup file 
+
+``python setup.py install  ``
+
+``pip install -e . ``
+
+# Contribute
+
+Check out the [Contribute.md](CONTRIBUTING.md)
+### Sponsor
+[Astaqc Consulting](https://astaqc.com/)
+
+
+### Adding new features or fixing bugs
+Check out the [Issue Template](.github/ISSUE_TEMPLATE/bug_report.md) for reporting the bugs 
+
+Check out the [Feature Request Template](.github/ISSUE_TEMPLATE/feature_request.md)  for feature request
+
+
+# License
+
+Check out the [MIT](LICENSE) License 
+
+
