@@ -1,0 +1,10 @@
+LICENSE
+README.md
+setup.py
+tapdf/__init__.py
+tapdf/pdf2image.py
+tapdf/pdf2text.py
+tapdf.egg-info/PKG-INFO
+tapdf.egg-info/SOURCES.txt
+tapdf.egg-info/dependency_links.txt
+tapdf.egg-info/top_level.txt
