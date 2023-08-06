@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: jupyterhub-saml-auth
+Version: 0.1.0
+Summary: Authenticate your Jupyterhub users using SAML.
+Home-page: https://github.com/ucsd-ets/jupyterhub-saml-auth
+Author: Wesley Uykimpang
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.7.0
+
+UNKNOWN
+
