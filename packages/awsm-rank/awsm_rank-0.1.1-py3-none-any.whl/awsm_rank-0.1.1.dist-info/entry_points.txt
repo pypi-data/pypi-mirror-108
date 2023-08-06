@@ -1,0 +1,3 @@
+[console_scripts]
+awsm-rank = awsm_rank.awsm_rank:main
+
