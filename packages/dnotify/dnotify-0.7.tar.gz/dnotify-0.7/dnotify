@@ -1,0 +1,26 @@
+#!/bin/bash
+
+if [[ $1 == "-h" ]]; then
+	echo "Madhavth cross platform notification cli"
+echo "------------------"
+	echo "for MAC"
+	echo "dnotify [MESSAGE]"
+	echo " ------------------"
+	echo ""
+	echo "For Windows/Linux"
+	echo 'dnotify "[TITLE]" "[DESCRIPTION]"'
+	echo ""
+	exit 0
+fi
+
+version="0.7"
+title=${1:-"default title"}
+shift
+description=${@:-"  "}
+check=$(uname)
+
+if [[ $check == "Darwin" ]]; then
+	notipy "$title $description"
+else
+	notifyd "$title" "$description"
+fi
