@@ -1,0 +1,3 @@
+[console_scripts]
+te-eg-usage = te_eg_usage:_main
+
