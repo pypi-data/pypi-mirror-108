@@ -1,0 +1,3 @@
+[console_scripts]
+irt=ietf_reviewtool.ietf_reviewtool:cli
+
