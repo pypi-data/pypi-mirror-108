@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+benamer/__init__.py
+benamer/benamer_tool.py
+benamer.egg-info/PKG-INFO
+benamer.egg-info/SOURCES.txt
+benamer.egg-info/dependency_links.txt
+benamer.egg-info/entry_points.txt
+benamer.egg-info/top_level.txt
