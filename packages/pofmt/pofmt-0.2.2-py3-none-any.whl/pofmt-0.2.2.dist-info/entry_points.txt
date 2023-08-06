@@ -1,0 +1,3 @@
+[console_scripts]
+pofmt=pofmt.__main__:main
+
