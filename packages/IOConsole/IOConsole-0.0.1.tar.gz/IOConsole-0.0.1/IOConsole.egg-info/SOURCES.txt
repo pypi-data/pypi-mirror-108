@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+IOConsole/__init__.py
+IOConsole.egg-info/PKG-INFO
+IOConsole.egg-info/SOURCES.txt
+IOConsole.egg-info/dependency_links.txt
+IOConsole.egg-info/requires.txt
+IOConsole.egg-info/top_level.txt
