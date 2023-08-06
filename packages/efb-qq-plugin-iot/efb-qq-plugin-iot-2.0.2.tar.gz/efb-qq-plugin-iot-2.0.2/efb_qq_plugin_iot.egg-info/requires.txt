@@ -1,0 +1,7 @@
+efb-qq-slave
+botoy
+ehforwarderbot
+requests
+python-magic
+cachetools
+pydub

@@ -1,0 +1,3 @@
+[ehforwarderbot.qq.plugin]
+iot = efb_qq_plugin_iot:IOTBot
+
