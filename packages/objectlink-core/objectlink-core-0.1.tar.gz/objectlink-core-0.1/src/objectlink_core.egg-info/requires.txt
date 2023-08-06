@@ -1,0 +1,7 @@
+
+[dev]
+websockets
+starlette
+
+[test]
+pytest
