@@ -1,0 +1,4 @@
+
+            [console_scripts]
+            fastml=fastml_engine.cli:cli
+        
