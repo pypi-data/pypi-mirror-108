@@ -1,0 +1,54 @@
+import abc
+from abc import ABC
+from pathlib import Path
+
+import torch
+from torch import Tensor
+from torch.utils.data import Dataset, DataLoader
+
+
+class BaseDataModule(ABC):
+    def __init__(
+            self,
+            data_path: Path,
+            batch_size: int,
+            num_workers: int,
+        ):
+        self.data_path = data_path
+        self.batch_size = batch_size
+        self.num_workers = num_workers
+
+    @staticmethod
+    def prepare_data(
+            data_path: Path,
+        ):
+        raise NotImplementedError
+
+    @abc.abstractmethod
+    def setup(
+            self,
+            val_ratio: float,
+        ) -> None:
+        raise NotImplementedError
+
+    def train_dataloader(self) -> DataLoader:
+        train_dataloader = DataLoader(
+            dataset=self.train_dataset,
+            batch_size=self.batch_size,
+            num_workers=self.num_workers,
+        )
+
+        return train_dataloader
+
+    def val_dataloader(self) -> DataLoader:
+        val_dataloader = DataLoader(
+            dataset=self.val_dataset,
+            batch_size=self.batch_size,
+            num_workers=self.num_workers,
+        )
+
+        return val_dataloader
+
+    def test_dataloader(self):
+        pass
+
