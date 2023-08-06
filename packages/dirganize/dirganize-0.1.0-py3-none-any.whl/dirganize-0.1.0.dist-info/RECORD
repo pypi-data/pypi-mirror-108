@@ -1,0 +1,9 @@
+dirganize/__init__.py,sha256=bJzI0lTnZ6F7fFrQdUnCW-juJDzGn__S6MEx6TKl2ns,337
+dirganize/cli.py,sha256=N528CUJWGjoLWFbPAvL0MXhDpCxWGaCiabkJh6mdEDI,1592
+dirganize/conf.py,sha256=tc3fQ7utxdoQKva2U1m8An5u-qGXC4eWwzANPMmb0Uk,647
+dirganize/dirganize.py,sha256=MSjUcTP92f4azFnWVkjAbez66W_icxU1hrMN9j_gPqQ,1335
+dirganize-0.1.0.dist-info/entry_points.txt,sha256=taCde3g5wBCo-KlwnZ28jQCXjYtENe5UBwv60mtClag,47
+dirganize-0.1.0.dist-info/LICENSE,sha256=URm_vYF0YHZixIzDqOIIjhbes8gzBO9vzd9TkBxS3F0,1067
+dirganize-0.1.0.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+dirganize-0.1.0.dist-info/METADATA,sha256=I_6MCTsk4WjH56iiuF5KKL0fYYO9eLS3P5opFnawYHs,2964
+dirganize-0.1.0.dist-info/RECORD,,
