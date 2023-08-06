@@ -1,0 +1,7 @@
+LICENSE
+README.md
+setup.py
+SarthakPDF.egg-info/PKG-INFO
+SarthakPDF.egg-info/SOURCES.txt
+SarthakPDF.egg-info/dependency_links.txt
+SarthakPDF.egg-info/top_level.txt
