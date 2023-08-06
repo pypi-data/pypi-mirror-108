@@ -1,0 +1,6 @@
+TORNAMESA_AGS.py
+setup.py
+TORNAMESA_AGS.egg-info/PKG-INFO
+TORNAMESA_AGS.egg-info/SOURCES.txt
+TORNAMESA_AGS.egg-info/dependency_links.txt
+TORNAMESA_AGS.egg-info/top_level.txt
