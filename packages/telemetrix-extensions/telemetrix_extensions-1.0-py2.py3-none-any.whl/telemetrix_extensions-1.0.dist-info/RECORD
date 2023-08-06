@@ -1,0 +1,8 @@
+telemetrix_pca9685/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+telemetrix_pca9685/pca9685_constants.py,sha256=qIFwEShWcCKt48iaw5xy6YGYzkb03vTB5aN00AKsHyI,2922
+telemetrix_pca9685/telemetrix_pca9685.py,sha256=MPt4zVzc1dKiou0n0dM0DvgiuBuDG8xs6os2UYkLz90,13724
+telemetrix_pca9685/telemetrix_pca9685_aio.py,sha256=E-Sn96_DG2_gcbk8jDZmT4oQfEZmhtgQhzpu81sGtx8,14474
+telemetrix_extensions-1.0.dist-info/METADATA,sha256=_5WWkZla3D8B-Rj8h_ijsUZWqkOGTnPPvqh4eE69gxc,2429
+telemetrix_extensions-1.0.dist-info/WHEEL,sha256=kGT74LWyRUZrL4VgLh6_g12IeVl_9u9ZVhadrgXZUEY,110
+telemetrix_extensions-1.0.dist-info/top_level.txt,sha256=zfG02fC-Z3IE_UGs5nxSC3aiySUn8Ag7xLwnq7jxrRM,19
+telemetrix_extensions-1.0.dist-info/RECORD,,
