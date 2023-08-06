@@ -1,0 +1,47 @@
+from setuptools import setup, find_packages
+
+VERSION = '0.2.4' 
+DESCRIPTION = 'My first Python package'
+LONG_DESCRIPTION = 'My first Python package with a slightly longer description'
+
+# Setting up
+setup(
+       # the name must match the folder name 'verysimplemodule'
+        name="testmodule3091", 
+        version=VERSION,
+        author="AKS",
+        author_email="",
+        description=DESCRIPTION,
+        long_description=LONG_DESCRIPTION,
+        packages=find_packages(),
+        install_requires=[
+         'beautifulsoup4==4.9.3', 
+		 'certifi==2020.12.5', 
+		 'chardet==4.0.0', 
+		 'cssutils==2.3.0', 
+		 'idna==2.10', 
+		 'importlib-metadata==4.0.1', 
+		 'lxml==4.6.3', 
+		 'mypy-extensions==0.4.3', 
+		 'python-docx==0.8.11', 
+		 'PyYAML==5.4.1', 
+		 'qwikidata==0.4.0', 
+		 'requests==2.25.1', 
+		 'soupsieve==2.2.1', 
+		 'typing-extensions==3.10.0.0', 
+		 'urllib3==1.26.4', 
+		 'zipp==3.4.1'
+        ], 
+        
+        include_package_data=True,
+        
+        keywords=['python', 'first package'],
+        classifiers= [
+            "Development Status :: 3 - Alpha",
+            "Intended Audience :: Education",
+            "Programming Language :: Python :: 2",
+            "Programming Language :: Python :: 3",
+            "Operating System :: MacOS :: MacOS X",
+            "Operating System :: Microsoft :: Windows",
+        ]
+)
