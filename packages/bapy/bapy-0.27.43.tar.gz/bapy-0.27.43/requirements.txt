@@ -1,0 +1,9 @@
+decorator
+environs
+furl
+marshmallow
+more_itertools
+requests[security]
+nested_lookup
+rich
+typer
