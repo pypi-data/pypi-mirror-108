@@ -1,0 +1,4 @@
+click
+scrapy
+jsonlines
+geo-alchemy
