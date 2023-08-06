@@ -1,0 +1,15 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+setup.cfg
+setup.py
+ducts_client/__init__.py
+ducts_client/controllers.py
+ducts_client/ducts.py
+ducts_client/event_listeners.py
+ducts_client/events.py
+ducts_client.egg-info/PKG-INFO
+ducts_client.egg-info/SOURCES.txt
+ducts_client.egg-info/dependency_links.txt
+ducts_client.egg-info/requires.txt
+ducts_client.egg-info/top_level.txt
