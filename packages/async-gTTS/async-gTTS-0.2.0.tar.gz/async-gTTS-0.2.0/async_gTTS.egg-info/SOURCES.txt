@@ -1,0 +1,15 @@
+LICENCE
+README.md
+pyproject.toml
+setup.cfg
+async_gTTS.egg-info/PKG-INFO
+async_gTTS.egg-info/SOURCES.txt
+async_gTTS.egg-info/dependency_links.txt
+async_gTTS.egg-info/requires.txt
+async_gTTS.egg-info/top_level.txt
+asyncgTTS/__init__.py
+asyncgTTS/_decos.py
+asyncgTTS/asyncgTTS.py
+asyncgTTS/config.py
+asyncgTTS/errors.py
+asyncgTTS/token.py
