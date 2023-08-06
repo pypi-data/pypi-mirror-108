@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+pySCILTagger.egg-info/PKG-INFO
+pySCILTagger.egg-info/SOURCES.txt
+pySCILTagger.egg-info/dependency_links.txt
+pySCILTagger.egg-info/not-zip-safe
+pySCILTagger.egg-info/top_level.txt
+sciltagger/__init__.py
+sciltagger/config.py
+sciltagger/getmodel.py
+sciltagger/labelconvert.py
+sciltagger/modeltest.py
+sciltagger/pandm.py
+sciltagger/tagger.py
+sciltagger/test.py
