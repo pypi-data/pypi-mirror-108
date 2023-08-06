@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: abkdependerlib
+Version: 0.0.1
+Summary: Dependency test
+Home-page: UNKNOWN
+Author: Andrew King
+Author-email: andrewking1597@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+License-File: LICENSE.txt
+Requires-Dist: numpy
+
+UNKNOWN
+
