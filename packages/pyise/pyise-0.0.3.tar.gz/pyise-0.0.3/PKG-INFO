@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: pyise
+Version: 0.0.3
+Summary: This is a Python wrapper for Xilinx ISE with the added functionality of batch synthesis and simulation. The console output of batch operations are logged.
+Home-page: https://github.com/bugraonal/PyISE
+Author: Bugra Onal
+Author-email: onalbugra@gmail.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/bugraonal/PyISE/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# PyISE
+This is a Python wrapper for Xilinx ISE with the added functionality of batch synthesis and simulation. The console output of batch operations are logged.
+
+
