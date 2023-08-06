@@ -1,0 +1,1 @@
+This library is used for quick convertions within the EHN module and practicals.
