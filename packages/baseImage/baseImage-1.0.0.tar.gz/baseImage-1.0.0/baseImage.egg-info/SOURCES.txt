@@ -1,0 +1,7 @@
+LICENSE
+setup.py
+baseImage.egg-info/PKG-INFO
+baseImage.egg-info/SOURCES.txt
+baseImage.egg-info/dependency_links.txt
+baseImage.egg-info/requires.txt
+baseImage.egg-info/top_level.txt
