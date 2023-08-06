@@ -1,0 +1,99 @@
+Metadata-Version: 1.1
+Name: imperio
+Version: 0.1.1
+Summary: Imperio is a python sci-kit learn inspired package for feature engineering.
+Home-page: https://github.com/user/reponame
+Author: SigmoidAI - Păpăluță Vasile
+Author-email: vpapaluta06@gmail.com
+License: MIT
+Download-URL: https://github.com/ScienceKot/kydavra/archive/v1.0.tar.gz
+Description: 
+        Imperio is a python sci-kit learn inspired package for feature engineering. It contains a some feature transformers to make your data more easy to learn from for Machine Learning Algorithms.
+        
+        This version of imperio has the next methods of feature selection:
+        
+        1) Box-Cox (BoxCoxTransformer).
+        
+        2) Clusterize (ClusterizeTransformer).
+        
+        3) Combinator (CombinatorTransformer).
+        
+        4) Expanding Mean Transformer (ExpandingMeanTransformer).
+        
+        5) Frequency Imputation Transformer (FrequencyImputationTransformer).
+        
+        6) log Transformer (LogTransformer).
+        
+        7) Smoothing (SmoothingTransformer).
+        
+        8) Spatial-Sign Transformer (SpatialSignTransformer).
+        
+        9) Target Imputation Transformer (TargetImputationTransformer).
+        
+        10) Whitening (WhiteningTransformer).
+        
+        11) Yeo-Johnson Transformer (YeoJohnsonTransformer).
+        
+        12) ZCA (ZCATransformer).
+        
+        All these methods work like normal sklearn transformers. They have fit, transform and fit_transform functions implemented.
+        
+        Additionally every imperio transformer has an apply function which allows to apply an transformation on a pandas Data Frame.
+        
+        How to use imperio
+        
+        To use a transformer from imperio you should just import the transformer from imperio in the following framework:
+        
+        ```from imperio import <class name>```
+        
+        class names are written above in parantheses.
+        
+        Next create a object of this algorithm (I will use Box-Cox as an example).
+        
+        ```method = BoxCoxTransformer()```
+        
+        Firstly you should fit the transformer, passing to it a feature matrix (X) and the target array (y). y argument is really used only by Target-Imputation
+        
+        ```mathod.fit(X, y)```
+        
+        After you fit the model, you can use it for transforming new data, using the transform function. To transform function you should pass only the feature matrix (X).
+        
+        ```X_transformed = method.transform(X)```
+        
+        Also you can fit and transform the data at the same time using the fit_transform function.
+        
+        ```X_transformed = method.fit_transform(X)```
+        
+        Also you can apply a transformation directly on a pandas DataFrame, choosing the columns that you want to change.
+        
+        ```new_df = method.apply(df, 'target', ['col1', 'col2'])```
+        
+        Some advices.
+        
+        1) Use ```FrequencyImputationTransformer``` and ```TargetImputationTransformer``` for categorical features.
+        
+        2) Use ```BoxCoxTransformer``` and ```YeoJohnsonTransformer``` for numerical features to normalize a feature distribution.
+        
+        3) Use ```SpatialSignTransformer``` on normalized data to bring outlayers to normal features..
+        
+        With love from Sigmoid.
+        
+        We are open for feedback. Please send your impression to papaluta.vasile@isa.utm.md
+        
+        
+Keywords: ml,machine learning,feature engineering,python,data science
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Framework :: Jupyter
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
