@@ -1,0 +1,6 @@
+click
+dataset
+banal
+pyyaml
+python-dateutil
+awesome-slugify
