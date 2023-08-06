@@ -1,0 +1,6 @@
+[console_scripts]
+pumbench = putdig_cli.pumbench:execute
+pumgen = putdig_cli.pumgen:execute
+puminj = putdig_cli.puminj:execute
+pumqry = putdig_cli.pumqry:execute
+

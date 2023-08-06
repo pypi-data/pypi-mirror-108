@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: PuTDIG-CLI
+Version: 0.0.6
+Summary: Common interface and business logic for PuTDIG and PuTDIG-CLI
+Home-page: https://github.com/PumpkinSpace/PuTDIG-CLI
+Author: James Womack, Jack Hughes
+Author-email: info@pumpkininc.com
+License: UNKNOWN
+Description: # PuTDIG
+        
+        Pumpkin Telemetry Discovery Injection and Generation program.
+        
+        ## Telemetry Benchmark Utility
+        `pumbench` can be used to measure the response time of each telemetry item on the bus.
+        
+        First you must generate a bus definition using [pumqry](https://github.com/PumpkinSpace/PuTDIG-CLI): `pumqry -t kubos -p 1 -e -d -f bus.json`
+        
+        Then you can run a benchmark: `pumbench -t i2c_driver -p /dev/ttyUSBX -f /path/to/save/to.json`
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
