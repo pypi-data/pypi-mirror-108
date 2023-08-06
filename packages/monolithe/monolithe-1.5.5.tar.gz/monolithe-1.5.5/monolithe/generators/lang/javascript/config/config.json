@@ -1,0 +1,29 @@
+{    
+    "generic_enums": {
+        "IPType": ["IPv4", "IPv6", "IPV4", "IPV6", "DUALSTACK", "IPv4Network", "IPv6Network"],
+        "enabled": ["DISABLED", "ENABLED", "INHERITED", "ENABLED_INHERITED"],
+        "permittedAction": ["ALL", "EXTEND", "DEPLOY", "READ", "INSTANTIATE", "USE"],
+        "entityScope": ["ENTERPRISE", "GLOBAL"]
+    },
+    "overide_generic_enums": {
+        "enterprise": ["encryptionManagementMode"],
+        "infrastructuregatewayprofile": ["remoteLogMode", "controllerLessForwardingMode"],
+        "job": ["command"],
+        "nsginfo": ["TPMStatus"],
+        "nsgateway": ["TPMStatus"],
+        "ingressadvfwdentrytemplate": ["appType", "addressOverrideType"],
+        "link": ["acceptanceCriteria"],
+        "vnf": ["allowedActions", "lastUserAction"],
+        "egressaclentrytemplate": ["addressOverrideType"],
+        "egressadvfwdentrytemplate": ["addressOverrideType"],
+        "egressauditaclentrytemplate": ["addressOverrideType"],
+        "egressdomainfloatingipaclentrytemplate": ["addressOverrideType"],
+        "ingressaclentrytemplate": ["addressOverrideType"],
+        "ingressauditaclentrytemplate": ["addressOverrideType"],
+        "firewallrule": ["addressOverrideType"],
+        "virtualfirewallrule": ["addressOverrideType"],
+        "uplinkconnection": ["fecEnabled"],
+        "virtualuplink": ["fecEnabled"]
+    },
+    "list_subtypes_generic": ["double", "enum", "long", "string", "JSON"]
+}
