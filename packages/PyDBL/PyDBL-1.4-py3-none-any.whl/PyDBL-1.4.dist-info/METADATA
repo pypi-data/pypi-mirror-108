@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: PyDBL
+Version: 1.4
+Summary: An easy to use api wrapper for discordbotslist.co .
+Home-page: UNKNOWN
+Author: Rishikesh
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: aiohttp
+Requires-Dist: requests
+Requires-Dist: json
+
+An easy to use api wrapper for discordbotslist.co . 
+
+
