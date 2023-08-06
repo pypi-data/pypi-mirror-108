@@ -1,0 +1,2 @@
+portmod>=2.0rc10
+fuzzywuzzy
