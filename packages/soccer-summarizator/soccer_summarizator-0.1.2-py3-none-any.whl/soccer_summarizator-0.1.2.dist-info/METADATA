@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: soccer-summarizator
+Version: 0.1.2
+Summary: Soccer Goals Summarizator based on detecting Celebration Events and make offset n frames back
+Home-page: https://github.com/AlexanderSlav/Automatic-Soccer-Highlights-Generation/tree/main/Celebration_Classification
+Author: Slavutin Alexander
+Author-email: alexander.slavutin@gmail.com
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >=3.7,<4.0
+Description-Content-Type: text/markdown
+Requires-Dist: torchvision (==0.7.0)
+Requires-Dist: tqdm (==4.57.0)
+Requires-Dist: matplotlib (==3.4.1)
+Requires-Dist: opencv-python (==4.5.1.48)
+Requires-Dist: numpy (==1.20.2)
+Requires-Dist: seaborn (==0.11.1)
+Requires-Dist: scikit-video (==1.1.11)
+Requires-Dist: loguru (==0.5.3)
+Requires-Dist: torch (==1.6.0)
+Requires-Dist: albumentations (==0.5.2)
+Requires-Dist: scipy (==1.6.1)
+Requires-Dist: scikit-learn (==0.24.2)
+
+# Soccer Goals Summarizator
+
+
+Cut goals moments from soccer record game using Celebration Event Classifier.
+
+Trained on [Futsal games](https://www.youtube.com/channel/UCRheEKZEJtF8jfxkQPxZZbw)
+
+## Installation
+ - Install Python 3.6 or higher and run: `pip install soccer-summarizator`
+ 
+## Usage
+
+```bash
+usage: inference.py [-h] [--input_video INPUT_VIDEO]
+[--output_video OUTPUT_VIDEO] [--model_name MODEL_NAME]
+[--classification_type CLASSIFICATION_TYPE] [--fps_count]
+[--batch_size BATCH_SIZE]
+
+Summarize input video
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --input_video INPUT_VIDEO
+                        path to input video
+  --output_video OUTPUT_VIDEO
+                        path to input video
+  --model_name MODEL_NAME
+                        model namecould be "squeezenet" or "resnet"
+  --classification_type CLASSIFICATION_TYPE
+  --fps_count
+  --batch_size BATCH_SIZE
+
