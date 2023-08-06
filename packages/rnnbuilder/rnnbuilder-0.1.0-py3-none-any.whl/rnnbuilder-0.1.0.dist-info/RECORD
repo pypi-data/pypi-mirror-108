@@ -1,0 +1,17 @@
+rnnbuilder/__init__.py,sha256=HNao6ZQHI2El3XJa51Dmls7FjucdTxWbJyQo-frlmek,17793
+rnnbuilder/base/__init__.py,sha256=U_tMZ-okCBW_E1hhT15AllsUk2ZN7uKT_jJE8la8MsU,5991
+rnnbuilder/base/_modules.py,sha256=eLz6R2XK463oqGSsVNWUUHQe_DRgRRZEVof4Jh4XBv0,7975
+rnnbuilder/base/_utils.py,sha256=PgOqIa1pBXxApABkP7Rs1pPruLAzEJDyIO1ULUQD7II,3229
+rnnbuilder/custom/__init__.py,sha256=hJ32_Mk4omXalGrOgZxNmsT3Ipa-UK1YFN8GcVE4XJ8,6351
+rnnbuilder/custom/_factories.py,sha256=ZMkaFJJFilPDFF5yhznQrknxg53fdCg5sAsAEpGOjHQ,3582
+rnnbuilder/custom/_modules.py,sha256=pTF6saWckMIJwNK3KVdX26-YE_Z5QNkfeAv2glk3TwA,2333
+rnnbuilder/nn/__init__.py,sha256=Fqtl17gIbHoD37u75Tqfbofu9MrAVJ0fojLSaAf9wTo,7884
+rnnbuilder/rnn/__init__.py,sha256=Qs5NeJ_E5r8svj3MaPwdX_DxlwworFnIFZOE3e3bXh0,4807
+rnnbuilder/rnn/_modules.py,sha256=kltvlvHdlcB96-TmGwKK0i4PdKGS-YiNGEIg2aoYiPk,1876
+rnnbuilder/snn/__init__.py,sha256=CaufBgbmWkb8vE8KGRqad4pnzKEJvgjSxHks9SXbfw0,4216
+rnnbuilder/snn/_modules.py,sha256=k5HeC5pdSw9NQV5KztX3TK53XRW5vT54gigEuTcda20,2897
+rnnbuilder-0.1.0.dist-info/LICENSE,sha256=tN1x5k3Tu3vY45GmwDn89H9J73OT-6dD6PfNRwN5Gyw,1067
+rnnbuilder-0.1.0.dist-info/METADATA,sha256=RnzL6hvUPFBB93gQZdrmITm8HpE2ycTUIOUpI22COv0,768
+rnnbuilder-0.1.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+rnnbuilder-0.1.0.dist-info/top_level.txt,sha256=yL8mLFPkKZlxcNC8oIALgBFUsTUdTFYeaE7IcbK7igE,11
+rnnbuilder-0.1.0.dist-info/RECORD,,

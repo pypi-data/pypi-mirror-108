@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: rnnbuilder
+Version: 0.1.0
+Summary: Modular recurrent PyTorch models
+Home-page: https://github.com/Quickblink/rnnbuilder
+Author: Eric Koepke
+Author-email: eric.koepke@online.de
+License: UNKNOWN
+Project-URL: Bug Tracker, https://github.com/Quickblink/rnnbuilder/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: torch (>=1.7)
+
+A package for building modular recurrent models in an easy keras-inspired way.
+
+Install with `pip install rnnbuilder`.
+
+[Find the documentation here!](https://quickblink.github.io/rnnbuilder/)
+
