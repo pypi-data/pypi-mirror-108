@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: earlybyte-mvv
+Version: 0.0.2
+Summary: earlybtyte mission, vision, and value statement
+Home-page: https://www.earlybyte.ch
+Author: Remo Hoeppli
+Author-email: remo.hoeppli@earlybyte.ch
+License: MIT License
+Description: earlybtyte mission, vision, and value statement
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
