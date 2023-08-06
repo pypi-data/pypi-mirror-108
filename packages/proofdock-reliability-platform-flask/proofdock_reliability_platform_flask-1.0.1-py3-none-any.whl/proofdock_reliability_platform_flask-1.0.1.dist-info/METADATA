@@ -1,0 +1,74 @@
+Metadata-Version: 2.1
+Name: proofdock-reliability-platform-flask
+Version: 1.0.1
+Summary: A chaos engineering framework for Python Flask applications.
+Home-page: https://github.com/proofdock/chaos-middleware-python/tree/master/src/contrib-flask
+Author: Proofdock Authors
+Author-email: support@proofdock.io
+License: Apache-2.0
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.5.*
+Description-Content-Type: text/markdown
+Requires-Dist: flask
+Requires-Dist: proofdock-reliability-platform-core
+
+# Flask integration
+
+[![Python versions](https://img.shields.io/pypi/pyversions/proofdock-chaos-middleware-flask.svg)](https://www.python.org/)
+
+## Installation
+
+This package requires Python 3.5+
+
+```
+$ pip install -U proofdock-reliability-platform-flask
+```
+
+## Usage
+
+The reliability platform client for Flask takes the following **input variables**:
+
+| Variable | Description |
+| ---      | ---         |
+| `RELIABILITY_PLATFORM_APPLICATION_NAME` | The service application's name |
+| `RELIABILITY_PLATFORM_APPLICATION_ENV` | The service application's deployed environment |
+| `RELIABILITY_PLATFORM_PROOFDOCK_API_TOKEN` | The API token to connect to Proofdock's Reliability Platform API |
+
+The **configuration** exemplified as **code**:
+
+```python
+from flask import Flask, jsonify
+from proofdock.rp.contrib.flask.middleware import FlaskMiddleware
+
+app = Flask(__name__)
+app.config['RELIABILITY_PLATFORM_APPLICATION_NAME'] = 'example-application-name'
+app.config['RELIABILITY_PLATFORM_APPLICATION_ENV'] = 'example-environment'
+app.config['RELIABILITY_PLATFORM_PROOFDOCK_API_TOKEN'] = 'eyJ0eXAi...05'
+
+middleware = FlaskMiddleware(app)
+
+# Your business logic here
+
+@app.route("/")
+def hello():
+    return "Hello World!"
+
+if __name__ == "__main__":
+    app.run()
+```
+
+Start your Flask application and inject faults using the **Reliability Platform**. [More][attack_usage].
+
+
+[attack_usage]: https://docs.proofdock.io/reliabilityplatform/usage/
+
