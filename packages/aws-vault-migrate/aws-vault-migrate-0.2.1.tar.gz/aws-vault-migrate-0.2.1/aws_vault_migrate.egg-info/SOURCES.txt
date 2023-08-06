@@ -1,0 +1,10 @@
+README.md
+setup.py
+aws_vault_migrate/__init__.py
+aws_vault_migrate/cli.py
+aws_vault_migrate.egg-info/PKG-INFO
+aws_vault_migrate.egg-info/SOURCES.txt
+aws_vault_migrate.egg-info/dependency_links.txt
+aws_vault_migrate.egg-info/entry_points.txt
+aws_vault_migrate.egg-info/not-zip-safe
+aws_vault_migrate.egg-info/top_level.txt
