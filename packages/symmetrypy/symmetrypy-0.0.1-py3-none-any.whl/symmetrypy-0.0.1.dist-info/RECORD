@@ -1,0 +1,12 @@
+build/lib/symmetry/__init__.py,sha256=beM40wII2L8NBfBBWIJtc9VirP1_1pyLJovWh1Nc754,87
+build/lib/symmetry/example.py,sha256=zXeZcgy1kotuhOAvUhqvaYz_RxWWx4BwSeXPl2PsijE,128
+build/lib/symmetry/values/__init__.py,sha256=Cu12F0q9gCIOXrwsPmIAG6xNO4WQNWajXCTkyumejQ8,45
+build/lib/symmetry/values/addresses.py,sha256=lgRnZaI2sSo7uxmwnBPMjS8i5uWaEr1ttRaSrqIF3ao,167
+symmetry/__init__.py,sha256=beM40wII2L8NBfBBWIJtc9VirP1_1pyLJovWh1Nc754,87
+symmetry/example.py,sha256=zXeZcgy1kotuhOAvUhqvaYz_RxWWx4BwSeXPl2PsijE,128
+symmetry/values/__init__.py,sha256=Cu12F0q9gCIOXrwsPmIAG6xNO4WQNWajXCTkyumejQ8,45
+symmetry/values/addresses.py,sha256=lgRnZaI2sSo7uxmwnBPMjS8i5uWaEr1ttRaSrqIF3ao,167
+symmetrypy-0.0.1.dist-info/METADATA,sha256=1fQ9V1x20ihmMXCYfITWDvjkJ2F5R5VsaVhLQC_HTSo,344
+symmetrypy-0.0.1.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+symmetrypy-0.0.1.dist-info/top_level.txt,sha256=4m3yunogN2dihRxodE4_UNi5yXafwxeVlKYk2g8aWts,20
+symmetrypy-0.0.1.dist-info/RECORD,,
