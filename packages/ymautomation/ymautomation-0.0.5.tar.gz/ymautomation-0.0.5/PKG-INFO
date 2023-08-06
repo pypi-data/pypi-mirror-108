@@ -1,0 +1,23 @@
+Metadata-Version: 1.1
+Name: ymautomation
+Version: 0.0.5
+Summary: IoT
+Home-page: https://ymautomation.com
+Author: YOGESHWARAN MURALIDHARAN 
+Author-email: ym@ymautomation.com
+License: MIT
+Description: This is created by ymautomation.com
+        
+        Change Log
+        ===========
+        
+        0.0.2(05/06/2021)
+        =================
+        First Release
+Keywords: iot
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3

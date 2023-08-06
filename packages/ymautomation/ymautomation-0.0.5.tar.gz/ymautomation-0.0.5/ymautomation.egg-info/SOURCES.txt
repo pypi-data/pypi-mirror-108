@@ -1,0 +1,10 @@
+CHANGELOG.txt
+LICENCE.txt
+MANIFEST.in
+README.txt
+__init__.py
+setup.py
+ymautomation.egg-info/PKG-INFO
+ymautomation.egg-info/SOURCES.txt
+ymautomation.egg-info/dependency_links.txt
+ymautomation.egg-info/top_level.txt
