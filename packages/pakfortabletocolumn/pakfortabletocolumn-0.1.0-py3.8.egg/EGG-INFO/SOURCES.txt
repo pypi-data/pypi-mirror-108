@@ -1,0 +1,10 @@
+setup.py
+pakfortabletocolumn/__init__.py
+pakfortabletocolumn/__main__.py
+pakfortabletocolumn/tabletocolumn.py
+pakfortabletocolumn.egg-info/PKG-INFO
+pakfortabletocolumn.egg-info/SOURCES.txt
+pakfortabletocolumn.egg-info/dependency_links.txt
+pakfortabletocolumn.egg-info/entry_points.txt
+pakfortabletocolumn.egg-info/requires.txt
+pakfortabletocolumn.egg-info/top_level.txt
