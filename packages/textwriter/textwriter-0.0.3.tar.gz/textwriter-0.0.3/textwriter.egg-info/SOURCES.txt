@@ -1,0 +1,10 @@
+CHANGELOG.txt
+LICENSE.txt
+MANIFEST.in
+README.txt
+setup.py
+textwriter/__init__.py
+textwriter.egg-info/PKG-INFO
+textwriter.egg-info/SOURCES.txt
+textwriter.egg-info/dependency_links.txt
+textwriter.egg-info/top_level.txt

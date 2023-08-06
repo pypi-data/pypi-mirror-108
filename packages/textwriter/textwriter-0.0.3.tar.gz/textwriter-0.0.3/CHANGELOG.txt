@@ -1,0 +1,14 @@
+Change log
+===========
+
+0.0.1(05/6/2021)
+----------------
+First Version!
+
+0.0.2(05/6/2021)
+----------------
+Changed package name
+
+0.0.3(05/6/2021)
+----------------
+Added calculator functions

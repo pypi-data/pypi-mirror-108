@@ -1,0 +1,31 @@
+Metadata-Version: 1.1
+Name: textwriter
+Version: 0.0.3
+Summary: A basic text writer
+Home-page: UNKNOWN
+Author: Joaf
+Author-email: admin@jfncgamerinc.com
+License: MIT
+Description: This is my first python text writer it can write stuff on cmd and do other things
+        
+        Change log
+        ===========
+        
+        0.0.1(05/6/2021)
+        ----------------
+        First Version!
+        
+        0.0.2(05/6/2021)
+        ----------------
+        Changed package name
+        
+        0.0.3(05/6/2021)
+        ----------------
+        Added calculator functions
+Keywords: textwriter
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
