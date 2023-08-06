@@ -1,0 +1,16 @@
+.gitignore
+LICENSE
+README.md
+setup.cfg
+setup.py
+csdTools/__init__.py
+csdTools/csd.py
+csdTools.egg-info/PKG-INFO
+csdTools.egg-info/SOURCES.txt
+csdTools.egg-info/dependency_links.txt
+csdTools.egg-info/requires.txt
+csdTools.egg-info/top_level.txt
+examples/csdNoAvgExample.png
+examples/csdToolsExamples.ipynb
+examples/welchMeanExample.png
+examples/welchMedianExample.png
