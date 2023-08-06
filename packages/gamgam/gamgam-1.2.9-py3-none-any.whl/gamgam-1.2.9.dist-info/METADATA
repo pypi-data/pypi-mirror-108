@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: gamgam
+Version: 1.2.9
+Summary: A useful game framework
+Home-page: UNKNOWN
+Author: Coder-Jang
+Author-email: jsb060624@kakao.com
+License: LGPL
+Platform: UNKNOWN
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+
+A game framework has many useful class and function with pygame. Added Sound class. Added Empty Object. (First version that you can use is 1.1.18.) * What the version mean was posted 1.1.x *
+
+
