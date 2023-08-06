@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: customtransformers
+Version: 0.1.12
+Summary: A python library for custom transformers adapted to scikit-learn Pipeline / Transformers format
+Home-page: UNKNOWN
+Author: l4rakr0ft
+Author-email: l4rakr0ft@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: scikit-learn
+
+UNKNOWN
+
+
