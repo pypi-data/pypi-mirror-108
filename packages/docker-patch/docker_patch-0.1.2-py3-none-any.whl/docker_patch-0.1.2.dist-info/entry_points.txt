@@ -1,0 +1,3 @@
+[console_scripts]
+docker-patch = docker_patch.__main__:main_cli
+

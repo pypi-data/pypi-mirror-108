@@ -1,0 +1,83 @@
+Metadata-Version: 2.1
+Name: docker-patch
+Version: 0.1.2
+Summary: Patch docker images to fit your purposes and organization requirements
+Home-page: https://github.com/AvivAbramovich/docker-patch
+Author: Aviv Abramovich
+Author-email: AvivAbramovich@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: certifi (==2020.12.5)
+Requires-Dist: chardet (==4.0.0)
+Requires-Dist: click (==7.1.2)
+Requires-Dist: docker (==5.0.0)
+Requires-Dist: idna (==2.10)
+Requires-Dist: requests (==2.25.1)
+Requires-Dist: six (==1.15.0)
+Requires-Dist: urllib3 (==1.26.4)
+Requires-Dist: websocket-client (==0.58.0)
+
+
+Docker-Patch
+============
+
+Patch docker images to fit your purposes and organization requirements
+
+Installation
+------------
+
+.. code-block:: bash
+
+   pip install docker-patch
+
+Usage
+-----
+
+Add your own patch function like this:
+
+.. code-block:: python
+
+   import docker_patch
+
+   @docker_patch.register_patcher
+   def patcher_func(container):
+       print(f'patch container "{container}"')
+
+       container.exec_run('/bin/sh -c \'echo "hi from module 1" >> patched.txt\'')
+
+You can register multiple patchers, and then use it in one of these options:
+
+cli
+^^^
+
+.. code-block:: bash
+
+   docker-patch <IMAGE_NAME> -m <module_name>
+
+You can add additional ``-m <module>`` as you like and make a patchers chain that work on your image (in order of appearance).
+If you would like to import a module that not in your current path or installed in the interpreter libraries, you can add ``--add-path`` like this:
+
+.. code-block:: bash
+
+   # assume my_patcher is in /path/to/my_patcher.py
+   docker-patch <IMAGE_NAME> -m my_patcher --add-path /path/to
+
+This will add ``/path/to`` to ``sys.path`` so the patcher can import the ``my_module``
+
+In code
+^^^^^^^
+
+Use it directly from code
+
+.. code-block:: python
+
+   import docker
+   import docker_patch
+
+   # assume you registered patchers as shown above
+   client = docker.DockerClient()
+   image = client.images.get('some-image')
+
+   result_image = docker_patch.patch_image(image)
+
+
