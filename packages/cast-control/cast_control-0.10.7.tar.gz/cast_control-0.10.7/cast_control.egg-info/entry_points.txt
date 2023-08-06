@@ -1,0 +1,4 @@
+[console_scripts]
+cast_control = cast_control.command:cli
+castctl = cast_control.command:cli
+
