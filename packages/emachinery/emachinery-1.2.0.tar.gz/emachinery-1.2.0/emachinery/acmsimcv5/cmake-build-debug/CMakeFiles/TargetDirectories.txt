@@ -1,0 +1,3 @@
+D:/DrH/Codes/emachineryTestPYPI/emachinery/acmsimcv5/cmake-build-debug/CMakeFiles/acmsimcv5.dir
+D:/DrH/Codes/emachineryTestPYPI/emachinery/acmsimcv5/cmake-build-debug/CMakeFiles/edit_cache.dir
+D:/DrH/Codes/emachineryTestPYPI/emachinery/acmsimcv5/cmake-build-debug/CMakeFiles/rebuild_cache.dir
