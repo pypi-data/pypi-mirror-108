@@ -1,0 +1,10 @@
+wbib/__init__.py,sha256=L1D6PvH2z1NY2MFXE_R4-UEphcGfrA0yweSLbJ6zunQ,139
+wbib/queries.py,sha256=RjXzyVIyt0POPSE72qwagNPPlxiGac3v6NDhP52N7Y4,13307
+wbib/render.py,sha256=6YNerEAsnFslCpy_zvAwyMK3HpHBhlQCVdSXhNWuB4A,1278
+wbib/wbib.py,sha256=IcRYzyYFfQe6IPHnBjMg8S_MN1BrLfFbmSIJXC4nkok,7804
+wbib/templates/template.html.jinja,sha256=px-ru4aeYPbibfhFqW4YBvuqAou9oNd7QNUrQuS7Fpk,3443
+wbib-0.3.10.dist-info/LICENSE,sha256=CfOtctc-9cbxPVhXoppuAvurv-lgzqqATDIP54tGfVY,1072
+wbib-0.3.10.dist-info/METADATA,sha256=rN0v8spgvWSRdODWP36iy5y83qEcAIpybAsck9TKJw8,2134
+wbib-0.3.10.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+wbib-0.3.10.dist-info/top_level.txt,sha256=ReljviMsv0_W4uTjmBxwC4xIR3LnQ4SNa3n139W-jjE,5
+wbib-0.3.10.dist-info/RECORD,,
