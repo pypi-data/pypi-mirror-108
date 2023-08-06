@@ -1,0 +1,94 @@
+Metadata-Version: 2.1
+Name: dbinterface
+Version: 0.3
+Summary: UNKNOWN
+Home-page: https://github.com/somenzz/dbinterface
+Author: somenzz
+Author-email: somenzz@163.com
+License: MIT License
+        
+        Copyright (c) 2021 somenzz
+        
+        Permission is hereby granted, free of charge, to any person obtaining a copy
+        of this software and associated documentation files (the "Software"), to deal
+        in the Software without restriction, including without limitation the rights
+        to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+        copies of the Software, and to permit persons to whom the Software is
+        furnished to do so, subject to the following conditions:
+        
+        The above copyright notice and this permission notice shall be included in all
+        copies or substantial portions of the Software.
+        
+        THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+        IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+        FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+        AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+        LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+        OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+        SOFTWARE.
+        
+Keywords: python database client interface
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# dbinterface
+
+[![Build Status](https://travis-ci.com/somenzz/dbinterface.svg?branch=master)](https://travis-ci.com/somenzz/dbinterface)
+[![Coverage Status](https://coveralls.io/repos/github/somenzz/dbinterface/badge.svg)](https://coveralls.io/github/somenzz/dbinterface)
+
+
+Python 连接数据库，执行读写操作的通用接口。
+
+## 安装
+
+```sh
+pip install dbinterface
+```
+
+## 使用方法
+
+```python
+
+from dbinterface.database_client import DataBaseClientFactory
+
+client1 = DataBaseClientFactory.create(
+            dbtype="postgres",
+            host="localhost",
+            port=5432,
+            user="postgres",
+            pwd="121113",
+            database="postgres",
+        )
+result1 = client1.read("select current_date")
+
+client = DataBaseClientFactory.create(
+            dbtype="mysql",
+            host="localhost",
+            port=3306,
+            user="aaron",
+            pwd="aaron",
+            database="information_schema",
+        )
+result2 = client.read("select current_date()")
+
+```
+
+## 扩展
+
+以 oracle 为例，在 dbinterface 目录下，新增 oracle_client.py 文件，参考其他 client 编写即可。
+
+然后修改 dbinterface 目录下 database_client.py 文件，修改 DataBaseClientFactory 类，添加对应的数据库类型。
+
+
+
