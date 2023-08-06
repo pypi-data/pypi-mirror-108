@@ -1,0 +1,64 @@
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool]
+
+[tool.black]
+line-length = 79
+
+[tool.isort]
+profile = "black"
+line_length = 79
+
+[tool.poetry]
+name = "nginx-language-server"
+version = "0.7.1"
+description = "A language server for nginx.conf"
+authors = ["Sam Roeca <samuel.roeca@gmail.com>"]
+readme = "README.md"
+homepage = "https://github.com/pappasam/nginx-language-server"
+repository = "https://github.com/pappasam/nginx-language-server"
+keywords = [
+  "nginx",
+  "completion",
+  "refactoring",
+  "vim",
+  "neovim",
+  "lsp",
+  "language-server-protocol",
+]
+classifiers = [
+  "Development Status :: 2 - Pre-Alpha",
+  "Intended Audience :: Developers",
+  "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+  "Operating System :: OS Independent",
+  "Topic :: Software Development :: Code Generators",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+  "Topic :: Text Editors :: Integrated Development Environments (IDE)",
+  "Topic :: Utilities",
+  "Typing :: Typed",
+]
+include = ["README.md"]
+license = "GPL-3.0-only"
+
+[tool.poetry.dependencies]
+python = "^3.6"
+crossplane = "^0.5.7"
+pygls = "^0.10.3"
+pydantic = "^1.7.3"
+importlib-metadata = { version = "^3.10.0", python = "~3.6 || ~3.7" }
+
+[tool.poetry.dev-dependencies]
+pylint = "^2.6.2"
+mypy = "^0.812"
+black = "^20.8b1"
+docformatter = "^1.4"
+isort = "^5.7.0"
+
+[tool.poetry.scripts]
+nginx-language-server = 'nginx_language_server.cli:cli'
+
+[tool.poetry.urls]
+Changelog = "https://github.com/pappasam/nginx-language-server/blob/main/CHANGELOG.md"
+Issues = "https://github.com/pappasam/nginx-language-server/issues"
