@@ -1,0 +1,9 @@
+__init__.py
+check_style.py
+finglishV2.py
+persion_and_english_letters.py
+setup.py
+finglish_words.egg-info/PKG-INFO
+finglish_words.egg-info/SOURCES.txt
+finglish_words.egg-info/dependency_links.txt
+finglish_words.egg-info/top_level.txt
