@@ -1,0 +1,9 @@
+transmorph/__init__.py,sha256=n9FPGYVK2U-J6NrPinK49RqDvZ0tCLxIrF1YN7amT3Y,59
+transmorph/density.py,sha256=DGYDRBfhoyIUgJJxaYofHOcdVOLztfu6Vp08HXRNJus,2450
+transmorph/integration.py,sha256=8NSTKSfpzZlN4Rj1BIfzZ7lF0jPfLjTCw_fjGbvPJZ4,4305
+transmorph/transmorph.py,sha256=L035rXwwDWYRMoDcEyUWsQRQGigUgAuVhyF1ZH4eeH0,10240
+transmorph-0.0.5.dist-info/LICENSE,sha256=7EI8xVBu6h_7_JlVw-yPhhOZlpY9hP8wal7kHtqKT_E,1074
+transmorph-0.0.5.dist-info/METADATA,sha256=3mKK4DtWiU8xNEB46gpmTDaOsjummNvMhqWFFEaenbg,3220
+transmorph-0.0.5.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+transmorph-0.0.5.dist-info/top_level.txt,sha256=BpDbfrDR3sWwTiXGapKkSSjGI6riKm4Iof2-7u8bLDs,11
+transmorph-0.0.5.dist-info/RECORD,,
