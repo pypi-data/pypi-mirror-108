@@ -1,0 +1,8 @@
+LICENSE
+README.rst
+pyproject.toml
+setup.py
+types_pyre_extensions.egg-info/PKG-INFO
+types_pyre_extensions.egg-info/SOURCES.txt
+types_pyre_extensions.egg-info/dependency_links.txt
+types_pyre_extensions.egg-info/top_level.txt
