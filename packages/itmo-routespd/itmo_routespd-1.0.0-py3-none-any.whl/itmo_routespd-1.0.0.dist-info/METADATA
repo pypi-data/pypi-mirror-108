@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: itmo-routespd
+Version: 1.0.0
+Summary: Recommendation individual educational routes for ITMO university entrants
+Home-page: https://github.com/RUGyron/itmo_routespd
+Keywords: itmo,route,education
+Author: Vladislav Pivosh
+Author-email: pivosh098@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: pydantic (==1.8.1)
+Project-URL: Repository, https://github.com/RUGyron/itmo_routespd
+Description-Content-Type: text/markdown
+
+# ITMO RoutesPD
+Recommendation individual educational routes for ITMO university entrants
+
+*Final thesis by <b>Pivosh Vladislav K3440</b>*
+
