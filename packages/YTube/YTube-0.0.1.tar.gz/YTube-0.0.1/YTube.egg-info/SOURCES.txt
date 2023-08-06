@@ -1,0 +1,11 @@
+CHANGELOG.txt
+LICENSE.txt
+MANIFEST.in
+README.txt
+setup.py
+YTube/__init__.py
+YTube.egg-info/PKG-INFO
+YTube.egg-info/SOURCES.txt
+YTube.egg-info/dependency_links.txt
+YTube.egg-info/requires.txt
+YTube.egg-info/top_level.txt
