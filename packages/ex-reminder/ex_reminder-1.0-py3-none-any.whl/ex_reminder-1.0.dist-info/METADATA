@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: ex-reminder
+Version: 1.0
+Summary: I can remind you of experiments!
+Home-page: https://github.com/JonnesLin/ex_reminder
+Author: Jones
+Author-email: jlin398@wisc.edu
+License: MIT
+Platform: UNKNOWN
+Requires: yagmail
+Requires: urllib3
+
+UNKNOWN
+
+
