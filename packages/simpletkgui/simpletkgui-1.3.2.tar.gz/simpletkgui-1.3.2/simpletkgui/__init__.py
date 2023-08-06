@@ -1,0 +1,1 @@
+__all__ = ['simpleapp', 'simpleconfig', 'simpleicons', 'simplestyles', 'simpleviews', 'simplewidgets']
