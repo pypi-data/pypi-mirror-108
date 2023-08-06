@@ -1,0 +1,9 @@
+Metadata-Version: 2.1
+Name: seesv
+Version: 0.1.0
+Summary: A Python library providing fast access to data in very large delimited data files (CSV, TSV, pipe-delimited, etc).
+Author: David Alexis
+Author-email: dalexis@gmail.com
+Requires-Python: >=3.9,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
