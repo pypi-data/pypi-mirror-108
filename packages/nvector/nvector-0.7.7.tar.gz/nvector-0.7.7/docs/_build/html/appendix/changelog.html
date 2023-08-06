@@ -1,0 +1,724 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Changelog &mdash; Nvector 0.7.7 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Developers" href="authors.html" />
+    <link rel="prev" title="5.4.7. nvector.util.unit" href="../reference/generated/nvector.util.unit.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Nvector
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.7
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html">2. Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../how-to/index.html">3. How-to guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topics/index.html">4. Topics guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">5. Reference nvector package</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Changelog</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#version-0-7-7-june-3-2021">Version 0.7.7, June 3, 2021</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-0-7-6-december-18-2020">Version 0.7.6, December 18, 2020</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-0-7-5-december-12-2020">Version 0.7.5, December 12, 2020</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-0-7-4-june-4-2019">Version 0.7.4, June 4, 2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-0-7-3-june-4-2019">Version 0.7.3, June 4, 2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-0-7-0-june-2-2019">Version 0.7.0, June 2, 2019</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-0-6-0-december-9-2018">Version 0.6.0, December 9, 2018</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-0-5-2-march-7-2017">Version 0.5.2, March 7, 2017</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-0-5-1-march-5-2017">Version 0.5.1, March 5, 2017</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-0-4-1-january-19-2016">Version 0.4.1, January 19, 2016</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-0-1-3-january-1-2016">Version 0.1.3, January 1, 2016</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#version-0-1-1-january-1-2016">Version 0.1.1, January 1, 2016</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="authors.html">Developers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="acknowledgement.html">Acknowledgments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">Indices and tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="zreferences.html">Bibliography</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Nvector</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Changelog</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/appendix/changelog.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="changelog">
+<span id="id1"></span><h1>Changelog<a class="headerlink" href="#changelog" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="version-0-7-7-june-3-2021">
+<h2>Version 0.7.7, June 3, 2021<a class="headerlink" href="#version-0-7-7-june-3-2021" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>Per A Brodtkorb (27):</dt><dd><ul class="simple">
+<li><p>Added cartopy and matplotlib to requirements.txt</p></li>
+<li><p>Updated appveyor.yml, setup.cfg and setup.py</p></li>
+<li><p>Updated .gitignore to ignore .pytest_cache</p></li>
+<li><p>Corrected failing doctests in objects.py</p></li>
+<li><p>Updated version in _installation.py</p></li>
+<li><p>Updated failing docstrings for python 2.7 in objects.py.</p></li>
+<li><p>Added ‘# doctest: SKIP’ to all plt.show() in order to avoid the doctests hangs on the testserver.</p></li>
+<li><p>Fixed a bug  in _info_functional.py</p></li>
+<li><p>Updated pycodestyle exlude section in setup.cfg Prettified _examples.py, _examples_object_oriented.py and core.py</p></li>
+<li><p>Updated pycodestyle ignore section in setup.cfg</p></li>
+<li><p>Added doctest option to setup.cfg</p></li>
+<li><p>Removed print statements in test_objects.py</p></li>
+<li><p>Return “NotImplemented” instead of raising “NotImplementedError” in Nvector._mul__ and Nvector.__div__ in objects.py</p></li>
+<li><dl class="simple">
+<dt>Fixed .travis.yml so that he file paths in coverage.xml is discoverable</dt><dd><p>under the sonar.sources folder. The problem is that SonarQube is
+analysing the checked-out source code (in src/nvector) but the actual
+unit tests and coverage.py is run against the installed code (in
+build/lib/nvector). Thus the absolute files paths to the installed code
+in the generated coverage.xml were causing Sonar to show no coverage.
+The workaround was to use sed in the pipeline to replace every path to
+build/lib/nvector with src/nvector in coverage.xml.</p>
+</dd>
+</dl>
+</li>
+<li><p>Fixed a bug: Identical expressions should not be used on both sides of a binary operator in test:objects.py.</p></li>
+<li><p>Updated solutions to example 9</p></li>
+<li><p>Added greatcircle method to GeoPoint.distance_and_azimuth in objects.py</p></li>
+<li><p>Added _base_angle function that makes sure an angle is between -pi and pi.</p></li>
+<li><p>Added test_direct_and_inverse in test_objects.py</p></li>
+<li><p>Added interp_nvectors to docs/reference/nvector_summary.rst</p></li>
+<li><p>Added vectorized interpolation routines: interp_nvectors function to core.py and Nvector.interpolate to objects.py.</p></li>
+<li><dl class="simple">
+<dt>Put try except around code in use_docstring to avoid attribute ‘__doc__’</dt><dd><p>of ‘type’ objects is not writable errors for  python2.</p>
+</dd>
+</dl>
+</li>
+<li><p>Added interp_nvectors</p></li>
+<li><p>Reorganized _displace_great_circle</p></li>
+<li><p>Added check that depths also are equal on in _on_ellipsoid_path and in _on_great_circle_path</p></li>
+<li><dl class="simple">
+<dt>Refactored code from use_docstring_from function into the use_docstring</dt><dd><p>function in _common.py</p>
+</dd>
+</dl>
+</li>
+<li><p>Simplified the adding of examples to the docstrings of functions and classes in core.py and objects.py.</p></li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="version-0-7-6-december-18-2020">
+<h2>Version 0.7.6, December 18, 2020<a class="headerlink" href="#version-0-7-6-december-18-2020" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>Per A Brodtkorb (30):</dt><dd><ul class="simple">
+<li><p>Renamed _core.py to core.py</p></li>
+<li><p>Removed the module index from the appendix because it was incomplete.</p></li>
+<li><p>Removed nvector.tests package from the reference chapter.</p></li>
+<li><p>Added indent function to _common.py to avoid failure on python 2.7.</p></li>
+<li><p>Moved isclose, allclose and array_to_list_dict from objects.py to util.py</p></li>
+<li><dl class="simple">
+<dt>Moved the following function from test_nvector.py to test_rotation.py:</dt><dd><ul>
+<li><p>test_n_E_and_wa2R_EL, test_R2zxy, test_R2zxy_x90, test_R2zxy_y90</p></li>
+<li><p>test_R2zxy_z90, test_R2zxy_0, test_R2xyz test_R2xyz_with_vectors</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>Replaced assert_array_almost_equal with assert_allclose in test_objects.py</p></li>
+<li><p>Renamed test_frames.py to test_objects.py</p></li>
+<li><p>Added missing functions great_circle_normal and interpolate to the nvector_summary.rst</p></li>
+<li><dl class="simple">
+<dt>Moved the following functions related to rotation matrices from _core to rotation module:</dt><dd><ul>
+<li><p>E_rotation, n_E_and_wa2R_EL, n_E2R_EN, R_EL2n_E, R_EN2n_E, R2xyz, R2zyx, xyz2R, zyx2R</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>Renamed select_ellipsoid to get_ellipsoid</p></li>
+<li><dl class="simple">
+<dt>Moved the following utility functions from _core to util module:</dt><dd><ul>
+<li><p>deg, rad, mdot, nthroot, get_ellipsoid, unit, _check_length_deviation</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>Added _get_h1line and _make_summary to _common.py</p></li>
+<li><p>Replaced numpy.rollaxis with numpy.swapaxes to make the code clearer.</p></li>
+<li><p>_atleast_3d now broadcast the input against each other.</p></li>
+<li><p>Added examples to zyx2R</p></li>
+<li><dl class="simple">
+<dt>Added the following references to zyx2R, xyz2R, R2xyz, R2zyx:</dt><dd><ul>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Aircraft_principal_axes">https://en.wikipedia.org/wiki/Aircraft_principal_axes</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Euler_angles">https://en.wikipedia.org/wiki/Euler_angles</a></p></li>
+<li><p><a class="reference external" href="https://en.wikipedia.org/wiki/Axes_conventions">https://en.wikipedia.org/wiki/Axes_conventions</a></p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>Removed tabs from CHANGELOG.rst</p></li>
+<li><p>Updated CHANGELOG.rst and prepared for release v0.7.6</p></li>
+<li><p>Fixed the documentation so that it shows correctly in the reference manual.</p></li>
+<li><p>Added logo.png and docs/reference/nvector.rst</p></li>
+<li><p>Updated build_package.py so it generates a valid README.rst file.</p></li>
+<li><p>Updated THANKS.rst</p></li>
+<li><p>Updated CHANGELOG.rst and prepare for release 0.7.6</p></li>
+<li><p>Added Nvector documentation ref <a class="reference external" href="https://nvector.readthedocs.io/en/v0.7.5">https://nvector.readthedocs.io/en/v0.7.5</a> to refs1.bib and _acknowledgements.py</p></li>
+<li><p>Updated README.rst</p></li>
+<li><p>Renamed requirements.readthedocs.txt to docs/requirements.txt</p></li>
+<li><p>Added .readthedocs.yml</p></li>
+<li><p>Added sphinxcontrib-bibtex to requirements.readthedocs.txt</p></li>
+<li><p>Added missing docs/tutorials/images/ex3img.png</p></li>
+<li><p>Deleted obsolete ex10img.png</p></li>
+<li><p>Updated acknowledgement with reference to Karney’s article.</p></li>
+<li><p>Updated README.rst by moving acknowledgement to the end with references.</p></li>
+<li><p>Renamed position input argument to point in the FrameN, FrameB and FrameL classes.</p></li>
+<li><p>Deleted _example_images.py</p></li>
+<li><p>Renamed nvector.rst to nvector_summary.rst in docs/reference</p></li>
+<li><p>Added example images to tutorials/images/ folder</p></li>
+<li><p>Added Nvector logo, install.rst to docs</p></li>
+<li><p>Added src/nvector/_example_images.py</p></li>
+<li><p>Added docs/tutorials/whatsnext.rst</p></li>
+<li><dl class="simple">
+<dt>Reorganized the documentation in docs by splitting _info.py into:</dt><dd><ul>
+<li><p>_intro.py,</p></li>
+<li><p>_documentation.py</p></li>
+<li><p>_examples_object_oriented.py</p></li>
+<li><p>_images.py</p></li>
+<li><p>_installation.py and _acknowledgements.py</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>Added docs/tutorials/index.rst, docs/intro/index.rst, docs/how-to/index.rst docs/appendix/index.rst and docs/make.bat</p></li>
+<li><p>updated references.</p></li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="version-0-7-5-december-12-2020">
+<h2>Version 0.7.5, December 12, 2020<a class="headerlink" href="#version-0-7-5-december-12-2020" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>Per A Brodtkorb (32):</dt><dd><ul class="simple">
+<li><p>Updated CHANGELOG.rst and prepare for release 0.7.5</p></li>
+<li><dl class="simple">
+<dt>Changed so that GeoPath.on_great_circle and GeoPath.on_great_circle</dt><dd><p>returns scalar result if the two points defining the path are scalars. See issue #10.</p>
+</dd>
+</dl>
+</li>
+<li><p>Fixed failing doctests.</p></li>
+<li><p>Added doctest configuration to docs/conf.py</p></li>
+<li><p>Added allclose to nvector/objects.py</p></li>
+<li><dl class="simple">
+<dt>Added array_to_list_dict and isclose functions in nvector.objects.py</dt><dd><p>Replaced f-string in the __repr__ method of the _Common class in
+nvector.objects.py with format in order to work on python version 3.5
+and below.</p>
+</dd>
+</dl>
+</li>
+<li><p>Made nvector.plot.py more robust.</p></li>
+<li><p>Removed rtol parameter from the on_greatcircle function. See issue #12 for a discussion.</p></li>
+<li><p>Added nvector solution to the GeoPoint.displace method.</p></li>
+<li><p>Updated docs/conf.py</p></li>
+<li><p>Updated README.rst and LICENSE.txt</p></li>
+<li><p>Replaced import unittest with import pytest in test_frames.py</p></li>
+<li><dl class="simple">
+<dt>Fixed issue #10: Inconsistent return types in GeoPath.track_distance:</dt><dd><ul>
+<li><p>GeoPath, GeoPoint, Nvector and ECEFvector and Pvector now return
+scalars for the case where the input is not actually arrays of points
+but just single objects.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>Added extra tests for issue #10 and updated old tests and the examples in the help headers.</p></li>
+<li><p>Vectorized FrameE.inverse and FrameE.direct methods.</p></li>
+<li><p>Extended deg and rad functions in _core.py.</p></li>
+<li><p>Vectorized GeoPoint.distance_and_azimuth</p></li>
+<li><p>Made import of cartopy in nvector.plot more robust.</p></li>
+<li><p>Updated test_Ex10_cross_track_distance</p></li>
+<li><p>Updated sonar-project.properties</p></li>
+<li><p>Replaced deprecated sonar.XXXX.reportPath with sonar.XXXX.reportPaths</p></li>
+<li><p>Simplified nvector/_core.__doc__</p></li>
+<li><p>Updated .travis.yml</p></li>
+<li><p>Changed the definition of sonar addon</p></li>
+<li><p>Added CC_TEST_REPORTER_ID to .travis.yml</p></li>
+<li><p>Added python 3.8 to the CI testing.</p></li>
+<li><p>Changed so that setup.py is python 2.7 compatible again.</p></li>
+<li><p>Updated build_package.py</p></li>
+<li><p>Renamed CHANGES.rst to CHANGELOG.rst</p></li>
+<li><p>Updated setup.cfg and setup.py</p></li>
+<li><p>Added license.py</p></li>
+<li><p>Updated build_package.py</p></li>
+<li><p>Removed conda-build from .travis.yml</p></li>
+<li><p>Attempt to get travis to run the tests again….</p></li>
+<li><p>API change: replaced “python setup.py doctests” with “python setup.py doctest”</p></li>
+<li><p>Added doctest example to nvector._core._atleast_3d Made xyz2R and zyx2R code simpler.</p></li>
+<li><p>Replaced deprecated Nvector.mean_horizontal_position with  Nvector.mean in test_frames.py</p></li>
+<li><p>Added mdot to __all__ in nvector/_core.py and in documentation summary.</p></li>
+<li><p>Sorted the the documentation summary by function name in nvector.rst</p></li>
+<li><p>Removed –pyargs nvector –doctest-modules –pep8 from addopts section in setup.cfg</p></li>
+<li><p>Updated documentation and added missing documentation.</p></li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="version-0-7-4-june-4-2019">
+<h2>Version 0.7.4, June 4, 2019<a class="headerlink" href="#version-0-7-4-june-4-2019" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>Per A Brodtkorb (2):</dt><dd><ul class="simple">
+<li><p>Fixed PyPi badge and added downloads badge in nvector/_info.py and README.rst</p></li>
+<li><p>Removed obsolete and wrong badges from docs/index.rst</p></li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="version-0-7-3-june-4-2019">
+<h2>Version 0.7.3, June 4, 2019<a class="headerlink" href="#version-0-7-3-june-4-2019" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>Per A Brodtkorb (6):</dt><dd><ul class="simple">
+<li><p>Renamed LICENSE.txt and THANKS.txt to LICENSE.rst and THANKS.rst</p></li>
+<li><p>Updated README.rst and nvector/_info.py</p></li>
+<li><p>Fixed issue 7# incorrect test for test_n_E_and_wa2R_EL.</p></li>
+<li><p>Removed coveralls test coverage report.</p></li>
+<li><p>Replaced coverage badge from coveralls to codecov.</p></li>
+<li><p>Updated code-climate reporter.</p></li>
+<li><p>Simplified duplicated code in nvector._core.</p></li>
+<li><p>Added tests/__init__.py</p></li>
+<li><p>Added “–pyargs nvector” to pytest options in setup.cfg</p></li>
+<li><p>Exclude build_package.py from distribution in MANIFEST.in</p></li>
+<li><p>Replaced health_img from landscape to codeclimate.</p></li>
+<li><p>Updated travis to explicitly install pytest-cov and pytest-pep8</p></li>
+<li><p>Removed dependence on pyscaffold</p></li>
+<li><p>Added MANIFEST.in</p></li>
+<li><p>Renamed set_package_version.py to build_package.py</p></li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="version-0-7-0-june-2-2019">
+<h2>Version 0.7.0, June 2, 2019<a class="headerlink" href="#version-0-7-0-june-2-2019" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>Gary van der Merwe (1):</dt><dd><ul class="simple">
+<li><p>Add interpolate to __all__ so that it can be imported</p></li>
+</ul>
+</dd>
+<dt>Per A Brodtkorb (26):</dt><dd><ul class="simple">
+<li><p>Updated long_description in setup.cfg</p></li>
+<li><p>Replaced deprecated sphinx.ext.pngmath with sphinx.ext.imgmath</p></li>
+<li><p>Added imgmath to requirements for building the docs.</p></li>
+<li><p>Fixing shallow clone warning.</p></li>
+<li><dl class="simple">
+<dt>Replaced property ‘sonar.python.coverage.itReportPath’ with</dt><dd><p>‘sonar.python.coverage.reportPaths’ instead, because it is has been removed.</p>
+</dd>
+</dl>
+</li>
+<li><p>Drop python 3.4 support</p></li>
+<li><p>Added python 3.7 support</p></li>
+<li><p>Fixed a bug: Mixed scalars and np.array([1]) values don’t work with np.rad2deg function.</p></li>
+<li><dl class="simple">
+<dt>Added ETRS ELLIPSOID in _core.py Added ED50 as alias for International</dt><dd><p>(Hayford)/European Datum in _core.py Added sad69 as alias for South American 1969 in _core.py</p>
+</dd>
+</dl>
+</li>
+<li><p>Simplified docstring for nv.test</p></li>
+<li><p>Generalized the setup.py.</p></li>
+<li><p>Replaced aliases with the correct names in setup.cfg.</p></li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="version-0-6-0-december-9-2018">
+<h2>Version 0.6.0, December 9, 2018<a class="headerlink" href="#version-0-6-0-december-9-2018" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>Per A Brodtkorb (79):</dt><dd><ul class="simple">
+<li><p>Updated requirements in setup.py</p></li>
+<li><p>Removed tox.ini</p></li>
+<li><p>Updated documentation on how to set package version</p></li>
+<li><p>Made a separate script to set package version in nvector/__init__.py</p></li>
+<li><p>Updated docstring for select_ellipsoid</p></li>
+<li><p>Replace GeoPoint.geo_point with GeoPoint.displace and removed deprecated GeoPoint.geo_point</p></li>
+<li><p>Update .travis.yml</p></li>
+<li><p>Fix so that codeclimate is able to parse .travis.yml</p></li>
+<li><p>Only run sonar and codeclimate reporter for python v3.6</p></li>
+<li><p>Added sonar-project.properties</p></li>
+<li><dl class="simple">
+<dt>Pinned coverage to v4.3.4 due to fact that codeclimate reporter is only</dt><dd><p>compatible with Coverage.py versions &gt;=4.0,&lt;4.4.</p>
+</dd>
+</dl>
+</li>
+<li><p>Updated with sonar scanner.</p></li>
+<li><p>Added .pylintrc</p></li>
+<li><p>Set up codeclimate reporter</p></li>
+<li><p>Updated docstring for unit function.</p></li>
+<li><p>Avoid division by zero in unit function.</p></li>
+<li><p>Reenabled the doctest of plot_mean_position</p></li>
+<li><p>Reset “pyscaffold==2.5.11”</p></li>
+<li><p>Replaced deprecated basemap with cartopy.</p></li>
+<li><dl class="simple">
+<dt>Replaced doctest of plot_mean_position with test_plot_mean_position in</dt><dd><p>test_plot.py</p>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Fixed failing doctests for python v3.4 and v3.5 and made them more</dt><dd><p>robust.</p>
+</dd>
+</dl>
+</li>
+<li><p>Fixed failing doctests and made them more robust.</p></li>
+<li><p>Increased pycoverage version to use.</p></li>
+<li><p>moved nvector to src/nvector/</p></li>
+<li><dl class="simple">
+<dt>Reset the setup.py to require ‘pyscaffold==2.5.11’ which works on</dt><dd><p>python version 3.4, 3.5 and 3.6. as well as 2.7</p>
+</dd>
+</dl>
+</li>
+<li><p>Updated unittests.</p></li>
+<li><p>Updated tests.</p></li>
+<li><p>Removed obsolete code</p></li>
+<li><p>Added test for delta_L</p></li>
+<li><dl class="simple">
+<dt>Added corner testcase for</dt><dd><p>pointA.displace(distance=1000,azimuth=np.deg2rad(200))</p>
+</dd>
+</dl>
+</li>
+<li><p>Added test for path.track_distance(method=’exact’)</p></li>
+<li><dl class="simple">
+<dt>Added delta_L a function thet teturn cartesian delta vector from</dt><dd><p>positions A to B decomposed in L.</p>
+</dd>
+</dl>
+</li>
+<li><p>Simplified OO-solution in example 1 by using delta_N function</p></li>
+<li><p>Refactored duplicated code</p></li>
+<li><dl class="simple">
+<dt>Vectorized code so that the frames can take more than one position at</dt><dd><p>the time.</p>
+</dd>
+</dl>
+</li>
+<li><p>Keeping only the html docs in the distribution.</p></li>
+<li><dl class="simple">
+<dt>replaced link from latest to stable docs on readthedocs and updated</dt><dd><p>crosstrack distance test.</p>
+</dd>
+</dl>
+</li>
+<li><p>updated documentation in setup.py</p></li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="version-0-5-2-march-7-2017">
+<h2>Version 0.5.2, March 7, 2017<a class="headerlink" href="#version-0-5-2-march-7-2017" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>Per A Brodtkorb (10):</dt><dd><ul class="simple">
+<li><p>Fixed tests in tests/test_frames.py</p></li>
+<li><p>Updated to setup.cfg and tox.ini + pep8</p></li>
+<li><p>updated .travis.yml</p></li>
+<li><p>Updated Readme.rst with new example 10 picture and link to nvector docs at readthedocs.</p></li>
+<li><p>updated official documentation links</p></li>
+<li><p>Updated crosstrack distance tests.</p></li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="version-0-5-1-march-5-2017">
+<h2>Version 0.5.1, March 5, 2017<a class="headerlink" href="#version-0-5-1-march-5-2017" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>Cody (4):</dt><dd><ul class="simple">
+<li><p>Explicitely numbered replacement fields</p></li>
+<li><p>Migrated <cite>%</cite> string formating</p></li>
+</ul>
+</dd>
+<dt>Per A Brodtkorb (29):</dt><dd><ul class="simple">
+<li><p>pep8</p></li>
+<li><p>Updated failing examples</p></li>
+<li><p>Updated README.rst</p></li>
+<li><p>Removed obsolete pass statement</p></li>
+<li><p>Documented functions</p></li>
+<li><p>added .checkignore for quantifycode</p></li>
+<li><p>moved test_docstrings and use_docstring_from into _common.py</p></li>
+<li><p>Added .codeclimate.yml</p></li>
+<li><p>Updated installation information in _info.py</p></li>
+<li><p>Added GeoPath.on_path method. Clearified intersection example</p></li>
+<li><p>Added great_circle_normal, cross_track_distance</p></li>
+<li><p>Renamed intersection to intersect (Intersection is deprecated.)</p></li>
+<li><p>Simplified R2zyx with a call to R2xyz Improved accuracy for great circle cross track distance for small distances.</p></li>
+<li><p>Added on_great_circle, _on_great_circle_path, _on_ellipsoid_path, closest_point_on_great_circle and closest_point_on_path to GeoPath</p></li>
+<li><p>made __eq__ more robust for frames</p></li>
+<li><p>Removed duplicated code</p></li>
+<li><p>Updated tests</p></li>
+<li><p>Removed fishy test</p></li>
+<li><p>replaced zero n-vector with nan</p></li>
+<li><p>Commented out failing test.</p></li>
+<li><p>Added example 10 image</p></li>
+<li><p>Added ‘closest_point_on_great_circle’, ‘on_great_circle’,’on_great_circle_path’.</p></li>
+<li><p>Updated examples + documentation</p></li>
+<li><p>Updated index depth</p></li>
+<li><p>Updated README.rst and classifier in setup.cfg</p></li>
+</ul>
+</dd>
+</dl>
+</div>
+<div class="section" id="version-0-4-1-january-19-2016">
+<h2>Version 0.4.1, January 19, 2016<a class="headerlink" href="#version-0-4-1-january-19-2016" title="Permalink to this headline">¶</a></h2>
+<p>pbrod (46):</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Cosmetic updates</p></li>
+<li><p>Updated README.rst</p></li>
+<li><p>updated docs and removed unused code</p></li>
+<li><p>updated README.rst and .coveragerc</p></li>
+<li><p>Refactored out _check_frames</p></li>
+<li><p>Refactored out _default_frame</p></li>
+<li><p>Updated .coveragerc</p></li>
+<li><p>Added link to geographiclib</p></li>
+<li><p>Updated external link</p></li>
+<li><p>Updated documentation</p></li>
+<li><p>Added figures to examples</p></li>
+<li><p>Added GeoPath.interpolate + interpolation example 6</p></li>
+<li><p>Added links to FFI homepage.</p></li>
+<li><dl class="simple">
+<dt>Updated documentation:</dt><dd><ul>
+<li><p>Added link to nvector toolbox for matlab</p></li>
+<li><p>For each example added links to the more detailed explanation on the homepage</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>Updated link to nvector toolbox for matlab</p></li>
+<li><p>Added link to nvector on  pypi</p></li>
+<li><p>Updated documentation fro FrameB, FrameE, FrameL and FrameN.</p></li>
+<li><p>updated __all__ variable</p></li>
+<li><p>Added missing R_Ee to function n_EA_E_and_n_EB_E2azimuth + updated documentation</p></li>
+<li><p>Updated CHANGES.rst</p></li>
+<li><p>Updated conf.py</p></li>
+<li><p>Renamed info.py to _info.py</p></li>
+<li><p>All examples are now generated from _examples.py.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="version-0-1-3-january-1-2016">
+<h2>Version 0.1.3, January 1, 2016<a class="headerlink" href="#version-0-1-3-january-1-2016" title="Permalink to this headline">¶</a></h2>
+<p>pbrod (31):</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Refactored</p></li>
+<li><p>Updated tests</p></li>
+<li><p>Updated docs</p></li>
+<li><p>Moved tests to nvector/tests</p></li>
+<li><p>Updated .coverage     Added travis.yml, .landscape.yml</p></li>
+<li><p>Deleted obsolete LICENSE</p></li>
+<li><p>Updated README.rst</p></li>
+<li><p>Removed ngs version</p></li>
+<li><p>Fixed bug in .travis.yml</p></li>
+<li><p>Updated .travis.yml</p></li>
+<li><p>Removed dependence on navigator.py</p></li>
+<li><p>Updated README.rst</p></li>
+<li><p>Updated examples</p></li>
+<li><p>Deleted skeleton.py and added tox.ini</p></li>
+<li><p>Renamed distance_rad_bearing_rad2point to n_EA_E_distance_and_azimuth2n_EB_E</p></li>
+<li><p>Renamed azimuth to n_EA_E_and_n_EB_E2azimuth</p></li>
+<li><p>Added tests for R2xyz as well as R2zyx</p></li>
+<li><p>Removed backward compatibility</p></li>
+<li><p>Added test_n_E_and_wa2R_EL</p></li>
+<li><p>Refactored tests</p></li>
+<li><p>Commented out failing tests on python 3+</p></li>
+<li><p>updated CHANGES.rst</p></li>
+<li><p>Removed bug in setup.py</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="version-0-1-1-january-1-2016">
+<h2>Version 0.1.1, January 1, 2016<a class="headerlink" href="#version-0-1-1-january-1-2016" title="Permalink to this headline">¶</a></h2>
+<dl class="simple">
+<dt>pbrod (31):</dt><dd><ul class="simple">
+<li><p>Initial commit: Translated code from Matlab to Python.</p></li>
+<li><p>Added object oriented interface to nvector library</p></li>
+<li><p>Added tests for object oriented interface</p></li>
+<li><p>Added geodesic tests.</p></li>
+</ul>
+</dd>
+</dl>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="authors.html" class="btn btn-neutral float-right" title="Developers" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../reference/generated/nvector.util.unit.html" class="btn btn-neutral float-left" title="5.4.7. nvector.util.unit" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2015-2021, Norwegian Defence Research Establishment (FFI).
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

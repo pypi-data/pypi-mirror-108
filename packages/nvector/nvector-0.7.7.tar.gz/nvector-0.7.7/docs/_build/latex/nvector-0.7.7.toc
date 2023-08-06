@@ -1,0 +1,113 @@
+\babel@toc {english}{}
+\contentsline {chapter}{\numberline {1}Introduction}{3}{chapter.1}%
+\contentsline {section}{\numberline {1.1}What is nvector?}{3}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Description}{3}{subsection.1.1.1}%
+\contentsline {section}{\numberline {1.2}How the documentation is organized}{3}{section.1.2}%
+\contentsline {chapter}{\numberline {2}Tutorials}{5}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Install guide}{5}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Install nvector}{5}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Verifying installation}{5}{subsection.2.1.2}%
+\contentsline {section}{\numberline {2.2}Getting Started}{6}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}\sphinxstylestrong {Example 1: “A and B to delta”}}{6}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}\sphinxstylestrong {Example 2: “B and delta to C”}}{7}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}\sphinxstylestrong {Example 3: “ECEF\sphinxhyphen {}vector to geodetic latitude”}}{8}{subsection.2.2.3}%
+\contentsline {subsection}{\numberline {2.2.4}\sphinxstylestrong {Example 4: “Geodetic latitude to ECEF\sphinxhyphen {}vector”}}{9}{subsection.2.2.4}%
+\contentsline {subsection}{\numberline {2.2.5}\sphinxstylestrong {Example 5: “Surface distance”}}{9}{subsection.2.2.5}%
+\contentsline {subsection}{\numberline {2.2.6}\sphinxstylestrong {Example 6 “Interpolated position”}}{10}{subsection.2.2.6}%
+\contentsline {subsection}{\numberline {2.2.7}\sphinxstylestrong {Example 7: “Mean position”}}{11}{subsection.2.2.7}%
+\contentsline {subsection}{\numberline {2.2.8}\sphinxstylestrong {Example 8: “A and azimuth/distance to B”}}{12}{subsection.2.2.8}%
+\contentsline {subsection}{\numberline {2.2.9}\sphinxstylestrong {Example 9: “Intersection of two paths”}}{13}{subsection.2.2.9}%
+\contentsline {subsection}{\numberline {2.2.10}\sphinxstylestrong {Example 10: “Cross track distance”}}{14}{subsection.2.2.10}%
+\contentsline {section}{\numberline {2.3}Functional examples}{14}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}\sphinxstylestrong {Example 1: “A and B to delta”}}{15}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}\sphinxstylestrong {Example 2: “B and delta to C”}}{16}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}\sphinxstylestrong {Example 3: “ECEF\sphinxhyphen {}vector to geodetic latitude”}}{17}{subsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.3.4}\sphinxstylestrong {Example 4: “Geodetic latitude to ECEF\sphinxhyphen {}vector”}}{18}{subsection.2.3.4}%
+\contentsline {subsection}{\numberline {2.3.5}\sphinxstylestrong {Example 5: “Surface distance”}}{18}{subsection.2.3.5}%
+\contentsline {subsection}{\numberline {2.3.6}\sphinxstylestrong {Example 6 “Interpolated position”}}{19}{subsection.2.3.6}%
+\contentsline {subsection}{\numberline {2.3.7}\sphinxstylestrong {Example 7: “Mean position”}}{20}{subsection.2.3.7}%
+\contentsline {subsection}{\numberline {2.3.8}\sphinxstylestrong {Example 8: “A and azimuth/distance to B”}}{21}{subsection.2.3.8}%
+\contentsline {subsection}{\numberline {2.3.9}\sphinxstylestrong {Example 9: “Intersection of two paths”}}{21}{subsection.2.3.9}%
+\contentsline {subsection}{\numberline {2.3.10}\sphinxstylestrong {Example 10: “Cross track distance”}}{22}{subsection.2.3.10}%
+\contentsline {section}{\numberline {2.4}What to read next}{23}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Finding documentation}{24}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}How the documentation is organized}{24}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.3}How documentation is updated}{24}{subsection.2.4.3}%
+\contentsline {subsubsection}{\numberline {2.4.3.1}In plain text}{24}{subsubsection.2.4.3.1}%
+\contentsline {subsubsection}{\numberline {2.4.3.2}As HTML, locally}{25}{subsubsection.2.4.3.2}%
+\contentsline {subsubsection}{\numberline {2.4.3.3}Using pydoc}{25}{subsubsection.2.4.3.3}%
+\contentsline {chapter}{\numberline {3}How\sphinxhyphen {}to guides}{27}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Contributing}{27}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Contribute a patch}{27}{subsection.3.1.1}%
+\contentsline {chapter}{\numberline {4}Topics guides}{29}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Reference nvector package}{31}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Object Oriented interface to Geodesic functions}{31}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}nvector.objects.delta\_E}{31}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}nvector.objects.delta\_N}{33}{subsection.5.1.2}%
+\contentsline {subsection}{\numberline {5.1.3}nvector.objects.delta\_L}{33}{subsection.5.1.3}%
+\contentsline {subsection}{\numberline {5.1.4}nvector.objects.diff\_positions}{33}{subsection.5.1.4}%
+\contentsline {subsection}{\numberline {5.1.5}nvector.objects.ECEFvector}{35}{subsection.5.1.5}%
+\contentsline {subsection}{\numberline {5.1.6}nvector.objects.FrameB}{36}{subsection.5.1.6}%
+\contentsline {subsection}{\numberline {5.1.7}nvector.objects.FrameE}{38}{subsection.5.1.7}%
+\contentsline {subsection}{\numberline {5.1.8}nvector.objects.FrameN}{39}{subsection.5.1.8}%
+\contentsline {subsection}{\numberline {5.1.9}nvector.objects.FrameL}{40}{subsection.5.1.9}%
+\contentsline {subsection}{\numberline {5.1.10}nvector.objects.GeoPath}{41}{subsection.5.1.10}%
+\contentsline {subsection}{\numberline {5.1.11}nvector.objects.GeoPoint}{45}{subsection.5.1.11}%
+\contentsline {subsection}{\numberline {5.1.12}nvector.objects.Nvector}{46}{subsection.5.1.12}%
+\contentsline {subsection}{\numberline {5.1.13}nvector.objects.Pvector}{48}{subsection.5.1.13}%
+\contentsline {section}{\numberline {5.2}Geodesic functions}{48}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}nvector.core.closest\_point\_on\_great\_circle}{49}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}nvector.core.cross\_track\_distance}{50}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}nvector.core.euclidean\_distance}{51}{subsection.5.2.3}%
+\contentsline {subsection}{\numberline {5.2.4}nvector.core.great\_circle\_distance}{53}{subsection.5.2.4}%
+\contentsline {subsection}{\numberline {5.2.5}nvector.core.great\_circle\_normal}{54}{subsection.5.2.5}%
+\contentsline {subsection}{\numberline {5.2.6}nvector.core.interp\_nvectors}{54}{subsection.5.2.6}%
+\contentsline {subsection}{\numberline {5.2.7}nvector.core.interpolate}{55}{subsection.5.2.7}%
+\contentsline {subsection}{\numberline {5.2.8}nvector.core.intersect}{55}{subsection.5.2.8}%
+\contentsline {subsection}{\numberline {5.2.9}nvector.core.lat\_lon2n\_E}{56}{subsection.5.2.9}%
+\contentsline {subsection}{\numberline {5.2.10}nvector.core.mean\_horizontal\_position}{57}{subsection.5.2.10}%
+\contentsline {subsection}{\numberline {5.2.11}nvector.core.n\_E2lat\_lon}{58}{subsection.5.2.11}%
+\contentsline {subsection}{\numberline {5.2.12}nvector.core.n\_EB\_E2p\_EB\_E}{58}{subsection.5.2.12}%
+\contentsline {subsection}{\numberline {5.2.13}nvector.core.p\_EB\_E2n\_EB\_E}{59}{subsection.5.2.13}%
+\contentsline {subsection}{\numberline {5.2.14}nvector.core.n\_EA\_E\_and\_n\_EB\_E2p\_AB\_E}{60}{subsection.5.2.14}%
+\contentsline {subsection}{\numberline {5.2.15}nvector.core.n\_EA\_E\_and\_p\_AB\_E2n\_EB\_E}{62}{subsection.5.2.15}%
+\contentsline {subsection}{\numberline {5.2.16}nvector.core.n\_EA\_E\_and\_n\_EB\_E2azimuth}{64}{subsection.5.2.16}%
+\contentsline {subsection}{\numberline {5.2.17}nvector.core.n\_EA\_E\_distance\_and\_azimuth2n\_EB\_E}{64}{subsection.5.2.17}%
+\contentsline {subsection}{\numberline {5.2.18}nvector.core.on\_great\_circle}{65}{subsection.5.2.18}%
+\contentsline {subsection}{\numberline {5.2.19}nvector.core.on\_great\_circle\_path}{67}{subsection.5.2.19}%
+\contentsline {section}{\numberline {5.3}Rotation matrices and angles}{68}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}nvector.rotation.E\_rotation}{69}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}nvector.rotation.n\_E2R\_EN}{69}{subsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.3.3}nvector.rotation.n\_E\_and\_wa2R\_EL}{70}{subsection.5.3.3}%
+\contentsline {subsection}{\numberline {5.3.4}nvector.rotation.R\_EL2n\_E}{70}{subsection.5.3.4}%
+\contentsline {subsection}{\numberline {5.3.5}nvector.rotation.R\_EN2n\_E}{70}{subsection.5.3.5}%
+\contentsline {subsection}{\numberline {5.3.6}nvector.rotation.R2xyz}{71}{subsection.5.3.6}%
+\contentsline {subsection}{\numberline {5.3.7}nvector.rotation.R2zyx}{71}{subsection.5.3.7}%
+\contentsline {subsection}{\numberline {5.3.8}nvector.rotation.xyz2R}{72}{subsection.5.3.8}%
+\contentsline {subsection}{\numberline {5.3.9}nvector.rotation.zyx2R}{72}{subsection.5.3.9}%
+\contentsline {section}{\numberline {5.4}Utility functions}{73}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}nvector.util.deg}{74}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}nvector.util.mdot}{74}{subsection.5.4.2}%
+\contentsline {subsection}{\numberline {5.4.3}nvector.util.nthroot}{75}{subsection.5.4.3}%
+\contentsline {subsection}{\numberline {5.4.4}nvector.util.rad}{76}{subsection.5.4.4}%
+\contentsline {subsection}{\numberline {5.4.5}nvector.util.get\_ellipsoid}{76}{subsection.5.4.5}%
+\contentsline {subsection}{\numberline {5.4.6}nvector.util.select\_ellipsoid}{77}{subsection.5.4.6}%
+\contentsline {subsection}{\numberline {5.4.7}nvector.util.unit}{78}{subsection.5.4.7}%
+\contentsline {chapter}{\numberline {A}Changelog}{79}{appendix.A}%
+\contentsline {section}{\numberline {A.1}Version 0.7.7, June 3, 2021}{79}{section.A.1}%
+\contentsline {section}{\numberline {A.2}Version 0.7.6, December 18, 2020}{80}{section.A.2}%
+\contentsline {section}{\numberline {A.3}Version 0.7.5, December 12, 2020}{81}{section.A.3}%
+\contentsline {section}{\numberline {A.4}Version 0.7.4, June 4, 2019}{83}{section.A.4}%
+\contentsline {section}{\numberline {A.5}Version 0.7.3, June 4, 2019}{83}{section.A.5}%
+\contentsline {section}{\numberline {A.6}Version 0.7.0, June 2, 2019}{83}{section.A.6}%
+\contentsline {section}{\numberline {A.7}Version 0.6.0, December 9, 2018}{84}{section.A.7}%
+\contentsline {section}{\numberline {A.8}Version 0.5.2, March 7, 2017}{85}{section.A.8}%
+\contentsline {section}{\numberline {A.9}Version 0.5.1, March 5, 2017}{85}{section.A.9}%
+\contentsline {section}{\numberline {A.10}Version 0.4.1, January 19, 2016}{86}{section.A.10}%
+\contentsline {section}{\numberline {A.11}Version 0.1.3, January 1, 2016}{87}{section.A.11}%
+\contentsline {section}{\numberline {A.12}Version 0.1.1, January 1, 2016}{88}{section.A.12}%
+\contentsline {chapter}{\numberline {B}Developers}{89}{appendix.B}%
+\contentsline {chapter}{\numberline {C}License}{91}{appendix.C}%
+\contentsline {chapter}{\numberline {D}Acknowledgments}{93}{appendix.D}%
+\contentsline {chapter}{Bibliography}{95}{appendix*.70}%
+\contentsline {chapter}{Index}{97}{section*.71}%

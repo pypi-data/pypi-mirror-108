@@ -1,0 +1,375 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>5.1.5. nvector.objects.ECEFvector &mdash; Nvector 0.7.7 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="5.1.6. nvector.objects.FrameB" href="nvector.objects.FrameB.html" />
+    <link rel="prev" title="5.1.4. nvector.objects.diff_positions" href="nvector.objects.diff_positions.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Nvector
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.7
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../intro/index.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/index.html">2. Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../how-to/index.html">3. How-to guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/index.html">4. Topics guides</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">5. Reference nvector package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../nvector_summary.html">5.1. Object Oriented interface to Geodesic functions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="nvector.objects.delta_E.html">5.1.1. nvector.objects.delta_E</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nvector.objects.delta_N.html">5.1.2. nvector.objects.delta_N</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nvector.objects.delta_L.html">5.1.3. nvector.objects.delta_L</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nvector.objects.diff_positions.html">5.1.4. nvector.objects.diff_positions</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">5.1.5. nvector.objects.ECEFvector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nvector.objects.FrameB.html">5.1.6. nvector.objects.FrameB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nvector.objects.FrameE.html">5.1.7. nvector.objects.FrameE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nvector.objects.FrameN.html">5.1.8. nvector.objects.FrameN</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nvector.objects.FrameL.html">5.1.9. nvector.objects.FrameL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nvector.objects.GeoPath.html">5.1.10. nvector.objects.GeoPath</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nvector.objects.GeoPoint.html">5.1.11. nvector.objects.GeoPoint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nvector.objects.Nvector.html">5.1.12. nvector.objects.Nvector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nvector.objects.Pvector.html">5.1.13. nvector.objects.Pvector</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../nvector_summary.html#geodesic-functions">5.2. Geodesic functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../nvector_summary.html#rotation-matrices-and-angles">5.3. Rotation matrices and angles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../nvector_summary.html#utility-functions">5.4. Utility functions</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../appendix/changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../appendix/authors.html">Developers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../appendix/license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../appendix/acknowledgement.html">Acknowledgments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../appendix/index.html">Indices and tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../appendix/zreferences.html">Bibliography</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Nvector</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../index.html"><span class="section-number">5. </span>Reference nvector package</a> &raquo;</li>
+        
+          <li><a href="../nvector_summary.html"><span class="section-number">5.1. </span>Object Oriented interface to Geodesic functions</a> &raquo;</li>
+        
+      <li><span class="section-number">5.1.5. </span>nvector.objects.ECEFvector</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/reference/generated/nvector.objects.ECEFvector.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="nvector-objects-ecefvector">
+<h1><span class="section-number">5.1.5. </span>nvector.objects.ECEFvector<a class="headerlink" href="#nvector-objects-ecefvector" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt id="nvector.objects.ECEFvector">
+<em class="property">class </em><code class="sig-name descname">ECEFvector</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">pvector</span></em>, <em class="sig-param"><span class="n">frame</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scalar</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/nvector/objects.html#ECEFvector"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nvector.objects.ECEFvector" title="Permalink to this definition">¶</a></dt>
+<dd><p>Geographical position given as cartesian position vector in frame E</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>pvector: 3 x n array</strong></dt><dd><p>Cartesian position vector(s) [m] from E to B, decomposed in E.</p>
+</dd>
+<dt><strong>frame: FrameE object</strong></dt><dd><p>reference ellipsoid. The default ellipsoid model used is WGS84, but
+other ellipsoids/spheres might be specified.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="nvector.objects.GeoPoint.html#nvector.objects.GeoPoint" title="nvector.objects.GeoPoint"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GeoPoint</span></code></a>, <a class="reference internal" href="#nvector.objects.ECEFvector" title="nvector.objects.ECEFvector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ECEFvector</span></code></a>, <a class="reference internal" href="nvector.objects.Pvector.html#nvector.objects.Pvector" title="nvector.objects.Pvector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Pvector</span></code></a></dt><dd></dd>
+</dl>
+</div>
+<p class="rubric">Notes</p>
+<p>The position of B (typically body) relative to E (typically Earth) is
+given into this function as p-vector, p_EB_E relative to the center of the
+frame.</p>
+<p class="rubric">Examples</p>
+<p><strong>Example 3: “ECEF-vector to geodetic latitude”</strong></p>
+<img alt="https://raw.githubusercontent.com/pbrod/Nvector/master/docs/tutorials/images/ex3img.png" src="https://raw.githubusercontent.com/pbrod/Nvector/master/docs/tutorials/images/ex3img.png" />
+<p>Position B is given as an “ECEF-vector” p_EB_E (i.e. a vector from E, the
+center of the Earth, to B, decomposed in E).
+Find the geodetic latitude, longitude and height (latEB, lonEB and hEB),
+assuming WGS-84 ellipsoid.</p>
+<dl>
+<dt>Solution:</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">nvector</span> <span class="k">as</span> <span class="nn">nv</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">wgs84</span> <span class="o">=</span> <span class="n">nv</span><span class="o">.</span><span class="n">FrameE</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;WGS84&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">position_B</span> <span class="o">=</span> <span class="mf">6371e3</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">((</span><span class="mf">0.9</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mf">1.1</span><span class="p">))</span>  <span class="c1"># m</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p_EB_E</span> <span class="o">=</span> <span class="n">wgs84</span><span class="o">.</span><span class="n">ECEFvector</span><span class="p">(</span><span class="n">position_B</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pointB</span> <span class="o">=</span> <span class="n">p_EB_E</span><span class="o">.</span><span class="n">to_geo_point</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">lat</span><span class="p">,</span> <span class="n">lon</span><span class="p">,</span> <span class="n">z</span> <span class="o">=</span> <span class="n">pointB</span><span class="o">.</span><span class="n">latlon_deg</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;Ex3: Pos B: lat, lon = </span><span class="si">{:4.4f}</span><span class="s1">, </span><span class="si">{:4.4f}</span><span class="s1"> deg, height = </span><span class="si">{:9.3f}</span><span class="s1"> m&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">lat</span><span class="p">,</span> <span class="n">lon</span><span class="p">,</span> <span class="o">-</span><span class="n">z</span><span class="p">)</span>
+<span class="go">&#39;Ex3: Pos B: lat, lon = 39.3787, -48.0128 deg, height = 4702059.834 m&#39;</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+<p><strong>Example 4: “Geodetic latitude to ECEF-vector”</strong></p>
+<img alt="https://raw.githubusercontent.com/pbrod/Nvector/master/docs/tutorials/images/ex4img.png" src="https://raw.githubusercontent.com/pbrod/Nvector/master/docs/tutorials/images/ex4img.png" />
+<p>Geodetic latitude, longitude and height are given for position B as latEB,
+lonEB and hEB, find the ECEF-vector for this position, p_EB_E.</p>
+<dl>
+<dt>Solution:</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">nvector</span> <span class="k">as</span> <span class="nn">nv</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">wgs84</span> <span class="o">=</span> <span class="n">nv</span><span class="o">.</span><span class="n">FrameE</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;WGS84&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pointB</span> <span class="o">=</span> <span class="n">wgs84</span><span class="o">.</span><span class="n">GeoPoint</span><span class="p">(</span><span class="n">latitude</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">longitude</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">z</span><span class="o">=-</span><span class="mi">3</span><span class="p">,</span> <span class="n">degrees</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p_EB_E</span> <span class="o">=</span> <span class="n">pointB</span><span class="o">.</span><span class="n">to_ecef_vector</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;Ex4: p_EB_E = </span><span class="si">{}</span><span class="s1"> m&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">p_EB_E</span><span class="o">.</span><span class="n">pvector</span><span class="o">.</span><span class="n">ravel</span><span class="p">()</span><span class="o">.</span><span class="n">tolist</span><span class="p">())</span>
+<span class="go">&#39;Ex4: p_EB_E = [6373290.277218279, 222560.20067473652, 110568.82718178593] m&#39;</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="nvector.objects.ECEFvector.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">pvector</span></em>, <em class="sig-param"><span class="n">frame</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">scalar</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/nvector/objects.html#ECEFvector.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nvector.objects.ECEFvector.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#nvector.objects.ECEFvector.__init__" title="nvector.objects.ECEFvector.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(pvector[, frame, scalar])</p></td>
+<td><p>Initialize self.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">change_frame</span></code>(frame)</p></td>
+<td><p>Converts to Cartesian position vector in another frame</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">delta_to</span></code>(other)</p></td>
+<td><p>Returns cartesian delta vector from positions a to b decomposed in N.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_ecef_vector</span></code>()</p></td>
+<td><p>Returns position as ECEFvector object.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_geo_point</span></code>()</p></td>
+<td><p>Returns position as GeoPoint object.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">to_nvector</span></code>()</p></td>
+<td><p>Returns position as Nvector object.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Attributes</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">azimuth</span></code></p></td>
+<td><p>Azimuth in radian clockwise relative to the x-axis.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">azimuth_deg</span></code></p></td>
+<td><p>Azimuth in degree clockwise relative to the x-axis.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">elevation</span></code></p></td>
+<td><p>Elevation in radian relative to the xy-plane.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">elevation_deg</span></code></p></td>
+<td><p>Elevation in degree relative to the xy-plane.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">length</span></code></p></td>
+<td><p>Length of the pvector.</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="nvector.objects.FrameB.html" class="btn btn-neutral float-right" title="5.1.6. nvector.objects.FrameB" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="nvector.objects.diff_positions.html" class="btn btn-neutral float-left" title="5.1.4. nvector.objects.diff_positions" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2015-2021, Norwegian Defence Research Establishment (FFI).
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

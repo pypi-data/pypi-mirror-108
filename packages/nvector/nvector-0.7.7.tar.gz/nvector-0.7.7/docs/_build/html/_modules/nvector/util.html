@@ -1,0 +1,737 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>nvector.util &mdash; Nvector 0.7.7 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Nvector
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.7
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../intro/index.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/index.html">2. Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../how-to/index.html">3. How-to guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/index.html">4. Topics guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../reference/index.html">5. Reference nvector package</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../appendix/changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../appendix/authors.html">Developers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../appendix/license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../appendix/acknowledgement.html">Acknowledgments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../appendix/index.html">Indices and tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../appendix/zreferences.html">Bibliography</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Nvector</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+        
+      <li>nvector.util</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for nvector.util</h1><div class="highlight"><pre>
+<span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">Utility functions</span>
+<span class="sd">=================</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="kn">import</span> <span class="n">division</span><span class="p">,</span> <span class="n">print_function</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="kn">from</span> <span class="nn">collections</span> <span class="kn">import</span> <span class="n">namedtuple</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">rad2deg</span><span class="p">,</span> <span class="n">deg2rad</span><span class="p">,</span> <span class="n">deprecate</span>
+<span class="kn">from</span> <span class="nn">numpy.linalg</span> <span class="kn">import</span> <span class="n">norm</span>
+<span class="kn">from</span> <span class="nn">nvector._common</span> <span class="kn">import</span> <span class="n">test_docstrings</span><span class="p">,</span> <span class="n">_make_summary</span>
+<span class="kn">from</span> <span class="nn">nvector</span> <span class="kn">import</span> <span class="n">license</span> <span class="k">as</span> <span class="n">_license</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;deg&#39;</span><span class="p">,</span> <span class="s1">&#39;rad&#39;</span><span class="p">,</span> <span class="s1">&#39;mdot&#39;</span><span class="p">,</span> <span class="s1">&#39;nthroot&#39;</span><span class="p">,</span> <span class="s1">&#39;get_ellipsoid&#39;</span><span class="p">,</span> <span class="s1">&#39;select_ellipsoid&#39;</span><span class="p">,</span> <span class="s1">&#39;unit&#39;</span><span class="p">]</span>
+
+
+<span class="n">_EPS</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">finfo</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span><span class="o">.</span><span class="n">eps</span>  <span class="c1"># machine precision (machine epsilon)</span>
+<span class="n">_TINY</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">finfo</span><span class="p">(</span><span class="nb">float</span><span class="p">)</span><span class="o">.</span><span class="n">tiny</span>
+<span class="n">Ellipsoid</span> <span class="o">=</span> <span class="n">namedtuple</span><span class="p">(</span><span class="s1">&#39;Ellipsoid&#39;</span><span class="p">,</span> <span class="s1">&#39;a f name&#39;</span><span class="p">)</span>
+
+<span class="n">ELLIPSOID</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="mi">1</span><span class="p">:</span> <span class="n">Ellipsoid</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mf">6377563.3960</span><span class="p">,</span> <span class="n">f</span><span class="o">=</span><span class="mf">1.0</span> <span class="o">/</span> <span class="mf">299.3249646</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Airy 1858&#39;</span><span class="p">),</span>
+    <span class="mi">2</span><span class="p">:</span> <span class="n">Ellipsoid</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mf">6377340.189</span><span class="p">,</span> <span class="n">f</span><span class="o">=</span><span class="mf">1.0</span> <span class="o">/</span> <span class="mf">299.3249646</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Airy Modified&#39;</span><span class="p">),</span>
+    <span class="mi">3</span><span class="p">:</span> <span class="n">Ellipsoid</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">6378160</span><span class="p">,</span> <span class="n">f</span><span class="o">=</span><span class="mf">1.0</span> <span class="o">/</span> <span class="mf">298.25</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Australian National&#39;</span><span class="p">),</span>
+    <span class="mi">4</span><span class="p">:</span> <span class="n">Ellipsoid</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mf">6377397.155</span><span class="p">,</span> <span class="n">f</span><span class="o">=</span><span class="mf">1.0</span> <span class="o">/</span> <span class="mf">299.1528128</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Bessel 1841&#39;</span><span class="p">),</span>
+    <span class="mi">5</span><span class="p">:</span> <span class="n">Ellipsoid</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mf">6378249.145</span><span class="p">,</span> <span class="n">f</span><span class="o">=</span><span class="mf">1.0</span> <span class="o">/</span> <span class="mf">293.465</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Clarke 1880&#39;</span><span class="p">),</span>
+    <span class="mi">6</span><span class="p">:</span> <span class="n">Ellipsoid</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mf">6377276.345</span><span class="p">,</span> <span class="n">f</span><span class="o">=</span><span class="mf">1.0</span> <span class="o">/</span> <span class="mf">300.8017</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Everest 1830&#39;</span><span class="p">),</span>
+    <span class="mi">7</span><span class="p">:</span> <span class="n">Ellipsoid</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mf">6377304.063</span><span class="p">,</span> <span class="n">f</span><span class="o">=</span><span class="mf">1.0</span> <span class="o">/</span> <span class="mf">300.8017</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Everest Modified&#39;</span><span class="p">),</span>
+    <span class="mi">8</span><span class="p">:</span> <span class="n">Ellipsoid</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mf">6378166.0</span><span class="p">,</span> <span class="n">f</span><span class="o">=</span><span class="mf">1.0</span> <span class="o">/</span> <span class="mf">298.3</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Fisher 1960&#39;</span><span class="p">),</span>
+    <span class="mi">9</span><span class="p">:</span> <span class="n">Ellipsoid</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mf">6378150.0</span><span class="p">,</span> <span class="n">f</span><span class="o">=</span><span class="mf">1.0</span> <span class="o">/</span> <span class="mf">298.3</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Fisher 1968&#39;</span><span class="p">),</span>
+    <span class="mi">10</span><span class="p">:</span> <span class="n">Ellipsoid</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mf">6378270.0</span><span class="p">,</span> <span class="n">f</span><span class="o">=</span><span class="mf">1.0</span> <span class="o">/</span> <span class="mi">297</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Hough 1956&#39;</span><span class="p">),</span>
+    <span class="mi">11</span><span class="p">:</span> <span class="n">Ellipsoid</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mf">6378388.0</span><span class="p">,</span> <span class="n">f</span><span class="o">=</span><span class="mf">1.0</span> <span class="o">/</span> <span class="mi">297</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;International (Hayford)/European Datum (ED50)&#39;</span><span class="p">),</span>
+    <span class="mi">12</span><span class="p">:</span> <span class="n">Ellipsoid</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mf">6378245.0</span><span class="p">,</span> <span class="n">f</span><span class="o">=</span><span class="mf">1.0</span> <span class="o">/</span> <span class="mf">298.3</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Krassovsky 1938&#39;</span><span class="p">),</span>
+    <span class="mi">13</span><span class="p">:</span> <span class="n">Ellipsoid</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mf">6378145.</span><span class="p">,</span> <span class="n">f</span><span class="o">=</span><span class="mf">1.0</span> <span class="o">/</span> <span class="mf">298.25</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;NWL-9D  (WGS 66)&#39;</span><span class="p">),</span>
+    <span class="mi">14</span><span class="p">:</span> <span class="n">Ellipsoid</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mf">6378160.</span><span class="p">,</span> <span class="n">f</span><span class="o">=</span><span class="mf">1.0</span> <span class="o">/</span> <span class="mf">298.25</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;South American 1969 (SAD69&#39;</span><span class="p">),</span>
+    <span class="mi">15</span><span class="p">:</span> <span class="n">Ellipsoid</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">6378136</span><span class="p">,</span> <span class="n">f</span><span class="o">=</span><span class="mf">1.0</span> <span class="o">/</span> <span class="mf">298.257</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Soviet Geod. System 1985&#39;</span><span class="p">),</span>
+    <span class="mi">16</span><span class="p">:</span> <span class="n">Ellipsoid</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mf">6378135.</span><span class="p">,</span> <span class="n">f</span><span class="o">=</span><span class="mf">1.0</span> <span class="o">/</span> <span class="mf">298.26</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;WGS 72&#39;</span><span class="p">),</span>
+    <span class="mi">17</span><span class="p">:</span> <span class="n">Ellipsoid</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mf">6378206.4</span><span class="p">,</span> <span class="n">f</span><span class="o">=</span><span class="mf">1.0</span> <span class="o">/</span> <span class="mf">294.9786982138</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Clarke 1866    (NAD27)&#39;</span><span class="p">),</span>
+    <span class="mi">18</span><span class="p">:</span> <span class="n">Ellipsoid</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mf">6378137.0</span><span class="p">,</span> <span class="n">f</span><span class="o">=</span><span class="mf">1.0</span> <span class="o">/</span> <span class="mf">298.257223563</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;GRS80 / WGS84  (NAD83)&#39;</span><span class="p">),</span>
+    <span class="mi">19</span><span class="p">:</span> <span class="n">Ellipsoid</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mi">6378137</span><span class="p">,</span> <span class="n">f</span><span class="o">=</span><span class="mf">298.257222101</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;ETRS89&#39;</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="n">ELLIPSOID_IX</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;airy1858&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="s1">&#39;airymodified&#39;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+                <span class="s1">&#39;australiannational&#39;</span><span class="p">:</span> <span class="mi">3</span><span class="p">,</span>
+                <span class="s1">&#39;bessel&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+                <span class="s1">&#39;bessel1841&#39;</span><span class="p">:</span> <span class="mi">4</span><span class="p">,</span>
+                <span class="s1">&#39;clarke1880&#39;</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+                <span class="s1">&#39;everest1830&#39;</span><span class="p">:</span> <span class="mi">6</span><span class="p">,</span>
+                <span class="s1">&#39;everestmodified&#39;</span><span class="p">:</span> <span class="mi">7</span><span class="p">,</span>
+                <span class="s1">&#39;fisher1960&#39;</span><span class="p">:</span> <span class="mi">8</span><span class="p">,</span>
+                <span class="s1">&#39;fisher1968&#39;</span><span class="p">:</span> <span class="mi">9</span><span class="p">,</span>
+                <span class="s1">&#39;hough1956&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+                <span class="s1">&#39;hough&#39;</span><span class="p">:</span> <span class="mi">10</span><span class="p">,</span>
+                <span class="s1">&#39;international&#39;</span><span class="p">:</span> <span class="mi">11</span><span class="p">,</span>
+                <span class="s1">&#39;hayford&#39;</span><span class="p">:</span> <span class="mi">11</span><span class="p">,</span>
+                <span class="s1">&#39;ed50&#39;</span><span class="p">:</span> <span class="mi">11</span><span class="p">,</span>
+                <span class="s1">&#39;krassovsky&#39;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span>
+                <span class="s1">&#39;krassovsky1938&#39;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span>
+                <span class="s1">&#39;nwl-9d&#39;</span><span class="p">:</span> <span class="mi">13</span><span class="p">,</span>
+                <span class="s1">&#39;wgs66&#39;</span><span class="p">:</span> <span class="mi">13</span><span class="p">,</span>
+                <span class="s1">&#39;southamerican1969&#39;</span><span class="p">:</span> <span class="mi">14</span><span class="p">,</span>
+                <span class="s1">&#39;sad69&#39;</span><span class="p">:</span> <span class="mi">14</span><span class="p">,</span>
+                <span class="s1">&#39;sovietgeod.system1985&#39;</span><span class="p">:</span> <span class="mi">15</span><span class="p">,</span>
+                <span class="s1">&#39;wgs72&#39;</span><span class="p">:</span> <span class="mi">16</span><span class="p">,</span>
+                <span class="s1">&#39;clarke1866&#39;</span><span class="p">:</span> <span class="mi">17</span><span class="p">,</span>
+                <span class="s1">&#39;nad27&#39;</span><span class="p">:</span> <span class="mi">17</span><span class="p">,</span>
+                <span class="s1">&#39;grs80&#39;</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span>
+                <span class="s1">&#39;wgs84&#39;</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span>
+                <span class="s1">&#39;nad83&#39;</span><span class="p">:</span> <span class="mi">18</span><span class="p">,</span>
+                <span class="p">}</span>
+
+
+<span class="k">def</span> <span class="nf">array_to_list_dict</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Convert dict arrays to dict of lists.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    data : dict of arrays or an array</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; import numpy as np</span>
+<span class="sd">    &gt;&gt;&gt; data = dict(a=np.zeros((3,)), b=(1,2,3), c=[], d=1, e=&#39;test&#39;,</span>
+<span class="sd">    ...          f=np.nan, g=[1], h=[np.nan], i=None)</span>
+<span class="sd">    &gt;&gt;&gt; e = array_to_list_dict(data)</span>
+<span class="sd">    &gt;&gt;&gt; e == {&#39;a&#39;: [0.0, 0.0, 0.0],  &#39;b&#39;: [1, 2, 3], &#39;c&#39;: [],&#39;d&#39;: 1,</span>
+<span class="sd">    ...       &#39;e&#39;: &#39;test&#39;, &#39;f&#39;: np.nan, &#39;g&#39;: [1], &#39;h&#39;: [np.nan], &#39;i&#39;: None}</span>
+<span class="sd">    True</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="nb">dict</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">data</span><span class="p">:</span>
+            <span class="n">data</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">array_to_list_dict</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="n">key</span><span class="p">])</span>
+    <span class="k">elif</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="p">(</span><span class="nb">list</span><span class="p">,</span> <span class="nb">tuple</span><span class="p">)):</span>
+        <span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="n">array_to_list_dict</span><span class="p">(</span><span class="n">item</span><span class="p">)</span> <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">data</span><span class="p">]</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">tolist</span><span class="p">()</span>
+        <span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+            <span class="k">pass</span>
+    <span class="k">return</span> <span class="n">data</span>
+
+
+<span class="k">def</span> <span class="nf">isclose</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">rtol</span><span class="o">=</span><span class="mf">1e-9</span><span class="p">,</span> <span class="n">atol</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">equal_nan</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Returns True where the two arrays `a` and `b` are element-wise equal within a tolerance.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    a, b : array_like</span>
+<span class="sd">        Input arrays to compare.</span>
+<span class="sd">    rtol : float</span>
+<span class="sd">        The relative tolerance parameter (see Notes).</span>
+<span class="sd">    atol : float</span>
+<span class="sd">        The absolute tolerance parameter (see Notes).</span>
+<span class="sd">    equal_nan : bool</span>
+<span class="sd">        Whether to compare NaN&#39;s as equal.  If True, NaN&#39;s in `a` will be</span>
+<span class="sd">        considered equal to NaN&#39;s in `b` in the output array.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    y : array_like</span>
+<span class="sd">        Returns a boolean array of where `a` and `b` are equal within the</span>
+<span class="sd">        given tolerance. If both `a` and `b` are scalars, returns a single</span>
+<span class="sd">        boolean value.</span>
+
+<span class="sd">    See Also</span>
+<span class="sd">    --------</span>
+<span class="sd">    allclose</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    .. versionadded:: 0.7.5</span>
+
+<span class="sd">    For finite values, isclose uses the following equation to test whether</span>
+<span class="sd">    two floating point values are equivalent:</span>
+
+<span class="sd">     absolute(`a` - `b`) &lt;= maximimum(`atol`, `rtol` * maximum(absolute(`a`), absolute(`b`)))</span>
+
+<span class="sd">    Like the built-in `math.isclose`, the above equation is symmetric</span>
+<span class="sd">    in `a` and `b`. Furthermore, `atol` should be carefully selected for</span>
+<span class="sd">    the use case at hand. A zero value for `atol` will result in `False`</span>
+<span class="sd">    if either `a` or `b` is zero.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; import nvector.objects as no</span>
+<span class="sd">    &gt;&gt;&gt; no.isclose([1e10,1e-7], [1.00001e10,1e-8])</span>
+<span class="sd">    array([False, False])</span>
+<span class="sd">    &gt;&gt;&gt; no.isclose([1e10,1e-8], [1.00001e10,1e-9])</span>
+<span class="sd">    array([False, False])</span>
+<span class="sd">    &gt;&gt;&gt; no.isclose([1e10,1e-8], [1.0001e10,1e-9])</span>
+<span class="sd">    array([False,  False])</span>
+<span class="sd">    &gt;&gt;&gt; no.isclose([1.0, np.nan], [1.0, np.nan])</span>
+<span class="sd">    array([ True, False])</span>
+<span class="sd">    &gt;&gt;&gt; no.isclose([1.0, np.nan], [1.0, np.nan], equal_nan=True)</span>
+<span class="sd">    array([ True, True])</span>
+<span class="sd">    &gt;&gt;&gt; no.isclose([1e-8, 1e-7], [0.0, 0.0])</span>
+<span class="sd">    array([False, False])</span>
+<span class="sd">    &gt;&gt;&gt; no.isclose([1e-100, 1e-7], [0.0, 0.0], atol=0.0)</span>
+<span class="sd">    array([False, False])</span>
+<span class="sd">    &gt;&gt;&gt; no.isclose([1e-10, 1e-10], [1e-20, 0.0])</span>
+<span class="sd">    array([False,  False])</span>
+<span class="sd">    &gt;&gt;&gt; no.isclose([1e-10, 1e-10], [1e-20, 0.999999e-10], atol=0.0)</span>
+<span class="sd">    array([False,  False])</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">broadcast_arrays</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+
+    <span class="n">mask</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">isfinite</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="o">&amp;</span> <span class="n">np</span><span class="o">.</span><span class="n">isfinite</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+
+    <span class="n">out</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">full</span><span class="p">(</span><span class="n">b</span><span class="o">.</span><span class="n">shape</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span>
+    <span class="n">abs_tol</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">maximum</span><span class="p">(</span><span class="n">atol</span><span class="p">,</span> <span class="n">rtol</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">maximum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">mask</span><span class="p">]),</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">b</span><span class="p">[</span><span class="n">mask</span><span class="p">])))</span>
+    <span class="n">out</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">mask</span><span class="p">],</span> <span class="n">b</span><span class="p">[</span><span class="n">mask</span><span class="p">],</span> <span class="n">rtol</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">atol</span><span class="o">=</span><span class="n">abs_tol</span><span class="p">,</span> <span class="n">equal_nan</span><span class="o">=</span><span class="n">equal_nan</span><span class="p">)</span>
+    <span class="n">mask</span> <span class="o">=</span> <span class="o">~</span><span class="n">mask</span>
+    <span class="n">out</span><span class="p">[</span><span class="n">mask</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">isclose</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">mask</span><span class="p">],</span> <span class="n">b</span><span class="p">[</span><span class="n">mask</span><span class="p">],</span> <span class="n">equal_nan</span><span class="o">=</span><span class="n">equal_nan</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">out</span>
+
+
+<span class="k">def</span> <span class="nf">allclose</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">rtol</span><span class="o">=</span><span class="mf">1.e-7</span><span class="p">,</span> <span class="n">atol</span><span class="o">=</span><span class="mf">1.e-14</span><span class="p">,</span> <span class="n">equal_nan</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Returns True if two arrays are element-wise equal within a tolerance.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    a, b : array_like</span>
+<span class="sd">        Input arrays to compare.</span>
+<span class="sd">    rtol : float</span>
+<span class="sd">        The relative tolerance parameter (see Notes).</span>
+<span class="sd">    atol : float</span>
+<span class="sd">        The absolute tolerance parameter (see Notes).</span>
+<span class="sd">    equal_nan : bool</span>
+<span class="sd">        Whether to compare NaN&#39;s as equal.  If True, NaN&#39;s in `a` will be</span>
+<span class="sd">        considered equal to NaN&#39;s in `b` in the output array.</span>
+
+<span class="sd">        .. versionadded:: 1.10.0</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    allclose : bool</span>
+<span class="sd">        Returns True if the two arrays are equal within the given</span>
+<span class="sd">        tolerance; False otherwise.</span>
+
+<span class="sd">    See Also</span>
+<span class="sd">    --------</span>
+<span class="sd">    isclose, all, any, equal</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    For finite values, allclose uses the following equation to test whether</span>
+<span class="sd">    two floating point values are equivalent:</span>
+
+<span class="sd">     absolute(`a` - `b`) &lt;= maximimum(`atol`, `rtol` * maximum(absolute(`a`), absolute(`b`)))</span>
+
+<span class="sd">    NaNs are treated as equal if they are in the same place and if</span>
+<span class="sd">    ``equal_nan=True``.  Infs are treated as equal if they are in the same</span>
+<span class="sd">    place and of the same sign in both arrays.</span>
+
+<span class="sd">    The comparison of `a` and `b` uses standard broadcasting, which</span>
+<span class="sd">    means that `a` and `b` need not have the same shape in order for</span>
+<span class="sd">    ``allclose(a, b)`` to evaluate to True.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; import nvector.objects as no</span>
+<span class="sd">    &gt;&gt;&gt; no.allclose([1e10, 1e-7], [1.00001e10, 1e-8])</span>
+<span class="sd">    False</span>
+<span class="sd">    &gt;&gt;&gt; no.allclose([1e10, 1e-8], [1.00001e10, 1e-9])</span>
+<span class="sd">    False</span>
+<span class="sd">    &gt;&gt;&gt; no.allclose([1e10, 1e-8], [1.0001e10, 1e-9])</span>
+<span class="sd">    False</span>
+<span class="sd">    &gt;&gt;&gt; no.allclose([1.0, np.nan], [1.0, np.nan])</span>
+<span class="sd">    False</span>
+<span class="sd">    &gt;&gt;&gt; no.allclose([1.0, np.nan], [1.0, np.nan], equal_nan=True)</span>
+<span class="sd">    True</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">all</span><span class="p">(</span><span class="n">isclose</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">rtol</span><span class="o">=</span><span class="n">rtol</span><span class="p">,</span> <span class="n">atol</span><span class="o">=</span><span class="n">atol</span><span class="p">,</span> <span class="n">equal_nan</span><span class="o">=</span><span class="n">equal_nan</span><span class="p">))</span>
+
+
+<span class="k">def</span> <span class="nf">_check_length_deviation</span><span class="p">(</span><span class="n">n_E</span><span class="p">,</span> <span class="n">limit</span><span class="o">=</span><span class="mf">0.1</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    n-vector should have length=1,  i.e. norm(n_E)=1.</span>
+
+<span class="sd">    A deviation from 1 exceeding this limit gives a warning.</span>
+<span class="sd">    This function only depends of the direction of n-vector, thus the warning</span>
+<span class="sd">    is included only to give a notice in cases where a wrong input is given</span>
+<span class="sd">    unintentionally (i.e. the input is not even approximately a unit vector).</span>
+
+<span class="sd">    If a matrix of n-vectors is input, only first is controlled to save time</span>
+<span class="sd">    (assuming advanced users input correct n-vectors)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">length_deviation</span> <span class="o">=</span> <span class="nb">abs</span><span class="p">(</span><span class="n">norm</span><span class="p">(</span><span class="n">n_E</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">])</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">length_deviation</span> <span class="o">&gt;</span> <span class="n">limit</span><span class="p">:</span>
+        <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s1">&#39;n-vector should have unit length: &#39;</span>
+                      <span class="s1">&#39;norm(n_E)~=1 ! Error is: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">length_deviation</span><span class="p">))</span>
+
+
+<div class="viewcode-block" id="deg"><a class="viewcode-back" href="../../reference/generated/nvector.util.deg.html#nvector.util.deg">[docs]</a><span class="k">def</span> <span class="nf">deg</span><span class="p">(</span><span class="o">*</span><span class="n">rad_angles</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Converts angle in radians to degrees.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    rad_angles:</span>
+<span class="sd">        angle in radians</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    deg_angles:</span>
+<span class="sd">        angle in degrees</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; import numpy as np</span>
+<span class="sd">    &gt;&gt;&gt; import nvector as nv</span>
+<span class="sd">    &gt;&gt;&gt; nv.deg(np.pi/2)</span>
+<span class="sd">    90.0</span>
+<span class="sd">    &gt;&gt;&gt; nv.deg(np.pi/2, [0, np.pi])</span>
+<span class="sd">    (90.0, array([  0., 180.]))</span>
+
+<span class="sd">    See also</span>
+<span class="sd">    --------</span>
+<span class="sd">    rad</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">rad_angles</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">rad2deg</span><span class="p">(</span><span class="n">rad_angles</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="k">return</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">rad2deg</span><span class="p">(</span><span class="n">angle</span><span class="p">)</span> <span class="k">for</span> <span class="n">angle</span> <span class="ow">in</span> <span class="n">rad_angles</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="rad"><a class="viewcode-back" href="../../reference/generated/nvector.util.rad.html#nvector.util.rad">[docs]</a><span class="k">def</span> <span class="nf">rad</span><span class="p">(</span><span class="o">*</span><span class="n">deg_angles</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Converts angle in degrees to radians.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    deg_angles:</span>
+<span class="sd">        angle in degrees</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    rad_angles:</span>
+<span class="sd">        angle in radians</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; import numpy as np</span>
+<span class="sd">    &gt;&gt;&gt; import nvector as nv</span>
+<span class="sd">    &gt;&gt;&gt; nv.deg(nv.rad(90))</span>
+<span class="sd">    90.0</span>
+<span class="sd">    &gt;&gt;&gt; nv.deg(*nv.rad(90, [0, 180]))</span>
+<span class="sd">    (90.0, array([  0., 180.]))</span>
+
+<span class="sd">    See also</span>
+<span class="sd">    --------</span>
+<span class="sd">    deg</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">deg_angles</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">deg2rad</span><span class="p">(</span><span class="n">deg_angles</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+    <span class="k">return</span> <span class="nb">tuple</span><span class="p">(</span><span class="n">deg2rad</span><span class="p">(</span><span class="n">angle</span><span class="p">)</span> <span class="k">for</span> <span class="n">angle</span> <span class="ow">in</span> <span class="n">deg_angles</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="mdot"><a class="viewcode-back" href="../../reference/generated/nvector.util.mdot.html#nvector.util.mdot">[docs]</a><span class="k">def</span> <span class="nf">mdot</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Returns multiple matrix multiplications of two arrays</span>
+<span class="sd">    i.e. dot(a, b)[i,j,k] = sum(a[i,:,j] * b[:,j,k])</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    a : array_like</span>
+<span class="sd">        First argument.</span>
+<span class="sd">    b : array_like</span>
+<span class="sd">        Second argument.</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    if a and b have the same shape this is the same as</span>
+
+<span class="sd">    np.concatenate([np.dot(a[...,i], b[...,i])[:, :, None] for i in range(n)], axis=2)</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    3 x 3 x 2 times 3 x 3 x 2 array -&gt; 3 x 2 x 2 array</span>
+<span class="sd">        &gt;&gt;&gt; import numpy as np</span>
+<span class="sd">        &gt;&gt;&gt; import nvector as nv</span>
+<span class="sd">        &gt;&gt;&gt; a = 1.0 * np.arange(18).reshape(3,3,2)</span>
+<span class="sd">        &gt;&gt;&gt; b = - a</span>
+<span class="sd">        &gt;&gt;&gt; t = np.concatenate([np.dot(a[...,i], b[...,i])[:, :, None]</span>
+<span class="sd">        ...                    for i in range(2)], axis=2)</span>
+<span class="sd">        &gt;&gt;&gt; tm = nv.mdot(a, b)</span>
+<span class="sd">        &gt;&gt;&gt; tm.shape</span>
+<span class="sd">        (3, 3, 2)</span>
+<span class="sd">        &gt;&gt;&gt; np.allclose(t, tm)</span>
+<span class="sd">        True</span>
+
+<span class="sd">    3 x 3 x 2 times 3 x 1 array -&gt; 3 x 1 x 2 array</span>
+<span class="sd">        &gt;&gt;&gt; t1 = np.concatenate([np.dot(a[...,i], b[:,0,0][:,None])[:,:,None]</span>
+<span class="sd">        ...                    for i in range(2)], axis=2)</span>
+
+<span class="sd">        &gt;&gt;&gt; tm1 = nv.mdot(a, b[:,0,0].reshape(-1,1))</span>
+<span class="sd">        &gt;&gt;&gt; tm1.shape</span>
+<span class="sd">        (3, 1, 2)</span>
+<span class="sd">        &gt;&gt;&gt; np.allclose(t1, tm1)</span>
+<span class="sd">        True</span>
+
+<span class="sd">    3 x 3  times 3 x 3 array -&gt; 3 x 3 array</span>
+<span class="sd">        &gt;&gt;&gt; tt0 = nv.mdot(a[...,0], b[...,0])</span>
+<span class="sd">        &gt;&gt;&gt; tt0.shape</span>
+<span class="sd">        (3, 3)</span>
+<span class="sd">        &gt;&gt;&gt; np.allclose(t[...,0], tt0)</span>
+<span class="sd">        True</span>
+
+<span class="sd">    3 x 3  times 3 x 1 array -&gt; 3 x 1 array</span>
+<span class="sd">        &gt;&gt;&gt; tt0 = nv.mdot(a[...,0], b[:,:1,0])</span>
+<span class="sd">        &gt;&gt;&gt; tt0.shape</span>
+<span class="sd">        (3, 1)</span>
+<span class="sd">        &gt;&gt;&gt; np.allclose(t[:,:1,0], tt0)</span>
+<span class="sd">        True</span>
+
+<span class="sd">    3 x 3  times 3 x 1 x 2 array -&gt; 3 x 1 x 2 array</span>
+<span class="sd">        &gt;&gt;&gt; tt0 = nv.mdot(a[..., 0], b[:, :2, 0][:, None])</span>
+<span class="sd">        &gt;&gt;&gt; tt0.shape</span>
+<span class="sd">        (3, 1, 2)</span>
+<span class="sd">        &gt;&gt;&gt; np.allclose(t[:,:2,0][:,None], tt0)</span>
+<span class="sd">        True</span>
+
+<span class="sd">    See also</span>
+<span class="sd">    --------</span>
+<span class="sd">    numpy.einsum</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">einsum</span><span class="p">(</span><span class="s1">&#39;ij...,jk...-&gt;ik...&#39;</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="nthroot"><a class="viewcode-back" href="../../reference/generated/nvector.util.nthroot.html#nvector.util.nthroot">[docs]</a><span class="k">def</span> <span class="nf">nthroot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">n</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Returns the n&#39;th root of x to machine precision</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    x, n</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; import numpy as np</span>
+<span class="sd">    &gt;&gt;&gt; import nvector as nv</span>
+<span class="sd">    &gt;&gt;&gt; np.allclose(nv.nthroot(27.0, 3), 3.0)</span>
+<span class="sd">    True</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">x</span><span class="o">**</span><span class="p">(</span><span class="mf">1.</span> <span class="o">/</span> <span class="n">n</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">((</span><span class="n">x</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">)</span> <span class="o">&amp;</span> <span class="p">(</span><span class="n">_EPS</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">abs</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">),</span>
+                    <span class="n">y</span> <span class="o">-</span> <span class="p">(</span><span class="n">y</span><span class="o">**</span><span class="n">n</span> <span class="o">-</span> <span class="n">x</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">n</span> <span class="o">*</span> <span class="n">y</span><span class="o">**</span><span class="p">(</span><span class="n">n</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)),</span> <span class="n">y</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="get_ellipsoid"><a class="viewcode-back" href="../../reference/generated/nvector.util.get_ellipsoid.html#nvector.util.get_ellipsoid">[docs]</a><span class="k">def</span> <span class="nf">get_ellipsoid</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Returns semi-major axis (a), flattening (f) and name of ellipsoid as a named tuple.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    name : string</span>
+<span class="sd">        name of ellipsoid. Valid options are:</span>
+<span class="sd">        1) Airy 1858</span>
+<span class="sd">        2) Airy Modified</span>
+<span class="sd">        3) Australian National</span>
+<span class="sd">        4) Bessel 1841</span>
+<span class="sd">        5) Clarke 1880</span>
+<span class="sd">        6) Everest 1830</span>
+<span class="sd">        7) Everest Modified</span>
+<span class="sd">        8) Fisher 1960</span>
+<span class="sd">        9) Fisher 1968</span>
+<span class="sd">        10) Hough 1956</span>
+<span class="sd">        11) International (Hayford)/European Datum (ED50)</span>
+<span class="sd">        12) Krassovsky 1938</span>
+<span class="sd">        13) NWL-9D (WGS 66)</span>
+<span class="sd">        14) South American 1969</span>
+<span class="sd">        15) Soviet Geod. System 1985</span>
+<span class="sd">        16) WGS 72</span>
+<span class="sd">        17) Clarke 1866    (NAD27)</span>
+<span class="sd">        18) GRS80 / WGS84  (NAD83)</span>
+<span class="sd">        19) ETRS89</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; import nvector as nv</span>
+<span class="sd">    &gt;&gt;&gt; nv.get_ellipsoid(name=&#39;wgs84&#39;)</span>
+<span class="sd">    Ellipsoid(a=6378137.0, f=0.0033528106647474805, name=&#39;GRS80 / WGS84  (NAD83)&#39;)</span>
+<span class="sd">    &gt;&gt;&gt; nv.get_ellipsoid(name=&#39;GRS80&#39;)</span>
+<span class="sd">    Ellipsoid(a=6378137.0, f=0.0033528106647474805, name=&#39;GRS80 / WGS84  (NAD83)&#39;)</span>
+<span class="sd">    &gt;&gt;&gt; nv.get_ellipsoid(name=&#39;NAD83&#39;)</span>
+<span class="sd">    Ellipsoid(a=6378137.0, f=0.0033528106647474805, name=&#39;GRS80 / WGS84  (NAD83)&#39;)</span>
+<span class="sd">    &gt;&gt;&gt; nv.get_ellipsoid(name=18)</span>
+<span class="sd">    Ellipsoid(a=6378137.0, f=0.0033528106647474805, name=&#39;GRS80 / WGS84  (NAD83)&#39;)</span>
+
+<span class="sd">    &gt;&gt;&gt; wgs72 = nv.select_ellipsoid(name=&quot;WGS 72&quot;)</span>
+<span class="sd">    &gt;&gt;&gt; wgs72.a == 6378135.0</span>
+<span class="sd">    True</span>
+<span class="sd">    &gt;&gt;&gt; wgs72.f == 0.003352779454167505</span>
+<span class="sd">    True</span>
+<span class="sd">    &gt;&gt;&gt; wgs72.name</span>
+<span class="sd">    &#39;WGS 72&#39;</span>
+<span class="sd">    &gt;&gt;&gt; wgs72 == (6378135.0, 0.003352779454167505, &#39;WGS 72&#39;)</span>
+<span class="sd">    True</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+        <span class="n">name</span> <span class="o">=</span> <span class="n">name</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">)</span>
+    <span class="n">ellipsoid_id</span> <span class="o">=</span> <span class="n">ELLIPSOID_IX</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">ELLIPSOID</span><span class="p">[</span><span class="n">ellipsoid_id</span><span class="p">]</span></div>
+
+
+<span class="n">select_ellipsoid</span> <span class="o">=</span> <span class="n">deprecate</span><span class="p">(</span><span class="n">get_ellipsoid</span><span class="p">,</span> <span class="n">old_name</span><span class="o">=</span><span class="s1">&#39;select_ellipsoid&#39;</span><span class="p">,</span> <span class="n">new_name</span><span class="o">=</span><span class="s1">&#39;get_ellipsoid&#39;</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="unit"><a class="viewcode-back" href="../../reference/generated/nvector.util.unit.html#nvector.util.unit">[docs]</a><span class="k">def</span> <span class="nf">unit</span><span class="p">(</span><span class="n">vector</span><span class="p">,</span> <span class="n">norm_zero_vector</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Convert input vector to a vector of unit length.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    vector : 3 x m array</span>
+<span class="sd">        m column vectors</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    unitvector : 3 x m array</span>
+<span class="sd">        normalized unitvector(s) along axis==0.</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    The column vector(s) that have zero length will be returned as unit vector(s)</span>
+<span class="sd">    pointing in the x-direction, i.e, [[1], [0], [0]]</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    &gt;&gt;&gt; import numpy as np</span>
+<span class="sd">    &gt;&gt;&gt; import nvector as nv</span>
+<span class="sd">    &gt;&gt;&gt; np.allclose(nv.unit([[1, 0],[1, 0],[1, 0]]), [[ 0.57735027, 1],</span>
+<span class="sd">    ...                                               [ 0.57735027, 0],</span>
+<span class="sd">    ...                                               [ 0.57735027, 0]])</span>
+<span class="sd">    True</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">current_norm</span> <span class="o">=</span> <span class="n">norm</span><span class="p">(</span><span class="n">vector</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">keepdims</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">idx</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">flatnonzero</span><span class="p">(</span><span class="n">current_norm</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="n">unit_vector</span> <span class="o">=</span> <span class="n">vector</span> <span class="o">/</span> <span class="p">(</span><span class="n">current_norm</span> <span class="o">+</span> <span class="n">_TINY</span><span class="p">)</span>
+
+    <span class="n">unit_vector</span><span class="p">[:,</span> <span class="n">idx</span><span class="p">]</span> <span class="o">=</span> <span class="mi">0</span> <span class="o">*</span> <span class="n">norm_zero_vector</span>
+    <span class="n">unit_vector</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="n">idx</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span> <span class="o">*</span> <span class="n">norm_zero_vector</span>
+    <span class="k">return</span> <span class="n">unit_vector</span></div>
+
+
+<span class="n">_odict</span> <span class="o">=</span> <span class="nb">globals</span><span class="p">()</span>
+<span class="vm">__doc__</span> <span class="o">=</span> <span class="p">(</span><span class="vm">__doc__</span>  <span class="c1"># @ReservedAssignment</span>
+           <span class="o">+</span> <span class="n">_make_summary</span><span class="p">(</span><span class="nb">dict</span><span class="p">((</span><span class="n">n</span><span class="p">,</span> <span class="n">_odict</span><span class="p">[</span><span class="n">n</span><span class="p">])</span> <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="n">__all__</span><span class="p">))</span>
+           <span class="o">+</span> <span class="s1">&#39;License</span><span class="se">\n</span><span class="s1">-------</span><span class="se">\n</span><span class="s1">&#39;</span>
+           <span class="o">+</span> <span class="n">_license</span><span class="o">.</span><span class="vm">__doc__</span><span class="p">)</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="n">test_docstrings</span><span class="p">(</span><span class="vm">__file__</span><span class="p">)</span>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2015-2021, Norwegian Defence Research Establishment (FFI).
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

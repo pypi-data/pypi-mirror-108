@@ -1,0 +1,299 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>5. Reference nvector package &mdash; Nvector 0.7.7 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="5.1. Object Oriented interface to Geodesic functions" href="nvector_summary.html" />
+    <link rel="prev" title="&lt;no title&gt;" href="../topics/nvector.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Nvector
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.7
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html">2. Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../how-to/index.html">3. How-to guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topics/index.html">4. Topics guides</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">5. Reference nvector package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="nvector_summary.html">5.1. Object Oriented interface to Geodesic functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nvector_summary.html#geodesic-functions">5.2. Geodesic functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nvector_summary.html#rotation-matrices-and-angles">5.3. Rotation matrices and angles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nvector_summary.html#utility-functions">5.4. Utility functions</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/authors.html">Developers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/acknowledgement.html">Acknowledgments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/index.html">Indices and tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/zreferences.html">Bibliography</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Nvector</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li><span class="section-number">5. </span>Reference nvector package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/reference/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="reference-nvector-package">
+<span id="reference"></span><h1><span class="section-number">5. </span>Reference nvector package<a class="headerlink" href="#reference-nvector-package" title="Permalink to this headline">¶</a></h1>
+<p>Technical reference material that details functions,
+modules, and objects included in nvector version 0.7.7, describing
+what they are and what they do.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="nvector_summary.html">5.1. Object Oriented interface to Geodesic functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="generated/nvector.objects.delta_E.html">5.1.1. nvector.objects.delta_E</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/nvector.objects.delta_N.html">5.1.2. nvector.objects.delta_N</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/nvector.objects.delta_L.html">5.1.3. nvector.objects.delta_L</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/nvector.objects.diff_positions.html">5.1.4. nvector.objects.diff_positions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/nvector.objects.ECEFvector.html">5.1.5. nvector.objects.ECEFvector</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/nvector.objects.FrameB.html">5.1.6. nvector.objects.FrameB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/nvector.objects.FrameE.html">5.1.7. nvector.objects.FrameE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/nvector.objects.FrameN.html">5.1.8. nvector.objects.FrameN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/nvector.objects.FrameL.html">5.1.9. nvector.objects.FrameL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/nvector.objects.GeoPath.html">5.1.10. nvector.objects.GeoPath</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/nvector.objects.GeoPoint.html">5.1.11. nvector.objects.GeoPoint</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/nvector.objects.Nvector.html">5.1.12. nvector.objects.Nvector</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/nvector.objects.Pvector.html">5.1.13. nvector.objects.Pvector</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="nvector_summary.html#geodesic-functions">5.2. Geodesic functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="generated/nvector.core.closest_point_on_great_circle.html">5.2.1. nvector.core.closest_point_on_great_circle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/nvector.core.cross_track_distance.html">5.2.2. nvector.core.cross_track_distance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/nvector.core.euclidean_distance.html">5.2.3. nvector.core.euclidean_distance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/nvector.core.great_circle_distance.html">5.2.4. nvector.core.great_circle_distance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/nvector.core.great_circle_normal.html">5.2.5. nvector.core.great_circle_normal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/nvector.core.interp_nvectors.html">5.2.6. nvector.core.interp_nvectors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/nvector.core.interpolate.html">5.2.7. nvector.core.interpolate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/nvector.core.intersect.html">5.2.8. nvector.core.intersect</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/nvector.core.lat_lon2n_E.html">5.2.9. nvector.core.lat_lon2n_E</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/nvector.core.mean_horizontal_position.html">5.2.10. nvector.core.mean_horizontal_position</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/nvector.core.n_E2lat_lon.html">5.2.11. nvector.core.n_E2lat_lon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/nvector.core.n_EB_E2p_EB_E.html">5.2.12. nvector.core.n_EB_E2p_EB_E</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/nvector.core.p_EB_E2n_EB_E.html">5.2.13. nvector.core.p_EB_E2n_EB_E</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/nvector.core.n_EA_E_and_n_EB_E2p_AB_E.html">5.2.14. nvector.core.n_EA_E_and_n_EB_E2p_AB_E</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/nvector.core.n_EA_E_and_p_AB_E2n_EB_E.html">5.2.15. nvector.core.n_EA_E_and_p_AB_E2n_EB_E</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/nvector.core.n_EA_E_and_n_EB_E2azimuth.html">5.2.16. nvector.core.n_EA_E_and_n_EB_E2azimuth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/nvector.core.n_EA_E_distance_and_azimuth2n_EB_E.html">5.2.17. nvector.core.n_EA_E_distance_and_azimuth2n_EB_E</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/nvector.core.on_great_circle.html">5.2.18. nvector.core.on_great_circle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/nvector.core.on_great_circle_path.html">5.2.19. nvector.core.on_great_circle_path</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="nvector_summary.html#rotation-matrices-and-angles">5.3. Rotation matrices and angles</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="generated/nvector.rotation.E_rotation.html">5.3.1. nvector.rotation.E_rotation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/nvector.rotation.n_E2R_EN.html">5.3.2. nvector.rotation.n_E2R_EN</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/nvector.rotation.n_E_and_wa2R_EL.html">5.3.3. nvector.rotation.n_E_and_wa2R_EL</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/nvector.rotation.R_EL2n_E.html">5.3.4. nvector.rotation.R_EL2n_E</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/nvector.rotation.R_EN2n_E.html">5.3.5. nvector.rotation.R_EN2n_E</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/nvector.rotation.R2xyz.html">5.3.6. nvector.rotation.R2xyz</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/nvector.rotation.R2zyx.html">5.3.7. nvector.rotation.R2zyx</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/nvector.rotation.xyz2R.html">5.3.8. nvector.rotation.xyz2R</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/nvector.rotation.zyx2R.html">5.3.9. nvector.rotation.zyx2R</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="nvector_summary.html#utility-functions">5.4. Utility functions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="generated/nvector.util.deg.html">5.4.1. nvector.util.deg</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/nvector.util.mdot.html">5.4.2. nvector.util.mdot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/nvector.util.nthroot.html">5.4.3. nvector.util.nthroot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/nvector.util.rad.html">5.4.4. nvector.util.rad</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/nvector.util.get_ellipsoid.html">5.4.5. nvector.util.get_ellipsoid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/nvector.util.select_ellipsoid.html">5.4.6. nvector.util.select_ellipsoid</a></li>
+<li class="toctree-l2"><a class="reference internal" href="generated/nvector.util.unit.html">5.4.7. nvector.util.unit</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="nvector_summary.html" class="btn btn-neutral float-right" title="5.1. Object Oriented interface to Geodesic functions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../topics/nvector.html" class="btn btn-neutral float-left" title="&lt;no title&gt;" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2015-2021, Norwegian Defence Research Establishment (FFI).
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

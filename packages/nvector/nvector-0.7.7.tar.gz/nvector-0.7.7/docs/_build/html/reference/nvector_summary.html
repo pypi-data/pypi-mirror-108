@@ -1,0 +1,475 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>5.1. Object Oriented interface to Geodesic functions &mdash; Nvector 0.7.7 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="5.1.1. nvector.objects.delta_E" href="generated/nvector.objects.delta_E.html" />
+    <link rel="prev" title="5. Reference nvector package" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Nvector
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.7
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../intro/index.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html">2. Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../how-to/index.html">3. How-to guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topics/index.html">4. Topics guides</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">5. Reference nvector package</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">5.1. Object Oriented interface to Geodesic functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="generated/nvector.objects.delta_E.html">5.1.1. nvector.objects.delta_E</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/nvector.objects.delta_N.html">5.1.2. nvector.objects.delta_N</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/nvector.objects.delta_L.html">5.1.3. nvector.objects.delta_L</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/nvector.objects.diff_positions.html">5.1.4. nvector.objects.diff_positions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/nvector.objects.ECEFvector.html">5.1.5. nvector.objects.ECEFvector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/nvector.objects.FrameB.html">5.1.6. nvector.objects.FrameB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/nvector.objects.FrameE.html">5.1.7. nvector.objects.FrameE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/nvector.objects.FrameN.html">5.1.8. nvector.objects.FrameN</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/nvector.objects.FrameL.html">5.1.9. nvector.objects.FrameL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/nvector.objects.GeoPath.html">5.1.10. nvector.objects.GeoPath</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/nvector.objects.GeoPoint.html">5.1.11. nvector.objects.GeoPoint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/nvector.objects.Nvector.html">5.1.12. nvector.objects.Nvector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/nvector.objects.Pvector.html">5.1.13. nvector.objects.Pvector</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#geodesic-functions">5.2. Geodesic functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="generated/nvector.core.closest_point_on_great_circle.html">5.2.1. nvector.core.closest_point_on_great_circle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/nvector.core.cross_track_distance.html">5.2.2. nvector.core.cross_track_distance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/nvector.core.euclidean_distance.html">5.2.3. nvector.core.euclidean_distance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/nvector.core.great_circle_distance.html">5.2.4. nvector.core.great_circle_distance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/nvector.core.great_circle_normal.html">5.2.5. nvector.core.great_circle_normal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/nvector.core.interp_nvectors.html">5.2.6. nvector.core.interp_nvectors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/nvector.core.interpolate.html">5.2.7. nvector.core.interpolate</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/nvector.core.intersect.html">5.2.8. nvector.core.intersect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/nvector.core.lat_lon2n_E.html">5.2.9. nvector.core.lat_lon2n_E</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/nvector.core.mean_horizontal_position.html">5.2.10. nvector.core.mean_horizontal_position</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/nvector.core.n_E2lat_lon.html">5.2.11. nvector.core.n_E2lat_lon</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/nvector.core.n_EB_E2p_EB_E.html">5.2.12. nvector.core.n_EB_E2p_EB_E</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/nvector.core.p_EB_E2n_EB_E.html">5.2.13. nvector.core.p_EB_E2n_EB_E</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/nvector.core.n_EA_E_and_n_EB_E2p_AB_E.html">5.2.14. nvector.core.n_EA_E_and_n_EB_E2p_AB_E</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/nvector.core.n_EA_E_and_p_AB_E2n_EB_E.html">5.2.15. nvector.core.n_EA_E_and_p_AB_E2n_EB_E</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/nvector.core.n_EA_E_and_n_EB_E2azimuth.html">5.2.16. nvector.core.n_EA_E_and_n_EB_E2azimuth</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/nvector.core.n_EA_E_distance_and_azimuth2n_EB_E.html">5.2.17. nvector.core.n_EA_E_distance_and_azimuth2n_EB_E</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/nvector.core.on_great_circle.html">5.2.18. nvector.core.on_great_circle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/nvector.core.on_great_circle_path.html">5.2.19. nvector.core.on_great_circle_path</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#rotation-matrices-and-angles">5.3. Rotation matrices and angles</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="generated/nvector.rotation.E_rotation.html">5.3.1. nvector.rotation.E_rotation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/nvector.rotation.n_E2R_EN.html">5.3.2. nvector.rotation.n_E2R_EN</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/nvector.rotation.n_E_and_wa2R_EL.html">5.3.3. nvector.rotation.n_E_and_wa2R_EL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/nvector.rotation.R_EL2n_E.html">5.3.4. nvector.rotation.R_EL2n_E</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/nvector.rotation.R_EN2n_E.html">5.3.5. nvector.rotation.R_EN2n_E</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/nvector.rotation.R2xyz.html">5.3.6. nvector.rotation.R2xyz</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/nvector.rotation.R2zyx.html">5.3.7. nvector.rotation.R2zyx</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/nvector.rotation.xyz2R.html">5.3.8. nvector.rotation.xyz2R</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/nvector.rotation.zyx2R.html">5.3.9. nvector.rotation.zyx2R</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#utility-functions">5.4. Utility functions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="generated/nvector.util.deg.html">5.4.1. nvector.util.deg</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/nvector.util.mdot.html">5.4.2. nvector.util.mdot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/nvector.util.nthroot.html">5.4.3. nvector.util.nthroot</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/nvector.util.rad.html">5.4.4. nvector.util.rad</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/nvector.util.get_ellipsoid.html">5.4.5. nvector.util.get_ellipsoid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/nvector.util.select_ellipsoid.html">5.4.6. nvector.util.select_ellipsoid</a></li>
+<li class="toctree-l3"><a class="reference internal" href="generated/nvector.util.unit.html">5.4.7. nvector.util.unit</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/authors.html">Developers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/acknowledgement.html">Acknowledgments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/index.html">Indices and tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/zreferences.html">Bibliography</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Nvector</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html"><span class="section-number">5. </span>Reference nvector package</a> &raquo;</li>
+        
+      <li><span class="section-number">5.1. </span>Object Oriented interface to Geodesic functions</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/reference/nvector_summary.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="object-oriented-interface-to-geodesic-functions">
+<h1><span class="section-number">5.1. </span>Object Oriented interface to Geodesic functions<a class="headerlink" href="#object-oriented-interface-to-geodesic-functions" title="Permalink to this headline">¶</a></h1>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/nvector.objects.delta_E.html#nvector.objects.delta_E" title="nvector.objects.delta_E"><code class="xref py py-obj docutils literal notranslate"><span class="pre">delta_E</span></code></a>(point_a, point_b)</p></td>
+<td><p>Returns cartesian delta vector from positions a to b decomposed in E.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/nvector.objects.delta_N.html#nvector.objects.delta_N" title="nvector.objects.delta_N"><code class="xref py py-obj docutils literal notranslate"><span class="pre">delta_N</span></code></a>(point_a, point_b)</p></td>
+<td><p>Returns cartesian delta vector from positions a to b decomposed in N.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/nvector.objects.delta_L.html#nvector.objects.delta_L" title="nvector.objects.delta_L"><code class="xref py py-obj docutils literal notranslate"><span class="pre">delta_L</span></code></a>(point_a, point_b[, wander_azimuth])</p></td>
+<td><p>Returns cartesian delta vector from positions a to b decomposed in L.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/nvector.objects.diff_positions.html#nvector.objects.diff_positions" title="nvector.objects.diff_positions"><code class="xref py py-obj docutils literal notranslate"><span class="pre">diff_positions</span></code></a>(*args, **kwds)</p></td>
+<td><p><cite>diff_positions</cite> is deprecated, use <cite>delta_E</cite> instead!</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/nvector.objects.ECEFvector.html#nvector.objects.ECEFvector" title="nvector.objects.ECEFvector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">ECEFvector</span></code></a>(pvector[, frame, scalar])</p></td>
+<td><p>Geographical position given as cartesian position vector in frame E</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/nvector.objects.FrameB.html#nvector.objects.FrameB" title="nvector.objects.FrameB"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FrameB</span></code></a>(point[, yaw, pitch, roll, degrees])</p></td>
+<td><p>Body frame</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/nvector.objects.FrameE.html#nvector.objects.FrameE" title="nvector.objects.FrameE"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FrameE</span></code></a>([a, f, name, axes])</p></td>
+<td><p>Earth-fixed frame</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/nvector.objects.FrameN.html#nvector.objects.FrameN" title="nvector.objects.FrameN"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FrameN</span></code></a>(point)</p></td>
+<td><p>North-East-Down frame</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/nvector.objects.FrameL.html#nvector.objects.FrameL" title="nvector.objects.FrameL"><code class="xref py py-obj docutils literal notranslate"><span class="pre">FrameL</span></code></a>(point[, wander_azimuth])</p></td>
+<td><p>Local level, Wander azimuth frame</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/nvector.objects.GeoPath.html#nvector.objects.GeoPath" title="nvector.objects.GeoPath"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GeoPath</span></code></a>(point_a, point_b)</p></td>
+<td><p>Geographical path between two positions in Frame E</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/nvector.objects.GeoPoint.html#nvector.objects.GeoPoint" title="nvector.objects.GeoPoint"><code class="xref py py-obj docutils literal notranslate"><span class="pre">GeoPoint</span></code></a>(latitude, longitude[, z, frame, …])</p></td>
+<td><p>Geographical position given as latitude, longitude, depth in frame E.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/nvector.objects.Nvector.html#nvector.objects.Nvector" title="nvector.objects.Nvector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Nvector</span></code></a>(normal[, z, frame])</p></td>
+<td><p>Geographical position given as n-vector and depth in frame E</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/nvector.objects.Pvector.html#nvector.objects.Pvector" title="nvector.objects.Pvector"><code class="xref py py-obj docutils literal notranslate"><span class="pre">Pvector</span></code></a>(pvector, frame[, scalar])</p></td>
+<td><p>Geographical position given as cartesian position vector in a frame.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="geodesic-functions">
+<h1><span class="section-number">5.2. </span>Geodesic functions<a class="headerlink" href="#geodesic-functions" title="Permalink to this headline">¶</a></h1>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/nvector.core.closest_point_on_great_circle.html#nvector.core.closest_point_on_great_circle" title="nvector.core.closest_point_on_great_circle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">closest_point_on_great_circle</span></code></a>(path, n_EB_E)</p></td>
+<td><p>Returns closest point C on great circle path A to position B.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/nvector.core.cross_track_distance.html#nvector.core.cross_track_distance" title="nvector.core.cross_track_distance"><code class="xref py py-obj docutils literal notranslate"><span class="pre">cross_track_distance</span></code></a>(path, n_EB_E[, method, …])</p></td>
+<td><p>Returns  cross track distance between path A and position B.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/nvector.core.euclidean_distance.html#nvector.core.euclidean_distance" title="nvector.core.euclidean_distance"><code class="xref py py-obj docutils literal notranslate"><span class="pre">euclidean_distance</span></code></a>(n_EA_E, n_EB_E[, radius])</p></td>
+<td><p>Returns Euclidean distance between positions A and B</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/nvector.core.great_circle_distance.html#nvector.core.great_circle_distance" title="nvector.core.great_circle_distance"><code class="xref py py-obj docutils literal notranslate"><span class="pre">great_circle_distance</span></code></a>(n_EA_E, n_EB_E[, radius])</p></td>
+<td><p>Returns great circle distance between positions A and B</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/nvector.core.great_circle_normal.html#nvector.core.great_circle_normal" title="nvector.core.great_circle_normal"><code class="xref py py-obj docutils literal notranslate"><span class="pre">great_circle_normal</span></code></a>(n_EA_E, n_EB_E)</p></td>
+<td><p>Returns the unit normal(s) to the great circle(s)</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/nvector.core.interp_nvectors.html#nvector.core.interp_nvectors" title="nvector.core.interp_nvectors"><code class="xref py py-obj docutils literal notranslate"><span class="pre">interp_nvectors</span></code></a>(t_i, t, nvectors[, kind, …])</p></td>
+<td><p>Returns interpolated values from nvector data.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/nvector.core.interpolate.html#nvector.core.interpolate" title="nvector.core.interpolate"><code class="xref py py-obj docutils literal notranslate"><span class="pre">interpolate</span></code></a>(path, ti)</p></td>
+<td><p>Returns the interpolated point along the path</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/nvector.core.intersect.html#nvector.core.intersect" title="nvector.core.intersect"><code class="xref py py-obj docutils literal notranslate"><span class="pre">intersect</span></code></a>(path_a, path_b)</p></td>
+<td><p>Returns the intersection(s) between the great circles of the two paths</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/nvector.core.lat_lon2n_E.html#nvector.core.lat_lon2n_E" title="nvector.core.lat_lon2n_E"><code class="xref py py-obj docutils literal notranslate"><span class="pre">lat_lon2n_E</span></code></a>(latitude, longitude[, R_Ee])</p></td>
+<td><p>Converts latitude and longitude to n-vector.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/nvector.core.mean_horizontal_position.html#nvector.core.mean_horizontal_position" title="nvector.core.mean_horizontal_position"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mean_horizontal_position</span></code></a>(n_EB_E)</p></td>
+<td><p>Returns the n-vector of the horizontal mean position.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/nvector.core.n_E2lat_lon.html#nvector.core.n_E2lat_lon" title="nvector.core.n_E2lat_lon"><code class="xref py py-obj docutils literal notranslate"><span class="pre">n_E2lat_lon</span></code></a>(n_E[, R_Ee])</p></td>
+<td><p>Converts n-vector to latitude and longitude.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/nvector.core.n_EB_E2p_EB_E.html#nvector.core.n_EB_E2p_EB_E" title="nvector.core.n_EB_E2p_EB_E"><code class="xref py py-obj docutils literal notranslate"><span class="pre">n_EB_E2p_EB_E</span></code></a>(n_EB_E[, depth, a, f, R_Ee])</p></td>
+<td><p>Converts n-vector to Cartesian position vector in meters.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/nvector.core.p_EB_E2n_EB_E.html#nvector.core.p_EB_E2n_EB_E" title="nvector.core.p_EB_E2n_EB_E"><code class="xref py py-obj docutils literal notranslate"><span class="pre">p_EB_E2n_EB_E</span></code></a>(p_EB_E[, a, f, R_Ee])</p></td>
+<td><p>Converts Cartesian position vector in meters to n-vector.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/nvector.core.n_EA_E_and_n_EB_E2p_AB_E.html#nvector.core.n_EA_E_and_n_EB_E2p_AB_E" title="nvector.core.n_EA_E_and_n_EB_E2p_AB_E"><code class="xref py py-obj docutils literal notranslate"><span class="pre">n_EA_E_and_n_EB_E2p_AB_E</span></code></a>(n_EA_E, n_EB_E[, …])</p></td>
+<td><p>Returns the delta vector from position A to B decomposed in E.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/nvector.core.n_EA_E_and_p_AB_E2n_EB_E.html#nvector.core.n_EA_E_and_p_AB_E2n_EB_E" title="nvector.core.n_EA_E_and_p_AB_E2n_EB_E"><code class="xref py py-obj docutils literal notranslate"><span class="pre">n_EA_E_and_p_AB_E2n_EB_E</span></code></a>(n_EA_E, p_AB_E[, …])</p></td>
+<td><p>Returns position B from position A and delta E vector.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/nvector.core.n_EA_E_and_n_EB_E2azimuth.html#nvector.core.n_EA_E_and_n_EB_E2azimuth" title="nvector.core.n_EA_E_and_n_EB_E2azimuth"><code class="xref py py-obj docutils literal notranslate"><span class="pre">n_EA_E_and_n_EB_E2azimuth</span></code></a>(n_EA_E, n_EB_E[, …])</p></td>
+<td><p>Returns azimuth from A to B, relative to North:</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/nvector.core.n_EA_E_distance_and_azimuth2n_EB_E.html#nvector.core.n_EA_E_distance_and_azimuth2n_EB_E" title="nvector.core.n_EA_E_distance_and_azimuth2n_EB_E"><code class="xref py py-obj docutils literal notranslate"><span class="pre">n_EA_E_distance_and_azimuth2n_EB_E</span></code></a>(n_EA_E, …)</p></td>
+<td><p>Returns position B from azimuth and distance from position A</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/nvector.core.on_great_circle.html#nvector.core.on_great_circle" title="nvector.core.on_great_circle"><code class="xref py py-obj docutils literal notranslate"><span class="pre">on_great_circle</span></code></a>(path, n_EB_E[, radius, atol])</p></td>
+<td><p>Returns True if position B is on great circle through path A.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/nvector.core.on_great_circle_path.html#nvector.core.on_great_circle_path" title="nvector.core.on_great_circle_path"><code class="xref py py-obj docutils literal notranslate"><span class="pre">on_great_circle_path</span></code></a>(path, n_EB_E[, radius, …])</p></td>
+<td><p>Returns True if position B is on great circle and between endpoints of path A.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="rotation-matrices-and-angles">
+<h1><span class="section-number">5.3. </span>Rotation matrices and angles<a class="headerlink" href="#rotation-matrices-and-angles" title="Permalink to this headline">¶</a></h1>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/nvector.rotation.E_rotation.html#nvector.rotation.E_rotation" title="nvector.rotation.E_rotation"><code class="xref py py-obj docutils literal notranslate"><span class="pre">E_rotation</span></code></a>([axes])</p></td>
+<td><p>Returns rotation matrix R_Ee defining the axes of the coordinate frame E.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/nvector.rotation.n_E2R_EN.html#nvector.rotation.n_E2R_EN" title="nvector.rotation.n_E2R_EN"><code class="xref py py-obj docutils literal notranslate"><span class="pre">n_E2R_EN</span></code></a>(n_E[, R_Ee])</p></td>
+<td><p>Returns the rotation matrix R_EN from n-vector.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/nvector.rotation.n_E_and_wa2R_EL.html#nvector.rotation.n_E_and_wa2R_EL" title="nvector.rotation.n_E_and_wa2R_EL"><code class="xref py py-obj docutils literal notranslate"><span class="pre">n_E_and_wa2R_EL</span></code></a>(n_E, wander_azimuth[, R_Ee])</p></td>
+<td><p>Returns rotation matrix R_EL from n-vector and wander azimuth angle.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/nvector.rotation.R_EL2n_E.html#nvector.rotation.R_EL2n_E" title="nvector.rotation.R_EL2n_E"><code class="xref py py-obj docutils literal notranslate"><span class="pre">R_EL2n_E</span></code></a>(R_EL)</p></td>
+<td><p>Returns n-vector from the rotation matrix R_EL.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/nvector.rotation.R_EN2n_E.html#nvector.rotation.R_EN2n_E" title="nvector.rotation.R_EN2n_E"><code class="xref py py-obj docutils literal notranslate"><span class="pre">R_EN2n_E</span></code></a>(R_EN)</p></td>
+<td><p>Returns n-vector from the rotation matrix R_EN.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/nvector.rotation.R2xyz.html#nvector.rotation.R2xyz" title="nvector.rotation.R2xyz"><code class="xref py py-obj docutils literal notranslate"><span class="pre">R2xyz</span></code></a>(R_AB)</p></td>
+<td><p>Returns the angles about new axes in the xyz-order from a rotation matrix.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/nvector.rotation.R2zyx.html#nvector.rotation.R2zyx" title="nvector.rotation.R2zyx"><code class="xref py py-obj docutils literal notranslate"><span class="pre">R2zyx</span></code></a>(R_AB)</p></td>
+<td><p>Returns the angles about new axes in the zxy-order from a rotation matrix.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/nvector.rotation.xyz2R.html#nvector.rotation.xyz2R" title="nvector.rotation.xyz2R"><code class="xref py py-obj docutils literal notranslate"><span class="pre">xyz2R</span></code></a>(x, y, z)</p></td>
+<td><p>Returns rotation matrix from 3 angles about new axes in the xyz-order.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/nvector.rotation.zyx2R.html#nvector.rotation.zyx2R" title="nvector.rotation.zyx2R"><code class="xref py py-obj docutils literal notranslate"><span class="pre">zyx2R</span></code></a>(z, y, x)</p></td>
+<td><p>Returns rotation matrix from 3 angles about new axes in the zyx-order.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="utility-functions">
+<h1><span class="section-number">5.4. </span>Utility functions<a class="headerlink" href="#utility-functions" title="Permalink to this headline">¶</a></h1>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/nvector.util.deg.html#nvector.util.deg" title="nvector.util.deg"><code class="xref py py-obj docutils literal notranslate"><span class="pre">deg</span></code></a>(*rad_angles)</p></td>
+<td><p>Converts angle in radians to degrees.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/nvector.util.mdot.html#nvector.util.mdot" title="nvector.util.mdot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">mdot</span></code></a>(a, b)</p></td>
+<td><p>Returns multiple matrix multiplications of two arrays i.e. dot(a, b)[i,j,k] = sum(a[i,:,j] * b[:,j,k]).</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/nvector.util.nthroot.html#nvector.util.nthroot" title="nvector.util.nthroot"><code class="xref py py-obj docutils literal notranslate"><span class="pre">nthroot</span></code></a>(x, n)</p></td>
+<td><p>Returns the n’th root of x to machine precision</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/nvector.util.rad.html#nvector.util.rad" title="nvector.util.rad"><code class="xref py py-obj docutils literal notranslate"><span class="pre">rad</span></code></a>(*deg_angles)</p></td>
+<td><p>Converts angle in degrees to radians.</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/nvector.util.get_ellipsoid.html#nvector.util.get_ellipsoid" title="nvector.util.get_ellipsoid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">get_ellipsoid</span></code></a>(name)</p></td>
+<td><p>Returns semi-major axis (a), flattening (f) and name of ellipsoid as a named tuple.</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="generated/nvector.util.select_ellipsoid.html#nvector.util.select_ellipsoid" title="nvector.util.select_ellipsoid"><code class="xref py py-obj docutils literal notranslate"><span class="pre">select_ellipsoid</span></code></a>(*args, **kwds)</p></td>
+<td><p><cite>select_ellipsoid</cite> is deprecated, use <cite>get_ellipsoid</cite> instead!</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="generated/nvector.util.unit.html#nvector.util.unit" title="nvector.util.unit"><code class="xref py py-obj docutils literal notranslate"><span class="pre">unit</span></code></a>(vector[, norm_zero_vector])</p></td>
+<td><p>Convert input vector to a vector of unit length.</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="generated/nvector.objects.delta_E.html" class="btn btn-neutral float-right" title="5.1.1. nvector.objects.delta_E" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="index.html" class="btn btn-neutral float-left" title="5. Reference nvector package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2015-2021, Norwegian Defence Research Establishment (FFI).
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

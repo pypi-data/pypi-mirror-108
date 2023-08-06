@@ -1,0 +1,138 @@
+\begin{sphinxtheindex}
+\let\bigletter\sphinxstyleindexlettergroup
+\let\spxpagem \sphinxstyleindexpagemain
+\let\spxentry \sphinxstyleindexentry
+\let\spxextra \sphinxstyleindexextra
+
+  \bigletter {\sphinxsymbolsname}
+  \item \spxentry{\_\_init\_\_()}\spxextra{ECEFvector method}, \hyperpage{36}
+  \item \spxentry{\_\_init\_\_()}\spxextra{FrameB method}, \hyperpage{37}
+  \item \spxentry{\_\_init\_\_()}\spxextra{FrameE method}, \hyperpage{38}
+  \item \spxentry{\_\_init\_\_()}\spxextra{FrameL method}, \hyperpage{41}
+  \item \spxentry{\_\_init\_\_()}\spxextra{FrameN method}, \hyperpage{40}
+  \item \spxentry{\_\_init\_\_()}\spxextra{GeoPath method}, \hyperpage{44}
+  \item \spxentry{\_\_init\_\_()}\spxextra{GeoPoint method}, \hyperpage{46}
+  \item \spxentry{\_\_init\_\_()}\spxextra{Nvector method}, \hyperpage{47}
+  \item \spxentry{\_\_init\_\_()}\spxextra{Pvector method}, \hyperpage{48}
+
+  \indexspace
+  \bigletter C
+  \item \spxentry{closest\_point\_on\_great\_circle()}\spxextra{in module nvector.core}, 
+		\hyperpage{49}
+  \item \spxentry{cross\_track\_distance()}\spxextra{in module nvector.core}, \hyperpage{50}
+
+  \indexspace
+  \bigletter D
+  \item \spxentry{deg()}\spxextra{in module nvector.util}, \hyperpage{74}
+  \item \spxentry{delta\_E()}\spxextra{in module nvector.objects}, \hyperpage{31}
+  \item \spxentry{delta\_L()}\spxextra{in module nvector.objects}, \hyperpage{33}
+  \item \spxentry{delta\_N()}\spxextra{in module nvector.objects}, \hyperpage{33}
+  \item \spxentry{diff\_positions()}\spxextra{in module nvector.objects}, \hyperpage{33}
+
+  \indexspace
+  \bigletter E
+  \item \spxentry{E\_rotation()}\spxextra{in module nvector.rotation}, \hyperpage{69}
+  \item \spxentry{ECEFvector}\spxextra{class in nvector.objects}, \hyperpage{35}
+  \item \spxentry{euclidean\_distance()}\spxextra{in module nvector.core}, \hyperpage{51}
+
+  \indexspace
+  \bigletter F
+  \item \spxentry{FrameB}\spxextra{class in nvector.objects}, \hyperpage{36}
+  \item \spxentry{FrameE}\spxextra{class in nvector.objects}, \hyperpage{38}
+  \item \spxentry{FrameL}\spxextra{class in nvector.objects}, \hyperpage{40}
+  \item \spxentry{FrameN}\spxextra{class in nvector.objects}, \hyperpage{39}
+
+  \indexspace
+  \bigletter G
+  \item \spxentry{GeoPath}\spxextra{class in nvector.objects}, \hyperpage{41}
+  \item \spxentry{GeoPoint}\spxextra{class in nvector.objects}, \hyperpage{45}
+  \item \spxentry{get\_ellipsoid()}\spxextra{in module nvector.util}, \hyperpage{76}
+  \item \spxentry{great\_circle\_distance()}\spxextra{in module nvector.core}, \hyperpage{53}
+  \item \spxentry{great\_circle\_normal()}\spxextra{in module nvector.core}, \hyperpage{54}
+
+  \indexspace
+  \bigletter I
+  \item \spxentry{interp\_nvectors()}\spxextra{in module nvector.core}, \hyperpage{54}
+  \item \spxentry{interpolate()}\spxextra{in module nvector.core}, \hyperpage{55}
+  \item \spxentry{intersect()}\spxextra{in module nvector.core}, \hyperpage{55}
+
+  \indexspace
+  \bigletter L
+  \item \spxentry{lat\_lon2n\_E()}\spxextra{in module nvector.core}, \hyperpage{56}
+
+  \indexspace
+  \bigletter M
+  \item \spxentry{mdot()}\spxextra{in module nvector.util}, \hyperpage{74}
+  \item \spxentry{mean\_horizontal\_position()}\spxextra{in module nvector.core}, \hyperpage{57}
+  \item \spxentry{module}
+    \subitem \spxentry{nvector.\_acknowledgements}, \hyperpage{93}
+    \subitem \spxentry{nvector.\_examples\_object\_oriented}, \hyperpage{6}
+    \subitem \spxentry{nvector.\_images}, \hyperpage{3}
+    \subitem \spxentry{nvector.\_info\_functional}, \hyperpage{14}
+    \subitem \spxentry{nvector.\_installation}, \hyperpage{5}
+    \subitem \spxentry{nvector.\_intro}, \hyperpage{3}
+
+  \indexspace
+  \bigletter N
+  \item \spxentry{n\_E2lat\_lon()}\spxextra{in module nvector.core}, \hyperpage{58}
+  \item \spxentry{n\_E2R\_EN()}\spxextra{in module nvector.rotation}, \hyperpage{69}
+  \item \spxentry{n\_E\_and\_wa2R\_EL()}\spxextra{in module nvector.rotation}, \hyperpage{70}
+  \item \spxentry{n\_EA\_E\_and\_n\_EB\_E2azimuth()}\spxextra{in module nvector.core}, 
+		\hyperpage{64}
+  \item \spxentry{n\_EA\_E\_and\_n\_EB\_E2p\_AB\_E()}\spxextra{in module nvector.core}, 
+		\hyperpage{60}
+  \item \spxentry{n\_EA\_E\_and\_p\_AB\_E2n\_EB\_E()}\spxextra{in module nvector.core}, 
+		\hyperpage{62}
+  \item \spxentry{n\_EA\_E\_distance\_and\_azimuth2n\_EB\_E()}\spxextra{in module nvector.core}, 
+		\hyperpage{64}
+  \item \spxentry{n\_EB\_E2p\_EB\_E()}\spxextra{in module nvector.core}, \hyperpage{58}
+  \item \spxentry{nthroot()}\spxextra{in module nvector.util}, \hyperpage{75}
+  \item \spxentry{Nvector}\spxextra{class in nvector.objects}, \hyperpage{46}
+  \item \spxentry{nvector.\_acknowledgements}
+    \subitem \spxentry{module}, \hyperpage{93}
+  \item \spxentry{nvector.\_examples\_object\_oriented}
+    \subitem \spxentry{module}, \hyperpage{6}
+  \item \spxentry{nvector.\_images}
+    \subitem \spxentry{module}, \hyperpage{3}
+  \item \spxentry{nvector.\_info\_functional}
+    \subitem \spxentry{module}, \hyperpage{14}
+  \item \spxentry{nvector.\_installation}
+    \subitem \spxentry{module}, \hyperpage{5}
+  \item \spxentry{nvector.\_intro}
+    \subitem \spxentry{module}, \hyperpage{3}
+
+  \indexspace
+  \bigletter O
+  \item \spxentry{on\_great\_circle()}\spxextra{in module nvector.core}, \hyperpage{65}
+  \item \spxentry{on\_great\_circle\_path()}\spxextra{in module nvector.core}, \hyperpage{67}
+
+  \indexspace
+  \bigletter P
+  \item \spxentry{p\_EB\_E2n\_EB\_E()}\spxextra{in module nvector.core}, \hyperpage{59}
+  \item \spxentry{Pvector}\spxextra{class in nvector.objects}, \hyperpage{48}
+
+  \indexspace
+  \bigletter R
+  \item \spxentry{R2xyz()}\spxextra{in module nvector.rotation}, \hyperpage{71}
+  \item \spxentry{R2zyx()}\spxextra{in module nvector.rotation}, \hyperpage{71}
+  \item \spxentry{R\_EL2n\_E()}\spxextra{in module nvector.rotation}, \hyperpage{70}
+  \item \spxentry{R\_EN2n\_E()}\spxextra{in module nvector.rotation}, \hyperpage{70}
+  \item \spxentry{rad()}\spxextra{in module nvector.util}, \hyperpage{76}
+
+  \indexspace
+  \bigletter S
+  \item \spxentry{select\_ellipsoid()}\spxextra{in module nvector.util}, \hyperpage{77}
+
+  \indexspace
+  \bigletter U
+  \item \spxentry{unit()}\spxextra{in module nvector.util}, \hyperpage{78}
+
+  \indexspace
+  \bigletter X
+  \item \spxentry{xyz2R()}\spxextra{in module nvector.rotation}, \hyperpage{72}
+
+  \indexspace
+  \bigletter Z
+  \item \spxentry{zyx2R()}\spxextra{in module nvector.rotation}, \hyperpage{72}
+
+\end{sphinxtheindex}

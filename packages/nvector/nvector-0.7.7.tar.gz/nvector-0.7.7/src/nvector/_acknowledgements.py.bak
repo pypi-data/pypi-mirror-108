@@ -1,0 +1,26 @@
+"""
+The `nvector package <http://pypi.python.org/pypi/nvector/>`_ for
+`Python <https://www.python.org/>`_ was written by Per A. Brodtkorb at
+`FFI (The Norwegian Defence Research Establishment) <http://www.ffi.no/en>`_
+based on the `nvector toolbox <http://www.navlab.net/nvector/#download>`_ for
+`Matlab <http://www.mathworks.com>`_ written by the navigation group at
+`FFI <http://www.ffi.no/en>`_.
+
+Most of the content is based on the article by K. Gade 
+.. only:: man
+    [Gad10]_.
+.. only:: html or latex
+    :cite:`Gade2010Nonsingular`:.
+
+Thus this article should be cited in publications using this page or
+downloaded program code.
+
+.. only:: man
+
+    References
+    ===========
+
+    .. [Gad10] Gade, K, `A Nonsingular Horizontal Position Representation, J. Navigation, Vol. 63, Issue 03, pp 395-417, July 2010.
+               <http://www.navlab.net/Publications/A_Nonsingular_Horizontal_Position_Representation.pdf>`_ 
+
+"""

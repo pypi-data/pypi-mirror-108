@@ -1,0 +1,69 @@
+\indexentry{module@\spxentry{module}!nvector.\_intro@\spxentry{nvector.\_intro}|hyperpage}{3}
+\indexentry{nvector.\_intro@\spxentry{nvector.\_intro}!module@\spxentry{module}|hyperpage}{3}
+\indexentry{module@\spxentry{module}!nvector.\_images@\spxentry{nvector.\_images}|hyperpage}{3}
+\indexentry{nvector.\_images@\spxentry{nvector.\_images}!module@\spxentry{module}|hyperpage}{3}
+\indexentry{module@\spxentry{module}!nvector.\_installation@\spxentry{nvector.\_installation}|hyperpage}{5}
+\indexentry{nvector.\_installation@\spxentry{nvector.\_installation}!module@\spxentry{module}|hyperpage}{5}
+\indexentry{module@\spxentry{module}!nvector.\_examples\_object\_oriented@\spxentry{nvector.\_examples\_object\_oriented}|hyperpage}{6}
+\indexentry{nvector.\_examples\_object\_oriented@\spxentry{nvector.\_examples\_object\_oriented}!module@\spxentry{module}|hyperpage}{6}
+\indexentry{module@\spxentry{module}!nvector.\_info\_functional@\spxentry{nvector.\_info\_functional}|hyperpage}{14}
+\indexentry{nvector.\_info\_functional@\spxentry{nvector.\_info\_functional}!module@\spxentry{module}|hyperpage}{14}
+\indexentry{delta\_E() (in module nvector.objects)@\spxentry{delta\_E()}\spxextra{in module nvector.objects}|hyperpage}{31}
+\indexentry{delta\_N() (in module nvector.objects)@\spxentry{delta\_N()}\spxextra{in module nvector.objects}|hyperpage}{33}
+\indexentry{delta\_L() (in module nvector.objects)@\spxentry{delta\_L()}\spxextra{in module nvector.objects}|hyperpage}{33}
+\indexentry{diff\_positions() (in module nvector.objects)@\spxentry{diff\_positions()}\spxextra{in module nvector.objects}|hyperpage}{33}
+\indexentry{ECEFvector (class in nvector.objects)@\spxentry{ECEFvector}\spxextra{class in nvector.objects}|hyperpage}{35}
+\indexentry{\_\_init\_\_() (ECEFvector method)@\spxentry{\_\_init\_\_()}\spxextra{ECEFvector method}|hyperpage}{36}
+\indexentry{FrameB (class in nvector.objects)@\spxentry{FrameB}\spxextra{class in nvector.objects}|hyperpage}{36}
+\indexentry{\_\_init\_\_() (FrameB method)@\spxentry{\_\_init\_\_()}\spxextra{FrameB method}|hyperpage}{37}
+\indexentry{FrameE (class in nvector.objects)@\spxentry{FrameE}\spxextra{class in nvector.objects}|hyperpage}{38}
+\indexentry{\_\_init\_\_() (FrameE method)@\spxentry{\_\_init\_\_()}\spxextra{FrameE method}|hyperpage}{38}
+\indexentry{FrameN (class in nvector.objects)@\spxentry{FrameN}\spxextra{class in nvector.objects}|hyperpage}{39}
+\indexentry{\_\_init\_\_() (FrameN method)@\spxentry{\_\_init\_\_()}\spxextra{FrameN method}|hyperpage}{40}
+\indexentry{FrameL (class in nvector.objects)@\spxentry{FrameL}\spxextra{class in nvector.objects}|hyperpage}{40}
+\indexentry{\_\_init\_\_() (FrameL method)@\spxentry{\_\_init\_\_()}\spxextra{FrameL method}|hyperpage}{41}
+\indexentry{GeoPath (class in nvector.objects)@\spxentry{GeoPath}\spxextra{class in nvector.objects}|hyperpage}{41}
+\indexentry{\_\_init\_\_() (GeoPath method)@\spxentry{\_\_init\_\_()}\spxextra{GeoPath method}|hyperpage}{44}
+\indexentry{GeoPoint (class in nvector.objects)@\spxentry{GeoPoint}\spxextra{class in nvector.objects}|hyperpage}{45}
+\indexentry{\_\_init\_\_() (GeoPoint method)@\spxentry{\_\_init\_\_()}\spxextra{GeoPoint method}|hyperpage}{46}
+\indexentry{Nvector (class in nvector.objects)@\spxentry{Nvector}\spxextra{class in nvector.objects}|hyperpage}{46}
+\indexentry{\_\_init\_\_() (Nvector method)@\spxentry{\_\_init\_\_()}\spxextra{Nvector method}|hyperpage}{47}
+\indexentry{Pvector (class in nvector.objects)@\spxentry{Pvector}\spxextra{class in nvector.objects}|hyperpage}{48}
+\indexentry{\_\_init\_\_() (Pvector method)@\spxentry{\_\_init\_\_()}\spxextra{Pvector method}|hyperpage}{48}
+\indexentry{closest\_point\_on\_great\_circle() (in module nvector.core)@\spxentry{closest\_point\_on\_great\_circle()}\spxextra{in module nvector.core}|hyperpage}{49}
+\indexentry{cross\_track\_distance() (in module nvector.core)@\spxentry{cross\_track\_distance()}\spxextra{in module nvector.core}|hyperpage}{50}
+\indexentry{euclidean\_distance() (in module nvector.core)@\spxentry{euclidean\_distance()}\spxextra{in module nvector.core}|hyperpage}{51}
+\indexentry{great\_circle\_distance() (in module nvector.core)@\spxentry{great\_circle\_distance()}\spxextra{in module nvector.core}|hyperpage}{53}
+\indexentry{great\_circle\_normal() (in module nvector.core)@\spxentry{great\_circle\_normal()}\spxextra{in module nvector.core}|hyperpage}{54}
+\indexentry{interp\_nvectors() (in module nvector.core)@\spxentry{interp\_nvectors()}\spxextra{in module nvector.core}|hyperpage}{54}
+\indexentry{interpolate() (in module nvector.core)@\spxentry{interpolate()}\spxextra{in module nvector.core}|hyperpage}{55}
+\indexentry{intersect() (in module nvector.core)@\spxentry{intersect()}\spxextra{in module nvector.core}|hyperpage}{55}
+\indexentry{lat\_lon2n\_E() (in module nvector.core)@\spxentry{lat\_lon2n\_E()}\spxextra{in module nvector.core}|hyperpage}{56}
+\indexentry{mean\_horizontal\_position() (in module nvector.core)@\spxentry{mean\_horizontal\_position()}\spxextra{in module nvector.core}|hyperpage}{57}
+\indexentry{n\_E2lat\_lon() (in module nvector.core)@\spxentry{n\_E2lat\_lon()}\spxextra{in module nvector.core}|hyperpage}{58}
+\indexentry{n\_EB\_E2p\_EB\_E() (in module nvector.core)@\spxentry{n\_EB\_E2p\_EB\_E()}\spxextra{in module nvector.core}|hyperpage}{58}
+\indexentry{p\_EB\_E2n\_EB\_E() (in module nvector.core)@\spxentry{p\_EB\_E2n\_EB\_E()}\spxextra{in module nvector.core}|hyperpage}{59}
+\indexentry{n\_EA\_E\_and\_n\_EB\_E2p\_AB\_E() (in module nvector.core)@\spxentry{n\_EA\_E\_and\_n\_EB\_E2p\_AB\_E()}\spxextra{in module nvector.core}|hyperpage}{60}
+\indexentry{n\_EA\_E\_and\_p\_AB\_E2n\_EB\_E() (in module nvector.core)@\spxentry{n\_EA\_E\_and\_p\_AB\_E2n\_EB\_E()}\spxextra{in module nvector.core}|hyperpage}{62}
+\indexentry{n\_EA\_E\_and\_n\_EB\_E2azimuth() (in module nvector.core)@\spxentry{n\_EA\_E\_and\_n\_EB\_E2azimuth()}\spxextra{in module nvector.core}|hyperpage}{64}
+\indexentry{n\_EA\_E\_distance\_and\_azimuth2n\_EB\_E() (in module nvector.core)@\spxentry{n\_EA\_E\_distance\_and\_azimuth2n\_EB\_E()}\spxextra{in module nvector.core}|hyperpage}{64}
+\indexentry{on\_great\_circle() (in module nvector.core)@\spxentry{on\_great\_circle()}\spxextra{in module nvector.core}|hyperpage}{65}
+\indexentry{on\_great\_circle\_path() (in module nvector.core)@\spxentry{on\_great\_circle\_path()}\spxextra{in module nvector.core}|hyperpage}{67}
+\indexentry{E\_rotation() (in module nvector.rotation)@\spxentry{E\_rotation()}\spxextra{in module nvector.rotation}|hyperpage}{69}
+\indexentry{n\_E2R\_EN() (in module nvector.rotation)@\spxentry{n\_E2R\_EN()}\spxextra{in module nvector.rotation}|hyperpage}{69}
+\indexentry{n\_E\_and\_wa2R\_EL() (in module nvector.rotation)@\spxentry{n\_E\_and\_wa2R\_EL()}\spxextra{in module nvector.rotation}|hyperpage}{70}
+\indexentry{R\_EL2n\_E() (in module nvector.rotation)@\spxentry{R\_EL2n\_E()}\spxextra{in module nvector.rotation}|hyperpage}{70}
+\indexentry{R\_EN2n\_E() (in module nvector.rotation)@\spxentry{R\_EN2n\_E()}\spxextra{in module nvector.rotation}|hyperpage}{70}
+\indexentry{R2xyz() (in module nvector.rotation)@\spxentry{R2xyz()}\spxextra{in module nvector.rotation}|hyperpage}{71}
+\indexentry{R2zyx() (in module nvector.rotation)@\spxentry{R2zyx()}\spxextra{in module nvector.rotation}|hyperpage}{71}
+\indexentry{xyz2R() (in module nvector.rotation)@\spxentry{xyz2R()}\spxextra{in module nvector.rotation}|hyperpage}{72}
+\indexentry{zyx2R() (in module nvector.rotation)@\spxentry{zyx2R()}\spxextra{in module nvector.rotation}|hyperpage}{72}
+\indexentry{deg() (in module nvector.util)@\spxentry{deg()}\spxextra{in module nvector.util}|hyperpage}{74}
+\indexentry{mdot() (in module nvector.util)@\spxentry{mdot()}\spxextra{in module nvector.util}|hyperpage}{74}
+\indexentry{nthroot() (in module nvector.util)@\spxentry{nthroot()}\spxextra{in module nvector.util}|hyperpage}{75}
+\indexentry{rad() (in module nvector.util)@\spxentry{rad()}\spxextra{in module nvector.util}|hyperpage}{76}
+\indexentry{get\_ellipsoid() (in module nvector.util)@\spxentry{get\_ellipsoid()}\spxextra{in module nvector.util}|hyperpage}{76}
+\indexentry{select\_ellipsoid() (in module nvector.util)@\spxentry{select\_ellipsoid()}\spxextra{in module nvector.util}|hyperpage}{77}
+\indexentry{unit() (in module nvector.util)@\spxentry{unit()}\spxextra{in module nvector.util}|hyperpage}{78}
+\indexentry{module@\spxentry{module}!nvector.\_acknowledgements@\spxentry{nvector.\_acknowledgements}|hyperpage}{93}
+\indexentry{nvector.\_acknowledgements@\spxentry{nvector.\_acknowledgements}!module@\spxentry{module}|hyperpage}{93}

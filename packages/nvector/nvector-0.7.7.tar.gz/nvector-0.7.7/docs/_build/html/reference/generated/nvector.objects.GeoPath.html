@@ -1,0 +1,510 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>5.1.10. nvector.objects.GeoPath &mdash; Nvector 0.7.7 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="5.1.11. nvector.objects.GeoPoint" href="nvector.objects.GeoPoint.html" />
+    <link rel="prev" title="5.1.9. nvector.objects.FrameL" href="nvector.objects.FrameL.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> Nvector
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.7
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../intro/index.html">1. Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/index.html">2. Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../how-to/index.html">3. How-to guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../topics/index.html">4. Topics guides</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">5. Reference nvector package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../nvector_summary.html">5.1. Object Oriented interface to Geodesic functions</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="nvector.objects.delta_E.html">5.1.1. nvector.objects.delta_E</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nvector.objects.delta_N.html">5.1.2. nvector.objects.delta_N</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nvector.objects.delta_L.html">5.1.3. nvector.objects.delta_L</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nvector.objects.diff_positions.html">5.1.4. nvector.objects.diff_positions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nvector.objects.ECEFvector.html">5.1.5. nvector.objects.ECEFvector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nvector.objects.FrameB.html">5.1.6. nvector.objects.FrameB</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nvector.objects.FrameE.html">5.1.7. nvector.objects.FrameE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nvector.objects.FrameN.html">5.1.8. nvector.objects.FrameN</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nvector.objects.FrameL.html">5.1.9. nvector.objects.FrameL</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">5.1.10. nvector.objects.GeoPath</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nvector.objects.GeoPoint.html">5.1.11. nvector.objects.GeoPoint</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nvector.objects.Nvector.html">5.1.12. nvector.objects.Nvector</a></li>
+<li class="toctree-l3"><a class="reference internal" href="nvector.objects.Pvector.html">5.1.13. nvector.objects.Pvector</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../nvector_summary.html#geodesic-functions">5.2. Geodesic functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../nvector_summary.html#rotation-matrices-and-angles">5.3. Rotation matrices and angles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../nvector_summary.html#utility-functions">5.4. Utility functions</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../appendix/changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../appendix/authors.html">Developers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../appendix/license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../appendix/acknowledgement.html">Acknowledgments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../appendix/index.html">Indices and tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../appendix/zreferences.html">Bibliography</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Nvector</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../index.html"><span class="section-number">5. </span>Reference nvector package</a> &raquo;</li>
+        
+          <li><a href="../nvector_summary.html"><span class="section-number">5.1. </span>Object Oriented interface to Geodesic functions</a> &raquo;</li>
+        
+      <li><span class="section-number">5.1.10. </span>nvector.objects.GeoPath</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/reference/generated/nvector.objects.GeoPath.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="nvector-objects-geopath">
+<h1><span class="section-number">5.1.10. </span>nvector.objects.GeoPath<a class="headerlink" href="#nvector-objects-geopath" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt id="nvector.objects.GeoPath">
+<em class="property">class </em><code class="sig-name descname">GeoPath</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">point_a</span></em>, <em class="sig-param"><span class="n">point_b</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/nvector/objects.html#GeoPath"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nvector.objects.GeoPath" title="Permalink to this definition">¶</a></dt>
+<dd><p>Geographical path between two positions in Frame E</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>point_a, point_b: Nvector, GeoPoint or ECEFvector objects</strong></dt><dd><p>The path is defined by the line between position A and B, decomposed
+in E.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">Notes</p>
+<p>Please note that either position A or B or both might be a vector of points.
+In this case the GeoPath instance represents all the paths between the positions
+of A and the corresponding positions of B.</p>
+<p class="rubric">Examples</p>
+<p><strong>Example 5: “Surface distance”</strong></p>
+<img alt="https://raw.githubusercontent.com/pbrod/Nvector/master/docs/tutorials/images/ex5img.png" src="https://raw.githubusercontent.com/pbrod/Nvector/master/docs/tutorials/images/ex5img.png" />
+<p>Find the surface distance sAB (i.e. great circle distance) between two
+positions A and B. The heights of A and B are ignored, i.e. if they don’t have
+zero height, we seek the distance between the points that are at the surface of
+the Earth, directly above/below A and B. The Euclidean distance (chord length)
+dAB should also be found. Use Earth radius 6371e3 m.
+Compare the results with exact calculations for the WGS-84 ellipsoid.</p>
+<dl>
+<dt>Solution for a sphere:</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">nvector</span> <span class="k">as</span> <span class="nn">nv</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">frame_E</span> <span class="o">=</span> <span class="n">nv</span><span class="o">.</span><span class="n">FrameE</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mf">6371e3</span><span class="p">,</span> <span class="n">f</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">positionA</span> <span class="o">=</span> <span class="n">frame_E</span><span class="o">.</span><span class="n">GeoPoint</span><span class="p">(</span><span class="n">latitude</span><span class="o">=</span><span class="mi">88</span><span class="p">,</span> <span class="n">longitude</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">degrees</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">positionB</span> <span class="o">=</span> <span class="n">frame_E</span><span class="o">.</span><span class="n">GeoPoint</span><span class="p">(</span><span class="n">latitude</span><span class="o">=</span><span class="mi">89</span><span class="p">,</span> <span class="n">longitude</span><span class="o">=-</span><span class="mi">170</span><span class="p">,</span> <span class="n">degrees</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">s_AB</span><span class="p">,</span> <span class="n">azia</span><span class="p">,</span> <span class="n">azib</span> <span class="o">=</span> <span class="n">positionA</span><span class="o">.</span><span class="n">distance_and_azimuth</span><span class="p">(</span><span class="n">positionB</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">p_AB_E</span> <span class="o">=</span> <span class="n">positionB</span><span class="o">.</span><span class="n">to_ecef_vector</span><span class="p">()</span> <span class="o">-</span> <span class="n">positionA</span><span class="o">.</span><span class="n">to_ecef_vector</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">d_AB</span> <span class="o">=</span> <span class="n">p_AB_E</span><span class="o">.</span><span class="n">length</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">msg</span> <span class="o">=</span> <span class="s1">&#39;Ex5: Great circle and Euclidean distance = </span><span class="si">{}</span><span class="s1">&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">msg</span> <span class="o">=</span> <span class="n">msg</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{:5.2f}</span><span class="s1"> km, </span><span class="si">{:5.2f}</span><span class="s1"> km&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">msg</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">s_AB</span> <span class="o">/</span> <span class="mi">1000</span><span class="p">,</span> <span class="n">d_AB</span> <span class="o">/</span> <span class="mi">1000</span><span class="p">)</span>
+<span class="go">&#39;Ex5: Great circle and Euclidean distance = 332.46 km, 332.42 km&#39;</span>
+</pre></div>
+</div>
+</dd>
+<dt>Alternative sphere solution:</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">path</span> <span class="o">=</span> <span class="n">nv</span><span class="o">.</span><span class="n">GeoPath</span><span class="p">(</span><span class="n">positionA</span><span class="p">,</span> <span class="n">positionB</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">s_AB2</span> <span class="o">=</span> <span class="n">path</span><span class="o">.</span><span class="n">track_distance</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;greatcircle&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">d_AB2</span> <span class="o">=</span> <span class="n">path</span><span class="o">.</span><span class="n">track_distance</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="s1">&#39;euclidean&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">msg</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">s_AB2</span> <span class="o">/</span> <span class="mi">1000</span><span class="p">,</span> <span class="n">d_AB2</span> <span class="o">/</span> <span class="mi">1000</span><span class="p">)</span>
+<span class="go">&#39;Ex5: Great circle and Euclidean distance = 332.46 km, 332.42 km&#39;</span>
+</pre></div>
+</div>
+</dd>
+<dt>Exact solution for the WGS84 ellipsoid:</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">wgs84</span> <span class="o">=</span> <span class="n">nv</span><span class="o">.</span><span class="n">FrameE</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;WGS84&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">point1</span> <span class="o">=</span> <span class="n">wgs84</span><span class="o">.</span><span class="n">GeoPoint</span><span class="p">(</span><span class="n">latitude</span><span class="o">=</span><span class="mi">88</span><span class="p">,</span> <span class="n">longitude</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">degrees</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">point2</span> <span class="o">=</span> <span class="n">wgs84</span><span class="o">.</span><span class="n">GeoPoint</span><span class="p">(</span><span class="n">latitude</span><span class="o">=</span><span class="mi">89</span><span class="p">,</span> <span class="n">longitude</span><span class="o">=-</span><span class="mi">170</span><span class="p">,</span> <span class="n">degrees</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">s_12</span><span class="p">,</span> <span class="n">azi1</span><span class="p">,</span> <span class="n">azi2</span> <span class="o">=</span> <span class="n">point1</span><span class="o">.</span><span class="n">distance_and_azimuth</span><span class="p">(</span><span class="n">point2</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">p_12_E</span> <span class="o">=</span> <span class="n">point2</span><span class="o">.</span><span class="n">to_ecef_vector</span><span class="p">()</span> <span class="o">-</span> <span class="n">point1</span><span class="o">.</span><span class="n">to_ecef_vector</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">d_12</span> <span class="o">=</span> <span class="n">p_12_E</span><span class="o">.</span><span class="n">length</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">msg</span> <span class="o">=</span> <span class="s1">&#39;Ellipsoidal and Euclidean distance = </span><span class="si">{:5.2f}</span><span class="s1"> km, </span><span class="si">{:5.2f}</span><span class="s1"> km&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">msg</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">s_12</span> <span class="o">/</span> <span class="mi">1000</span><span class="p">,</span> <span class="n">d_12</span> <span class="o">/</span> <span class="mi">1000</span><span class="p">)</span>
+<span class="go">&#39;Ellipsoidal and Euclidean distance = 333.95 km, 333.91 km&#39;</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+<p><strong>Example 6 “Interpolated position”</strong></p>
+<img alt="https://raw.githubusercontent.com/pbrod/Nvector/master/docs/tutorials/images/ex6img.png" src="https://raw.githubusercontent.com/pbrod/Nvector/master/docs/tutorials/images/ex6img.png" />
+<p>Given the position of B at time t0 and t1, n_EB_E(t0) and n_EB_E(t1).</p>
+<p>Find an interpolated position at time ti, n_EB_E(ti). All positions are given
+as n-vectors.</p>
+<dl>
+<dt>Solution:</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">nvector</span> <span class="k">as</span> <span class="nn">nv</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">wgs84</span> <span class="o">=</span> <span class="n">nv</span><span class="o">.</span><span class="n">FrameE</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;WGS84&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">n_EB_E_t0</span> <span class="o">=</span> <span class="n">wgs84</span><span class="o">.</span><span class="n">GeoPoint</span><span class="p">(</span><span class="mi">89</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">degrees</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">to_nvector</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">n_EB_E_t1</span> <span class="o">=</span> <span class="n">wgs84</span><span class="o">.</span><span class="n">GeoPoint</span><span class="p">(</span><span class="mi">89</span><span class="p">,</span> <span class="mi">180</span><span class="p">,</span> <span class="n">degrees</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">to_nvector</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">path</span> <span class="o">=</span> <span class="n">nv</span><span class="o">.</span><span class="n">GeoPath</span><span class="p">(</span><span class="n">n_EB_E_t0</span><span class="p">,</span> <span class="n">n_EB_E_t1</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">t0</span> <span class="o">=</span> <span class="mf">10.</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">t1</span> <span class="o">=</span> <span class="mf">20.</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ti</span> <span class="o">=</span> <span class="mf">16.</span>  <span class="c1"># time of interpolation</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">ti_n</span> <span class="o">=</span> <span class="p">(</span><span class="n">ti</span> <span class="o">-</span> <span class="n">t0</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">t1</span> <span class="o">-</span> <span class="n">t0</span><span class="p">)</span> <span class="c1"># normalized time of interpolation</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">g_EB_E_ti</span> <span class="o">=</span> <span class="n">path</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">ti_n</span><span class="p">)</span><span class="o">.</span><span class="n">to_geo_point</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">lat_ti</span><span class="p">,</span> <span class="n">lon_ti</span><span class="p">,</span> <span class="n">z_ti</span> <span class="o">=</span> <span class="n">g_EB_E_ti</span><span class="o">.</span><span class="n">latlon_deg</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">msg</span> <span class="o">=</span> <span class="s1">&#39;Ex6, Interpolated position: lat, lon = </span><span class="si">{:2.1f}</span><span class="s1"> deg, </span><span class="si">{:2.1f}</span><span class="s1"> deg&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">msg</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">lat_ti</span><span class="p">,</span> <span class="n">lon_ti</span><span class="p">)</span>
+<span class="go">&#39;Ex6, Interpolated position: lat, lon = 89.8 deg, 180.0 deg&#39;</span>
+</pre></div>
+</div>
+</dd>
+<dt>Vectorized solution:</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">t</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">])</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">nvectors</span> <span class="o">=</span> <span class="n">wgs84</span><span class="o">.</span><span class="n">GeoPoint</span><span class="p">([</span><span class="mi">89</span><span class="p">,</span> <span class="mi">89</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">180</span><span class="p">],</span> <span class="n">degrees</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">to_nvector</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">nvectors_i</span> <span class="o">=</span> <span class="n">nvectors</span><span class="o">.</span><span class="n">interpolate</span><span class="p">(</span><span class="n">ti</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">kind</span><span class="o">=</span><span class="s1">&#39;linear&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">lati</span><span class="p">,</span> <span class="n">loni</span><span class="p">,</span> <span class="n">zi</span> <span class="o">=</span> <span class="n">nvectors_i</span><span class="o">.</span><span class="n">to_geo_point</span><span class="p">()</span><span class="o">.</span><span class="n">latlon_deg</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">msg</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">lat_ti</span><span class="p">,</span> <span class="n">lon_ti</span><span class="p">)</span>
+<span class="go">&#39;Ex6, Interpolated position: lat, lon = 89.8 deg, 180.0 deg&#39;</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+<p><strong>Example 9: “Intersection of two paths”</strong></p>
+<img alt="https://raw.githubusercontent.com/pbrod/Nvector/master/docs/tutorials/images/ex9img.png" src="https://raw.githubusercontent.com/pbrod/Nvector/master/docs/tutorials/images/ex9img.png" />
+<p>Define a path from two given positions (at the surface of a spherical Earth),
+as the great circle that goes through the two points.</p>
+<p>Path A is given by A1 and A2, while path B is given by B1 and B2.</p>
+<p>Find the position C where the two great circles intersect.</p>
+<dl>
+<dt>Solution:</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">nvector</span> <span class="k">as</span> <span class="nn">nv</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pointA1</span> <span class="o">=</span> <span class="n">nv</span><span class="o">.</span><span class="n">GeoPoint</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="n">degrees</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pointA2</span> <span class="o">=</span> <span class="n">nv</span><span class="o">.</span><span class="n">GeoPoint</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">40</span><span class="p">,</span> <span class="n">degrees</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pointB1</span> <span class="o">=</span> <span class="n">nv</span><span class="o">.</span><span class="n">GeoPoint</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">60</span><span class="p">,</span> <span class="n">degrees</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pointB2</span> <span class="o">=</span> <span class="n">nv</span><span class="o">.</span><span class="n">GeoPoint</span><span class="p">(</span><span class="mi">70</span><span class="p">,</span> <span class="mi">80</span><span class="p">,</span> <span class="n">degrees</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pathA</span> <span class="o">=</span> <span class="n">nv</span><span class="o">.</span><span class="n">GeoPath</span><span class="p">(</span><span class="n">pointA1</span><span class="p">,</span> <span class="n">pointA2</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pathB</span> <span class="o">=</span> <span class="n">nv</span><span class="o">.</span><span class="n">GeoPath</span><span class="p">(</span><span class="n">pointB1</span><span class="p">,</span> <span class="n">pointB2</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pointC</span> <span class="o">=</span> <span class="n">pathA</span><span class="o">.</span><span class="n">intersect</span><span class="p">(</span><span class="n">pathB</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pointC</span> <span class="o">=</span> <span class="n">pointC</span><span class="o">.</span><span class="n">to_geo_point</span><span class="p">()</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">lat</span><span class="p">,</span> <span class="n">lon</span> <span class="o">=</span> <span class="n">pointC</span><span class="o">.</span><span class="n">latitude_deg</span><span class="p">,</span> <span class="n">pointC</span><span class="o">.</span><span class="n">longitude_deg</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">msg</span> <span class="o">=</span> <span class="s1">&#39;Ex9, Intersection: lat, lon = </span><span class="si">{:4.4f}</span><span class="s1">, </span><span class="si">{:4.4f}</span><span class="s1"> deg&#39;</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">msg</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">lat</span><span class="p">,</span> <span class="n">lon</span><span class="p">)</span>
+<span class="go">&#39;Ex9, Intersection: lat, lon = 40.3186, 55.9019 deg&#39;</span>
+</pre></div>
+</div>
+</dd>
+<dt>Check that PointC is not between A1 and A2 or B1 and B2:</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pathA</span><span class="o">.</span><span class="n">on_path</span><span class="p">(</span><span class="n">pointC</span><span class="p">)</span>
+<span class="go">False</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pathB</span><span class="o">.</span><span class="n">on_path</span><span class="p">(</span><span class="n">pointC</span><span class="p">)</span>
+<span class="go">False</span>
+</pre></div>
+</div>
+</dd>
+<dt>Check that PointC is on the great circle going through path A and path B:</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pathA</span><span class="o">.</span><span class="n">on_great_circle</span><span class="p">(</span><span class="n">pointC</span><span class="p">)</span>
+<span class="go">True</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pathB</span><span class="o">.</span><span class="n">on_great_circle</span><span class="p">(</span><span class="n">pointC</span><span class="p">)</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+<p><strong>Example 10: “Cross track distance”</strong></p>
+<img alt="https://raw.githubusercontent.com/pbrod/Nvector/master/docs/tutorials/images/ex10img.png" src="https://raw.githubusercontent.com/pbrod/Nvector/master/docs/tutorials/images/ex10img.png" />
+<p>Path A is given by the two positions A1 and A2 (similar to the previous
+example).</p>
+<p>Find the cross track distance sxt between the path A (i.e. the great circle
+through A1 and A2) and the position B (i.e. the shortest distance at the
+surface, between the great circle and B).</p>
+<p>Also find the Euclidean distance dxt between B and the plane defined by the
+great circle. Use Earth radius 6371e3.</p>
+<p>Finally, find the intersection point on the great circle and determine if it is
+between position A1 and A2.</p>
+<dl>
+<dt>Solution:</dt><dd><div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="kn">import</span> <span class="nn">nvector</span> <span class="k">as</span> <span class="nn">nv</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">frame</span> <span class="o">=</span> <span class="n">nv</span><span class="o">.</span><span class="n">FrameE</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="mf">6371e3</span><span class="p">,</span> <span class="n">f</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pointA1</span> <span class="o">=</span> <span class="n">frame</span><span class="o">.</span><span class="n">GeoPoint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">degrees</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pointA2</span> <span class="o">=</span> <span class="n">frame</span><span class="o">.</span><span class="n">GeoPoint</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">degrees</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pointB</span> <span class="o">=</span> <span class="n">frame</span><span class="o">.</span><span class="n">GeoPoint</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mf">0.1</span><span class="p">,</span> <span class="n">degrees</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">pathA</span> <span class="o">=</span> <span class="n">nv</span><span class="o">.</span><span class="n">GeoPath</span><span class="p">(</span><span class="n">pointA1</span><span class="p">,</span> <span class="n">pointA2</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">s_xt</span> <span class="o">=</span> <span class="n">pathA</span><span class="o">.</span><span class="n">cross_track_distance</span><span class="p">(</span><span class="n">pointB</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;greatcircle&#39;</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">d_xt</span> <span class="o">=</span> <span class="n">pathA</span><span class="o">.</span><span class="n">cross_track_distance</span><span class="p">(</span><span class="n">pointB</span><span class="p">,</span> <span class="n">method</span><span class="o">=</span><span class="s1">&#39;euclidean&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">val_txt</span> <span class="o">=</span> <span class="s1">&#39;</span><span class="si">{:4.2f}</span><span class="s1"> km, </span><span class="si">{:4.2f}</span><span class="s1"> km&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">s_xt</span><span class="o">/</span><span class="mi">1000</span><span class="p">,</span> <span class="n">d_xt</span><span class="o">/</span><span class="mi">1000</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="s1">&#39;Ex10: Cross track distance: s_xt, d_xt = </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">val_txt</span><span class="p">)</span>
+<span class="go">&#39;Ex10: Cross track distance: s_xt, d_xt = 11.12 km, 11.12 km&#39;</span>
+</pre></div>
+</div>
+<div class="doctest highlight-default notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">pointC</span> <span class="o">=</span> <span class="n">pathA</span><span class="o">.</span><span class="n">closest_point_on_great_circle</span><span class="p">(</span><span class="n">pointB</span><span class="p">)</span>
+<span class="gp">&gt;&gt;&gt; </span><span class="n">np</span><span class="o">.</span><span class="n">allclose</span><span class="p">(</span><span class="n">pathA</span><span class="o">.</span><span class="n">on_path</span><span class="p">(</span><span class="n">pointC</span><span class="p">),</span> <span class="kc">True</span><span class="p">)</span>
+<span class="go">True</span>
+</pre></div>
+</div>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="nvector.objects.GeoPath.__init__">
+<code class="sig-name descname">__init__</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">point_a</span></em>, <em class="sig-param"><span class="n">point_b</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/nvector/objects.html#GeoPath.__init__"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#nvector.objects.GeoPath.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
+</dd></dl>
+
+<p class="rubric">Methods</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><a class="reference internal" href="#nvector.objects.GeoPath.__init__" title="nvector.objects.GeoPath.__init__"><code class="xref py py-obj docutils literal notranslate"><span class="pre">__init__</span></code></a>(point_a, point_b)</p></td>
+<td><p>Initialize self.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">closest_point_on_great_circle</span></code>(point)</p></td>
+<td><p>Returns closest point on great circle path to the point.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">closest_point_on_path</span></code>(point)</p></td>
+<td><p>Returns closest point on great circle path segment to the point.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">cross_track_distance</span></code>(point[, method, radius])</p></td>
+<td><p>Returns cross track distance from path to point.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">ecef_vectors</span></code>()</p></td>
+<td><p>Returns point_a and point_b as  ECEF-vectors</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">geo_points</span></code>()</p></td>
+<td><p>Returns point_a and point_b as geo-points</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">interpolate</span></code>(ti)</p></td>
+<td><p>Returns the interpolated point along the path</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">intersect</span></code>(path)</p></td>
+<td><p>Returns the intersection(s) between the great circles of the two paths</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">intersection</span></code>(**kwds)</p></td>
+<td><p><cite>intersection</cite> is deprecated, use <cite>intersect</cite> instead!</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">nvector_normals</span></code>()</p></td>
+<td><p>Returns nvector normals for position a and b</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">nvectors</span></code>()</p></td>
+<td><p>Returns point_a and point_b as n-vectors</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">on_great_circle</span></code>(point[, atol])</p></td>
+<td><p>Returns True if point is on the great circle within a tolerance.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">on_path</span></code>(point[, method, rtol, atol])</p></td>
+<td><p>Returns True if point is on the path between A and B witin a tolerance.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">track_distance</span></code>([method, radius])</p></td>
+<td><p>Returns the path distance computed at the average height.</p></td>
+</tr>
+</tbody>
+</table>
+<p class="rubric">Attributes</p>
+<table class="longtable docutils align-default">
+<colgroup>
+<col style="width: 10%" />
+<col style="width: 90%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">positionA</span></code></p></td>
+<td><p>positionA is deprecated, use point_a instead!</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">positionB</span></code></p></td>
+<td><p>positionB is deprecated, use point_b instead!</p></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="nvector.objects.GeoPoint.html" class="btn btn-neutral float-right" title="5.1.11. nvector.objects.GeoPoint" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="nvector.objects.FrameL.html" class="btn btn-neutral float-left" title="5.1.9. nvector.objects.FrameL" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2015-2021, Norwegian Defence Research Establishment (FFI).
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

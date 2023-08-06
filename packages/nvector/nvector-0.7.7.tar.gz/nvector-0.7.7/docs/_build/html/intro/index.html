@@ -1,0 +1,282 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>1. Introduction &mdash; Nvector 0.7.7 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="2. Tutorials" href="../tutorials/index.html" />
+    <link rel="prev" title="Welcome to the nvector’s documentation!" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> Nvector
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.7
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">1. Introduction</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-nvector._intro">1.1. What is nvector?</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#description">1.1.1. Description</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#how-the-documentation-is-organized">1.2. How the documentation is organized</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/index.html">2. Tutorials</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../how-to/index.html">3. How-to guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../topics/index.html">4. Topics guides</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../reference/index.html">5. Reference nvector package</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/changelog.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/authors.html">Developers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/license.html">License</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/acknowledgement.html">Acknowledgments</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/index.html">Indices and tables</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../appendix/zreferences.html">Bibliography</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Nvector</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li><span class="section-number">1. </span>Introduction</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/intro/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="introduction">
+<span id="id1"></span><h1><span class="section-number">1. </span>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-nvector._intro">
+<span id="what-is-nvector"></span><h2><span class="section-number">1.1. </span>What is nvector?<a class="headerlink" href="#module-nvector._intro" title="Permalink to this headline">¶</a></h2>
+<p><a class="reference external" href="https://pypi.python.org/pypi/nvector/"><img alt="pkg_img" src="https://badge.fury.io/py/nvector.png" /></a> <a class="reference external" href="https://travis-ci.com/pbrod/Nvector"><img alt="tests_img" src="https://travis-ci.com/pbrod/Nvector.svg?branch=master" /></a> <a class="reference external" href="http://Nvector.readthedocs.org/en/stable/"><img alt="docs_img" src="https://readthedocs.org/projects/pip/badge/?version=stable" /></a> <a class="reference external" href="https://codeclimate.com/github/pbrod/Nvector/maintainability"><img alt="Maintainability" src="https://api.codeclimate.com/v1/badges/c04214bef610b25906fe/maintainability" /></a> <a class="reference external" href="https://codecov.io/gh/pbrod/nvector"><img alt="coverage_img" src="https://codecov.io/gh/pbrod/nvector/branch/master/graph/badge.svg" /></a> <a class="reference external" href="https://github.com/pbrod/nvector"><img alt="versions_img" src="https://img.shields.io/pypi/pyversions/Nvector.svg" /></a> <img alt="PyPI - Downloads" src="https://img.shields.io/pypi/dm/nvector.svg" /></p>
+<p>The nvector library is a suite of tools written in Python to solve geographical position
+calculations. Currently the following operations are implemented:</p>
+<ul class="simple">
+<li><p>Calculate the surface distance between two geographical positions.</p></li>
+<li><p>Convert positions given in one reference frame into another reference frame.</p></li>
+<li><p>Find the destination point given start point, azimuth/bearing and distance.</p></li>
+<li><p>Find the mean position (center/midpoint) of several geographical positions.</p></li>
+<li><p>Find the intersection between two paths.</p></li>
+<li><p>Find the cross track distance between a path and a position.</p></li>
+</ul>
+<p>Using n-vector, the calculations become simple and non-singular. 
+Full accuracy is achieved for any global position (and for any distance).</p>
+<div class="section" id="description">
+<h3><span class="section-number">1.1.1. </span>Description<a class="headerlink" href="#description" title="Permalink to this headline">¶</a></h3>
+<p>In this library, we represent position with an “n-vector”,  which
+is the normal vector to the Earth model (the same reference ellipsoid that is
+used for latitude and longitude). When using n-vector, all Earth-positions are
+treated equally, and there is no need to worry about singularities or
+discontinuities. An additional benefit with using n-vector is that many
+position calculations can be solved with simple vector algebra
+(e.g. dot product and cross product).</p>
+<p>Converting between n-vector and latitude/longitude is unambiguous and easy
+using the provided functions.</p>
+<p>n_E is n-vector in the program code, while in documents we use nE. E denotes
+an Earth-fixed coordinate frame, and it indicates that the three components of
+n-vector are along the three axes of E. More details about the notation and
+reference frames can be found in the <a class="reference external" href="https://www.navlab.net/nvector/#vector_symbols">documentation.</a></p>
+</div>
+<span class="target" id="module-nvector._images"></span></div>
+<div class="section" id="how-the-documentation-is-organized">
+<h2><span class="section-number">1.2. </span>How the documentation is organized<a class="headerlink" href="#how-the-documentation-is-organized" title="Permalink to this headline">¶</a></h2>
+<p>Nvector has a lot of documentation. A high-level overview of how it’s organized
+will help you know where to look for certain things:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../tutorials/index.html"><span class="doc">Tutorials</span></a> take you by the hand through a series of
+typical usecases on how to use it. Start here if you’re new to nvector.</p></li>
+<li><p><a class="reference internal" href="../topics/index.html"><span class="doc">Topic guides</span></a> discuss key topics and concepts at a
+fairly high level and provide useful background information and explanation.</p></li>
+<li><p><a class="reference internal" href="../reference/index.html"><span class="doc">Reference guides</span></a> contain technical reference for APIs and
+other aspects of nvector’s machinery. They describe how it works and how to
+use it but assume that you have a basic understanding of key concepts.</p></li>
+<li><p><a class="reference internal" href="../how-to/index.html"><span class="doc">How-to guides</span></a> are recipes. They guide you through the
+steps involved in addressing key problems and use-cases. They are more
+advanced than tutorials and assume some knowledge of how nvector works.</p></li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="../tutorials/index.html" class="btn btn-neutral float-right" title="2. Tutorials" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../index.html" class="btn btn-neutral float-left" title="Welcome to the nvector’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2015-2021, Norwegian Defence Research Establishment (FFI).
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
