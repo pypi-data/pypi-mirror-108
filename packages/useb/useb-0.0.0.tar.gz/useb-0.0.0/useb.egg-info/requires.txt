@@ -1,0 +1,2 @@
+sentence-transformers>=1.2.0
+pytrec_eval
