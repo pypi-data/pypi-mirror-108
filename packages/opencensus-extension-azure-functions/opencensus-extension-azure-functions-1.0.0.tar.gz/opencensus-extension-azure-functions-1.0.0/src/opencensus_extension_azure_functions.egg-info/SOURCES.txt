@@ -1,0 +1,13 @@
+README.rst
+setup.cfg
+setup.py
+src/opencensus/__init__.py
+src/opencensus/extension/__init__.py
+src/opencensus/extension/azure/functions.py
+src/opencensus/extension/azure/version.py
+src/opencensus_extension_azure_functions.egg-info/PKG-INFO
+src/opencensus_extension_azure_functions.egg-info/SOURCES.txt
+src/opencensus_extension_azure_functions.egg-info/dependency_links.txt
+src/opencensus_extension_azure_functions.egg-info/not-zip-safe
+src/opencensus_extension_azure_functions.egg-info/requires.txt
+src/opencensus_extension_azure_functions.egg-info/top_level.txt
