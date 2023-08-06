@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: leetcode-helper
+Version: 0.1.2
+Summary: Some utils for debug leetcode locally
+Home-page: https://github.com/Gongzq5/leetcode-helper/
+Author: Gongzq
+Author-email: gongzq5@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: prettytable
+Requires-Dist: numpy
+Requires-Dist: matplotlib
+Requires-Dist: networkx
+
+# Leetcode helper
+
+Use some tools to help build/run/debug leetcode problems locally.
+
+Including,
+
+* from array to tree/linkedlist
+* print linkedlist
+* draw a tree
+* transform a tree to string/array
+* batch test and output test result
+...
+
+See [examples.ipynb](https://github.com/Gongzq5/leetcode-helper/blob/main/examples.ipynb) for details.
+
