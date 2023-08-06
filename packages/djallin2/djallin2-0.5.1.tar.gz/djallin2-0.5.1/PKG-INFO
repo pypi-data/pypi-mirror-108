@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: djallin2
+Version: 0.5.1
+Summary: Twitch noisemaker
+Home-page: https://github.com/vilhelmen/djallin2
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft :: Windows
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+
+# TODO:
+1. This
+1. windows builds (automated??)
+1. non-playsound osx
+1. HTTP command receiver (lioran!)
+1. custom hook code - lioran example? obs websocket?
+1. more flexible command triggers (regex??)
+1. bundle audio bleeps, learn how to ref manifest files
+1. verify file exists before queueing sound?
+
+
