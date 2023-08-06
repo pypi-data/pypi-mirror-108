@@ -1,0 +1,16 @@
+LICENSE.txt
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/com/__init__.py
+src/com.dvsnier.config.egg-info/PKG-INFO
+src/com.dvsnier.config.egg-info/SOURCES.txt
+src/com.dvsnier.config.egg-info/dependency_links.txt
+src/com.dvsnier.config.egg-info/not-zip-safe
+src/com.dvsnier.config.egg-info/requires.txt
+src/com.dvsnier.config.egg-info/top_level.txt
+src/com/dvsnier/__init__.py
+src/com/dvsnier/config/__init__.py
+src/com/dvsnier/config/common_conf.py

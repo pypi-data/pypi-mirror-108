@@ -1,0 +1,9 @@
+com.dvsnier.directory>=0.0.1.dev3
+configparser
+logging
+
+[dev]
+check-manifest
+
+[test]
+coverage
