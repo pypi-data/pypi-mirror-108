@@ -1,0 +1,70 @@
+Metadata-Version: 2.1
+Name: pdfmap
+Version: 0.2.1
+Summary: Turning PDFs into WordMaps and WordMazes
+Home-page: https://github.com/elint-tech/pdfmap/
+Author: elint-tech
+Author-email: contato@elint.com.br
+License: proprietary
+Download-URL: https://github.com/elint-tech/pdfmap/dist/pdfmap-0.2.1.tar.gz
+Keywords: pdfmap,pdf,wordmap
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: Intended Audience :: Other Audience
+Classifier: Topic :: Software Development
+Classifier: Topic :: Utilities
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: dataclassy (==0.9.*)
+Requires-Dist: pdfminer (==20191125)
+Requires-Dist: wordmaze (==0.3.*)
+
+# PDFMap [![PyPI version fury.io](https://img.shields.io/pypi/v/pdfmap?color=green)](https://github.com/elint-tech/pdfmap) [![PyPI pyversions](https://img.shields.io/pypi/pyversions/pdfmap)](https://github.com/elint-tech/pdfmap)
+
+## Installation
+
+We recommend using the most up-to-date version of `pip` and `wheel` packages, so first run:
+
+```bash
+pip install -U pip wheel
+```
+
+Then install PDFMap with:
+
+```bash
+pip install pdfmap
+```
+
+## Usage
+
+Simple usage can be achieved with:
+
+```python
+from pdfmap import PDFWordMap
+
+pdfwm = PDFWordMap()
+print(pdfwm.parse_pdf('folder/pdfname.pdf'))
+```
+
+You can also extract [`wordmaze.WordMaze`](https://github.com/elint-tech/wordmaze) instances by using `PDFMaze`:
+
+```python
+from pdfmap import PDFMaze
+
+pdfmaze = PDFMaze()
+print(pdfmaze.parse_pdf('folder/pdfname.pdf'))
+```
+
+For other examples, check out [our example script](example.py)
+
+
