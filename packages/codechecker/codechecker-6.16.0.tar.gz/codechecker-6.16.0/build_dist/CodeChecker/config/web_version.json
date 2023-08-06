@@ -1,0 +1,13 @@
+{
+    "git_describe": {
+        "dirty": "6.16",
+        "tag": "6.16"
+    },
+    "git_hash": "8880695af939838b2e1e16b018c51ed66c6a5366",
+    "package_build_date": "2021-06-04T10:38",
+    "version": {
+        "major": "6",
+        "minor": "16",
+        "revision": "0"
+    }
+}
