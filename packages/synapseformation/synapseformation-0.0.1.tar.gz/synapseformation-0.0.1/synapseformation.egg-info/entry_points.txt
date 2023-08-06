@@ -1,0 +1,3 @@
+[console_scripts]
+synapseformation = synapseformation.__main__:cli
+
