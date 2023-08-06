@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: emphub-cli
+Version: 0.0.4
+Summary: CLI tools to interface with emphub
+Home-page: https://gitlab.cern.ch/dmonk/emphub-cli
+Author: David Monk
+Author-email: david.gabriel.monk@cern.ch
+License: UNKNOWN
+Project-URL: Bug Tracker, https://gitlab.cern.ch/dmonk/emphub-cli/-/issues
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# emphub-cli
+
+CLI tools to interface with emphub
+
