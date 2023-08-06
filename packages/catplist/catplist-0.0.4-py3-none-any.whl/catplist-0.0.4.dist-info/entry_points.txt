@@ -1,0 +1,4 @@
+[console_scripts]
+catplist = catplist.catplist:catplist
+plistcat = catplist.catplist:catplist
+
