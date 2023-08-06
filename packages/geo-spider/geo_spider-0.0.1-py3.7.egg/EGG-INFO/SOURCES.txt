@@ -1,0 +1,9 @@
+README.md
+geo_spider.py
+setup.py
+geo_spider.egg-info/PKG-INFO
+geo_spider.egg-info/SOURCES.txt
+geo_spider.egg-info/dependency_links.txt
+geo_spider.egg-info/entry_points.txt
+geo_spider.egg-info/requires.txt
+geo_spider.egg-info/top_level.txt
