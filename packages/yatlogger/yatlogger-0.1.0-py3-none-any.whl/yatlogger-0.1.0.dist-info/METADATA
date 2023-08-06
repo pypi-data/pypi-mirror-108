@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: yatlogger
+Version: 0.1.0
+Summary: Yet another telegram logger
+Author: cyd3r
+Author-email: cyd3rhacker@gmail.com
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: python-telegram-bot (>=13.6,<14.0)
