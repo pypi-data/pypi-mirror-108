@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: multiple_wave
+Version: 0.0.1
+Summary: A Covid model
+Home-page: UNKNOWN
+Author: Krishna Harsha
+Author-email: <khkrishnaharsha123@gmail.com>
+License: UNKNOWN
+Description: This is a simple multiple wave simulation of COVID-19 active cases using sum of Gaussian waves as an approximation
+Keywords: python,covid,multiple waves,second wave,gaussian
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Microsoft :: Windows
