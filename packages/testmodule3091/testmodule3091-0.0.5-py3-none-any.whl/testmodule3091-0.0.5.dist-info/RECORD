@@ -1,0 +1,12 @@
+testmodule3091/__init__.py,sha256=DTDNtuxx98BSs4IQ9QG5mjg39lZr5_JPcR6mCe7kzTE,109
+testmodule3091/add.py,sha256=EpeFNW85R5KLCyDXYuWcJ2XEAWNRV_lwZyrDJgFrlFE,89
+testmodule3091/divide.py,sha256=YlNRRYIqqiJ7MXjTCpSPAm79WZdmmnrBS-1Q0ka6Ufs,65
+testmodule3091/multiply.py,sha256=rNsINRohT1GdxH8Rna23nUmC55FWvp57HfKFaDCioYA,69
+testmodule3091/substract.py,sha256=a3pTZlO57N9P4OTqOJaPpuVnNuCrB8QB2eFciFn5gnA,71
+testmodule3091/extras/__init__.py,sha256=881tWUu7p3l2VBoVgO-vwGVQCjNp-uuJFxWRs7Nqi6w,57
+testmodule3091/extras/divide.py,sha256=YlNRRYIqqiJ7MXjTCpSPAm79WZdmmnrBS-1Q0ka6Ufs,65
+testmodule3091/extras/multiply.py,sha256=rNsINRohT1GdxH8Rna23nUmC55FWvp57HfKFaDCioYA,69
+testmodule3091-0.0.5.dist-info/METADATA,sha256=uYEEWG-ahxq8RJRXtUULwur2r4rgnQRRs2U30jp06vg,549
+testmodule3091-0.0.5.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+testmodule3091-0.0.5.dist-info/top_level.txt,sha256=mWmoN8PZPPh61WJ1JsQWJQn351A8GJaViG4iSgZpbzc,15
+testmodule3091-0.0.5.dist-info/RECORD,,
