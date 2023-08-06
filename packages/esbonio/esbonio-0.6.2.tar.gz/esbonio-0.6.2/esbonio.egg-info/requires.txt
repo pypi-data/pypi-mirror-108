@@ -1,0 +1,13 @@
+appdirs
+sphinx
+pygls>0.10.0
+
+[dev]
+black
+flake8
+pre-commit
+pytest
+pytest-cov
+tox
+
+[lsp]
