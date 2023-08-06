@@ -1,0 +1,25 @@
+version = 1
+disable_existing_loggers=false
+
+[formatters]
+[formatters.standard]
+format="%(asctime)s - %(name)s - %(levelname)s: %(message)s"
+
+[handlers]
+[handlers.console]
+class="logging.StreamHandler"
+level="INFO"
+formatter="standard"
+stream="ext://sys.stdout"
+
+[handlers.file]
+class="logging.handlers.RotatingFileHandler"
+level="WARNING"
+formatter="standard"
+filename="statlinq_bq.log"
+maxBytes=2097152  # 2MB
+backupCount=5
+
+[root]
+level="INFO"
+handlers=["console", "file"]
