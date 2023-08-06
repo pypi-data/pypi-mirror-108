@@ -1,0 +1,46 @@
+Metadata-Version: 2.1
+Name: perfectoai
+Version: 1.0.31
+Summary: perfectoAI is an automated emailable reporter along with AI graphs & predictions
+Home-page: https://github.com/genesisthomas/PerfectoAI.git
+Author: Genesis Thomas
+Author-email: gthomas@perforce.com
+License: GPLv3
+Description: # Perfectoai
+        
+        
+        ## Recommended system configuration:
+            
+            1. 8 GB Ram and above
+            
+            2. 2.20 GHz multi core processors and above
+            
+        
+        ## Prerequisites:
+            
+          1. Install [Python](https://www.python.org/downloads/) version 3+ and make sure that python version > 3+ is set as default.
+            
+          2. Install [pip](https://pip.pypa.io/en/stable/installing/)
+        
+          3. Install [npm](https://nodejs.org/en/)
+            
+          4. Run the following commands from command prompt - Windows:
+                `pip install psutil`
+                `sudo npm install -g electron@1.8.4 orca --unsafe-perm=true`
+                `pip install pystan==2.19.1.1`
+                `pip install perfectoai -U`
+            
+            mac:
+                `pip3 install psutil`
+                `npm install -g electron@1.8.4 orca --unsafe-perm=true`
+                `pip3 install pystan==2.19.1.1`
+                `pip3 install perfectoai -U`
+        
+        
+          
+Keywords: Perfecto,appium,selenium,testing,api,automation
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
