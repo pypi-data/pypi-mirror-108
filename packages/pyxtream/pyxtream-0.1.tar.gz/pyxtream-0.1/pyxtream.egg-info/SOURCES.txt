@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+pyxtream/__init__.py
+pyxtream/pyxtream.py
+pyxtream.egg-info/PKG-INFO
+pyxtream.egg-info/SOURCES.txt
+pyxtream.egg-info/dependency_links.txt
+pyxtream.egg-info/top_level.txt
