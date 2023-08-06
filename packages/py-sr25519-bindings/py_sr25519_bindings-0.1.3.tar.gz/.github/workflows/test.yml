@@ -1,0 +1,50 @@
+name: Run units tests
+
+on:
+  push:
+    branches:
+      - master
+      - develop
+    tags:
+      - '**'
+  pull_request:
+
+jobs:
+  build:
+    name: build py${{ matrix.python-version }} on ${{ matrix.platform || matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ ubuntu-latest, macos-latest ]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install cffi and virtualenv
+        run: pip install cffi virtualenv
+      - name: Install RUST toolchain
+        uses: actions-rs/toolchain@v1
+        id: rustup
+        with:
+          profile: minimal
+          toolchain: nightly
+          override: true
+      - name: create wheels dir
+        run: |
+          mkdir ${{ matrix.wheels-dir }}
+      - name: Build ${{ matrix.platform || matrix.os }} binaries
+        run: |
+          pip install maturin
+          maturin build -i ${{ matrix.python-version }} -o ${{ matrix.wheels-dir }}
+      - name: Install requirements
+        run: |
+          pip install -r requirements.txt
+      - name: Install bindings
+        run: |
+          pip install target/wheels/*.whl
+      - name: Test with pytest
+        run: |
+          pip install pytest
+          pytest tests.py
