@@ -1,0 +1,22 @@
+[package]
+name = "rslevel"
+version = "0.1.0"
+authors = ["Hajime Nakagami <nakagami@gmail.com>"]
+edition = "2018"
+
+license = "MIT"
+description = "A python wrapper for Rust leveldb"
+repository = "https://github.com/nakagami/pylevel"
+readme = "README.md"
+keywords = ["leveldb"]
+
+[dependencies]
+rusty-leveldb = "0.3"
+
+[dependencies.pyo3]
+version = "0.13"
+features = ["extension-module"]
+
+[lib]
+name = "rslevel"
+crate-type = ["cdylib"]

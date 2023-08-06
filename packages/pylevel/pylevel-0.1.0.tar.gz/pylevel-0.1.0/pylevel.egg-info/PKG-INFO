@@ -1,0 +1,55 @@
+Metadata-Version: 2.1
+Name: pylevel
+Version: 0.1.0
+Summary: A LevelDB driver
+Home-page: http://github.com/nakagami/pylevel/
+Author: Hajime Nakagami
+Author-email: nakagami@gmail.com
+License: MIT
+Keywords: LevelDB
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Rust
+Classifier: Operating System :: POSIX
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# pylevel
+
+PyLevel is a LevelDB driver for python.
+It use rust reimplementation of LevelDB https://docs.rs/rusty-leveldb .
+
+## Requirements
+
+- python3.8+
+- Rust https://www.rust-lang.org/
+
+## Install
+
+```
+$ sudo apt-get install python3-dev
+$ pip install pylevel
+```
+
+## Example
+
+### simple put/get/delete
+```
+import pylevel
+db = pylevel.DB("/tmp/testdb", create_if_missing=True)
+
+db.put(b'key', b'value')
+v = db.get(b'key')      # 'value'
+
+db.delete(b'key')
+v = db.get(b'key')      # None
+
+db.close()
+```
+
+
