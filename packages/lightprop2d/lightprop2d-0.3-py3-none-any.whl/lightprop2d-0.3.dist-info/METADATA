@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: lightprop2d
+Version: 0.3
+Summary: Light propagation in free space with fourier transform
+Home-page: https://github.com/vongostev/lightprop2d
+Author: Pavel Gostev
+Author-email: gostev.pavel@physics.msu.ru
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: pyfftw
+
+### Light propagation
+Lightprop2d includes class 'Beam2D' to transform intitial field distribution
+using fourier transform from x-y field profile to kx-ky spectrum.
+
