@@ -1,0 +1,9 @@
+README.md
+setup.py
+firstimpression/__init__.py
+firstimpression/scala.py
+firstimpression.egg-info/PKG-INFO
+firstimpression.egg-info/SOURCES.txt
+firstimpression.egg-info/dependency_links.txt
+firstimpression.egg-info/requires.txt
+firstimpression.egg-info/top_level.txt
