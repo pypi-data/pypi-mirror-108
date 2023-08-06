@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+django_domain_specific_language.egg-info/PKG-INFO
+django_domain_specific_language.egg-info/SOURCES.txt
+django_domain_specific_language.egg-info/dependency_links.txt
+django_domain_specific_language.egg-info/requires.txt
+django_domain_specific_language.egg-info/top_level.txt
+django_dsl/__init__.py
+django_dsl/exceptions.py
+django_dsl/lexer.py
+django_dsl/parser.py
+django_dsl/run.py
