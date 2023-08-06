@@ -1,0 +1,10 @@
+LICENSE.txt
+README.md
+pyproject.toml
+setup.cfg
+src/tealshwlibrary/June7.py
+src/tealshwlibrary/__init__.py
+src/tealshwlibrary.egg-info/PKG-INFO
+src/tealshwlibrary.egg-info/SOURCES.txt
+src/tealshwlibrary.egg-info/dependency_links.txt
+src/tealshwlibrary.egg-info/top_level.txt
