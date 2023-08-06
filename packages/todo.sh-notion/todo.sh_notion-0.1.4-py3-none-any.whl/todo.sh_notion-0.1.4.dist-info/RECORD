@@ -1,0 +1,15 @@
+actions/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+actions/nadd,sha256=pzrkb9LT4WMwmDQVCLcFMyRihvo05D-sdu8tOrn_RRs,403
+actions/ndel,sha256=_OfmSYJmGCUmQa7YM1y77m29cWKe8C-bYpQrjcxSzSs,398
+actions/ndo,sha256=8X6LHgVqpOJPayBpYFfqUS_zN3oNQ-iZifpTlpCa7Ok,464
+actions/ndoc,sha256=ahmfytlvcH87Aid4ga91lbaj2jsk6UvslSBGCnJIm3A,586
+todosh_notion/__init__.py,sha256=u6SThi0tmpNGdZoGzBeC8I0X5mntl7LBa0KcDMjYjrU,585
+todosh_notion/settings.py,sha256=j5ybNutTi3Snf8oC6PwAEgkdBY0nux3sPxp8pnGZSZE,101
+todosh_notion/todonotion.py,sha256=58WbUUpjVLZENu7iUuJvHsLdSHeKJU_1a2JskFdr9wU,3422
+todo.sh_notion-0.1.4.dist-info/AUTHORS.md,sha256=-fw6hOJ37xlPAUyo-Q_8f2ncmZsBN8BT2UnHEeasYkA,70
+todo.sh_notion-0.1.4.dist-info/LICENSE.txt,sha256=1wtg3rO0tfuTuBbpHJbGnwQXftVKNhtwWCRE0jm6J9g,1090
+todo.sh_notion-0.1.4.dist-info/METADATA,sha256=jq_kAePKPaydk7aCoblKeE3iyp7C_sJnv3cnOXYgyio,2281
+todo.sh_notion-0.1.4.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+todo.sh_notion-0.1.4.dist-info/entry_points.txt,sha256=j4vUdvQwVbES3s1BC03QXyAgEmmLWdN1dLSEaqk2va8,61
+todo.sh_notion-0.1.4.dist-info/top_level.txt,sha256=OV_uAa2Pqufdr3-tCKOWQeE8Z_HM0pXiD1A-daRT7oQ,22
+todo.sh_notion-0.1.4.dist-info/RECORD,,
