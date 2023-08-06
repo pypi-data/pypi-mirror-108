@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: opencv-handtracking
+Version: 0.1
+Summary: OpenCV Hand Tracking Modules. Skip right to the real deal without dealing with hand tracking.
+Home-page: https://github.com/AlDevStuff/opencvhandtracking
+Author: Al Rifat
+Author-email: alrifat088@gmail.com
+License: MIT
+Download-URL: https://github.com/AlDevStuff/opencvhandtracking/archive/refs/tags/v_0.1.tar.gz
+Description: UNKNOWN
+Keywords: opencv,computer vision,handtracking,cv2,mediapipe
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
