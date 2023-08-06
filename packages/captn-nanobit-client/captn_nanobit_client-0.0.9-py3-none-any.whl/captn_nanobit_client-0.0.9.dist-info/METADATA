@@ -1,0 +1,71 @@
+Metadata-Version: 2.1
+Name: captn-nanobit-client
+Version: 0.0.9
+Summary: Project for captn-nanobit client
+Home-page: https://gitlab.com/airt.ai/captn/captn-nanobit-client/tree/master/
+Author: "Capt'n AI"
+Author-email: info@captn.ai
+License: Apache Software License 2.0
+Keywords: captn,nanobit,airt,airt.ai
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: Apache Software License
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: pip
+Requires-Dist: packaging
+Requires-Dist: pandas
+Requires-Dist: requests
+Requires-Dist: plotly
+Requires-Dist: kaleido
+Provides-Extra: dev
+
+# Capt'n AI for Nanobit
+> Marketing campaigns optimization
+
+
+## Install
+
+`pip install captn-nanobit-client`
+
+## How to use 
+
+
+```python
+from captn_nanobit_client.api import authorize, predict
+from captn_nanobit_client.testing import get_test_dataframe
+from captn_nanobit_client.plotly_graph import plot_prediction
+# server is one of "staging" or "production"
+server = "staging"
+
+token = authorize(username=username, password=password, server=server)
+```
+
+Get pandas dataframe
+
+```python
+df = get_test_dataframe()
+```
+
+Run the code below to make a prediction
+
+```python
+prediction = predict(df, token=token)
+```
+
+Run the code below to draw a graph
+
+```python
+graph = plot_prediction(df, prediction, last_n_days=3, target_day=29)
+# uncomment this line to show the graph
+# graph.show()
+```
+
+<img src="https://nanobit.api.captn.ai/images/captn_graph.png?v2021.06.07" width="781" style="max-width: 781px">
+
+
