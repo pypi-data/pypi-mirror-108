@@ -1,0 +1,3 @@
+[plover.system]
+Minimal English Stenotype = plover_minimal_english_stenotype
+
