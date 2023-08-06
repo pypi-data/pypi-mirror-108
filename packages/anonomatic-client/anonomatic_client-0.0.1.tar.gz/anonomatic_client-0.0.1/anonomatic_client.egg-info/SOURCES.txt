@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+anonomatic_client.egg-info/PKG-INFO
+anonomatic_client.egg-info/SOURCES.txt
+anonomatic_client.egg-info/dependency_links.txt
+anonomatic_client.egg-info/requires.txt
+anonomatic_client.egg-info/top_level.txt
