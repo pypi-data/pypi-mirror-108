@@ -1,0 +1,2 @@
+graft coqui_stt_model_manager/templates
+graft coqui_stt_model_manager/static
