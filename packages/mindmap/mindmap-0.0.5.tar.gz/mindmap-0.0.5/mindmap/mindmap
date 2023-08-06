@@ -1,0 +1,62 @@
+#!/usr/bin/env python
+
+import argparse
+from pathlib import Path
+
+from mindmap.helpers import list_note_names, format_note
+from mindmap.helpers import read_note, read_note_in_vim, save_note
+
+default_scope = "general"
+none_scope = "none"
+default_name = "todo"
+
+home_path = f"{Path.home()}/mindmap"  # todo: read ~/mindmap/.env
+parser = argparse.ArgumentParser(description='Command line tool for keeping notes simple way.')
+
+# parameters
+parser.add_argument('-s', '--scope', type=str, help='scope of the note.', default="none")
+parser.add_argument('-n', '--name', type=str, help='name of the notes.', default=default_name)
+
+# inputs
+parser.add_argument('-ac', '--append', type=str, help='append note via command line', required=False)
+parser.add_argument('-av', '--apvim', action='store_true', help='append note via vim')
+
+# read only
+parser.add_argument('-r', '--read', action='store_true', help='print all of the notes')
+parser.add_argument('-a', '--all', action='store_true', help='print all of the notes')
+parser.add_argument('-l', '--list', action='store_true', help='list all of the note names')
+
+args = parser.parse_args()
+
+
+def get_work_dir_glob():
+    return f"{home_path}/*/*" if args.all else f"{home_path}/{args.scope}/*"
+
+
+def get_read_path():
+    if args.all and args.scope == "none":
+        return f"{home_path}/*/*"
+    elif args.all:
+        return f"{home_path}/{args.scope}/*"
+    else:
+        return f"{home_path}/{args.scope}/{args.name}.md"
+
+
+if __name__ == "__main__":
+
+    if args.scope == "none" and not args.all or args.list:
+        print(f"using default scope and name: {default_scope}/{default_name}")
+        args.scope = default_scope
+
+    if args.append is not None:
+        formatted = format_note(args.append)
+        save_note(args.append, args.scope, args.name, home_path)
+    elif args.apvim:
+        note = format_note(read_note_in_vim())
+        save_note(note, args.scope, args.name, home_path)
+    elif args.list:
+        list_note_names(home_path, get_work_dir_glob())
+    elif args.scope is not None and args.read:
+        read_note(get_read_path())
+    else:
+        parser.print_help()
