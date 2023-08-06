@@ -1,0 +1,13 @@
+numpy
+matplotlib
+pandas_datareader
+datetime
+empyrical
+quantstats
+yfinance
+darts
+yahoo-fin
+yahoofinancials
+prompt-toolkit==3.0.18
+ipython==7.22.0
+pyportfolioopt

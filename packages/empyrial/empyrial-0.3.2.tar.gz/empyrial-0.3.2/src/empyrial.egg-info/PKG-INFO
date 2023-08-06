@@ -1,0 +1,98 @@
+Metadata-Version: 2.1
+Name: empyrial
+Version: 0.3.2
+Summary: AI and data-driven quantitative portfolio management for risk and performance analytics
+Home-page: https://github.com/ssantoshp/Empyrial
+Author: Santosh Passoubady
+Author-email: santoshpassoubady@gmail.com
+License: MIT
+Description: # By Investors, For Investors.
+        
+        <br><br><br><br>
+        
+        <div align="center">
+        <img src="https://i.ibb.co/RjLg9VV/logo.png"/>
+        <br><br><br><br><br><br>
+          
+        ![](https://img.shields.io/badge/Downloads-6.3k-brightgreen)
+        ![](https://img.shields.io/badge/license-MIT-orange)
+        ![](https://img.shields.io/badge/version-0.2.7-blueviolet)
+        ![](https://img.shields.io/badge/language-python🐍-blue)
+        ![](https://img.shields.io/badge/activity-8.8/10-ff69b4)
+        ![](https://img.shields.io/badge/Open%20source-💜-white)	
+        [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/ssantoshp/GetStartedEmpyrial/main?filepath=get_started_with_empyrial.ipynb)
+          
+         </div>
+         
+        <br><br>
+        
+        Empyrial is a Python-based **open-source quantitative investment** library dedicated to **financial institutions** and **retail investors**, officially released in Mars 2021. Already used by **thousands of people working in the finance industry**, Empyrial aims to become an all-in-one platform for **portfolio management**, **analysis**, and **optimization**.
+        
+        Empyrial **empowers portfolio management** by bringing different financial approaches such as **risk analysis**, **quantitative analysis**, **fundamental analysis**, **factor analysis** and **prediction making**.
+        
+        With Empyrial, you can easily analyze security or a portfolio with these different approaches and **get the best insights from it**.
+        
+        <br>
+        
+        ## Features
+        
+        <div align="center">
+          
+        | Feature 📰 | Status |
+        | --                      | ------    |
+        | Empyrial (backtesting + performance analysis) | [Released](https://github.com/ssantoshp/Empyrial/releases/tag/v0.2.4) on May 30, 2021 |
+        | Oracle (prediction lens using several ML models)| [Beta](https://github.com/ssantoshp/Empyrial/releases/tag/0.2.7) on Jun 1, 2021 | 
+        | Fundamental lens |  In development...  |
+        | Risk lens |  In development...  | 
+        | Alpha lens | In development... |
+        | Sentiment lens | In development... | 
+          
+        </div>
+        
+        <br />
+        
+        Here are the functions available with Empyrial:
+        
+        - `empyrial` : quantitative and performance analysis of your portfolio | [Quickstart](https://colab.research.google.com/drive/1cj40dDqctfWNrVz_nK-FDhdWPay7fVBF?usp=sharing) | [Documentation](https://github.com/ssantoshp/Empyrial/wiki/Engine)
+        
+        - `oracle` : prediction generation on your portfolio using several prediction models (Prophet, Auto-ARIMA, Fast Fourier Transform...) | [Quickstart](https://colab.research.google.com/drive/11rMpQqW9Om82wzh71cr5k3vDQSNMZ4V1?usp=sharing)| [Documentation](https://github.com/ssantoshp/Empyrial/wiki/Oracle)
+        
+        ## Usage
+        
+        ```py
+        from empyrial import empyrial, Engine
+        
+        portfolio = Engine(
+                          start_date= "2020-06-09",
+                          portfolio= ["BABA", "RELIANCE.NS", "KO", "^DJI","^IXIC"],
+                          weights = [0.2, 0.2, 0.2, 0.2, 0.2],
+                          benchmark = ["SPY"]
+        )
+        
+        empyrial(portfolio)
+        ```
+        
+        Output:
+        
+        ![report](https://user-images.githubusercontent.com/61618641/120065794-8203ef00-c073-11eb-84a8-8dda6908da4c.png)<br/><br /><br />
+        
+        <div align="center">
+          
+          ![return](https://user-images.githubusercontent.com/61618641/120065822-afe93380-c073-11eb-915d-8b8b27c6fd38.png)<br /><br /><br />
+        
+        ![creturn](https://user-images.githubusercontent.com/61618641/120065881-ea52d080-c073-11eb-84a5-11da5dbf0bcb.png)<br /><br /><br />
+        
+        ![heatmap](https://user-images.githubusercontent.com/61618641/120065930-2ab24e80-c074-11eb-8861-e1996a950774.png)<br /><br /><br />
+        
+        ![drawdonw](https://user-images.githubusercontent.com/61618641/120065973-6cdb9000-c074-11eb-99cb-f3ee8110576f.png)<br /><br /><br />
+        
+        ![top](https://user-images.githubusercontent.com/61618641/120065975-6fd68080-c074-11eb-93f9-cbb3f2dd859d.png)<br /><br /><br />
+        
+        ![rolling](https://user-images.githubusercontent.com/61618641/120065977-74029e00-c074-11eb-92c6-8d0bee2a6234.png)
+        
+         </div>
+        
+        Full documentation : https://github.com/ssantoshp/Empyrial
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
