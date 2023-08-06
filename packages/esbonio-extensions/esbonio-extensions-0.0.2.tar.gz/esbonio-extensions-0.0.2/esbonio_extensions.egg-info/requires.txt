@@ -1,0 +1,9 @@
+sphinx
+nbformat<5.1
+
+[dev]
+black
+flake8
+pytest
+pytest-cov
+mock
