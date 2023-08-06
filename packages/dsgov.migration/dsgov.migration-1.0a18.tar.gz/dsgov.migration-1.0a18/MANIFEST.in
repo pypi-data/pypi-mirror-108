@@ -1,0 +1,7 @@
+graft src/dsgov
+graft docs
+include *.rst
+include *.GPL
+include *.txt
+include *.xlsx
+global-exclude *.pyc

@@ -1,0 +1,15 @@
+plone.api>=1.8.4
+Products.GenericSetup>=1.8.2
+setuptools
+z3c.jbot
+collective.transmogrifier>=1.5.3.dev0
+plone.app.transmogrifier>=1.4.2.dev0
+collective.jsonmigrator>=1.0.2.dev0
+transmogrify.dexterity
+Products.Archetypes==1.16.1
+
+[test]
+plone.app.testing
+plone.testing>=5.0.0
+plone.app.contenttypes
+plone.app.robotframework[debug]

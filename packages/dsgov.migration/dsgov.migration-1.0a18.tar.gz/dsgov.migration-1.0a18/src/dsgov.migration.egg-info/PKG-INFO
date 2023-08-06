@@ -1,0 +1,204 @@
+Metadata-Version: 2.1
+Name: dsgov.migration
+Version: 1.0a18
+Summary: A migration package for DSGov-Plone5
+Home-page: https://pypi.python.org/pypi/dsgov.migration
+Author: Fabio Santos
+Author-email: fabio.santos@ifrr.edu.br
+License: GPL version 2
+Description: .. This README is meant for consumption by humans and pypi. Pypi can render rst files so please do not use Sphinx features.
+           If you want to learn more about writing documentation, please check out: http://docs.plone.org/about/documentation_styleguide.html
+           This text does not appear on pypi or github. It is a comment.
+        
+        
+        ===============
+        dsgov.migration
+        ===============
+        
+        Migrates content from SimpleJSON format to Plone 5
+        
+        Documentation
+        -------------
+        This component is being developed following the guidelines documented in:
+        - https://training.plone.org/5/transmogrifier/.
+        
+        
+        Installation In Production
+        --------------------------
+        
+        This component is still under development,
+        for now the installation can be done by cloning this directory
+        inside the src folder of your website and configuring the buildout to
+        fetch the package from there. Or you can upload your site using the
+        buildout available here.
+        
+        At the end of the [buildout] session in your buildout.cfg
+        Insert the following code like::
+        
+           [buildout]
+           ...
+        
+           auto-checkout = *
+           [sources]
+           dsgov.migration = git https://gitlab.ifrr.edu.br/2045293/dsgov.migration
+        
+           ...
+        
+        Run buildout::
+        
+            $ buildout
+        
+        
+        Installation In Development
+        ---------------------------
+        
+        Set up a virtual environment using python 3.8
+        
+        Then run the command::
+        
+            $ pip install -r requirements.txt
+        
+        Run buildout::
+        
+            $ buildout
+        
+        Start Plone in foreground::
+        
+            $ instance fg
+        
+        Contribute
+        ----------
+        
+        - Issue Tracker: https://github.com/f4biosa/dsgov.migration/issues
+        
+        
+        License
+        -------
+        
+        The project is licensed under the GPLv2.
+        
+        
+        Contributors
+        ============
+        
+        - Fabio Santos, fabio.santos@ifrr.edu.br
+        - Francisco Filho, francisco.filho@ifrr.edu.br
+        
+        
+        Changelog
+        =========
+        
+        
+        1.0a18 (2021-06-08)
+        -------------------
+        
+        - Nothing changed yet.
+        
+        
+        1.0a17 (2021-06-08)
+        -------------------
+        
+        - Nothing changed yet.
+        
+        
+        1.0a16 (2021-06-08)
+        -------------------
+        
+        - Nothing changed yet.
+        
+        
+        1.0a15 (2021-06-08)
+        -------------------
+        
+        - Nothing changed yet.
+        
+        
+        1.0a14 (2021-06-08)
+        -------------------
+        
+        - Nothing changed yet.
+        
+        
+        1.0a13 (2021-06-08)
+        -------------------
+        
+        - Nothing changed yet.
+        
+        
+        1.0a12 (2021-06-08)
+        -------------------
+        
+        - Nothing changed yet.
+        
+        
+        1.0a11 (2021-06-08)
+        -------------------
+        
+        - Nothing changed yet.
+        
+        
+        1.0a10 (2021-06-08)
+        -------------------
+        
+        - Nothing changed yet.
+        
+        
+        1.0a9 (2021-06-08)
+        ------------------
+        
+        - Nothing changed yet.
+        
+        
+        1.0a8 (2021-06-08)
+        ------------------
+        
+        - Nothing changed yet.
+        
+        
+        1.0a7 (2021-06-08)
+        ------------------
+        
+        - Nothing changed yet.
+        
+        
+        1.0a6 (2021-06-08)
+        ------------------
+        
+        - Nothing changed yet.
+        
+        
+        1.0a5 (2021-06-08)
+        ------------------
+        
+        - Nothing changed yet.
+        
+        
+        1.0a4 (2021-06-08)
+        ------------------
+        
+        - Nothing changed yet.
+        
+        
+        1.0a3 (2021-06-08)
+        ------------------
+        
+        - Nothing changed yet.
+        
+        
+        1.0a1 (2021-06-08)
+        ------------------
+        
+        - Initial release.
+          [handryks]
+        
+Keywords: Python Plone
+Platform: UNKNOWN
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Plone
+Classifier: Framework :: Plone :: 5.0
+Classifier: Framework :: Plone :: 5.1
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: GNU General Public License v2 (GPLv2)
+Provides-Extra: test
