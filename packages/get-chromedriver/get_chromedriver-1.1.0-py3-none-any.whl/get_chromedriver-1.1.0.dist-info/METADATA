@@ -1,0 +1,40 @@
+Metadata-Version: 2.1
+Name: get-chromedriver
+Version: 1.1.0
+Summary: Get the latest chromedriver for the chrome installed on your system
+Home-page: https://github.com/dermasmid/get-chromedriver
+Author: Cheskel Twersky
+Author-email: twerskycheskel@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX :: Linux
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: requests
+
+# Installation
+
+```bash
+pip3 install get_chromedriver
+```
+
+# Usage
+
+From python:
+
+```python
+import get_chromedriver
+get_chromedriver.download_chromedriver()
+```
+From the shell:
+```bash
+python3 -m get_chromedriver
+```
+
+
+
+The download_chromedriver() function takes a optional arg for the google chrome version, if not provided, we run `google-chrome --version`.
+
+
