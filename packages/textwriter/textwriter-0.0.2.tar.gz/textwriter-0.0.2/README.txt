@@ -1,0 +1,1 @@
+This is my first python text writer it can write stuff on cmd and do other things
