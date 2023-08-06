@@ -1,0 +1,16 @@
+.gitignore
+LICENSE
+README.md
+requirements.txt
+setup.py
+docs/nifpy1.png
+docs/scrip.gif
+nifpy/__init__.py
+nifpy/financials.py
+nifpy/graph.py
+nifpy/info.py
+nifpy.egg-info/PKG-INFO
+nifpy.egg-info/SOURCES.txt
+nifpy.egg-info/dependency_links.txt
+nifpy.egg-info/not-zip-safe
+nifpy.egg-info/top_level.txt
