@@ -1,0 +1,28 @@
+Metadata-Version: 1.1
+Name: square-math
+Version: 0.0.2
+Summary: A very basic calculator
+Home-page: UNKNOWN
+Author: Arjun Vijayan
+Author-email: arjunv6611@gmail.com
+License: MIT
+Description: This is a very simple calculator module that adds,subtracts,multiplies,divides the numbers easily.
+        
+        Change Log
+        ===============
+        
+        0.0.1 (2/6/2021)
+        -----------------
+        - First Release
+        
+        0.0.2 (3/6/2021)
+        -----------------
+        - Second Release
+        - Fixed Bugs
+Keywords: calculator
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
