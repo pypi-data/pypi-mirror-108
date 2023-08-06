@@ -1,0 +1,9 @@
+README.md
+setup.cfg
+setup.py
+front/__init__.py
+front.egg-info/PKG-INFO
+front.egg-info/SOURCES.txt
+front.egg-info/dependency_links.txt
+front.egg-info/not-zip-safe
+front.egg-info/top_level.txt
