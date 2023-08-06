@@ -1,0 +1,6 @@
+pyhrv
+numpy
+peakutils
+matplotlib
+argparse
+statsmodels
