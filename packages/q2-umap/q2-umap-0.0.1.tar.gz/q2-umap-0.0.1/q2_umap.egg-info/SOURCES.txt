@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.py
+q2_umap/__init__.py
+q2_umap/citations.bib
+q2_umap/plugin_setup.py
+q2_umap/umap.py
+q2_umap.egg-info/PKG-INFO
+q2_umap.egg-info/SOURCES.txt
+q2_umap.egg-info/dependency_links.txt
+q2_umap.egg-info/entry_points.txt
+q2_umap.egg-info/not-zip-safe
+q2_umap.egg-info/requires.txt
+q2_umap.egg-info/top_level.txt
+q2_umap/tests/__init__.py
+q2_umap/tests/test_umap.py
