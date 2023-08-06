@@ -1,0 +1,10 @@
+embryoseg/Augmentation3D.py,sha256=NNhzLapGMOkaqLm704qbhm50SqHOGGbWcdIdYecqZlg,10971
+embryoseg/OptimizeThreshold.py,sha256=U8gWFlA6PTN4IbDkH2zbk7rwy8v2MnptXnKFcPi9PEY,4823
+embryoseg/SmartSeeds3D.py,sha256=el8u5Aqnpln361DnJp1B0ocp1ssVgY7XmJrJpuU1-No,21918
+embryoseg/__init__.py,sha256=G8roEwc7QKg3B1KMlMGIT0sHB5yAOS1MGZopvOFRpIo,111
+embryoseg/helpers.py,sha256=BpK9WXm0TSMYtaHA_jfl6GfN8r96LCOBKXnQKvha2VE,23215
+embryoseg-2.2.4.dist-info/LICENSE,sha256=EyR_ikpQYTDN96J7EVkGmy6biXSBu9Nv45wKDpcraqQ,1514
+embryoseg-2.2.4.dist-info/METADATA,sha256=4IOoqi-eiwbz5hfCo-CwmpFTtTY543srdAmxt8s-FNk,2461
+embryoseg-2.2.4.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+embryoseg-2.2.4.dist-info/top_level.txt,sha256=9w_DZU04ofs9PUg-mJkKVGdy2kp7FEl8bplMYS5GYxs,10
+embryoseg-2.2.4.dist-info/RECORD,,
