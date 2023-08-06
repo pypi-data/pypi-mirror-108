@@ -1,0 +1,6 @@
+[console_scripts]
+get-flakes=get-flakes.cli:run
+
+[pytest11]
+get-flakes=get-flakes.pytest_plugin
+

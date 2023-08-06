@@ -1,0 +1,11 @@
+get-flakes/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+get-flakes/backend/models.py,sha256=yNzlvzEr0dBzMMMep1plxAnozsZV2HM2DE_YPi1uRio,734
+get-flakes/cli.py,sha256=mQUSRsZrK7G3L4XwiAsdwtOGSjwGeY_GHdpxHMydZLE,1247
+get-flakes/db.py,sha256=_A_DpNcpLF8VI9u628QktYrx_CXrcCa8mCbdqDdHMTE,4763
+get-flakes/pytest_plugin.py,sha256=lSeKZnCZDHa6tRlf88zlNKn7WWNDRhQqNDgWUHwnswE,1385
+get-flakes/report.md,sha256=8zD5Cm3V7oKtrAqykE9dGwRb7zz3Ougwy7JMQYCbn_4,291
+get-flakes/server.py,sha256=UYd1gXbqmBQTBeoXKmPsDeS0Qx4vGEccpazidI7UT3g,2105
+get_flakes-0.0.10.dist-info/entry_points.txt,sha256=Y_XiflnBVyK0ON7als9f-SFKkOhnDPfr_mAhIP1MMD0,97
+get_flakes-0.0.10.dist-info/WHEEL,sha256=SrtnPGVTMeYWttls9xnWA01eUhCZ3ufFdJUYb1J3r-U,83
+get_flakes-0.0.10.dist-info/METADATA,sha256=QQRMH7TebYQQymWvVbO3wCDmnRJodnU9JauRiea71Io,1012
+get_flakes-0.0.10.dist-info/RECORD,,
