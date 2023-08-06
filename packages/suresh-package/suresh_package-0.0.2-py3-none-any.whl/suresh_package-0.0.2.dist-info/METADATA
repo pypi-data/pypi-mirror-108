@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: suresh-package
+Version: 0.0.2
+Summary: A small mathematics library
+Home-page: https://github.com/suresh-abeyweera/suresh_package
+Author: Suresh Abeyweera
+Author-email: suresh.abeyweera@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt
+
+It is a demo package created for eduaationl purposes
+It has two classes inside
+
+class Numbers
+	methods isPrime(),isArmstrong()
+
+class Arithmetic
+	metods add(a,b),sum(a,b)
+	
+	
+
