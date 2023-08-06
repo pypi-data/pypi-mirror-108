@@ -1,0 +1,11 @@
+README.md
+pyproject.toml
+setup.py
+ereader/__init__.py
+ereader/__main__.py
+ereader.egg-info/PKG-INFO
+ereader.egg-info/SOURCES.txt
+ereader.egg-info/dependency_links.txt
+ereader.egg-info/entry_points.txt
+ereader.egg-info/requires.txt
+ereader.egg-info/top_level.txt

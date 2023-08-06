@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: ereader
+Version: 0.1.0
+Summary: GCP Error Reporting reading tool
+Home-page: UNKNOWN
+Author: Himaster
+Author-email: himaster@inbox.ru
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: ==2.7.*
