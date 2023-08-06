@@ -1,0 +1,4 @@
+[console_scripts]
+pgn-to-gif = pgn_to_gif.cli:main
+pgn2gif = pgn_to_gif.cli:main
+

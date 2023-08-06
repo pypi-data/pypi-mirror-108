@@ -1,0 +1,9 @@
+pgn_to_gif/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+pgn_to_gif/cli.py,sha256=M-U1QGzYLcfeClSDM6W-qULgx2hUSj-WLva1PvSwAPI,4176
+pgn_to_gif/utils.py,sha256=0j9dw2KSZlH7VRscWBL5hpASCu2TrhurOJfrWsLL_7U,9751
+pgn_to_gif-0.0.3.dist-info/LICENSE,sha256=0rweDTi0vBzNJa0rRiHsr0LSsYjkAeCUbOnM8JF6b0w,1078
+pgn_to_gif-0.0.3.dist-info/METADATA,sha256=fYngOQ7tzAeCbmsGqICMwfxriuLfyEFtnS077RoKtjc,2509
+pgn_to_gif-0.0.3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pgn_to_gif-0.0.3.dist-info/entry_points.txt,sha256=Ud0CPgFSGqSmPo4RpIspTjEoXV1F_83vRRadsQteqrA,82
+pgn_to_gif-0.0.3.dist-info/top_level.txt,sha256=5T9bfwB6fgAO74Pz8imGgGWXJyWX-JB0Pw3cApeZqQU,11
+pgn_to_gif-0.0.3.dist-info/RECORD,,
