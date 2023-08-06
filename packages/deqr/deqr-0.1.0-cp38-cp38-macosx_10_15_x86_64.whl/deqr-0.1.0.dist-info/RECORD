@@ -1,0 +1,16 @@
+deqr/__init__.py,sha256=elMbXv2v9y5TsDtfH3T49xTrX6j_N5g-xUcnVNkUpoE,113
+deqr/datatypes.py,sha256=0rSC01ABeo00vnic79T2qlY-JwsaQ29kKweOuWQ3gtY,1427
+deqr/qrdec.pyx,sha256=cmBdyF9MqwrhmeTAiL9MnksX5zeZprZA9DSXXIMgPY8,3472
+deqr/qrdecdecl.pxd,sha256=8qTDaN-YqO5hPOp6wJn1Ihi_jISB5Tm5SMoN7sfcKz8,3416
+deqr/quirc.pyx,sha256=EzXvBh_nzLPFftS-w8GP2D0_fDn0oWcFDx61TVOJKJg,3508
+deqr/quircdecl.pxd,sha256=dBPMuFd84cKoHWXPCTIvbTo3a6I5MzdvFbjdla0VEy4,3211
+deqr/qrdec.c,sha256=Y1k0z173Ki56RoXyCSMr-YQrKUtn7UJ9QK9MQ4XZkow,1070575
+deqr/qrdec.cpython-38-darwin.so,sha256=LG3Pz_DEJRScXqNXi6WOsXV3-b7uU3aDMlS9mG5w9Oo,295416
+deqr/quirc.cpython-38-darwin.so,sha256=HV39xwpLj8z2XC5eU4LR3d5Ir1R01631-hftoIFg378,274360
+deqr/quirc.c,sha256=KA3w2CNkB_bZJTuZHcvtOj2vlNg9uHPRykM_pdb_hPs,1070663
+deqr-0.1.0.dist-info/LICENSE.lgpl,sha256=pOIgbWF4gG6BmrDLoA5lh2lvqJhbLCdq_tXybDU8UQc,26433
+deqr-0.1.0.dist-info/COPYING,sha256=PK93soPy0PY3He2_wG7QyysMhNYSldXYt5HYLz_QE_Q,470
+deqr-0.1.0.dist-info/LICENSE.isc,sha256=Pv7R9taJiVEvPZOjt8tJFKem3onxkZjkoJbNr-O94Ig,722
+deqr-0.1.0.dist-info/WHEEL,sha256=X_hLrEllCjS7vBIuDM6rxCqZjcZgTSxXLmOFvAqNbl4,101
+deqr-0.1.0.dist-info/METADATA,sha256=cuhPDEMABn-cEmkYUcykSkKVYFg06NVmRtw-O_j6HU8,358
+deqr-0.1.0.dist-info/RECORD,,
