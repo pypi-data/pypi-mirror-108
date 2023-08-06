@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: cdsl
+Version: 0.1.dev0
+Summary: Common Data Structures for Python
+Home-page: https://github.com/AjithRamachandran/cdsl
+Author: Ajith Ramachandran
+Author-email: ajithar204@gmail.com
+License: MIT
+Keywords: data structures
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# cdsl
+Common Data Structures Library for Python
+
+
