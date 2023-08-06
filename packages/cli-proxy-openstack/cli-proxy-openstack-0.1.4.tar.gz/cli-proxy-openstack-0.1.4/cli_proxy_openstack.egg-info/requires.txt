@@ -1,0 +1,5 @@
+pick
+pbr>=2.0.0
+configparser
+prettytable
+openstacksdk==0.36.5

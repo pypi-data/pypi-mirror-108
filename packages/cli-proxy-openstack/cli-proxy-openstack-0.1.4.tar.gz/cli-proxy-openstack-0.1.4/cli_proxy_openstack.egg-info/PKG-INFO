@@ -1,0 +1,12 @@
+Metadata-Version: 2.1
+Name: cli-proxy-openstack
+Version: 0.1.4
+Summary: CLI for Proxy Service integrated with OpenStack
+Home-page: https://github.com/LamNguy/cli_pat
+Author: Nguyen Duc Lam
+Author-email: lamchipabc@gmail.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=2.7
+Description-Content-Type: text/markdown
