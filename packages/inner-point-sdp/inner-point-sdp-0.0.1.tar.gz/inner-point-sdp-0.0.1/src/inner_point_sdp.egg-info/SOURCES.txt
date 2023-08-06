@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+src/inner_point_sdp/__init__.py
+src/inner_point_sdp/sdp.py
+src/inner_point_sdp.egg-info/PKG-INFO
+src/inner_point_sdp.egg-info/SOURCES.txt
+src/inner_point_sdp.egg-info/dependency_links.txt
+src/inner_point_sdp.egg-info/top_level.txt
