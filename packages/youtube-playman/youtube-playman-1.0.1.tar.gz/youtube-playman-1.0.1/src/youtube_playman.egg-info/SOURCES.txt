@@ -1,0 +1,9 @@
+LICENSE
+README.md
+download.sh
+pyproject.toml
+setup.py
+src/youtube_playman.egg-info/PKG-INFO
+src/youtube_playman.egg-info/SOURCES.txt
+src/youtube_playman.egg-info/dependency_links.txt
+src/youtube_playman.egg-info/top_level.txt
