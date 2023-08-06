@@ -1,0 +1,16 @@
+example_pkg/__about__.py,sha256=XgqzW99yBgFqGGjybHsvXxspbqYBQjvSwNYwVKXdzK4,125
+example_pkg/__init__.py,sha256=T2gxv8jCb35DTywFO67zkxIN689IreKSuDVtvDIv-Xw,193
+example_pkg/helpers.py,sha256=34cwW0RsFceAdBtAZUSjCWUs6EtfzAD09jbjk9IDkOA,533
+example_pkg/sub_pkg_1/__init__.py,sha256=cVUVrECwSoZK3I-26yHoTqvbqp0jt3YTY5JsCDCrE-U,302
+example_pkg/sub_pkg_1/mod_one.py,sha256=eKC7rZ29pyAA82vkW8FsNJfdiWk3o6WpiEWl6thJfb8,115
+example_pkg/sub_pkg_1/mod_two.py,sha256=jM_5PY02exdnE_2JNy8qBaW0DWI36IaWIOklsX3ez7w,117
+example_pkg/sub_pkg_1/nested_pkg_1/__init__.py,sha256=1j8iBH90diuUA0E3VLPtG0Ugr_OFRnBSv809I2S256c,206
+example_pkg/sub_pkg_1/nested_pkg_1/nst_1.py,sha256=wCjgL3-moauJw90WSduXmMCLZqgfMoEfx5I2uczAPaw,124
+example_pkg/sub_pkg_2/__init__.py,sha256=c6UEnWComysFYiM5ge9ZcHxqhMT799qS3m7KvC0APew,173
+example_pkg/sub_pkg_2/mod_1.py,sha256=TZt48xfKZsIxCu0djwM-0AvuQ_5uAmNtrFLHFgbQUw0,110
+example_pkg/sub_pkg_2/mod_2.py,sha256=9RwRAEmN_fBcs5BwUU-Nv0I48CelCIskJpmjWkfKbOU,496
+firstNestedPackage_edo-0.0.0.dist-info/LICENSE,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+firstNestedPackage_edo-0.0.0.dist-info/METADATA,sha256=ojm8o-oX8WSyThdY0NKesjl7OvAjPJs30ecbeZR3iTI,3320
+firstNestedPackage_edo-0.0.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+firstNestedPackage_edo-0.0.0.dist-info/top_level.txt,sha256=6z5BxHpE17rpY8UuF_FwZjTIbkRc7f6jXImHpIXC7gw,12
+firstNestedPackage_edo-0.0.0.dist-info/RECORD,,
