@@ -1,0 +1,25 @@
+[flake8]
+max-line-length = 111
+# W503 (*) 	line break before binary operator
+extend-ignore = TYP101, TYP102, ANN101
+# select = E,W
+count = True
+
+exclude =
+    docs/conf.py,
+    setup.py,
+    venv,
+    py38,
+    py39,
+
+# flake8-docstrings
+docstring-convention=numpy
+
+# flake8-rst-docstrings
+rst-directives =
+    moduleauthor,
+    # sphinx.ext.doctest
+    testsetup,
+    doctest,
+    # sphinx.ext.todo
+    todo,
