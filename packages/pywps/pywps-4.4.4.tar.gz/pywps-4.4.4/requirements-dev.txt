@@ -1,0 +1,9 @@
+coverage
+coveralls
+pytest
+flake8
+pylint
+Sphinx
+twine
+wheel
+bump2version
