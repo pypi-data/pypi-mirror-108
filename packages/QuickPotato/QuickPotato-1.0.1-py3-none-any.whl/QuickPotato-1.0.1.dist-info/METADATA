@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: QuickPotato
+Version: 1.0.1
+Summary: Making performance testing within Python easy and understandable.
+Home-page: https://github.com/JoeyHendricks/QuickPotato
+Author: Joey Hendricks
+Author-email: joey.hendricks20@icloud.com
+License: MIT
+Platform: UNKNOWN
+Requires-Python: >=3.7
+Requires-Dist: numpy
+Requires-Dist: SQLAlchemy-Utils
+Requires-Dist: scipy
+Requires-Dist: SQLAlchemy
+Requires-Dist: PyMySQL
+Requires-Dist: pandas
+Requires-Dist: PyYAML
+Requires-Dist: Jinja2
+
+UNKNOWN
+
+
