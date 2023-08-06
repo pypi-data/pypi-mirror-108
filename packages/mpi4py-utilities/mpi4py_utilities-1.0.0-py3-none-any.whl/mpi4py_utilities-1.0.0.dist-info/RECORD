@@ -1,0 +1,9 @@
+mpi4py_utilities/__init__.py,sha256=CxQdzYB2ckMl5E6jXn1EPtDyu1mbWSwCQwisUSulETc,27698
+mpi4py_utilities/world1D.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mpi4py_utilities/world2D.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+mpi4py_utilities/world3D.py,sha256=9IYSfEoK8aA-TgxdyvjSmOgGsqjTP7mAxWSgh3Us_SY,1875
+mpi4py_utilities-1.0.0.dist-info/LICENSE.txt,sha256=DvfRAi1OU3uWpcgbr5tBorWJbJWPyF4pu_vxVj6Ierg,1517
+mpi4py_utilities-1.0.0.dist-info/METADATA,sha256=MMcJsQyAcJYCBErjhjmQXqcEIQN6RrmG6XOK2vFeqcU,548
+mpi4py_utilities-1.0.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+mpi4py_utilities-1.0.0.dist-info/top_level.txt,sha256=vIRQF5_wDVk0cFeFCS6bNAZ_TCfrFJCMFdOWM0MR8q8,17
+mpi4py_utilities-1.0.0.dist-info/RECORD,,

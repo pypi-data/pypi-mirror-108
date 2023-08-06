@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: mpi4py-utilities
+Version: 1.0.0
+Summary: Utility functions for mpi4py
+Home-page: https://github.com/leonfoks/mpi4py_utilities/archive/refs/tags/1.0.0.tar.gz
+Author: Leon Foks
+Author-email: leonfoks@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering
+Requires-Dist: numpy
+Requires-Dist: sphinx
+
+UNKNOWN
+
+
