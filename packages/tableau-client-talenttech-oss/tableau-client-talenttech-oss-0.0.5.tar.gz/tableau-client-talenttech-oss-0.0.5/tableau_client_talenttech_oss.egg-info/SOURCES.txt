@@ -1,0 +1,11 @@
+LICENSE.txt
+README.md
+setup.py
+tableau/__init__.py
+tableau/client.py
+tableau_client_talenttech_oss.egg-info/PKG-INFO
+tableau_client_talenttech_oss.egg-info/SOURCES.txt
+tableau_client_talenttech_oss.egg-info/dependency_links.txt
+tableau_client_talenttech_oss.egg-info/requires.txt
+tableau_client_talenttech_oss.egg-info/top_level.txt
+test/test_tableau.py
