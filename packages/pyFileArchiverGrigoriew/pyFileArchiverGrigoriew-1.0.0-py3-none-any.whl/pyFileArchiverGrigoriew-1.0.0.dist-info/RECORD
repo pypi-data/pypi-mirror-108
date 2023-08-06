@@ -1,0 +1,8 @@
+pyFileArchiver/__init__.py,sha256=frcCV1k9oG9oKj3dpUqdJg1PxRT2RSN_XKdLCPjaYaY,2
+pyFileArchiver/archiver.py,sha256=VxmvdhEZZgFImi5KYTarOFWRlX8dSfGV7iySZhF36K0,1238
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_archiver.py,sha256=Z-YHGJRI3iQoIEIg_2fTBE0rheEk1gpFy3xiB-J4yhY,2609
+pyFileArchiverGrigoriew-1.0.0.dist-info/METADATA,sha256=ZVsyojRTjMnmk9uUJRrmBZjkSv5VlVGu1WCqyJPd3pI,801
+pyFileArchiverGrigoriew-1.0.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pyFileArchiverGrigoriew-1.0.0.dist-info/top_level.txt,sha256=DvOQDVgD47TpErWz2bK_B7FNSQ-wl_HdqIAApTGyKmw,21
+pyFileArchiverGrigoriew-1.0.0.dist-info/RECORD,,
