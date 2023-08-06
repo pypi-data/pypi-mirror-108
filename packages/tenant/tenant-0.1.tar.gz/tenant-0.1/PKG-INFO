@@ -1,0 +1,22 @@
+Metadata-Version: 1.1
+Name: tenant
+Version: 0.1
+Summary: TYPE YOUR DESCRIPTION HERE
+Home-page: https://github.com/user/reponame
+Author: Threesh
+Author-email: theekshana.sandaru@gmail.com
+License: MIT
+Download-URL: https://github.com/SandaruThilakarathne/MuttiT/archive/refs/tags/v_1.tar.gz
+Description: UNKNOWN
+Keywords: Python,Tenant,AIOhttp
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
