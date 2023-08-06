@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: polyglot-tokenizer
+Version: 2.0.0
+Summary: 
+Requires-Dist: pbr (>=2.0.0)
+Requires-Dist: six
+
+Tokenizer for Indian scripts and Roman script.
+This module provides a complete tokenizer for Indian languages including Urdu, Kashmiri and Roman script.
+Home-page: UNKNOWN
+Author: 
+Irshad Ahmad Bhat
+Author-email: 
+bhatirshad127@gmail.com
+irshad.bhat@research.iiit.ac.in
+Maintainer-email: 
+bhatirshad127@gmail.com
+irshad.bhat@research.iiit.ac.in
+License: UNKNOWN
+Description: 
+        
+        
+Platform: UNKNOWN
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved
+Classifier: License :: OSI Approved :: GNU General Public License v3 or later (GNU GPLv3)
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
