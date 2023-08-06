@@ -1,0 +1,4 @@
+pyqt5-sip
+icepap
+pyqtgraph
+numpy
