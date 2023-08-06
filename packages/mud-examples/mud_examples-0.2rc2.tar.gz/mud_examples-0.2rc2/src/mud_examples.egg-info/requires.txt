@@ -1,0 +1,20 @@
+mud~=0.0.24
+numpy
+scipy
+matplotlib
+
+[:python_version < "3.8"]
+importlib-metadata
+
+[pub]
+setuptools
+wheel
+twine
+
+[test]
+pytest
+pytest-cov
+coverage
+coveralls
+flake8
+pre-commit
