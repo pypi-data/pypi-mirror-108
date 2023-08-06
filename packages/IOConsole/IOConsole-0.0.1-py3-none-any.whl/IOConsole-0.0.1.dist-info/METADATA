@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: IOConsole
+Version: 0.0.1
+Summary: A useful module
+Home-page: UNKNOWN
+Author: Man Foo
+Author-email: foomail@foo.com
+License: UNKNOWN
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: IOPrintStream
+
+UNKNOWN
+
