@@ -1,0 +1,8 @@
+README.md
+setup.cfg
+GenPy/__init__.py
+GenPy/genpy.py
+GenPy_karjakak.egg-info/PKG-INFO
+GenPy_karjakak.egg-info/SOURCES.txt
+GenPy_karjakak.egg-info/dependency_links.txt
+GenPy_karjakak.egg-info/top_level.txt
