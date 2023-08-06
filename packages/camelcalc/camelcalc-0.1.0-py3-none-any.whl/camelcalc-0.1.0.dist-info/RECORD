@@ -1,0 +1,13 @@
+CHANGELOG.md,sha256=g0_P3jbMIT4nRSn923AZHddQLbDuojE242ij0_2LxjE,54
+LICENSE,sha256=NC0eWA3V9s34dS2eSNfBzpC--xS1itPf0dj1OoBUoJY,1076
+camelcalc/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+camelcalc/camelcalc.py,sha256=_37VgPsL5AGIbe7OC4Ohl00FfD3Vw0rrhyRz6cHGk4M,1610
+camelcalc/camelup.py,sha256=m3a-7IoHMS9A9qwLbtDrcwllk0Jd0kquAozSWMHdjbk,16185
+camelcalc/linkedlist.py,sha256=OdvgI_4u75F4g0FDFq7foDOXm9y7d3Ik1OOBlnTmtDI,2972
+camelcalc/play.py,sha256=sPIQb_1X9pZ0HFwU_mSUPaoMYoPB-E4ip6Ig1B48Kac,8270
+camelcalc/utils.py,sha256=hkd3R6p7iYGy1GcMmgTro9Alj2mfeFzsXC9W3gCx7w0,1864
+camelcalc-0.1.0.dist-info/entry_points.txt,sha256=kU5KUwX6AawAjpsRH6KsvzaEYqhhHYF2G3ggiT7KpbY,47
+camelcalc-0.1.0.dist-info/LICENSE,sha256=NC0eWA3V9s34dS2eSNfBzpC--xS1itPf0dj1OoBUoJY,1076
+camelcalc-0.1.0.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+camelcalc-0.1.0.dist-info/METADATA,sha256=M8BBlFK887oiFQNc7cyl-d4-FZbBY7M74kQDF5F_jQY,1350
+camelcalc-0.1.0.dist-info/RECORD,,
