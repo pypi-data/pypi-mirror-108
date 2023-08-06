@@ -1,0 +1,6 @@
+pexpect
+liboidcagent
+requests
+Click
+click-option-group
+click-logging
