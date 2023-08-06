@@ -1,0 +1,20 @@
+Metadata-Version: 2.1
+Name: baby-steps
+Version: 0.1.0
+Summary: Readability Matters
+Home-page: https://github.com/nikitanovosibirsk/baby-steps
+Author: Nikita Tsvetkov
+Author-email: nikitanovosibirsk@yandex.com
+License: Apache-2.0
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# baby-steps
+
