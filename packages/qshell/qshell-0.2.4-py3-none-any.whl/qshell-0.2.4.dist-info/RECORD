@@ -1,0 +1,8 @@
+qshell/__init__.py,sha256=L6KZ4ZxnfQP8U6NFcyaPg2lwV5mA-zScDIop0GZ9HcY,102
+qshell/command.py,sha256=5_u1ZlFL2UE2i4MTJq0sjqcPCm2fq8jtpl1s3E93Cvg,498
+qshell/shell.py,sha256=8tz4XhHYhaABnQ-L453Q2r6Lih3DIkD78GjCq2OG3QY,3460
+qshell-0.2.4.dist-info/LICENSE,sha256=NsoYHpHfDsQp6XoKfnIjg9Oyrt9yZrjlT_mf7K9zf4w,1063
+qshell-0.2.4.dist-info/METADATA,sha256=YHsgwnXYsoNR5ObbavYfPrOJXantGHXE25gibmebnng,238
+qshell-0.2.4.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+qshell-0.2.4.dist-info/top_level.txt,sha256=tE_EMCHHPHwk_UsDL0TLHA56VXxNNUT-5SiR1-ZSFaM,7
+qshell-0.2.4.dist-info/RECORD,,
