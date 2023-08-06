@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: dlnpyutils
+Version: 1.0.1
+Summary: David Nidever Python Utility Functions
+Home-page: https://github.com/dnidever/dlnpyutils
+Author: David Nidever
+Author-email: dnidever@montana.edu
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: numpy
+Requires-Dist: astropy
+Requires-Dist: scipy
+
+UNKNOWN
+
+
