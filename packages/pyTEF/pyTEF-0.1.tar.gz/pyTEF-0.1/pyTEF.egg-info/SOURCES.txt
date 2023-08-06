@@ -1,0 +1,17 @@
+CONTRIBUTING.md
+LICENSE
+MANIFEST.in
+README.md
+settings.ini
+setup.py
+pyTEF/__init__.py
+pyTEF/_nbdev.py
+pyTEF/calc.py
+pyTEF/tef_core.py
+pyTEF.egg-info/PKG-INFO
+pyTEF.egg-info/SOURCES.txt
+pyTEF.egg-info/dependency_links.txt
+pyTEF.egg-info/entry_points.txt
+pyTEF.egg-info/not-zip-safe
+pyTEF.egg-info/requires.txt
+pyTEF.egg-info/top_level.txt

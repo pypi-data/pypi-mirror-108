@@ -1,0 +1,10 @@
+pip
+packaging
+netCDF4
+xarray
+matplotlib
+numpy
+gsw
+tqdm
+
+[dev]
