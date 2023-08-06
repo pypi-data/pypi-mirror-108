@@ -1,0 +1,14 @@
+stages:
+    - build
+
+build:
+    image: python:latest
+    stage: build
+    tags:
+        - docker
+    only:
+        - tags
+    script:
+    - pip install twine
+    - python setup.py sdist bdist_wheel
+    - python -m twine upload dist/*
