@@ -1,0 +1,10 @@
+pepmatch/__init__.py,sha256=q5tTYyTWI9CNvKJVWWgCw8JzPcMcI66rAo06U7mGR-8,104
+pepmatch/benchmarker.py,sha256=gV0vzenJmgQOgLG44A6SadM2DaxYIjGFe76RqRyqL04,1987
+pepmatch/matcher.py,sha256=DWzF2Z2H2QBXAsQU8udsykhZ6xop5Wx3rBc3wJBLwgE,20159
+pepmatch/parser.py,sha256=CFItNUZYPU4v1_cTDvddr-Luv9-qbSWXUW9_6GoVwhQ,175
+pepmatch/preprocessor.py,sha256=7lB_SbvIyn-qYH7zX5x4yw40-muoBJW3FeYDxog1JLA,7472
+pepmatch-0.6.1.dist-info/LICENSE,sha256=SZkJx2dvoSr7Zpzf_MBMf7RJIFbF-_ktNgRJuHYS-rA,11757
+pepmatch-0.6.1.dist-info/METADATA,sha256=-lG49z5XuiYXi6LK66rhZYWRzGsF8sWP60xd1mQJVIE,14031
+pepmatch-0.6.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pepmatch-0.6.1.dist-info/top_level.txt,sha256=UXrYMSdszu66XPl2_yo0GPLHQtmVXNUHnTTF7G0zvHs,9
+pepmatch-0.6.1.dist-info/RECORD,,
