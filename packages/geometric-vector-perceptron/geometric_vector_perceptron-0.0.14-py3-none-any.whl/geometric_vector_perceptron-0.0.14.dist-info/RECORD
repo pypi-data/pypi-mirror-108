@@ -1,0 +1,12 @@
+examples/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+examples/data_handler.py,sha256=Y_Fhgr82sF-lefRLbBC5pAmTmJHUmRUeu-frh97YYfg,32896
+examples/data_utils.py,sha256=XXgImxPkA6wErAB1BBVMwZHGuBNDTq6_9iD2Xm1Dvto,26188
+examples/scn_data_module.py,sha256=KrrVgmuq1kWNQbI-3pIqgi94PbB9BgHYXBKSPTvu2go,4762
+examples/train_lightning.py,sha256=FM6Trx6zX_ei5Ecl-4By6W5aePjzynMTQ05lSmpRxXQ,10101
+geometric_vector_perceptron/__init__.py,sha256=OTEYABB2SyIcPzyrDYtzSt8S_FFZG_Eg7SneVi8u0gM,121
+geometric_vector_perceptron/geometric_vector_perceptron.py,sha256=glwxl4-DogteROkXy7ZNbbf7aHzFeRxeloaQetxpgrE,18711
+geometric_vector_perceptron-0.0.14.dist-info/LICENSE,sha256=u9GWBJahedwby668ypMumVsRqbkuykNCiJ8eAEPQmUQ,1080
+geometric_vector_perceptron-0.0.14.dist-info/METADATA,sha256=mtgJ7St-B3uMa_8eJ7iqu5bXbQlnERcRig0TwrajUAs,818
+geometric_vector_perceptron-0.0.14.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+geometric_vector_perceptron-0.0.14.dist-info/top_level.txt,sha256=L86LSxh0bscHgHGi0uLQolEB0YqkdUUAV3Tx5TP7bV4,37
+geometric_vector_perceptron-0.0.14.dist-info/RECORD,,
