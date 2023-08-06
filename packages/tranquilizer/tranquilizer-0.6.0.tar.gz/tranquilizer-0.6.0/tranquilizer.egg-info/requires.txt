@@ -1,0 +1,17 @@
+flask
+werkzeug<2.0,>=0.15
+flask-restx
+flask-cors
+python-dateutil
+
+[all]
+ipython
+nbconvert
+numpy
+pillow
+
+[recommended]
+nbconvert
+ipython
+numpy
+pillow
