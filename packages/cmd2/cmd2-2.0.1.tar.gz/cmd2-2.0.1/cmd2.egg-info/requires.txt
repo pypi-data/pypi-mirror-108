@@ -1,0 +1,38 @@
+attrs>=16.3.0
+colorama>=0.3.7
+pyperclip>=1.6
+wcwidth>=0.1.7
+
+[:python_version < "3.8"]
+importlib_metadata>=1.6.0
+typing_extensions
+
+[:sys_platform=='win32' and python_version<'3.8']
+pyreadline
+
+[:sys_platform=='win32' and python_version>='3.8']
+pyreadline3
+
+[dev]
+pytest>=4.6
+codecov
+pytest-cov
+pytest-mock
+nox
+flake8
+sphinx
+sphinx-rtd-theme
+sphinx-autobuild
+doc8
+invoke
+twine>=1.11
+
+[test]
+codecov
+coverage
+pytest>=4.6
+pytest-cov
+pytest-mock
+
+[test:sys_platform == "darwin"]
+gnureadline
