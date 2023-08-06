@@ -1,0 +1,10 @@
+application_properties/__init__.py,sha256=CgwW3o8vuxHW0nlvZd8-D2iMlryNkUz5cvbphmgXjn0,429
+application_properties/application_properties.py,sha256=uQg9ijs0vHyLxkszARc6Xf_2rLbomtvt60L7xwk5upk,12479
+application_properties/application_properties_facade.py,sha256=DMf5pwf6uyCDv4mn2NOfS9JvSRyiQAJq2hLRvb2dLsM,4450
+application_properties/application_properties_json_loader.py,sha256=beA5exYtZpn5VPZG9SzSPg4JV3K9t9eTMWED5A9UbS0,1825
+application_properties/version.py,sha256=WrLB7FIyaqrzbbt4SgIZ4V_IvsUVcerKyB7js1fHhR4,65
+application_properties-0.5.0.dist-info/LICENSE.txt,sha256=00cdrocebkLuhMYU9_Elrvu7R7vi7YQZkQuqN1N9660,1058
+application_properties-0.5.0.dist-info/METADATA,sha256=NELIekOSm2Nh1-HIaTy0KNps4ki24d-Ag3Q45Dy0NSU,3243
+application_properties-0.5.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+application_properties-0.5.0.dist-info/top_level.txt,sha256=oU-z7lt1cYGx3BweiGkkHtal3-PekgAh9-aK0GSr3Qc,23
+application_properties-0.5.0.dist-info/RECORD,,
