@@ -1,0 +1,11 @@
+README.md
+setup.py
+notifyd/__init__.py
+notifyd/__main__.py
+notifyd/notifyd.py
+notifyd.egg-info/PKG-INFO
+notifyd.egg-info/SOURCES.txt
+notifyd.egg-info/dependency_links.txt
+notifyd.egg-info/entry_points.txt
+notifyd.egg-info/requires.txt
+notifyd.egg-info/top_level.txt

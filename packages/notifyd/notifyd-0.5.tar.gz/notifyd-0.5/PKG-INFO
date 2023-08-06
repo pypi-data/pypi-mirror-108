@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: notifyd
+Version: 0.5
+Summary: cross platform notify cli
+Home-page: UNKNOWN
+Author: madhavth
+Author-email: 
+License: UNKNOWN
+Platform: UNKNOWN
+
+cross platform notification cli something 
+
+dependent on py-notifier
+
