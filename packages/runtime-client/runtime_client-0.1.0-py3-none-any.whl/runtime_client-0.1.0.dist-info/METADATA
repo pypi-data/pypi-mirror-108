@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: runtime-client
+Version: 0.1.0
+Summary: Model Server implementation for AI Runtime.
+Home-page: UNKNOWN
+Author-email: pydemia@gmail.com
+License: https://github.com/kubeflow/kfserving/LICENSE
+Platform: UNKNOWN
+Requires-Python: >3.4
+Requires-Dist: argparse (>=1.4.0)
+Requires-Dist: dill (>=0.3.3)
+Requires-Dist: joblib
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: requests (>=2.25.1)
+Requires-Dist: requests-toolbelt (>=0.9.1)
+Provides-Extra: test
+Requires-Dist: pytest ; extra == 'test'
+Requires-Dist: pytest-asyncio ; extra == 'test'
+Requires-Dist: pytest-tornasync ; extra == 'test'
+Requires-Dist: mypy ; extra == 'test'
+
+# Runtime Client
+
+To request inferences.
+
+
