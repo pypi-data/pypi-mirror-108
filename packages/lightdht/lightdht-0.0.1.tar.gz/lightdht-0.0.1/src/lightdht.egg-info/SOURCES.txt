@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+src/lightdht/__init__.py
+src/lightdht/client.py
+src/lightdht/server.py
+src/lightdht/tools.py
+src/lightdht.egg-info/PKG-INFO
+src/lightdht.egg-info/SOURCES.txt
+src/lightdht.egg-info/dependency_links.txt
+src/lightdht.egg-info/top_level.txt
