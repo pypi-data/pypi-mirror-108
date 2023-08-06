@@ -1,0 +1,6 @@
+[console_scripts]
+poetry=poetry.console:run
+
+[vanty_installer]
+vanty=.__main__
+
