@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: Balu test Pacakage
+Version: 0.0.1
+Summary: An demonstration of how to create, document, and publish to the cheese shop a5 pypi.org.
+Home-page: http://packages.python.org/an_example_pypi_project
+Author: Balaji Chippada
+Author-email: BALAJI.CHIPPADA@t-systems.com
+License: BSD
+Keywords: example documentation tutorial
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Topic :: Utilities
+Classifier: License :: OSI Approved :: BSD License
+
+UNKNOWN
+
