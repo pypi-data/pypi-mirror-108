@@ -1,0 +1,67 @@
+[build-system]
+requires = ["setuptools>=45", "wheel", "setuptools_scm[toml]>=6"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools_scm]
+write_to = "src/flake8_dunder_class_obj/version.py"
+
+[tool.coverage.run]
+branch = true
+source = ["flake8_dunder_class_obj"]
+
+[tool.coverage.paths]
+source = ["src", "*/site-packages/"]
+
+[tool.coverage.report]
+show_missing = true
+fail_under = 100
+exclude_lines = [
+    "pragma: no cover",
+    "if __name__ == .__main__.:",
+    "def __repr__"
+]
+omit = [
+    "src/flake8_dunder_class_obj/__main__.py"
+]
+
+[tool.coverage.html]
+directory = "reports/coverage_html"
+
+[tool.isort]
+line_length = 88
+multi_line_output = 3
+include_trailing_comma = true
+balanced_wrapping = true
+default_section = "THIRDPARTY"
+known_first_party = ["flake8_dunder_class_obj", "tests"]
+use_parentheses = true
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+testpaths = [
+    "tests",
+]
+markers = [
+]
+
+[tool.flake8]
+max-line-length = 88
+max-complexity = 8
+max-annotations-complexity = 4
+max-expression-complexity = 7
+known-modules = "flake8_dunder_class_obj:"
+accept-encodings = "utf-8"
+show-source = "true"
+docstring_style = "sphinx"
+exclude = [
+    "__pycache__",
+    "docs/source/conf.py,",
+    "src/flake8_dunder_class_obj/version.py",
+    "build",
+    "dist",
+    "htmlcov",
+]
+
+[tool.black]
+line-length = 88
+target-version = ['py36']
