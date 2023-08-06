@@ -1,0 +1,40 @@
+[tool.poetry]
+name = "noice"
+version = "0.1.6"
+description = "Data Engineering tools."
+readme = "README.md"
+repository = "https://github.com/Mashey/noice"
+authors = [
+    "Jordan <jordan@mashey.com>",
+    "Blake <blake@mashey.com>",
+    "Ryan <ryan@mashey.com>",
+    "Michael <michael@mashey.com>",
+    "Steven <steven@mashey.com>"
+]
+license = "MIT"
+
+[tool.poetry.dependencies]
+click = "^8.0.1"
+cookiecutter = "^1.7.3"
+Jinja2 = "^3.0.1"
+python = "^3.9"
+python-fire = "^0.1.0"
+requests = "^2.25.1"
+rich = "^10.2.2"
+sendgrid = "^6.7.0"
+
+[tool.poetry.dev-dependencies]
+black = "^21.5b1"
+coverage = "^5.5"
+coveralls = "^3.1.0"
+pylint = "^2.8.2"
+pytest = "^6.2.4"
+pytest-cov = "^2.11.1"
+pytest-mock = "^3.6.1"
+pytest-vcr = "^1.0.2"
+python-dotenv = "^0.17.1"
+vcrpy = "^4.1.1"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
