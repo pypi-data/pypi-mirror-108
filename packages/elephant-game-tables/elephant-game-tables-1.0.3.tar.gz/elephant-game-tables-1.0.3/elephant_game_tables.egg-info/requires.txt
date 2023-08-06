@@ -1,0 +1,6 @@
+click
+click-aliases
+Jinja2
+openpyxl
+regex
+six

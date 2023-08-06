@@ -1,0 +1,12 @@
+{% extends "common/comment_head.ts.j2" %}
+
+{% block content %}
+{% import "common/path_utils_macro.j2" as path_utils %}
+
+import { BaseTableItem } from '{{path_utils.framework_path(prefix)}}/Tables/Item/BaseTableItem';
+import { BaseTableT } from '{{path_utils.framework_path(prefix)}}/Tables/Table/BaseTableT';
+
+{% for code in codes %}
+{{code.content}}
+{% endfor %}
+{% endblock content %}

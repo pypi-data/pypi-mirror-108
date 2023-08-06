@@ -1,0 +1,18 @@
+{% extends "manager/table_manager_base.ts.j2" %}
+
+{% block import_header %}
+{% import "common/path_utils_macro.j2" as path_utils %}
+import { BaseBundleTableManager } from '{{path_utils.framework_path(prefix)}}/Tables/Manager/BaseBundleTableManager';
+{% endblock %}
+
+
+{%- block praent_table_manager_name_block -%}
+BaseBundleTableManager
+{%- endblock -%}
+
+
+{%- block table_manager_body -%}
+    public getName(): string {
+        return '{{prefix}}';
+    }
+{%- endblock -%}

@@ -1,0 +1,26 @@
+{% extends "common/comment_head.ts.j2" %}
+
+{% block content %}
+
+{%- set table_manager_name -%}
+{{prefix}}TableManager
+{%- endset -%}
+
+{% import "common/path_utils_macro.j2" as path_utils %}
+import { Instance } from '{{path_utils.framework_path(prefix)}}/Decorators/Instance';
+import { {{table_manager_name}} } from './{{prefix}}TableManager';
+{% for table in tables %}
+import {
+    {{table.name}}
+} from './{{prefix}}TableDefines';
+{% endfor %}
+
+export class {{prefix}}Tables {
+    {% for table in tables -%}
+    public static get {{table.name}}(): {{table.name}} {
+        return Instance({{table_manager_name}}).getTable('{{table.name}}') as {{table.name}};
+    }
+    {%- endfor %}
+
+}
+{% endblock content %}

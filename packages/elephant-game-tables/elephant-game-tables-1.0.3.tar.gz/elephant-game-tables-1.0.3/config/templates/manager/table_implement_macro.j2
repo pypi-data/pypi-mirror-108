@@ -1,0 +1,29 @@
+{% macro create_table_manager_class(prefix, parent_class_name, tables) %}
+
+{%- set table_manager_name -%}
+{{prefix}}TableManager
+{%- endset -%}
+
+export class {{table_manager_name}} extends {{parent_class_name}} {
+    private static ins: {{table_manager_name}};
+
+    static GetInstance(): {{table_manager_name}} {
+        if (this.ins == undefined) {
+            this.ins = new {{table_manager_name}}();
+        }
+        return this.ins;
+    }
+
+    public createTable(tableName: string): ITable {
+        switch (tableName) {
+        {% for table in tables -%}
+            case '{{ table.name }}':
+                return new {{ table.name }}();
+        {% endfor -%}
+        }
+        return null;
+    }
+    
+    {{caller()}}
+}
+{% endmacro %}
