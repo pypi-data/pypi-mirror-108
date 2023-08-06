@@ -1,0 +1,15 @@
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+transipddnsclient/__init__.py
+transipddnsclient/__main__.py
+transipddnsclient/core.py
+transipddnsclient/externalip.py
+transipddnsclient/transip.py
+transipddnsclient/utils.py
+transipddnsclient.egg-info/PKG-INFO
+transipddnsclient.egg-info/SOURCES.txt
+transipddnsclient.egg-info/dependency_links.txt
+transipddnsclient.egg-info/requires.txt
+transipddnsclient.egg-info/top_level.txt
