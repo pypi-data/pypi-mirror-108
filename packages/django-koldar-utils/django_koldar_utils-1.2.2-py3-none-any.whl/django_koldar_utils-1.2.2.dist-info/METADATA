@@ -1,0 +1,43 @@
+Metadata-Version: 2.1
+Name: django-koldar-utils
+Version: 1.2.2
+Summary: Some stuff that i used when developing with django
+Home-page: https://github.com/Koldar/django-koldar-common-apps
+Author: Massimo Bono
+Author-email: massimobono1@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires: setuptools
+Requires: wheel
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+License-File: pmakeup-cache.json
+License-File: PMakeupfile.py
+License-File: README.md
+License-File: requirements.txt
+License-File: setup.py
+License-File: TWINE_PYPI_PASSWORD
+Requires-Dist: aniso8601 (>=8.1.1)
+Provides-Extra: doc
+Provides-Extra: test
+
+# Introduction
+
+Django app that expose a graphql schema as well as a graphiql interface.
+
+# install
+
+```
+pip install django-app-graphql
+```
+
+# Update new version
+
+```
+pmakeup update-version-patch build upload-to-pypi
+```
+
