@@ -1,0 +1,12 @@
+pyspawner/__init__.py,sha256=hToFPBeIWmrYb_4TbCeI7zH2Nh79yPolH0vaD1fvbds,3866
+pyspawner/c.py,sha256=-EHmOLLrseN8wBoINqTHvruMNHLTZCFPbeV-scdo5Zg,7205
+pyspawner/client.py,sha256=awHt_ahGYm9JB78x36xsTEIgc0nwYpXfH2316ak3-K8,7176
+pyspawner/clonefds.py,sha256=BrnMEkK_GaMPdP6rt4i1ecfx8qrPdgScuj_dbE5af14,6949
+pyspawner/main.py,sha256=bZEYegrbiZsTT1ZpttoWttXN2PldkDb2QMaiBEW7aH4,8627
+pyspawner/protocol.py,sha256=dD01f63rwMtL00YuMaRQtH61VSJUBqoEbx5AywCVwYA,3650
+pyspawner/sandbox-seccomp.bpf,sha256=BLWXeZQkznl7lIll5jItnP06OHwTjJxwJmMUyntzUaE,2392
+pyspawner/sandbox.py,sha256=dZc22_3LsPeDfv3xPClqRZUqU8irXXvTj4iwQKUshtI,14985
+pyspawner-1.0.0.dist-info/LICENSE.txt,sha256=01JH1NaulCwflgca9x8P5nrtykv-AEWGEsu2eBdjmNs,1072
+pyspawner-1.0.0.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+pyspawner-1.0.0.dist-info/METADATA,sha256=fpOa6EC-cogFwZPPZo0l9EHwcpXQ2KLdyZb57KF8qAE,4971
+pyspawner-1.0.0.dist-info/RECORD,,
