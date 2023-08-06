@@ -1,0 +1,21 @@
+Metadata-Version: 2.1
+Name: benamer
+Version: 0.1.0
+Summary: An intuitive bulk file renamer (no regex).
+Home-page: https://github.com/baltasarq/benamer/
+Author: dev::baltasarq
+Author-email: baltasarq@gmail.com
+License: MIT
+Keywords: bulk file renamer
+Platform: arch linux
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Topic :: System :: Installation/Setup
+Classifier: Operating System :: POSIX :: Linux
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+
+# benamer
+Bulk renamer with intuitive (no regex) options.
+
+
