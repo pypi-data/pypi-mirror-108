@@ -1,0 +1,12 @@
+LICENSE
+README.md
+setup.py
+threedboard/__init__.py
+threedboard/__main__.py
+threedboard/data_reader.py
+threedboard.egg-info/PKG-INFO
+threedboard.egg-info/SOURCES.txt
+threedboard.egg-info/dependency_links.txt
+threedboard.egg-info/not-zip-safe
+threedboard.egg-info/requires.txt
+threedboard.egg-info/top_level.txt
