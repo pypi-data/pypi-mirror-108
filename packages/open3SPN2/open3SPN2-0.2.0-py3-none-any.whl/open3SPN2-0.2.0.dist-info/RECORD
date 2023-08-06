@@ -1,0 +1,11 @@
+open3SPN2/3SPN2.conf,sha256=Ui2WMjZVYh3YbapW43vCre2oOlAavootna1qemerL3I,15690
+open3SPN2/3SPN2.xml,sha256=mBRm81pUE2sfQZ0iEWHzyeFc8_aqcfqWyhygdRcb3rw,1546
+open3SPN2/__init__.py,sha256=6MPSuvYQKF9sO_ku0xpZfak0EzYZfSUGnvuaRedG0jw,32
+open3SPN2/_version.py,sha256=lP8srSrjBFnK9mFkVIyvWTpSHZSFX3P4-q25Mu0eRec,497
+open3SPN2/ff3SPN2.py,sha256=Sm_7RtR2-1CttHINsRQ7mldTS_V2nibv82MRQjjZyUU,86313
+open3SPN2/function_terms.py,sha256=JnFuYAqn9mGl27x_I_7qFLb34p4tI4dfW87tIoCWpl0,1480
+open3SPN2-0.2.0.dist-info/LICENSE.txt,sha256=DurCHqdQaiS3lWA1xwSAZHsTfrL-xLgu5kEI9LWfCII,1136
+open3SPN2-0.2.0.dist-info/METADATA,sha256=Ftx7LydtK8N9frqYKAFZ7heBn3TCGIhSn_ArwQt8cDA,4020
+open3SPN2-0.2.0.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+open3SPN2-0.2.0.dist-info/top_level.txt,sha256=mcUmduknQB9xtLvVFWdFPvbKn5ueYV1e55i9OJUU8Hw,10
+open3SPN2-0.2.0.dist-info/RECORD,,
