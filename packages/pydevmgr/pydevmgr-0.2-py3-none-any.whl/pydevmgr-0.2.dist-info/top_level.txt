@@ -1,0 +1,4 @@
+pydevmgr_core
+pydevmgr_elt
+pydevmgr_qt
+pydevmgr_test
