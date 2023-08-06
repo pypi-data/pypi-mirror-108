@@ -1,0 +1,10 @@
+README.md
+setup.py
+pyFileArchiver/__init__.py
+pyFileArchiver/archiver.py
+pyFileArchiverGrigoriew.egg-info/PKG-INFO
+pyFileArchiverGrigoriew.egg-info/SOURCES.txt
+pyFileArchiverGrigoriew.egg-info/dependency_links.txt
+pyFileArchiverGrigoriew.egg-info/top_level.txt
+tests/__init__.py
+tests/test_archiver.py
