@@ -1,0 +1,8 @@
+setup.py
+alamoAlg/__init__.py
+alamoAlg/model.py
+alamoAlg.egg-info/PKG-INFO
+alamoAlg.egg-info/SOURCES.txt
+alamoAlg.egg-info/dependency_links.txt
+alamoAlg.egg-info/requires.txt
+alamoAlg.egg-info/top_level.txt

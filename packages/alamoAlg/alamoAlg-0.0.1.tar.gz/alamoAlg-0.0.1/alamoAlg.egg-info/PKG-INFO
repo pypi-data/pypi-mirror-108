@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: alamoAlg
+Version: 0.0.1
+Summary: Alamo Algorithm Class Implementation
+Home-page: UNKNOWN
+Author: Jackson Curry
+Author-email: <jackson.curry6464@gmail.com>
+License: UNKNOWN
+Description: Python package that allows the user to use the alamo algorithm for interpolation
+Keywords: python,Alamo,Interpolation
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
