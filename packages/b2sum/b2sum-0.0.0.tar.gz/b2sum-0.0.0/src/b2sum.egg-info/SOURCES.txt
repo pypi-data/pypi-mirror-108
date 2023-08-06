@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/b2sum/__init__.py
+src/b2sum/__main__.py
+src/b2sum/b2sum.py
+src/b2sum.egg-info/PKG-INFO
+src/b2sum.egg-info/SOURCES.txt
+src/b2sum.egg-info/dependency_links.txt
+src/b2sum.egg-info/entry_points.txt
+src/b2sum.egg-info/top_level.txt
