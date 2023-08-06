@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+cli_main.py
+setup.py
+gitfun/GitFun.py
+gitfun/__init__.py
+gitfun/__main__.py
+gitfun.egg-info/PKG-INFO
+gitfun.egg-info/SOURCES.txt
+gitfun.egg-info/dependency_links.txt
+gitfun.egg-info/entry_points.txt
+gitfun.egg-info/requires.txt
+gitfun.egg-info/top_level.txt
