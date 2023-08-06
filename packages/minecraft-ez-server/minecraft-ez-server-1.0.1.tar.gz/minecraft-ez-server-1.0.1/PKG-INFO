@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: minecraft-ez-server
+Version: 1.0.1
+Summary: Setup minecraft servers with easy!
+Home-page: https://github.com/timaaos/mcserversetup
+Author: Timaaos
+Author-email: whybrawlmail@gmail.com
+License: MIT License
+Description: # mcsetupserver
+        Setup minecraft server with easy!  
+        You need to `pip install windows_curses` to work on windows.  
+        ## How to run:
+        Run via `python -m minecraft-ez-server`
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
