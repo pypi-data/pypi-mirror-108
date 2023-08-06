@@ -1,0 +1,3 @@
+[console_scripts]
+settotop = settotop.settotop:main
+
