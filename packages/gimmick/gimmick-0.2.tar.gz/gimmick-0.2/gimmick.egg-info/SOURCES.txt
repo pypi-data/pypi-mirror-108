@@ -1,0 +1,16 @@
+LICENSE
+README.md
+setup.py
+gimmick/__init__.py
+gimmick/constants.py
+gimmick/distributer.py
+gimmick/mapping.py
+gimmick.egg-info/PKG-INFO
+gimmick.egg-info/SOURCES.txt
+gimmick.egg-info/dependency_links.txt
+gimmick.egg-info/requires.txt
+gimmick.egg-info/top_level.txt
+gimmick/image_op/__init__.py
+gimmick/image_op/functions.py
+gimmick/models/__init__.py
+gimmick/models/autoencoder_dense.py
