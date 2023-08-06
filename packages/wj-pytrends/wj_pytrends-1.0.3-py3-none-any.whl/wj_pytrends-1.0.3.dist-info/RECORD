@@ -1,0 +1,10 @@
+wj_pytrends/.gitignore,sha256=28XAkeO3abxOuRhSn_doVq_uUo6SwAfcqy5WU5I9Sfw,2090
+wj_pytrends/__init__.py,sha256=qKK4BMzdt84HiCorJPWqgEfa_DbJeuGx_bIPrDui2vc,22
+wj_pytrends/dailydata.py,sha256=18jfrVJ6diW37v7WkM14YU_qp978OnQ94gnQXGrOsQ8,5308
+wj_pytrends/exceptions.py,sha256=SfmapRHwetFLaup2mSw4YS3vX-EYe_fvGxC0YS4PcdU,273
+wj_pytrends/request.py,sha256=6rfnZcQFKXV5NBYPI_t83V9UuNYNSEojuszzPFyOZoc,25444
+wj_pytrends/test_trendReq.py,sha256=NFyCL93lAoLFaABOJimrOOAm1FqdFsCtfaWimc1KmkI,2111
+wj_pytrends-1.0.3.dist-info/LICENSE.md,sha256=-BeIbua7Ze0wmKeYex6XgWU9FccfhVic4NKvZjxm03M,34888
+wj_pytrends-1.0.3.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+wj_pytrends-1.0.3.dist-info/METADATA,sha256=L7Rrg3uIL1FdKw76z3AVXFk6LPMopSog2N9-4-iOB68,548
+wj_pytrends-1.0.3.dist-info/RECORD,,
