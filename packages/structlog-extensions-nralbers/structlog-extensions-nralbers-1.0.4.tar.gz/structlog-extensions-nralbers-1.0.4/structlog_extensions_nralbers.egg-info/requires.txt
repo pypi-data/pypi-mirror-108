@@ -1,0 +1,4 @@
+structlog>=19.2
+user-agents
+deepmerge
+pytz
