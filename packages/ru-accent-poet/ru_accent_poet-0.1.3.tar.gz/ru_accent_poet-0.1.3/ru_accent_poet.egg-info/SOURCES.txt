@@ -1,0 +1,14 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+ru_accent_poet/__init__.py
+ru_accent_poet/accent.dic
+ru_accent_poet/accent1.dic
+ru_accent_poet/neuro.py
+ru_accent_poet/rules.py
+ru_accent_poet.egg-info/PKG-INFO
+ru_accent_poet.egg-info/SOURCES.txt
+ru_accent_poet.egg-info/dependency_links.txt
+ru_accent_poet.egg-info/requires.txt
+ru_accent_poet.egg-info/top_level.txt
