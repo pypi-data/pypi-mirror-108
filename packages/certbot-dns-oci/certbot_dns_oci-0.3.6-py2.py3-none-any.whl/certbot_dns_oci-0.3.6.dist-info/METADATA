@@ -1,0 +1,73 @@
+Metadata-Version: 2.1
+Name: certbot-dns-oci
+Version: 0.3.6
+Summary: Oracle Cloud infrastructure DNS Authenticator plugin for Certbot
+Home-page: https://github.com/ITD27M01/certbot-dns-oci
+Author: itd27m01
+Author-email: igortiunov@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: System Administrators
+Classifier: Environment :: Plugins
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Security
+Classifier: Topic :: System :: Installation/Setup
+Classifier: Topic :: System :: Networking
+Classifier: Topic :: System :: Systems Administration
+Classifier: Topic :: Utilities
+Description-Content-Type: text/markdown
+Requires-Dist: zope.interface
+Requires-Dist: oci (>=2.35.0)
+Requires-Dist: acme (>=1.13.0)
+Requires-Dist: certbot (<=1.15.0)
+
+# Oracle Cloud Infrastructure DNS Authenticator plugin for Certbot
+
+Plugin automates the process of dns-01 challenge by managing TXT records in
+the Oracle Cloud Infrastructure DNS service.
+
+## Installation
+
+```shell
+pip3 install certbot-dns-oci
+```
+
+## Arguments
+
+| Name        | Description | Default |
+| ------------- |:-------------:| :-------------: |
+| **--authenticator dns-oci** | Select the plugin |Required|
+| **--dns-oci-credentials** | OCI credentials config file location |`~/.oci/config`|
+| **--dns-oci-profile** | Profile name in OCI credentials config file |`DEFAULT`|
+| **--dns-oci-propagation-seconds** | DNS record propagation timeout |60|
+
+## Credentials
+**--dns-oci-credentials** has special value `instance_principal` that switches
+certbot to use the instance principal for OCI authentication
+([please, read the documentation about the feature.](https://docs.oracle.com/en-us/iaas/Content/Identity/Tasks/callingservicesfrominstances.htm))
+Corresponding dynamic group must be able to read `dns-zones` in compartment
+and manage `dns-records`.
+
+In other cases, plugin requires the
+[OCI credentials configuration file](https://docs.oracle.com/en-us/iaas/Content/API/Concepts/sdkconfig.htm),
+which is `~/.oci/config` by default.
+The profile can be specified by **--dns-oci-profile** (usually `DEFAULT`).
+## Example
+
+```shell
+certbot certonly --email user@example.com \
+                 --authenticator dns-oci -d www.example.com --dry-run
+```
+
+## Requirements
+```
+oci
+certbot
+```
+
+
+

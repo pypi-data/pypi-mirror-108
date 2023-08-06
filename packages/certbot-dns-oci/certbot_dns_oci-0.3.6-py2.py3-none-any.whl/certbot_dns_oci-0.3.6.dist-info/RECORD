@@ -1,0 +1,10 @@
+certbot_dns_oci/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+certbot_dns_oci/_internal/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+certbot_dns_oci/_internal/dns_oci.py,sha256=FMc-CKN-BzKLFGl4fA0DOW8E0bw_n5i4oqA3oTBu54Y,5301
+certbot_dns_oci-0.3.6.dist-info/LICENSE,sha256=sE8C2IQ3_RYPtIOx4cDMhJX-dgRQfq5FbgtQPz9NpDY,1067
+certbot_dns_oci-0.3.6.dist-info/METADATA,sha256=4aKxurKnjOqxDr0SNbLBFQ4VdA-ni8nx4ornjvoLZ0o,2473
+certbot_dns_oci-0.3.6.dist-info/WHEEL,sha256=Z-nyYpwrcSqxfdux5Mbn_DQ525iP7J2DG3JgGvOYyTQ,110
+certbot_dns_oci-0.3.6.dist-info/entry_points.txt,sha256=yoDliDJS07FooxlIOYAZA_LAjxlCqCcgmG42PFNDkvY,77
+certbot_dns_oci-0.3.6.dist-info/pbr.json,sha256=F3sBMYJLrzy0wHzXTuIAciCqoJPB2JL2mL3OP70VrOc,47
+certbot_dns_oci-0.3.6.dist-info/top_level.txt,sha256=s_2cfZrOUhwS9MRmAFSOI6a90ReyFWI7uKtFeExe88o,16
+certbot_dns_oci-0.3.6.dist-info/RECORD,,
