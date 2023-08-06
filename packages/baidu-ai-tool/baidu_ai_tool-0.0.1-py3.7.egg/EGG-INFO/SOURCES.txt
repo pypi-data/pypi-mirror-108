@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+baidu-ai-tool/__init__.py
+baidu_ai_tool.egg-info/PKG-INFO
+baidu_ai_tool.egg-info/SOURCES.txt
+baidu_ai_tool.egg-info/dependency_links.txt
+baidu_ai_tool.egg-info/top_level.txt
