@@ -1,0 +1,10 @@
+setup.cfg
+Suresh-pack/Binomialdistribution.py
+Suresh-pack/Gaussiandistribution.py
+Suresh-pack/Generaldistribution.py
+Suresh-pack/__init__.py
+Suresh_pack.egg-info/PKG-INFO
+Suresh_pack.egg-info/SOURCES.txt
+Suresh_pack.egg-info/dependency_links.txt
+Suresh_pack.egg-info/not-zip-safe
+Suresh_pack.egg-info/top_level.txt
