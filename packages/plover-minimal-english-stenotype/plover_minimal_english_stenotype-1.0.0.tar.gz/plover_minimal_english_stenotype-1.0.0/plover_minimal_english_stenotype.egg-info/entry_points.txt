@@ -1,0 +1,3 @@
+[plover.system]
+Minimal English Stenotype = minimal_english_stenotype
+

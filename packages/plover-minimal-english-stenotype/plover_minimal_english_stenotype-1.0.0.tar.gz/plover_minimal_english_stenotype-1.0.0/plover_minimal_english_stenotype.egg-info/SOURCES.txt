@@ -1,0 +1,11 @@
+README.md
+minimal_english_stenotype.py
+setup.cfg
+setup.py
+plover_minimal_english_stenotype.egg-info/PKG-INFO
+plover_minimal_english_stenotype.egg-info/SOURCES.txt
+plover_minimal_english_stenotype.egg-info/dependency_links.txt
+plover_minimal_english_stenotype.egg-info/entry_points.txt
+plover_minimal_english_stenotype.egg-info/requires.txt
+plover_minimal_english_stenotype.egg-info/top_level.txt
+plover_minimal_english_stenotype.egg-info/zip-safe
