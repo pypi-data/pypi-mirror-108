@@ -1,0 +1,13 @@
+#!/usr/bin/env python3
+
+import typer
+from arrayFilter import array_filter_app
+from arrayFilter import array_public_app
+
+app = typer.Typer()
+app.add_typer(array_filter_app, name="filter")
+app.add_typer(array_public_app, name="public")
+
+
+if __name__ == "__main__":
+    app()
