@@ -1,0 +1,11 @@
+Metadata-Version: 1.1
+Name: dash-react-datepicker
+Version: 0.0.1
+Summary: A Dash implementation of hackerone's React Datepicker (reactdatepicker.com).
+Home-page: UNKNOWN
+Author: Kristian V. <kristian@vestermark.me>
+Author-email: UNKNOWN
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Framework :: Dash

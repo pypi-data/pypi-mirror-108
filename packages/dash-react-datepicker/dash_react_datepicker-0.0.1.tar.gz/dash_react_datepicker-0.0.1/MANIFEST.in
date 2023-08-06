@@ -1,0 +1,7 @@
+include dash_react_datepicker/dash_react_datepicker.min.js
+include dash_react_datepicker/dash_react_datepicker.min.js.map
+include dash_react_datepicker/metadata.json
+include dash_react_datepicker/package-info.json
+include README.md
+include LICENSE
+include package.json

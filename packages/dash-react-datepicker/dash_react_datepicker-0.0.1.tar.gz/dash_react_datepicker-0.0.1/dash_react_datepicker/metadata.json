@@ -1,0 +1,136 @@
+{
+  "src/lib/components/DashReactDatepicker.react.js": {
+    "description": "",
+    "displayName": "DashReactDatepicker",
+    "methods": [
+      {
+        "name": "selectedPropToState",
+        "docblock": null,
+        "modifiers": [],
+        "params": [
+          {
+            "name": "selectedProp",
+            "type": null
+          }
+        ],
+        "returns": null
+      },
+      {
+        "name": "onSelectedChange",
+        "docblock": null,
+        "modifiers": [],
+        "params": [
+          {
+            "name": "selected",
+            "type": null
+          }
+        ],
+        "returns": null
+      }
+    ],
+    "props": {
+      "id": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "The ID used to identify this component in Dash callbacks."
+      },
+      "selected": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Selected date. Updates when a new date or time is selected in the datepicker.\nAccepts and returns strings in ISO 8601 format.",
+        "defaultValue": {
+          "value": "null",
+          "computed": false
+        }
+      },
+      "dateFormat": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Format to display date and time when selected.",
+        "defaultValue": {
+          "value": "'dd.MM.yyyy'",
+          "computed": false
+        }
+      },
+      "placeholderText": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Placeholder text to display before a value is selected.",
+        "defaultValue": {
+          "value": "null",
+          "computed": false
+        }
+      },
+      "showTimeSelect": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Whether to show time selection.",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
+      "showTimeSelectOnly": {
+        "type": {
+          "name": "bool"
+        },
+        "required": false,
+        "description": "Whether to only show time selection. Should only be used with showTimeSelect=True.",
+        "defaultValue": {
+          "value": "false",
+          "computed": false
+        }
+      },
+      "timeFormat": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Format to display times in the picker.",
+        "defaultValue": {
+          "value": "'HH:mm'",
+          "computed": false
+        }
+      },
+      "timeIntervals": {
+        "type": {
+          "name": "number"
+        },
+        "required": false,
+        "description": "Intervals of time to display in the picker. Should only be used with showTimeSelect=True.",
+        "defaultValue": {
+          "value": "30",
+          "computed": false
+        }
+      },
+      "timeCaption": {
+        "type": {
+          "name": "string"
+        },
+        "required": false,
+        "description": "Caption for the time picker.",
+        "defaultValue": {
+          "value": "'Time'",
+          "computed": false
+        }
+      },
+      "setProps": {
+        "type": {
+          "name": "func"
+        },
+        "required": false,
+        "description": "Dash-assigned callback that should be called to report property changes\nto Dash, to make them available for callbacks."
+      }
+    }
+  }
+}
