@@ -1,0 +1,6 @@
+[console_scripts]
+PFCU = xia_pfcu.tango.server:main [tango]
+
+[sinstruments.device]
+PFCU = xia_pfcu.simulator:PFCU [simulator]
+
