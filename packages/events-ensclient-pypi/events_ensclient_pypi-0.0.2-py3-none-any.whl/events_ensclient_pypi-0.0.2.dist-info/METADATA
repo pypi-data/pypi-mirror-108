@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: events-ensclient-pypi
+Version: 0.0.2
+Summary: Python library to produce and consume events/messages from kafka clusters managed by Events Team
+Home-page: https://bitbucket.trimble.tools/projects/TPAAS/repos/eventnotification
+Author: Events team
+Author-email: events@trimble.com
+License: UNKNOWN
+Project-URL: Bug Tracker, https://bitbucket.trimble.tools/projects/TPAAS/repos/eventnotification
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.7
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+
+# Example Package
+
+This is a simple example package. You can use
+[Github-flavored Markdown](https://guides.github.com/features/mastering-markdown/)
+to write your content.
+
