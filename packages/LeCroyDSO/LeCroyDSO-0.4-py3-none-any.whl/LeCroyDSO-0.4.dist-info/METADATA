@@ -1,0 +1,96 @@
+Metadata-Version: 2.1
+Name: LeCroyDSO
+Version: 0.4
+Summary: Python communication utilities for LeCroy oscilloscopes
+Home-page: https://github.com/lecroydso/lecroydso
+Author: Ashok Bruno
+Author-email: ashok.bruno@teledyne.com
+Maintainer: Ashok Bruno
+Maintainer-email: ashok.bruno@teledyne.com
+License: MIT License
+Keywords: ActiveDSO,VISA,GPIB,USBTMC,serial,RS232,measurement,acquisition
+Platform: Linux
+Platform: Windows
+Platform: Mac
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Programming Language :: Python
+Classifier: Topic :: Scientific/Engineering :: Interface Engine/Protocol Translator
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Python: >=3.6
+Description-Content-Type: text/x-rst
+Requires-Dist: numpy
+Requires-Dist: pyvisa
+Requires-Dist: pywin32
+Requires-Dist: typing-extensions
+Requires-Dist: dataclasses ; python_version < "3.7"
+Requires-Dist: importlib-metadata ; python_version < "3.8"
+
+LeCroyDSO
+=========
+
+A Python package for communicating to LeCroy oscilloscopes via various 
+protocols VICP, VXI, USBTMC or GPIB.
+
+Description
+-----------
+
+This package can use ActiveDSO or LeCroyVISA as the wrapper for communication.
+ActiveDSO will only work on Windows and uses an ActiveX DLL to communicate to the DSO. 
+LeCroyVISA uses the python package pyvisa to communicate. Please see the pyvisa documentation
+for additional information.
+
+Requirements
+------------
+
+- Python (tested with 3.6+)
+- VISA (tested with NI-VISA 19.5, Win10, from www.ni.com/visa and Keysight-VISA )
+
+Installation
+--------------
+
+Using pip:
+
+    $ pip install lecroydso
+
+or download and unzip the source distribution file and:
+
+    $ python setup.py install
+
+
+Documentation
+--------------
+
+The documentation can be read online at https://lecroydso.readthedocs.org
+LeCroyDSO was originally programmed by Ashok Bruno.
+It is based on earlier internal projects by several others at Teledyne LeCroy.
+
+Other contributors, listed alphabetically, are:
+
+* Ashok Bruno <ashok.bruno@teledyne.com>
+* Anirudh Surekha <anirudh.surekha@teledyne.com>
+
+If you think your name should be here, please let me know.
+LeCroyDSO Changelog
+================
+
+0.3 (06-02-2021)
+----------------
+
+- release for wider audience. additional changes in functionality
+
+0.1 (02-17-2021)
+----------------
+
+- First usable release. See ChangeLog for more information.
+
