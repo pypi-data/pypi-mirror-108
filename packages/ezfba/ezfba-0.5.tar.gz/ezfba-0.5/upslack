@@ -1,0 +1,33 @@
+#!/bin/zsh
+
+version="0.3"
+
+#USAGE -- upslack URL TITLE MESSAGE USERNAME
+if [[ $1 == "-h" ]]; then
+	echo "usage instruction"
+	echo "upslack URL TEXT TITLE MESSAGE USERNAME"
+	exit 0
+fi
+
+url="$1"
+text="$2"
+title="$3"
+message="$4"
+username=${5:-"Apk Uploader"}
+emoji=":robot_face:"
+color="#36a64f"
+
+if [[ -z $url ]]; then
+	echo "slack url needed to post message"
+	exit 1
+fi
+
+url_new=${url//"https:\/\/younginnovations.slack.com\/archives\/"/""}
+
+echo "posting to $url_new"
+
+json_data='{"text":"'"${text}"'","channel" : "'"${url_new}"'", "username" : "'"${username}"'", "icon_emoji": "'"${emoji}"'","attachments":[{"color":"'"${color}"'","fields":[{"title":"'"${title}"'", "value":"'"${message}"'","short":"false"}] }]}'
+
+#json_data2='{"text":"'"${text}"'","channel" : "'"${url_new}"'", "username" : "'"${username}"'", "icon_emoji": "'"${emoji}"'", "attachments": ["text": "'"${title}"'", "color": "#3AA3E3", "attachment_type":"default", "actions": [{"name":"download","type":"button","value":"'"${message}"'"}]]}'
+
+curl -X POST -H 'Content-type: application/json' --data $json_data $YIPL_WEBHOOK
