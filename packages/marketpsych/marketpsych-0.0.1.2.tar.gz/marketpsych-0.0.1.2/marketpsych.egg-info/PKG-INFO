@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: marketpsych
+Version: 0.0.1.2
+Summary: Python libraries for working with MarketPsych's feeds
+Home-page: https://github.com/marketpsych/marketpsych
+Author: MarketPsych Data
+License: MIT
+Keywords: sentiment
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# MarketPsych: Power of minds over markets
+
+MarketPsych produces the global standard in financial sentiment and ESG data from news and social media outlets. We serve global funds, corporations, banks and brokerages in over 25 countries.
+
+Our scores are computed on a minute basis for a variety of complex themes, sentiments, and sustainability topics using our proprietary natural language processing engine. The data is distributed exclusively through Refinitiv.
+
+For more details check out our [website](https://www.marketpsych.com/).
+
+## Features
+ - Coverage includes +35,000 assets
+ - News and social media sources provided separately
+ - History back to 1998
+
+ ## Install MarketPsych supporting library
+
+ ### pip  
+ ```
+ pip install marketpsych
+ ```
+
+
+
