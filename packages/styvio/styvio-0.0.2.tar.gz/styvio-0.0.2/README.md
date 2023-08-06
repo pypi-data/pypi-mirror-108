@@ -1,0 +1,1 @@
+This is the Python library for the Styvio financial data provider.

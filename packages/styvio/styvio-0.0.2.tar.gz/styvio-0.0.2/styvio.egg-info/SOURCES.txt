@@ -1,0 +1,9 @@
+LICENSE
+README.md
+setup.py
+styvio/__init__.py
+styvio.egg-info/PKG-INFO
+styvio.egg-info/SOURCES.txt
+styvio.egg-info/dependency_links.txt
+styvio.egg-info/requires.txt
+styvio.egg-info/top_level.txt
