@@ -1,0 +1,6 @@
+README.md
+metabadger.egg-info/PKG-INFO
+metabadger.egg-info/SOURCES.txt
+metabadger.egg-info/dependency_links.txt
+metabadger.egg-info/top_level.txt
+metabadger.egg-info/zip-safe
