@@ -1,0 +1,10 @@
+frozen_field/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+frozen_field/apps.py,sha256=nrxpxW_Uys0kR7VL9pugFbTrdO0TA2aIVs4ALiUSFRk,97
+frozen_field/fields.py,sha256=WmjsAbxREZU12bLXe2UIoxm_k1j6UlVu9qrGr-_vnQo,6228
+frozen_field/models.py,sha256=S6939TsAHzHKiIu3vnVbuCbPBWxWrN1pS7j7LJ0POkg,5715
+frozen_field/serializers.py,sha256=xJzILOR5g-GdDAmqG_zeERwAhb6zkWvvgUl2DLZYHI0,4488
+frozen_field/types.py,sha256=O5GovkYtHew6SaPIgNkGh_c6k_kSNvDjzCSwm8-kHo4,1359
+django_frozen_field-0.1b7.dist-info/LICENSE,sha256=iyD3BiPBbN6V4jA3WWq-yFZ30gqnZYKxChIEZaPNyd0,1065
+django_frozen_field-0.1b7.dist-info/WHEEL,sha256=VN2eEg4PHbTOniXb-cCYQPc6zUTS4dAcATjlgU3q-Lo,83
+django_frozen_field-0.1b7.dist-info/METADATA,sha256=FByZni9-pNynhxpBZjDTjmwlCemduSuDYSHcW89DeC4,5909
+django_frozen_field-0.1b7.dist-info/RECORD,,
