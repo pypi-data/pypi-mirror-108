@@ -1,0 +1,12 @@
+# Misc
+include README.md
+include LICENSE
+include requirements.txt
+
+# Compiled module
+include fastgac/fastgac*.pyd
+include fastgac/fastgac*.so
+include fastgac_pybind*.so
+
+# Exclude
+global-exclude *.py[co]
