@@ -1,0 +1,21 @@
+#!python
+from miprobe import mp_lib as mp
+import threading
+
+# Initial API Keys and setup $HOME/mp_data logging folder
+mp.start()
+
+# Loading settings from config file or argument parser.
+settings = mp.miprober_init()
+# Initialized Serial connection with MiProbe Board.
+mp.serial_init()
+
+# Run standard logger and server mode on separate threads
+# JSON server for status querying
+json_server_thread = threading.Thread(target=mp.server_init)
+json_server_thread.start()
+
+# call mp.run_experiment() and mp.server_init() separately if not running them on separate threads.
+# Run standard data logging script for experiment.
+experiment_thread = threading.Thread(target=mp.run_experiment)
+experiment_thread.start()
