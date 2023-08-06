@@ -1,0 +1,824 @@
+CHANGES
+=======
+
+v2.2.0
+------
+
+* Bump the version to v2.2.0
+* Add ability to disable modules (#434)
+* Add a combined command for the archiver and downloader: \`clone\` (#433)
+* Fix indent
+* Update failing test
+* Update failing test
+* Add macOS value to test
+* Update test condition
+* Add path limit fix
+* Update README
+* Allow --user to be specified multiple times
+* Update bug\_report.md
+* Update blacklist
+* Add blacklist for web filetypes
+* Rename function
+* Fix typo in test name
+* Fix download retries logic
+* Update failing tests
+* Update script to include new message
+* Catch error with MacOS writing per issue #407
+* Rename variable
+* Add another message type
+* Update script to extract IDs
+* Update logging messages to include submission IDs
+* Remove unneeded backslashes
+* Simplify method structure
+* Read files in chunks instead when hashing (#416)
+* Reverts #384
+* Added tests for new data in threads/comments (2/2)
+* Added tests for new data in threads/comments
+* Adding some more info in threads and comments: distinguished, spoiler, locked, sticky
+* Ignore IDE files
+* Adds download count badge
+* Catch additional error
+* Fix bug with some Imgur extensions
+* Update script to catch more failed IDs
+* Remove bad test case
+* Add file modified date test
+* Set file creation times to the post creation time (#391)
+* Refactor archiver tests
+* Refactor out super class RedditConnector
+* Change out of date test case
+* Reorder skip options
+* Rename --exclude-id(-file) to --skip-id(-file)
+* Rename --skip to --skip-format
+
+v2.1.1
+------
+
+* Bump the version to 2.1.1
+* Fix error with old gfycat/redgifs urls
+* refactor(youtube.dl): Remove slow parameter
+* bug(youtube.dl): Fix crash on zero downloads #375
+* Check if REDDIT\_TOKEN is set (#376)
+* Create build artifact (#372)
+* Bind socket to '0.0.0.0' rather than 'localhost' to allow for more flexible OAuth connection. (#368)
+* README: add how to update with pip (#367)
+* Fix example commands (#364)
+
+v2.1.0
+------
+
+* Bump the version to v2.1
+* Update README with Arch packages
+* Update config paths in README
+* Update script
+* Change logging message to include submission ID
+* setup.py: add minimum python requirement (#287)
+* Fix xml archiver encoding bug (#349)
+* test.yml: test on windows and macos (#290)
+* \_\_main\_\_.py: fix typo in -f argument
+* Consolidate exception block
+* Fix log access issue for archive integration tests
+* Add ci to dev branch
+* youtubedl\_fallback.py: add a fallback exception and log messages
+* youtubedl\_fallback: remove logging the expected exception
+* Make filename test OS-agnostic
+* Add example summary script
+* Add ci to dev branch (#337)
+* Remove VReddit downloader module
+* Remove Streamable downloader module
+* Intercept youtube-dl output
+* Add fallback downloader
+* Update README
+* Add customisable time formatting
+* Make downloadfilter apply itself to Resources
+* Add exception for r/all in subreddit check
+* Catch errors for banned or private subreddits
+* Add README for scripts
+* Add scripts to extract IDs
+* Match import order, update docs
+* Add Streamable to download factory test
+* Add Streamable tests
+* Add Streamable to download factory
+* Add Streamable downloader
+* Remove GifDeliveryNetwork module
+* Remove gifdeliverynetwork from download factory
+* Invert inheritance direction
+* Refactor class
+* (bug) redgifs: fix could not read page source
+* Catch additional errors in site downloaders
+* Catch additional error
+* Add informative error when testing user existence
+* Return banned users as not existing
+* Catch error when logfile accessed concurrently
+* Update README
+* Add option to specify logfile location
+* Fix formatting
+* Fix formatting
+* Add missing default argument
+* Fix reference paths
+* Remove unused imports
+* Rename function
+* Remove unused variable
+* Add missing typing declaration
+* Simplify regex string slightly
+* Format file
+* Catch requests errors in site downloaders
+* Use ISO format for timestamps in names
+* Fix GifDeliveryNetwork link algorithm (#298)
+* tests: move outside of the package
+* CONTRIBUTING.md: explain test\_config.cfg (#294)
+* README.md: add pypi badge (#285)
+* Set theme jekyll-theme-leap-day
+
+v2.0.0
+------
+
+* publish.yml: initial commit
+* test.yml: on push master (#284)
+* README.md: drop v2
+* README.md: drop the beta
+* setup.cfg: add more metadata
+* test.yml: upload coverage report (#283)
+* test.yml: add coverage report (#282)
+* README.md: clarify python requirement
+* test.yml: remove unsupported Python versions
+* (feat) test multiple python versions
+* Fix time filters (#279)
+* templates: add issue templates (#276)
+* Enhance docs
+* README.md: Adds CI status badge
+* Adds continuous integration with Github Actions
+* test\_integration.py: fix skipif test\_config
+* test\_vreddit: remove flaky test (#272)
+* test\_vreddit: fix incorrect file hash
+* Add option to skip specified subreddits (#268)
+* Escape characters
+* Update README
+* Update CONTRIBUTING
+* Fix mistaken backreference in some titles
+* Update extension regex to match URI fragments (#264)
+* Catch errors when resources have no extension
+* Fix typing on function
+* Remove unneeded logger entry
+* Fix bug with emojis in the filename (#263)
+* Fix formatting
+* Update test hash
+* Add regex for all 2xx HTTP codes
+* Use standards in HTTP errors
+* Fix bug in file name formatter
+* Rename module
+* Update README
+* Update list of unrecoverable HTTP codes
+* Add option to specify wait time as option
+* Fix some formatting
+* Use config value to specify max wait time
+* Add minimum python version
+* Add option to download user comments (#258)
+* Change logger message to warning
+* Fix some formatting
+* Add support for mobile Imgur links
+* Fix line length
+* Add fix for Imgur gifv links
+* Add //imgur.com/\*.gifv
+* Parse unicode escapes in file name fields (#254)
+* Update test
+* Set log backup count from config
+* Fix test
+* Add defensive programming to site downloaders
+* Rename function
+* Add filter for stream logger re exceptions
+* Fix duplicate test name
+* Refactor method to base class
+* Remove erroneous test case
+* Update test hash
+* Fix quotes
+* Add more informative errors when downloading Resource
+* Add support for direct links with parameters
+* Correct logger message
+* download\_factory.py: check if url has ext first
+* test\_download\_factory: add a new case
+* test\_imgur.py: Remove duplicate tests
+* Switch to rotating log files
+* Allow multilevel folder schemes (#251)
+* Name log file with run time
+* Switch to f-string
+* Alter some logging messages
+* Refactor and optimise some tests (#245)
+* Add some to CONTRIBUTING
+* Update regex to be more concise, add test for m.youtube
+* Add logic to handle mobile youtube (m.youtube) links
+* Archiver is smarter for comments (#242)
+* test\_download\_factory: remove outdated marks
+* test\_download\_factory.py: hardcode submission links
+* Fix typos
+* Use slice to shorten name
+* Revert "Use .format() instead of regular expression"
+* file\_name\_formatter: added tests (#227)
+* Use regex to strip id
+* Use .format() instead of regular expression
+* Add warning for non-unique file name schemes (#233)
+* Tweak regex to fix incorrect match (#237)
+* Update out-of-date tests
+* Send HTTP200 when oauth2 is successful
+* Fix missing links in self post footer (#235)
+* Add created date to archive output
+* Add test for nonexistent key
+* Remove splice and fix quotes
+* Split regex for download factory
+* Add additional test
+* Add necessary tests
+* Fix downloading .gifv instead of .mp4 (#228)
+* Tests added
+* Bug fix on deleted self posts
+* Strip emojis from filenames on Windows (#222)
+* Update some logging levels
+* Add some to ARCHITECTURE
+* Add option to exclude submission IDs (#220)
+* Fix test creating unwanted folders
+* Preserve appended ID when shortening file names
+* Remove incorrect test marks
+* Calculate existing hashes in parallel
+* Fix typo
+* Scrub windows paths for invalid characters
+* Copy config file to config directory first time
+* Fix typos
+* Add specific requirements (#211)
+* Filter non-submissions (#212)
+* Add v2-beta to title
+* Fix case where Gfycat fails after redirect
+* Make sure to log all exceptions to file
+* Fix bug where folder is created too late
+* Add some things to README
+* Fix bs4 warning by specifying parser
+* Refactor Imgur class to be hardier
+* Rename options
+* Update README
+* Add ability to make hard links for duplicates
+* Refactor Erome class
+* Refactor redgifs
+* Refactor Gfycat class
+* Fix Erome downloader
+* Fix Gallery
+* Generalise test
+* Refactor downloader
+* Update GifDeliveryNetwork tests
+* Add some more Gallery tests
+* Refactor Gallery downloader
+* Refactor Reddit Gallery tests
+* Refactor Erome downloader
+* Change Erome tests to valid links
+* Change logging message
+* Fix index being added to single resources
+* Update documentation
+* Add shortcut in download for certain errors
+* Update RedditDownloader tests
+* Rename function
+* Add basic setup files
+* Load default config from package directory
+* Add some more integration tests
+* Move docs to doc directory
+* Remove unused files
+* Add more to README
+* Fix config directory name
+* Add integration tests for archiver
+* Add more tests for file name formatter
+* Add XML and YAML to archiver
+* Add beginning of archiver
+* Fix some wrong pytest marks
+* Start rewrite of README
+* Add logging entry
+* Add a couple more integration tests
+* Fix bug where user is deleted
+* Limit name byte length
+* Fix typo
+* Add error catch for youtube and site downloaders
+* Remove bad encapsulating try-except
+* Shorten filenames that are too long
+* Add shortened Youtube links to downloader factory
+* Add option to search for files pre-emptively
+* Add some more integration tests
+* Add some integration tests
+* Allow subreddits and multireddits to fail individually
+* Add log entry at end of program
+* Fix bug with users in un-authenticated sessions
+* Move logfiles into configuration directory on OS
+* Add function to calculate all existing file hashes if wanted
+* Add much more logging
+* Remove unused file
+* Add method to sanitise subreddit inputs
+* Fix bug where file extension is never specified for text posts
+* Allow for ID or URL to be provided for submissions
+* Load config from arguments first
+* Switch from argparse to click
+* Add missing options to Configuration
+* Add function to process click contexts for config
+* Add click to requirements
+* Abstract configuration into class
+* Implement missed test
+* Update tests with new valid links
+* Add last few tests for RedditDownloader
+* Add indexing for multiple resources from one submission
+* Add test for resource
+* Allow for single root folder
+* Update regex for finding extension
+* Convert some strings to f-strings
+* Add some more tests for downloader
+* Add authenticated Reddit instance fixture
+* Add another mark
+* Immediately write token to disk in case it is unused
+* Add some logging output
+* Fix function return
+* Fix option default
+* Update tests
+* Make sure refresh token is always written to file
+* Add file to gitignore
+* Fix some tests
+* Add empty authenticator
+* Fix wrong if condition
+* Fix OAuth2
+* Re-implement OAuth2
+* Fix typing
+* Move scope regex parsing
+* Remove unimplemented test
+* Add default scopes to configuration file
+* Fix error with verbose argument settings
+* Change quotes
+* Add OAuth2 class
+* Rename file with custom exceptions
+* Add some more tests for RedditDownloader
+* Add error
+* Re-add missing argument
+* Tighten exception block
+* Add some tests for RedditDownloader
+* Add function to validate formatting strings
+* Update arguments
+* Add test for Vreddit
+* Base Vreddit class on Youtube downloader
+* Refactor Youtube downloader
+* Add rest of tests for DownloadFactory
+* Add some tests for DownloadFactory
+* Add ffmpeg to requirements
+* Add tests for Youtube
+* Add tests for SelfPost
+* Add tests for Imgur
+* Add tests for downloader Erome
+* Add slow mark for tests
+* Add test for downloader Direct
+* Add tests for Redgifs
+* Add tests for GifDeliveryNetwork and Gfycat
+* Replace urllib with requests
+* Add test for Resource
+* Add reddit flag for pytest
+* Mark online tests
+* Add a test for Resource
+* Rename file and class
+* Implement changes in downloader
+* Change Resource model
+* Add authenticator module
+* Integrate new base\_downloader class
+* Restructure test fixtures
+* Re-implement --link option
+* Add test for site downloader gallery
+* Add logging message
+* Simplify errors
+* Remove unused class
+* Remove unused parameter
+* Fix wrong logic
+* Fix bug with logging
+* Re-implement --limit option
+* Add gallery to factory
+* Re-implement --no-dupes flag
+* Re-implement --no-download flag
+* Move args to instance variable
+* Add existence checking
+* Add logging to file
+* Add ARCHITECTURE file
+* Add search functionality
+* Move to different program structure
+* Update requirements with appdirs
+* Add resource class
+* Add downloader factory
+* Add file name formatter class
+* Add default config file
+* Add download filter class
+* Rename folder
+* Add some tests for base\_download
+* Move to inheritance system for downloaders
+* Embed function
+* Remove utils module for downloaders
+* Rename files to conform to PEP8
+* Update gitignore to Python standard
+* Move to standard module structure
+* Add tentative typing
+* Pep8 format (#184)
+
+v1.10.0
+-------
+
+* Increment version to 1.10.0
+* Revert "Add --config option for explicitly stating configuration file to use."
+* Don't wait when exception
+* Revert "respect --quit when JSON exception is thrown"
+* respect --quit when JSON exception is thrown
+* Fix error "'NoneType' object is not iterable" (issue #214) and "InvalidSchema: No connection adapters were found" (issue #198) (#215)
+* Add documentation for --downloaded-delay
+* v2-beta is out
+* Fix gallery (#203)
+* Stop exiting the script when using use\_local\_config setting
+* (maint) code clean up (#187)
+* This allows to download gallerys/multiple images in posts (#174)
+* (bug) default to python3
+* Pin Dockerfile Python version explicitly to a release tag
+* Delete .deepsource.toml
+* Add .deepsource.toml
+* Delete FUNDING.yml
+* Typo fix
+* Update README.md
+* Fix for access denied
+* Add native gallery catch
+* Beta optout,  fix for random imgur json error
+* add native gallery
+* Add native gallery catch
+* reddit native gallery parser
+* Added new --download-delay flag to allow throttling the download across all supported platofrms
+* Update README.md
+* Don't mkdir defaultConfigDirectory if not needed
+* Update script.py
+* Added "jpeg" as file format to be downloaded
+* Add --config option for explicitly stating configuration file to use
+
+v1.9.4
+------
+
+* Version iteration
+* Do not try again if the connection was reset
+
+v1.9.3
+------
+
+* Version iteration
+* Fixed direct uploads bug
+
+v1.9.2
+------
+
+* Iterate version to 1.9.2
+* v.redd.it audio permission denied bug fixed
+* Fix v.redd.it URLs
+* Fix treating .gifv as .jpg
+* Add self dummy entry to FORMATS (#133)
+* Update README.md
+* Changed the size of the code snippet
+* Docker integration
+* --use-local-config creating invalid config.json files on UNIX systems bug fixed
+
+v1.9.1
+------
+
+* Version 1.9.1
+* ffmpeg File Not Found Error on Unix systems fixed
+
+v1.9.0
+------
+
+* v1.9.0 (#114)
+* Update FUNDING.yml
+* Create FUNDING.yml
+
+v1.8.0
+------
+
+* v1.8.0 (#105)
+* Remove 'important' notice
+
+v1.7.0
+------
+
+* v1.7.0 (#97)
+* Important notice added
+* add env/ to gitignore
+* fix erome download URLs
+* typo
+* typo
+* Update README.md
+* Fixed typo
+* Added an FAQ entry
+* Minor corrections
+* a clearer description how to run it (#62)
+
+v1.6.5
+------
+
+* Update version number
+* Hopefully, fixed the config.json bug
+* Fixed the bug concerning config.json
+* Update README.md
+* Update version
+* Update version
+* Update version
+* Fixed saving auth info problem
+* Fixed v.redd.it links
+* Update version
+* Fixed v.redd.it links
+
+v1.6.4.2
+--------
+
+* Bug fix
+* Updated Python3 version
+* Moved FAQ
+
+v1.6.4.1
+--------
+
+* 27 jan update
+* Added instructions
+
+v1.6.4
+------
+
+* Ignore space at the end of directory
+* Ignore space at the end of directory
+* Add bs4
+* Update version
+* Changed getting gfycat links' algorithm
+* Typo fix
+
+v1.6.3
+------
+
+* Update version
+* Bug fix
+* Print out github link at start
+* Print out program info
+* Print out version info before starting
+
+v1.6.2.1
+--------
+
+* Update version
+* Update changelog
+* Fix imgur download malfunction caused by headers
+
+v1.6.2
+------
+
+* Update version
+* Update changelog
+* Prints the file that already exists
+* Deleted commented line
+* Update changelog
+* Fixed console prints for Linux
+* Update changelog
+* Added config file location as current directory
+* Improved error handling
+* Update changelog
+* Added reddit username to config file
+* Improved checkConflicts()
+* Minor edit in exception handling
+* Refactored error handling
+* Fixed request headers
+* Update request headers
+* Added docstrings for the ease of modification
+* Refactored README page
+* Refactored README page
+
+v1.6.1
+------
+
+* Typo fix
+* Updated version
+* Updated changelog
+* Sending header when requesting a file
+* Update changelog
+* Do not print post type to console
+* Update README.md
+* Update changelog
+* Hide KeyboardInterrupt
+* Bug fix
+* Update changelog
+* Open web browser as prompting for imgur credentials
+* Update README.md
+* Update README.md
+* Update README.md
+* Update README.md
+* Update README.md
+* Set theme jekyll-theme-cayman
+* Update README.md
+
+v1.6.0
+------
+
+* Update version
+* Added new line after 'GETTING POSTS'
+* Update README.md
+* Update changelog
+* Typo fix
+* Added quit after finish option
+* Added remaining credits to log file
+* Improve verbose mode
+* Update COMPILE\_FROM\_SOURCE.md
+* Update COMPILE\_FROM\_SOURCE.md
+* Update COMPILE\_FROM\_SOURCE.md
+
+v1.5.2
+------
+
+* Update script.py
+* Update version
+* Update changelog
+* Typo fix
+* Stylize
+* Updated FAQ
+* Added verbose mode
+* Update changelog
+* Stylize the console output
+
+v1.5.1.1
+--------
+
+* Update version
+* Added delays for imgur rate limit
+* Add file name formatting doc
+
+v1.5.1
+------
+
+* Update version
+* Bug fix
+* Use else in try blocks
+* Print credits in the same line
+
+v1.5.0
+------
+
+* Typo fix
+* Update version
+* Update changelog
+* Update changelog
+* Improved exception handling
+* Update changelog
+* Deleted # char from file names
+* Add OP's name first
+* Tweaked 'What it can do'
+* Little refactoring
+* Added older version support
+* Add submitter to file name
+
+v1.4.0
+------
+
+* Update version
+* Improve error handling
+* Typo fix
+* Update changelog
+* Added erome support
+* remove exclude mode
+* Update README.md
+* Split download function
+* Added directions for frontpage
+* Rename changelog section
+
+v1.3.1
+------
+
+* Update version
+* Update changelog
+* Fixed the bug that makes multireddit mode unusable
+* Update changelog
+* Put log files in a folder
+
+v1.3.0
+------
+
+* Bug fix
+* Update version
+* Update links
+* Updated --help page
+* Updated changelog
+* Exclude post types (#38)
+* Improved traceback
+
+v1.2.1
+------
+
+* Bug fix at direct links
+* Bug fix at direct links
+* Update links
+* Fix README
+* 0 input for no limit
+* 0 input for no limit
+* 0 input for no limit
+
+v1.2.0
+------
+
+* Update commit link
+* Update version
+* Added more gfycat links
+* Added more gfycat links
+* Update Changelog
+* Added v.redd.it support (#36)
+* Added custom exception descriptions to FAILED.json file
+* Edited FAQ
+* Delete \_config.yml
+* Typo fix
+* Update FAQ
+* Update executables' names
+
+v1.1.2
+------
+
+* Update version
+* Update changelog
+* Added .exe to executable's extension
+* Excludes build folders
+* Changed config.json path
+* Update changelog
+* Initial commit
+
+v1.1.1
+------
+
+* Update version
+* Take multiple subreddits
+* Update changelog
+* Accept exit to exit the program when taking arguments
+* Added more examples
+* Added dependency installation
+* Update changelog
+* Wait on KeyboardInterrupt
+* Another option to open terminal added
+* Added linux executable guide
+* Changed quit() to sys.exit()
+* Typo fix
+* Check if installed
+* Broken links fixed
+* Readme refactor (#35)
+
+v1.1.0
+------
+
+* Update links
+* Bug fix
+* Update README.md
+* Update README.md
+* Updated the links
+* Added more information
+* Update help\_page.md
+* Delete setup.py
+* Author added
+* Typo fix
+* Bug fix
+* Initial commit
+* Update version
+* Removed installing packages in the runtime
+* Added requirements.txt
+* Stylize print outs
+* Initial commit
+* Added clarifcation to log mode
+* Strip down
+* Update changelog
+* Adding error tracebacks to CONSOLE\_LOG files
+* Bug fix
+* Changes for latest update on the code
+* Bug fix
+* Improved checkConflicts()
+* Print arguments before anything
+* Refactor checkConflicts()
+* Typo fix
+* Rearranged functions
+* Prompt user if no arguments passed
+* Updated the Python version details
+* Print out post type before checking existence
+* Typo fix
+* Replaced py -3 with python
+
+v1.0.1
+------
+
+* Updated the version info
+* Updated the links
+* Added .md as a possible extension
+* Not creating POSTS.json file properly bug fix
+* Edited FAQ about markdowns
+* Fixed the broken link
+* Added link to Changelog
+
+v1.0.0
+------
+
+* Uncomment error handling code
+* Minimalize
+* Added what it can do section
+* Changed the configuring section's name
+* Updated the changelog
+* Fixed the long file name bug
+* Added Self class
+* FileNameTooLong exception added for Gfycat and Direct classes
+* Fixed the bug that causes tagging all the posts' types as null in single post
+* Fixed the bug that causes tagging all the posts' type as null
+* Parsing arguments two times is fixed
+* No redditor name given error fixed when in subreddit mode
+* Recognize blank value for restrict\_sr in search links
+* Fixed the invalid client\_id bug
+* Initial commit
