@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: InterruptHandler
+Version: 0.0.2
+Summary: Interrupt Handling Library for Python.
+Home-page: https://github.com/onetop21/InterruptHandler.git
+Author: Hyoil LEE
+Author-email: onetop21@gmail.com
+License: MIT License
+Platform: UNKNOWN
+Requires-Python: >=3.0
+
+Interrupt Handler
+=================
+
+Interrupt Handling Util for Python.
+
+Installation
+==============
+
+$ pip install interrupt_handler
+
+
+How To Use
+==============
+
+Visit : https://github.com/onetop21/interrupt_handler
+
+
