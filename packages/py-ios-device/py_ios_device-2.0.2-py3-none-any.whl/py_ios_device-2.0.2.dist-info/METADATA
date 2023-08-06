@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: py-ios-device
+Version: 2.0.2
+Summary: Get ios data and operate ios devices
+Home-page: https://github.com/YueChen-C/py-ios-device
+Author: chenpeijie & liyachao
+Author-email: cpjsf@163.com
+Maintainer: chenpeijie & liyachao
+Maintainer-email: 
+License: MIT
+Platform: any
+Requires-Dist: cffi (==1.14.4)
+Requires-Dist: construct (==2.10.56)
+Requires-Dist: cryptography (==3.3.2)
+Requires-Dist: pyasn1 (==0.4.8)
+Requires-Dist: pycparser (==2.20)
+Requires-Dist: pyOpenSSL (==20.0.0)
+Requires-Dist: six (==1.15.0)
+Requires-Dist: numpy (>=1.15.1)
+Requires-Dist: zeroconf (>=0.28.8)
+Requires-Dist: requests (>=2.25.1)
+Requires-Dist: click (>=7.1.2)
+Requires-Dist: coloredlogs (>=3.3.2)
+
+UNKNOWN
+
+
