@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<interface>
+	<menu id="menubar">
+		<section>
+			<item>
+				<attribute name="label">_New window</attribute>
+				<attribute name="action">app.new</attribute>
+			</item>
+			<item>
+				<attribute name="label">Close Window</attribute>
+				<attribute name="action">win.close</attribute>
+			</item>
+			<item>
+				<attribute name="label">_Quit</attribute>
+				<attribute name="action">app.quit</attribute>
+			</item>
+		</section>
+		<section>
+			<item>
+				<attribute name="label">Minimize</attribute>
+				<attribute name="action">win.minimize</attribute>
+			</item>
+		</section>
+		<section>
+			<item>
+				<attribute name="label">Visit RFI-Downloader Github Repository</attribute>
+				<attribute name="action">app.help-url</attribute>
+				<attribute name="target">https://github.com/rosalindfranklininstitute/rfi-downloader</attribute>
+			</item>
+			<item>
+				<attribute name="label">_About RFI-Downloader</attribute>
+				<attribute name="action">app.about</attribute>
+			</item>
+		</section>
+	</menu>
+</interface>
