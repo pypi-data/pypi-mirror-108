@@ -1,0 +1,77 @@
+Metadata-Version: 2.1
+Name: perfectoai
+Version: 1.0.31
+Summary: perfectoAI is an automated emailable reporter along with AI graphs & predictions
+Home-page: https://github.com/genesisthomas/PerfectoAI.git
+Author: Genesis Thomas
+Author-email: gthomas@perforce.com
+License: GPLv3
+Keywords: Perfecto,appium,selenium,testing,api,automation
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: json2html
+Requires-Dist: jenkinsapi
+Requires-Dist: requests
+Requires-Dist: configparser
+Requires-Dist: termcolor
+Requires-Dist: numpy
+Requires-Dist: cython
+Requires-Dist: pandas (==1.2.4)
+Requires-Dist: retrying
+Requires-Dist: ephem
+Requires-Dist: pymeeus
+Requires-Dist: easydict
+Requires-Dist: psutil
+Requires-Dist: korean-lunar-calendar
+Requires-Dist: MarkupSafe
+Requires-Dist: jinja2
+Requires-Dist: matplotlib
+Requires-Dist: colorama
+Requires-Dist: LunarCalendar
+Requires-Dist: holidays
+Requires-Dist: cmdstanpy (==0.9.68)
+Requires-Dist: convertdate
+Requires-Dist: openpyxl
+Requires-Dist: wheel
+Requires-Dist: pystan (==2.19.1.1)
+Requires-Dist: xlrd
+Requires-Dist: tzlocal
+Requires-Dist: plotly
+Requires-Dist: prophet (==1.0.1)
+
+# Perfectoai
+
+
+## Recommended system configuration:
+
+    1. 8 GB Ram and above
+
+    2. 2.20 GHz multi core processors and above
+
+
+## Prerequisites:
+
+  1. Install [Python](https://www.python.org/downloads/) version 3+ and make sure that python version > 3+ is set as default.
+
+  2. Install [pip](https://pip.pypa.io/en/stable/installing/)
+
+  3. Install [npm](https://nodejs.org/en/)
+
+  4. Run the following commands from command prompt - Windows:
+        `pip install psutil`
+        `sudo npm install -g electron@1.8.4 orca --unsafe-perm=true`
+        `pip install pystan==2.19.1.1`
+        `pip install perfectoai -U`
+
+    mac:
+        `pip3 install psutil`
+        `npm install -g electron@1.8.4 orca --unsafe-perm=true`
+        `pip3 install pystan==2.19.1.1`
+        `pip3 install perfectoai -U`
+
+
+
+
