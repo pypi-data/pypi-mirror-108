@@ -1,0 +1,465 @@
+![ClipperData API Documentation](https://github.com/ClipperData-IT/API_documentation/blob/master/images/clipperdata-logo-form-long-550.jpg)
+
+# ClipperData API documentation
+
+#### Guides for querying the [ClipperData LLC](https://clipperdata.com/) commodity cargo data, using [Python](#Python), and [R](#Rlang), or directly using URLs. 
+
+The ClipperData API suite of addins allows users to access the full ClipperData commodity shipments database, via an HTTPS-secured REST API with helper SDKs in Python and R. For other programming languages, please [contact ClipperData](https://clipperdata.com/contact/) to obtain technical information on API endpoints and query formats. 
+
+Please speak to your ClipperData representative for access credentials. 
+
+## Contents
+
+* [**Python 3.7+**](#Python)
+	* [Installation](#Python_installation)
+	* [Usage](#Python_usage)
+* [**R**](#Rlang)
+	* [Installation](#Rlang_installation)
+	* [Usage](#Rlang_usage)
+* [**Other Programming Languages**](#other_lang)
+* [**Keeping Data Current**](#Keeping_the_data_current_python_)
+
+## <a name="Python"></a> Python
+
+Python access to the ClipperData database allows users to run automated tasks in a "push" style, giving data scientists the option to create applications that operate autonomously and continuously in the background, informing users of statistically significant cargo-related events, when they occur. It opens up the capability to cross-reference and further enrich ClipperData information with other data sources, via industry standard [pandas](https://pandas.pydata.org/) DataFrames. 
+
+
+
+### <a name="Python_installation"></a>Installation
+Python versions 3.7 or greater only, are supported. 
+
+The Python API is contained in a module named clipper-sdk.py which can be downloaded using curl on the command line. 
+
+`curl -OL https://raw.githubusercontent.com/ClipperData-IT/API_documentation/master/addins/clipper-sdk.py`
+
+This will work on recent version of Windows, Linux, and Mac OS. Alternatively, clone this repository and the file can be found in the "addins" folder. 
+
+This file must be present in the same directory as the script using it, or must be present in the [python path](https://docs.python.org/3/using/cmdline.html#environment-variables). There are two dependencies not included in the standard library:
+* [colorama](https://pypi.org/project/colorama/)
+* [pandas](https://pypi.org/project/pandas/)
+
+Please install both using `pip` or by opting for the [Anaconda Python Distribution](https://www.anaconda.com/products/individual). 
+
+
+### <a name="Python_usage"></a>Usage
+
+#### Instantiation
+Everything related to the Clipper API is exposed via the `Clipper` class. Assuming the addin is in the python path:
+
+```
+from clipper-sdk import Clipper
+clipper = Clipper("username", "password")
+```
+![clpy_instantiate](https://github.com/ClipperData-IT/API_documentation/blob/master/images/clpy_instantiate.png)
+
+A number of [example queries](#python_example_queries) are also included in this class, but for now we will focus on core functionality. 
+
+The `Clipper` class exposes three methods of interest; `help()` and `fields()` provide tools to navigate the structure of available data, while `query()` is the workhorse method which validates, fetches, and formats data. However prior to using `query()`, we must first know *what* to query. This is where the former two methods are useful. 
+
+#### Pre-query exploration of available data
+
+```
+hlp = clipper.help()
+hlp.keys()
+```
+<a name = "fields_image"></a>![clpy_hlp](https://github.com/ClipperData-IT/API_documentation/blob/master/images/clpy_hlp.png)
+
+This function returns a number of helper data structures which will inform the user of which tables are available, their fields, their categories, and more deeply nested within the structure, field allowable values, field types, field help, and mappings between database and API nomenclature (this mapping generally used only internally). 
+
+A more succinct summary of the output of `help()` is provided by the `fields()` function. 
+
+```
+flds = clipper.fields()
+flds.keys()
+```
+
+![clpy_pprint_flds](https://github.com/ClipperData-IT/API_documentation/blob/master/images/clpy_pprint_flds.png)
+
+The key information that will later be required here are the table names available, the fields available for each table, and their field types. The latter will be important in orderby and criterion operations. In general, when initially building queries, `fields()` will be used extensively as a reference information structure. 
+
+#### The heart of the API: **query()**
+
+All querying is done through the `query` method, the definition of which is shown here:
+
+```
+def query(self, 
+      table: str,
+      fields: List[str] = [], 
+      where: List[dict] = [], 
+      orderby: dict = None, 
+      batch_size: int = 10000, 
+      max_update_date: str = None,
+      silent: bool = False):
+
+```
+
+While parameters can directly be sent to this method, it is preferable to use Python's "splat" operator, often referred to as [kwargs](https://stackoverflow.com/questions/1769403/what-is-the-purpose-and-use-of-kwargs). This allows for all query parameters to be stored in a python `dict` which can then be saved by the user for future use or modification. Two query dictionary examples are included in the api, under variable name `query_examples`:
+
+```
+query_examples = [ 
+                {"table": "Crude", "fields": ["Barrels", "Consigneex", "Consignee", "Charterer", "IMO", "Grade"],
+                "where": [{"Barrels": {"gt": 1}, "conjunction": ""}, 
+                        {"Load Date": {"gt": dt.datetime(2000, 1, 1)}, "conjunction": "AND"}] 
+                },
+
+                {"table": "Crude", "fields": [],
+                "where": [{"Barrels": {"gt": 1}, "conjunction": ""}, 
+                        {"Load Date": {"gt": dt.datetime(2000, 1, 1)}, "conjunction": "AND"}], 
+                "orderby": {"Barrels": "ASC"}} 
+                ]
+```
+
+To run one of these two queries:
+
+```
+from clipper_python import Clipper, query_examples
+
+clipper = Clipper("username", "password")
+clipper.query(**query_examples[0])
+
+# or for the second query
+
+clipper.query(**query_examples[1])
+```
+(Please replace `username` and `password` with your own credentials). 
+
+Thus we have demonstrated how one can store numerous queries in a dict, and run them one by one. 
+
+![query_run_1](https://github.com/ClipperData-IT/API_documentation/blob/master/images/query_run_1.png)
+
+#### Description of query method parameters
+
+Example 1:
+```
+	{"table": "Crude", "fields": ["Barrels", "Consigneex", "Consignee", "Charterer", "IMO", "Grade"],
+	"where": [{"Barrels": {"gt": 1}, "conjunction": ""}, 
+		{"Load Date": {"gt": dt.datetime(2000, 1, 1)}, "conjunction": "AND"}]
+	}
+```
+
+Example 2:
+```
+	{"table": "Crude", "fields": [],
+	"where": [{"Barrels": {"gt": 1}, "conjunction": ""}, 
+		{"Load Date": {"gt": dt.datetime(2000, 1, 1)}, "conjunction": "AND"}], 
+	"orderby": {"Barrels": "ASC"}} 
+```
+
+* table: This is a string naming the table. The tables available can be found as keys in the `field()` dict as [shown above](#fields_image). 
+* fields: A list of fields for the table. As per table, these are listed in the `field()` dict. 
+* where: a list of dicts where each dict entry has the form: `{"fieldname": {"operator": value}, "conjunction": conjunction}`
+	* "fieldname" must be a valid string field name for the associated table.
+	* operator must be one of "gt", "lt", "gte", "lte", "eq", "ne", or "like".
+	* conjunction must be the empty string "", "OR", or "AND". The first entry in the where list's conjunction must be the empty string, as this represents the first where clause and will not need a conjunction. 
+
+* orderby: a dict of the form `{"fieldname": order_direction}` where fieldname is a valid string field name, and order_direction is one of "ASC" or "DESC".
+* max_update_date: an update timestamp can be provided in field `max_update_date`. This must be passed as an explicit parameter to the query function as follows:
+```
+a_result = clipper.query(**query_examples[1], max_update_date = "2020-07-27") #assumes instantiated clipper from Clipper class
+```
+The max_update_date can be any date in text form, but can also be obtained from the `last_update` field of the result of a previous query. For example, having run the above query, the next day one could run:
+```
+b_result = clipper.query(cl_query_examples[1], max_update_date = a_result["last_update"])
+```
+This will then run the query and obtain data only that has changed since the provided timestamp.  
+* batch_size: size of batches to be returned. 
+* silent: should status updates be shown or not. 
+
+#### Query results
+As mentioned above, it is best to "splat" dicts to the query method as shown above and repeated here:
+
+```
+from clipper_python import Clipper, query_examples 
+clipper = Clipper(username, password) 
+results = clipper.query(**query_examples[1])
+```
+
+Please replace `username` and `password` in the above with your credentials. 
+
+Once this has run, variable `results` will be a dict with two fields in it, `data`, and `last_update`. 
+
+```
+In [2]: results                                                                                                                               
+Out[2]: 
+{'data':        AIS Timestamp Arrival at Anchorage Prior to Discharge Arrival at Anchorage Prior to Loading  ...  Vessel Flag  row_id row_num
+ 0               None                                    None                                  None  ...      LIBERIA   64298   64298
+ 1               None                                    None                                  None  ...      LIBERIA  210803  210803
+ 2               None                                    None                                  None  ...      LIBERIA  210886  210886
+ 3               None                                    None                                  None  ...      LIBERIA  210782  210782
+ 4               None                                    None                                  None  ...      BAHAMAS   44472   44472
+ ...              ...                                     ...                                   ...  ...          ...     ...     ...
+ 246737          None                                    None                                  None  ...       FRANCE  108687  108687
+ 246738          None                                    None                                  None  ...       FRANCE  108837  108837
+ 246739          None                                    None                                  None  ...       FRANCE  108838  108838
+ 246740          None                                    None                                  None  ...      BELGIUM  367888  305857
+ 246741          None                                    None                                  None  ...      BELGIUM   85971   85971
+ 
+ [246742 rows x 103 columns],
+ 'last_update': '2020-07-02T10:28:15.464042'}
+```
+
+`data` contains a Pandas dataframe with all the results of the query and `last_update` contains a string timestamp which should be passed into `max_update_date`, when next one wants to run the query and only obtain most recent data, as explained above.
+
+For users who simply wish to test the API, running `python3 clipper_python.py` will run the two example queries, after prompting for username and password. 
+
+ 
+
+
+![warning](https://github.com/ClipperData-IT/API_documentation/blob/master/images/warning.png)
+**Credentials best practise:** Automated tasks will need to run uninterrupted. Given that API tokens last only 24 hours, the `Clipper` class has been designed to hold both username and password, rather than just the token. This will enable continuous re-authentication when needed, obtaining fresh tokens, thus allowing for long-running processes. *The tradeoff is that usernames and passwords hard-coded in Python scripts might pose a permissioning risk*, because Python is not a compiled language and therefore its scripts are human readable. When instantiating the Clipper class, **we strongly recommend obtaining username and password credentials from environment variables, accessible only when a user is actually logged in**. _**Please do not hard-code usernames and passwords**_. The ClipperData server side will monitor usage for patterns of unauthorised access. 
+
+
+
+## <a name="Rlang"></a> R
+
+The R SDK closely follows the Python SDK and provides full access to the ClipperData database. 
+
+### <a name="Rlang_installation"></a>Installation
+
+Dependences are [httr](https://cran.r-project.org/web/packages/httr/index.html) for making http requests, and [jsonlite](https://cran.r-project.org/web/packages/jsonlite/index.html) for parsing. On Linux operating systems please [ensure that the openssl library headers are available](
+https://stackoverflow.com/questions/46008624/how-to-fix-fatal-error-openssl-opensslv-h-no-such-file-or-directory-in-redhat)
+
+The R API is contained in a module named clipper_r.r which can be downloaded using curl on the command line. 
+
+`curl -OL https://raw.githubusercontent.com/ClipperData-IT/API_documentation/master/addins/clipper_r.r`
+
+This will work on recent version of Windows, Linux, and Mac OS. Alternatively, clone this repository and the file can be found in the "addins" folder. 
+
+### <a name="Rlang_usage"></a>Usage
+
+To use the module, `source("clipper_r.r")` in your code file, ensuring clipper_r.r is in your current working directory, or else by fully qualifying the path and file name. This will expose four functions that are needed:
+
+* `cl_login` will prompt for username and password, and store a global token if authorization succeeds. This function takes optional parameters `username` and `password`. If not supplied they will be prompted for. Please note that cl_login must be run at least once every day as autorisation tokens expire after 24 hours. 
+* `cl_help` will return a nested list of permitted tables, their fields, their categories, and desciptions of each. The user is encouraged to explore this data structure before using the API. Fields which have a limited amount of allowed values will have their `allowed_values` list entry populated. A json representation of the cl_help's output, using library `jsonlite`'s `toJSON` function, saved to a file and opened in a browser or other json-capable software, can be useful in this regard. 
+* `cl_fields` will return a simplified list containing much of the necessary information from cl_help, but in a more accessible, un-nested form. Field `data` contains a datframe of tables, fields, catetogories, and help. Field `allowed_values` contains a list of all allowed values for each table_field pair. Here, a `'*'` no limit on allowed values. Please note that not all information, such as table help or category help, is included here. For these less-used fields, `cl_help` must be run, and its output explored. 
+* `cl_query` performs queries against the API using query description lists. 
+
+A list of three example queries is included named `cl_query_examples`. Each sublist can be passed to cl_query to test the api. The following code will test that your installation is working by running through the query workflow:
+
+```
+source("clipper_r.r") # assumes this file is in the current working directory
+cl_login()
+hlp <- cl_help() # this can be ommitted, but the contents will be helpful for building queries later
+data <- cl_query(cl_query_examples[[1]]) # and once run, a dataframe is returned. 
+```
+
+
+#### Anatomy of a query list
+
+Queries are expressed entirely using R `list` data structures, an example of which is shown here:
+
+```
+list(table = "Crude", 
+     fields = list("Barrels", "Consignee", "Charterer", "IMO", "Grade"),
+     where = list(list(Barrels = list(gt = 1), conjunction = ""),
+	     list("Load Date" = list(gt = "'2000-01-01'"), conjunction = "AND"))
+```
+
+* table: A valid table name (see the `cl_help()` function).
+* fields: A list of field names, again should be shown in the `cl_help()` function results. 
+* where: As many nested lists of the form `list(fieldname = list(operator = value), conjunction = "conjunction")` as are required. All fieldnames must be valid, operator must be one of "gt", "lt", "gte", "lte", "eq", "ne", or "like", and conjunction must be the empty string "", "OR", or "AND". The first entry in the where list's conjunction must be the empty string, as this represents the first where clause and will not need a conjunction (the above example illustrates this). Please note that nested precedence is not supported. 
+* orderby: a list of the form list("fieldname" = order_direction) where fieldname is a valid string field name, and order_direction is one of "ASC" or "DESC".
+
+The following are not shown in the example but are available:
+
+* max_update_date: an update timestamp can be provided in field `max_update_date`. This must be passed as an explicit parameter to the cl_query function as follows:
+```
+cl_query(cl_query_examples[[2]], max_update_date = "2020-07-27") -> a_result
+```
+The max_update_date can be any date in text form, but can also be obtained from the `last_update` field of the result of a previous query. For example, having run the above query, the next day one could run:
+```
+cl_query(cl_query_examples[[2]], max_update_date = a_result$last_update) -> b_result
+```
+This will then run the query and obtain data only that has changed since the provided timestamp.
+
+
+#### Returned data
+The API will batch-fetch up to 10k rows at a time, and once all rows have been fetched, return a list containing two fields. Field 'data' contains a data frame with column data types corresponding to those in the database. Field 'last_update' contains a timestamp of most recent data, which can be used later to update the query using fields `max_update_date` (see above). Please note that R's particular memory architecture makes parsing JSON data and conversion to dataframes potentially take a few seconds. 
+The `cl_query` function also accepts a `silent = [TRUE, FALSE]` parameter which will turn off batch fetch update prints to the console. 
+
+## <a name="other_lang"></a>Other programming languages
+
+In this section we will use a lowest common denominator HTTPS library, namely the Linux bash command line `curl` utility (also available in recent versions of Windows), to access the API. This will illustrate access to the API in its purest, raw form, via manually constructed URLs. The concepts will be translatable to any programming language which has an HTTP library and can parse JSON (which is essentially all of them). However please note that the R and Python APIs perform a lot of hand-holding and behind-the-scenes URL construction work which will be unavailable here. 
+
+First, let's examine the basic API workflow. All client side operations, shown in orange, will need to be performed manually:
+
+![api_workflow](https://github.com/ClipperData-IT/API_documentation/blob/master/images/api_workflow2.png)
+
+The API works using the concept of "endpoint" URLs, three of which will be used:
+
+* `https://api.clipperdata.com/token`, which when sent with valid username and password fields in an HTTPS POST form-data format, will return a token which is valid for 24 hours and can be used to access the other endpoints. 
+* `https://api.clipperdata.com/V1/help`, which, when sent with a valid bearer token in the header of an HTTPS GET request, will return the JSON help data structure. 
+* `https://api.clipperdata.com/V1/query/{table_name}?[query details]` which, again when sent with a valid token as a GET request, will return data in batches, as JSON.
+
+We will now walk through the steps. We assume valid [username] and [password] fields to be replaced everwhere in these examples with actual ones obtained from your ClipperData representative. Though there are square brackets in the examples, denoting a dummy variable, these should be omitted (eg. password=some_password, with no square brackets). 
+
+We will parse JSON data structures on the Linux command line using the [jq](https://stedolan.github.io/jq/) library but this is analogous to using any JSON parser in any programming language.
+
+![warning](https://github.com/ClipperData-IT/API_documentation/blob/master/images/warning.png)
+*Please note that the server is https secured. Plaintext http is not supported.*
+
+### Obtaining a token
+We will POST a form-data https request with appropriate username and password fields:
+
+```
+curl -X POST -F "username=[username]" -F "password=[password]" https://api.clipperdata.com/token
+```
+returns:
+
+```
+{"access_token":"yJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0ODk1NDMwQGNsaXBwZXJkYXRhLmNvbSIsImV4cCI6MTU5ODUxOTA2MH0.7LlzCcSkxRqJJ-sRUgZCNaXiGuWqjgIDow0fB4j9dqM","token_type":"bearer"}
+```
+
+We will parse this using `jq`, remove the quote marks using bash `tr`, and put the access token into an environment variable. 
+
+```
+token=$(curl -X POST -F "username=[username]" -F "password=[password]" https://api.clipperdata.com/token | jq ".access_token" | tr -d '"')
+```
+
+We will now have the token in our $token environment variable:
+
+```
+echo ${token}
+yJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0ODk1NDMwQGNsaXBwZXJkYXRhLmNvbSIsImV4cCI6MTU5ODUxOTI0MX0.ekCThWZxoJIIFqgbpXdD6ib_GHf7QoYzfVVtPdhGn_o
+```
+
+This is known as a "bearer token" and can now be used in subsequent calls to the API's help and query endpoints. Please note that the token will uniquely identify the user and that permissions will be appropriately tailored. Further note the format by which tokens are inserted into the https GET request header, in the following section. 
+
+### The help data structure
+
+We are now in a position to obtain the help data structure using an HTTPS get operation and a bearer token type:
+
+```
+curl -H "Authorization: Bearer ${token}" https://api.clipperdata.com/V1/help > help.json 
+```
+
+This creates a `help.json` file which we can parse using `jq`, but first let's take a casual look at it in a browser. Though there are many aspects and levels of depth to this help structure, the two key areas of interest for us are which table names we have access to, and which fields each table contains. First, the tables:
+
+![curl_help_browser](https://github.com/ClipperData-IT/API_documentation/blob/master/images/curl_help_browser.png)
+
+As is clear, we have access to two tables, "Crude", and "Clean Products". If we open up the "Crude" tab, we see a number of nested fields which we will need to build the URL. 
+
+![curl_help_browser](https://github.com/ClipperData-IT/API_documentation/blob/master/images/curl_help_browser3.png)
+
+1. The display name of the table, in this case, "Crude".
+2. The `table_name` field, here called "live.crude".
+3. The `report_id`, here 1631952.
+4. We also see an array of fields, named `table_fields`, in each of which the `name` field will be used to select which fields we require. Other relevant fields are "type", and "allowed_values" which will be discussed later. 
+
+As is clear, both tables and fields also have an associated help field which provides pertinent descriptive information. 
+
+
+### Anatomy of a query
+
+We can now proceed to start querying the database by building up URLs. Here is a simple query which requests the "Load Date", "Grade", and the "IMO" from the "Crude" table. 
+
+```
+curl -H "Authorization: Bearer ${token}" 'https://api.clipperdata.com/V1/query/Crude/?actual_table_name=live.crude&report_id=1631952&fields=Load%20Date&fields=Grade&fields=IMO&offset=0&limit=100&endpoint=curl'
+```
+
+Note how all spaces in field names have been url-encoded and replaced with '%20'. Please use your programming language's url enconding functionality to perform this task. 
+
+We start off with the standard url, namely `https://api.clipperdata.com/V1/query/` and append the table name as per the help data structure table keys, in this case "Crude", giving `https://api.clipperdata.com/V1/query/Crude/`. Thereafter, the query parameters start, and these are demarcated with a question mark '?'. From there on, all fields are listed in the form
+
+```fieldname=xxxx```
+
+where xxxx is the value required, and separated with ampersands `&`. 
+
+Mandatory fields, which must be obtained from the relevant parts of the help data structure, are:
+
+* `actual_table_name`, which is referenced by "table_name" in the help data structure's "tables" array. 
+* `report_id`, which is referenced by "report_id" in the help data structure's "tables" array. 
+* a series of fields in the form `&fields=xxxx&fields=yyyy&fields=zzzz`. Field names can be found under the "table_fields" key of each table entry in the table array. Remember to URL encode spaces or manually replace with "%20". 
+* a `limit` integer. This is directly translated into SQL LIMIT field and tells the database how many rows to return. Please keep this figure below 50000. 
+* an `offset` integer, usually starting with 0, and incremented for each batch. This demarcates which batch one currently wishes to obtain, and is linked to the limit referenced above. The typical pattern is to add the "limit" value to the offset in each subsequent batch request, as per the common limit-offset SQL pagination pattern. Thus large amounts of rows can be fetched without blocking the server with huge limit values, by tracking the offset of each requested batch. Please note that the API tracks all requests, and very large numbers of row fetches in a single batch will be flagged. 
+* an `endpoint` of your choice, describing which programming language you are using, for example "matlab", "javascript", "Ocaml". This is for ClipperData's internal purposes. You are encouraged to fill this out accurately as this will allow ClipperData to take into account your environment when extending the API.
+
+#### Where clauses
+
+Conditionality is supported using where clauses, with AND and OR conjunctions at a single level of nesting (naive, left-to-right precedence for AND and OR queries, with no implicit parenthesis capabilities). Where clauses look like this:
+
+```
+https://api.clipperdata.com/V1/query/Crude/?actual_table_name=live.crude&report_id=1631952&fields=IMO&fields=Load Date&fields=Record Id&fields=Update Timestamp&fields=Update Type&where={"Load Date": {"gt": "'2020-01-01'"}, "conjunction": ""}&endpoint=Python&offset=0&limit=10000
+```
+The where clause is a JSON data structure containing three elements. The first element is a field name, the second is a nested clause containing any of:
+
+* `"gt"` greater than
+* `"gte"` greater than or equal to 
+* `"lt"` less than
+* `"lte"` less than or equal to 
+* `"eq"` equal to
+* `"ne"` not equal to
+* `"like"`, searches based on the character string appearing as a subset of the actual value. The "like" operation is expensive and its usage will be logged. Please use sparingly. 
+
+The third element is the "conjunction" which must be the empty string "", "AND", or "OR", and as mentioned above will be read from left to right for precedence. The first conjunction (or when there is only one conjunction), must *always* be the empty string, otherwise the query will likely fail. 
+
+![warning](https://github.com/ClipperData-IT/API_documentation/blob/master/images/warning.png)
+*Please note that some fields have a limited set of values against which conditionality can be requested. These can be found under the "allowed_values" key in each field of each table in the help data structure. If this contains only an asterisk, then the field is continuous. If it is discrete with a limited set of values, these values will be listed in an array*
+
+#### Orderby
+
+```
+[previous fields]&orderby={"Barrels": "ASC"}&[next fields]
+```
+
+Order by clauses are supported, in the format shown above. The first entry must be a valid field for the table concerned in the query, and the second must be one of "ASC" or "DESC". 
+
+#### Returned data
+
+Submitting a query returns a JSON data structure containing four elements. 
+
+* `fields` returns an array of the fields that were requested. 
+* `types` returns their data types, to be coerced into your environment's data types.
+* `data` contains an array of returned data.
+* `max_update_date` returns a maximum timestamp for the returned data. If this value is passed into a `max_update_date=[max_update_date_from_last_query]` (replace max_update_date_from_last_query with the actual value that was returned), then only *new* data will be returned by the query. This obviates the need for re-querying large amounts of data, providing the ability to update a data set only with latest rows. 
+
+Here is an example of a query with returned data:
+
+```
+curl -H "Authorization: Bearer ${token}" 'https://api.clipperdata.com/V1/query/Crude/?actual_table_name=live.crude&report_id=1631952&fields=Load%20Date&fields=Grade&fields=IMO&offset=0&limit=100&endpoint=curl'
+```
+
+returns
+
+```
+{"fields":["Load Date","Grade","IMO"],"types":["DATE","TEXT","INTEGER"],"data":[["2016-06-15","MAYA",9528043],["2017-01-20","MAYA",9724087],["2016-09-05","RATAWI (NEUTRAL ZONE)",9419888],["2016-09-05","EOCENE",9419888],["2020-04-14","VASCONIA",9413573],["2020-06-11","VASCONIA",9304825],["2015-09-17","BOSCAN",9297333],["2018-12-03","BOSCAN",9297333],["2018-10-12","DILUTED CRUDE OIL",9420631],["2019-11-21","MAYA",9413573],["2019-11-21","MAYA",9413573],["2019-08-29","VASCONIA",9460564],["2019-08-29","VASCONIA",9460564],["2019-08-08","VASCONIA",9420631],["2016-04-07","OLMECA",9259680],["2013-04-25","MAYA",9122916],["2014-02-27","MAYA",9257993],["2013-06-30","CRUDE",9281009],["2014-01-31","MAYA",9270529],["2013-03-06","MAYA",9252371],["2014-02-07","VASCONIA",9235725],["2014-03-19","MAYA",9235725],["2018-02-20","BOSCAN",9308821],["2016-07-26","OLMECA",9254903],["2019-06-15","KRAKEN",9282792],["2019-06-15","KRAKEN",9282792],["2013-03-09","CALYPSO",9319545],["2019-03-19","VASCONIA",9592288],["2013-07-20","MAYA",9256078],["2016-11-29","ZUATA 20",9345441],["2017-01-19","ZUATA 20",9255660],["2018-12-24","DILUTED CRUDE OIL",9389083],["2015-09-21","DILUTED CRUDE OIL",9407445],["2018-01-17","DILUTED CRUDE OIL",9407457],["2013-10-28","BOSCAN",9411185],["2017-02-27","HAMACA",9261619],["2018-12-23","BOSCAN",9377779],["2013-08-06","MAGDALENA",9528031],["2013-06-11","MAYA",9422835],["2013-07-16","MAYA",9422835],["2016-02-01","DILUTED CRUDE OIL",9528043],["2015-03-03","VASCONIA",9522128],["2016-11-02","VENEZUELAN CRUDE",9610793],["2013-04-22","VASCONIA",9211999],["2013-04-22","VASCONIA",9211999],["2019-01-25","BOSCAN",9294551],["2019-03-19","VASCONIA",9592288],["2013-11-09","ZUATA 20",9419448],["2017-01-14","ZUATA 20",9708576],["2015-05-24","HAMACA",9258870],["2013-04-25","CUSIANA",9247974],["2013-04-25","MAGDALENA",9247974],["2014-01-13","ISTHMUS",9417309],["2018-06-13","MAYA",9759745],["2016-03-17","URALS",9292199],["2016-09-05","EOCENE",9419888],["2019-06-25","BASRAH HEAVY",9753363],["2020-02-15","BASRAH HEAVY",9792474],["2016-02-21","CASTILLA BLEND",9318149],["2016-02-21","VASCONIA",9318149],["2015-07-27","TALAM",9420631],["2015-07-27","ISTHMUS",9420631],["2015-01-12","MAYA",9253325],["2016-09-05","RATAWI (NEUTRAL ZONE)",9419888],["2017-05-11","BASRAH HEAVY",9516105],["2016-03-17","URALS",9292199],["2019-08-08","MAYA",9339313],["2020-01-13","MAYA",9401221],["2019-10-18","MAYA",9409259],["2020-01-13","MAYA",9401221],["2019-12-15","MAYA",9537927],["2020-02-18","MAYA",9537927],["2019-08-09","MAYA",9568196],["2015-03-11","MAYA",9307346],["2016-10-06","MAYA",9262194],["2018-09-15","CALYPSO",9280366],["2016-11-06","MAYA",9309253],["2018-10-15","MAYA",9309253],["2018-10-15","MAYA",9309253],["2018-10-24","MAYA",9292204],["2015-12-04","MAYA",9308821],["2015-12-04","MAYA",9308821],["2017-08-11","MAYA",9292503],["2017-08-30","MAYA",9297541],["2014-10-07","MAYA",9336397],["2015-06-10","MAYA",9336397],["2019-05-15","MAYA",9312846],["2016-05-25","MAYA",9313486],["2013-11-06","MAYA",9299733],["2016-04-29","CALYPSO",9317949],["2018-01-21","MAYA",9378369],["2015-12-08","MAYA",9382750],["2018-07-02","MAYA",9442158],["2018-03-05","MAYA",9417464],["2018-09-11","MAYA",9724348],["2016-02-14","CASTILLA BLEND",9420617],["2019-04-18","MAYA",9409259],["2017-12-05","MAYA",9253325],["2016-01-19","VASCONIA",9610793],["2016-01-19","VASCONIA",9610793]],"max_update_date":"2020-06-24T16:01:04.533752"}
+
+```
+
+![warning](https://github.com/ClipperData-IT/API_documentation/blob/master/images/warning.png)
+*In general, direct API access via URLs opens up many avenues for potential errors. For security and efficiency reasons, the API is terse and demanding when it comes to the precision of submitted requests. The Python and R SDKs perform a lot of helper work to make access simple and easy, and their code should be [consulted](https://github.com/ClipperData-IT/API_documentation/tree/master/addins) for anybody who wishes to see in extreme detail, examples of how URLs are constructed in those languages.*
+
+
+## <a name="Keeping_the_data_current_python_"></a>Keeping the Data current (Python & R)
+
+You do not need to download the entire data set every day. Instead, you can only download the most recent insertions, deletions and modifications. 
+
+Each record has a record id, update type and update timestamp, These fields are included in your data feed by default. You need not select these fields, nor are you able to download the date without them.
+
+- A new record_id will have an update type of "i" for insert. Insert this row, or batch of rows.
+- A canceled record_id will have an update type of "d" for delete. Delete all records that have this record_id and an earlier update_timestamp.
+- A modified record_id will have an update type of "m" for modified. insert this row or batch of rows after previous deletion.
+NOTE: A updated record_id will be passed through in two steps, first the delete, then the modification, and both will have the same update_timestamp. Because of this, you need to work through insert ("i") records first, followed by delete ("d"), then modified ("m").
+
+### What happens on the first download? 
+
+You will receive all the records for the fields and filters that you chose including deletions and modifications for the most recent two months to the date of the first download. Apply the cancel and modify commands accordingly to the last two months (shown above).
+
+### What happens on subsequent update downloads?
+
+Each API call will return a last_update_date field along with the data. This is a timestamp of when the API call was made. For subsequent update downloads, you will need to include this timestamp as a parameter called max_update_date to receive the new records since the last call. For example, first download query parameters could look like:
+```
+query_params = { "table": "Crude" }
+```
+Update query parameters:
+```
+query_params = {
+    "table": "Crude",
+    "max_update_date": "2020-08-10 00:00:00"
+}
+```
+Please note that if the gap between calls to the API is longer than 2 months, you will be missing delete and modify records. We keep only two months of delete and modify records in the table. In the case of a gap of 2 months or longer, make a new API call, do not attempt to update your existing data.
+
+### What if I want to see all modifications, even those more than 2 months old?
+
+In that case please contact us for our point in time data. Please be aware that this data set is very large.
