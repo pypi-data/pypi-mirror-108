@@ -1,0 +1,1 @@
+A unified ensemble framework for pytorch to easily improve the performance and robustness of your deep learning model. Ensemble-PyTorch is part of the pytorch ecosystem which requires the project to be well maintained.
