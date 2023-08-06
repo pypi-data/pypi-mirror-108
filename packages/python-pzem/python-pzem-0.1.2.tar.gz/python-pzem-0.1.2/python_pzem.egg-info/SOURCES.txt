@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+python_pzem.egg-info/PKG-INFO
+python_pzem.egg-info/SOURCES.txt
+python_pzem.egg-info/dependency_links.txt
+python_pzem.egg-info/requires.txt
+python_pzem.egg-info/top_level.txt
+pzem/__init__.py
+pzem/pzem.py
