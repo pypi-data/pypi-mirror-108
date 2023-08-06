@@ -1,0 +1,7 @@
+#!python
+from vmush.launcher import VMUSHLauncher
+
+
+if __name__ == "__main__":
+    launcher = VMUSHLauncher()
+    launcher.run()
