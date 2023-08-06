@@ -1,0 +1,8 @@
+.idea
+/Qiber3D.egg-info/
+/dist/
+/build/
+/.coverage
+/coverage_html_report/
+x3dom.js
+x3dom.css
