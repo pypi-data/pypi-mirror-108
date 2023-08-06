@@ -1,0 +1,17 @@
+README.md
+setup.py
+./serializepy/__init__.py
+./serializepy/parsers.py
+./serializepy/utilities.py
+./serializepy/version.py
+./serializepy/visitors.py
+./tests/__init__.py
+./tests/test_deserialize_classes.py
+./tests/test_deserialize_general.py
+./tests/test_deserialize_inheritance.py
+./tests/test_deserialize_static.py
+./tests/test_serialize.py
+serializepy.egg-info/PKG-INFO
+serializepy.egg-info/SOURCES.txt
+serializepy.egg-info/dependency_links.txt
+serializepy.egg-info/top_level.txt
