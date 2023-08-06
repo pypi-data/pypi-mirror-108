@@ -1,0 +1,8 @@
+LICENSE
+README.md
+setup.py
+benzole/__init__.py
+benzole.egg-info/PKG-INFO
+benzole.egg-info/SOURCES.txt
+benzole.egg-info/dependency_links.txt
+benzole.egg-info/top_level.txt
