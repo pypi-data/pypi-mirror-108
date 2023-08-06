@@ -1,0 +1,4 @@
+numpy
+networkx
+trimesh
+pythreejs>=2.2.1
