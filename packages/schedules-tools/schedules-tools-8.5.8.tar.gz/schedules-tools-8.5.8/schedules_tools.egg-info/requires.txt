@@ -1,0 +1,8 @@
+icalendar
+lxml
+
+[Rally]
+pyral>1.5
+
+[Smartsheet]
+smartsheet-python-sdk-py39>=2.105.1.10
