@@ -1,0 +1,15 @@
+README.md
+setup.py
+firstimpression/__init__.py
+firstimpression/bcc.py
+firstimpression/file.py
+firstimpression/html.py
+firstimpression/nu_nl.py
+firstimpression/rss.py
+firstimpression/scala.py
+firstimpression/text.py
+firstimpression.egg-info/PKG-INFO
+firstimpression.egg-info/SOURCES.txt
+firstimpression.egg-info/dependency_links.txt
+firstimpression.egg-info/requires.txt
+firstimpression.egg-info/top_level.txt
