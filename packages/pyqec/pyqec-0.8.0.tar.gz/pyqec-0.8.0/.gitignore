@@ -1,0 +1,10 @@
+/target
+Cargo.lock
+/venv
+poetry.lock
+**/__pycache__/*
+*.cpython-39.pyc
+pyqec/pyqec.cpython-39-x86_64-linux-gnu.so
+*.pdf
+.vscode
+**/*.abi3.so
