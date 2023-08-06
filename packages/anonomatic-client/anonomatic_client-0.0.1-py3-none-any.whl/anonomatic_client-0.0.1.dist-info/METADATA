@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: anonomatic-client
+Version: 0.0.1
+Summary: Simple Anonomatic Client
+Home-page: https://github.com/andrewgross/anonomatic_client
+Author: Andrew Gross
+Author-email: andrew.w.gross@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: requests (>=2.0.0)
+
+## Anonomatic Client
+
+Simple client to interact with the Anonomatic API.
+
+
+## Changelog
+
+### 0.0.1
+----
+
+* Initial creation
+* Remove extraneous PDBs
+
+
