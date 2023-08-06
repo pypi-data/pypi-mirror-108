@@ -1,0 +1,9 @@
+djjwt/__init__.py,sha256=sXLh7g3KC4QCFxcZGBTpG2scR7hmmBsMjq6LqRptkRg,22
+djjwt/middleware.py,sha256=QjCutqyTPjedEtJy_5SYLpd2AlTLalvVzC7Glmeccfw,747
+djjwt/urls.py,sha256=zINnxObnzsDlxpD6I39N101pqQgHjndEqd-clcAEIOc,417
+djjwt/views.py,sha256=Mok_5uPR5vyVqU4UG73pDKdBn33C25pIfQ6kZOeN_q8,1745
+dj_jwt-0.0.1.dist-info/LICENSE,sha256=Ule3a9G5193FthTRi_7i_NcDwZJIlel_ApU5ycuu5Gs,1075
+dj_jwt-0.0.1.dist-info/METADATA,sha256=l7hVIv7toZmU4JrBWKb0Fb8PrBjc2GGZ7vMr0UZW4zQ,2012
+dj_jwt-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+dj_jwt-0.0.1.dist-info/top_level.txt,sha256=pYkq-V2CoxPhDr3z3I4hxuEN2tVt75TYCrMfN9ZIECQ,6
+dj_jwt-0.0.1.dist-info/RECORD,,
