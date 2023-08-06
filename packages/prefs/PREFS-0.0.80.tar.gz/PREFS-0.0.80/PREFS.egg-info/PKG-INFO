@@ -1,0 +1,101 @@
+Metadata-Version: 2.1
+Name: PREFS
+Version: 0.0.80
+Summary: A simple program that creates, read and write prefs
+Home-page: https://github.com/Patitotective/PREFS
+Author: Cristobal Riaga
+Author-email: cristobalriaga@gmail.com
+License: MIT
+Description: <p align="center">
+          <a href="https://github.com/Patitotective/PREFS/wiki" target="blank">
+          <img src="logo1.png" alt="PREFS Logo" /></a>
+        </p>
+        
+        ## Why?
+        _PREFS's purpose is to facilitate the process of store information, user information (that won't get lost when you close the program)._
+        Prefs is the abreviation of preferences, usually user preferences, but also you can store whatever you want.
+        
+        ## Installation:
+        On windows:
+        ```pip install PREFS```
+        
+        On Mac and Linux:
+        ```pip3 install PREFS```
+        
+        Also if you want to see the code you can download `__init__.py`, i sometimes forgot to upload the code, so for get the latest version check https://pypi.org/project/PREFS/.
+        
+        ## Store Prefs
+        The main feature is to store preferences, read and write them.
+        It creates a .txt file where in a dictionary like structure, your prefs will be stored, i.e.:
+        ```
+        firstEntry="02/05/2021"
+        theme="Dark"
+        username="Patitotective"
+        age="21"
+        ```
+        
+        ### Syntaxis:
+        Each prefs file is an instace of PREFS class, first you have to create an instance of the class PREFS:
+        ```
+        UserPrefs = PREFS.PREFS(prefs = {"age": 21, "username": "Patitotective"})
+        ```
+        from this you could call the two methods:
+        
+        ```ReadPrefs()```: It will return a dictionary with your prefs (key and value).
+        
+        ```WritePrefs()```: It requires two arguments, first the name of the pref that you want to change (if pref exists) or create it if it doesn't.
+        
+        
+        ## Documentation
+        
+        PREFS documentation can be found at [PREFS DOCUMENTATION](https://github.com/Patitotective/PREFS/wiki) with more examples and information.
+        
+        
+        Change Log
+        ==========
+        
+        0.0.1 (01/05/2021)
+        -------------------
+        - First Release
+        
+        0.0.2 (01/05/2021)
+        -------------------
+        - Name change
+        
+        0.0.3 (02/05/2021)
+        -------------------
+        - Added python interpreter for pref values (using ast library)
+        
+        0.0.4 (02/05/2021)
+        -------------------
+        - Now in class PREFS argument prefs you must pass a lambda: function for not execute the function always, only when file is lost.
+        
+        0.0.45 (02/05/2021)
+        -------------------
+        - Fixed error with lambda.
+        
+        0.0.46 (04/05/2021)
+        -------------------
+        - Now you can choose your prefs ender, line break is predetermined, remember don't put a character that is on your prefs because program fails.
+        
+        
+        0.0.6 (04/05/2021)
+        -------------------
+        - Set max split as 1.
+        
+        0.0.65 (04/05/2021)
+        -------------------
+        - Added ChangeFilename() function and ReWritePrefs() function.
+        
+        0.0.80 (05/06/2021)
+        -------------------
+        - Added dictionary write mode and support path file.
+        
+Keywords: prefs
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Description-Content-Type: text/markdown
