@@ -1,0 +1,17 @@
+README.md
+setup.py
+example_pkg/__about__.py
+example_pkg/__init__.py
+example_pkg/helpers.py
+example_pkg/sub_pkg_1/__init__.py
+example_pkg/sub_pkg_1/mod_one.py
+example_pkg/sub_pkg_1/mod_two.py
+example_pkg/sub_pkg_1/nested_pkg_1/__init__.py
+example_pkg/sub_pkg_1/nested_pkg_1/nst_1.py
+example_pkg/sub_pkg_2/__init__.py
+example_pkg/sub_pkg_2/mod_1.py
+example_pkg/sub_pkg_2/mod_2.py
+firstNestedPackage_edo.egg-info/PKG-INFO
+firstNestedPackage_edo.egg-info/SOURCES.txt
+firstNestedPackage_edo.egg-info/dependency_links.txt
+firstNestedPackage_edo.egg-info/top_level.txt
