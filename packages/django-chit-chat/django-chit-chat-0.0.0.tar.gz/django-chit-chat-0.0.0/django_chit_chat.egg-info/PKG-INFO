@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: django-chit-chat
+Version: 0.0.0
+Summary: chat for projects we help maintain @ ckc
+Home-page: https://github.com/ckcollab/django-chit-chat
+Author: Bailey Trefts
+Author-email: bailey@ckcollab.com
+License: UNKNOWN
+Description: django-chit-chat [<img src="https://ckcollab.com/assets/images/badges/badge.svg" alt="CKC" height="20">](https://ckcollab.com)
+        ==========
+        chat for projects we help maintain @ [ckc](https://ckcollab.com)
+        
+        
+        ## installing
+        
+        ```bash
+        pip install django-chit-chat
+        ```
+        
+        ```python
+        # settings.py
+        INSTALLED_APPS = (
+            "django.contrib.auth",
+            "django.contrib.contenttypes",
+            "django.contrib.sessions",
+            "django.contrib.staticfiles",
+        
+            # ... add chit_chat
+            "chit_chat",
+        )
+        ```
+        
+        ## distributing
+        
+        ```bash
+        # change version in setup.cfg
+        $ ./setup.py sdist
+        $ twine upload dist/*
+        ```
+        
+        ## tests
+        
+        ```bash
+        $ docker build -t django-chit-chat . && docker run django-chit-chat pytest
+        ```
+        
+Keywords: django
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Software Development
+Requires-Python: >= 3.6
+Description-Content-Type: text/markdown
