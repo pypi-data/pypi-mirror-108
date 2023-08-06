@@ -1,0 +1,11 @@
+{% extends "manager/table_manager_base.ts.j2" %}
+
+{% block import_header %}
+{% import "common/path_utils_macro.j2" as path_utils %}
+import { BaseProjectTableManager } from '{{path_utils.framework_path(prefix)}}/Tables/Manager/BaseProjectTableManager';
+{% endblock %}
+
+
+{%- block praent_table_manager_name_block -%}
+BaseProjectTableManager
+{%- endblock -%}

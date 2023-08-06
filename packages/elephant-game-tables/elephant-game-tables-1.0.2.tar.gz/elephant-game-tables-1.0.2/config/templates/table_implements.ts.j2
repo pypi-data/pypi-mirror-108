@@ -1,0 +1,13 @@
+{# 渲染单个表导出的类实现 #}
+export class {{table.name}}Item extends BaseTableItem {
+{% for property in table.properties %}
+    {{property.name}}: {{property.type}};
+{% endfor %}
+}
+
+export class {{table.name}} extends BaseTableT<{{table.name}}Item> {
+    protected createNewTableItem(): {{table.name}}Item {
+        return new {{table.name}}Item();
+    }
+}
+
