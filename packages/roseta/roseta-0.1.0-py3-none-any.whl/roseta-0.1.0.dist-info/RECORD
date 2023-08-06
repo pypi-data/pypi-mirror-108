@@ -1,0 +1,10 @@
+roseta/__init__.py,sha256=FMci4QlMbgbQfFejKKZCqc6ZS1e2Gu8dk-mucxdefiE,118
+roseta/convert.py,sha256=ZlHH92ZjoW9a1FEwexE6TEbTCfpXdiz7yILJ8cpt3ho,9791
+roseta/convert_test.py,sha256=wozqilQFLsMhIbyIUPu6bWj5-XNKJmg9V7oBBZa-0Xk,7510
+roseta/version.py,sha256=CpXi3jGlx23RvRyU7iytOMZrnspdWw4yofS8lpP1AJU,18
+roseta-0.1.0.dist-info/LICENSE,sha256=XZHxDWWiBSh2daEwizWYmXngoLFQBxGbK1OaZ2QyI_A,1062
+roseta-0.1.0.dist-info/METADATA,sha256=FMeoRUdhd0hFcpRofNZJ06rEJJzxvskziXhauMLi9Lc,1489
+roseta-0.1.0.dist-info/WHEEL,sha256=_NOXIqFgOaYmlm9RJLPQZ13BJuEIrp5jx5ptRD5uh3Y,92
+roseta-0.1.0.dist-info/top_level.txt,sha256=EBQsYwL2oHPYzVN7F4YWoMyBm5W5NyNalUp0VhdShlI,7
+roseta-0.1.0.dist-info/zip-safe,sha256=AbpHGcgLb-kRsJGnwFEktk7uzpZOCcBY74-YBdrKVGs,1
+roseta-0.1.0.dist-info/RECORD,,

@@ -1,0 +1,65 @@
+Metadata-Version: 2.1
+Name: roseta
+Version: 0.1.0
+Summary: From unstructured data to structured data.
+Home-page: https://github.com/Ailln/roseta
+Author: Ailln
+Author-email: kinggreenhall@gmail.com
+License: MIT License
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: setuptools (>=40.6.3)
+Requires-Dist: cn2an (>=0.5.11)
+
+# Roseta
+
+🧪 从「非结构化数据」到「结构化数据」！
+
+> 如果需求多，就开始做，否则就慢慢推进～
+> 1. 欢迎「提需求」🎉；
+> 2. 欢迎「供数据」🎉。
+
+## 1 快速上手
+
+### 安装
+
+```bash
+pip install roseta
+```
+
+### 使用
+
+```python
+from roseta import eat
+
+## 转化身高
+num, unit = eat("一米八")
+# (180, 'cm')
+num, unit = eat("1.8米", cls="height", unit="cm")
+# (180.0, 'cm')
+num, unit = eat("180厘米", unit="m")
+# (1.8, 'm')
+
+## 转化体重
+num, unit = eat("一斤八")
+# (0.9, 'kg')
+num, unit = eat("1.8公斤", cls="weight", unit="kg")
+# (1.8, 'kg')
+num, unit = eat("180kg", unit="g")
+# (180000, 'g')
+```
+
+## 2 许可
+
+[![](https://award.dovolopor.com?lt=License&rt=MIT&rbc=green)](./LICENSE)
+
+## 3 参考
+
+- [如何从模板创建仓库？](https://help.github.com/cn/articles/creating-a-repository-from-a-template)
+- [如何发布自己的包到 pypi ？](https://www.v2ai.cn/python/2018/07/30/PY-1.html)
+
+
