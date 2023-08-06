@@ -1,0 +1,9 @@
+aiomultiprocess
+appdirs
+click
+coverage
+numpy
+ruamel.yaml
+pytest
+six
+zmq

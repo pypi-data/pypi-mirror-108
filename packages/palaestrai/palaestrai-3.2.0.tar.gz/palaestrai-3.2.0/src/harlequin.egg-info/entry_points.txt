@@ -1,0 +1,4 @@
+
+        [console_scripts]
+        arl-experiment=harlequin.cli.experiment_manager:main
+    

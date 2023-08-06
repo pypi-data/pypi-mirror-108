@@ -1,0 +1,204 @@
+Metadata-Version: 1.2
+Name: harlequin
+Version: 2.2.0
+Summary: Adversarial Resilience Learning reference implementation.
+Home-page: UNKNOWN
+Author: Eric MSP Veith <eric.veith@offis.de>
+Author-email: eric.veith@offis.de
+License: (unkown)
+Description: Adversarial Resilience Learning --- Reference Implementation
+        ============================================================
+        
+        Introduction
+        ------------
+        
+        This is ARL Terra Nova, the reference implementation of the Adversarial
+        Resilience Learning (ARL) concept. The ARL core concept consists of two
+        agents, attacker and defender agents, working an a common model of a
+        cyber-phyiscal system (CPS). The attacker's goal is to de-stabilize the CPS,
+        whereas the defender works to keep the system in a stable and operational
+        state. Both agents do not perceive their opponent's actions directly, but only
+        the state of the CPS itself. This imples that none of the agents knows whether
+        anything they perceive through their sensors is the result of the dynamics of
+        the CPS itself or of another agent's action.  Also, none of the agents has an
+        internal model of the CPS. Attacker and defender alike have to explore the CPS
+        given their sensors and actuators independently and adapt to it. ARL is, in
+        that sense, suitable to a reinforcement learning approach.  Combined with the
+        fact the both agents do not simply learn the CPS, but also its respective
+        opponent, ARL implements system-of-systems deep reinforcement learning.
+        
+        Installation
+        ------------
+        
+        ARL Terra Nova is mainly written in Python, with the usual third-party library
+        here and there. It provides a `setup.py` file just as any well-behaved Python
+        program. Use::
+        
+             ./setup.py install
+        
+        or, for development::
+        
+            pip install -e .
+        
+        Usage
+        -----
+        
+        After installing (and, probably, configuring your logging.conf.yaml),
+        type::
+        
+            arl-experiment start example_experiment.yml
+        
+        To run the example experiment. Currently, there is an error during
+        shutdown, but, nevertheless, the experiment should run.
+        
+        Scientific Documentation
+        ------------------------
+        
+        ARL uses techniques from numerous domains. The folder ``doc/sci`` contains a
+        number of rst files that give an overview of these topics. Each file contains
+        a short summary (about 1/2 page) about a given topic, e.g., DDQN. The file
+        answers the following questions:
+        
+        1. What is it, and where do we use it?
+        2. What is its goal, and how does it achive it?
+        3. What are the interfaces and possible implementations?
+        4. What are the ideosyncrasies?
+        
+        Development
+        -----------
+        
+        Handling a Bug
+        ``````````````
+        
+        ARL Terra Nova provides a `Makefile` as convience wrapper around many
+        functions usually required, e.g., to run tests, create a docker image, and the
+        like.
+        
+        - A prose description of the bug: what did you intend to do, what happened
+          instead?
+        - The error message, if there is any.
+        - The command line parameters and configuration
+        - Your version of Python you are using, and the version of all modules
+          (``pip freeze`` gives you that).
+        
+        Contributing
+        ````````````
+        
+        The typical work flow is as such:
+        
+        1. File a bug/feature/support request in the issue tracker
+        2. Create a feature branch to work on your issue. Name it 
+           ``bug-<num>-<shortname>`` for bugs, ``feature-<num>-<shortname>`` for new
+           features, etc.
+        3. Provide a unit test for the bug/feature you have been working on.
+        4. Fix the bug/work on the feature.
+        5. Run ``pylint --rcfile test/pylint.rc arl experiment.py`` and clean up all
+           errors.
+        6. Check that your code still runs by running ``Make check``.
+        7. Request a merge. The merge will happen after a code review;
+           work-in-progress code gets first merged into ``development``
+        8. Once the current development branch has ripened enough, it is merged to
+           ``master``. The master branch must contain code that is stable. New
+           releases are only tagged on master branch commits.
+        
+        Coding Style
+        ````````````
+        
+        Have a look at our architecture document and diagrams in
+        ``doc/architecture.rst``.
+        
+        We adhere to PEP8_.
+        
+        Try hard to find fitting names for new modules and subdirectories. If you are
+        importing your own module as ``import X as Y`` and ``Y`` is
+        differing semantically from ``X``, it might be the right time to change
+        the name of ``X``. Please refrain from abbreviated names if it is not
+        absolutely clear (in two years from now) what the abbreviation signifies.
+        Specifically, use short variable names in functions, if you like to, but stick
+        to commonly known and accepted abbreviations, such as ``for i in list`` or
+        similar things. Avoid confusion with function names from the Python base
+        library, e.g., do not use ``exp`` as a shorthand for "experiment" (cf.
+        ``math.exp(x, y)``.
+        
+        Supply docstrings for every class and public function. Otherwise, when you
+        find yourself writing comments, consider writing better, self-explaining code
+        instead. When adding "TODO" or "FIXME" comments, make sure somebody else can
+        understand and begin to work on them. 
+        
+        Functions should not span more than one screen length.
+        
+        Copyright & Authors
+        -------------------
+        
+        All source code, except where otherwise mentioned, is Copyright (C) 2018, 2019
+        OFFIS e.V. Contributing authors are listed in order of their appeareance in
+        the file AUTHORS.
+        
+        The dynamic loader used in the command-line utility relies more or less
+        verbatim on code from the Python project. See the file ``doc/python-license``.
+        
+        The code in ``arl.types`` comes from the OpenAI Gym_ project.  See the file
+        ``doc/gym-license.md``.
+        
+        .. _mosaik: http://mosaik.offis.de/
+        .. _PEP8: https://www.python.org/dev/peps/pep-0008/
+        .. _Gym: https://github.com/openai/gym
+        
+        Running an example with MIDAS
+        -----------------------------
+        
+        MIDAS is a collection of simulators for enery system simulation. To use all
+        features of MIDAS, you need access to two repositories on eprojects.offis.de.
+        First, you need to install pysimmods::
+        
+           pip install git+https://eprojects.offis.de/ospysimmods/git/ospysimmods.git
+        
+           
+        The next step is to get the MIDAS source::
+        
+           git clone -b development https://eprojects.offis.de/midas/git/midas.git
+        
+        If you don't have access to either of these repos, write an email to 
+        stephan.balduin@offis.de. **First, make sure you checked out the 
+        development branch**. Otherwise, type::
+        
+            git checkout development
+            
+        MIDAS should then be installed via pip. 
+        
+        Usage
+        `````
+        
+        Examples how to use MIDAS together with ARL can be found either in
+        arl: tests/system/extended_mosaik_experiment.py or in 
+        arl: src/arl/doe/experiment_loader.py. The first one is probably easier 
+        to understand since it uses the standard (midas-0.1.13) cli, but the 
+        second one shows the recommended usage, since it uses the special arl 
+        interface of midas, which will be explained in the following in more
+        detail.
+        
+        The experiment loader (EL) is kind of an intermediate prototype for the 
+        steps between CPS-Abstract Ontology and CPS-Experiment Generator.
+        The EL loads an experiment file, creates a governor, agents, 
+        environments, and a simulator. An exampe experiment file is located
+        in arl: tests/fixtures/example_experiment.yml
+        
+        Any questions regarding MIDAS can be send to stephan.balduin@offis.de.
+        
+        Note: MIDAS is still WIP. The API may change in the near future. This short
+        guide will be updated as soon as possible
+           
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v3 (LGPLv3)
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.8.0
