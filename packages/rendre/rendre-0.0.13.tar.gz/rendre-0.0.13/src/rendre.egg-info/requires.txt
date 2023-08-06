@@ -1,0 +1,4 @@
+coloredlogs
+aurore>0.0.7
+pyyaml
+jinja2
