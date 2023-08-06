@@ -1,0 +1,2 @@
+reframed>=1.2.1
+pandas>=1.0
