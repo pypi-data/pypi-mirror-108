@@ -1,0 +1,62 @@
+Metadata-Version: 2.1
+Name: osxharvey
+Version: 0.0.3
+Summary: Big White Rabbit, which can hop wifi channels while sniffing for information
+Home-page: https://github.com/kampfhamster309/osxharvey
+Author: Felix Harenbrock
+Author-email: felix.harenbrock@gmx.de
+License: MIT
+Download-URL: https://pypi.org/project/osxharvey/
+Project-URL: Bug Tracker, https://github.com/kampfhamster309/osxharvey/issues
+Keywords: OSX Sniffer,Channel Hopping,Wifi Sniffer,Wifi Sniffer Mac
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: MacOS
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Security
+Description-Content-Type: text/markdown
+License-File: LICENSE.md
+
+# OsxHarvey
+
+The *Big White Rabbit* OsxHarvey is a small tool/Wifi-Sniffer to grab all the data.
+
+Being a rabbit, Harvey hops from wifi-channel to wifi-channel to make sure he doesn't 
+miss anything.
+
+Harvey is intended to be used by security professionals for LEGAL purposes.
+
+## This package is in pre-Alpha and therefore still under construction
+
+# Changelog
+
+
+## (unreleased)
+
+### Changes
+
+* Added README and LICENSE. [kampfhamster309]
+
+
+## 0.0.2 (2021-06-05)
+
+### Other
+
+* 'new' Added automated changelog. [kampfhamster309]
+
+* Applied black. [kampfhamster309]
+
+
+## 0.0.1 (2021-06-05)
+
+### Other
+
+* Applied basic package structure, versioning and basic test structure. [kampfhamster309]
+
+* Initial commit. [kampfhamster309]
+
+
+
+
