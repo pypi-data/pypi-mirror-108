@@ -1,0 +1,15 @@
+scrapy_frontera/__init__.py,sha256=bd8hlxKMc0Fh_2w5GWfqBtuwa8uTepTMjT8w7F-EKvY,22
+scrapy_frontera/converters.py,sha256=ph0dvKX5tTjqU3Ijkjlqe48gvkO6n1G9ixolVqTKnvE,6411
+scrapy_frontera/manager.py,sha256=rofvhNsGsTKNkaSFY7A2o1PxOthwoEQFnG6UPdVBta8,1774
+scrapy_frontera/middlewares.py,sha256=TQU-0hRYVVIYi9_1Z4alahiiPCom1Bxed0fXJdjyT88,992
+scrapy_frontera/scheduler.py,sha256=wlWkFDPr_8dvMl_iXnSsD_Yg4r1TiGj6fRNFl8JGCA4,4683
+scrapy_frontera/settings.py,sha256=G7-uPsdcgqfPWaWXKTnXs1tZ7vhy8fPc8sL203onJ-8,113
+scrapy_frontera/utils.py,sha256=I84-vrACytUBSP0IfF6rB4ZRhAZD3fz-JJISl46-1fo,184
+scrapy_frontera/components/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+scrapy_frontera/core/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+scrapy_frontera/core/manager.py,sha256=l0mOALh34aLuR-mirC-VsF2hNd4YFzbdeX6VhIVWRu0,1454
+scrapy_frontera-0.2.9.dist-info/LICENSE,sha256=C0mo1T2-5y1JsaO-CtC0j3cQaAYNA7YH1yS76COGqq0,1478
+scrapy_frontera-0.2.9.dist-info/METADATA,sha256=Kuj8PGpElsf5menoJYplgFPh4e0Gvo34MxX_I5ILrVs,7724
+scrapy_frontera-0.2.9.dist-info/WHEEL,sha256=g4nMs7d-Xl9-xC9XovUrsDHGXt-FT0E17Yqo92DEfvY,92
+scrapy_frontera-0.2.9.dist-info/top_level.txt,sha256=-jx1hU32-jzxYB2Z87ZAWAtT5zSZR3WoyoB0V2rlkTo,16
+scrapy_frontera-0.2.9.dist-info/RECORD,,
