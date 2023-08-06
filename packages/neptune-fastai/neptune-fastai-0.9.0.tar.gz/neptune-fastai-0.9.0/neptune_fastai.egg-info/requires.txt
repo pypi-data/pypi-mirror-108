@@ -1,0 +1,8 @@
+neptune-client>=0.9.16
+fastai>=2.0.0
+
+[all]
+
+[dev]
+pylint
+pylintfileheader
