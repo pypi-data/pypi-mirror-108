@@ -1,0 +1,17 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+./neatcode/__init__.py
+./neatcode/base.py
+./neatcode/context_management.py
+./neatcode/decoration.py
+./neatcode/object_manipulation.py
+./neatcode/legacy/__init__.py
+./neatcode/legacy/neatcode.py
+./neatcode/policy/__init__.py
+./neatcode/policy/argument_substitution.py
+neatcode_txetx.egg-info/PKG-INFO
+neatcode_txetx.egg-info/SOURCES.txt
+neatcode_txetx.egg-info/dependency_links.txt
+neatcode_txetx.egg-info/top_level.txt
