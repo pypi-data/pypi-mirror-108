@@ -1,0 +1,38 @@
+# py-pkg-playground
+
+[![Build Status](https://github.com/Dresdn/py-pkg-playground/workflows/test/badge.svg?branch=main&event=push)](https://github.com/Dresdn/py-pkg-playground/actions?query=workflow%3Atest)
+[![codecov](https://codecov.io/gh/Dresdn/py-pkg-playground/branch/main/graph/badge.svg)](https://codecov.io/gh/Dresdn/py-pkg-playground)
+[![Python Version](https://img.shields.io/pypi/pyversions/py-pkg-playground.svg)](https://pypi.org/project/py-pkg-playground/)
+[![wemake-python-styleguide](https://img.shields.io/badge/style-wemake-000000.svg)](https://github.com/wemake-services/wemake-python-styleguide)
+
+This is a Python package to learn Github actions!
+
+## Features
+
+- Fully typed with annotations and checked with mypy, [PEP561 compatible](https://www.python.org/dev/peps/pep-0561/)
+- Add yours!
+
+## Installation
+
+```bash
+pip install py-pkg-playground
+```
+
+## Example
+
+Showcase how your project can be used:
+
+```python
+from py_pkg_playground.example import some_function
+
+print(some_function(3, 4))
+# => 7
+```
+
+## License
+
+[MIT](https://github.com/Dresdn/py-pkg-playground/blob/master/LICENSE)
+
+## Credits
+
+This project was generated with [`wemake-python-package`](https://github.com/wemake-services/wemake-python-package). Current template version is: [bb1dd122f276580008375990122e1e3f71394275](https://github.com/wemake-services/wemake-python-package/tree/bb1dd122f276580008375990122e1e3f71394275). See what is [updated](https://github.com/wemake-services/wemake-python-package/compare/bb1dd122f276580008375990122e1e3f71394275...master) since then.
