@@ -1,0 +1,9 @@
+scipy>=1.6.0
+nltk
+pymorphy2
+razdel
+spacy>=3.0.0
+matplotlib>=3.3.0
+numpy>=1.20.0
+pandas
+graphviz
