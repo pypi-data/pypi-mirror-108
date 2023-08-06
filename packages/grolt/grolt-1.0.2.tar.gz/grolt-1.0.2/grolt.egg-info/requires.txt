@@ -1,0 +1,6 @@
+click
+docker
+py2neo>=2021.1.4
+
+[:platform_system == "Windows"]
+pyreadline>=2.1
