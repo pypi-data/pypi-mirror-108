@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: gamgam
+Version: 1.1.17
+Summary: A useful game framework
+Home-page: UNKNOWN
+Author: Coder-Jang
+Author-email: jsb060624@kakao.com
+License: LGPL
+Platform: UNKNOWN
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+
+A game framework has many useful class and function with pygame.
+ version x.y.z: x is big update that grammer or classes are changed, 
+y is small update that error is fixed or new functions are added, 
+z is a count of build.
+
