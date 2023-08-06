@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+snappi_trex/__init__.py
+snappi_trex/stl_path.py
+snappi_trex/trexapi.py
+snappi_trex.egg-info/PKG-INFO
+snappi_trex.egg-info/SOURCES.txt
+snappi_trex.egg-info/dependency_links.txt
+snappi_trex.egg-info/requires.txt
+snappi_trex.egg-info/top_level.txt
