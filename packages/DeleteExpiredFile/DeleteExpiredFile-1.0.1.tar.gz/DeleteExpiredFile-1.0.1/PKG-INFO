@@ -1,0 +1,15 @@
+Metadata-Version: 1.1
+Name: DeleteExpiredFile
+Version: 1.0.1
+Summary: delete expired file with function or thread
+Home-page: https://pypi.org/project/DeleteExpiredFile
+Author: KuoYuan Li
+Author-email: funny4875@gmail.com
+License: UNKNOWN
+Description: # Author:KuoYuan Li Asyn(extentions,maxKeepHR,checkDuration) Ex: t=Asyn(['.txt','.mp4'],0.05,5)
+Keywords: delete files,delete expired files,delete rountine
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
