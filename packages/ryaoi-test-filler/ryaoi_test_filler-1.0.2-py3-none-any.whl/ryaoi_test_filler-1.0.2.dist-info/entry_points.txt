@@ -1,0 +1,3 @@
+[console_scripts]
+ryaoi_test_filler=ryaoi_test_filler.cli:main
+
