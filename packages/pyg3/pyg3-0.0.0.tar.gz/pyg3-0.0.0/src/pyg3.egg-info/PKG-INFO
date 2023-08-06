@@ -1,0 +1,94 @@
+Metadata-Version: 2.1
+Name: pyg3
+Version: 0.0.0
+Summary: An end to end differentiable finite element framework.
+Home-page: https://claudioperez.github.io/pyg3
+Author: Claudio M. Perez
+Author-email: claudio_perez@berkeley.edu
+License: UNKNOWN
+Project-URL: Documentation, https://claudioperez.github.io/pyg3
+Project-URL: Changelog, https://github.com/claudioperez/pyg3/blob/master/CHANGELOG.md
+Project-URL: Issue Tracker, https://github.com/claudioperez/pyg3/issues
+Description: 
+        
+        
+        ```python
+        In [1]: import pyg3
+        
+        In [2]: d = pyg3.Domain()
+        
+        In [3]: d
+        Out[3]: <pyg3.Domain at 0x7f0ebe6ec1f0>
+        ```
+        
+        Meaningful errors:
+        
+        ```python
+        In [4]: n = pyg3.Node()
+        -------------------------------------------------------------------------
+        TypeError                               Traceback (most recent call last)
+        <ipython-input-4-3e097288ae09> in <module>
+        ----> 1 n = pyg3.Node()
+        
+        TypeError: __init__(): incompatible constructor arguments. The following argument types are supported:
+            1. pyg3.Node(arg0: int, arg1: int, arg2: float, arg3: float)
+        
+        Invoked with:
+        
+        In [5]: n = pyg3.Node(0, 0, 1.0, 10.0)
+        
+        In [6]: d.addNode(n)
+        Out[6]: True
+        
+        In [7]: d.getNode(0)
+        Out[7]: <pyg3.Node at 0x7f0ebc6fca70>
+        ```
+        
+        
+        Thread safe:
+        
+        ```python
+        In [8]: d2 = pyg3.Domain()
+        
+        In [9]: d2.getNode(0)
+        In [10]: n2 = pyg3.Node(0,0,0.0,0.0)
+        
+        In [11]: d2.addNode(n2)
+        Out[11]: True
+        
+        In [12]: d2.getNode(0)
+        Out[12]: <pyg3.Node at 0x7f0ebe714e70>
+        ```
+        
+        ```python
+        In [13]: d.getNode(0)
+        Out[13]: <pyg3.Node at 0x7f0ebc6fca70>
+        ```
+        
+        ```python
+        In [14]: d.getNode(0) == n
+        Out[14]: True
+        
+        In [15]: d2.getNode(0) == n2
+        Out[15]: True
+        ```
+        
+        
+        
+        
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: Unix
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+Provides-Extra: jax
+Provides-Extra: interact
+Provides-Extra: backends

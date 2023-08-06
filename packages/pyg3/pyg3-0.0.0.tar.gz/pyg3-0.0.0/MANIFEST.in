@@ -1,0 +1,13 @@
+graft docs
+graft src
+graft tests
+
+include doc/img/*
+include dat/*
+
+include CHANGELOG.md
+include README.md
+
+include tox.ini .travis.yml .appveyor.yml
+global-exclude *.py[cod] __pycache__/* *.so *.dylib
+

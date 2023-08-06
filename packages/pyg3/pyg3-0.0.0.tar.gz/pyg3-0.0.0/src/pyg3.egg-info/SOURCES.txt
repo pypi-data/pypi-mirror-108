@@ -1,0 +1,14 @@
+.appveyor.yml
+CHANGELOG.md
+MANIFEST.in
+README.md
+setup.py
+src/Makefile
+src/domain.cpp
+src/pyg3/__init__.py
+src/pyg3.egg-info/PKG-INFO
+src/pyg3.egg-info/SOURCES.txt
+src/pyg3.egg-info/dependency_links.txt
+src/pyg3.egg-info/not-zip-safe
+src/pyg3.egg-info/requires.txt
+src/pyg3.egg-info/top_level.txt
