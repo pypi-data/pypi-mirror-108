@@ -1,0 +1,10 @@
+luxor/__init__.py,sha256=hBCrK5_-m0SAl5jPApGHlf_5Q-hksSZcc3JNIL6xDbg,306
+luxor/client.py,sha256=snQ8Y_txJvIXtMeFR31l0SfRegm8YlhqNLrmG1SGnPo,2069
+tests/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+tests/test_client.py,sha256=Z7uEWMEOflDyWLvDJuYruHAQvED_eQLfk-cpoEe8CsE,3578
+tests/test_errors.py,sha256=ZAa2ykLjG7px7ywrPMvL1UAR5enO-yr9vRU0z1fJnCw,478
+luxor-0.0.1.dist-info/LICENSE,sha256=omXTJaxdkJDs_9vgGYwVI3wjSc8W-ECd5-Na48W3ab8,11346
+luxor-0.0.1.dist-info/METADATA,sha256=7ZTVh2pQIVE5rctWDMvGf_YUURUnLjDH5XSTua9CQAc,1196
+luxor-0.0.1.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+luxor-0.0.1.dist-info/top_level.txt,sha256=JGmAwgrjK_bMb0TELBki35_nG5zb8Xpf5u7sUlUoi_8,12
+luxor-0.0.1.dist-info/RECORD,,
