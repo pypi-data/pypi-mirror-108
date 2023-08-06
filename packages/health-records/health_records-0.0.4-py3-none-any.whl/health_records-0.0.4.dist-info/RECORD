@@ -1,0 +1,9 @@
+health_records/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+health_records/grammar.lark,sha256=8IMawD3kiVdRBRxwW1xQKdPdpl45ln_597bX1cBhdSc,978
+health_records/phr.py,sha256=xxsK4JxMdVwIkEBu7DXnT4R7FzQENIdDdBR0LfDNRUE,6743
+health_records-0.0.4.dist-info/LICENSE,sha256=OXLcl0T2SZ8Pmy2_dmlvKuetivmyPd5m1q-Gyd-zaYY,35149
+health_records-0.0.4.dist-info/METADATA,sha256=3LnjCT52aKTvwpF6sh_U_xywBMwl6HlOs2yH_xn5Kx4,2731
+health_records-0.0.4.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+health_records-0.0.4.dist-info/entry_points.txt,sha256=-b4TNUvk1BOePT0BijJPt6R0UiPogeGa9nSbfR6IymU,48
+health_records-0.0.4.dist-info/top_level.txt,sha256=jHfc8qo2e34FubvKnRv6ufPGWrUW10LUBcj9swFyCeM,15
+health_records-0.0.4.dist-info/RECORD,,
