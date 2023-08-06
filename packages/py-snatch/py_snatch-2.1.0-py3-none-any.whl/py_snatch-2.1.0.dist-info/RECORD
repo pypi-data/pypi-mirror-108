@@ -1,0 +1,17 @@
+snatch/__init__.py,sha256=yPrMAafqA_ETe2y5nRjaYwKExftOF5sSMg2cyThX-VE,123
+snatch/banco_central.py,sha256=wzmGvjskWedJZENoONzVQzzfvhV0dFIelSKeDOz2hQo,5944
+snatch/base/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+snatch/base/data.py,sha256=m385L72-sdbImTZcZ2zTueX629tqGa-CENrjmtnKH-Q,3746
+snatch/base/data_source.py,sha256=3SsxGtaxjEqOQIuSEXAdcJyCuwQzbUgfU4wsLif42EA,10618
+snatch/base/schema.py,sha256=gLkpPvJNEy27UFCGQeoIT6nWcXWTaE9SyFhdO8-x99Q,614
+snatch/boa_vista.py,sha256=TPfpjAq7hFezEXErVoxm6Pgr-RFWzVQ_KXb7aG69uWI,2462
+snatch/config.py,sha256=y4-Bk3dg3XnAAEQKZKBDZC_U46X5WZ5U6ZoenvzfUDY,1938
+snatch/helpers/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+snatch/helpers/load_fixtures.py,sha256=ffTwp6VpmBK3PT38x6EdOPGPSkQAHr9xOP6LaWNqeSc,695
+snatch/helpers/merge_dicts.py,sha256=dRGzSkrp5kxpy0EGpQY_Mho6TIll3ldXDCS3Vuy-1nI,1510
+snatch/helpers/only_numbers.py,sha256=thNqyfUXfswPmV4OmzJG7kqJCQ1Xr_LvzMJV8d-ZtKg,141
+snatch/helpers/secrets_manager.py,sha256=lT9yFaAcpZ5tdCAyaJqZlWQSIG-udtRm-ZJUx4gDaJI,3349
+snatch/helpers/time_it.py,sha256=zf4vj1ECjE7klXYD6HlZUHASqLgxrryj28ZblWROZb0,385
+py_snatch-2.1.0.dist-info/WHEEL,sha256=f_L0I4hqSDuunYLcjib7afhVEQa4uCwremk0_wPx54s,85
+py_snatch-2.1.0.dist-info/METADATA,sha256=e-CkEuMkM-rgKLwQ5K6dmweRhA-X9neyg1NFfCtdQBE,529
+py_snatch-2.1.0.dist-info/RECORD,,
