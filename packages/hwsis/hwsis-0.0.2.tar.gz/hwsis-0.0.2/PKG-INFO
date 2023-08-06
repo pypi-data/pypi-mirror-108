@@ -1,0 +1,15 @@
+Metadata-Version: 2.1
+Name: hwsis
+Version: 0.0.2
+Summary: Huawei SIS.
+Home-page: https://github.com/huawei/
+Author: Huawei
+Author-email: huawei@gmail.com
+License: UNKNOWN
+Description: HuaWeiCloud SIS
+        
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
