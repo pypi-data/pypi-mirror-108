@@ -1,0 +1,275 @@
+# The below are raw queries sent to splunk except for the variables that get passed in at format time.
+# Those include:
+#
+#      cms_ids: A list of CMS IDs for which the query should be executed.  Manipulate like `{cms_ids[0]}`
+#
+# Text blobs can exist in several states in YAML, but the most useful are "folded" and "flow".  See
+# for more detials http://www.yaml.org/spec/1.2/spec.html#id2760844 but essentially we can use flow style with queries
+# that don't start with a special character (mostly pipe); which means don't add any extra syntax.
+# Example:
+#  some_query:
+#    search(sourcetype = portal) [...]
+# If a query starts with a pipe, use "folded" style, which starts the block with a `>` symbol.
+# Example:
+#   some_query: >
+#     | dbxquery connection=portal [...]
+
+megacached_query: &megacached_query
+  "| loadjob savedsearch=\"portal:sonicast:{cms_ids[0]} SoniCast {loadjob_timeframe}\"\n"
+
+SonicastStatus:
+  search (
+    sourcetype = navhdiinteractive-v2*
+    screenId = 202 OR screenId=203 OR screenId=204 OR screenId=205
+  ) OR (
+    sourcetype = device*alloc-v2* deviceType = snc  sessionId != __unknown__
+  ) propertyId = {cms_ids[0]}
+  | stats
+      dc(
+        eval(
+          screenId = "202" OR screenId = "203" OR screenId = "204" OR screenId = "205"
+        )
+      ) as SonicastGuide
+      dc(
+        eval(eventName = "DeviceAlloc")
+      ) as Sonicast by stayId
+  | eval GuideAndSonicastUsed = if(SonicastGuide = 1 AND Sonicast = 1,1,0)
+  | eval GuideOnly = if(SonicastGuide = 1 AND Sonicast = 0,1,0)
+  | eval SonicastOnly = if(SonicastGuide = 0 AND Sonicast = 1,1,0)
+  | eval UsedSonicast = if(Sonicast=1,1,0)
+  | stats
+      dc(stayId)                as totalStays
+      sum(GuideAndSonicastUsed) as GuideAndSonicastUsed
+      sum(GuideOnly)            as GuideOnly
+      sum(SonicastOnly)         as SonicastOnly
+      sum(UsedSonicast)         as UsedSonicast
+  | eval "SC guide To Sonicast Conv. Rate" = round(GuideAndSonicastUsed / (GuideAndSonicastUsed+GuideOnly) * 100, 2)
+  | rename
+    totalStays           as "Stays that entered SC guide OR casted"
+    GuideAndSonicastUsed as "Stays that entered SC guide AND casted"
+    GuideOnly            as "Stays that entered SC guide and DIDN'T cast"
+    SonicastOnly         as "Stays that only casted"
+    UsedSonicast         as "Stays that casted"
+
+SONICAST_APPS_CASTED:  # Apps Cast panel ENGPRTL-3764 ENGPRTL-3762
+  *megacached_query
+
+SONICAST_BANDWIDTH:  # Bandwidth Monitoring ENGPRTL-3758
+  search
+    index=snc
+    sourcetype="SncNetworkBandwidth-v2*"
+    propertyId={cms_ids[0]}
+  | foreach *Sent *Received [ eval <<FIELD>>Mbps=round(<<FIELD>>*8/1024, 2) ]
+  | timechart span=1h max(*SentMbps) as *SentMbps max(*ReceivedMbps) as *ReceivedMbps
+  | foreach *SentMbps [|eval <<MATCHSTR>>Total=<<MATCHSTR>>SentMbps+<<MATCHSTR>>ReceivedMbps ]
+  | fields _time *Total
+  | fields - mgmtTotal
+
+
+# This query expects to get exactly 5 weeks of information starting on a Monday and ending on a Sunday
+SONICAST_DAILY_USAGE: > # Daily Usage ENGPRTL-3760 ENGPRTL-3765
+  search
+    index      = snc
+    sourcetype = "SncChromecastState-v2*"
+    testRack   = No
+    state      = casting
+    {orred_property_ids}
+    NOT appName IN (
+        "Backdrop",
+        "New Wave Front End Alpha",
+        "New Wave Front End Beta",
+        "New Wave Front End Production",
+        "New Wave Front End Test",
+        "New Wave Front End",
+        "None",
+        "SONIFI Welcome"
+  )
+  | addinfo
+  | eval prevWeeks = if(
+      _time < relative_time(info_max_time, "-1w@w1"),
+      "Monthly Average",
+      "Week of " + "" + strftime(relative_time(info_max_time, "-1w@w1"), "%D")
+    )
+  | eval weekNum=strftime(_time,"%W")
+  | join propertyId [ | dbxquery connection=SalesforceSFHubPrd shortnames=t query=" select ACCT.SITE_ID__C as site ,ACCT.name, ACCT.OF_ROOMS__C as hotelrooms, ASSI.BILLING_COMMENCEMENT_DATE__C , a.term_start_date__c, a.term_end_date__c,a.billing_quantity__c as installedrooms from account acct ,contract__c c , contract_line_item__c cli , sf_recordtype r , sf_recordtype rin , SF_HUB.SF_ORDER_ITEM__C oi , SF_HUB.SF_ASSOCIATED_ITEM__C assi ,SF_HUB.SF_WORK_ORDER__C word, sf_hub.sf_asset a where ACCT.ID = C.ACCOUNT_NAME__C and c.id = cli.legal_contract__c and a.contract__c = c.id and cli.parent__c IS NULL and CLI.ID = OI.Subscription__c and OI.ID = ASSI.ORDER_ITEM__C and ASSI.WORK_ORDER__C = WORD.ID and C.RECORDTYPEID = R.ID and WORD.RECORDTYPEID = RIN.ID and C.STATUS__C <> 'Inactive' and C.STATUS__C <> 'Cancelled' and a.status<>'De-Installed' and a.product_parent_family__c = 'SoniCast' and (R.NAME like ('%Contract%') OR R.NAME='Reseller') and RIN.NAME = ('Install') and ASSI.BILLING_COMMENCEMENT_DATE__C is not null and a.product_code__c in ('CC-61013','CC-61010','CC-61007','CC-61004','CC-61003','CC-30450-0010','CC-70023') "
+  | rename SITE as propertyId BILLING_COMMENCEMENT_DATE__C as billingCommencement
+  | fields - _raw - _time
+  | stats min(billingCommencement) as billingCommencement by propertyId
+  | eval billingEpoch=strptime(billingCommencement,"%Y-%m-%d %H:%M:%S")
+  | eval billingWeekday=strftime(billingEpoch,"%A")
+  | eval snapTo=if(billingWeekday="Monday",relative_time(billingEpoch,"@w1"),relative_time(billingEpoch,"+1w@w1"))
+  | table propertyId snapTo]
+  | where _time >= snapTo
+  | eventstats dc(weekNum) as weekCount by prevWeeks
+  | chart count max(weekCount) as weekCount by date_wday prevWeeks
+  | rename "count: Monthly Average" as "MonthlyAverage" "weekCount: Monthly Average" as weekCount "count: *" as *
+  | eventstats max(weekCount) as weekCount
+  | eval "MonthlyAverage" = if(isnotnull(MonthlyAverage),round(MonthlyAverage / weekCount, 1) ,0)
+  | eval weekday = case(
+      date_wday = "monday",    1,
+      date_wday = "tuesday",   2,
+      date_wday = "wednesday", 3,
+      date_wday = "thursday",  4,
+      date_wday = "friday",    5,
+      date_wday = "saturday",  6,
+      date_wday = "sunday",    7
+    )
+  | sort weekday
+  | fields - weekday - weekCount*
+  | rename date_wday as "Day of Week" MonthlyAverage as "Monthly Average"
+
+SONICAST_PROPERTY_MAP: >  # Brand dashboard Hotel Locations panel ENGPRTL-3759
+  | dbxquery
+    connection=SalesforceSFHubPrd
+    shortnames=t
+    query="
+    select distinct
+      SFA.SITE_ID__C,
+      SFA.ACCOUNT_NAME_TEXT__C,
+      SFA.GEOLOCATION__LATITUDE__S,
+      SFA.GEOLOCATION__LONGITUDE__S,
+      case when to_char(SFAS.NAME) IN ('STAYCAST Product Parent','STAYCAST Reseller Product Parent') then 1 else 0 end as SC
+    from
+      SF_ASSET SFAS
+    JOIN
+      SF_ACCOUNT SFA
+    ON
+      SFA.id = SFAS.accountid
+    WHERE
+      SFAS.STATUS IN ('Installed Activated','Billing')
+    AND
+      SFA.HOTEL_BRAND__C LIKE '%Hyatt%'
+    AND
+      SFA.SITE_ID__C IN {cms_ids}"
+    | fields - _raw - _time | rename
+      SITE_ID__C as site_id
+      ACCOUNT_NAME_TEXT__C as name
+      GEOLOCATION__LATITUDE__S as latitude
+      GEOLOCATION__LONGITUDE__S as longitude
+      |stats values(l*) as l* max(SC) as has_sonicast by site_id name
+
+# May be able to do this with the data from SONICAST_USAGE_SUMMARY (Monthly), but averaged over the weeks
+# in the month.
+SONICAST_PROPERTY_PERFORMANCE:  # Brand dashboard Properties ENGPRTL-3763
+  *megacached_query
+
+SONICAST_SIGNAL_STRENGTH:  # Signal Strength Overview ENGPRTL-3755
+  search
+  index = snc
+  sourcetype = "SncChromecastSnr-v2*"
+  propertyId = {cms_ids[0]}
+  | stats
+    avg(signalLevel) as avgSL
+    latest(ethernetConnected) as eth by propertyId macAddress
+  | eval
+    avgSL = if(eth = "true", "Wired", round(avgSL,1))
+  | eval
+    level = case(
+      avgSL >= -32, "DarkGreen",
+      avgSL >= -69, "Green",
+      avgSL >= -72, "Yellow",
+      avgSL >= -82, "Orange",
+      avgSL = "Wired", "Wired",
+      1=1, "Red"
+    )
+  | stats count by propertyId level
+      | addcoltotals labelfield=level label="Offline/No Reading" count
+  | join type=left propertyId
+      [
+        search index = mainv2 sourcetype = SysConfigSnc-v2* propertyId = {cms_ids[0]}
+          | dedup propertyId hostId
+          | stats sum(numberChromecasts) as numberChromecasts by propertyId
+      ]
+      | filldown propertyId numberChromecasts
+      | eval count = if(level="Offline/No Reading", numberChromecasts-count, count)
+      | fields - numberChromecasts
+
+SONICAST_SNC_STATUS: >  # SNC Status Dashboard ENGPRTL-3757  0=green, 1 = yellow, 2 = orange, 3 = red
+  | dbxquery
+    shortnames=t
+    connection="PropX"
+    query="
+      SELECT
+        site_id, item, property_status, sonifi_status, value, site_timestamp, drps_timestamp
+      FROM
+        \"drps\".\"dashboard\".\"dashboard\"
+      WHERE
+        site_id='{cms_ids[0]}'
+      AND
+        sonifi_platform='STAYCAST'
+      AND
+        item NOT like 'age%'"
+  | fields - _time - _raw
+  | eval value = if(item="sncChromecasts" AND value like "%Operational","Operational",value)
+
+# TODO: Stitch several runs of this together to get the brand overview
+SONICAST_USAGE_SUMMARY:  # Usage Summary ENGPRTL-3756 ENGPRTL-3772
+  *megacached_query
+
+SONICAST_USAGE_DETAIL:
+  pdf_gen:
+    app_name: sonicast
+    report_name: sonicast_site_report
+    multi_site_report_name: sonicast_multi_site_report
+    $propertyId$: ''
+    $latest$: 'now'
+    $earliest$: '-31d'
+    $result.today$: 'REPORT_LABEL'
+    $today$: 'REPORT_LABEL'
+    $multisitesqlpropertyId$: ''
+
+
+RAW_SONICAST_USAGE_SUMMARY: >
+  search
+  index=mainv2 sourcetype=device*alloc-v2* {orred_property_ids} sessionId!=__unknown__ deviceType=snc
+  |transaction propertyId sessionId maxspan=1d startswith=eval(match(eventName,"DeviceAlloc"))
+  |search eventcount > 1
+  |bucket _time span=7d
+  |eventstats avg(duration) as avgDuration by propertyId _time
+  |stats sum(duration) as totalDuration values(avgDuration) as avgDuration count  by propertyId stayId _time
+  |stats values(totalDuration) as totalDuration values(avgDuration) as avgDuration values(count) as count values(pairings) as pairings by propertyId stayId _time
+  |eval pairedCast=case(count>0 AND pairings>0,"pairedANDcast",isnull(count) AND pairings>0,"pairedNOTcast",count>0 AND isnull(pairings),"NOTpairedANDcast",1=1,"NOTpairedANDNOTcast")
+  |eventstats dc(stayId) as PairedCastStays by propertyId _time pairedCast
+  |eval guestsPairedAndCast=if(pairedCast="pairedANDcast",PairedCastStays,null())
+  |eval guestsNotPairedAndCast=if(pairedCast="NOTpairedANDcast",PairedCastStays,null())
+  |eval guestsPairedNotCast=if(pairedCast="pairedNOTcast",PairedCastStays,null())
+  |stats avg(count) as "Average # of SoniCast uses per stay" values(guestsPairedAndCast) as "guestsPairedAndCast" values(guestsNotPairedAndCast) as "guestsNotPairedAndCast" dc(stayId) as "# of total guests" values(guestsPairedNotCast) as "# guests paired and did not cast" avg(totalDuration) as "Average total duration per stay" values(avgDuration) as "Average duration of one use" sum(count) as "Number of SoniCast uses" sum(pairings) as pairings by propertyId _time
+  |fillnull  guestsPairedAndCast guestsNotPairedAndCast value=0
+  |eval "# of guests that cast"=guestsPairedAndCast+guestsNotPairedAndCast
+  |eval "Average duration of one use"=tostring(round('Average duration of one use',0),"duration")
+  |eval "Average total duration per stay"=tostring(round('Average total duration per stay',0),"duration")
+  |eval "Average # of SoniCast uses per stay"=round('Average # of SoniCast uses per stay',1)
+  |join type=left propertyId _time [ search (index=mainv2 sourcetype=device*alloc-v2* deviceType=snc  ) OR (index=ftgv2 sourcetype=ftgtvon-v2* stayId!=__unknown__ ) {orred_property_ids}
+  |bucket _time span=1d
+  |stats values(roomNumber) as roomNumber dc(eval(screenId="202" OR screenId="203" OR screenId="204" OR screenId="205")) as SonicastGuide  dc(eval(eventName="NavHdiAd")) as IPGSonicast  dc(eval(like(eventName,"Device%lloc"))) as Sonicast dc(eval(eventName="FTGTVon")) as FTGTVon by propertyId stayId _time
+  |bucket _time span=7d
+  |stats values(roomNumber) as roomNumber sum(SonicastGuide) as SonicastGuide  sum(IPGSonicast) as IPGSonicast  sum(Sonicast) as Sonicast sum(FTGTVon) as FTGTVon by propertyId stayId _time
+  |eval GuideAndSonicastUsed=if((SonicastGuide>=1 AND Sonicast>=1),1,0)
+  |eval GuideOnly=if((SonicastGuide>=1 AND Sonicast=0),1,0)
+  |eval IPGAndSonicastUsed=if(IPGSonicast>=1 AND Sonicast>=1,1,0)
+  |eval IPGOnly=if(IPGSonicast>=1 AND Sonicast=0,1,0)
+  |eval UsedSonicast=if(Sonicast>=1,1,0)
+  |eval FTGGuest=if(FTGTVon>=1,1,0)
+  |eval totalSCStays=if(SonicastGuide>=1 OR Sonicast>=1 OR IPGSonicast>=1,1,0)
+  |stats sum(UsedSonicast) as UsedSonicast sum(FTGGuest) as dcstay  by propertyId _time
+  |eval "% stays that cast"=round(UsedSonicast/dcstay*100,1)."%"
+  |fields propertyId _time dcstay  "% stays that cast"
+
+  |fields - numRooms - roomNights]
+  |join propertyId _time [search sourcetype=estimatedoccupancy-v* {orred_property_ids} method=tvOn10|eval date=strftime(_time-86400,"%D") |stats sum(itvOccupiedRooms) as occ max(_time) as _time by propertyId date|bucket _time span=7d|stats sum(occ) as occ by propertyId _time]
+  |appendcols [|dbxquery connection=SalesforceSFHubPrd maxrows=0 shortnames=t query="select distinct AC.SITE_ID__C, ac.name, AC.OF_ROOMS__C as hotelrooms, a.quantity as installedrooms, AC.CURRENT_SOFTWARE_VERSION__C as marinaversion, a.product_parent_family__c, a.product_code__c, A.STATUS,  a.lastmodifieddate, a.term_start_date__c, a.term_end_date__c  from SF_ACCOUNT ac,  sf_asset a   where a.accountid=ac.id  and a.product_parent_family__c = ('SoniCast') and a.product_code__c='CC-30450-0010' --and a.STATUS<>'Cancelled' "|rename SITE_ID__C as propertyId INSTALLEDROOMS as "EstimatedRooms" HOTELROOMS as HotelRooms|search {orred_property_ids}|table "EstimatedRooms" HotelRooms]
+  |filldown "EstimatedRooms" HotelRooms
+  |fields propertyId _time HotelRooms EstimatedRooms "Number of SoniCast uses" "# of guests that cast" "# guests paired and did not cast" "Average duration of one use" "Average total duration per stay" "Average # of SoniCast uses per stay" "Main Menu Conversion Rate" "IPG Conversion Rate" FTGDailyGuests SCGuests occ "% stays that cast" "Apps used" "VOD buys in SoniCast rooms"
+  |eval maxTime=strftime(_time+520200,"%m/%d")
+  |eval time=strftime(_time,"%m/%d")
+  |eval Week=time+" - "+maxTime
+  |sort _time
+  |eval "Contracted SoniCast Rooms"='EstimatedRooms'+" rooms"
+  |eval "Number of SoniCast uses"='Number of SoniCast uses'." uses"
+  |eval "# of stays that cast"='# of guests that cast'." guests"
+  |eval "# stays paired and did not cast"='# guests paired and did not cast'." guests"
+  |eval "Average # of SoniCast uses per stay"='Average # of SoniCast uses per stay'." uses"
+  |eval "VOD buys in SoniCast rooms"='VOD buys in SoniCast rooms'." buys"
+  |eval "Total Hotel Rooms"=HotelRooms+" rooms"
+  |fields   "Total Hotel Rooms" "Contracted SoniCast Rooms" "Number of SoniCast uses"  "# of stays that cast"  "Average duration of one use"  "Average total duration per stay"  "Average # of SoniCast uses per stay" "% stays that cast"
+  |fields - _time - _timediff

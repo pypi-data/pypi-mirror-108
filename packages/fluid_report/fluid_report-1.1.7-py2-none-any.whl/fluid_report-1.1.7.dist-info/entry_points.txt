@@ -1,0 +1,3 @@
+[console_scripts]
+reportbot = fluid_report.reportbot:main
+
