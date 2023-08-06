@@ -1,0 +1,11 @@
+aiomodernforms/__init__.py,sha256=vyOt6eONmD7SG551r2S2deXYPFM49-3gK-lWTRXnTt4,981
+aiomodernforms/__version__.py,sha256=t39ZM9k122uNeitMgF15S_Rtf73Iz0Bid_lW6Chv7Bs,74
+aiomodernforms/const.py,sha256=B49PPXjHYDd7VqBJ5mdofuJ5vRKsh-20-WFmHBlxl5M,1738
+aiomodernforms/exceptions.py,sha256=XUritVsCfGt15Qg8hDHEJgT4dyxRMCfHgsp6EneStsU,651
+aiomodernforms/models.py,sha256=KCDxDP3KilE_Tx84ZhsxdYdKHP9a5xy1WnP5ShGabqI,3723
+aiomodernforms/modernforms.py,sha256=7JNo96OTFDTxGcCHiLfXP58bJxTLhqAo0QTLZGWm_1c,11806
+aiomodernforms-0.1.5.dist-info/LICENSE.md,sha256=oM7EJ7Ns_7khtp_S70oDwffWz7FyxId8VFBu3LFQa4Q,1076
+aiomodernforms-0.1.5.dist-info/METADATA,sha256=8-HP_C3YERm4xLe_02NMbEXwrMHXzvZSTLMp9ZWRRSg,2272
+aiomodernforms-0.1.5.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+aiomodernforms-0.1.5.dist-info/top_level.txt,sha256=CNEqQgVeAy4EjrPei2TB2mx7c3NZVI93shVQFEI0t8Q,15
+aiomodernforms-0.1.5.dist-info/RECORD,,
