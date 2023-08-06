@@ -1,0 +1,4 @@
+tensorflow==2.4.1
+fastapi==0.64.0
+pydantic==1.8.2
+click==8.0.1
