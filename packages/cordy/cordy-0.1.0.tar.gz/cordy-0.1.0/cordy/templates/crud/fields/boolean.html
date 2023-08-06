@@ -1,0 +1,6 @@
+<template v-slot:item.{{field}}="{ item }">
+  <v-simple-checkbox
+    v-model="item.{{field}}"
+    disabled
+  ></v-simple-checkbox>
+</template>
