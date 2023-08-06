@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: testmodule3091
+Version: 0.2.3
+Summary: My first Python package
+Home-page: UNKNOWN
+Author: AKS
+Author-email: 
+License: UNKNOWN
+Keywords: python,first package
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Education
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Requires-Dist: beautifulsoup4 (==4.9.3)
+Requires-Dist: certifi (==2020.12.5)
+Requires-Dist: chardet (==4.0.0)
+Requires-Dist: cssutils (==2.3.0)
+Requires-Dist: idna (==2.10)
+Requires-Dist: importlib-metadata (==4.0.1)
+Requires-Dist: lxml (==4.6.3)
+Requires-Dist: mypy-extensions (==0.4.3)
+Requires-Dist: python-docx (==0.8.11)
+Requires-Dist: PyYAML (==5.4.1)
+Requires-Dist: qwikidata (==0.4.0)
+Requires-Dist: requests (==2.25.1)
+Requires-Dist: soupsieve (==2.2.1)
+Requires-Dist: typing-extensions (==3.10.0.0)
+Requires-Dist: urllib3 (==1.26.4)
+Requires-Dist: zipp (==3.4.1)
+
+My first Python package with a slightly longer description
+
