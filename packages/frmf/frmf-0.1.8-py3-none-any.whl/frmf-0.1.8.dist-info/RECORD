@@ -1,0 +1,11 @@
+frmf/__init__.py,sha256=hsW9IG2xtbYEnIfLvD8R804h-NaSI1OC3oZb0Ylzu3U,2258
+frmf/api_view.py,sha256=405yh-pgVDR9TGHw0QEb-cDqA6szs4499keESIHu3Ww,4984
+frmf/db_helper.py,sha256=h2ArEzjf-SSawEsti2dyWmy4_p4HcRa3ST__6Xn7BVk,1502
+frmf/logic.py,sha256=GW3Y_kP9czS5LUB_Qetgc2Ok4XmVooKHPLyPZ0-zZ-A,2182
+frmf/manager.py,sha256=lSNDyKwsNOExkRYN743XBYjia52Ef9jKL62b-MONGOc,4095
+frmf/response.py,sha256=j69UInH7J2LLa2DgxtCQp7TN3zCcA_jVdcAZ_xbEJXQ,639
+frmf/schema.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+frmf-0.1.8.dist-info/METADATA,sha256=3SzO4gWAA1Nc629ZInuc4Egu9Ly3UBOmMGLAE0Ju3cY,460
+frmf-0.1.8.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+frmf-0.1.8.dist-info/top_level.txt,sha256=fSz0AIwfbHHZmxoDz9lBIbvw4uvTLQRImZZ1J5m--JY,5
+frmf-0.1.8.dist-info/RECORD,,
