@@ -1,0 +1,7 @@
+LICENSE
+README.md
+setup.py
+aiodiskdb.egg-info/PKG-INFO
+aiodiskdb.egg-info/SOURCES.txt
+aiodiskdb.egg-info/dependency_links.txt
+aiodiskdb.egg-info/top_level.txt
