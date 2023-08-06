@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: tensorflow-metal
+Version: 0.1.0
+Summary: UNKNOWN
+Home-page: https://developer.apple.com/metal/tensorflow-plugin/
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: MIT License. Copyright © 2020-2021 Apple Inc. All rights reserved.
+Keywords: tensorflow metal plugin
+Platform: UNKNOWN
+Requires-Dist: wheel (~=0.35)
+Requires-Dist: six (~=1.15.0)
+
+setup.py file to build wheel for tensorflow_metal plugin.
+
+
