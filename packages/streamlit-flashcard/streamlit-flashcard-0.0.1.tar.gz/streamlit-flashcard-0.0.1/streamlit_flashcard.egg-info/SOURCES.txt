@@ -1,0 +1,10 @@
+MANIFEST.in
+setup.py
+flash_card/__init__.py
+my_component/__init__.py
+starter_component/__init__.py
+streamlit_flashcard.egg-info/PKG-INFO
+streamlit_flashcard.egg-info/SOURCES.txt
+streamlit_flashcard.egg-info/dependency_links.txt
+streamlit_flashcard.egg-info/requires.txt
+streamlit_flashcard.egg-info/top_level.txt
