@@ -1,0 +1,9 @@
+README.md
+setup.cfg
+setup.py
+zcommand/__init__.py
+zcommand/zcommand.py
+zcommand.egg-info/PKG-INFO
+zcommand.egg-info/SOURCES.txt
+zcommand.egg-info/dependency_links.txt
+zcommand.egg-info/top_level.txt
