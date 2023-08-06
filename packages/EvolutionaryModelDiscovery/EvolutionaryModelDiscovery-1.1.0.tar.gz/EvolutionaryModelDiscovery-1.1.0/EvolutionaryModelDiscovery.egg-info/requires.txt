@@ -1,0 +1,8 @@
+nl4py>=0.9.0
+deap
+numpy
+pandas
+networkx
+scipy
+scikit-learn
+eli5
