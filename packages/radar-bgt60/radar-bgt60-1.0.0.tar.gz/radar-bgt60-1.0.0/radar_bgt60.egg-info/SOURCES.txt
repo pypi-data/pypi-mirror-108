@@ -1,0 +1,9 @@
+CMakeLists.txt
+MANIFEST.in
+pyproject.toml
+setup.py
+radar_bgt60.egg-info/PKG-INFO
+radar_bgt60.egg-info/SOURCES.txt
+radar_bgt60.egg-info/dependency_links.txt
+radar_bgt60.egg-info/not-zip-safe
+radar_bgt60.egg-info/top_level.txt

@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: radar-bgt60
+Version: 1.0.0
+Summary: Python Library for Infineon's C++ library for Infineon's 60 GHz BGT60LTR11AiP Radar
+Home-page: https://pypi.org/project/radar-bgt60/
+Author: Infineon Technologies
+License: MIT
+Project-URL: Source, https://github.com/Infineon/radar-bgt60
+Project-URL: Wiki, https://github.com/Infineon/radar-bgt60/wiki
+Project-URL: IC Prodcuts Page, https://www.infineon.com/cms/en/product/evaluation-boards/demo-bgt60ltr11aip/
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+
+Python Library for Infineon's C++ library for Infineon's 60 GHz BGT60LTR11AiP Radar
+
