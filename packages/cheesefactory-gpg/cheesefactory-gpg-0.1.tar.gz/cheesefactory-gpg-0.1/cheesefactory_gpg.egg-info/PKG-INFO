@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: cheesefactory-gpg
+Version: 0.1
+Summary: A simple GPG wrapper for python_gnupg.
+Home-page: https://bitbucket.org/hellsgrannies/cheesefactory-gpg
+Author: Todd Salazar
+Author-email: unixsal@yahoo.com
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: cheesefactory gpg pgp gnupg development
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
