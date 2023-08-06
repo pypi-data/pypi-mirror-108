@@ -1,0 +1,16 @@
+onnxruntime_extensions-0.3.1.dist-info/RECORD,,
+onnxruntime_extensions-0.3.1.dist-info/METADATA,sha256=mDQk_2SQNxBdqItwEJHHWkxitO7OYw5dHA5MgDJhmhg,6888
+onnxruntime_extensions-0.3.1.dist-info/top_level.txt,sha256=XyAgQDKyXsf6_0MJb58kRdHwigpTn7A7kl9diBEjs8M,23
+onnxruntime_extensions-0.3.1.dist-info/WHEEL,sha256=Tc71-kipv70x3UUdKAWR5WF4VgRrQ_XEu6SkY16H6gk,150
+onnxruntime_extensions-0.3.1.dist-info/LICENSE,sha256=ws_MuBL-SCEBqPBFl9_FqZkaaydIJmxHrJG2parhU4M,1141
+onnxruntime_extensions/_cuops.py,sha256=gYO-Z4WUrhb6tO3jE8VqBJkOexm2VQmk9hB2Qa0kpRY,3926
+onnxruntime_extensions/_ortcustomops.cpython-37m-x86_64-linux-gnu.so,sha256=UxWp00XDBdtygAMA29TvRGnPwmHqcZrc2j6CRdOWdig,2799864
+onnxruntime_extensions/__init__.py,sha256=XCJs4dNNo8BbuMidrh1INJNV2r6DwaThTg9C81urUoc,724
+onnxruntime_extensions/_ocos.py,sha256=y1UsCgstPK8ilpgaCqRKVWUf5xcmU9zyC2y5RwFMKyc,5606
+onnxruntime_extensions/eager_op.py,sha256=FCoUsw3Afh7OFXLgqv_o1SvaJkeM95wF9hCdb_dnHnE,3333
+onnxruntime_extensions/onnxprocess/_session.py,sha256=poq61pACFfUsjc87r2MbSPZ7MmZriyz0mCyYIqu3DMo,14408
+onnxruntime_extensions/onnxprocess/torch_wrapper.py,sha256=GJFUP6-WvSQeHq2UMccEx-4Na-Ung8LMWd0yFODGbxU,858
+onnxruntime_extensions/onnxprocess/__init__.py,sha256=QDb5TwaNWcA3wrNG36gBjI9MAWsLcG-ogbpTjV4R3mc,522
+onnxruntime_extensions/onnxprocess/_builder.py,sha256=7ymhM28dUcj19819lm38OC2ayPCbyMUjgJulC67aOg0,1771
+onnxruntime_extensions/onnxprocess/_tensor.py,sha256=8EhZp8Ei30jKviDJ9wkgRosixOXy0jD_s3WkzrDTSuo,24705
+onnxruntime_extensions/onnxprocess/_onnx_ops.py,sha256=ID2GxcEHhjVZZUN8BmK1zZAnw_ObXb0F0RPA6UP2vbY,71707
