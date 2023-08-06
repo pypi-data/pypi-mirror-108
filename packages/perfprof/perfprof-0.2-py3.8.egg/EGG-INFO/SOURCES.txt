@@ -1,0 +1,12 @@
+LICENSE
+README.md
+pyproject.toml
+setup.cfg
+setup.py
+src/perfprof/__init__.py
+src/perfprof/perfprof.py
+src/perfprof.egg-info/PKG-INFO
+src/perfprof.egg-info/SOURCES.txt
+src/perfprof.egg-info/dependency_links.txt
+src/perfprof.egg-info/requires.txt
+src/perfprof.egg-info/top_level.txt
