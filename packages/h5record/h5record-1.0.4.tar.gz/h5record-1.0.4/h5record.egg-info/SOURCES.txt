@@ -1,0 +1,15 @@
+README.md
+setup.py
+h5record/__init__.py
+h5record/attributes.py
+h5record/dataset.py
+h5record.egg-info/PKG-INFO
+h5record.egg-info/SOURCES.txt
+h5record.egg-info/dependency_links.txt
+h5record.egg-info/requires.txt
+h5record.egg-info/top_level.txt
+test/test_h5record.py
+test/test_img_seq.py
+test/test_modality.py
+test/test_schema.py
+test/test_to_mem.py
