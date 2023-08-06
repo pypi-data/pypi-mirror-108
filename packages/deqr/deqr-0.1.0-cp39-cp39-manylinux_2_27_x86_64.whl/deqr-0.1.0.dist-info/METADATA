@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: deqr
+Version: 0.1.0
+Summary: qr code decoding library
+Author: torque
+Author-email: torque@users.noreply.github.com
+Requires-Python: >=3.8,<4.0
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: numpy (>=1.20.2,<2.0.0)
