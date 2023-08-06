@@ -1,0 +1,91 @@
+Metadata-Version: 2.1
+Name: geo-spider
+Version: 0.0.1
+Summary: Crawling all GEO metadata.
+Home-page: https://github.com/soultoolman/geo-spider
+Author: soultoolman
+Author-email: soultooman@gmail.com
+License: MIT
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Scientific/Engineering :: Bio-Informatics
+Requires-Python: >=3.6.0
+Description-Content-Type: text/markdown
+Requires-Dist: click
+Requires-Dist: scrapy
+Requires-Dist: jsonlines
+Requires-Dist: geo-alchemy
+
+
+# geo-spider
+
+crawl all GEO metadata, features:
+
+1. crawl platforms
+2. crawl samples
+3. crawl series
+4. incremental crawling
+
+1. [installation](#installation)
+2. [output file format](#output-file-format)
+3. [platforms](#platforms)
+   - [denovo crawling](#platforms-denovo-crawling)
+   - [incremental crawling](#platforms-incremental-crawling)
+4. [samples](#samples)
+   - [denovo crawling](#samples-denovo-crawling)
+   - [incremental crawling](#samples-incremental-crawling)
+5. [series](#series)
+   - [denovo crawling](#series-denovo-crawling)
+   - [incremental crawling](#series-incremental-crawling)
+
+## installation
+
+```
+pip install geo-spider
+```
+
+## output file format
+
+geo-spider saves files in jsonlines form,
+Refer to [this site](https://jsonlines.org/) for details.
+
+## platforms
+
+### platforms denovo crawling
+
+```
+geo-spider platforms -o platforms.jl
+```
+
+### platforms incremental crawling
+
+If you have a crawled platforms jsonlines file:
+
+```
+geo-spider platforms -cf platforms.jl -o new-platforms.jl
+```
+
+If you have multiple platforms jsonlines files:
+
+```
+geo-spider platforms -cd platforms -o new-platforms.jl
+```
+
+## samples
+
+### samples denovo crawling
+
+### samples incremental crawling
+
+### series
+
+### series denovo crawling
+
+### series incremental crawling
+
+
