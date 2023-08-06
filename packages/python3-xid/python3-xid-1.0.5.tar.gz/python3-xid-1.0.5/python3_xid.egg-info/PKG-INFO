@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: python3-xid
+Version: 1.0.5
+Summary: Python Xid Implementation
+Home-page: https://github.com/scys/python_xid
+Author: Graham Abbott
+Author-email: graham.abbott@gmail.com
+License: MIT
+Download-URL: https://github.com/scys/python_xid
+Platform: UNKNOWN
+Requires-Python: >=3.6
+License-File: LICENSE
+
+Python Xid Implementation.
+fork from https://github.com/graham/python_xid
+

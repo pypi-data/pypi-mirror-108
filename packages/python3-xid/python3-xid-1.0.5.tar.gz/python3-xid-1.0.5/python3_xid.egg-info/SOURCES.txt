@@ -1,0 +1,10 @@
+LICENSE
+README.md
+base32hex.py
+setup.cfg
+setup.py
+xid.py
+python3_xid.egg-info/PKG-INFO
+python3_xid.egg-info/SOURCES.txt
+python3_xid.egg-info/dependency_links.txt
+python3_xid.egg-info/top_level.txt
