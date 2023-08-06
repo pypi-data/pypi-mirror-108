@@ -1,0 +1,27 @@
+{% extends '/index.html' %}
+{% block navbar %}
+ <h4 ><a href="{{url_for('home')}}" class="text-white">Essência Psiquiatria</a></h4><span class="w-25"></span>
+<ul class="navbar-nav me-auto mb-2 mb-lg-0 bg-dark">
+<li class="bg-primary text-center"><small class="text-white">pacientes</small>
+  <ul class="navbar-nav me-auto mb-2 mb-lg-0 bg-dark">
+    <li class="nav-item">
+  <a class="nav-link text-white" href="{{url_for('html-patients-all')}}">Listar</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link   text-white" href="{{url_for('html-patients-search')}}">Buscar</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link  text-white" href="{{url_for('html-patients-create')}}">Adicionar</a>
+  </li>
+  </ul>
+</li>
+
+</ul>
+{% endblock %}
+{% block side %}
+{{side}}
+{% endblock %}
+{% block main %}
+{{main}}
+{% endblock main %}
+
