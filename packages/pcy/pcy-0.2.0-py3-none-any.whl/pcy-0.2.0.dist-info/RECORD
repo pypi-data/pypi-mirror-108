@@ -1,0 +1,11 @@
+pcy/__init__.py,sha256=FmYV3gMPQcxeyRv_R5-mod18lgRK7dUn4S42LFTglYU,73
+pcy/rule_based/__init__.py,sha256=g58NIP4HkCvq5zh9GudbUIooaaqYmSfoth3FNdyhxWU,84
+pcy/rule_based/dictionary/__init__.py,sha256=56ccNFv_XhLZJqlC_YDGPfnC3z7M5XKII-yl6DrDLs4,166
+pcy/rule_based/dictionary/_node.py,sha256=4HRyJSkydkMH0Y1bkwTrYmp2xOlgXx_Usjtpt_ytA9c,5811
+pcy/rule_based/dictionary/autocomplete.py,sha256=wHCoSGFrFZcId74K2LwWnnNxgxZMm69QU_sJE11InL4,2848
+pcy/rule_based/dictionary/dictionary_generator.py,sha256=Y_SJ1_fZHmVRzpqHbA9nw9vTKFNUneHaZyucGnIc6vI,4911
+pcy-0.2.0.dist-info/LICENSE,sha256=2bRQH6hDMipuaeXQs_7SryStzpMhwLSmzLkxHjez5J4,1076
+pcy-0.2.0.dist-info/METADATA,sha256=2YtNt6Ov2q14wTYIhoDvaDWUDPlKAslnMaPCJFtZ9s4,1389
+pcy-0.2.0.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+pcy-0.2.0.dist-info/top_level.txt,sha256=xXGbw7qLfCQs5x5Pdv7qys9gacgsHQnwxJTamknUWS4,4
+pcy-0.2.0.dist-info/RECORD,,

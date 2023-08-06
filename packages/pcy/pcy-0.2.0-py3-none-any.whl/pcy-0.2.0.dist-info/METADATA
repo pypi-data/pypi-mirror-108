@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: pcy
+Version: 0.2.0
+Summary: PCY (Python Completes You): Autocomplete library for the Python
+Home-page: https://imdeepmind.com/python-completes-you/
+Author: Abhishek Chatterjee
+Author-email: abhishek.chatterjee97@protonmail.com
+License: MIT
+Project-URL: Bug Tracker, https://imdeepmind.com/python-completes-you/issues
+Project-URL: Documentation, https://imdeepmind.com/python-completes-you/
+Project-URL: Source Code, https://github.com/imdeepmind/python-completes-you/
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Requires-Dist: py-progress
+Provides-Extra: tests
+Requires-Dist: black ; extra == 'tests'
+Requires-Dist: flake8 ; extra == 'tests'
+
+
+A super-fast Python based Autocomplete library that autocomplete incomplete words using various methods
+like dictionary lookup, ML based models, etc.
+
+For more information, please check the official documentation at https://imdeepmind.com/python-completes-you/
+
+
