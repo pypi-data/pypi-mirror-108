@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: modelcatalog-api
+Version: 8.0.0
+Summary: Model Catalog
+Home-page: https://pypi.org/project/modelcatalog-api/
+Author-email: 
+License: UNKNOWN
+Keywords: OpenAPI,OpenAPI-Generator,Model Catalog
+Platform: UNKNOWN
+
+    This is the API of the Software Description Ontology at [https://w3id.org/okn/o/sdm](https://w3id.org/okn/o/sdm)  # noqa: E501
+    
+
