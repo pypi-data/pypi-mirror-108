@@ -1,0 +1,160 @@
+name: Mars CI on Platforms
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest]
+        python-version: [3.8-kubernetes, 3.8-ray] # [3.8-kubernetes, 3.8-hadoop, 3.8-vineyard, 3.8-ray]
+        include:
+          - { os: ubuntu-latest, python-version: 3.8-kubernetes, no-common-tests: 1,
+              no-deploy: 1, with-kubernetes: "with Kubernetes" }
+          #- { os: ubuntu-latest, python-version: 3.8-hadoop, no-common-tests: 1,
+          #    no-deploy: 1, with-hadoop: "with hadoop" }
+          #- { os: ubuntu-latest, python-version: 3.8-vineyard, no-common-tests: 1,
+          #    no-deploy: 1, with-vineyard: "with vineyard" }
+          - { os: ubuntu-latest, python-version: 3.8-ray, no-common-tests: 1,
+              no-deploy: 1, with-ray: "with ray" }
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 2
+
+      - name: Set up conda ${{ matrix.python-version }}
+        env:
+          PYTHON: ${{ matrix.python-version }}
+        shell: bash
+        run: |
+          source ./ci/install-conda.sh
+          python -m pip install --upgrade pip setuptools wheel coverage;
+
+      - name: Install dependencies
+        env:
+          WITH_HADOOP: ${{ matrix.with-hadoop }}
+          WITH_KUBERNETES: ${{ matrix.with-kubernetes }}
+          WITH_VINEYARD: ${{ matrix.with-vineyard }}
+          WITH_RAY: ${{ matrix.with-ray }}
+          NO_COMMON_TESTS: ${{ matrix.no-common-tests }}
+        shell: bash
+        run: |
+          source ./ci/reload-env.sh
+          export DEFAULT_VENV=$VIRTUAL_ENV
+
+          pip install -r requirements-dev.txt
+          pip install -r requirements-extra.txt
+          if [[ $UNAME == "windows" ]]; then
+            pip install virtualenv flaky flake8
+          else
+            pip install virtualenv flaky flake8 etcd-gevent ray
+            if [ -n "$WITH_KUBERNETES" ]; then
+              ./.github/workflows/install-minikube.sh
+              pip install kubernetes
+            fi
+            if [ -n "$WITH_HADOOP" ]; then
+              ./.github/workflows/install-hadoop.sh
+              echo "import coverage; coverage.process_startup()" > \
+                $(python -c "import site; print(site.getsitepackages()[-1])")/coverage.pth
+              conda install -n test --quiet --yes -c conda-forge python=$PYTHON skein conda-pack
+            fi
+            if [ -n "$WITH_VINEYARD" ]; then
+              pip install vineyard==0.1.10
+              sudo docker pull libvineyard/vineyardd:v0.1.10
+
+              mkdir -p /tmp/etcd-download-test
+              export ETCD_VER=v3.4.13
+              export ETCD_DOWNLOAD_URL=https://github.com/etcd-io/etcd/releases/download
+              curl -L $ETCD_DOWNLOAD_URL/$ETCD_VER/etcd-$ETCD_VER-linux-amd64.tar.gz -o /tmp/etcd-$ETCD_VER-linux-amd64.tar.gz
+              tar xzvf /tmp/etcd-$ETCD_VER-linux-amd64.tar.gz -C /tmp/etcd-download-test --strip-components=1
+              sudo mv /tmp/etcd-download-test/etcd /usr/local/bin/
+              sudo mv /tmp/etcd-download-test/etcdctl /usr/local/bin/
+              rm -fr /tmp/etcd-$ETCD_VER-linux-amd64.tar.gz /tmp/etcd-download-test
+            fi
+            if [ -n "$WITH_RAY" ]; then
+              pip install ray
+            fi
+          fi
+          conda list -n test
+
+      - name: Build cython extensions
+        env:
+          WITH_CYTHON: ${{ matrix.with-cython }}
+        shell: bash
+        run: |
+          source ./ci/reload-env.sh
+          source ./ci/build-ext.sh
+
+      - name: Prepare vineyard runtime
+        if: ${{ matrix.with-vineyard }}
+        shell: bash
+        run: |
+          source ./ci/reload-env.sh
+
+          # launch vineyardd
+          sudo docker run --rm -d --name vineyard --shm-size=3072m -v /tmp/vineyard:/var/run libvineyard/vineyardd:v0.1.10
+
+          until [ -S /tmp/vineyard/vineyard.sock ]
+          do
+              sleep 1;
+              echo "Waiting for vineyardd ..."
+          done
+          echo "Vineyard service ready"
+          sudo chmod a+wrx /tmp/vineyard/vineyard.sock
+
+      - name: Test with pytest
+        env:
+          WITH_HADOOP: ${{ matrix.with-hadoop }}
+          WITH_KUBERNETES: ${{ matrix.with-kubernetes }}
+          WITH_CYTHON: ${{ matrix.with-cython }}
+          WITH_VINEYARD: ${{ matrix.with-vineyard }}
+          WITH_RAY: ${{ matrix.with-ray }}
+          NO_COMMON_TESTS: ${{ matrix.no-common-tests }}
+          NUMPY_EXPERIMENTAL_ARRAY_FUNCTION: 1
+          CHANGE_MINIKUBE_NONE_USER: true
+        shell: bash
+        run: |
+          source ./ci/reload-env.sh
+
+          if [ -n "$WITH_HADOOP" ]; then
+            source $CONDA/bin/activate test
+            pytest $PYTEST_CONFIG -m hadoop
+            coverage report
+          fi
+          if [ -n "$WITH_KUBERNETES" ]; then
+            pytest $PYTEST_CONFIG --forked mars/deploy/kubernetes
+            coverage report
+          fi
+          if [ -n "$WITH_VINEYARD" ]; then
+            export VINEYARD_IPC_SOCKET=/tmp/vineyard/vineyard.sock
+            mkdir -p build
+
+            pytest $PYTEST_CONFIG mars/storage/tests/test_libs.py
+            mv .coverage build/.coverage.test_lib.file
+
+            pytest $PYTEST_CONFIG mars/dataframe/datastore/tests/test_datastore_execute.py \
+                                                                    mars/tensor/datastore/tests/test_datastore_execute.py -k "vineyard"
+            mv .coverage build/.coverage.test_tensor.file
+
+            coverage combine build/ && coverage report
+          fi
+          if [ -n "$WITH_RAY" ]; then
+            pytest $PYTEST_CONFIG -m ray
+            coverage report
+          fi
+          coverage xml
+
+      - name: Stop vineyard runtime
+        if: ${{ matrix.with-vineyard }}
+        shell: bash
+        run: |
+          sudo docker stop vineyard || true
+
+      - name: Report coverage data
+        shell: bash
+        run: |
+          bash <(curl -s https://codecov.io/bash)
