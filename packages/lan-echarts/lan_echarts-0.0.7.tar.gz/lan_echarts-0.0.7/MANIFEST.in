@@ -1,0 +1,2 @@
+include lan_echarts/static/*
+include lan_echarts/static/extension/*
