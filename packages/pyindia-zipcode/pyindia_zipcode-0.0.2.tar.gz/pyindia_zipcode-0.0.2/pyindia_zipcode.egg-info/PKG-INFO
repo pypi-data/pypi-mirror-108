@@ -1,0 +1,115 @@
+Metadata-Version: 2.1
+Name: pyindia-zipcode
+Version: 0.0.2
+Summary: Find Post Office Details from PinCode, All India Post Office Pincode Data
+Home-page: UNKNOWN
+Author: T.THAVASI GTI
+Author-email: ganeshanthavasigti1032000@gmail.com
+License: MIT
+Project-URL: Source, https://github.com/THAVASIGTI/pyindia_zipcode.git
+Project-URL: Tracker, https://github.com/THAVASIGTI/pyindia_zipcode/issues
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: System
+Classifier: Topic :: System :: Filesystems
+Classifier: Topic :: Utilities
+Requires-Python: >=3
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# pyindia_zipcode
+
+[![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/THAVASIGTI/pyindia_zipcode)
+[![PyPI](https://img.shields.io/pypi/v/pyindia-zipcode)](https://pypi.org/project/pyindia-zipcode)
+[![Downloads](https://pepy.tech/badge/pyindia-zipcode)](https://pepy.tech/project/pyindia-zipcode)
+
+### Find Post Office Details from PinCode, All India Post Office Pincode Data
+
+## INSTALL
+
+``` python
+pip3 install pyindia-zipcode
+```
+## IMPORT PKG
+
+``` python
+Python 3.6.9 (default, Jan 26 2021, 15:33:00) 
+[GCC 8.4.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> from pyindia_zipcode import ZipCode
+>>> 
+>>> obj = ZipCode()
+>>> 
+```
+## ZIP CODE INFO
+
+In this `625003` zip code infomation
+
+``` python
+Python 3.6.9 (default, Jan 26 2021, 15:33:00) 
+[GCC 8.4.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> from pyindia_zipcode import ZipCode
+>>> 
+>>> obj = ZipCode()
+>>> 
+>>> obj.get_zipcode_info(625003)
+>>> 
+```
+### output
+
+``` json
+[
+    {
+        "ID": 119891, "officename": "Alagappa Nagar S.O", 
+        "pincode": "625003", "officeType": "S.O", 
+        "Deliverystatus": "Non-Delivery", "divisionname": "Madurai", 
+        "regionname": "Madurai", "circlename": "Tamilnadu", 
+        "Taluk": "Madurai South", "Districtname": "Madurai", 
+        "statename": "TAMIL NADU", "Telephone": "0452-2343894", 
+        "Related Suboffice": "NA", "Related Headoffice": "Madurai H.O", 
+        "longitude": "NA", "latitude": "NA"
+    }, {
+        "ID": 120019, "officename": "Madakkulam B.O", 
+        "pincode": "625003", "officeType": "B.O", 
+        "Deliverystatus": "Delivery", "divisionname": "Madurai", 
+        "regionname": "Madurai", "circlename": "Tamilnadu", 
+        "Taluk": "Madurai South", "Districtname": "Madurai", 
+        "statename": "TAMIL NADU", "Telephone": "NA", 
+        "Related Suboffice": "Palanganatham S.O", "Related Headoffice": "Madurai H.O", 
+        "longitude": "NA", "latitude": "NA"
+    }, {
+        "ID": 120073, "officename": "Palanganatham S.O", 
+        "pincode": "625003", "officeType": "S.O", 
+        "Deliverystatus": "Delivery", "divisionname": "Madurai", 
+        "regionname": "Madurai", "circlename": "Tamilnadu", 
+        "Taluk": "Madurai South", "Districtname": "Madurai", 
+        "statename": "TAMIL NADU", "Telephone": "0452-2373669", 
+        "Related Suboffice": "NA", "Related Headoffice": "Madurai H.O", 
+        "longitude": "NA", "latitude": "NA"
+    }, {
+        "ID": 120185, "officename": "Tvs Nagar S.O", 
+        "pincode": "625003", "officeType": "S.O", 
+        "Deliverystatus": "Non-Delivery", "divisionname": "Madurai", 
+        "regionname": "Madurai", "circlename": "Tamilnadu", 
+        "Taluk": "Madurai South", "Districtname": "Madurai", 
+        "statename": "TAMIL NADU", "Telephone": "0452-2373669", 
+        "Related Suboffice": "NA", "Related Headoffice": "Madurai H.O", 
+        "longitude": "NA", "latitude": "NA"
+    }
+]
+```
+
+` The first digit of a PIN indicates the zone, the second indicates the sub-zone, and the third, combined with the first two, indicates the sorting district within that zone. The final three digits are assigned to individual post offices within the sorting district. `
+
