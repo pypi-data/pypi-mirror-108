@@ -1,0 +1,76 @@
+Metadata-Version: 2.1
+Name: cospy
+Version: 0.4.2
+Summary: A simple CLI tool to do a lot of things..
+Home-page: https://github.com/Adwaith-Rajesh/cospy
+Author: Adwaith-Rajesh
+Author-email: adwaithrajesh3180@gmail.com
+License: UNKNOWN
+Keywords: cli,python,code,development
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3 :: Only
+Requires-Python: >3.6
+Description-Content-Type: text/markdown
+Requires-Dist: appdirs (==1.4.4)
+Requires-Dist: certifi (==2020.12.5)
+Requires-Dist: chardet (==4.0.0)
+Requires-Dist: click (==8.0.0)
+Requires-Dist: colorama (==0.4.4)
+Requires-Dist: commonmark (==0.9.1)
+Requires-Dist: distlib (==0.3.1)
+Requires-Dist: filelock (==3.0.12)
+Requires-Dist: idna (==2.10)
+Requires-Dist: Pygments (==2.9.0)
+Requires-Dist: requests (==2.25.1)
+Requires-Dist: rich (==10.2.0)
+Requires-Dist: six (==1.16.0)
+Requires-Dist: urllib3 (==1.26.4)
+Requires-Dist: virtualenv (==20.4.6)
+
+<head>
+<link rel="shortcut icon" type="image/x-icon" href="https://adwaith-rajesh.github.io/cospy/favicon.ico">
+</head>
+
+# Cospy
+A Simple CLI tool do a lot of things.
+
+[![Pypi-Upload](https://github.com/Adwaith-Rajesh/cospy/actions/workflows/python-publish.yml/badge.svg)](https://github.com/Adwaith-Rajesh/cospy/actions/workflows/python-publish.yml)
+___
+## Table of contents
+  - [Description](#DESCRIPTION)
+  - [Installation](#INSTALLATION)
+  - [API](#API)
+  - [Usage](#USAGE)
+
+
+## Description
+A CLI to do a lot of stuff in a more easier(maybe) way. 
+___
+
+## Installation
+```bash
+pip install cospy
+```
+___
+## API
+
+Below is the list of currently supported API.
+
+* [`cos init`](https://github.com/Adwaith-Rajesh/cospy/blob/master/docs/README.md#init)  - Start a programming project in any language.
+* [`cos clean`](https://github.com/Adwaith-Rajesh/cospy/blob/master/docs/README.md#clean) - Sort directory.
+* [`cos tasks`](https://github.com/Adwaith-Rajesh/cospy/blob/master/docs/README.md#tasks) - Manage tasks
+* [`cos venv`](https://github.com/Adwaith-Rajesh/cospy/blob/master/docs/README.md#venv) - Manage virtual environments
+
+## Usage
+All the docs and usage are listed [here](https://adwaith-rajesh.github.io/cospy/docs/).
+
+
