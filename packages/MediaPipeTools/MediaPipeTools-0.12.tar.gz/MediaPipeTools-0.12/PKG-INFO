@@ -1,0 +1,20 @@
+Metadata-Version: 1.1
+Name: MediaPipeTools
+Version: 0.12
+Summary: This package will help you use mediapipe tools easily
+Home-page: https://github.com/user/reponame
+Author: Ace Tech Academy
+Author-email: aceteachacademy@gmail.com
+License: MIT
+Download-URL: https://github.com/user/reponame/archive/v_01.tar.gz
+Description: Mediapipe tools to use mediapipe library easily. Provides had tracking, face mesh and pose tracking. For more info see the repository https://github.com/chinmay18030/MediapipeTools
+Keywords: Mediapipe Tools,FaceMesh,hand tracking,pose tracking
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
