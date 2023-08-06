@@ -1,0 +1,24 @@
+Basic Examples
+	vinca 1				add a very simple card
+	vinca s				study your collection
+	vinca e				edit or create a deck
+	vinca a				add a card
+
+Medium Examples
+	vinca q june			find all cards with the word 'june' in them
+	vinca q				list all the cards (most recent first)
+	vinca e 115			edit card #115
+	vinca a general math		add a card to decks general and math
+	vinca s general math		study decks general and math
+	vinca s 1 4			study decks #1 and #4
+	vinca S 2			statistics about deck #2
+	vinca import -h			see a help message about the import function
+
+Advanced Examples / Shell dependent
+	vinca q -i june			list the card id of every card containing june
+	vinca S $(vinca q -i june)	see statistics for every card with the word june in it
+	vinca x {1120..1150}            delete every card with an id in the range 1120 to 1150
+	vinca vq			visual query: select a card and press s to study it
+	vinca vd			visual decks: select a deck and press s to study it
+	vinca a				specify a png file in the image_back field
+	vinca p				purge: permanently remove all cards marked for deletion
