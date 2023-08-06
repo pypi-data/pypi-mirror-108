@@ -1,0 +1,3 @@
+[console_scripts]
+ereader = ereader.__main__:main
+
