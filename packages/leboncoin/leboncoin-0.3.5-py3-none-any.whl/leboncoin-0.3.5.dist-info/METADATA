@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: leboncoin
+Version: 0.3.5
+Summary: This is a description
+Home-page: https://github.com/Shinyhero36/Leboncoin-API-Wrapper
+Author: Shinyhero36
+License: GNU General Public License v3.0
+Project-URL: Source, https://github.com/Shinyhero36/Leboncoin-API-Wrapper/
+Project-URL: Tracker, https://github.com/Shinyhero36/Leboncoin-API-Wrapper/issues
+Platform: UNKNOWN
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: requests (>=2.25.0)
+Requires-Dist: cloudscraper (>=1.2.48)
+
+# Leboncoin
+
+Access Leboncoin api in Python
+
+## Installation
+```bash
+pip install leboncoin
+```
+
+## Usage
+
+```python
+from leboncoin import Leboncoin
+
+lbc = Leboncoin()
+lbc.searchFor("iphone")
+lbc.setLimit(10)
+lbc.maxPrice(2000)
+lbc.setDepartement("tarn")
+results = lbc.execute()
+
+for ad in results["ads"]:
+    print(ad["subject"], ad["price"])
+print("\n")
+```
+
+## Contributing
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
+
+Please make sure to update tests as appropriate.
+
+## License
+[GNU General Public License v3.0](https://choosealicense.com/licenses/gpl-3.0/)
+
