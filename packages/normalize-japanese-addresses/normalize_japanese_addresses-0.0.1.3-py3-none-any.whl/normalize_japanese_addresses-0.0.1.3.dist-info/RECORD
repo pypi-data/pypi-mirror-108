@@ -1,0 +1,13 @@
+normalize_japanese_addresses/__init__.py,sha256=3LFC-ul0D5hLqPQ9dWL-VKxaRm0a2cF2QzyZg43Z1EA,72
+normalize_japanese_addresses/normalize.py,sha256=AVpDk3bfZNYnhpo3MSZC18b62QK2tp-rEVFCANkA8OM,3383
+normalize_japanese_addresses/library/__init__.py,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+normalize_japanese_addresses/library/api.py,sha256=EDrlJH-yZpvLufJzO1_8E0Be1e3rptWTLTwAbnVcqF4,231
+normalize_japanese_addresses/library/dictionary.py,sha256=x9w4oG1a1LFXipWP6JVXCtUvZeBpSdyVj1UzrcL3c0E,4535
+normalize_japanese_addresses/library/japaneseNumerics.py,sha256=MHinCDYNFPTLTB1wkfRUFGCsNjlnKuNH-DRqW6rAnsE,751
+normalize_japanese_addresses/library/regex.py,sha256=QV5PTHUGJaedIwYBIkXtvbhrlBOrxYd9Ea7eV4YfTLc,4577
+normalize_japanese_addresses/library/utils.py,sha256=9ONEBO76zU0CtfqvH2_ROR5-JU7Z3NVEqATamW6ObR0,3181
+normalize_japanese_addresses-0.0.1.3.dist-info/LICENSE.txt,sha256=JcY8UKWEmcSFePcEQTTwxTFs_IMSKO7XbTwZUl0Okns,1060
+normalize_japanese_addresses-0.0.1.3.dist-info/METADATA,sha256=IhzcimOviegPXow8CoN-bNPamg35yZv00t0FRdNrhnE,2314
+normalize_japanese_addresses-0.0.1.3.dist-info/WHEEL,sha256=OqRkF0eY5GHssMorFjlbTIq072vpHpF60fIQA6lS9xA,92
+normalize_japanese_addresses-0.0.1.3.dist-info/top_level.txt,sha256=Mu299k9aTV7pzbpLiVxLf60DF1x_A-8YWLEnN5bQFu8,29
+normalize_japanese_addresses-0.0.1.3.dist-info/RECORD,,
