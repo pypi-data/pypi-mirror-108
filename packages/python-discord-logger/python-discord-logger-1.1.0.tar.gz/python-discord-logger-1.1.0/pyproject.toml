@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "python-discord-logger"
+version = "1.1.0"
+description = ""
+authors = ["Chanuk Kim <cksdnr987@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+requests = "^2.25.1"
+
+
+[tool.poetry.dev-dependencies]
+mypy = "^0.812"
+pytest = "^6.2.4"
+setuptools = "^57.0.0"
+wheel = "^0.36.2"
+build = "^0.4.0"
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
