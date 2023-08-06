@@ -1,0 +1,11 @@
+LICENSE.txt
+MANIFEST.in
+README.rst
+dos.py
+setup.py
+sztestlib/__init__.py
+sztestlib/szlibone.py
+xiaoriben.egg-info/PKG-INFO
+xiaoriben.egg-info/SOURCES.txt
+xiaoriben.egg-info/dependency_links.txt
+xiaoriben.egg-info/top_level.txt
