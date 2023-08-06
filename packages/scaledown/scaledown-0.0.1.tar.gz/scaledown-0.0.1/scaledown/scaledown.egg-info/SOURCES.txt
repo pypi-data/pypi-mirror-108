@@ -1,0 +1,8 @@
+README.md
+pyproject.toml
+setup.cfg
+scaledown/quantization/__init__.py
+scaledown/scaledown.egg-info/PKG-INFO
+scaledown/scaledown.egg-info/SOURCES.txt
+scaledown/scaledown.egg-info/dependency_links.txt
+scaledown/scaledown.egg-info/top_level.txt
