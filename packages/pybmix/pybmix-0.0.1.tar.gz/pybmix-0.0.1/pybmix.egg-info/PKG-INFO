@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: pybmix
+Version: 0.0.1
+Summary: Python Bayesian Mixtures
+Home-page: https://github.com/bayesmix-dev/pybmix
+Author: Mario Beraha
+Author-email: berahamario@gmail.com
+License: BSD 3-Clause
+Description: # pybmix: Bayesian Mixture Models in Python
+        
+        A Python interface to [bayesmix](https://github.com/bayesmix-dev/bayesmix/)
+        
+        
+        ## Installation
+        
+        First, clone this repository with its submodules
+        ```shell
+        git clone --recurse-submodule git@github.com:bayesmix-dev/pybmix.git
+        ```
+        Ideally things should work by simply typing
+        ```shell
+        pip3 install -e .
+        ```
+        from the root folder of this repo.
+        
+        ## Getting Started
+        
+        See our [tutorials](https://pybmix.readthedocs.io/en/docs/)!
+        
+        ## Contributing
+        
+        Just get in touch with us (email in setup.cfg), open a PR or an Issue! 
+        
+Keywords: mixture models,bayesian,nonparametrics,clustering,density
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
