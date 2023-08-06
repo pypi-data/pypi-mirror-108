@@ -1,0 +1,12 @@
+README.md
+setup.py
+utils4DD/EmailSmtp_V1_1.py
+utils4DD/__init__.py
+utils4DD/configFiles.py
+utils4DD/mplExtended.py
+utils4DD/utils.py
+utils4DD.egg-info/PKG-INFO
+utils4DD.egg-info/SOURCES.txt
+utils4DD.egg-info/dependency_links.txt
+utils4DD.egg-info/requires.txt
+utils4DD.egg-info/top_level.txt
