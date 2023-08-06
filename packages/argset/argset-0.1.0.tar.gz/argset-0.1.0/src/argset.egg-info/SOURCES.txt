@@ -1,0 +1,16 @@
+LICENSE
+MANIFEST.in
+README.rst
+pyproject.toml
+setup.cfg
+tox.ini
+src/argset/__init__.py
+src/argset/py.typed
+src/argset.egg-info/PKG-INFO
+src/argset.egg-info/SOURCES.txt
+src/argset.egg-info/dependency_links.txt
+src/argset.egg-info/requires.txt
+src/argset.egg-info/top_level.txt
+test/test_cls.py
+test/test_func.py
+test/data/pos_only.py
