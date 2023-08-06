@@ -1,0 +1,3 @@
+[console_scripts]
+sarand = sarand.sarand_main:main
+
