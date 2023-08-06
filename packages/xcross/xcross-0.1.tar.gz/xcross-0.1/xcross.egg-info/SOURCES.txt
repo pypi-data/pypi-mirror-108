@@ -1,0 +1,7 @@
+README.md
+setup.py
+/home/ahuszagh/docker/toolchains/bin/xcross
+xcross.egg-info/PKG-INFO
+xcross.egg-info/SOURCES.txt
+xcross.egg-info/dependency_links.txt
+xcross.egg-info/top_level.txt
