@@ -1,0 +1,10 @@
+numpy
+pyvisa
+pywin32
+typing_extensions
+
+[:python_version < "3.7"]
+dataclasses
+
+[:python_version < "3.8"]
+importlib-metadata
