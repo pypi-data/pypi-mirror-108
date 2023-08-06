@@ -1,0 +1,9 @@
+toml
+tomlkit
+requests
+python-dateutil
+websockets
+
+[:platform_system == "Darwin"]
+playsound
+pyobjc
