@@ -1,0 +1,10 @@
+LICENSE
+MANIFEST.in
+README.md
+setup.py
+CTFscan.egg-info/PKG-INFO
+CTFscan.egg-info/SOURCES.txt
+CTFscan.egg-info/dependency_links.txt
+CTFscan.egg-info/entry_points.txt
+CTFscan.egg-info/top_level.txt
+ctfscan/data/data.txt
