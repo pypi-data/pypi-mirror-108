@@ -1,0 +1,6 @@
+numpy
+scipy
+cython
+scikit-image
+scikit-learn
+mdtraj
