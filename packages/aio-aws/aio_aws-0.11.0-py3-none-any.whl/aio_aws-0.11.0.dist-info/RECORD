@@ -1,0 +1,13 @@
+aio_aws/__init__.py,sha256=MzE1BRqH81dLa5akdxoY6yqFsTPvZ1LaFei9tpBkIV0,646
+aio_aws/aio_aws_batch.py,sha256=OKE1sLGmnUXshSbDTmrRcGeTdVQ-zkseg7PX_tjyO2Y,45186
+aio_aws/aio_aws_config.py,sha256=M3VlRjarqJIJ6YMwne7g0EIYkaeS53Ou2AFJYIyH-9c,11714
+aio_aws/aio_aws_lambda.py,sha256=CWC4NSx-qVVVxvnj0-_mqNZfYlkSt0xIxg__IXkJRmw,12304
+aio_aws/aio_aws_s3.py,sha256=2rvJg198r_IUf_lgqRp-dn92CKmYlS91OMggeB33wfQ,25048
+aio_aws/async_executor.py,sha256=lH1UQMI1Rw4BoQyFQ08yrg4p-uJTZ-GJDjkED3l2RpQ,13901
+aio_aws/async_main.py,sha256=uwAwN1nl83eWealWygouMS-mEevLEl1UdYS2QokheT4,955
+aio_aws/logger.py,sha256=ZjdX6PFiMzUfNhgFUp3aYoSJpVKYsIR1FgkC-NvOqRs,1284
+aio_aws/version.py,sha256=SjdFkzZ3mkkTev84zWQfD_e_1cwvvkFpr5L9eN9nirI,281
+aio_aws-0.11.0.dist-info/LICENSE,sha256=xx0jnfkXJvxRnG63LTGOxlggYnIysveWIZ6H3PNdCrQ,11357
+aio_aws-0.11.0.dist-info/WHEEL,sha256=V7iVckP-GYreevsTDnv1eAinQt_aArwnAxmnP0gygBY,83
+aio_aws-0.11.0.dist-info/METADATA,sha256=3onqxf-b5eBE3lNln0CMHH0i9Whs5W3c6EzrxKgma9A,5260
+aio_aws-0.11.0.dist-info/RECORD,,
