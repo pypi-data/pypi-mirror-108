@@ -1,0 +1,3 @@
+[console_scripts]
+dockerfile-sec = dockerfile_sec.__main__:main
+
