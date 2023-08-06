@@ -1,0 +1,3 @@
+[console_scripts]
+gitreport = src.cli:main
+
