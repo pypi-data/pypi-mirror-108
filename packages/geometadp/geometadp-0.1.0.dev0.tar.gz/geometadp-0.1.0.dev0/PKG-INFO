@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: geometadp
+Version: 0.1.0.dev0
+Summary: Geophysical Metadata Picker
+Home-page: UNKNOWN
+Author: Maximilian Weigand
+Author-email: mweigand@geo.uni-bonn.de
+License: MIT
+Description: # Geophysical Metadata Management using a Juypter Notebook
+        
+        ## Usage
+        
+        A full Anaconda install should provide all packages required to run the
+        metadata manager.
+        
+        Open a new Jupyter Notebook (Python 3 >= 3.7) and execute the
+        following code within on cell:
+        
+        	!pip install git+https://github.com/m-weigand/geometadp
+        	import IPython
+        	IPython.display.clear_output()
+        	%gui qt
+        	import geometadp
+        	obj = geometadp.geo_metadata()
+        	obj.manage()
+        
+        .. note::
+        
+        	The first three lines do install the metadata manager and can be omitted
+        	once it is installed.
+        
+        ## Wishlist
+        
+        * import functionality: import a given JSON-file and edit it
+        
+Platform: UNKNOWN
+Description-Content-Type: text/markdown

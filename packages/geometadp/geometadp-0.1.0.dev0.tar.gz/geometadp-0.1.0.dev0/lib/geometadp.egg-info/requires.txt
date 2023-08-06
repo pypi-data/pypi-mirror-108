@@ -1,0 +1,4 @@
+dicttoxml
+jupyter
+ipywidgets
+PyQT5

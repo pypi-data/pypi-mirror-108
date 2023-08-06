@@ -1,0 +1,8 @@
+setup.py
+lib/geometadp/__init__.py
+lib/geometadp/md_manager.py
+lib/geometadp.egg-info/PKG-INFO
+lib/geometadp.egg-info/SOURCES.txt
+lib/geometadp.egg-info/dependency_links.txt
+lib/geometadp.egg-info/requires.txt
+lib/geometadp.egg-info/top_level.txt
